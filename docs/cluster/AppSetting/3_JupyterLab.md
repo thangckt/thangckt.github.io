@@ -1,0 +1,99 @@
+---
+sort: 4
+---
+
+# Jupyterlab
+```note
+- Should use python 3.10 in base_env
+- Jupyterlab is now availabe as a [Desktop App](https://github.com/jupyterlab/jupyterlab-desktop)
+```
+
+## 1. Install
+
+**conda 
+```shell
+conda install -c conda-forge jupyterlab
+```
+
+**pip
+```shell
+pip install jupyterlab
+```
+
+**from source
+```shell
+pip install git+git://github.com/jupyterlab/jupyterlab.git@master
+conda install -c conda-forge json5
+```
+
+
+## 2. Use multil envs in Notebook
+```note
+- To use multi python in jupyterlab:
+  + Install conda install -n base nb_conda_kernels in base-env
+  + Install jyterlab in both base-env and slave-env
+  + select to open notebook by jupyterlab in base-env
+- To solve conflict DLL when use different python vers, remove PYTHONPATH environment variables
+```
+
+```shell
+(base)$ conda install -n base nb_conda_kernels
+## create new env
+conda create -n py37mbuild python=3.7
+conda activate py37mbuild
+conda install jupyterlab
+```
+
+Then we can select env in jupyterlab:
+- change kernel (this will be save for the next open of .ipynb file)
+
+### remove a kernel
+```
+jupyter kernelspec list
+jupyter kernelspec uninstall unwanted-kernel
+```
+
+Ref: 
+https://tinyurl.com/y7hcfvws \
+https://tinyurl.com/y7hcfvws \
+https://tinyurl.com/2xohogjq
+
+## 3. Some errors
+
+1. 500 : internal server error jupyterlab
+
+Solution:
+```shell
+conda upgrade nbconvert 
+```
+2. Cannot launch, splite3 error
+Solution: in base_env
+```shell
+conda install --revision 0
+conda install -y -c conda-forge jupyterlab
+```
+
+
+## 4. Jupyterlab as Desktop App
+JupyterLab App is the cross-platform standalone application distribution of JupyterLab. It is a self-contained desktop application which bundles a Python environment with several popular Python libraries ready to use in scientific computing and data science workflows.
+
+[Download](https://github.com/jupyterlab/jupyterlab-desktop)
+
+See [this link](https://blog.jupyter.org/jupyterlab-desktop-app-now-available-b8b661b17e9a)
+
+## configuration files
+https://github.com/jupyterlab/jupyterlab-desktop#configuration-files
+
+```tip
+- To use multi envs in App, remember to choose PYTHON-path as the base-env conda. Can change this by change "pythonPath" is this file:
+%APPDATA%\jupyterlab-desktop\jupyterlab-desktop-data
+- App version may not compatible with some plot packages, not good as web version
+```
+
+
+
+
+## Cluster
+
+https://researchcomputing.princeton.edu/support/knowledge-base/scaling-analysis
+

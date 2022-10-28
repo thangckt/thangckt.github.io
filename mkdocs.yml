@@ -1,0 +1,225 @@
+site_name: Thang's Note
+site_author: thangckt
+repo_url: ""
+edit_uri: "https://github.com/thangckt/note/tree/main/docs"
+
+## Copyright
+copyright: Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</a> 
+
+## Configuration
+theme:
+  name: "material"     #  "material"    "mkdocs"    "readthedocs"     'rtd-dropdown'   windmill  bootswatch
+  logo: 1images/one-note-128-y.png               # one-note-128-o.png        my_picture3x3.jpg  
+  favicon: 1images/one-note-128-y.png 
+  highlightjs: true
+  features:
+    - content.code.annotate
+    - navigation.expand
+    # - navigation.sections
+    - navigation.indexes
+    # - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - toc.follow
+    # - toc.integrate 
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tabs.header   # only in extended theme
+    
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey   #  blue grey, indigo
+      accent: indigo
+      toggle:
+        icon: material/eye
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey   #  blue grey, indigo
+      accent: indigo
+      toggle:
+        icon: material/eye-outline
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+
+## Plugins
+plugins:
+  - search
+  - autorefs
+  - mkdocs-jupyter:
+      theme: dark
+      
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            members_order: 'source'
+            docstring_style: 'google'
+            show_source: false 
+            show_root_heading: true
+            show_category_heading: false
+            show_signature_annotations: true
+            # docstring_section_style: list
+          # path: [.]
+          # import:
+          #   - https://docs.python.org/3/objects.inv
+          #   - https://mkdocstrings.github.io/autorefs/objects.inv
+
+
+## Customization
+extra:
+  generator: false
+  analytics:
+    provider: google
+    property: G-QM7DWGY7ZT
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/thangckt
+      name: thangckt on Telegram
+    - icon: fontawesome/solid/envelope
+      link: mailto:<thanckt@gmail.com>
+      name: Email to thangckt
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/thangckt5
+      name: thangckt on Facebook
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/thangckt
+      name: thangckt on Linkedin
+    - icon: fontawesome/brands/orcid
+      link: https://orcid.org/0000-0001-9826-5397
+      name: thangckt on ORCID
+    # - icon: fontawesome/brands/github
+    #   link: https://github.com/thangckt      
+    # - icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/squidfunk
+  # version:
+  #   provider: mike
+  #   default: latest
+
+## Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - _extension/javascripts/extra.js
+
+
+
+## Page tree
+nav:
+  - Home: https://thangckt.github.io
+  # - About: index.md
+  - Cluster: 
+    - Compiling:
+      - Compiling LAMMMPS:
+        - Prepraring: cluster/compiling/1_LAMMPS1_prepare.md
+        - With GCC + OpenMPI: cluster/compiling/1_LAMMPS2_gcc_ompi.md 
+        - With LLVM + OpenMPI: cluster/compiling/1_LAMMPS3_llvm_ompi.md 
+        - With Intel + OpenMPI: cluster/compiling/1_LAMMPS4_intel_ompi.md 
+      - cluster/compiling/2_Compile_GCC.md
+      - cluster/compiling/3_Compile_openMPI.md
+      - cluster/compiling/4_Compile_LAPACK.md
+      - cluster/compiling/5_Compile_CMake.md
+      - cluster/compiling/6_Compile_UCX.md
+      - cluster/compiling/7_Compile_FTTW.md
+      - cluster/compiling/8_binutils_linker.md
+      - cluster/compiling/9_MPI_window.md
+      - cluster/compiling/10_LLVM.md
+      - cluster/compiling/11_Conda_MPI.md
+      - cluster/compiling/12_PMIX.md      
+    - Apps Setting:       
+      - cluster/AppSetting/1_Conda.md
+      - cluster/AppSetting/2_Latex_from_Zero.md
+      - cluster/AppSetting/3_JupyterLab.md
+      - cluster/AppSetting/4_VScode_setting.md
+      - cluster/AppSetting/5_git.md
+      - cluster/AppSetting/6_Lammps.md
+      - cluster/AppSetting/7_packing_python.md
+      - cluster/AppSetting/8_WSL.md
+
+  - Literature:
+    - literature/3_research_ethic.md
+    - Research Writing:
+      - Preparing:
+        - Instroduction of research paper: literature/research_writing/11_introduction_paper.md
+        - Ethics of research: literature/research_writing/21_ethic_of_research.md
+        - Identify suitable journal: literature/research_writing/31_suitable_journal.md
+        - Understanding open access: literature/research_writing/32_open_access.md
+      - Writing:
+        - Writing research paper: literature/research_writing/41_writing_paper.md
+        - Tables and Figures: literature/research_writing/42_table_figure.md
+      - Publishing:
+        - Making first impression: literature/research_writing/51_making_impression.md
+        - Facing peer review: literature/research_writing/52_facing_peer_review.md
+      - Writing grant proposal: literature/research_writing/61_grant_proposal.md
+      - Writing cover letter: literature/research_writing/62_cover_letter.md
+    - An Editor’s Perspective: literature/research_writing/EdPerspectiveSub2Decision_ICL2020_KKH.pdf
+    - literature/2_Mech_Terminologies.md
+    # - research/publication.md
+    
+
+  - Reference: 
+    - Engineering:
+      - reference/11_Mech_BasicMechanics.md
+      - reference/12_Mech_Science.md
+    - Computational:
+      - reference/21_Comp_Programing.md
+      - reference/22_Comp_Methods.md
+    - reference/1_Cheatsheet.md
+    - reference/1_Docs_syntax.md
+
+  - Miscellaneous:
+    - Music:
+      - miscell/music/1_Tinh_ca.md
+      - miscell/music/2_Viet_su.md
+      - miscell/music/3_Saigon.md
+      - miscell/music/4_Classic.md
+      - miscell/music/5_Lyrics.md
+    - Reading list:
+      - miscell/reading/1_read_list.md
+
+
