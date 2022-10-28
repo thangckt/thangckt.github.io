@@ -1,0 +1,75 @@
+title: Thang's Notes
+lang: en
+description: You cannot teach a man anything, you can only help him find it within himself. —– Galileo Galilei (1564–1642)
+url                      : "https://thangckt.github.io/doc"
+
+theme: null
+# remote_theme: rundocs/jekyll-rtd-theme
+
+dark_theme_toggle       : true
+
+# debug:
+#   compress: true
+#   dist: false
+#   shortcodes: true
+
+readme_index:
+  with_frontmatter: true
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+  - jekyll-feed
+  # thang
+  - jekyll-default-layout
+  - jekyll-readme-index
+  - jekyll-github-metadata
+  - jekyll-titles-from-headings
+
+# Exclude these files from your production _site
+exclude:
+  - Makefile
+  - CNAME
+  - LICENSE
+  - update.sh
+#   - Gemfile
+  - Gemfile.lock
+  - requirements.txt
+  - node_modules
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - jekyll-rtd-theme.gemspec
+
+# Social links:
+social_links: true  # If true show social links
+rss: true # For add icon to link feed.xml
+facebook: thangckt5
+git:
+gitlab:
+github:
+gplus:
+instagram:
+linkedin: thangckt
+reedit:
+spotify:
+pinterest:
+telegram:
+twitch:
+twitter: thangckt
+vimeo:
+youtube:
+
+
+google:
+  gtag: G-QM7DWGY7ZT    # UA-174315734-1
+  adsense: pub-1573099456298501
+
+# comments
+comments:
+  facebook:
+    appid : 960603704635756
+    num_posts : 20 # 5 (default)
+    colorscheme : # "light" (default), "dark"
+    order_by : "reverse_time"   # "reverse_time"(default), "time"

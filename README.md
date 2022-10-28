@@ -1,0 +1,46 @@
+# Thang's Notes
+
+<!-- add picutres in table-->
+<!-- ![](./assets/images/my_picture3x3.jpg) 
+  [![](./assets/images/icon_linkedin.jpg)](https://www.linkedin.com/in/thang-nguyen-5b458a218) 
+![](./assets/images/hello_world.png)
+
+[![](./assets/images/icon_ORCID.png)](https://orcid.org/0000-0001-9826-5397) 
+--> 
+
+ 
+| <img src="./assets/images/my_picture3x3.jpg" style="border-radius: 50%; border: 2px solid black;"/> | 
+|:---:|
+| [![](./assets/images/icon_email.png)](mailto:caothangckt@gmail.com)  [![](./assets/images/icon_messenger.png)](https://www.facebook.com/thangckt5)  [![](./assets/images/icon_Telegram.png)](https://t.me/thangckt)     |
+
+This page dedicates to my personal arbitrary notes which does not reflect either community or third party rules. 
+
+These notes are improvised and inevitable for some rare situations but helpless for almost others. 
+
+It's fun if you find something valid here. In other cases, it isn't my business.
+
+
+<!--
+```tip
+You cannot teach a man anything, you can only help him find it within himself. - Galileo Galilei (1564–1642)
+```
+
+```python
+if "bullshit" not in your_life:
+    print("Hello world")
+else:
+    raise Error("stuck in bullshit")
+``` 
+-->
+
+<!--- #### [My CV](https://thangckt.github.io/cv) -->
+
+        
+<div style="position:relative;padding-bottom:56.25%;">    
+<iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
+        style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe> </div>
+    
+
+\
+<a href="https://livetrafficfeed.com/flag-counter" data-row="4" data-col="4" data-code="1" data-flag="1" data-bg="ffffff" data-text="000000" data-root="0" id="LTF_flags_href">Site Flags Counter</a><script type="text/javascript" src="//cdn.livetrafficfeed.com/static/flag-counter/live.v2.js"></script><noscript><a href="https://livetrafficfeed.com/flag-counter">Site Flags Counter</a><a href="https://w3seotools.com">SEO audit tools</a></noscript>
