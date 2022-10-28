@@ -5,9 +5,6 @@ hide:
 
 # Cheatsheet
 
-<style>
-table, td, th {border: none!important; }
-</style>
 
 |  |  |  
 |:--|:--|
