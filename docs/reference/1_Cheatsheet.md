@@ -6,6 +6,10 @@ hide:
 # Cheatsheet
 
 
+<style>
+table, td, th {border: none!important; }
+</style>
+
 |  |  |  
 |:--|:--|
 | Pandas cheatsheet | [pdf](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf){target="_blank"} |
