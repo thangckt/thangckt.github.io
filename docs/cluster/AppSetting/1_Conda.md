@@ -251,6 +251,7 @@ conda install --revision 0
 ## Some setting envs
 
 !!! info 
+
  - use mamba for faster
  - use new python for better performance
  - To use multi kernels in jupyterlab: 
