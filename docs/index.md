@@ -45,7 +45,7 @@ else:
 
 <!--- #### [My CV](https://thangckt.github.io/cv) -->
 
-Even nothing here is valid for you, enjoin the excellent pieces by Mendelssohn
+Even nothing here is valid for you, enjoin Mendelssohn's excellent pieces. 
 
 <div style="position:relative;padding-bottom:56.25%;">    
 <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
