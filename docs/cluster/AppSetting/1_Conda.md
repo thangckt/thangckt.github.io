@@ -251,13 +251,13 @@ conda install --revision 0
 ## Some setting envs
 
 !!! info 
-  - use mamba for faster
-  - use new python for better performance
-  - To use multi kernels in jupyterlab: 
-     - Install in base-env: `conda install -n base nb_conda_kernels` 
-     - Install jyterlab in both base-env and sub-env
-     - select to open notebook by jupyterlab in base-env
-  - To solve conflict DLL when use different python vers, remove PYTHONPATH environment variables (maybe need to update python in base-env)
+ - use mamba for faster
+ - use new python for better performance
+ - To use multi kernels in jupyterlab: 
+    - Install in base-env: `conda install -n base nb_conda_kernels` 
+    - Install jyterlab in both base-env and sub-env
+    - select to open notebook by jupyterlab in base-env
+ - To solve conflict DLL when use different python vers, remove PYTHONPATH environment variables (maybe need to update python in base-env)
 
 
 Install mamba into the base environment:
@@ -273,7 +273,7 @@ conda install -n base nb_conda_kernels
 conda create -n py311 python=3.11
 conda activate py311
 conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib shapely scipy natsort lmfit jupyterlab-spellchecker
-conda install --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito=3.7.8 
+conda install --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito
 conda install -y -c conda-forge ipyevents ipycanvas ipywidgets
 
 ## env for polymer package: mbuild
