@@ -280,9 +280,10 @@ conda install -y -c conda-forge ipyevents ipycanvas ipywidgets
 ```python
 ## env for polymer package: mbuild    
 ## -c omnia require for 'packmol' on windows
+## Error: DLL load failed while importing _openmm, solve by installing `openmm=7.7`
 conda create -n py39mbuild python=3.9      # only suppot to py39
 conda activate py39mbuild
-conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm=7.7 shapely natsort lmfit              
+conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm shapely natsort lmfit              
 pip install git+https://github.com/thangckt/mbuild.git@thang
 ```
 
