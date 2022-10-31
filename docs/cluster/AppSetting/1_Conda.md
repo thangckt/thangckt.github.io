@@ -275,25 +275,31 @@ conda activate py311
 conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib shapely scipy natsort lmfit jupyterlab-spellchecker
 conda install --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito
 conda install -y -c conda-forge ipyevents ipycanvas ipywidgets
+```
 
-## env for polymer package: mbuild
+```python
+## env for polymer package: mbuild    
+## -c omnia require for 'packmol' on windows
 conda create -n py39mbuild python=3.9      # only suppot to py39
 conda activate py39mbuild
-conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm=7.7              # omnia require for 'packmol' on windows
+conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm=7.7             
 pip install git+https://github.com/thangckt/mbuild.git@thang
+```
 
+```python
 ## env for polymer package: pysimm
 conda create -n py37pysimm python=3.7
 conda activate py37pysimm
 conda install -c conda-forge ambertools  # just run on linux
+```
 
+```python
 ## env py39video
 conda create -n py39video python=3.9
 conda activate py39video
 conda install -y -c conda-forge jupyterlab numpy pandas natsort
 pip install gtts pyttsx3 pytube youtube-search-python google_images_download
 pip install git+https://github.com/Zulko/moviepy.git
-
 ```
 
 
