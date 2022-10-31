@@ -272,7 +272,7 @@ conda install -n base nb_conda_kernels
 ## env for general use, ovito should use with python=3.11
 conda create -n py311 python=3.11
 conda activate py311
-conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib shapely scipy natsort lmfit jupyterlab-spellchecker
+conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy shapely natsort lmfit jupyterlab-spellchecker
 conda install --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito
 conda install -y -c conda-forge ipyevents ipycanvas ipywidgets
 ```
@@ -282,7 +282,7 @@ conda install -y -c conda-forge ipyevents ipycanvas ipywidgets
 ## -c omnia require for 'packmol' on windows
 conda create -n py39mbuild python=3.9      # only suppot to py39
 conda activate py39mbuild
-conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm=7.7             
+conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm=7.7 shapely natsort lmfit              
 pip install git+https://github.com/thangckt/mbuild.git@thang
 ```
 
