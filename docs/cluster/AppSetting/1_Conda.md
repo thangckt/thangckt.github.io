@@ -274,7 +274,10 @@ conda install -n base nb_conda_kernels
 conda create -n py311 python=3.11
 conda activate py311
 conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy shapely natsort lmfit jupyterlab-spellchecker
-conda install --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito
+```
+```python
+## env for ovito
+conda install -y --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito
 conda install -y -c conda-forge ipyevents ipycanvas ipywidgets
 ```
 
