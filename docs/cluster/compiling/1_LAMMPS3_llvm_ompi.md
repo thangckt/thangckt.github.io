@@ -3,6 +3,7 @@
 ## USC2_Tachyon - Centos 6.9 cluster with InfiniBand
 
 !!! note
+
     - To void libs hidden by conda-lib, set absolute path for dynamic libs (*.so). See compile LLVM for more information
     - if error ralate to conda, just unistall libgcc and install python again `conda install -c conda-forge python=3.7`
     - if error relate to `openmpi/mca_pmix_pmix3x.so: undefined symbol:' --> delete isntall folder and reinstall
