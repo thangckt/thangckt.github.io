@@ -8,6 +8,7 @@
     - if error relate to `openmpi/mca_pmix_pmix3x.so: undefined symbol:' --> delete isntall folder and reinstall
 
 ```shell
+cd /home1/p001cao/local/wSourceCode/lammps_dev
 git pull origin develop
 mkdir build_LLVM && cd build_LLVM
 ```
