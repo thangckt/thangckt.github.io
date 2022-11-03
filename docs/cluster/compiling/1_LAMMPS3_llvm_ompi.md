@@ -46,6 +46,7 @@ make -j 16 && make install
 ```
 
 !!! info
+
     - can use export CFLAGS, CXXFLAGS. This same as -DCMAKE_CXX_LINK_FLAGS (CPPFLAG mean both)
     - LDFLAGS same as CMAKE_EXE_LINKER_FLAGS
     - -DUSE_INTERNAL_LINALG=yes is a new option
