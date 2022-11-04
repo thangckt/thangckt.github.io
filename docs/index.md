@@ -28,7 +28,7 @@ This page dedicates to my personal notes, which do not reflect either community 
 
 These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
-It is fun if something here is valid for you. In other cases, it is not my business.
+It is fun if something here is valid for you. Even nothing here is valid for you, just enjoin Mendelssohn's excellent pieces. 
 
 !!! quote ""
 
@@ -45,7 +45,7 @@ else:
 
 <!--- #### [My CV](https://thangckt.github.io/cv) -->
 
-Even nothing here is valid for you, enjoin Mendelssohn's excellent pieces. 
+
 
 <div style="position:relative;padding-bottom:56.25%;">    
 <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
