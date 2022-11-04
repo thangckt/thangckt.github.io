@@ -9,13 +9,20 @@ hide:
 table, td, th {border: none!important; }
 </style>
 
+
+## Latex
+|  |  |  
+|:--|:--|
+| Note for Latex | [html](/pdf/ngan_gon_Latex.pdf){target="_blank"} |
+| Code block with `listing` | [pdf]([/pdf/ngan_gon_Latex.pdf](http://mirror.ox.ac.uk/sites/ctan.org/macros/latex/contrib/listings/listings.pdf)){target="_blank"} |
+| Code block with `minted` | [pdf](http://tug.ctan.org/macros/latex/contrib/minted/minted.pdf){target="_blank"} |
+
 ## Docs Syntax
 
 |  |  |  
 |:--|:--|
 | Markdown basic | [html](https://www.markdownguide.org/basic-syntax){target="_blank"} |
 | Kramdown basic | [html](https://kramdown.gettalong.org/converter/html.html#math-support){target="_blank"} |
-| Note for Latex | [html](/pdf/ngan_gon_Latex.pdf){target="_blank"} |
 | Software engineering and systems engineering [course | [html](https://linkedin.github.io/school-of-sre/){target="_blank"} |
 
 ## Making Docs
