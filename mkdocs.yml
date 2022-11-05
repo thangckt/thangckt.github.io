@@ -1,7 +1,7 @@
-site_name: Thang's Note
+site_name: Thang Nguyen
 site_author: thangckt
 repo_url: ""
-edit_uri: "https://github.com/thangckt/note/tree/main/docs"
+edit_uri: "https://github.com/thangckt/thangckt.github.io/tree/main/docs"
 
 ## Copyright
 copyright: Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</a> 
@@ -51,6 +51,8 @@ theme:
 
 ## Plugins
 plugins:
+  # - meta    # only insider
+  # - blog
   - search
   - autorefs
   - mkdocs-jupyter:
@@ -222,4 +224,7 @@ nav:
       - miscell/music/5_Lyrics.md
     - Reading list:
       - miscell/reading/1_read_list.md
+
+  - Thatool: https://thangckt.github.io/thatool
+  - MediaLib: https://thangckt.github.io/mediaLib
 
