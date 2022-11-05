@@ -4,54 +4,41 @@ hide:
   - navigation 
 --- -->
 
-# Preface
-
-<!-- add picutres in table-->
-<!-- ![](./assets/images/my_picture3x3.jpg) 
-  [![](./assets/images/icon_linkedin.jpg)](https://www.linkedin.com/in/thang-nguyen-5b458a218) 
-![](./assets/images/hello_world.png)
-
-[![](./assets/images/icon_ORCID.png)](https://orcid.org/0000-0001-9826-5397) 
---> 
-
-
- 
- <!--
-| <img src="./0images/my_picture3x3.jpg" style="border-radius: 50%; border: 2px solid black;"/> | 
-|:---:|
-| [![](./0images/icon_email.png)](mailto:caothangckt@gmail.com)  [![](./0images/icon_messenger.png)](https://www.facebook.com/thangckt5)  [![](./0images/icon_Telegram.png)](https://t.me/thangckt)     |
+<!-- Hide page title 
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>
 -->
 
-<img src="./1images/monkey.png" style="float:left; margin-right:20px" width="190" />
 
-This page dedicates to my personal notes, which do not reflect either community or third-party rules.
+# Welcome to my site
 
-These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
+<!--
+| <img src="./1images/my_picture3x3.jpg" style="border-radius: 50%; border: 2px solid black;"/> | 
+| :--: | 
+| :fontawesome-brands-facebook: [Facebook](https://www.facebook.com/thangckt5) <br> :fontawesome-brands-telegram: [Telegram](https://t.me/thangckt) |
+-->
 
-It is fun if something here is valid for you. Even nothing here is valid for you, just enjoin Mendelssohn's excellent pieces. 
+<!-- I am Cao Thang Nguyen, a PhD candidate in Computational Mechanics at Ulsan National Institute of Science & Technology (UNIST). 
 
-!!! quote ""
+I am one of the populace interested in Computational Solid Mechanics which focuses on the atomistic scale, coarse-grained dynamics and rare event.-->
 
-    You cannot teach a man anything, you can only help him find it within himself. - Galileo Galilei (1564–1642)
+<img src="./1images/my_picture3x3.jpg" style="border-radius:50%; border: 2px solid black; float:left; margin-right:20px" width="190" />
+!!! quote "M.West"
 
-<!-- 
-```python
-if "bullshit" not in your_life:
-    print("Hello world")
-else:
-    raise Error("stuck in bullshit")
-```  -->
+    You only live once, but if you do it right, once is enough.
 
-
-<!--- #### [My CV](https://thangckt.github.io/cv) -->
-
+How to do it right? West did not say.
+ 
+Someones might spend their whole life just to recognize somewhat right, while others just be there to generate the misrecognization.
 
 
-<div style="position:relative;padding-bottom:56.25%;">    
-<iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
+<div style="position:relative;padding-bottom:56.25%;">
+<iframe src="https://www.youtube-nocookie.com/embed/USElnzr6cNE"
         style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >
 </iframe> 
 </div>
-    
-
