@@ -28,7 +28,7 @@ module display <module_name>
 
 - Only one installation for `eagle/lion/leopard/cheetah`, but need to load different OpenMPI for each cluster. Also need to load Conda to overwrite default python of the system (different Ver. of python may cause runtime error)
 
-### 2. Download
+## 2. Download
 
 [LAMMPS site](https://lammps.sandia.gov/bug.html)
 [Souce code](https://github.com/lammps/lammps)
