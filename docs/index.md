@@ -29,7 +29,7 @@ This site dedicates to my personal notes, which do not reflect either community 
 
 These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
-It is fun if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces. 
+It's fun if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces. 
 
 !!! quote ""
 
