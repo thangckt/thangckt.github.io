@@ -215,6 +215,11 @@ nav:
     - reference/1_Cheatsheet.md
     - reference/1_Docs_syntax.md
 
+
+  - Thatool: https://thangckt.github.io/thatool
+  - MediaLib: https://thangckt.github.io/mediaLib
+
+
   - Miscellaneous:
     - Music:
       - miscell/music/1_Tinh_ca.md
@@ -224,7 +229,3 @@ nav:
       - miscell/music/5_Lyrics.md
     - Reading list:
       - miscell/reading/1_read_list.md
-
-  - Thatool: https://thangckt.github.io/thatool
-  - MediaLib: https://thangckt.github.io/mediaLib
-
