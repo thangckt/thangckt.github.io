@@ -274,6 +274,7 @@ conda install -n base nb_conda_kernels
 conda create -n py311 python=3.11
 conda activate py311
 conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy shapely natsort lmfit jupyterlab-spellchecker
+conda install -c numba numba
 ```
 ```python
 ## env for ovito
