@@ -263,7 +263,7 @@ conda install --revision 0
 
 Install mamba into the base environment:
 ```python
-conda install -n base nb_conda_kernels jupyterlab -c conda-forge
+conda install -n base nb_conda_kernels jupyterlab git -c conda-forge
 ```
 
 **Install in envs**
