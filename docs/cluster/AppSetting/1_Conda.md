@@ -263,17 +263,16 @@ conda install --revision 0
 
 Install mamba into the base environment:
 ```python
-conda install -n base mamba -c conda-forge
-conda install -n base nb_conda_kernels
+conda install -n base nb_conda_kernels jupyterlab -c conda-forge
 ```
 
 **Install in envs**
 
 ```python
-## env for general use, ovito should use with python=3.11
-conda create -n py311 python=3.11
+## env for general use, ovito should use with python=3.10
+conda create -n py310 python=3.10
 conda activate py311
-conda install -y -c conda-forge jupyterlab=3.4.6 ele numpy pandas matplotlib scipy shapely natsort lmfit jupyterlab-spellchecker
+conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy shapely natsort lmfit jupyterlab-spellchecker
 conda install -c numba numba
 ```
 ```python
