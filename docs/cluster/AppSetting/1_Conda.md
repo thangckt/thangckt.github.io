@@ -309,8 +309,8 @@ pip install git+https://github.com/Zulko/moviepy.git
 ```
 
 ```
-pip install git+https://github.com/jupyterlab/jupyterlab@master
-
+pip install git+https://github.com/jupyterlab/jupyterlab@3.6.x
+```
 
 
 
