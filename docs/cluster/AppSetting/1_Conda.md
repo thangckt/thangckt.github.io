@@ -269,11 +269,10 @@ conda install -n base nb_conda_kernels jupyterlab -c conda-forge
 **Install in envs**
 
 ```python
-## env for general use, ovito should use with python=3.10
-conda create -n py310 python=3.10
-conda activate py310
-conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy shapely natsort lmfit 
-conda install -c conda-forge numba
+## env for general use, ovito should use with python=3.11
+conda create -n py310 python=3.11
+conda activate py311
+conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy shapely natsort lmfit numba
 ```
 ```sh
 ## env for ovito
