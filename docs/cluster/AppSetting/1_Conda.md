@@ -272,13 +272,15 @@ conda install -n base nb_conda_kernels jupyterlab -c conda-forge
 ## env for general use, ovito should use with python=3.10
 conda create -n py310 python=3.10
 conda activate py310
-conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy shapely natsort lmfit jupyterlab-spellchecker
-conda install -c numba numba
+conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy shapely natsort lmfit 
+conda install -c conda-forge numba
 ```
-```python
+```sh
 ## env for ovito
+conda create -n py310ovito python=3.10
+conda activate py310ovito
 conda install -y --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito
-conda install -y -c conda-forge ipyevents ipycanvas ipywidgets
+conda install -y -c conda-forge jupyterlab ipyevents ipycanvas ipywidgets
 ```
 
 ```python
