@@ -296,7 +296,7 @@ conda install -y -c conda-forge jupyterlab numpy ipyevents ipycanvas ipywidgets
 ```python
 conda create -n py39mbuild python=3.9      
 conda activate py39mbuild
-conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm=7.7 shapely natsort lmfit              
+conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm=7.7 shapely natsort lmfit git             
 pip install git+https://github.com/thangckt/mbuild.git@thang
 ```
 
