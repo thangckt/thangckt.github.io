@@ -4,9 +4,9 @@ sort: 1
 
 # Conda
 
-## Installation
+## I. Installation
 
-### I. Install Anaconda on Linux (USC-locally installation)
+### 1. Install Anaconda on Linux (USC-locally installation)
 
 Download [Anaconda installer for Linux](https://repo.anaconda.com/miniconda/)
 ```
@@ -93,7 +93,7 @@ https://stackoverflow.com/questions/22885134/how-to-load-virtualenv-using-enviro
 4) Using vi, the Unix Visual Editor
 
 
-### II. Install Miniconda on Windows
+### 2. Install Miniconda on Windows
 Anaconda: https://www.anaconda.com/distribution/#windows
 Miniconda: https://repo.anaconda.com/miniconda/
 make anaconda available in cmd windows, and can double click to open jypyter file
@@ -119,7 +119,7 @@ change: ...; conda activate 'C:\DevProgram\miniconda3'
 to : ...; conda activate 'C:\DevProgram\miniconda3\envs\py37'
 ```
 
-## III. Environments management & install packages
+## II. Environments management & install packages
 
 With conda, you can create, export, list, remove, and update environments that have different versions of Python and/or packages installed in them. Switching or moving between environments is called activating the environment
 1. To see list of all environments:
@@ -168,7 +168,7 @@ source activate py37env
 Remove env:  conda  env  remove   -n  myenv
 
 
-## Install & Update packages in Conda
+### Install & Update packages in Conda
 install a package also replaces the current package. open Anaconda_Prompt
 ```
 ### Uninstall all packages
