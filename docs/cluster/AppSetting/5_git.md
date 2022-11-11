@@ -25,7 +25,7 @@ git pull origin master
 ```
 git clone -c core.longpaths=true <repo-url>
 ```
-submit with too long file name
+submit with too long file name: right-click repo --> open Command Prompt
 ```
 git config --system core.longpaths true
 ```
