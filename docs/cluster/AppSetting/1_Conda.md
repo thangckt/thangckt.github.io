@@ -308,6 +308,8 @@ pip install gtts pyttsx3 pytube youtube-search-python google_images_download
 pip install git+https://github.com/Zulko/moviepy.git
 ```
 
+```
+pip install git+https://github.com/jupyterlab/jupyterlab@master
 
 
 
