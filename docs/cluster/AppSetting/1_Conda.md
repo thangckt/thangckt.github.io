@@ -268,27 +268,34 @@ conda install -n base nb_conda_kernels jupyterlab -c conda-forge
 
 **Install in envs**
 
+!!! info "General use"
+  - env for general use, ovito should use with python=3.11
+  
 ```python
-## env for general use, ovito should use with python=3.11
-conda create -n py310 python=3.11
+conda create -n py311 python=3.11
 conda activate py311
 conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy shapely natsort lmfit numba
 ```
+
+!!! info "ovito env"
+  - error Vers: ovito-3.7.10; 3.7.11
+
 ```sh
-## env for ovito
 conda create -n py310ovito python=3.10
 conda activate py310ovito
-conda install -y --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito
-conda install -y -c conda-forge jupyterlab ipyevents ipycanvas ipywidgets
+conda install -y --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito=3.7.9
+conda install -y -c conda-forge jupyterlab numpy ipyevents ipycanvas ipywidgets
 ```
 
+!!! info "mbuild polymer"
+  - only suppot to py39
+  - channel `-c omnia` required for `packmol` on windows
+  - Error: DLL load failed while importing _openmm, solve by installing `openmm=7.7`
+  
 ```python
-## env for polymer package: mbuild    
-## -c omnia require for 'packmol' on windows
-## Error: DLL load failed while importing _openmm, solve by installing `openmm=7.7`
-conda create -n py39mbuild python=3.9      # only suppot to py39
+conda create -n py39mbuild python=3.9      
 conda activate py39mbuild
-conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm shapely natsort lmfit              
+conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openbabel packmol openmm=7.7 shapely natsort lmfit              
 pip install git+https://github.com/thangckt/mbuild.git@thang
 ```
 
