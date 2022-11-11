@@ -299,7 +299,7 @@ conda activate py37pysimm
 conda install -c conda-forge ambertools  # just run on linux
 ```
 
-```python
+```sh
 ## env py39video
 conda create -n py39video python=3.9
 conda activate py39video
