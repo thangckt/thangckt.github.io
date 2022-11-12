@@ -23,7 +23,7 @@ jobs:
       - name: MkDocs gh-deploy
         run: |
           pip install mkdocs mkdocstrings[python]>=0.18 mkdocs-jupyter 
-          pip install git+https://github.com/thangckt/mkdocs-material.git@tabs_in_header_yinkh        # tabs_in_header_yinkh   tabs_in_header_thang
+          pip install git+https://github.com/thangckt/mkdocs-material.git@thang_master        # tabs_in_header_yinkh   tabs_in_header_thang
           mkdocs gh-deploy --force --verbose
 
 
