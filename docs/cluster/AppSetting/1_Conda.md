@@ -284,10 +284,11 @@ conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy sha
 
 !!! info "ovito env"
   - error Vers: ovito-3.7.10; 3.7.11
+  - Should use with python 39 to void unexpect errors.
 
 ```sh
-conda create -n py310ovito python=3.10
-conda activate py310ovito
+conda create -n py39ovito python=3.9
+conda activate py39ovito
 conda install -y --strict-channel-priority -c https://conda.ovito.org -c conda-forge ovito=3.7.9
 conda install -y -c conda-forge jupyterlab numpy ipyevents ipycanvas ipywidgets
 ```
