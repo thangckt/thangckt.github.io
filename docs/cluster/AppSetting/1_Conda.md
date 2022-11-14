@@ -259,6 +259,7 @@ conda install --revision 0
     - Install jyterlab in both base-env and sub-env
     - select to open notebook by jupyterlab in base-env
  - To solve conflict DLL when use different python vers, remove PYTHONPATH environment variables (maybe need to update python in base-env)
+ - Consider using `environment.yml` [see more](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file)
 
 
 Install mamba into the base environment:
