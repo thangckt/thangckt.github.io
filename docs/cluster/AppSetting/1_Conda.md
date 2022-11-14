@@ -258,7 +258,10 @@ conda install --revision 0
     - Install in base-env: `conda install -n base nb_conda_kernels` 
     - Install jyterlab in both base-env and sub-env
     - select to open notebook by jupyterlab in base-env
- - To solve conflict DLL when use different python vers, remove PYTHONPATH environment variables (maybe need to update python in base-env)
+ - To solve error: ImportError: DLL load failed while importing shell: Can not find procedure. Downgrade `pywin32` in `base_env`
+   ```
+   pip install --upgrade pywin32==228
+   ```
  - Consider using `environment.yml` [see more](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file)
 
 
