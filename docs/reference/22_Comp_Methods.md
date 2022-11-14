@@ -16,7 +16,7 @@ table, td, th {border: none!important; }
 | Introduction FEM - Lecture note |  [pdf](./pdf/mech_lecture_Intro_FEM.pdf){target="_blank"} |
 | A first Course in Finite Elements - J. Fish |   [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/A%20first%20corse%20in%20finite%20element%20analysis.pdf){target="_blank"} |
 | An Indtroduction to The Finite Element Method - J.N. Reddy |    [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/An_Introduction_to_the_Finite_Element_Method_3rdEd_J.N.%20Reddy.pdf){target="_blank"}
-| Computational Mechanics | [link](https://thangckt.github.io/lec_computational_mechanics){target="_blank"}  |
+| Computational Mechanics | [Notebook](https://thangckt.github.io/lec_computational_mechanics){target="_blank"}, [Github](https://github.com/cooperrc/computational-mechanics){target="_blank"} |
 
 ## MD
 
@@ -34,7 +34,7 @@ table, td, th {border: none!important; }
 
 |  |  |  
 |:--|:--|
-| Machine learing in Computational fluid mechanics| [Notebook](https://thangckt.github.io/ml_cfd){target="_blank"},  [Github](https://github.com/AndreWeiner/ml-cfd-lecture){target="_blank"}|
+| Machine learing in Computational fluid mechanics| [Notebook](https://thangckt.github.io/lec_ml_cfd){target="_blank"},  [Github](https://github.com/AndreWeiner/ml-cfd-lecture){target="_blank"}|
 | Physics-based Deep Learning - N. Thuerey| [pdf](https://arxiv.org/pdf/2109.05237.pdf){target="_blank"},  [Notebook](http://physicsbaseddeeplearning.org/intro.html){target="_blank"} |
 | Deep Learning in Computational Mechanics| [pdf](https://link.springer.com/content/pdf/10.1007%2F978-3-030-76587-3.pdf){target="_blank"} |
 
