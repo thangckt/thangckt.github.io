@@ -16,7 +16,7 @@ table, td, th {border: none!important; }
 | Introduction FEM - Lecture note |  [pdf](./pdf/mech_lecture_Intro_FEM.pdf){target="_blank"} |
 | A first Course in Finite Elements - J. Fish |   [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/A%20first%20corse%20in%20finite%20element%20analysis.pdf){target="_blank"} |
 | An Indtroduction to The Finite Element Method - J.N. Reddy |    [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/An_Introduction_to_the_Finite_Element_Method_3rdEd_J.N.%20Reddy.pdf){target="_blank"}
-| Computational Mechanics | [link](https://cooperrc.github.io/computational-mechanics/README.html){target="_blank"}  |
+| Computational Mechanics | [link](https://thangckt.github.io/lec_computational_mechanics){target="_blank"}  |
 
 ## MD
 
