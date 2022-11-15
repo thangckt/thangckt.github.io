@@ -106,7 +106,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 <td class="td">
   <p class="text_title">Origami-inspired Graphene/PMMA composite with tunable auxetic property </p>
   <p class="text_author">Nguyen, Cao Thang; Kim, Sung Youb </p>
-  <p class="text_author"><a href="https://thangckt.github.io/note" target="_blank" style="text-decoration: none">Private arXiv</a>  (2022)</p>
+  <p class="text_author"><a href="https://thangckt.github.io" target="_blank" style="text-decoration: none">Private arXiv</a>  (2022)</p>
 </td> </tr> </table> </div>
 
 <div style="clear:both; padding-top:20px; display:inline-block">
@@ -119,7 +119,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 <td class="td">
   <p class="text_title">An enhanced sampling approach for computing the temperature-dependent free energy </p>
   <p class="text_author">Nguyen, Cao Thang; Kim, Sung Youb </p>
-  <p class="text_author"><a href="https://thangckt.github.io/note" target="_blank" style="text-decoration: none">Private arXiv</a>  (2022)</p>
+  <p class="text_author"><a href="https://thangckt.github.io" target="_blank" style="text-decoration: none">Private arXiv</a>  (2022)</p>
 </td> </tr> </table> </div>
 
 <div style="clear:both; padding-top:20px; display:inline-block">
@@ -132,7 +132,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 <td class="td">
   <p class="text_title">Coalescence-enhanced melting in the incipient stage of surface melting </p>
   <p class="text_author">Nguyen, Cao Thang; Ho, Duc Tam; Kim, Sung Youb </p>
-  <p class="text_author"><a href="https://thangckt.github.io/note" target="_blank" style="text-decoration: none">Private arXiv</a>  (2021)</p>
+  <p class="text_author"><a href="https://thangckt.github.io" target="_blank" style="text-decoration: none">Private arXiv</a>  (2021)</p>
 </td> </tr> </table> </div>
 
 <div style="clear:both; padding-top:20px; display:inline-block">
@@ -145,7 +145,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 <td class="td">
   <p class="text_title">Mechanical vs. thermodynamic melting of metals from the mean-force dynamics calculation </p>
   <p class="text_author">Nguyen, Cao Thang; Kim, Sung Youb </p>
-  <p class="text_author"><a href="https://thangckt.github.io/note" target="_blank" style="text-decoration: none">Private arXiv</a>  (2021)</p>
+  <p class="text_author"><a href="https://thangckt.github.io" target="_blank" style="text-decoration: none">Private arXiv</a>  (2021)</p>
 </td> </tr> </table> </div>
 
 <div style="clear:both; padding-top:20px; display:inline-block">
@@ -158,7 +158,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 <td class="td">
   <p class="text_title">Finite-size effect on the thermodynamics melting predicted by free energy approach </p>
   <p class="text_author">Nguyen, Cao Thang; Ho, Viet Hung; Kim, Sung Youb </p>
-  <p class="text_author"><a href="https://thangckt.github.io/note" target="_blank" style="text-decoration: none">Private arXiv</a>  (2020)</p>
+  <p class="text_author"><a href="https://thangckt.github.io" target="_blank" style="text-decoration: none">Private arXiv</a>  (2020)</p>
 </td> </tr> </table> </div>
 
 
