@@ -6,7 +6,7 @@ hide:
 # Mechanical 
 
 <style>
-table, td, th {border: none!important; font-size:14px; margin-top:0px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; border-spacing: -10px;}
+table, td, th {border: none!important; font-size:14px; padding-top:-10px; padding-bottom:0px; border-spacing:0px;}
 </style>
 
 
