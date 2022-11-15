@@ -6,14 +6,14 @@ hide:
 # Mechanical 
 
 <style>
-table, td, th {border: none!important; font-size:14px; padding-top:-10px; padding-bottom:0px; border-spacing:0px;}
+table, td, th {border: none!important; font-size:14px; padding-top:-30px; padding-bottom:0px; border-spacing:0px;}
 </style>
 
 
 ## Basic Mechanics
 
 |  |  |  |
-|:--|:--:|:--|
+|:--|:--|:--|
 | Engineering Mechanics 1: Statics | D. Gross | [pdf](./pdf/mech_Engineering_Mechanics_1_Statics.pdf){target="_blank"} |
 | Engineering Mechanics 2: Mechanics of Materials | D. Gross | [pdf](./pdf/mech_Engineering_Mechanics_2_Mechanics_of_Materials.pdf){target="_blank"} |
 | Statics and Mechanics of Materials | F.P. Beer | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/Statics%20and%20mechanics%20of%20Materials.pdf){target="_blank"} |
@@ -28,7 +28,7 @@ table, td, th {border: none!important; font-size:14px; padding-top:-10px; paddin
 ## Advanced Mechanics
 
 |  |  |  |
-|:--|:--:|:--|
+|:--|:--|:--|
 | Advanced Engineering Dynamics | Harrison | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/Advanced%20Engineering%20Dynamics.pdf){target="_blank"} |
 | Fundamentals of Protein Structure and Function| | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/CHEM/Fundamentals%20of%20Protein%20Structure%20and%20Function%20-%20E%20Buxbaum.pdf){target="_blank"} |
 | Equilibrium Thermodynamics| | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/PHYSICS/Equilibrium%20Thermodynamics%20Second%20Edition%20by%20Mario%20J.%20de%20Oliveira.pdf){target="_blank"} |
