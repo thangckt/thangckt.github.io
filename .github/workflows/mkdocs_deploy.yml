@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: MkDocs Github Pages automatic deployment
-    runs-on: ubuntu-latest
+    runs-on: windows-latest   # ubuntu-latest
     steps:
       - name: Checkout main          # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v3
@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install mkdocs mkdocstrings[python]>=0.18 mkdocs-jupyter 
-          python -m pip install git+https://github.com/thangckt/mkdocs-material.git@thang_master        # tabs_in_header_yinkh   tabs_in_header_thang  thang_master thang_header
+          python -m pip install git+https://github.com/thangckt/mkdocs-material.git@thang_header        # tabs_in_header_yinkh   tabs_in_header_thang  thang_master thang_header
 
       - name: MkDocs gh-deploy
         run: |
