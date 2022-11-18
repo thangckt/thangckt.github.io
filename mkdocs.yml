@@ -179,7 +179,7 @@ nav:
       - cluster/compiling/10_LLVM.md
       - cluster/compiling/11_Conda_MPI.md
       - cluster/compiling/12_PMIX.md      
-    - Apps Setting:       
+    - Setting:       
       - cluster/AppSetting/1_Conda.md
       - cluster/AppSetting/Latex_TexStudio.md
       - cluster/AppSetting/Latex_VScode.md
