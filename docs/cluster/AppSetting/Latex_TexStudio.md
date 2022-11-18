@@ -5,7 +5,8 @@ sort: 3
 # Latex from Zero
 
 What is LaTeX?
-LaTeX is a typesetting program that takes a plain text file with various commands in it and converts it to a formatted document based on the commands that it has been given. The source file for the document has a file extension of .tex. For more information on LaTeX, see LaTeX on Athena Basics, provided by the Athena On-Line Help system. 
+
+LaTeX is a typesetting program that takes a plain text file with "various commands" in it and converts it to a formatted document based on the commands that it has been given. The source file for the document has a file extension of .tex. For more information on LaTeX, see LaTeX on Athena Basics, provided by the Athena On-Line Help system. 
 
 ## I. LaTex Editor and Compiler
 
