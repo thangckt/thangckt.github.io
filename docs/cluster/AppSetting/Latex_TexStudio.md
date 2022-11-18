@@ -2,65 +2,69 @@
 sort: 3
 ---
 
-# Latex All-in-one
+# Latex from Zero
+
 What is LaTeX?
 LaTeX is a typesetting program that takes a plain text file with various commands in it and converts it to a formatted document based on the commands that it has been given. The source file for the document has a file extension of .tex. For more information on LaTeX, see LaTeX on Athena Basics, provided by the Athena On-Line Help system. 
 
-# I. LaTex Editor and Compiler
+## I. LaTex Editor and Compiler
+
 To work with Latex, we need a Latex Editor + a Latex Compiler. The editor is used here is TexStudio, accompanied by MikTex.
 PdfLaTeX options:  https://docs.miktex.org/manual/miktex-pdftex.html
 BibTeX options:    https://docs.miktex.org/manual/miktex-bibtex.html
 SyncTeX file: is to jump between PDF/source
 
-## 1. Latex Editor
+### 1. Latex Editor
+
 Use [TeXstudio](https://texstudio.org/)
 
 1.a. To put all Aux-compiled files into a folder:
 For MiKTeX with TeXstudio, go to `Options --> configuration`
-```
-## Use pdflatex compiler:
-Build:
---> Defaul Complier: PdfLatex
-Commands:
---> PdfLaTeX: pdflatex.exe -synctex=1 -interaction=nonstopmode --aux-directory=auxDIR %.tex
---> BibTeX: bibtex.exe auxDIR/%
-```
-```
-## Or Use latexmk compiler (inuse):
---> Require Install "strawberry perl": https://strawberryperl.com/
-Build:
---> Defaul Complier: Latexmk
-Commands:
---> latexmk:  latexmk -pdf   -silent -synctex=1 % -auxdir=auxDIR -f -recorder-  
---> BibTeX: bibtex.exe %
-```
+
+    ```
+    ## Use pdflatex compiler:
+    Build:
+    --> Defaul Complier: PdfLatex
+    Commands:
+    --> PdfLaTeX: pdflatex.exe -synctex=1 -interaction=nonstopmode --aux-directory=auxDIR %.tex
+    --> BibTeX: bibtex.exe auxDIR/%
+    ```
+
+    ```
+    ## Or Use latexmk compiler (inuse):
+    --> Require Install "strawberry perl": https://strawberryperl.com/
+    Build:
+    --> Defaul Complier: Latexmk
+    Commands:
+    --> latexmk:  latexmk -pdf   -silent -synctex=1 % -auxdir=auxDIR -f -recorder-  
+    --> BibTeX: bibtex.exe %
+    ```
+
 Log File Seach Paths (in build): `auxDIR`. Log file is important to figure out the error. So if use --aux-directory, must add "Additional Search Paths" for "Log File" is "auxDIR"
-```
-Build: Show Advanced Options
---> Additional Search Paths:
-    --> Log File: auxDIR
-```
+
+    ```
+    Build: Show Advanced Options
+    --> Additional Search Paths:
+        --> Log File: auxDIR
+    ```
 
 1.b. To put date in filename:
-```
-PdfLaTeX: pdflatex.exe -synctex=1 -interaction=nonstopmode --jobname="%_$(date +'%B_%d_%Y')"  %.tex
-```
-https://www.cyberciti.biz/faq/linux-unix-formatting-dates-for-display/
 
-1. open textstudio on many windows
-```
-right-click shotcut  --> properties --> then include "--start-always" into target
-```
-https://tinyurl.com/y8tq5z9p 
+    ```
+    PdfLaTeX: pdflatex.exe -synctex=1 -interaction=nonstopmode --jobname="%_$(date +'%B_%d_%Y')"  %.tex
+    ```
+    https://www.cyberciti.biz/faq/linux-unix-formatting-dates-for-display/
 
+    1. open textstudio on many windows
+    ```
+    right-click shotcut  --> properties --> then include "--start-always" into target
+    ```
+    https://tinyurl.com/y8tq5z9p 
 
 [TexMaker](https://www.xm1math.net/texmaker/download.html) is a parent app of Texstudio
 
+### 2. Latex compiler
 
-
-
-
-## 2. Latex compiler
 can use Miktex or Livetex
 https://miktex.org/download
 
@@ -70,8 +74,6 @@ https://tex.stackexchange.com/questions/2063/how-can-i-manually-install-a-packag
 
 ![](./figure/fig1_miktex1.png)
 
-
-
 1.d. Dark theme for TextStudio
 - Download the file *.txsprofile elsewhere
 https://www.pauljhurtado.com/teaching/software.html
@@ -79,7 +81,8 @@ https://tex.stackexchange.com/questions/108315/how-can-i-set-a-dark-theme-in-tex
 - start TeXstudio -> Options->Load Profile
 - Options->Save current setting
 
-## 3. Use Language Tool in TexStudio
+## II. Use Language Tool in TexStudio
+
 https://tex.stackexchange.com/questions/155148/installing-language-tool-in-texstudio/401103
 - Download Language Tool (https://languagetool.org/download/): get .zip file
 - Unzip LT -> runlanguagetool.jar. Go to Text Checking > Options> Genera, then check Run as server on port>8081
@@ -90,24 +93,27 @@ netstat -aon | findstr 8081
 taskkill /f /pid 19984
 #############
 
-### Configure TextStudio to use LT: (Offline usage -> need file:languagetool-server.jar)
+### Configure TextStudio to use LT
+
 go to `Options --> Configure TeXstudio... > Language checking`
+
 ```
         + set "Server URL" to: http://localhost:8081/
         + set "LT path" to the path of file: languagetool.jar
 * More:
         + set "LT Argument" to "org.languagetool.server.HTTPServer -p 8081"
         + check "Start Language Tool if not running"
-```     
+```
+
 ![](./figure/fig2_LanguageTool1.png)
-
-
 
 In order to make sure everything is fine, click on Help > Check LanguageTool in TeXstudio. The output should be something like this:
 ![](./figure/fig2_LanguageTool2.png)
 
 ### Use texstudio.zip (no need installation)
+
 Download Langtool.zip --> upzip --> then, copy whole langtool folder into texstudio base-folder
+
 ```
 Build:
 --> Defaul Complier: Latexmk
@@ -122,7 +128,8 @@ Language checking:
 ```
 
 
-2.a. Download dictionary: 
+### Download dictionary
+
 https://extensions.libreoffice.org/en/extensions/show/english-dictionaries
         - download your dictionary (.oxt)
         - Click on Import Dictionary... and navigate to C:\Program Files (x86)\TeXstudio\dictionaries, then choose the dictionary *.oxt you downloaded.
@@ -130,18 +137,10 @@ https://extensions.libreoffice.org/en/extensions/show/english-dictionaries
 ![](./figure/fig2_LanguageTool3.png)
 
 
+## III. Citation management
 
-      
+### Create database (*.bib file) with Zotero
 
-
-
-
-
-
-
-
-
-## Create database (*.bib file) with Zotero
 https://guides.library.iit.edu/c.php?g=720120&p=6296986
 
 https://libguides.mit.edu/cite-write/bibtex
@@ -178,9 +177,6 @@ Zotero -> Edit -> Preference -> Better BibTex -> Fields to omit from export: abs
 
 
 
+### Create database (*.bib file) with Mendeley
 
-# Create database (*.bib file) with Mendeley
 https://tinyurl.com/y49dqosw
-
-
-

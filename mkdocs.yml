@@ -181,7 +181,8 @@ nav:
       - cluster/compiling/12_PMIX.md      
     - Apps Setting:       
       - cluster/AppSetting/1_Conda.md
-      - cluster/AppSetting/2_Latex_from_Zero.md
+      - cluster/AppSetting/Latex_TexStudio.md
+      - cluster/AppSetting/Latex_VScode.md
       - cluster/AppSetting/3_JupyterLab.md
       - cluster/AppSetting/4_VScode_setting.md
       - cluster/AppSetting/5_git.md
