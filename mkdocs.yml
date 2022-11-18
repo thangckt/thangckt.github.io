@@ -163,11 +163,7 @@ nav:
   # - About: index.md
   - Cluster: 
     - Compiling:
-      - Compiling LAMMMPS:
-        - Prepraring: cluster/compiling/1_LAMMPS1_prepare.md
-        - With GCC + OpenMPI: cluster/compiling/1_LAMMPS2_gcc_ompi.md 
-        - With LLVM + OpenMPI: cluster/compiling/1_LAMMPS3_llvm_ompi.md 
-        - With Intel + OpenMPI: cluster/compiling/1_LAMMPS4_intel_ompi.md 
+      - cluster/compiling/1_LAMMPS.md
       - cluster/compiling/2_Compile_GCC.md
       - cluster/compiling/3_Compile_openMPI.md
       - cluster/compiling/4_Compile_LAPACK.md
