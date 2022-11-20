@@ -12,8 +12,8 @@ copyright: Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</
 ## Configuration
 theme:
   name: "material"     #  "material"    "mkdocs"    "readthedocs"     'rtd-dropdown'   windmill  bootswatch
-  logo: 1images/one-note-128-y.png               # one-note-128-o.png        my_picture3x3.jpg  
-  favicon: 1images/one-note-128-y.png 
+  # logo: 1images/one-note-128-y.png               # one-note-128-o.png        my_picture3x3.jpg  
+  # favicon: 1images/one-note-128-y.png 
   highlightjs: true
   features:
     - content.code.annotate
@@ -58,8 +58,8 @@ plugins:
   # - blog
   - search
   - autorefs
-  - mkdocs-jupyter:
-      theme: dark
+  # - mkdocs-jupyter:
+  #     theme: dark
       
   - mkdocstrings:
       handlers:
@@ -105,13 +105,14 @@ extra:
     #   link: https://github.com/thangckt      
     # - icon: fontawesome/brands/twitter
     #   link: https://twitter.com/squidfunk
-  # version:
-  #   provider: mike
-  #   default: latest
+  version:
+    provider: mike
+    default: latest
+
 
 ## Extensions
 markdown_extensions:
-  - abbr
+  # - abbr
   - admonition
   - pymdownx.details
   - pymdownx.superfences
@@ -123,7 +124,7 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
-      toc_depth: 4
+      # toc_depth: 4
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
