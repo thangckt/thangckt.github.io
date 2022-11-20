@@ -215,7 +215,7 @@ nav:
     - reference/1_Cheatsheet.md
     - reference/1_Docs_syntax.md
 
-  - Codespace: reference/codespace.md
+  - Codespace: codespace.md
     # - Thatool: https://thangckt.github.io/thatool
     # - MediaLib: https://thangckt.github.io/mediaLib
 
