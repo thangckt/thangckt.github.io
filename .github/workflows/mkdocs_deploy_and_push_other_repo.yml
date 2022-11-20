@@ -26,8 +26,20 @@ jobs:
           python -m pip install mkdocs mkdocstrings[python]>=0.18 mkdocs-jupyter 
           python -m pip install git+https://github.com/thangckt/mkdocs-material.git@tabs_header_yinkh        # tabs_header_yinkh   tabs_header_thang  thang_master thang_header
 
-      - name: MkDocs gh-deploy
+      - name: MkDocs gh-deploy    # This will create `gh-pages` branch contain `mkdocs-site`
         run: |
           mkdocs gh-deploy --force --verbose
 
 
+      - name: Push to another repository  # This step to copy a folder and push to another repo
+        id: push_directory
+        uses: thangckt/github-action-push-to-another-repository@main    #  cpina/github-action-push-to-another-repository@main   # use workflow `action.yml` in this repo
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        with:
+          source-directory: './'
+          destination-github-username: 'thangckt'
+          destination-repository-name: 'thangckt.github.io'
+          user-email: thangckt@gmail.com
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+          target-branch: gh-pages        # push branch `gh-pages` from `source-repo` to `destination-repo` 
