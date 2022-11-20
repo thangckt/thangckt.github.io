@@ -13,4 +13,7 @@ Then push contents of `gh-pages` branch into the corresponding `gh-pages` branch
 
 Content of `/site` is available at `http://thangckt.github.io`
 
+## Error logs
+
+The error that breakdown header is due to the size of logo figure.
 
