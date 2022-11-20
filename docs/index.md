@@ -31,9 +31,9 @@ These notes are random, messy, improvised, and inevitable for some rare situatio
 
 It's fun if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces. 
 
-!!! quote ""
+!!! quote "Galileo Galilei (1564–1642)"
 
-    You cannot teach a man anything, you can only help him find it within himself. - Galileo Galilei (1564–1642)
+    You cannot teach a man anything, you can only help him find it within himself.
 
 <!-- 
 ```python
