@@ -11,8 +11,8 @@ copyright: Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</
 ## Configuration
 theme:
   name: "material"     #  "material"    "mkdocs"    "readthedocs"     'rtd-dropdown'   windmill  bootswatch
-  logo: 1images/monkey.png               # one-note-128-o.png        my_picture3x3.jpg  
-  favicon: 1images/one-note-128-y.png 
+  logo: 1images/monkey.png               # one-note-128-o.png        my_picture3x3.jpg    one-note-128-y.png 
+  favicon: 1images/monkey.png 
   highlightjs: true
   features:
     - content.code.annotate
