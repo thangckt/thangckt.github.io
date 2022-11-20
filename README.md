@@ -12,3 +12,4 @@ A github.workflow will automatically build the Mkdocs `/site` and put in the `gh
 Then push contents of `gh-pages` branch into the corresponding `gh-pages` branch of another distination_repository named `thangckt.github.io`
 
 Content of `/site` is available at `http://thangckt.github.io`
+
