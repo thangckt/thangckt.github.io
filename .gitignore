@@ -1,0 +1,31 @@
+### ----------------------------------------------------------------------------
+## data file
+### ----------------------------------------------------------------------------
+# *.dat
+# *.cfg
+# *.xyz
+
+### ----------------------------------------------------------------------------
+###  Python, python-jupyter stuff
+### ----------------------------------------------------------------------------
+## python-jupyter stuff
+**/.ipynb_checkpoints/
+**/__pycache__/
+
+/.ipynb_checkpoints
+/__pycache__
+
+# Distribution files
+/dist
+/mkdocs_material.egg-info
+
+# Build files
+/build
+/MANIFEST
+/site
+
+## goodsync ignore
+**/_gsdata_/
+
+## tmp file due to office: ~$_*.doc,  ~$_*.ppt
+**/~*.*
