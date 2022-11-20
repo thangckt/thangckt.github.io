@@ -78,6 +78,7 @@ plugins:
           #   - https://mkdocstrings.github.io/autorefs/objects.inv
 
 
+
 ## Customization
 extra:
   generator: false
@@ -112,6 +113,10 @@ extra:
 markdown_extensions:
   - abbr
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.caret
+  - abbr
   - attr_list
   - def_list
   - footnotes
@@ -123,8 +128,6 @@ markdown_extensions:
       generic: true
   - pymdownx.betterem:
       smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
   - pymdownx.emoji:
       emoji_generator: !!python/name:materialx.emoji.to_svg
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -149,15 +152,15 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-extra_javascript:
-  - _extension/javascripts/extra.js
-extra_css:
-  - _extension/stylesheets/extra.css
+# extra_javascript:
+#   - _extension/javascripts/extra.js
+# extra_css:
+#   - _extension/stylesheets/extra.css
 
 
 ## Page tree
 nav:
-  # - Home: https://thangckt.github.io
+  - Home: https://thangckt.github.io
   # - About: index.md
   - Cluster: 
     - Compiling:
@@ -184,51 +187,51 @@ nav:
       - cluster/AppSetting/7_packing_python.md
       - cluster/AppSetting/8_WSL.md
 
-  # - Literature:
-  #   - literature/3_research_ethic.md
-  #   - Research Writing:
-  #     - Preparing:
-  #       - Instroduction of research paper: literature/research_writing/11_introduction_paper.md
-  #       - Ethics of research: literature/research_writing/21_ethic_of_research.md
-  #       - Identify suitable journal: literature/research_writing/31_suitable_journal.md
-  #       - Understanding open access: literature/research_writing/32_open_access.md
-  #     - Writing:
-  #       - Writing research paper: literature/research_writing/41_writing_paper.md
-  #       - Tables and Figures: literature/research_writing/42_table_figure.md
-  #     - Publishing:
-  #       - Making first impression: literature/research_writing/51_making_impression.md
-  #       - Facing peer review: literature/research_writing/52_facing_peer_review.md
-  #     - Writing grant proposal: literature/research_writing/61_grant_proposal.md
-  #     - Writing cover letter: literature/research_writing/62_cover_letter.md
-  #   - literature/1_reading.md
-  #   - literature/2_Mech_Terminologies.md
-  #   # - research/publication.md
+  - Literature:
+    - literature/3_research_ethic.md
+    - Research Writing:
+      - Preparing:
+        - Instroduction of research paper: literature/research_writing/11_introduction_paper.md
+        - Ethics of research: literature/research_writing/21_ethic_of_research.md
+        - Identify suitable journal: literature/research_writing/31_suitable_journal.md
+        - Understanding open access: literature/research_writing/32_open_access.md
+      - Writing:
+        - Writing research paper: literature/research_writing/41_writing_paper.md
+        - Tables and Figures: literature/research_writing/42_table_figure.md
+      - Publishing:
+        - Making first impression: literature/research_writing/51_making_impression.md
+        - Facing peer review: literature/research_writing/52_facing_peer_review.md
+      - Writing grant proposal: literature/research_writing/61_grant_proposal.md
+      - Writing cover letter: literature/research_writing/62_cover_letter.md
+    - literature/1_reading.md
+    - literature/2_Mech_Terminologies.md
+    # - research/publication.md
     
 
-  # - Reference: 
-  #   - Engineering:
-  #     - reference/11_Mech_BasicMechanics.md
-  #     - reference/12_Mech_Science.md
-  #   - Computational:
-  #     - reference/21_Comp_Programing.md
-  #     - reference/22_Comp_Methods.md
-  #   - reference/1_Cheatsheet.md
-  #   - reference/1_Docs_syntax.md
+  - Reference: 
+    - Engineering:
+      - reference/11_Mech_BasicMechanics.md
+      - reference/12_Mech_Science.md
+    - Computational:
+      - reference/21_Comp_Programing.md
+      - reference/22_Comp_Methods.md
+    - reference/1_Cheatsheet.md
+    - reference/1_Docs_syntax.md
 
-  # - Codespace: codespace.md
-  #   # - Thatool: https://thangckt.github.io/thatool
-  #   # - MediaLib: https://thangckt.github.io/mediaLib
+  - Codespace: codespace.md
+    # - Thatool: https://thangckt.github.io/thatool
+    # - MediaLib: https://thangckt.github.io/mediaLib
 
 
-  # - Miscellaneous:
-  #   - Music:
-  #     - miscell/music/1_Tinh_ca.md
-  #     - miscell/music/2_Viet_su.md
-  #     - miscell/music/3_Saigon.md
-  #     - miscell/music/4_Classic.md
-  #     - miscell/music/5_Lyrics.md
-  #   - Reading list:
-  #     - miscell/reading/1_read_list.md
+  - Miscellaneous:
+    - Music:
+      - miscell/music/1_Tinh_ca.md
+      - miscell/music/2_Viet_su.md
+      - miscell/music/3_Saigon.md
+      - miscell/music/4_Classic.md
+      - miscell/music/5_Lyrics.md
+    - Reading list:
+      - miscell/reading/1_read_list.md
       
       
       
