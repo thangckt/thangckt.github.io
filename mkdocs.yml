@@ -205,30 +205,30 @@ nav:
     # - research/publication.md
     
 
-  - Reference: 
-    - Engineering:
-      - reference/11_Mech_BasicMechanics.md
-      - reference/12_Mech_Science.md
-    - Computational:
-      - reference/21_Comp_Programing.md
-      - reference/22_Comp_Methods.md
-    - reference/1_Cheatsheet.md
-    - reference/1_Docs_syntax.md
+  # - Reference: 
+  #   - Engineering:
+  #     - reference/11_Mech_BasicMechanics.md
+  #     - reference/12_Mech_Science.md
+  #   - Computational:
+  #     - reference/21_Comp_Programing.md
+  #     - reference/22_Comp_Methods.md
+  #   - reference/1_Cheatsheet.md
+  #   - reference/1_Docs_syntax.md
 
-  - Codespace: codespace.md
-    # - Thatool: https://thangckt.github.io/thatool
-    # - MediaLib: https://thangckt.github.io/mediaLib
+  # - Codespace: codespace.md
+  #   # - Thatool: https://thangckt.github.io/thatool
+  #   # - MediaLib: https://thangckt.github.io/mediaLib
 
 
-  - Miscellaneous:
-    - Music:
-      - miscell/music/1_Tinh_ca.md
-      - miscell/music/2_Viet_su.md
-      - miscell/music/3_Saigon.md
-      - miscell/music/4_Classic.md
-      - miscell/music/5_Lyrics.md
-    - Reading list:
-      - miscell/reading/1_read_list.md
+  # - Miscellaneous:
+  #   - Music:
+  #     - miscell/music/1_Tinh_ca.md
+  #     - miscell/music/2_Viet_su.md
+  #     - miscell/music/3_Saigon.md
+  #     - miscell/music/4_Classic.md
+  #     - miscell/music/5_Lyrics.md
+  #   - Reading list:
+  #     - miscell/reading/1_read_list.md
       
       
       
