@@ -15,5 +15,7 @@ Content of `/site` is available at `http://thangckt.github.io`
 
 ## Error logs
 
-The error that breakdown header is due to the size of logo figure.
+The error that breakdown header is possible due to:
+- `pip install mkdocs-jupyter` in github-action --> conflict 
+- the size of logo figure.
 
