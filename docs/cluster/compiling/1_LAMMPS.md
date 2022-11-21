@@ -2,6 +2,7 @@
 # Compiling LAMMPS
 
 This note intends to the struggling work to deploy [LAMMPS](https://www.lammps.org) on some Linux clusters
+
 ![Lammps logo](https://www.lammps.org/movies/logo.gif)
 
 ## Preparation
