@@ -41,9 +41,11 @@ These notes are random, messy, improvised, and inevitable for some rare situatio
 
 It's funny if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces.
 
+<!-- 
 !!! quote ""
 
     You cannot teach a man anything, you can only help him find it within himself - Galileo Galilei (1564–1642)
+-->
 
 <div style="position:relative; padding-bottom:56.25%">
 <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
