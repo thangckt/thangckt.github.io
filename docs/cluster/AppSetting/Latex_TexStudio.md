@@ -37,7 +37,7 @@ For MiKTeX with TeXstudio, go to `Options --> configuration`
     Build:
     --> Defaul Complier: Latexmk
     Commands:
-    --> latexmk:  latexmk -pdf   -silent -synctex=1 % -auxdir=Zoutdir -f -recorder-  
+    --> latexmk:  latexmk -pdf  -synctex=1 -outdir=Zoutdir -f -recorder-  %
     --> BibTeX: bibtex.exe %
     ```
 
