@@ -1,7 +1,8 @@
 
 
-# Latex Workshop in VScode
+# Latex in VScode
 
+Can use Latex in VScode with the extension `Latex Workshop`
 - Install tex compiler: Tex Live (recommend)
 - Install VScode
 - Install Latex Workshop extension
