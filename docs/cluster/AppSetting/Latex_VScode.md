@@ -14,7 +14,7 @@ Can use Latex in VScode with the extension `Latex Workshop`
 - See how to [setting the compilation](https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#building-the-document)
 
 
- ```json
+```
 {
 
   "window.zoomLevel": 0,
@@ -86,11 +86,8 @@ Can use Latex in VScode with the extension `Latex Workshop`
         "env": {}
     }
   ],
-
-
-
 }
- ```
+```
 
 
 
