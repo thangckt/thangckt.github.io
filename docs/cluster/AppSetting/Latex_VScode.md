@@ -2,7 +2,7 @@
 
 # Latex Workshop in VScode
 
-- Install tex compiler: MiKTeX
+- Install tex compiler: Tex Live (recommend)
 - Install VScode
 - Install Latex Workshop extension
 
