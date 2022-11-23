@@ -37,16 +37,16 @@ For MiKTeX with TeXstudio, go to `Options --> configuration`
     Build:
     --> Defaul Complier: Latexmk
     Commands:
-    --> latexmk:  latexmk -pdf   -silent -synctex=1 % -auxdir=auxDIR -f -recorder-  
+    --> latexmk:  latexmk -pdf   -silent -synctex=1 % -auxdir=Zoutdir -f -recorder-  
     --> BibTeX: bibtex.exe %
     ```
 
-Log File Seach Paths (in build): `auxDIR`. Log file is important to figure out the error. So if use --aux-directory, must add "Additional Search Paths" for "Log File" is "auxDIR"
+Log File Seach Paths (in build): `Zoutdir`. Log file is important to figure out the error. So if use --aux-directory, must add "Additional Search Paths" for "Log File" is "Zoutdir"
 
     ```
     Build: Show Advanced Options
     --> Additional Search Paths:
-        --> Log File: auxDIR
+        --> Log File: Zoutdir
     ```
 
 1.b. To put date in filename:
