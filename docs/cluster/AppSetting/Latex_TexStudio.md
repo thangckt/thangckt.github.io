@@ -66,8 +66,7 @@ Log File Seach Paths (in build): `auxDIR`. Log file is important to figure out t
 
 ### 2. Latex compiler
 
-can use Miktex or Livetex
-https://miktex.org/download
+Can use [Miktex](https://miktex.org) or [TeX Live](https://www.tug.org/texlive/). Tex Live is recommended, since MiKTeX does not ship with Perl. If you choose MiKTeX, you have to install Perl by yourself, which latexmk requires. Without Perl, latexmk fails with errors.
 
 1.c. install a package on MiKTeX (Windows)
 https://tex.stackexchange.com/questions/2063/how-can-i-manually-install-a-package-on-miktex-windows
@@ -81,6 +80,8 @@ https://www.pauljhurtado.com/teaching/software.html
 https://tex.stackexchange.com/questions/108315/how-can-i-set-a-dark-theme-in-texstudio
 - start TeXstudio -> Options->Load Profile
 - Options->Save current setting
+
+
 
 ## II. Use Language Tool in TexStudio
 
