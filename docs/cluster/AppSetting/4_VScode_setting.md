@@ -108,3 +108,13 @@ Type "open settings"
 - Lammps Syntax Highlight       (ThFriedrich)
 - Monokai++                     (Davide Casella)
 - Python                        (Microsoft)
+
+
+## IV. Workspace settings
+
+Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
+- create file `.vscode/setting.json` in `root_folder`
+- In VScode: `File --> Open Folder --> root_folder`, then all setting in `.json` file will be applied
+
+
+
