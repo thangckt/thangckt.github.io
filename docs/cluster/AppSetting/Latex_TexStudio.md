@@ -68,6 +68,10 @@ Log File Seach Paths (in build): `auxDIR`. Log file is important to figure out t
 
 Can use [Miktex](https://miktex.org) or [TeX Live](https://www.tug.org/texlive/). Tex Live is recommended, since MiKTeX does not ship with Perl. If you choose MiKTeX, you have to install Perl by yourself, which latexmk requires. Without Perl, latexmk fails with errors.
 
+#### Tex Live
+
+Download [ISO image](https://lab.uklee.pe.kr/tex-archive/systems/texlive/Images/). Should use this. because live installation takes long time.
+
 1.c. install a package on MiKTeX (Windows)
 https://tex.stackexchange.com/questions/2063/how-can-i-manually-install-a-package-on-miktex-windows
 #the default location of installed packages: C:\Program Files\MiKTeX\tex\latex
