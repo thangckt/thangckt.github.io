@@ -64,20 +64,6 @@ Log File Seach Paths (in build): `auxDIR`. Log file is important to figure out t
 
 [TexMaker](https://www.xm1math.net/texmaker/download.html) is a parent app of Texstudio
 
-### 2. Latex compiler
-
-Can use [Miktex](https://miktex.org) or [TeX Live](https://www.tug.org/texlive/). Tex Live is recommended, since MiKTeX does not ship with Perl. If you choose MiKTeX, you have to install Perl by yourself, which latexmk requires. Without Perl, latexmk fails with errors.
-
-#### Tex Live
-
-Download [ISO image](https://lab.uklee.pe.kr/tex-archive/systems/texlive/Images/). Should use this. because live installation takes long time.
-
-1.c. install a package on MiKTeX (Windows)
-https://tex.stackexchange.com/questions/2063/how-can-i-manually-install-a-package-on-miktex-windows
-#the default location of installed packages: C:\Program Files\MiKTeX\tex\latex
-
-![](./figure/fig1_miktex1.png)
-
 1.d. Dark theme for TextStudio
 - Download the file *.txsprofile elsewhere
 https://www.pauljhurtado.com/teaching/software.html
@@ -86,6 +72,23 @@ https://tex.stackexchange.com/questions/108315/how-can-i-set-a-dark-theme-in-tex
 - Options->Save current setting
 
 
+### 2. Latex compiler
+
+Can use [Miktex](https://miktex.org) or [TeX Live](https://www.tug.org/texlive/). Tex Live is recommended, since MiKTeX does not ship with Perl. If you choose MiKTeX, you have to install Perl by yourself, which latexmk requires. Without Perl, latexmk fails with errors.
+
+#### Tex Live
+
+Can install from Internet or offline installation (Should use this. because live installation takes long time)
+- Download [ISO image](https://lab.uklee.pe.kr/tex-archive/systems/texlive/Images/).  
+- run (or double click): `install-tl-windows.bat`
+
+#### MiKTeX
+
+1.c. install a package on MiKTeX (Windows)
+https://tex.stackexchange.com/questions/2063/how-can-i-manually-install-a-package-on-miktex-windows
+#the default location of installed packages: C:\Program Files\MiKTeX\tex\latex
+
+![](./figure/fig1_miktex1.png)
 
 ## II. Use Language Tool in TexStudio
 
