@@ -65,3 +65,6 @@ Can use Latex in VScode with the extension `Latex Workshop`
  ```
 
 See how to [setting the compilation](https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#building-the-document)
+
+See [Why to switch from TexStudio to VScode](https://0x0f0f0f.github.io/blog/texnotes/)
+
