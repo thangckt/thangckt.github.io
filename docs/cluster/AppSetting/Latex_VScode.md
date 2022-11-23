@@ -99,6 +99,10 @@ See [Why to switch from TexStudio to VScode](https://0x0f0f0f.github.io/blog/tex
 ## Some problems
 
 - Copy PDF see [here](https://stackoverflow.com/questions/58267000/latex-workshop-recipe-tool-to-copy-pdf-filec)
+- from code to pdf:
+  - mac: cmd+option+j
+  - windows/linux: ctrl+alt+j
+- from pdf to code: ctrl+click
 
 
 ## Grammarly in VScode
