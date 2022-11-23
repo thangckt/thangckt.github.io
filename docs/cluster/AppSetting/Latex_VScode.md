@@ -68,3 +68,9 @@ See how to [setting the compilation](https://github.com/James-Yu/LaTeX-Workshop/
 
 See [Why to switch from TexStudio to VScode](https://0x0f0f0f.github.io/blog/texnotes/)
 
+## Some problems
+
+- Copy PDF see [here](https://stackoverflow.com/questions/58267000/latex-workshop-recipe-tool-to-copy-pdf-filec)
+
+
+
