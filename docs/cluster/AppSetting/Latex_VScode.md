@@ -105,3 +105,16 @@ See [Why to switch from TexStudio to VScode](https://0x0f0f0f.github.io/blog/tex
 ## Grammarly in VScode
 
 - [Github](https://github.com/znck/grammarly) 
+
+```
+
+```
+
+## Some problem in Tex files
+- \input vs. \include in Latex [discuss here](https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include)
+- No `list of table` in `bookmark` [discuss here]()
+  ```
+  \phantomsection            % thang
+  \addcontentsline{toc}{chapter}{List of Figures}    % thang
+  \listoffigures{}
+  ```
