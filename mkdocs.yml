@@ -56,7 +56,7 @@ theme:
 ## Plugins
 plugins:
   # - meta    # only insider
-  # - blog
+  - blog
   - search
   - autorefs
   # - mkdocs-jupyter:
