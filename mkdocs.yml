@@ -35,16 +35,16 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo   #  blue grey, indigo
-      accent: indigo
+      # primary: blue grey   #  blue grey, indigo
+      # accent: indigo
       toggle:
         icon: material/eye
         name: Switch to dark mode
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo   #  blue grey, indigo
-      accent: indigo
+      # primary: blue grey   #  blue grey, indigo
+      # accent: indigo
       toggle:
         icon: material/eye-outline
         name: Switch to light mode
