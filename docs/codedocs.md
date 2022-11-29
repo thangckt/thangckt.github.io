@@ -3,7 +3,7 @@ hide:
 #   - toc
 ---
 
-# Codespace
+# Code Docs
 
 [Thatool documentation](https://thangckt.github.io/thatool/){target="_blank"}
 
