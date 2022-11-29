@@ -35,7 +35,7 @@ else:
 <!-- <img src="./1images/monkey.png" style="float:left; margin-right:20px" width="190" /> -->
 <img src="./1images/my_picture3x3.jpg" style="border-radius:50%; border: 2px solid black; float:left; margin-right:20px" width="190" />
 
-This site dedicates to my personal notes, which do not reflect either community or third-party rules.
+This site dedicates to my personal notes which do not reflect either community or third-party rules.
 
 These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
