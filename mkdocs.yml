@@ -8,7 +8,7 @@ edit_uri: "https://github.com/thangckt/src_thangckt.github.io/tree/main/docs"
 
 
 ## Copyright
-copyright: Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</a> 
+copyright: Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</a>
 
 ## Configuration
 theme:
@@ -26,11 +26,11 @@ theme:
     - navigation.top
     - search.suggest
     - toc.follow
-    # - toc.integrate 
+    # - toc.integrate
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.tabs.header   # only in extended theme
-    
+
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -56,19 +56,19 @@ theme:
 ## Plugins
 plugins:
   # - meta    # only insider
-  - blog
+  # - blog      # only insider
   - search
   - autorefs
-  # - mkdocs-jupyter:
+  # - mkdocs-jupyter:          # not work with tab-header branch
   #     theme: dark
-      
+
   - mkdocstrings:
       handlers:
         python:
           options:
             members_order: 'source'
             docstring_style: 'google'
-            show_source: false 
+            show_source: false
             show_root_heading: true
             show_category_heading: false
             show_signature_annotations: true
@@ -105,7 +105,7 @@ extra:
       link: https://discord.com/channels/@thangckt#9473
       name: thangckt on Discord
     # - icon: fontawesome/brands/github
-    #   link: https://github.com/thangckt      
+    #   link: https://github.com/thangckt
     # - icon: fontawesome/brands/twitter
     #   link: https://twitter.com/squidfunk
   version:
@@ -166,7 +166,7 @@ markdown_extensions:
 nav:
   - Home: https://thangckt.github.io
   # - About: index.md
-  - Cluster: 
+  - Cluster:
     - Compiling:
       - cluster/compiling/1_LAMMPS.md
       - cluster/compiling/2_Compile_GCC.md
@@ -179,8 +179,8 @@ nav:
       - cluster/compiling/9_MPI_window.md
       - cluster/compiling/10_LLVM.md
       - cluster/compiling/11_Conda_MPI.md
-      - cluster/compiling/12_PMIX.md      
-    - Setting:       
+      - cluster/compiling/12_PMIX.md
+    - Setting:
       - cluster/AppSetting/1_Conda.md
       - cluster/AppSetting/Latex_TexStudio.md
       - cluster/AppSetting/Latex_VScode.md
@@ -210,9 +210,9 @@ nav:
     - literature/1_reading.md
     - literature/2_Mech_Terminologies.md
     # - research/publication.md
-    
 
-  - Reference: 
+
+  - Reference:
     - Engineering:
       - reference/11_Mech_BasicMechanics.md
       - reference/12_Mech_Science.md
