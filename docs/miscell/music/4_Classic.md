@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# Classic pieces
+
      
 <div style="position:relative;padding-bottom:56.25%;">    
 <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQpdLg156HYIfKyIDKEKLbPm9GOi5Xy-7&modestbranding=1&showinfo=0"
@@ -11,3 +11,4 @@ hide:
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe> </div>  
 
 
+# Classic pieces
