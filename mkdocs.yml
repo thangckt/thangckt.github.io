@@ -227,7 +227,7 @@ nav:
     # - MediaLib: https://thangckt.github.io/mediaLib
 
 
-  - Miscellaneous:
+  - Heterogeneous:      # Miscellaneous
     - Music:
       - Love theme: miscell/music/1_Tinh_ca.md
       - Historical theme: miscell/music/2_Viet_su.md
