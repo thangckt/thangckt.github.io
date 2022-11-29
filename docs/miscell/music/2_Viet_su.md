@@ -3,7 +3,13 @@ hide:
   - toc
 ---
 
-# Historical theme
+
+Mờ trong bóng chiều
+Một đoàn quân thấp thoáng
+Núi cây rừng, lắng tiếng nghe hình dáng
+Của người anh hùng
+Lạnh lùng theo trống dồn
+Trên khu đồi hoang, in trong chiều buông...
 
 <div style="position:relative;padding-bottom:56.25%;">
 <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQpdLg156HYJiAAPXXQ3-iHMv02Ydg_tR&modestbranding=1&showinfo=0"
@@ -13,4 +19,5 @@ hide:
 <br>
 ![](image/guitar_n_gun.jpg)
 
+# Historical theme
 
