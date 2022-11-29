@@ -229,10 +229,10 @@ nav:
 
   - Miscellaneous:
     - Music:
-      - miscell/music/1_Tinh_ca.md
-      - miscell/music/2_Viet_su.md
-      - miscell/music/3_Saigon.md
-      - miscell/music/4_Classic.md
-      - miscell/music/5_Lyrics.md
+      - Love theme: miscell/music/1_Tinh_ca.md
+      - Historical theme: miscell/music/2_Viet_su.md
+      - Fall of Saigon: miscell/music/3_Saigon.md
+      - Classic pieces: miscell/music/4_Classic.md
+      - Lyrical Chord: miscell/music/5_Lyrics.md
     - Reading list:
       - miscell/reading/1_read_list.md
