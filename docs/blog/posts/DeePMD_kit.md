@@ -2,7 +2,7 @@
 # Accelerated Molecular Simulation Using Deep Potential Workflow with NGC
 
 By Jingchao Zhang, Yifan Li and Akhil Docca
-From [NVIDIA's blog](https://developer.nvidia.com/blog/accelerated-molecular-simulation-using-deep-potential-workflow-with-ngc/)
+Shared from [NVIDIA's blog](https://developer.nvidia.com/blog/accelerated-molecular-simulation-using-deep-potential-workflow-with-ngc/)
 
 ![img1](https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-1.png)
 
