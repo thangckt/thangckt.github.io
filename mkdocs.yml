@@ -236,3 +236,6 @@ nav:
       - Lyrical Chord: miscell/music/5_Lyrics.md
     - Reading list:
       - miscell/reading/1_read_list.md
+
+  - News:
+    -blog/posts/DeePMD_kit.md
