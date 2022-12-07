@@ -237,5 +237,5 @@ nav:
     - Reading list:
       - miscell/reading/1_read_list.md
 
-  - News:
-    - blog/posts/DeePMD_kit.md
+#   - News:
+#     - blog/posts/DeePMD_kit.md
