@@ -122,7 +122,6 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
 ### Editor & Theme
 
 ```
-{
 // Setting Editor & Theme
   // "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
@@ -142,15 +141,47 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
   // "breadcrumbs.enabled": true,
   "debug.console.fontSize": 12,
   "terminal.integrated.fontSize": 12,
+```
+
+### Files 
+
+```
+  // Files
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
-  }
-  ```
+  "files.associations": {
+    "*.lmp": "lmps",
+    "*.in": "lmps",
+    "*.mod": "lmps",
+    "*.lmp*": "lmps",
+    "*.log": "log",
+    "*.out": "log",
+    "*.txt": "txt",
+  },
+  "[lmps]": {
+    "editor.tabSize": 2,
+    "editor.snippetSuggestions": "none",
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    }
+  },
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.snippetSuggestions": "none",
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+  },
+  "[markdown]": {
+    "editor.tabSize": 4,
+    "editor.snippetSuggestions": "none",
+  },
+```
 
 ### Latex workshop
 
 ```
-{
  "[latex]": {
     "editor.tabSize": 3,
   },
@@ -211,17 +242,14 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
       "env": {}
     }
   ],
- }
 ```
 
 ### Grammarly
 
 ```
-{
   "grammarly.files.include": [
     "**/*.md",
     "**/*.tex",
     "**/*.txt"
   ],
-}
 ```
