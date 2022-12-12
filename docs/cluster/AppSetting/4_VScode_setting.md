@@ -117,4 +117,111 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
 - In VScode: `File --> Open Folder --> root_folder`, then all setting in `.json` file will be applied
 
 
+## Setting
 
+### Editor & Theme
+
+```
+{
+// Setting Editor & Theme
+  // "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    80
+  ],
+  "editor.wordWrap": "on", //  wordWrapColumn    bounded   on
+  "editor.wrappingIndent": "same",
+  // "editor.wordWrapColumn": 100,
+  "editor.fontFamily": "roboto mono", //  'anonymous pro',   tahoma   consolas   monospace  verdana  monaco
+  "editor.fontSize": 14.5,
+  "editor.letterSpacing": -0.2,
+  // "editor.renderControlCharacters": true,
+  // "zenMode.hideLineNumbers": true,
+  // "workbench.iconTheme": "vs-minimal",
+  "workbench.colorTheme": "One Dark Pro Darker", // "One Dark Pro Darker"
+  // "breadcrumbs.enabled": true,
+  "debug.console.fontSize": 12,
+  "terminal.integrated.fontSize": 12,
+  "files.autoSave": "afterDelay",
+  "files.trimTrailingWhitespace": true,
+  }
+  ```
+
+### Latex workshop
+
+```
+{
+ "[latex]": {
+    "editor.tabSize": 3,
+  },
+  // Setting for latex workshop
+  "latex-workshop.latex.recipe.default": "latexmk ➞ copyPDF",
+  "latex-workshop.latex.outDir": "Zoutdir",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  // "latex-workshop.linting.chktex.enabled": true,
+  // "latex-workshop.linting.lacheck.enabled": true,
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  // "latex-workshop.view.pdf.invert": 1,
+  // "latex-workshop.view.pdf.invertMode.grayscale": 0.6,
+  // Compile latex
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk ➞ copyPDF",
+      "tools": [
+        "latexmk_tha",
+        "copyPDFshell"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk_tha",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-f",
+        "--shell-escape",
+        "-outdir=%OUTDIR%",
+        "%DOC%",
+      ],
+      "env": {}
+    },
+    // Tool to copy PDF
+    {
+      "name": "copyPDFcmd",
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "copy",
+        "'%OUTDIR%\\%DOCFILE%.pdf'",
+        "%DIR%",
+      ],
+      "env": {}
+    },
+    {
+      "name": "copyPDFshell",
+      "command": "powershell.exe",
+      "args": [
+        "copy '%OUTDIR%\\%DOCFILE%.pdf' %DIR%" //  copy move
+      ],
+      "env": {}
+    }
+  ],
+ }
+```
+
+### Grammarly
+
+```
+{
+  "grammarly.files.include": [
+    "**/*.md",
+    "**/*.tex",
+    "**/*.txt"
+  ],
+}
+```
