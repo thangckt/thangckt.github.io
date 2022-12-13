@@ -100,9 +100,9 @@ extra:
     - icon: fontawesome/brands/orcid
       link: https://orcid.org/0000-0001-9826-5397
       name: thangckt on ORCID
-    - icon: fontawesome/brands/discord
-      link: https://discord.com/channels/@thangckt#9473
-      name: thangckt on Discord
+    # - icon: fontawesome/brands/discord
+    #   link: https://discord.com/channels/@thangckt#9473
+    #   name: thangckt on Discord
     # - icon: fontawesome/brands/github
     #   link: https://github.com/thangckt
     # - icon: fontawesome/brands/twitter
