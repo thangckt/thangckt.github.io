@@ -329,6 +329,15 @@ pip install git+https://github.com/Zulko/moviepy.git
 
 [see here](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file)
 
-
+- The below command can be run everywhere (just need locate to folder contain 'environment.yml'), using cmd
+- Can specify option `--name myenv` in commanline, or set it in file 'environment.yml'
+- Create an identical environment, run:      
+ ```                 
+ conda env create --file environment.yml           # (--name myenv)
+ ```
+- Install/Update packages into an existing environment, run: 
+ ```
+ conda env update --file environment.yml --prune   # (--name myenv)
+ ```
 
 
