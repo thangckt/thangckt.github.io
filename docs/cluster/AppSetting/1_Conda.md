@@ -251,6 +251,7 @@ conda install --revision 0
 ## Some setting envs
 
 !!! note 
+
    - use mamba for faster
    - use new python for better performance
    - To use multi kernels in jupyterlab: 
@@ -275,6 +276,7 @@ pip install -n base git+https://github.com/jupyterlab/jupyterlab@3.6.x
 **Install in envs**
 
 !!! info "General use"
+
    - env for general use, ovito should use with python=3.11
    - `numba` has not supported by py311 yet.
   
@@ -285,6 +287,7 @@ conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy sha
 ```
 
 !!! info "ovito env"
+
    - error Vers: ovito-3.7.10; 3.7.11
    - Should use with python 39 to void unexpect errors.
 
@@ -296,6 +299,7 @@ conda install -y -c conda-forge jupyterlab numpy ipyevents ipycanvas ipywidgets
 ```
 
 !!! info "mbuild polymer"
+
    - only suppot to py39
    - channel `-c omnia` required for `packmol` on windows
    - Error: DLL load failed while importing _openmm, solve by installing `openmm=7.7`
@@ -308,6 +312,7 @@ pip install git+https://github.com/thangckt/mbuild.git@thang
 ```
 
 !!! info "pysimm"
+
 ```python
 conda create -n py37pysimm python=3.7
 conda activate py37pysimm
