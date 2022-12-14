@@ -29,7 +29,9 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.tabs.header   # only in extended theme
-    - content.action.edit      # new in v9
+    ### new in v9
+    - content.action.edit
+    - navigation.footer
 
   palette:
     # Palette toggle for light mode
