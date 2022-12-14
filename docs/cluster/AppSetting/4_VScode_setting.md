@@ -169,6 +169,7 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
   },
   "[python]": {
     "editor.tabSize": 4,
+    "editor.formatOnSave": false,
     "editor.snippetSuggestions": "none",
     "editor.detectIndentation": true,
     "editor.insertSpaces": true,
