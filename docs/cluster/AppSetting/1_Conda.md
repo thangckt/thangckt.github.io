@@ -250,31 +250,33 @@ conda install --revision 0
 
 ## Some setting envs
 
-!!! info 
-
- - use mamba for faster
- - use new python for better performance
- - To use multi kernels in jupyterlab: 
-    - Install in base-env: `conda install -n base nb_conda_kernels` 
-    - Install jyterlab in both base-env and sub-env
-    - select to open notebook by jupyterlab in base-env
- - To solve error: ImportError: DLL load failed while importing shell: Can not find procedure. Downgrade `pywin32` in `base_env`
-   ```
-   conda install -n base pywin32=228
-   ```
- - Consider using `environment.yml` [see more](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file)
+!!! note 
+   - use mamba for faster
+   - use new python for better performance
+   - To use multi kernels in jupyterlab: 
+      - Install in base-env: `conda install -n base nb_conda_kernels` 
+      - Install jyterlab in both base-env and sub-env
+      - select to open notebook by jupyterlab in base-env
+   - To solve error: ImportError: DLL load failed while importing shell: Can not find procedure. Downgrade `pywin32` in `base_env`
+     ```
+     conda install -n base pywin32=228
+     ```
+   - Consider using `environment.yml` [see more](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file)
 
 
 Install mamba into the base environment:
 ```python
 conda install -n base nb_conda_kernels jupyterlab git -c conda-forge
 ```
+```
+pip install -n base git+https://github.com/jupyterlab/jupyterlab@3.6.x
+```
 
 **Install in envs**
 
 !!! info "General use"
-  - env for general use, ovito should use with python=3.11
-  - `numba` has not supported by py311 yet.
+   - env for general use, ovito should use with python=3.11
+   - `numba` has not supported by py311 yet.
   
 ```python
 conda create -n py311 python=3.11
@@ -283,8 +285,8 @@ conda install -y -c conda-forge jupyterlab ele numpy pandas matplotlib scipy sha
 ```
 
 !!! info "ovito env"
-  - error Vers: ovito-3.7.10; 3.7.11
-  - Should use with python 39 to void unexpect errors.
+   - error Vers: ovito-3.7.10; 3.7.11
+   - Should use with python 39 to void unexpect errors.
 
 ```sh
 conda create -n py39ovito python=3.9
@@ -294,9 +296,9 @@ conda install -y -c conda-forge jupyterlab numpy ipyevents ipycanvas ipywidgets
 ```
 
 !!! info "mbuild polymer"
-  - only suppot to py39
-  - channel `-c omnia` required for `packmol` on windows
-  - Error: DLL load failed while importing _openmm, solve by installing `openmm=7.7`
+   - only suppot to py39
+   - channel `-c omnia` required for `packmol` on windows
+   - Error: DLL load failed while importing _openmm, solve by installing `openmm=7.7`
   
 ```python
 conda create -n py39mbuild python=3.9      
@@ -305,15 +307,16 @@ conda install -y -c conda-forge -c omnia parmed foyer rdkit py3Dmol mdtraj openb
 pip install git+https://github.com/thangckt/mbuild.git@thang
 ```
 
+!!! info "pysimm"
 ```python
-## env for polymer package: pysimm
 conda create -n py37pysimm python=3.7
 conda activate py37pysimm
 conda install -c conda-forge ambertools  # just run on linux
 ```
 
+!!! info "py39video"
+
 ```sh
-## env py39video
 conda create -n py39video python=3.9
 conda activate py39video
 conda install -y -c conda-forge jupyterlab numpy pandas natsort
@@ -321,10 +324,10 @@ pip install gtts pyttsx3 pytube youtube-search-python google_images_download
 pip install git+https://github.com/Zulko/moviepy.git
 ```
 
-```
-pip install git+https://github.com/jupyterlab/jupyterlab@3.6.x
-```
 
+## Using `environment.yml`
+
+[see here](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file)
 
 
 
