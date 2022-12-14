@@ -1,8 +1,9 @@
 # GCC-11
 
+<img src="https://gcc.gnu.org/img/gccegg-65.png" style="float:left; margin-right:20px" width="150" />
+
 The [GNU Compiler](https://gcc.gnu.org) Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...).
 
-![pic](https://gcc.gnu.org/img/gccegg-65.png)
 
 ```note
 - Some applications require C++11, this is only supported on GCC 4.8 or newer
