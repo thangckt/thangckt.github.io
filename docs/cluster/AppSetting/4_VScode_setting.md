@@ -121,7 +121,7 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
 
 ### Editor & Theme
 
-```
+``` js
 // Setting Editor & Theme
   // "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
@@ -145,7 +145,7 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
 
 ### Files 
 
-```
+``` js
   // Files
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
@@ -182,7 +182,7 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
 
 ### Latex workshop
 
-```
+``` js
  "[latex]": {
     "editor.tabSize": 3,
   },
@@ -247,7 +247,7 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
 
 ### Grammarly
 
-```
+``` js
   "grammarly.files.include": [
     "**/*.md",
     "**/*.tex",
