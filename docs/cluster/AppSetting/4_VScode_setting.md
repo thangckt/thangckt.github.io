@@ -77,9 +77,10 @@ In file `.vscode/extensions.json`:
   "recommendations": [
     "james-yu.latex-workshop",
     "znck.grammarly",
-    "zhuangtongfa.material-theme",
     "ms-python.python",
+    "seansassenrath.vscode-theme-superonedark",
 
+    //"zhuangtongfa.material-theme",
     // "dcasella.monokai-plusplus",
     // "monokai.theme-monokai-pro-vscode",
     // "github.github-vscode-theme"
@@ -113,7 +114,7 @@ Type `open settings`
   // "editor.renderControlCharacters": true,
   // "zenMode.hideLineNumbers": true,
   // "workbench.iconTheme": "vs-minimal",
-  "workbench.colorTheme": "One Dark Pro Darker", // "One Dark Pro Darker"
+  "workbench.colorTheme": "Super One Dark", // "One Dark Pro Darker"
   // "breadcrumbs.enabled": true,
   "debug.console.fontSize": 12,
   "terminal.integrated.fontSize": 12,
