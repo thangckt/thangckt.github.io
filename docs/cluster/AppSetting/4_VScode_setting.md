@@ -80,7 +80,6 @@ In file `.vscode/extensions.json`:
     "zhuangtongfa.material-theme",
     "ms-python.python",
 
-
     // "dcasella.monokai-plusplus",
     // "monokai.theme-monokai-pro-vscode",
     // "github.github-vscode-theme"
@@ -88,7 +87,7 @@ In file `.vscode/extensions.json`:
 }
 ```
 
-## Tháng's Setting
+## Thang's Setting
 
 These setting should be applied for `user/setting.json`
 
