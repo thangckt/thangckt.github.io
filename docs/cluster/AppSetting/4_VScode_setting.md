@@ -67,7 +67,7 @@ Official guide [here](https://code.visualstudio.com/docs/editor/workspaces)
   * create file `.vscode/settings.json` for all settings will be applied in a `workspace`
   * create file `.vscode/extensions.json` for some suggested extensions
 
-* In the VScode, navigate to: `File --> Open Folder --> root_folder`, then all settings in the `.json` file will be applied
+* In the VScode, navigate to `File --> Open Folder --> root_folder`, then all settings in the `.json` files will be applied
 
 In file `.vscode/extensions.json`:
 
@@ -80,10 +80,10 @@ In file `.vscode/extensions.json`:
     "zhuangtongfa.material-theme",
     "ms-python.python",
 
-        // "dcasella.monokai-plusplus",
-        // "monokai.theme-monokai-pro-vscode",
-        // "github.github-vscode-theme"
 
+    // "dcasella.monokai-plusplus",
+    // "monokai.theme-monokai-pro-vscode",
+    // "github.github-vscode-theme"
     ]
 }
 ```
