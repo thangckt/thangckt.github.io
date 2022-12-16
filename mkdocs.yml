@@ -224,9 +224,9 @@ nav:
       - literature/reference/22_Comp_Methods.md
 
 
-  - Codedocs: codedocs.md
-    # - Thatool: https://thangckt.github.io/thatool
-    # - MediaLib: https://thangckt.github.io/mediaLib
+  # - Codedocs: codedocs.md
+  - Thatool: https://thangckt.github.io/thatool
+  - MediaLib: https://thangckt.github.io/mediaLib
 
 
   - Heterogeneous:      # Miscellaneous
