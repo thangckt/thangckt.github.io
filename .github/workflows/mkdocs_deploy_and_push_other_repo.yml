@@ -24,7 +24,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install mkdocs mkdocstrings[python]>=0.18   mkdocs-jupyter
-          pip install git+https://github.com/thangckt/mkdocs-material.git@tabs_header_v9        # tabs_header  tabs_header_v9   tabs_header_yinkh  thang_master
+          pip install git+https://github.com/thangckt/mkdocs-material.git@feature/material-v9        # tabs_header  feature/material-v9   tabs_header_yinkh
 
       - name: MkDocs gh-deploy    # This will create `gh-pages` branch contain `mkdocs-site`
         run: |
