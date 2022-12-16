@@ -61,8 +61,8 @@ plugins:
   # - blog      # only insider
   - search
   - autorefs
-  # - mkdocs-jupyter:          # not work with tab-header branch
-  #     theme: dark
+  - mkdocs-jupyter:          # not work with tab-header branch
+      theme: dark
 
   - mkdocstrings:
       handlers:
@@ -192,6 +192,9 @@ nav:
       - cluster/AppSetting/6_Lammps.md
       - cluster/AppSetting/7_packing_python.md
       - cluster/AppSetting/8_WSL.md
+    - cluster/cheatsheet.md
+    - cluster/docs_syntax.md
+
 
   - Literature:
     - literature/3_research_ethic.md
@@ -213,16 +216,13 @@ nav:
     - literature/2_Mech_Terminologies.md
     # - research/publication.md
 
-
-  - Reference:
     - Engineering:
-      - reference/11_Mech_BasicMechanics.md
-      - reference/12_Mech_Science.md
+      - literature/reference/11_Mech_BasicMechanics.md
+      - literature/reference/12_Mech_Science.md
     - Computational:
-      - reference/21_Comp_Programing.md
-      - reference/22_Comp_Methods.md
-    - reference/1_Cheatsheet.md
-    - reference/1_Docs_syntax.md
+      - literature/reference/21_Comp_Programing.md
+      - literature/reference/22_Comp_Methods.md
+
 
   - Codedocs: codedocs.md
     # - Thatool: https://thangckt.github.io/thatool
