@@ -1,25 +1,27 @@
----
+<!-- ---
 sort: 41
----
+--- -->
 
 # VScode setting
 
-[Visual Studio Code](https://code.visualstudio.com/) is free, lightweight and platform independent.
- 
-![pic](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/113px-Visual_Studio_Code_1.35_icon.svg.png)
+[Visual Studio Code](https://code.visualstudio.com/) is free, lightweight and platform-independent.
 
+![pic](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/113px-Visual_Studio_Code_1.35_icon.svg.png)
 
 ## I. [Windows](https://code.visualstudio.com/docs/setup/windows)
 
-Can install the Visual Studio Code installer for Windows, or use Zip archive, extract it and run Code from there. <br>
+Can install the Visual Studio Code installer for Windows, or use Zip archive, extract it and run Code from there.
+
 By default, VS Code is installed under C:\users\{username}\AppData\Local\Programs\Microsoft VS Code.
 
 ### Python in Visual Studio Code
+
 * Install the Python extension for VS Code (Microsoft)
 * Install a Python interpreter
 
 a. Select and Activate an environment
-* Select Interpreter: Command Palette (Ctrl+Shift+P) --> Python:Select Interpreter
+
+* Select Interpreter: Command Palette (Ctrl+Shift+P) --> Python: Select Interpreter
 with Anaconda distribution, use ('base':conda)
 __this sets the python.pythonPathvalue in workspace settings to the path of the interpreter. To see the setting, select File > Preferences > Settings > Workspace Settings tab.
 
@@ -31,21 +33,19 @@ If VS Code does not automatically locate an interpreter you want to use, you can
 File (Code on macOS) > Preferences > Setting > Workspace
 Then do any of the following steps:
 
-Create or modify an entry for python.pythonPath with the full path to the Python executable (if you edit settings.json directly, add the line below as the setting):
+Create or modify an entry for `python.pythonPath` with the full path to the Python executable (if you edit settings.json directly, add the line below as the setting):
 
         Windows: "python.pythonPath": "c:/python36/python.exe",
         macOS/Linux: "python.pythonPath": "/home/python36/python",
 
+## II. To change the indentation based on programming language
 
+<https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code>
 
-## II. To change the indentation based on programming language:
-
-https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code
-
-https://code.visualstudio.com/docs/editor/intellisense
+<https://code.visualstudio.com/docs/editor/intellisense>
 
 Open the Command Palette (CtrlShiftP | macOS: ⇧⌘P)
-Preferences: Configure language specific settings... (command id: workbench.action.configureLanguageBasedSettings)
+Preferences: Configure language-specific settings... (command id: workbench.action.configureLanguageBasedSettings)
 Select programming language (for example: lammps)
 Add this code:
 
@@ -55,84 +55,55 @@ Add this code:
 }
 ```
 
-
 Setting.json
 Open the command palette (either with F1 or Ctrl+Shift+P)
 Type "open settings"
-```js
-}
-    "files.autoSave": "afterDelay",
-    
-    "editor.rulers": [80 ],
-
-    "workbench.colorTheme": "Monokai++",
-    "workbench.sideBar.location": "left",
-    "workbench.activityBar.visible": true,
-
-    "files.associations": {
-        "*.lmp": "lmps", "*.in": "lmps", "*.mod": "lmps",  "*.lmp*": "lmps", 
-        "*.log": "log", "*.out": "log",
-        "*.txt": "txt",
-    },
-
-    "[lmps]": {
-        "editor.tabSize": 2,
-        "editor.snippetSuggestions": "none",
-    },
-
-    "[python]": {
-        "editor.tabSize": 4,
-        "editor.snippetSuggestions": "none",
-        "editor.detectIndentation": true,
-        "editor.insertSpaces": true
-    },
-
-    "[markdown]": {
-        "editor.tabSize": 4,
-        "editor.snippetSuggestions": "none",
-    },
-
-   
-    "window.zoomLevel": 0,
-    "python.testing.cwd": "",
-    "python.condaPath": "C:\\DevProgram\\miniconda3\\condabin",
-    "python.defaultInterpreterPath": "C:\\DevProgram\\miniconda3\\python.exe",
-
-    "txtsyntax.highlightLineBorderColor": "",
-    "jupyter.sendSelectionToInteractiveWindow": true,
-}
-```
-
-
-## III. Useful extensions
-- Lammps Syntax Highlight       (ThFriedrich)
-- Monokai++                     (Davide Casella)
-- Python                        (Microsoft)
-
 
 ## IV. Workspace settings
 
-Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
-- create file `.vscode/setting.json` in `root_folder`
-- In VScode: `File --> Open Folder --> root_folder`, then all setting in `.json` file will be applied
+Official guide [here](https://code.visualstudio.com/docs/editor/workspaces)
 
+* In `root_folder`, create folder `.vscode`, then create files:
+  * create file `.vscode/settings.json` for all settings will be applied in a `workspace`
+  * create file `.vscode/extensions.json` for some suggested extensions
+
+* In the VScode, navigate to: `File --> Open Folder --> root_folder`, then all settings in the `.json` file will be applied
+
+In file `.vscode/extensions.json`:
+
+```js
+{
+  // Recommend extensions
+  "recommendations": [
+    "james-yu.latex-workshop",
+    "znck.grammarly",
+    "zhuangtongfa.material-theme",
+    "ms-python.python",
+
+        // "dcasella.monokai-plusplus",
+        // "monokai.theme-monokai-pro-vscode",
+        // "github.github-vscode-theme"
+
+    ]
+}
+```
 
 ## Setting
 
 ### Editor & Theme
 
-``` js
-// Setting Editor & Theme
+```js
+  "window.zoomLevel": 0,
+  //=== Setting Editor & Theme
+  "editor.tabSize": 4,
   // "editor.formatOnSave": true,
-  "editor.minimap.enabled": false,
-  "editor.rulers": [
-    80
-  ],
-  "editor.wordWrap": "on", //  wordWrapColumn    bounded   on
+  "editor.minimap.enabled": true,
+  "editor.rulers": [ 80  ],
+  "editor.wordWrap": "on",            //  wordWrapColumn    bounded   on
   "editor.wrappingIndent": "same",
   // "editor.wordWrapColumn": 100,
   "editor.fontFamily": "roboto mono", //  'anonymous pro',   tahoma   consolas   monospace  verdana  monaco
-  "editor.fontSize": 14.5,
+  "editor.fontSize": 13.5,
   "editor.letterSpacing": -0.2,
   // "editor.renderControlCharacters": true,
   // "zenMode.hideLineNumbers": true,
@@ -143,10 +114,17 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
   "terminal.integrated.fontSize": 12,
 ```
 
-### Files 
+### Grammarly
 
 ``` js
-  // Files
+  //=== Grammarly
+  "grammarly.files.include": [ "**/*.md", "**/*.tex", "**/*.txt"  ],
+```
+
+### Files
+
+```js
+  //=== Files
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   "files.associations": {
@@ -159,7 +137,7 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
     "*.txt": "txt",
   },
   "[lmps]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 3,
     "editor.snippetSuggestions": "none",
     "editor.quickSuggestions": {
       "other": false,
@@ -168,25 +146,27 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
     }
   },
   "[python]": {
-    "editor.tabSize": 4,
     "editor.formatOnSave": false,
     "editor.snippetSuggestions": "none",
     "editor.detectIndentation": true,
     "editor.insertSpaces": true,
   },
   "[markdown]": {
-    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
     "editor.snippetSuggestions": "none",
   },
+
+   "[latex]": {
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+  },
+
 ```
 
-### Latex workshop
+### Latex-workshop
 
-``` js
- "[latex]": {
-    "editor.tabSize": 3,
-  },
-  // Setting for latex workshop
+```js
+  //=== Setting for latex-workshop
   "latex-workshop.latex.recipe.default": "latexmk ➞ copyPDF",
   "latex-workshop.latex.outDir": "Zoutdir",
   "latex-workshop.latex.autoBuild.run": "onSave",
@@ -242,15 +222,5 @@ Officiall guide [here](https://code.visualstudio.com/docs/editor/workspaces)
       ],
       "env": {}
     }
-  ],
-```
-
-### Grammarly
-
-``` js
-  "grammarly.files.include": [
-    "**/*.md",
-    "**/*.tex",
-    "**/*.txt"
   ],
 ```
