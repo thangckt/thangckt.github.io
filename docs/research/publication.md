@@ -175,7 +175,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
   <p class="text_title">thatool: an object-oriented Python package for pre-processing and post-processing data from MD simulations. </p>
   <p class="text_author">Nguyen, Cao Thang </p>
   <p class="text_author"><a href="https://thangckt.github.io/thatool" target="_blank" style="text-decoration: none">Documentation</a>  (2021)</p>
-  <p class="text_author"><i>This package is avalibale for <a href="https://pypi.org/project/thatool/" target="_blank" style="text-decoration: none">Pip</a> and <a href="https://anaconda.org/conda-forge/thatool" target="_blank" style="text-decoration: none">Conda</a> reposities.</i></p>
+  <p class="text_author"><i>This package is available for <a href="https://pypi.org/project/thatool/" target="_blank" style="text-decoration: none">Pip</a> and <a href="https://anaconda.org/conda-forge/thatool" target="_blank" style="text-decoration: none">Conda</a> repositories.</i></p>
 </td> </tr> </table> </div>
 
 <script>             var coll = document.getElementsByClassName("collapsible");                var i;                for (i = 0; i < coll.length; i++) {                  coll[i].addEventListener("click", function() {                    this.classList.toggle("active");                    var content = this.nextElementSibling;                    if (content.style.display === "block") {                      content.style.display = "none";                    } else {                      content.style.display = "block";                    }                  }); }             </script>
