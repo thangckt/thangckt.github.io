@@ -57,7 +57,7 @@ Add this code:
 
 Setting.json
 Open the command palette (either with F1 or Ctrl+Shift+P)
-Type "open settings"
+Type `open settings`
 
 ## IV. Workspace settings
 
@@ -88,7 +88,13 @@ In file `.vscode/extensions.json`:
 }
 ```
 
-## Setting
+## Tháng's Setting
+
+These setting should be applied for `user/setting.json`
+
+Open the command palette (either with `F1` or `Ctrl+Shift+P`)
+
+Type `open settings`
 
 ### Editor & Theme
 
