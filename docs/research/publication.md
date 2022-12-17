@@ -97,6 +97,19 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 ## Manuscripts
 
 <div style="clear:both; padding-top:20px; display:inline-block">
+<div style="float:left; width:20px;">
+  <img src="nan" alt=""> 
+</div>
+<table class="table">  <tr class="tr" >
+<td class="td">
+  <p class="text_year">2022</p> </td>
+<td class="td">
+  <p class="text_title">Fast fabrication technique for high-quality van der Waals heterostructures using inert shielding gas environment </p>
+  <p class="text_author">Nguyen, Van Huy; Kim, Minwook; Nguyen, Cao Thang; Suleman, Muhammad; Nguyen, Dinh Cong </p>
+  <p class="text_author"><a href="https://thangckt.github.io" target="_blank" style="text-decoration: none">Private arXiv</a>  (2022)</p>
+</td> </tr> </table> </div>
+
+<div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
   <img src="../figure/2022_composite.png" alt=""> 
 </div>
@@ -174,8 +187,22 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 <td class="td">
   <p class="text_title">thatool: an object-oriented Python package for pre-processing and post-processing data from MD simulations. </p>
   <p class="text_author">Nguyen, Cao Thang </p>
-  <p class="text_author"><a href="https://thangckt.github.io/thatool" target="_blank" style="text-decoration: none">Documentation</a>  (2021)</p>
-  <p class="text_author"><i>This package is available for <a href="https://pypi.org/project/thatool/" target="_blank" style="text-decoration: none">Pip</a> and <a href="https://anaconda.org/conda-forge/thatool" target="_blank" style="text-decoration: none">Conda</a> repositories.</i></p>
+  <p class="text_author"><a href="https://thangckt.github.io/thatool/" target="_blank" style="text-decoration: none">Documentation</a>  (2021)</p>
+  <p class="text_author"><i>\\ This package is available for <a href="https://pypi.org/project/thatool/" target="_blank" style="text-decoration: none">Pip</a> and <a href="https://anaconda.org/conda-forge/thatool" target="_blank" style="text-decoration: none">Conda</a> repositories.</i></p>
+</td> </tr> </table> </div>
+
+<div style="clear:both; padding-top:20px; display:inline-block">
+<div style="float:left; width:20px;">
+  <img src="nan" alt=""> 
+</div>
+<table class="table">  <tr class="tr" >
+<td class="td">
+  <p class="text_year">2020</p> </td>
+<td class="td">
+  <p class="text_title">mediaLib: an OOP Python package for working with media files </p>
+  <p class="text_author">Nguyen, Cao Thang </p>
+  <p class="text_author"><a href="https://thangckt.github.io/mediaLib/" target="_blank" style="text-decoration: none">Documentation</a>  (2020)</p>
+  <p class="text_author"><i>\\ This package is available for <a href="nan" target="_blank" style="text-decoration: none">Pip</a> and <a href="nan" target="_blank" style="text-decoration: none">Conda</a> repositories.</i></p>
 </td> </tr> </table> </div>
 
 <script>             var coll = document.getElementsByClassName("collapsible");                var i;                for (i = 0; i < coll.length; i++) {                  coll[i].addEventListener("click", function() {                    this.classList.toggle("active");                    var content = this.nextElementSibling;                    if (content.style.display === "block") {                      content.style.display = "none";                    } else {                      content.style.display = "block";                    }                  }); }             </script>
