@@ -18,6 +18,9 @@ table, td, th {border: none!important; }
 | Physic 1 | [html](https://openstax.org/books/university-physics-volume-1/pages/preface){target="_blank"} |
 | Physic 2 | [html](https://openstax.org/books/university-physics-volume-2/pages/preface){target="_blank"} |
 | Physic 3 | [html](https://openstax.org/books/university-physics-volume-3/pages/preface){target="_blank"} |
+| Theoretical Physics| [html](https://www.theoretical-physics.com){target="_blank"} |
+| Statistical Physics | [html](https://statisticalphysics.leima.is){target="_blank"} |
+| Physics Notebook | [html](https://physics.leima.is){target="_blank"} |
 
 ## Mathematics
 
