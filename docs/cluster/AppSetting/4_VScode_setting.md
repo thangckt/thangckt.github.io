@@ -115,6 +115,7 @@ Type `open settings`
   // "zenMode.hideLineNumbers": true,
   // "workbench.iconTheme": "vs-minimal",
   "workbench.colorTheme": "Super One Dark", // "One Dark Pro Darker"
+  "security.workspace.trust.enabled": false,
   // "breadcrumbs.enabled": true,
   "debug.console.fontSize": 12,
   "terminal.integrated.fontSize": 12,
