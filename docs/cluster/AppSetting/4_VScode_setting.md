@@ -178,6 +178,7 @@ Type `open settings`
   "latex-workshop.latex.recipe.default": "latexmk ➞ copyPDF",
   "latex-workshop.latex.outDir": "Zoutdir",
   "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.message.badbox.show": false,
   // "latex-workshop.linting.chktex.enabled": true,
   // "latex-workshop.linting.lacheck.enabled": true,
   "latex-workshop.synctex.afterBuild.enabled": true,
