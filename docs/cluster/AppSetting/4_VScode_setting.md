@@ -100,6 +100,14 @@ Type `open settings`
 
 ```js
   "window.zoomLevel": 0,
+  "security.workspace.trust.enabled": false,
+  "workbench.colorTheme": "Super One Dark",         // "One Dark Pro Darker"
+  // "workbench.iconTheme": "vs-minimal",
+  // "zenMode.hideLineNumbers": true,
+  // "breadcrumbs.enabled": true,
+  "debug.console.fontSize": 12,
+  "terminal.integrated.fontSize": 12,
+
   //=== Setting Editor & Theme
   "editor.tabSize": 4,
   // "editor.formatOnSave": true,
@@ -112,13 +120,6 @@ Type `open settings`
   "editor.fontSize": 13.5,
   "editor.letterSpacing": -0.2,
   // "editor.renderControlCharacters": true,
-  // "zenMode.hideLineNumbers": true,
-  // "workbench.iconTheme": "vs-minimal",
-  "workbench.colorTheme": "Super One Dark", // "One Dark Pro Darker"
-  "security.workspace.trust.enabled": false,
-  // "breadcrumbs.enabled": true,
-  "debug.console.fontSize": 12,
-  "terminal.integrated.fontSize": 12,
 ```
 
 ### Grammarly
