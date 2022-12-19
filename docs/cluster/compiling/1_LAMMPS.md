@@ -991,8 +991,8 @@ source mklvars.sh intel64
 ```shell
 cd /home1/p001cao/local/wSourceCode/lammps_dev
 git pull origin develop
+rm -rf build_LLVM
 mkdir build_LLVM && cd build_LLVM
-# rm -rf build_LLVM
 ```
 
 ```shell
