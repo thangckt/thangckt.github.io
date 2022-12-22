@@ -39,7 +39,7 @@ This site dedicates to my personal notes which do not reflect either community o
 
 These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
-It's funny if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces.
+It is glad if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces; you may find interest in his last Concerto Opus 64 as I do.
 
 <!-- 
 !!! quote ""
