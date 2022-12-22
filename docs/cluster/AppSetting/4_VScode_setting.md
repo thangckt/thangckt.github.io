@@ -181,6 +181,7 @@ Type `open settings`
   "latex-workshop.message.badbox.show": false,
   // "latex-workshop.linting.chktex.enabled": true,
   // "latex-workshop.linting.lacheck.enabled": true,
+  "latex-workshop.synctex.synctexjs.enabled": true,
   "latex-workshop.synctex.afterBuild.enabled": true,
   "latex-workshop.view.pdf.viewer": "tab",
   // "latex-workshop.view.pdf.invert": 1,
