@@ -1,12 +1,14 @@
-<!-- ---
-sort: 41
---- -->
+---
+hide:
+---
+
 
 # VScode setting
 
-[Visual Studio Code](https://code.visualstudio.com/) is free, lightweight and platform-independent.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/113px-Visual_Studio_Code_1.35_icon.svg.png"
+style="float:left; margin-right:20px" width="190" />
 
-![pic](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/113px-Visual_Studio_Code_1.35_icon.svg.png)
+[Visual Studio Code](https://code.visualstudio.com/) is free, lightweight, and platform-independent.
 
 ## I. [Windows](https://code.visualstudio.com/docs/setup/windows)
 

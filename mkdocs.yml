@@ -17,7 +17,7 @@ theme:
   highlightjs: true
   features:
     - content.code.annotate
-    - navigation.expand
+    # - navigation.expand
     # - navigation.sections
     - navigation.indexes
     # - navigation.instant
@@ -187,11 +187,12 @@ nav:
       - cluster/AppSetting/Latex_TexStudio.md
       - cluster/AppSetting/Latex_VScode.md
       - cluster/AppSetting/3_JupyterLab.md
-      - cluster/AppSetting/4_VScode_setting.md
+      - cluster/AppSetting/setting_VScode.md
       - cluster/AppSetting/5_git.md
       - cluster/AppSetting/6_Lammps.md
       - cluster/AppSetting/7_packing_python.md
       - cluster/AppSetting/8_WSL.md
+    - cluster/AppSetting/VScode_perspectives.md
     - cluster/cheatsheet.md
     - cluster/docs_syntax.md
 
