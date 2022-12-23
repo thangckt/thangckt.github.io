@@ -51,6 +51,23 @@ git reset --hard
 git config --global url.https://github.com/.insteadOf git://github.com/
 ```
 
+## 3. gitignore
+https://stackoverflow.com/questions/987142/make-gitignore-ignore-everything-except-a-few-files
+
+```
+## this igores "folder"
+**/Zoutdir/   
+
+## this igores "files" in folder
+**/Zoutdir/*
+
+## ignore 1 file-type, note to only igore "files" in folder `/Zoutdir/`
+!**/Zoutdir/*.bbl
+
+```
+
+
+
 ## Git resource
 
 - [Use web-base editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor){target=_blank)
