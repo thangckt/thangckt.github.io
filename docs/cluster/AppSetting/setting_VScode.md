@@ -168,6 +168,7 @@ Type `open settings`
   },
 
    "[latex]": {
+    "editor.tabSize": 2,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
   },
