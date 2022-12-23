@@ -10,6 +10,7 @@ style="float:left; margin-right:20px" width="190" />
 
 [Visual Studio Code](https://code.visualstudio.com/) is free, lightweight, and platform-independent.
 
+
 ## I. [Windows](https://code.visualstudio.com/docs/setup/windows)
 
 Can install the Visual Studio Code installer for Windows, or use Zip archive, extract it and run Code from there.
@@ -242,9 +243,11 @@ Type `open settings`
 * [github](https://github.com/microsoft/vscode-jupyter)
 
 ```js
-  //=== Setting for Jupyter Notebooks
-
-  ```
+    //=== Setting for Jupyter Notebooks
+    "notebook.markup.fontSize": 13.5,
+    "markdown.preview.fontFamily": "roboto",
+    "markdown.preview.fontSize": 14
+```
 
 1. Extensions:
 
