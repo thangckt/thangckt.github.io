@@ -61,8 +61,8 @@ plugins:
   # - blog      # only insider
   - search
   - autorefs
-  - mkdocs-jupyter:          # not work with tab-header branch
-      theme: dark
+  # - mkdocs-jupyter:          # not work with tab_header_v8 branch
+  #     theme: dark
 
   - mkdocstrings:
       handlers:
