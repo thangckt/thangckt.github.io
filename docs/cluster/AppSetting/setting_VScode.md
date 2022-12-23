@@ -172,6 +172,12 @@ Type `open settings`
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
   },
+  
+   //=== Linting
+   "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnusedImport": "information",
+        "reportMissingImports": "none"
+    }
 
 ```
 
