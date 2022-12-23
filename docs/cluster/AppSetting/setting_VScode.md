@@ -236,3 +236,33 @@ Type `open settings`
     }
   ],
 ```
+
+### Jupyter Notebooks
+
+* [github](https://github.com/microsoft/vscode-jupyter)
+
+```js
+  //=== Setting for Jupyter Notebooks
+
+  ```
+
+1. Extensions:
+
+    * Python (author: Microsoft)
+    * Pylance (author: Microsoft)
+    * Live Server (author: Ritwick Dey)
+    * Jupyter Keymap (author: Microsoft)
+    * Jupyter (author: Microsoft) (auto install)
+    * Jupyter Notebook Renderers (author: Microsoft) (auto install)
+
+2. Create a Python Environment and Install the Jupyter
+
+```
+conda create --name py311 python=3.11
+conda install jupyter
+```
+
+Why VScode for Jupyter Notebooks refs:
+
+    - [here](https://pbpython.com/vscode-notebooks.html)
+    - [here](https://pbpython.com/vscode-notebooks.html)
