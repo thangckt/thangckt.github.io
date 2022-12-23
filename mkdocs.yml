@@ -117,7 +117,6 @@ extra:
 
 ## Extensions
 markdown_extensions:
-  # - abbr
   - admonition
   - pymdownx.details
   - pymdownx.superfences
