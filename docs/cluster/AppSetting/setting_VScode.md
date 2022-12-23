@@ -148,7 +148,7 @@ Type `open settings`
     "*.txt": "txt",
   },
   "[lmps]": {
-    "editor.tabSize": 3,
+    "editor.tabSize": 2,
     "editor.snippetSuggestions": "none",
     "editor.quickSuggestions": {
       "other": false,
