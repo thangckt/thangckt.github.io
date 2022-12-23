@@ -104,7 +104,7 @@ Type `open settings`
 ```js
   "window.zoomLevel": 0,
   "security.workspace.trust.enabled": false,
-  "workbench.colorTheme": "Super One Dark",         // "One Dark Pro Darker"
+  "workbench.colorTheme": "One Dark Pro Darker",         // "One Dark Pro Darker"  "Super One Dark"
   // "workbench.iconTheme": "vs-minimal",
   // "zenMode.hideLineNumbers": true,
   // "breadcrumbs.enabled": true,
