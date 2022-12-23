@@ -1,27 +1,28 @@
 ---
 hide:
   # - toc
-  # - navigation 
+  # - navigation
+ᴴₒᴴₒᴴₒ: true
 ---
 
 
 
 
 <!-- add picutres in table-->
-<!-- ![](./assets/images/my_picture3x3.jpg) 
-  [![](./assets/images/icon_linkedin.jpg)](https://www.linkedin.com/in/thang-nguyen-5b458a218) 
+<!-- ![](./assets/images/my_picture3x3.jpg)
+  [![](./assets/images/icon_linkedin.jpg)](https://www.linkedin.com/in/thang-nguyen-5b458a218)
 ![](./assets/images/hello_world.png)
 
-[![](./assets/images/icon_ORCID.png)](https://orcid.org/0000-0001-9826-5397) 
+[![](./assets/images/icon_ORCID.png)](https://orcid.org/0000-0001-9826-5397)
 -->
 
 <!--
-| <img src="./0images/my_picture3x3.jpg" style="border-radius: 50%; border: 2px solid black;"/> | 
+| <img src="./0images/my_picture3x3.jpg" style="border-radius: 50%; border: 2px solid black;"/> |
 |:---:|
 | [![](./0images/icon_email.png)](mailto:caothangckt@gmail.com)  [![](./0images/icon_messenger.png)](https://www.facebook.com/thangckt5)  [![](./0images/icon_Telegram.png)](https://t.me/thangckt)     |
 -->
 
-<!-- 
+<!--
 ```python
 if "bullshit" not in your_life:
     print("Hello world")
@@ -39,7 +40,7 @@ This site dedicates to my personal notes which do not reflect either community o
 
 It is glad if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces; you may find interest in his last Concerto Opus 64 as I do.
 
-<!-- 
+<!--
 !!! quote ""
 
     You cannot teach a man anything, you can only help him find it within himself - Galileo Galilei (1564–1642)
