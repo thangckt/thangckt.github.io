@@ -135,7 +135,7 @@ Type `open settings`
 ### Files
 
 ```js
-  //=== Files
+    //=== Files & Linting
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   "files.associations": {
@@ -156,28 +156,30 @@ Type `open settings`
       "strings": false
     }
   },
+
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.snippetSuggestions": "none",
+  },
+
+  "[latex]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+  },
+
   "[python]": {
     "editor.formatOnSave": false,
     "editor.snippetSuggestions": "none",
     "editor.detectIndentation": true,
     "editor.insertSpaces": true,
   },
-  "[markdown]": {
-    "editor.formatOnSave": true,
-    "editor.snippetSuggestions": "none",
-  },
 
-   "[latex]": {
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "editor.minimap.enabled": false,
+  //=== Linting
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportUnusedImport": "information",
+    "reportMissingImports": "none"
   },
-  
-   //=== Linting
-   "python.analysis.diagnosticSeverityOverrides": {
-        "reportUnusedImport": "information",
-        "reportMissingImports": "none"
-    }
 
 ```
 
