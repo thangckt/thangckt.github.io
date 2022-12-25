@@ -38,7 +38,7 @@ else:
 
 This site dedicates to my personal notes which do not reflect either community or third-party rules. These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
-It is glad if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces; you may find interest in his last Concerto Opus 64 as I do.
+It's glad if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces; you may find interest in his last Concerto Opus 64 as I do.
 
 <!--
 !!! quote ""
