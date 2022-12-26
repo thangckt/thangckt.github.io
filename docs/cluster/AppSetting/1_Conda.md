@@ -258,6 +258,7 @@ conda install --revision 0
       - Install in base-env: `conda install -n base nb_conda_kernels` 
       - Install jyterlab in both base-env and sub-env
       - select to open notebook by jupyterlab in base-env
+   - If use VScode, then don't need jupyterlab, just need `conda install -n base jupyter`
    - To solve error: ImportError: DLL load failed while importing shell: Can not find procedure. Downgrade `pywin32` in `base_env`
      ```
      conda install -n base pywin32=228
