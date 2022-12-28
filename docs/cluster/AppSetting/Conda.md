@@ -64,7 +64,11 @@ set     topdir          /uhome/p001cao/local/Miniconda3/envs/py37ompi
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE                 $topdir/include
+```
+
 or :
+
+```tcl
 ## python27env_conda3
 set     topdir          /uhome/p001cao/local/Anaconda3
 module load conda3
