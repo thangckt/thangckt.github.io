@@ -54,6 +54,6 @@ ${myPREFIX}/bin/python3 get-pip.py
 
 If you want to install multiple versions of Python on the same server, you can repeat these steps to specify, download, and install a different version of Python alongside existing versions.
 
-???+ quote "Refs"
+???+ tip "Refs"
 
     - [Install Python From Source](https://docs.posit.co/resources/install-python-source/)
