@@ -184,7 +184,8 @@ nav:
       - cluster/compiling/11_Conda_MPI.md
       - cluster/compiling/12_PMIX.md
     - Setting:
-      - cluster/AppSetting/1_Conda.md
+      - cluster/AppSetting/Conda.md
+      - cluster/AppSetting/Pip.md
       - cluster/AppSetting/Latex_TexStudio.md
       - cluster/AppSetting/Latex_VScode.md
       - cluster/AppSetting/3_JupyterLab.md
