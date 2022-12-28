@@ -56,4 +56,4 @@ If you want to install multiple versions of Python on the same server, you can r
 
 ???+ tip "Refs"
 
-    - [Install Python From Source](https://docs.posit.co/resources/install-python-source/)
+    1. [Install Python From Source](https://docs.posit.co/resources/install-python-source/)
