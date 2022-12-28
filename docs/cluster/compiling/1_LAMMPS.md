@@ -1007,14 +1007,14 @@ export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"  
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 ## python (require py3), BLAS+LAPACK
-export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py37Lammps
+export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py39Lammps
 export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12               # avoid zlib hidden by conda
 export myPREFIX=/home1/p001cao/local/app/lammps/llvmOMPI4-dev      
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPython_ROOT_DIR=${pyROOT} \
 -DBUILD_MPI=yes -DBUILD_OMP=yes -DPKG_OPENMP=yes \
--DLAMMPS_MACHINE=mpi -DBUILD_SHARED_LIBS=no \
+-DLAMMPS_MACHINE=mpi -DBUILD_SHARED_LIBS=yes \
 -DPKG_GPU=no -DPKG_KOKKOS=no -DPKG_INTEL=no -DPKG_MDI=no \
 -DPKG_SCAFACOS=no -DPKG_ADIOS=no -DPKG_NETCDF=no -DPKG_VTK=no -DPKG_H5MD=no \
 -DPKG_MESONT=no -DPKG_LATTE=no -DPKG_MSCG=no -DPKG_ATC=no -DPKG_KIM=no \
