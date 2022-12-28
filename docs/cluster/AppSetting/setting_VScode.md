@@ -139,12 +139,8 @@ Type `open settings`
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   "files.associations": {
-    "*.lmp": "lmps",
-    "*.in": "lmps",
-    "*.mod": "lmps",
-    "*.lmp*": "lmps",
-    "*.log": "log",
-    "*.out": "log",
+    "*.lmp": "lmps", "*.in": "lmps", "*.mod": "lmps", "*.lmp*": "lmps", "*.lammps": "lmps",
+    "*.log": "log", "*.out": "log",
     "*.txt": "txt",
   },
   "[lmps]": {
