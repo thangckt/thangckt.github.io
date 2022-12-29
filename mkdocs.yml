@@ -65,6 +65,7 @@ plugins:
   - autorefs
   # - mkdocs-jupyter:          # not work with tab_header_v8 branch
   #     theme: dark
+  - enumerate-headings
 
   - mkdocstrings:
       handlers:
