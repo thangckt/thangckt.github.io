@@ -249,10 +249,12 @@ Type `open settings`
 * [github](https://github.com/microsoft/vscode-jupyter)
 
 ```js
-    //=== Setting for Jupyter Notebooks
-    "notebook.markup.fontSize": 13.5,
-    "markdown.preview.fontFamily": "roboto",
-    "markdown.preview.fontSize": 14
+  //=== Setting for Jupyter Notebooks
+  "notebook.lineNumbers": "on",
+  "notebook.showCellStatusBar": "hidden",
+  "notebook.markup.fontSize": 13.5,
+  "markdown.preview.fontFamily": "roboto",
+  "markdown.preview.fontSize": 14,
 ```
 
 1. Extensions:
