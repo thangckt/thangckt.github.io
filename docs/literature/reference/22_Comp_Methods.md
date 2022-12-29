@@ -32,7 +32,7 @@ table, td, th {border: none!important; }
 |  |  |  |
 |:--|:--|:--|
 | Lecture Multiscale Methods in Computational Mechanics |  |  [Notebook](https://thangckt.github.io/lec_multiscale){target="_blank"} |
-
+| Thang's note on Computational Mechanics & Multiscale methods |  |  [Notebook](https://thangckt.github.io/note_comp_mech){target="_blank"} |
 
 
 ## ML in Computational
