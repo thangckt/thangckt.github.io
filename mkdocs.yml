@@ -161,8 +161,8 @@ markdown_extensions:
 
 # extra_javascript:
 #   - _extension/javascripts/extra.js
-# extra_css:
-#   - _extension/stylesheets/extra.css
+extra_css:
+  - _extension/extra_css/full_width.css
 
 
 ## Page tree
