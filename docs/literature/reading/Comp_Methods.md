@@ -3,8 +3,9 @@ hide:
 #   - toc
 ---
 
-<style>
-table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; border-spacing:0px;}
+<style> scoped>
+table, td, th {border: none!important;
+                font-size:14px; margin-top:-20px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; border-spacing:0px;}
 </style>
 
 # Computational Methods
