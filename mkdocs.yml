@@ -160,9 +160,9 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra_javascript:
-  - _extension/javascripts/gg_adsense.js
+  - _extend_theme/javascripts/gg_adsense.js
 extra_css:
-  - _extension/extra_css/full_width.css
+  - _extend_theme/extra_css/full_width.css
 
 
 ## Page tree
