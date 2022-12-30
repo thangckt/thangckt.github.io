@@ -38,32 +38,32 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 
 ## Physics
 
-|  |  |
-|:--|:--|
-| Chemistry | [html](https://openstax.org/books/chemistry-2e/pages/preface){target="_blank"} |
-| Physic 1 | [html](https://openstax.org/books/university-physics-volume-1/pages/preface){target="_blank"} |
-| Physic 2 | [html](https://openstax.org/books/university-physics-volume-2/pages/preface){target="_blank"} |
-| Physic 3 | [html](https://openstax.org/books/university-physics-volume-3/pages/preface){target="_blank"} |
-| Theoretical Physics| [html](https://www.theoretical-physics.com){target="_blank"} |
-| Statistical Physics | [html](https://statisticalphysics.leima.is){target="_blank"} |
-| Physics Notebook | [html](https://physics.leima.is){target="_blank"} |
+|  |  |  |
+|:--|:--|:--|
+| Chemistry || [html](https://openstax.org/books/chemistry-2e/pages/preface){target="_blank"} |
+| Physic 1 | | [html](https://openstax.org/books/university-physics-volume-1/pages/preface){target="_blank"} |
+| Physic 2 | | [html](https://openstax.org/books/university-physics-volume-2/pages/preface){target="_blank"} |
+| Physic 3 | | [html](https://openstax.org/books/university-physics-volume-3/pages/preface){target="_blank"} |
+| Theoretical Physics| | [html](https://www.theoretical-physics.com){target="_blank"} |
+| Statistical Physics | | [html](https://statisticalphysics.leima.is){target="_blank"} |
+| Physics Notebook | | [html](https://physics.leima.is){target="_blank"} |
 
 ## Mathematics
 
-|  |  |
-|:--|:--|
-| Advanced Engineering Mathematics - E. Kreyszig | [pdf](./pdf/math_EngineeringMath_EKreyszig.pdf){target="_blank"} |
-| Understanding Engineering Mathematics | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/MATHEMATICS/Understanding%20Engineering%20Mathematics%20by%20John%20Bird.pdf){target="_blank"} |
-| Vector Calculus | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/MATHEMATICS/Vector%20Calculus%206th%20Edition%20by%20Jerrold%20E.%20Marsde%20and%20Anthony%20Tromba.pdf){target="_blank"} |
+|  |  |  |
+|:--|:--|:--|
+| Advanced Engineering Mathematics | E. Kreyszig | [pdf](./pdf/math_EngineeringMath_EKreyszig.pdf){target="_blank"} |
+| Understanding Engineering Mathematics || [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/MATHEMATICS/Understanding%20Engineering%20Mathematics%20by%20John%20Bird.pdf){target="_blank"} |
+| Vector Calculus || [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/MATHEMATICS/Vector%20Calculus%206th%20Edition%20by%20Jerrold%20E.%20Marsde%20and%20Anthony%20Tromba.pdf){target="_blank"} |
 | A CONCISE HANDBOOK OF MATHEMATICS, PHYSICS, AND ENGINEERING SCIENCES | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/MATHEMATICS/A%20Concise%20Handbook%20of%20Mathematics,%20Physics,%20and%20Engineering%20Sciences%20by%20Andrei%20D.%20Polyanin%20and%20Alexei%20I.%20Chernoutsan.pdf){target="_blank"} |
-| MINIMUM MATHEMATICS | [pdf](./pdf/maths_MinMath_PhuNguyen.pdf){target="_blank"} |
-| Introduction to Tensor Calculus | [pdf](./pdf/Introduction_to_Tensor_Calculus.pdf){target="_blank"} |
+| MINIMUM MATHEMATICS | | [pdf](./pdf/maths_MinMath_PhuNguyen.pdf){target="_blank"} |
+| Introduction to Tensor Calculus || [pdf](./pdf/Introduction_to_Tensor_Calculus.pdf){target="_blank"} |
 | Statistics | Gül İnan| [Notebook](https://gulinan.github.io/mat244e){target="_blank"}|
 
 ## Programming
 
-|  |  |
-|:--|:--|
+|  |  |  |
+|:--|:--|:--|
 | The Linux Command Line |  [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/CSE/The%20Linux%20Command%20Line.pdf){target="_blank"}  |
 | A Primer on Scientific Programming withPython | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/CSE/A%20Primer%20on%20Scientific%20Programming%20with%20Python.pdf){target="_blank"}  |
 | Introduction to Algorithms | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/CSE/Introduction.to.Algorithms.3rd.Edition.Sep.2010.pdf){target="_blank"}  |
