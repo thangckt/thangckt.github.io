@@ -164,6 +164,10 @@ extra_javascript:
 extra_css:
   - _extend_theme/extra_css/full_width.css
 
+
+
+
+
 ###=======================================
 ### Site content
 ###=======================================
@@ -186,19 +190,20 @@ nav:
       - cluster/compiling/11_Conda_MPI.md
       - cluster/compiling/12_PMIX.md
     - Setting:
-      - cluster/AppSetting/Conda.md
-      - cluster/AppSetting/Pip.md
-      - cluster/AppSetting/Latex_TexStudio.md
-      - cluster/AppSetting/Latex_VScode.md
-      - cluster/AppSetting/3_JupyterLab.md
-      - cluster/AppSetting/setting_VScode.md
-      - cluster/AppSetting/5_git.md
-      - cluster/AppSetting/6_Lammps.md
-      - cluster/AppSetting/7_packing_python.md
-      - cluster/AppSetting/8_WSL.md
-    - cluster/AppSetting/VScode_perspectives.md
-    - cluster/cheatsheet.md
-    - cluster/docs_syntax.md
+      - cluster/appSetting/Conda.md
+      - cluster/appSetting/Pip.md
+      - cluster/appSetting/Latex_TexStudio.md
+      - cluster/appSetting/Latex_VScode.md
+      - cluster/appSetting/3_JupyterLab.md
+      - cluster/appSetting/setting_VScode.md
+      - cluster/appSetting/5_git.md
+      - cluster/appSetting/6_Lammps.md
+      - cluster/appSetting/7_packing_python.md
+      - cluster/appSetting/8_WSL.md
+    - Useful:
+      - cluster/appSetting/VScode_perspectives.md
+      - cluster/refPage/cheatsheet.md
+      - cluster/refPage/docs_syntax.md
 
 
   - Literature:
