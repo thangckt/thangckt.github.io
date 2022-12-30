@@ -73,3 +73,4 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 | Python Data Science Handbook - in .ipynb  |   [notebook](https://nbviewer.org/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/Index.ipynb){target="_blank"}  |
 | learn C++  |  [Link](https://www.learncpp.com/){target="_blank"} |
 | Software engineering and systems engineering - course |   [notebook](https://linkedin.github.io/school-of-sre/){target="_blank"} |
+| Scientific Computing for Chemists with Python | [notebook](https://weisscharlesj.github.io/SciCompforChemists){target="_blank"} |
