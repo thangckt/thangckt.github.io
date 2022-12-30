@@ -33,8 +33,6 @@ else:
 
 <!-- <img src="./1images/monkey.png" style="float:left; margin-right:20px" width="190" /> -->
 <img src="./1images/my_picture3x3.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="170" />
-
-<br>
 This site dedicates to my personal notes which do not reflect either community or third-party rules. These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
 It's glad if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces; you may find interest in his last Concerto Opus 64 as I do.
@@ -45,7 +43,7 @@ It's glad if something here is valid for you. In other cases, just enjoin Mendel
     You cannot teach a man anything, you can only help him find it within himself - Galileo Galilei (1564–1642)
 -->
 
-<div style="position:relative; padding-bottom:56.25%">
+<div style="padding-bottom:56.25%; display:block">
 <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
         style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0" allowfullscreen
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
