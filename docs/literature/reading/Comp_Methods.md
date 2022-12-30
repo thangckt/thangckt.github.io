@@ -27,13 +27,18 @@ table, td, th {border: none!important; }
 | Enhanced sampling methods for molecular dynamics simulations  | |   [pdf](./pdf/Enhanced_sampling_for_MD.pdf){target="_blank"} |
 |Theory and Modeling of Polymer Nanocomposites  | |  [pdf](https://link.springer.com/content/pdf/10.1007/978-3-030-60443-1.pdf){target="_blank"}  |
 
+## DFT
+
+|  |  |  |
+|:--|:--|:--|
+| Computational Chemistry from Laptop to HPC | eChem team | [Notebook](https://kthpanor.github.io/echem){target="_blank"}|
+
 ## Multiscale
 
 |  |  |  |
 |:--|:--|:--|
 | Lecture Multiscale Methods in Computational Mechanics |  |  [Notebook](https://thangckt.github.io/lec_multiscale){target="_blank"} |
 | Thang's note on Computational Mechanics & Multiscale methods |  |  [Notebook](https://thangckt.github.io/note_comp_mech){target="_blank"} |
-
 
 ## ML in Computational
 

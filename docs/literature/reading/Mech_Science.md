@@ -58,6 +58,7 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 | A CONCISE HANDBOOK OF MATHEMATICS, PHYSICS, AND ENGINEERING SCIENCES | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/MATHEMATICS/A%20Concise%20Handbook%20of%20Mathematics,%20Physics,%20and%20Engineering%20Sciences%20by%20Andrei%20D.%20Polyanin%20and%20Alexei%20I.%20Chernoutsan.pdf){target="_blank"} |
 | MINIMUM MATHEMATICS | [pdf](./pdf/maths_MinMath_PhuNguyen.pdf){target="_blank"} |
 | Introduction to Tensor Calculus | [pdf](./pdf/Introduction_to_Tensor_Calculus.pdf){target="_blank"} |
+| Statistics | Gül İnan| [Notebook](https://gulinan.github.io/mat244e){target="_blank"}|
 
 ## Programming
 
