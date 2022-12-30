@@ -38,7 +38,7 @@ These notes do not reflect either community or third-party rules. <br>
 These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
 It's glad if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces; you may find interest in his last Concerto Opus 64 as I do.
-<br>
+<br> <br>
 
 <!--
 !!! quote ""
