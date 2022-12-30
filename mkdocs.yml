@@ -159,8 +159,8 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-# extra_javascript:
-#   - _extension/javascripts/extra.js
+extra_javascript:
+  - _extension/javascripts/gg_adsense.js
 extra_css:
   - _extension/extra_css/full_width.css
 
