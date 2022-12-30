@@ -10,6 +10,8 @@ table, td, th {border: none!important;
 
 # Computational Methods
 
+|  |  |  |
+|:--|:--|:--|
 | Thang's note on Computational Mechanics & Multiscale methods |  |  [Notebook](https://thangckt.github.io/note_comp_mech){target="_blank"} |
 
 ## Multiscale
