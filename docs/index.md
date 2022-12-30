@@ -7,8 +7,7 @@ hide:
 
 
 
-
-<!-- add picutres in table-->
+<!-- add pictures in table-->
 <!-- ![](./assets/images/my_picture3x3.jpg)
   [![](./assets/images/icon_linkedin.jpg)](https://www.linkedin.com/in/thang-nguyen-5b458a218)
 ![](./assets/images/hello_world.png)
@@ -32,10 +31,10 @@ else:
 
 <!--- #### [My CV](https://thangckt.github.io/cv) -->
 
-
 <!-- <img src="./1images/monkey.png" style="float:left; margin-right:20px" width="190" /> -->
-<img src="./1images/my_picture3x3.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="190" />
+<img src="./1images/my_picture3x3.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="170" />
 
+<br>
 This site dedicates to my personal notes which do not reflect either community or third-party rules. These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
 It's glad if something here is valid for you. In other cases, just enjoin Mendelssohn's excellent pieces; you may find interest in his last Concerto Opus 64 as I do.
@@ -55,5 +54,3 @@ It's glad if something here is valid for you. In other cases, just enjoin Mendel
 </div>
 
 # Welcome to my site
-
-
