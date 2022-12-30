@@ -6,8 +6,6 @@ edit_uri: "https://github.com/thangckt/src_thangckt.github.io/tree/main/docs"
 
 
 
-
-
 ## Copyright
 copyright: Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</a>
 
@@ -163,7 +161,6 @@ extra_javascript:
   - _extend_theme/javascripts/gg_adsense.js
 extra_css:
   - _extend_theme/extra_css/full_width.css
-
 
 
 
