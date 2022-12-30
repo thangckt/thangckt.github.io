@@ -164,7 +164,9 @@ extra_javascript:
 extra_css:
   - _extend_theme/extra_css/full_width.css
 
-
+###=======================================
+### Site content
+###=======================================
 ## Page tree
 nav:
   - Home: https://thangckt.github.io
