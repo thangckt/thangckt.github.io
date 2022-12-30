@@ -3,12 +3,11 @@ hide:
 #   - toc
 ---
 
-# Mechanical 
-
 <style>
 table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; border-spacing:0px;}
 </style>
 
+# Mechanical
 
 ## Basic Mechanics
 
@@ -24,7 +23,6 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 | Refrigeration and Air Conditioning | | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/THERMODYNAMICS/Refrigeration%20and%20Air-Conditioning,%204th%20Edition%20-%20(Malestrom).pdf){target="_blank"} |
 | Fundamentals of Heat and Mass Transfer | | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/Fundamentals%20of%20Heat%20and%20Mass%20Transfer-Incropera.pdf){target="_blank"} |
 | Learn Multibody Dynamics | | [html](https://moorepants.github.io/learn-multibody-dynamics/index.html){target="_blank"} |
-
 
 ## Advanced Mechanics
 

@@ -223,12 +223,13 @@ nav:
     - literature/2_Mech_Terminologies.md
     # - research/publication.md
 
+    - Reading:
     - Engineering:
-      - literature/reference/11_Mech_BasicMechanics.md
-      - literature/reference/12_Mech_Science.md
+      - literature/reading/11_Mech_BasicMechanics.md
+      - literature/reading/12_Mech_Science.md
     - Computational:
-      - literature/reference/21_Comp_Programing.md
-      - literature/reference/22_Comp_Methods.md
+      - literature/reading/21_Comp_Programing.md
+      - literature/reading/22_Comp_Methods.md
 
 
   # - Codedocs: codedocs.md

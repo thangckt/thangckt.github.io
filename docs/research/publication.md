@@ -1,6 +1,6 @@
 ---
 hide:
-  - navigation
+  # - navigation
   - toc
 ---
 
@@ -16,7 +16,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 <a href="../publication_nofig">  <button class="collapsible" style="padding:8px 20px">Hide Graphical Abstract</button> </a>
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2022_poisson_ml.gif" alt=""> 
+  <img src="../figure/2022_poisson_ml.gif" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -32,7 +32,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2022_Out_of_plane.png" alt=""> 
+  <img src="../figure/2022_Out_of_plane.png" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -47,7 +47,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2019_pattern.gif" alt=""> 
+  <img src="../figure/2019_pattern.gif" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -63,7 +63,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2019_auxetic.jpg" alt=""> 
+  <img src="../figure/2019_auxetic.jpg" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -79,7 +79,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2019_auxetic_cover.jpg" alt=""> 
+  <img src="../figure/2019_auxetic_cover.jpg" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -98,7 +98,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="nan" alt=""> 
+  <img src="nan" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -111,7 +111,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2022_composite.png" alt=""> 
+  <img src="../figure/2022_composite.png" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -124,7 +124,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2022_surface_energy.gif" alt=""> 
+  <img src="../figure/2022_surface_energy.gif" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -137,7 +137,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2021_surfMelting.gif" alt=""> 
+  <img src="../figure/2021_surfMelting.gif" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -150,7 +150,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2021_mechanical_melting.png" alt=""> 
+  <img src="../figure/2021_mechanical_melting.png" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -163,7 +163,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2020_finite_size.png" alt=""> 
+  <img src="../figure/2020_finite_size.png" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -179,7 +179,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:250px; margin-right:25px; margin-top:8px;">
-  <img src="../figure/2022_composite.png" alt=""> 
+  <img src="../figure/2022_composite.png" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -193,7 +193,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="nan" alt=""> 
+  <img src="nan" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">

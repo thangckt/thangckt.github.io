@@ -1,6 +1,6 @@
 ---
 hide:
-  - navigation
+  # - navigation
   - toc
 ---
 
@@ -16,7 +16,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 <a href="../publication">  <button class="collapsible" style="padding:8px 20px">Show Graphical Abstract</button> </a>
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -32,7 +32,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -47,7 +47,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -63,7 +63,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -79,7 +79,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -93,12 +93,11 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 <p class="text_collapse">The search for new auxetic mechanisms and more auxetic materials are two important research directions in the study of auxeticity. It is well known that instabilities are usually regarded as deleterious phenomena and thus their prevention is needed. However, the work of Sung Youb Kim and his research group (article no. 1800122) shows that some elastic instabilities act as mechanisms for auxeticity in several metals and periodic metallic porous structures. The upper part of the cover figure shows that the Born–Hill's elastic instability, i.e., an elastic material instability, causes a phase transformation leading to auxeticity in a facecentered cubic metal. The lower part of the figure describes another elastic instability, i.e., buckling of the microstructure of a periodic metallic porous structure, that induces a pattern transformation causing auxeticity in the structure. Details of relevant numerical results can be found in the article.</p>
 </td> </tr> </table> </div>
 
-
 ## Manuscripts
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -111,7 +110,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -124,7 +123,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -137,7 +136,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -150,7 +149,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -163,7 +162,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -174,12 +173,11 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
   <p class="text_author"><a href="https://thangckt.github.io" target="_blank" style="text-decoration: none">Private arXiv</a>  (2020)</p>
 </td> </tr> </table> </div>
 
-
 ## Codes/Tools
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
@@ -193,7 +191,7 @@ Articles in my <a href="https://scholar.google.com/citations?user=JPTh-vMAAAAJ&h
 
 <div style="clear:both; padding-top:20px; display:inline-block">
 <div style="float:left; width:20px;">
-  <img src="" alt=""> 
+  <img src="" alt="">
 </div>
 <table class="table">  <tr class="tr" >
 <td class="td">
