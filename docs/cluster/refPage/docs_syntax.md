@@ -34,3 +34,5 @@ table, td, th {border: none!important; }
 | Python Markdown | [html](https://squidfunk.github.io/mkdocs-material/reference/){target="_blank"} |
 | Jupyter Books | [html](https://jupyterbook.org/en/stable/intro.html){target="_blank"} |
 | The best MkDocs plugins and customizations|  [html](https://chrieke.medium.com/the-best-mkdocs-plugins-and-customizations-fc820eb19759){target="_blank"} |
+
+[Using Google Colab with GitHub](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
