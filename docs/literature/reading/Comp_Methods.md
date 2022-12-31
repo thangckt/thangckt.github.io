@@ -3,7 +3,7 @@ hide:
 #   - toc
 ---
 
-<style scoped>
+<style>
 table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; border-spacing:0px;}
 </style>
 
@@ -26,6 +26,7 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 | Machine learing in Computational fluid mechanics|| [Notebook](https://thangckt.github.io/lec_ml_cfd){target="_blank"},  [Github](https://github.com/AndreWeiner/ml-cfd-lecture){target="_blank"}|
 | Deep Learning in Computational Mechanics| | [pdf](https://link.springer.com/content/pdf/10.1007%2F978-3-030-76587-3.pdf){target="_blank"} |
 | Deep Learning for Particle Physicists | [Notebook](https://lewtun.github.io/dl4phys){target="_blank"}|
+| Deep Learning for Molecules and Materials | [Notebook](https://dmol.pub/){target="_blank"}|
 
 ## ML Basic
 
