@@ -277,3 +277,15 @@ Why VScode for Jupyter Notebooks refs:
 
     - [here](https://pbpython.com/vscode-notebooks.html)
     - [here](https://pbpython.com/vscode-notebooks.html)
+    
+### Python & Conda envs
+```
+     //=== Python and Conda envs
+    "python.defaultInterpreterPath": "C:/DevProgram/miniconda3/python.exe",
+    "python.terminal.activateEnvironment": true,
+```
+???+ tip "See also"
+
+  1. [python/environments](https://code.visualstudio.com/docs/python/environments)
+  2. [Efficient Way to Activate Conda in VSCode](https://medium.com/analytics-vidhya/efficient-way-to-activate-conda-in-vscode-ef21c4c231f2)
+
