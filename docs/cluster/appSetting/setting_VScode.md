@@ -282,6 +282,7 @@ Why VScode for Jupyter Notebooks refs:
 ```
      //=== Python and Conda envs
     "python.defaultInterpreterPath": "C:/DevProgram/miniconda3/python.exe",
+    "python.condaPath": "C:/DevProgram/miniconda3/Scripts/conda.exe",
     "python.terminal.activateEnvironment": true,
 ```
 ???+ tip "See also"
