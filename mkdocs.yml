@@ -34,6 +34,7 @@ theme:
     - content.action.edit
     - navigation.footer
 
+
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -54,32 +55,6 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-
-
-## Plugins
-plugins:
-  # - meta    # only insider
-  # - blog      # only insider
-  - search
-  - autorefs
-  # - mkdocs-jupyter:          # not work with tab_header_v8 branch
-  #     theme: dark
-  - mkdocstrings:
-      handlers:
-        python:
-          options:
-            members_order: 'source'
-            docstring_style: 'google'
-            show_source: false
-            show_root_heading: true
-            show_category_heading: false
-            show_signature_annotations: true
-            # docstring_section_style: list
-          # path: [.]
-          # import:
-          #   - https://docs.python.org/3/objects.inv
-          #   - https://mkdocstrings.github.io/autorefs/objects.inv
-  # - enumerate-headings
 
 
 ## Customization
@@ -119,9 +94,10 @@ extra:
 ## Extensions
 markdown_extensions:
   - admonition
-  - pymdownx.details
   - pymdownx.superfences
   - pymdownx.caret
+  - pymdownx.details
+  - codehilite
   - abbr
   - attr_list
   - def_list
@@ -158,6 +134,33 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+## Plugins
+plugins:
+  # - meta    # only insider
+  # - blog      # only insider
+  - search
+  - autorefs
+  # - mkdocs-jupyter:          # not work with tab_header_v8 branch
+  #     theme: dark
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            members_order: 'source'
+            docstring_style: 'google'
+            show_source: false
+            show_root_heading: true
+            show_category_heading: false
+            show_signature_annotations: true
+            # docstring_section_style: list
+          # path: [.]
+          # import:
+          #   - https://docs.python.org/3/objects.inv
+          #   - https://mkdocstrings.github.io/autorefs/objects.inv
+  # - enumerate-headings
+
+
+### Extra theme
 extra_javascript:
   - _extend_theme/javascripts/gg_adsense.js
 extra_css:
