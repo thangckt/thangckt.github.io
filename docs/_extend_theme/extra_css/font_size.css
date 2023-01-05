@@ -6,6 +6,6 @@
 
 /*Change font size in table */
 /* https://github.com/squidfunk/mkdocs-material/issues/887 */
-.md-typeset  td {
+.md-typeset  .td{
   font-size: 26px;
 }
