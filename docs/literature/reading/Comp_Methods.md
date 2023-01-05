@@ -31,7 +31,7 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 ## ML Basic
 
 - PyTorch for Deep Learning - [Notebook](https://thangckt.github.io/pytorch_deep_learning){target="_blank"}
-- Zero to Mastery Machine Learning - [Notebook](https://thangckt.github.io/zero_to_mastery_ml){target="_blank"}
+- Zero to Mastery Machine Learning - [Notebook](https://thangckt.github.io/zero_to_mastery_ml){target="_blank"}, [pdf](https://github.com/curiousily/Machine-Learning-from-Scratch){target="_blank"}
 
 |  |  |  |
 |:--|:--|:--|
@@ -42,8 +42,6 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 | Practical Python AI Projects| |[pdf](./pdf_ML/Practical_Python_AI_Projects.pdf){target="_blank"}|
 | Fundamentals of Deep Learning| |[pdf](./pdf_ML/Fundamentals_of_Deep_Learning.pdf){target="_blank"}|
 | Deep Learning| |[pdf](./pdf_ML/Deep_Learning.pdf){target="_blank"}
-| Zero to Mastery Machine Learning| |[pdf](https://github.com/mrdbourke/zero-to-mastery-ml){target="_blank"}|
-| Machine learning from scratch| |[pdf](https://github.com/curiousily/Machine-Learning-from-Scratch){target="_blank"}|
 | Hands-On Machine Learning with Scikit-Learn and TensorFlow|| [Notebook](https://www.knowledgeisle.com/wp-content/uploads/2019/12/2-Aur%C3%A9lien-G%C3%A9ron-Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-Tensorflow_-Concepts-Tools-and-Techniques-to-Build-Intelligent-Systems-O%E2%80%99Reilly-Media-2019.pdf){target="_blank"}|
 | NoteBooks-Statistics-and-MachineLearning| |[Notebook](https://github.com/thangckt/NoteBooks-Statistics-and-MachineLearning){target="_blank"}|
 | Introduction to machine learning with Jupyter notebooks|| [Notebook](https://developers.redhat.com/articles/2021/05/21/introduction-machine-learning-jupyter-notebooks#what_is_a_jupyter_notebook_){target="_blank"}|
