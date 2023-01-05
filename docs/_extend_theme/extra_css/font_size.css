@@ -1,5 +1,10 @@
-/*Change admonition font size */
-.md-typeset .admonition .table .td .th{
+/*Change font size in admonition */
+.md-typeset .admonition{
   font-size: 15px;
 }
 
+
+/*Change font size in table */
+.table .td .th{
+  font-size: 15px;
+}
