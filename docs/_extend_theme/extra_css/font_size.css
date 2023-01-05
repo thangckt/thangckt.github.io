@@ -3,3 +3,8 @@
   font-size: 14px;
 }
 
+
+/*Change table font size */
+.md-typeset .table{
+  font-size: 16px;
+}
