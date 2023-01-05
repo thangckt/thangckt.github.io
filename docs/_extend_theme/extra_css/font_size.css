@@ -1,0 +1,5 @@
+/*Change footnotes font size */
+.md-typeset .footnote {
+  font-size: 12px;
+}
+
