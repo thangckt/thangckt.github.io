@@ -31,6 +31,7 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 ## ML Basic
 
 - PyTorch for Deep Learning - [Notebook](https://thangckt.github.io/pytorch_deep_learning){target="_blank"}
+- Zero to Mastery Machine Learning - [Notebook](https://thangckt.github.io/zero_to_mastery_ml){target="_blank"}
 
 |  |  |  |
 |:--|:--|:--|
