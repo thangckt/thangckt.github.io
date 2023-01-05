@@ -5,6 +5,6 @@
 
 
 /*Change font size in table */
-.table .td .th{
+.md-typeset .table .td .th{
   font-size: 16px;
 }
