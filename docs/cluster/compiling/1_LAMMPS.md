@@ -995,7 +995,7 @@ rm -rf build_LLVM
 mkdir build_LLVM && cd build_LLVM
 ```
 
-```shell
+```sh
 module load tool_dev/cmake-3.24
 module load tool_dev/binutils-2.37
 module load fftw/fftw3.3.10-ompi4.1.4-clang14
@@ -1010,7 +1010,8 @@ export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid
 export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py39Lammps
 export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12               # avoid zlib hidden by conda
 export myPREFIX=/home1/p001cao/local/app/lammps/llvmOMPI4-dev      
-
+```
+```sh
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPython_ROOT_DIR=${pyROOT} \
 -DBUILD_MPI=yes -DBUILD_OMP=yes -DPKG_OPENMP=yes \
@@ -1024,7 +1025,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DCMAKE_INSTALL_PREFIX=S{myPREFIX}
 ```
 
-```shell
+```sh
 make -j 16 && make install
 ```
 
