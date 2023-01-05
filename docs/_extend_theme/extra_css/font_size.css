@@ -1,5 +1,5 @@
-/*Change footnotes font size */
-.md-typeset .footnote {
+/*Change admonition font size */
+.md-typeset .admonition{
   font-size: 14px;
 }
 
