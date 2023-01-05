@@ -1015,7 +1015,7 @@ export myPREFIX=/home1/p001cao/local/app/lammps/llvmOMPI4-dev
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPython_ROOT_DIR=${pyROOT} \
 -DBUILD_MPI=yes -DBUILD_OMP=yes -DPKG_OPENMP=yes \
--DLAMMPS_MACHINE=mpi -DBUILD_SHARED_LIBS=yes \
+-DLAMMPS_MACHINE=mpi -DBUILD_SHARED_LIBS=no \
 -DPKG_GPU=no -DPKG_KOKKOS=no -DPKG_INTEL=no -DPKG_MDI=no \
 -DPKG_SCAFACOS=no -DPKG_ADIOS=no -DPKG_NETCDF=no -DPKG_VTK=no -DPKG_H5MD=no \
 -DPKG_MESONT=no -DPKG_LATTE=no -DPKG_MSCG=no -DPKG_ATC=no -DPKG_KIM=no \
