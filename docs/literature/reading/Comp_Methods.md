@@ -30,6 +30,8 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 
 ## ML Basic
 
+- PyTorch for Deep Learning - [Notebook](https://thangckt.github.io/pytorch_deep_learning){target="_blank"}
+
 |  |  |  |
 |:--|:--|:--|
 | Physics-based Deep Learning | N. Thuerey| [pdf](https://arxiv.org/pdf/2109.05237.pdf){target="_blank"},  [Notebook](http://physicsbaseddeeplearning.org/intro.html){target="_blank"} |
