@@ -30,8 +30,9 @@ table, td, th {border: none!important; font-size:14px; margin-top:-20px; margin-
 
 ## ML Basic
 
+- Thang Note for ML - [Notebook](https://thangckt.github.io/note_ml){target="_blank"}
 - PyTorch for Deep Learning - [Notebook](https://thangckt.github.io/pytorch_deep_learning){target="_blank"}
-- Zero to Mastery Machine Learning - [Notebook](https://thangckt.github.io/zero_to_mastery_ml){target="_blank"}, [pdf](https://github.com/curiousily/Machine-Learning-from-Scratch){target="_blank"}
+
 
 |  |  |  |
 |:--|:--|:--|
