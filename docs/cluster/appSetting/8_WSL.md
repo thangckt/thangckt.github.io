@@ -24,3 +24,16 @@ wsl --install -d SLES-12
 ```
 cd /mnt/d/folder
 ```
+
+## Using VScode with WSL
+
+- In VScode: install extension `WSL` (ms-vscode-remote.remote-wsl)
+- Check WSL: open `cmd`, type `wsl`. If no linux distro --> install one
+  - Search bar: ubuntu
+
+
+
+
+``` tip "See also"
+https://code.visualstudio.com/docs/remote/wsl-tutorial
+```
