@@ -30,7 +30,7 @@ cd libtool-2.4.7
 ```sh
 ./configure --prefix=/home1/p001cao/local/app/tooldev/libtool-2.4.7
 
-make install
+make && make install
 ```
 
 **Module file**
@@ -62,7 +62,7 @@ cd autoconf-2.71
 ```sh
 ./configure --prefix=/home1/p001cao/local/app/tooldev/autoconf-2.71
 
-make install
+make && make install
 ```
 
 **Module file**
@@ -98,7 +98,7 @@ module load tooldev/autoconf-2.71
 ```sh
 ./configure --prefix=/home1/p001cao/local/app/tooldev/automake-1.16.5
 
-make install
+make && make install
 ```
 
 usage:
