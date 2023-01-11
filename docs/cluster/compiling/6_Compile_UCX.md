@@ -4,26 +4,34 @@ sort: 6
 
 # UCX
 
+<img src="https://openucx.org/wp-content/themes/jello/img/UCX_Logo_930x933.png" width=120 />
 UCX is need to compile OpenMPI to use InfiniBand
 
-To use UCX you need to
-Get the recent release from https://github.com/openucx/ucx/releases
-Build and make it avaliable to your machines
-Configure OMPI --with-ucx="path-to-ucx" and rebuild/reinstall it
-Afterwards when you launch you set UCX pml:
+Work with UCX in short:
+- Get the recent release from https://github.com/openucx/ucx/releases
+- Build and make `ucx` avaliable to your machines
+- Configure and compile OMPI with  `--with-ucx="path-to-ucx"` 
+
+Afterwards when you launch OMPI run, you set UCX pml:
+```sh
 $ mpirun -mca btl self -mca pml ucx ....
-To control which device and what transport are being used you can add following env variables:
-$ mpirun -mca btl self -mca pml ucx -x UCX_NET_DEVICES=mlx5_0:1 -x UCX_TLS=rc,shm ....
-Try to experiment with different TLS's see here for more info.
-
-https://github.com/openucx/ucx/wiki/OpenMPI-and-OpenSHMEM-installation-with-UCX
-
-https://github.com/openucx/ucx/wiki
-
-```note
-* OpenMPI 4.0,3 support ucx 1.7 or older
-* OpenMPI 4.0,4 support newer ucx
 ```
+To control which device and what transport are being used you can add following env variables:
+```
+$ mpirun -mca btl self -mca pml ucx -x UCX_NET_DEVICES=mlx5_0:1 -x UCX_TLS=rc,shm ....
+```
+
+Try to experiment with different TLS's see here for more info.
+``` tip "See also
+1. https://github.com/openucx/ucx/wiki/OpenMPI-and-OpenSHMEM-installation-with-UCX
+2. https://github.com/openucx/ucx/wiki
+```
+
+???+ note
+
+  * OpenMPI 4.0,3 support ucx 1.7 or older
+  * OpenMPI 4.0,4 support newer ucx
+
 
 ## From Source vs. pre-configured Release
 
