@@ -312,7 +312,7 @@ export PATH=${myCOMPILER}/bin:$PATH
 export CC=clang export CXX=clang++ export FC=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt" 
 export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myUCX=/home1/p001cao/local/app/tool_dev/ucx-1.13-llvm
+export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.13-llvm
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} \
 --prefix=/home1/p001cao/local/app/openmpi/4.1.4-clang14
