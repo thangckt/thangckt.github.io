@@ -184,7 +184,8 @@ nav:
       - GCC: cluster/compiling/2_Compile_GCC.md
       - Open MPI: cluster/compiling/3_Compile_openMPI.md
       - cluster/compiling/4_Compile_LAPACK.md
-      - cluster/compiling/5_Compile_CMake.md
+      - cluster/compiling/CMake.md
+      - cluster/compiling/Libtool.md
       - cluster/compiling/6_Compile_UCX.md
       - cluster/compiling/7_Compile_FTTW.md
       - cluster/compiling/8_binutils_linker.md
