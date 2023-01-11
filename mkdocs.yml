@@ -18,6 +18,7 @@ theme:
   highlightjs: true
   features:
     - content.code.annotate
+    - content.code.copy
     # - navigation.expand
     # - navigation.sections
     - navigation.indexes
