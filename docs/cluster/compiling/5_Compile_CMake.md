@@ -2,7 +2,7 @@
 sort: 5
 ---
 
-# CMake
+# CMake 
 
 - need C++ compiler to install CMAKE, so need to load C++ compiler before install
 - Source code repo: [https://github.com/Kitware/CMake](https://github.com/Kitware/CMake)
