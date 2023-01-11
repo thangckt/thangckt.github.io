@@ -1,10 +1,11 @@
 # Lyrical Chord
 
 ## Chiếc lá cuối cùng
+
 Đoàn Chuẩn & Từ Linh - 1955, Boston, Capo 3
 
-```
-Em thời [Em] gian, sương gió phôi [Am] pha 
+```sh
+Em thời [Em] gian, sương gió phôi [Am] pha
 Anh ngồi đây anh nhớ đến [Em] em
 Như cành [C] khô trước lúc xa [B7] cây gọi nắng
 Em thời [Em] gian, em có biết [Am] không
