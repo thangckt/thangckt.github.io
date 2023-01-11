@@ -343,7 +343,7 @@ export PATH=$PATH:${myCOMPILER}/bin
 export CC=clang export CXX=clang++ export FC=flang
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myPREFIX=/home1/p001cao/local/app/tool_dev/ucx-1.13-llvm
+export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.13-llvm
 
 ../configure --enable-mt --prefix=${myPREFIX}
 
