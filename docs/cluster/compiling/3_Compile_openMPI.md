@@ -8,7 +8,8 @@ sort: 3
 [Open MPI](https://www.open-mpi.org/) is a Message Passing Interface (MPI) library project combining technologies and resources from several other projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI).
 
 
-```note
+???+ note
+
   - Some applications require C++11, this is only supported on GCC 4.8 or newer, which is not always available on system, then newer GCC need to be installed before compiling Openmpi.
   - Make sure to build OpenMPI with 64-bit support. To check whether the currently available OpenMPI do support 64-bit or not, type this:
   `ompi_info -a | grep 'Fort integer size'. If the output is 8, then it supports 64-bit. If output is 4, then it just supports 32-bit.* configuration for 64-bit support:
@@ -30,7 +31,7 @@ sort: 3
     module load tool_dev/binutils-2.32
     LDFLAGS="-fuse-ld=gold -lrt"
     ```
-```
+
 
 ## Possible errors
 - OpenMPI-4 use UCX by default (openMPI 4.0,3 --> ucx-1.7 or older). Solution: compile [your own UCX](https://thangckt.github.io/doc/doc2_Cluster/1_compiling/6_Compile_UCX.html).
@@ -292,13 +293,14 @@ make -j 16 && make install
 ```
 
 ## 2. Compiling OpenMPI + Clang
-```note
-- To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc" `. But might not be used?
-```
+
+???+ note
+  - To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc" `. But might not be used?
+
 
 ### USC2(Cenntos 6.9)
 
-```shell
+```sh
 tar xvf openmpi-4.1.4.tar.gz
 cd openmpi-4.1.4
 mkdir build_clang && cd build_clang
@@ -310,16 +312,18 @@ export PATH=${myCOMPILER}/bin:$PATH
 export CC=clang export CXX=clang++ export FC=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt" 
 export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
+export myUCX=/home1/p001cao/local/app/tool_dev/ucx-1.13-llvm
 
-export my_UCX=/home1/p001cao/local/app/tool_dev/ucx-1.13-llvm
-
-../configure --with-sge --without-verbs --with-ucx=${my_UCX} \
+../configure --with-sge --without-verbs --with-ucx=${myUCX} \
 --prefix=/home1/p001cao/local/app/openmpi/4.1.4-clang14
-
+```
+```sh
 make  -j 16 && make install
+```
 
+Or just this
 
-## or just this
+```sh
 export my_PMIX=/home1/p001cao/local/app/tool_dev/pmix-4.1.2
 export my_libevent=/home1/p001cao/local/app/tool_dev/libevent-2.1.11       # require by PMIX
 export my_hwloc=/home1/p001cao/local/app/tool_dev/hwloc-2.8.0
