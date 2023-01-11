@@ -35,14 +35,13 @@ Try to experiment with different TLS's see here for more info.
 
 ## Complie from Source vs. from pre-configured Release
 
+For compiling from source codes, need [some tools](https://thangckt.github.io/cluster/compiling/Libtool/)
+
 ### 1. install from Source
 
 ```note
 - work now, but should not be use to avoid runtime errors
-- Requirements: 
-  - `autoconf` 
-  - `libtool` 
-  - `automake`
+- Requirements: `autoconf`, `libtool`, and `automake`
 ```
 
 ```shell
@@ -325,6 +324,8 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 
 ### USC2
 
+### From pre-configured Release
+
 ```note
 - ucx-1.12.1 cause compiling error due to missing file. But ucx-1.13 work
 - "-fuse-ld=lld -lrt" error with ucx-1.12.0, so use 'gold' temporary. But lld work with ucx-1.13
@@ -344,6 +345,39 @@ export CC=clang export CXX=clang++ export FC=flang
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.13-llvm
+
+../configure --enable-mt --prefix=${myPREFIX}
+
+make -j 16 && make install 
+```
+
+### From source code
+
+```note
+- consider to update: `autoconf`, `libtool`, and `automake`
+```
+
+```shell
+cd /home1/p001cao/local/wSourceCode/tooldev
+git clone --branch master https://github.com/openucx/ucx.git  ucx-master
+cd ucx-master
+module load tool_dev/autoconf-2.71
+module load tool_dev/automake-1.16.5
+module load tool_dev/libtool-2.4.7
+
+./autogen.sh
+mkdir build  &&  cd build
+```
+
+```shell
+module load compiler/llvm-14          # clang + lld
+
+export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
+export PATH=$PATH:${myCOMPILER}/bin
+export CC=clang export CXX=clang++ export FC=flang
+export LDFLAGS="-fuse-ld=lld -lrt"
+export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
+export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.14
 
 ../configure --enable-mt --prefix=${myPREFIX}
 
