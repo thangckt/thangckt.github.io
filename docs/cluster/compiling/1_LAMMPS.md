@@ -1018,7 +1018,9 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPKG_GPU=no -DPKG_KOKKOS=no -DPKG_INTEL=no -DPKG_MDI=no \
 -DPKG_SCAFACOS=no -DPKG_ADIOS=no -DPKG_NETCDF=no -DPKG_VTK=no -DPKG_H5MD=no \
 -DPKG_MESONT=no -DPKG_LATTE=no -DPKG_MSCG=no -DPKG_ATC=no -DPKG_KIM=no \
--DPKG_PLUMED=yes -DPKG_ML-PACE=no -DPKG_ML-QUIP=no -DPKG_ML-HDNNP=no \
+-DPKG_PLUMED=yes -DPKG_ML-PACE=no -DPKG_ML-HDNNP=no \
+-DPKG_ML-QUIP=yes -DUSE_INTERNAL_LINALG=yes \
+-DPKG_LEPTON=yes -DLEPTON_ENABLE_JIT=no \
 -DFFT=FFTW3 \
 -DZLIB_INCLUDE_DIR=${myZLIB} -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
 -DCMAKE_INSTALL_PREFIX=${myPREFIX}
@@ -1030,6 +1032,7 @@ make -j 16 && make install
 
 !!! info
 
-    - can use export CFLAGS, CXXFLAGS. This same as -DCMAKE_CXX_LINK_FLAGS (CPPFLAG mean both)
-    - LDFLAGS same as CMAKE_EXE_LINKER_FLAGS
-    - -DUSE_INTERNAL_LINALG=yes is a new option
+    - can use `export CFLAGS`, `export CXXFLAGS`. This same as `-DCMAKE_CXX_LINK_FLAGS` (CPPFLAG mean both)
+    - `LDFLAGS` same as `CMAKE_EXE_LINKER_FLAGS`
+    - Some packages, such as `QUIP`, `LATTE`,.. requires LAPACK (and BLAS), which may not available on some systems. Then, use `-DUSE_INTERNAL_LINALG=yes` to install them, internally.
+    - `LEPTON_ENABLE_JIT` requires 'sys/auxv.h' that is only available on newer GLIBC. So disable it.
