@@ -355,11 +355,12 @@ make -j 16 && make install
 
 ```note
 - consider to update: `autoconf`, `libtool`, and `automake`
+- So far, error with `libuct_ib.la: command not found`
 ```
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
-git clone --branch master https://github.com/openucx/ucx.git  ucx-master
+git clone --branch v1.14.0 https://github.com/openucx/ucx.git  ucx-master
 cd ucx-master
 module load tool_dev/autoconf-2.71
 module load tool_dev/automake-1.16.5
