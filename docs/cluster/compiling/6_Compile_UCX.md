@@ -305,20 +305,7 @@ cd xpmem-2.6.3
 ./configure --prefix=/home1/p001cao/local/app/tool_dev/xpmem-2.6.2
 ```
 
-### 3. Make module file
 
-at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2"
-
-```shell
-# for Tcl script use only
-set     topdir          /home1/p001cao/local/app/tool_dev/ucx-1.11
-
-prepend-path    PATH                $topdir/bin
-prepend-path    INCLUDE             $topdir/include
-prepend-path    LD_LIBRARY_PATH     $topdir/lib
-
-prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
-```
 
 ## Compile with LLVM
 
@@ -385,4 +372,17 @@ export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.14
 make -j 16 && make install 
 ```
 
+### Make module file
+
+at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2"
+
+```shell
+# for Tcl script use only
+set     topdir          /home1/p001cao/local/app/tooldev/ucx-1.13-llvm
+
+prepend-path    PATH                    $topdir/bin
+prepend-path    INCLUDE 	               $topdir/include
+prepend-path    LD_LIBRARY_PATH         $topdir/lib
+prepend-path    PKG_CONFIG_PATH 	       $topdir/lib/pkgconfig
+```
 
