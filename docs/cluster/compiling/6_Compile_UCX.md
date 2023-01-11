@@ -33,22 +33,26 @@ Try to experiment with different TLS's see here for more info.
   * OpenMPI 4.0,4 support newer ucx
 
 
-## From Source vs. pre-configured Release
+## Complie from Source vs. from pre-configured Release
 
 ### 1. install from Source
 
 ```note
 - work now, but should not be use to avoid runtime errors
-- Requirements: autoconf-2.69b, libtool-2.4.6, automake-1.14
+- Requirements: 
+  - `autoconf` 
+  - `libtool` 
+  - `automake`
 ```
 
 ```shell
 git clone --branch master https://github.com/openucx/ucx.git  ucx-master
 cd ucx-master
-module load tool_dev/autoconf-2.69b
-module load tool_dev/automake-1.14
-module load tool_dev/libtool-2.4.6
-# export ACLOCAL_PATH=/home1/p001cao/local/app/tool_dev/libtool-2.4.6/share/aclocal
+module load tool_dev/autoconf-2.71
+module load tool_dev/automake-1.16.5
+module load tool_dev/libtool-2.4.7
+export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
+
 ./autogen.sh
 mkdir build  &&  cd build
 
@@ -327,6 +331,7 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 ```
 
 ```shell
+cd /home1/p001cao/local/wSourceCode/tooldev
 tar xvf ucx-1.13.1.tar.gz
 cd ucx-1.13.1
 mkdir build && cd build
@@ -338,9 +343,9 @@ export PATH=$PATH:${myCOMPILER}/bin
 export CC=clang export CXX=clang++ export FC=flang
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
+export myPREFIX=/home1/p001cao/local/app/tool_dev/ucx-1.13-llvm
 
-../configure --enable-mt \
---prefix=/home1/p001cao/local/app/tool_dev/ucx-1.13-llvm
+../configure --enable-mt --prefix=${myPREFIX}
 
 make -j 16 && make install 
 ```
