@@ -159,7 +159,6 @@ plugins:
           #   - https://docs.python.org/3/objects.inv
           #   - https://mkdocstrings.github.io/autorefs/objects.inv
   # - enumerate-headings
-
   - blogging:
     # GLOBAL CATEGORY: configs for {{ blog_content }}
     dirs:
