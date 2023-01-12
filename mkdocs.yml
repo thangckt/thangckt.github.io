@@ -159,18 +159,19 @@ plugins:
           #   - https://docs.python.org/3/objects.inv
           #   - https://mkdocstrings.github.io/autorefs/objects.inv
   # - enumerate-headings
-  - blogging:
-    # GLOBAL CATEGORY: configs for {{ blog_content }}
-    dirs:
-      - blog
-    # template: override/custom-blog.html
-    # GLOBAL CONFIG: configs apply to all categories
-    time_format: '%d/%m/%y %H:%M:%S'
-    meta_time_format: '%Y-%m-%d %H:%M:%S'
-    features:
-      tags:
-        index_page: tags.md
-        insert: top
+
+  # - blogging:
+  #   # GLOBAL CATEGORY: configs for {{ blog_content }}
+  #   dirs:
+  #     - blog
+  #   # template: override/custom-blog.html
+  #   # GLOBAL CONFIG: configs apply to all categories
+  #   time_format: '%d/%m/%y %H:%M:%S'
+  #   meta_time_format: '%Y-%m-%d %H:%M:%S'
+  #   features:
+  #     tags:
+  #       index_page: tags.md
+  #       insert: top
 
 
 ### Extra theme
