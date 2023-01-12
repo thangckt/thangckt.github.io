@@ -4,7 +4,7 @@ hide:
 ---
 
 <style>
-table, td, th {border: none!important;  margin-top:-20px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; border-spacing:0px;}
+table, td, th {border: none!important;  border-collapse: collapse;  border-spacing: 0; }
 </style>
 
 # Computational Methods
