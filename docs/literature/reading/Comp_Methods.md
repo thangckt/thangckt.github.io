@@ -30,8 +30,8 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 
 ## ML Basic
 
-- Thang Note for ML   2 x &nbsp; [Notebook](https://thangckt.github.io/note_ml){target="_blank"}
-- PyTorch for Deep Learning   2 x &nbsp; [Notebook](https://thangckt.github.io/pytorch_deep_learning){target="_blank"}
+- Thang Note for ML    &nbsp; &nbsp; [Notebook](https://thangckt.github.io/note_ml){target="_blank"}
+- PyTorch for Deep Learning   &nbsp; &nbsp; [Notebook](https://thangckt.github.io/pytorch_deep_learning){target="_blank"}
 
 
 |  |  |  |
