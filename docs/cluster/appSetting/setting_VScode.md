@@ -255,6 +255,7 @@ Type `open settings`
   "notebook.markup.fontSize": 13.5,
   "markdown.preview.fontFamily": "roboto",
   "markdown.preview.fontSize": 14,
+  "notebook.cellFocusIndicator": "border",
 ```
 
 1. Extensions:
