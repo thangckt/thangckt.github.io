@@ -326,7 +326,7 @@ make -j 16 && make install
 
 Use one of these two following options
 
-##### Download pre-release code
+**Download pre-release code**
 
 ```sh
 cd /home1/p001cao/local/wSourceCode
@@ -335,7 +335,7 @@ tar xvf openmpi-4.1.4.tar.gz
 cd openmpi-4.1.4
 ```
 
-##### Download source code
+**Download source code**
 
 ???+ note
 
