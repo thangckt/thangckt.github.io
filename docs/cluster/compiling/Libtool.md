@@ -115,3 +115,34 @@ set     topdir          /home1/p001cao/local/app/tooldev/automake-1.16.5
 
 prepend-path    PATH                    $topdir/bin
 ```
+
+## GSL
+
+[GSL](https://www.gnu.org/software/gsl/) is needed to link LAPACK & BLAS libraries when installing Plumed in Lammps (but no need now)
+
+```sh
+cd /home1/p001cao/local/wSourceCode/tooldev
+wget ftp://ftp.gnu.org/gnu/gsl/gsl-2.7.tar.gz
+tar xvzf gsl-2.7.tar.gz
+cd gsl-2.7
+
+./configure --prefix=/home1/p001cao/local/app/tooldev/gsl-2.7
+
+make && make install
+```
+
+**Module files**
+
+```tcl
+set     topdir          /home1/p001cao/local/app/tooldev/gsl-2.7
+
+prepend-path    PATH                $topdir/bin
+prepend-path    LD_LIBRARY_PATH     $topdir/lib
+prepend-path    INCLUDE             $topdir/include
+
+prepend-path   PKG_CONFIG_PATH      $topdir/lib/pkgconfig
+```
+
+???+ tip "See also"
+
+    [Install GSL on Linux (Ubuntu, Centros, Redhat, Mac OS) + Simple Installation of gcc Compilers](https://coral.ise.lehigh.edu/jild13/2016/07/11/hello/)

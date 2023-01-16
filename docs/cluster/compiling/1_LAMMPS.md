@@ -169,36 +169,63 @@ For multicore CPUs using OpenMP, set these 2 variables.
   -D PKG_PLUMED=yes -D DOWNLOAD_PLUMED=no -D PLUMED_MODE=static
   ```
 
-- **self-build PLUMED:** will need GSL to link LAPACK, BLAS (require MKL)
+- **self-build PLUMED:**
+  - We will need GSL to link LAPACK, BLAS (require MKL)
+  - `Cmake` setting
 
-  ```shell
-  -D PKG_PLUMED=yes -D DOWNLOAD_PLUMED=yes -D PLUMED_MODE=static
-  ```
+    ```shell
+    -D PKG_PLUMED=yes -D DOWNLOAD_PLUMED=yes -D PLUMED_MODE=static
+    ```
 
-```shell
-###change lines:
-    # URL http...... (line 65)
-    # URL_MD5
-### into:
-      GIT_REPOSITORY https://github.com/plumed/plumed2.git
-      GIT_TAG master                            # hack-the-tree   v2.6.2   v2.7b
+  - Can Configure Plumed to use Internal LAPACK&BLAS: (no need install BLAS&LAPACK or MKL+GSL). Edit file: `../cmake/Modules/Packages/PLUMED.cmake`, Comment out these lines:
 
-      CONFIGURE_COMMAND <SOURCE_DIR>/configure  ....   ...
-                  --enable-modules=all --enable-asmjit --disable-external-blas --disable-external-lapack
-      ...
-### add this command after line 76 (inside ExternalProject_Add(...)):
-      UPDATE_COMMAND ""
-```
+    ```shell
+      # find_package(LAPACK REQUIRED)
+      # find_package(BLAS REQUIRED)
+      # find_package(GSL REQUIRED)
+      # list(APPEND PLUMED_LINK_LIBS ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} GSL::gsl)
+    ```
 
-- **self-build PLUMED:** Configure Plumed to use Internal LAPACK&BLAS: (no need install BLAS&LAPACK or MKL+GSL)
-  open file: ../cmake/Modules/Packages/USER-PLUMED.cmake, Comment out these lines:
+  - Edit file: `../cmake/Modules/Packages/PLUMED.cmake`
 
-```shell
-  # find_package(LAPACK REQUIRED)
-  # find_package(BLAS REQUIRED)
-  # find_package(GSL REQUIRED)
-  # list(APPEND PLUMED_LINK_LIBS ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} GSL::gsl)
-```
+    ```shell
+    ###change lines:
+        # URL http...... (line 65)
+        # URL_MD5
+    ### into:
+          GIT_REPOSITORY https://github.com/plumed/plumed2.git
+          GIT_TAG master                            # hack-the-tree   v2.6.2   v2.7b
+
+          CONFIGURE_COMMAND <SOURCE_DIR>/configure  ....   ...
+                      --enable-modules=all --enable-asmjit --disable-external-blas --disable-external-lapack
+          ...
+    ### add this command after line 76 (inside ExternalProject_Add(...)):
+          UPDATE_COMMAND ""
+    ```
+
+- **New udate from LAMMPS**: LAPACK & BLAS now can be compiled internally in LAMMPS with option `-DUSE_INTERNAL_LINALG=yes`. So new setting in file: `../cmake/Modules/Packages/PLUMED.cmake` should be
+   ```shell
+      find_package(LAPACK REQUIRED)
+      find_package(BLAS REQUIRED)
+      find_package(GSL REQUIRED)
+      list(APPEND PLUMED_LINK_LIBS ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} GSL::gsl)
+    ```
+
+    ```shell
+    ###change lines:
+        # URL http...... (line 65)
+        # URL_MD5
+    ### into:
+          GIT_REPOSITORY https://github.com/plumed/plumed2.git
+          GIT_TAG master                            # hack-the-tree   v2.6.2   v2.7b
+
+          CONFIGURE_COMMAND <SOURCE_DIR>/configure  ....   ...
+                      --enable-modules=all --enable-asmjit
+          ...
+    ### add this command after line 76 (inside ExternalProject_Add(...)):
+          UPDATE_COMMAND ""
+    ```
+
 
 12.[**ML_QUIP**] ([source code](https://github.com/libAtoms/QUIP))
 compile QUIP the minimum requirements are:
@@ -997,6 +1024,7 @@ mkdir build_LLVM && cd build_LLVM
 ```sh
 module load tooldev/cmake-3.24
 module load tooldev/binutils-2.37
+module load tooldev/gsl-2.6
 module load fftw/fftw3.3.10-ompi4.1.4-clang14
 module load mpi/ompi4.1.x-clang14
 
