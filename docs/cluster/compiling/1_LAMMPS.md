@@ -56,12 +56,11 @@ git pull origin develop
 !!! note
 
     - include these OPTIONS in Cmake command, to build package-lib automatically:
-    - python > 3.7.12 require to update GCC-conda=11: `conda install -c conda-forge libstdcxx-ng=11 libgcc-ng=11 libgfortran-ng=11`. But dont use this to void requiring higher GLIBC. Also, `zlib=1.2.12` require GLIBC=2.14. 
+    - python > 3.7.12 require to update GCC-conda=11: `conda install -c conda-forge libstdcxx-ng=11 libgcc-ng=11 libgfortran-ng=11`. But dont use this to void requiring higher GLIBC. Also, `zlib=1.2.12` require GLIBC=2.14.
     - To void hidden libs by conda, need to downgrade libs versions in conda < libs in linux system. So that to void these errors, use `conda install -c conda-forge libgcc-ng=7 zlib=1.2.8 python=3.7.12`
     - Do not use GCC-11 to avoid error: Dwarf Error: found dwarf version '5', use: export CFLAGS='-gdwarf-4 -gstrict-dwarf' not solve this error
     - install openBLAS for LAPACK and BLAS, so need load GSL
     - use static link for openBLAS, so need to export it and set cmake var
-
 
 1.**UFM potential**
 
@@ -122,7 +121,7 @@ copy new pair_eam.cpp & pair_eam.h into /src and delete corresponding files in /
 
   ```shell
   module load intel/mkl
-  module load tool_dev/gsl-2.6
+  module load tooldev/gsl-2.6
   ```
 
 - Use external LAPACK & BLAS
@@ -317,7 +316,7 @@ export pyLIB=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/lib/libpython3.
     - "GCC + gold linker" is good now
 
     ```shell
-    module load tool_dev/binutils-2.36
+    module load tooldev/binutils-2.36
     ```
 
     ```shell
@@ -329,7 +328,7 @@ export pyLIB=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/lib/libpython3.
     ```shell
     module load intel/mkl-xe19u5
     source mklvars.sh intel64
-    module load tool_dev/gsl-2.6
+    module load tooldev/gsl-2.6
     ```
 
     ```shell
@@ -339,7 +338,7 @@ export pyLIB=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/lib/libpython3.
     - use external BLAS&LAPACK instead of MKL
 
     ```shell
-    module load tool_dev/gsl-2.6
+    module load tooldev/gsl-2.6
     export myLAPACK=/uhome/p001cao/local/app/lapack-3.10/liblapack.a
     export myBLAS=/uhome/p001cao/local/app/lapack-3.10/libblas.a
 
@@ -361,7 +360,7 @@ export pyLIB=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/lib/libpython3.
     ```shell
     module load llvm/llvm-gcc10-lld                    ## to use lld
     -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld -lrt" \
-    module load tool_dev/binutils-2.35                ## gold
+    module load tooldev/binutils-2.35                ## gold
     -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=gold -lrt" \
     ```
 
@@ -380,9 +379,9 @@ export pyLIB=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/lib/libpython3.
 cd lammps_master
 mkdir build   &&   cd build
 
-## module load tool_dev/gsl-2.6
-module load tool_dev/binutils-2.36         ## gold
-module load tool_dev/cmake-3.21
+## module load tooldev/gsl-2.6
+module load tooldev/binutils-2.36         ## gold
+module load tooldev/cmake-3.21
 module load fftw/fftw3.3.10-ompi5.0-gcc11.2
 module load mpi/ompi5.0.0-gcc11.2
 
@@ -412,7 +411,7 @@ make -j 20
 make install
 ```
 
-####Module file
+#### Module file
 
 ```shell
 ### Module file
@@ -433,8 +432,8 @@ prepend-path    PATH  /uhome/p001cao/local/wSourceCode/vmd/vmd-1.9/plugins/LINUX
 ```shell
 git pull origin develop
 
-module load tool_dev/binutils-2.37                ## gold
-module load tool_dev/cmake-3.20.3
+module load tooldev/binutils-2.37                ## gold
+module load tooldev/cmake-3.20.3
 module load fftw/fftw3.3.10-ompi4.1.3-gcc10.3
 module load mpi/ompi4.1.3-gcc10.3
 
@@ -465,11 +464,11 @@ make -j 16 && make install
 -DDOWNLOAD_EIGEN3=yes -DDOWNLOAD_VORO=yes -DDOWNLOAD_PLUMED=yes -DDOWNLOAD_QUIP=yes\
 ```
 
-####use OMPI_5
+#### use OMPI_5
 
 ```shell
-module load tool_dev/binutils-2.37                ## gold
-module load tool_dev/cmake-3.20.3
+module load tooldev/binutils-2.37                ## gold
+module load tooldev/cmake-3.20.3
 module load fftw/fftw3.3.10-ompi5.0-gcc11.2
 module load mpi/ompi5.0.0-gcc10.3
 
@@ -491,12 +490,12 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 
 ```
 
-####use OMPI_3
+#### use OMPI_3
 
 - This does not work, due to OMPI3 error
 
 ```shell
-module load tool_dev/binutils-2.37                ## gold
+module load tooldev/binutils-2.37                ## gold
 module load cmake/3.16.2
 module load fftw/3.3.8/gcc-7.4.0/ompi-3.1.4/double
 module load mpi/gcc-7.4.0/ompi/3.1.4
@@ -521,13 +520,13 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 \## use Internal LAPACK&BLAS, then no need (GSL & MKL): open file: ../cmake/Modules/Packages/USER_PLUMED.cmake
 comment out line 9-->12: find LAPACK, BLAS, GSL (Plumed build itself, no need GSL anymore)
 --> then, do not need these:
-module load tool_dev/gsl-2.6
+module load tooldev/gsl-2.6
 module load intel/mkl-xe19u5
 source mklvars.sh intel64
 -DFFT=MKL \    ## must set before Plumed
 \## or use openBLAS (bad performance)
-module load tool_dev/gsl-2.6
-export myBLAS=/home1/p001cao/local/app/tool_dev/openBLAS-0.3.19/lib64/libopenblas.a
+module load tooldev/gsl-2.6
+export myBLAS=/home1/p001cao/local/app/tooldev/openBLAS-0.3.19/lib64/libopenblas.a
 -DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS}
 
 \## load plumed separately (bad alloc)
@@ -537,10 +536,10 @@ module load plumed2/2.7htt-gcc
 \##openKim:
 must create module file for openKim to add its PKG's path
 
-####Module file
+#### Module file
 
 ```shell
-module load tool_dev/gsl-2.6
+module load tooldev/gsl-2.6
 module load conda/py37Lammps
 module load fftw/fftw3.3.10-ompi5.0-gcc11.2
 
@@ -662,11 +661,11 @@ export myGCC=/home1/p001cao/local/app/compiler/gcc-9.2.0
 
 ```shell
 module load mpi/ompi4.0.3-gcc9.2.0
-module load tool_dev/gsl-2.6
-module load tool_dev/cmake-3.17.2
+module load tooldev/gsl-2.6
+module load tooldev/cmake-3.17.2
 
-module load tool_dev/binutils-2.32
-module load tool_dev/tbb-2020.2
+module load tooldev/binutils-2.32
+module load tooldev/tbb-2020.2
  export TBB_MALLOC_LIBRARY
  export TBB_MALLOC_INCLUDE_DIR
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
@@ -685,8 +684,8 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 
 ```shell
 module load mpi/ompi4.1.0-gcc10.2
-module load tool_dev/binutils-2.35                ## gold
-module load tool_dev/cmake-3.18.0
+module load tooldev/binutils-2.35                ## gold
+module load tooldev/cmake-3.18.0
 module load fftw/fftw3.3.8-ompi4.1-gcc10.2
 
 export PATH=$PATH:/home1/p001cao/local/app/openmpi/4.1.0-gcc10.2/bin
@@ -706,7 +705,6 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ -DCMAKE_Fortran_COMPILER=mpifort \
 -DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/gccSHMEM-master
 ```
-
 
 ## Compile with openMPI-conda & MKL-conda
 
@@ -787,7 +785,7 @@ cmake ../cmake -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=gold -lrt" \
 -DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/19Mar20-mva
 ```
 
-https://github.com/lammps/lammps/blob/master/lib/message/cslib/src/STUBS_ZMQ/zmq.h
+<https://github.com/lammps/lammps/blob/master/lib/message/cslib/src/STUBS_ZMQ/zmq.h>
 
 A. Compile Lammps19 with openMPI-4.0.2, Intel2019xe and MKL (w/wt FFTW-3.3.8) (USC)
 II: Load modules
@@ -798,7 +796,7 @@ module load plumed2/2.6htt
 module load cmake-3.15.1
 III: Compiling LAMMPS
 
-* if occur error not found compiler, use this command to find path
+- if occur error not found compiler, use this command to find path
 
 find / -name icpc
 find / -name ifort
@@ -862,7 +860,7 @@ prepend-path    INCLUDE                            $topdir/include/lammps
 ```
 
 save it in: /uhome/p001cao/local/share/lmodfiles/lammps
-Ref: https://lammps.sandia.gov/doc/Build_basics.html
+Ref: <https://lammps.sandia.gov/doc/Build_basics.html>
 
 ### USC2
 
@@ -874,7 +872,7 @@ git clone --branch stable_3Mar2020 https://github.com/lammps/lammps.git lammps_s
 cd lammps_stable_3Mar2020
 mkdir build
 cd build
-###--- module load mpi/ompi4.0.3-intel19u5 module load intel/mkl-xe19u5 module load plumed2/2.7htt module load tool_dev/cmake-3.17.2
+###--- module load mpi/ompi4.0.3-intel19u5 module load intel/mkl-xe19u5 module load plumed2/2.7htt module load tooldev/cmake-3.17.2
 ```
 
 Configure
@@ -936,6 +934,7 @@ prepend-path    PATH                                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/lib64
 prepend-path    INCLUDE                            $topdir/include/lammps
 ###############################################################
+
 ```
 
 ### 2. USC 2
@@ -946,9 +945,9 @@ module load intel/compiler-xe19u5           # intel include lld linker  require 
 module load intel/mkl-xe19u5
 module load intel/impi-xe19u5
 source mpivars.sh release
-module load tool_dev/cmake-3.18.0
-module load tool_dev/gsl-2.6
-module load tool_dev/binutils-2.32                # gold
+module load tooldev/cmake-3.18.0
+module load tooldev/gsl-2.6
+module load tooldev/binutils-2.32                # gold
 
 export PATH=$PATH:/home1/p001cao/local/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/bin
 export CC=mpiicc
@@ -996,20 +995,20 @@ mkdir build_LLVM && cd build_LLVM
 ```
 
 ```sh
-module load tool_dev/cmake-3.24
-module load tool_dev/binutils-2.37
+module load tooldev/cmake-3.24
+module load tooldev/binutils-2.37
 module load fftw/fftw3.3.10-ompi4.1.4-clang14
 module load mpi/ompi4.1.4-clang14
 
 export myCOMPILER=/home1/p001cao/local/app/openmpi/4.1.4-clang14
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
-export LDFLAGS="-fuse-ld=lld -lrt"  
+export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 ## python (require py3), BLAS+LAPACK
 export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py39Lammps
-export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12               # avoid zlib hidden by conda
-export myPREFIX=/home1/p001cao/local/app/lammps/llvmOMPI4-dev      
+export myZLIB=/home1/p001cao/local/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
+export myPREFIX=/home1/p001cao/local/app/lammps/llvmOMPI4-dev
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPython_ROOT_DIR=${pyROOT} \
@@ -1032,7 +1031,7 @@ make -j 16 && make install
 
 !!! info
 
-    - can use `export CFLAGS`, `export CXXFLAGS`. This same as `-DCMAKE_CXX_LINK_FLAGS` (CPPFLAG mean both)
+    - can use `export CFLAGS`, `export CXXFLAGS`. This same as `-DCMAKE_CXX_LINK_FLAGS` (CPPFLAG means both)
     - `LDFLAGS` same as `CMAKE_EXE_LINKER_FLAGS`
     - Some packages, such as `QUIP`, `LATTE`,.. requires LAPACK (and BLAS), which may not available on some systems. Then, use `-DUSE_INTERNAL_LINALG=yes` to install them, internally.
     - `LEPTON_ENABLE_JIT` requires 'sys/auxv.h' that is only available on newer GLIBC. So disable it.
