@@ -1020,6 +1020,13 @@ source mklvars.sh intel64
     - if the error ralates to conda, just unistall libgcc and install python again `conda install -c conda-forge python=3.7`
     - if the error relates to `openmpi/mca_pmix_pmix3x.so: undefined symbol:' --> delete isntall folder and reinstall
 
+!!! info
+
+    - can use `export CFLAGS`, `export CXXFLAGS`. This same as `-DCMAKE_CXX_LINK_FLAGS` (CPPFLAG means both)
+    - `LDFLAGS` same as `CMAKE_EXE_LINKER_FLAGS`
+    - Some packages, such as `QUIP`, `LATTE`,... requires LAPACK (and BLAS), which may not available on some systems. Then, use `-DUSE_INTERNAL_LINALG=yes` to install them, internally. With this option, we don't need to compile `LAPACK & BLAS` in `PLUMED`, so this make a simplified setting for PLUMED. Note to `load module `tooldev/gsl-2.7` for automatically find `LAPACK & BLAS`.
+    - `LEPTON_ENABLE_JIT` requires 'sys/auxv.h' that is only available on newer GLIBC. So disable it.
+
 ```shell
 cd /home1/p001cao/local/wSourceCode/lammps_dev
 git pull origin develop
@@ -1062,10 +1069,3 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 ```sh
 make -j 16 && make install
 ```
-
-!!! info
-
-    - can use `export CFLAGS`, `export CXXFLAGS`. This same as `-DCMAKE_CXX_LINK_FLAGS` (CPPFLAG means both)
-    - `LDFLAGS` same as `CMAKE_EXE_LINKER_FLAGS`
-    - Some packages, such as `QUIP`, `LATTE`,.. requires LAPACK (and BLAS), which may not available on some systems. Then, use `-DUSE_INTERNAL_LINALG=yes` to install them, internally.
-    - `LEPTON_ENABLE_JIT` requires 'sys/auxv.h' that is only available on newer GLIBC. So disable it.
