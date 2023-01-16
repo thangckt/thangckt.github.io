@@ -984,8 +984,8 @@ source mklvars.sh intel64
 !!! note
 
     - To void libs hidden by conda-lib, set absolute path for dynamic libs (*.so). See compile LLVM for more information
-    - if error ralate to conda, just unistall libgcc and install python again `conda install -c conda-forge python=3.7`
-    - if error relate to `openmpi/mca_pmix_pmix3x.so: undefined symbol:' --> delete isntall folder and reinstall
+    - if the error ralates to conda, just unistall libgcc and install python again `conda install -c conda-forge python=3.7`
+    - if the error relates to `openmpi/mca_pmix_pmix3x.so: undefined symbol:' --> delete isntall folder and reinstall
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/lammps_dev
@@ -998,9 +998,9 @@ mkdir build_LLVM && cd build_LLVM
 module load tooldev/cmake-3.24
 module load tooldev/binutils-2.37
 module load fftw/fftw3.3.10-ompi4.1.4-clang14
-module load mpi/ompi4.1.4-clang14
+module load mpi/ompi4.1.x-clang14
 
-export myCOMPILER=/home1/p001cao/local/app/openmpi/4.1.4-clang14
+export myCOMPILER=/home1/p001cao/local/app/openmpi/4.1.x-clang14
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
