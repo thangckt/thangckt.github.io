@@ -315,7 +315,11 @@ cd xpmem-2.6.3
 
 ### USC2
 
-### From pre-configured Release
+#### Prepare source code
+
+Use one of these two following options
+
+##### From pre-configured Release
 
 ```note
 - ucx-1.12.1 cause compiling error due to missing file. But ucx-1.13 work
@@ -328,7 +332,7 @@ tar xvf ucx-1.13.1.tar.gz
 cd ucx-1.13.1
 ```
 
-### From source code
+##### From source code
 
 ```note
 - consider to update: `autoconf`, `libtool`, and `automake`
@@ -348,7 +352,7 @@ export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 ./autogen.sh
 ```
 
-### Building
+#### Building
 
 ```shell
 mkdir build  &&  cd build
@@ -367,7 +371,7 @@ export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.14
 make -j 16 && make install
 ```
 
-### Make module file
+#### Make module file
 
 at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2"
 

@@ -322,7 +322,11 @@ make -j 16 && make install
 
 ### USC2(Cenntos 6.9)
 
-#### Download pre-release code
+#### Prepare source code
+
+Use one of these two following options
+
+##### Download pre-release code
 
 ```sh
 cd /home1/p001cao/local/wSourceCode
@@ -331,7 +335,7 @@ tar xvf openmpi-4.1.4.tar.gz
 cd openmpi-4.1.4
 ```
 
-#### Download source code
+##### Download source code
 
 ???+ note
 
@@ -351,7 +355,7 @@ export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 ./autogen.pl
 ```
 
-### Building
+#### Building
 
 ```sh
 mkdir build_clang && cd build_clang
