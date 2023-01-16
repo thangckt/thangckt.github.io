@@ -8,20 +8,25 @@ sort: 6
 UCX is need to compile OpenMPI to use InfiniBand
 
 Work with UCX in short:
-- Get the recent release from https://github.com/openucx/ucx/releases
-- Build and make `ucx` avaliable to your machines
-- Configure and compile OMPI with  `--with-ucx="path-to-ucx"` 
 
-Afterwards when you launch OMPI run, you set UCX pml:
+- Get the recent release from <https://github.com/openucx/ucx/releases>
+- Build and make `ucx` available to your machines
+- Configure and compile OMPI with  `--with-ucx="path-to-ucx"`
+
+Afterward, when you launch OMPI run, you set UCX pml:
+
 ```sh
-$ mpirun -mca btl self -mca pml ucx ....
+mpirun -mca btl self -mca pml ucx ....
 ```
+
 To control which device and what transport are being used you can add following env variables:
-```
-$ mpirun -mca btl self -mca pml ucx -x UCX_NET_DEVICES=mlx5_0:1 -x UCX_TLS=rc,shm ....
+
+```sh
+mpirun -mca btl self -mca pml ucx -x UCX_NET_DEVICES=mlx5_0:1 -x UCX_TLS=rc,shm ....
 ```
 
 Try to experiment with different TLS's see here for more info.
+
 ``` tip "See also
 1. https://github.com/openucx/ucx/wiki/OpenMPI-and-OpenSHMEM-installation-with-UCX
 2. https://github.com/openucx/ucx/wiki
@@ -29,9 +34,8 @@ Try to experiment with different TLS's see here for more info.
 
 ???+ note
 
-  * OpenMPI 4.0,3 support ucx 1.7 or older
-  * OpenMPI 4.0,4 support newer ucx
-
+    - OpenMPI 4.0,3 support `ucx` 1.7 or older
+    - OpenMPI 4.0,4 support newer `ucx`
 
 ## Complie from Source vs. from pre-configured Release
 
@@ -47,15 +51,15 @@ For compiling from source codes, need [some tools](https://thangckt.github.io/cl
 ```shell
 git clone --branch master https://github.com/openucx/ucx.git  ucx-master
 cd ucx-master
-module load tool_dev/autoconf-2.71
-module load tool_dev/automake-1.16.5
-module load tool_dev/libtool-2.4.7
+module load tooldev/autoconf-2.71
+module load tooldev/automake-1.16.5
+module load tooldev/libtool-2.4.7
 export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 
 ./autogen.sh
 mkdir build  &&  cd build
 
-module load tool_dev/binutils-2.37              # gold
+module load tooldev/binutils-2.37              # gold
 module load compiler/gcc-10.3
 
 export PATH=$PATH:/home1/p001cao/local/app/compiler/gcc-10.3/bin
@@ -63,7 +67,7 @@ export CC=gcc export CXX=g++ export FORTRAN=gfortran
 export LDFLAGS="-fuse-ld=gold -lrt"
 
 ../configure --enable-mt  \
---prefix=/home1/p001cao/local/app/tool_dev/ucx-master
+--prefix=/home1/p001cao/local/app/tooldev/ucx-master
 ```
 
 ### 2. install from UCX pre-configured Release
@@ -91,7 +95,7 @@ export CFLAGS='-gdwarf-4 -gstrict-dwarf'
 ```
 
 ```shell
-module load tool_dev/binutils-2.37              # gold
+module load tooldev/binutils-2.37              # gold
 module load compiler/gcc-10.3
 
 export PATH=$PATH:/home1/p001cao/local/app/compiler/gcc-10.3/bin
@@ -99,15 +103,15 @@ export CC=gcc export CXX=g++ export FORTRAN=gfortran
 export LDFLAGS="-fuse-ld=gold -lrt"
 
 ../configure --enable-mt  \
---prefix=/home1/p001cao/local/app/tool_dev/ucx-1.12
+--prefix=/home1/p001cao/local/app/tooldev/ucx-1.12
 ```
 
 Option:
 
 ```shell
 export CFLAGS='-gdwarf-4 -gstrict-dwarf'
-myKNEM=/home1/p001cao/local/app/tool_dev/knem-1.1.4
-myNUMA=/home1/p001cao/local/app/tool_dev/numactl-2.0.13
+myKNEM=/home1/p001cao/local/app/tooldev/knem-1.1.4
+myNUMA=/home1/p001cao/local/app/tooldev/numactl-2.0.13
 
 --with-knem=$myKNEM \
 LDFLAGS="-fuse-ld=gold -lrt  -L$myNUMA/lib -Wl,-rpath,$myNUMA/lib" \
@@ -119,20 +123,20 @@ CFLAGS="-I$myNUMA/include" \
 ### USC1 (eagle)
 
 ```shell
-module load tool_dev/binutils-2.36              # gold
+module load tooldev/binutils-2.36              # gold
 module load compiler/gcc-11.2
 
 export PATH=$PATH:/uhome/p001cao/local/app/compiler/gcc-11.2/bin
 export CC=gcc export CXX=g++ export FORTRAN=gfortran
 
-../configure --enable-mt --prefix=/uhome/p001cao/local/app/tool_dev/ucx-1.11
+../configure --enable-mt --prefix=/uhome/p001cao/local/app/tooldev/ucx-1.11
 ```
 
 Option:
 
 ```shell
-myKNEM=/uhome/p001cao/local/app/tool_dev/knem-1.1.4
-myNUMA=/uhome/p001cao/local/app/tool_dev/numactl-2.0.13
+myKNEM=/uhome/p001cao/local/app/tooldev/knem-1.1.4
+myNUMA=/uhome/p001cao/local/app/tooldev/numactl-2.0.13
 
 --with-knem=$myKNEM \
 LDFLAGS="-fuse-ld=gold -lrt  -L$myNUMA/lib -Wl,-rpath,$myNUMA/lib" \
@@ -161,12 +165,12 @@ Other options:
 --with-cm               Compile with IB Connection Manager support
 
 ##-- Consider
-myNUMA=/home1/p001cao/local/app/tool_dev/numactl-2.0.13
+myNUMA=/home1/p001cao/local/app/tooldev/numactl-2.0.13
 LDFLAGS="-fuse-ld=gold -lrt  -L$myNUMA/lib -Wl,-rpath,$myNUMA/lib" \
 CFLAGS="-I$myNUMA/include" \
 ##--
-export myKNEM=/home1/p001cao/local/app/tool_dev/knem1.1.3
-export myOFI=/home1/p001cao/local/app/tool_dev/libfabric-1.10.1
+export myKNEM=/home1/p001cao/local/app/tooldev/knem1.1.3
+export myOFI=/home1/p001cao/local/app/tooldev/libfabric-1.10.1
 --with-verbs=${myOFI} --with-knem=${myKNEM} \
 https://developer.arm.com/tools-and-software/server-and-hpc/help/porting-and-tuning/building-open-mpi-with-openucx/running-openmpi-with-openucx
 ```
@@ -179,19 +183,19 @@ export PATH=/home1/p001cao/local/app/intel/xe19u5/compilers_and_libraries_2019.5
 export CC=icc  export CXX=icpc  export FORTRAN=ifort
 export LD_LIBRARY_PATH=/home1/p001cao/local/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:$LD_LIBRARY_PATH
 
-export LD_LIBRARY_PATH=/home1/p001cao/local/app/tool_dev/glibc-2.18/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home1/p001cao/local/app/tooldev/glibc-2.18/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/lib
 
-export myKNEM=/home1/p001cao/local/app/tool_dev/knem1.1.3
-export myOFI=/home1/p001cao/local/app/tool_dev/libfabric-1.10.1
+export myKNEM=/home1/p001cao/local/app/tooldev/knem1.1.3
+export myOFI=/home1/p001cao/local/app/tooldev/libfabric-1.10.1
 
 ../contrib/configure-release --disable-numa --enable-mt LDFLAGS="-fuse-ld=lld -lrt" \
 --with-verbs=${myOFI} --with-knem=${myKNEM} \
---prefix=/home1/p001cao/local/app/tool_dev/ucx-1.8-intel
+--prefix=/home1/p001cao/local/app/tooldev/ucx-1.8-intel
 ```
 
 List of main transports and aliases
-https://github.com/openucx/ucx/wiki/UCX-environment-parameters
+<https://github.com/openucx/ucx/wiki/UCX-environment-parameters>
 all use all the available transports.
 sm  all shared memory transports.
 shm same as "sm".
@@ -232,35 +236,35 @@ tar xvf rdma-core-30.0.tar.gz
 cd rdma-core-30.0
 
 module load compiler/gcc-10.1.0
-module load tool_dev/cmake-3.17.2
-module load tool_dev/libnl-3.0
-module load tool_dev/libtool-2.4.6
+module load tooldev/cmake-3.17.2
+module load tooldev/libnl-3.0
+module load tooldev/libtool-2.4.6
 
-export LD_LIBRARY_PATH=/home1/p001cao/local/app/tool_dev/libnl-3.0/lib:$LD_LIBRARY_PATH ./build.sh
+export LD_LIBRARY_PATH=/home1/p001cao/local/app/tooldev/libnl-3.0/lib:$LD_LIBRARY_PATH ./build.sh
 ```
 
 ### 2. libnuma-devel
 
-https://github.com/numactl/numactl
+<https://github.com/numactl/numactl>
 
 ```shell
 tar xzf numactl-2.0.13.tar.gz
 cd numactl-2.0.13
 
-module load tool_dev/autoconf-2.69b
+module load tooldev/autoconf-2.69b
 ./autogen.sh
 
 mkdir build && cd build
-../configure --prefix=/home1/p001cao/local/app/tool_dev/numactl-2.0.13
+../configure --prefix=/home1/p001cao/local/app/tooldev/numactl-2.0.13
 ```
 
 ### 3. openMPI/UCX: libfabric ()
 
-wget https://github.com/ofiwg/libfabric/releases/tag/v1.11.1/libfabric-1.11.1.tar.bz2
+wget <https://github.com/ofiwg/libfabric/releases/tag/v1.11.1/libfabric-1.11.1.tar.bz2>
 If building directly from the libfabric git tree, run './autogen.sh' before the configure step.
 
 ```shell
-module load tool_dev/autoconf-2.69b
+module load tooldev/autoconf-2.69b
 ./autogen.sh
 
 tar -xvf libfabric-1.11.1.tar.bz2
@@ -268,10 +272,10 @@ cd libfabric-1.11.1
 module load compiler/gcc-10.2
 
 ## IB cluster
-./configure --prefix=/uhome/p001cao/local/app/tool_dev/libfabric-1.11.1-IB
+./configure --prefix=/uhome/p001cao/local/app/tooldev/libfabric-1.11.1-IB
 
 ## noIB cluster
-./configure --prefix=/uhome/p001cao/local/app/tool_dev/libfabric-1.11.1-noIB
+./configure --prefix=/uhome/p001cao/local/app/tooldev/libfabric-1.11.1-noIB
 
 ## module
 prepend-path PKG_CONFIG_PATH $topdir/lib/pkgconfig
@@ -279,19 +283,19 @@ prepend-path PKG_CONFIG_PATH $topdir/lib/pkgconfig
 
 ### 4. openMPI/UCX: KNEM
 
-https://knem.gitlabpages.inria.fr/
+<https://knem.gitlabpages.inria.fr/>
 
 ```shell
 tar zxvf knem-1.1.4.tar.gz
 cd knem-1.1.4
-./configure --prefix=/uhome/p001cao/local/app/tool_dev/knem-1.1.4
+./configure --prefix=/uhome/p001cao/local/app/tooldev/knem-1.1.4
 ```
 
 ### 5. openMPI/UCX: XPMEM
 
-https://github.com/hjelmn/xpmem/releases/tag/v2.6.3
+<https://github.com/hjelmn/xpmem/releases/tag/v2.6.3>
 
-https://github.com/hjelmn/xpmem/wiki/Installing-XPMEM
+<https://github.com/hjelmn/xpmem/wiki/Installing-XPMEM>
 --> cannot install: require linux kernel 4.x
 
 ```shell
@@ -302,10 +306,8 @@ check: uname -a
 tar zxvf xpmem-2.6.3.tar.gz
 cd xpmem-2.6.3
 
-./configure --prefix=/home1/p001cao/local/app/tool_dev/xpmem-2.6.2
+./configure --prefix=/home1/p001cao/local/app/tooldev/xpmem-2.6.2
 ```
-
-
 
 ## Compile with LLVM
 
@@ -335,7 +337,7 @@ export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.13-llvm
 
 ../configure --enable-mt --prefix=${myPREFIX}
 
-make -j 16 && make install 
+make -j 16 && make install
 ```
 
 ### From source code
@@ -347,13 +349,14 @@ make -j 16 && make install
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
-git clone --branch v1.14.0 https://github.com/openucx/ucx.git  ucx-master
+git clone --branch master https://github.com/openucx/ucx.git  ucx-master
 cd ucx-master
-module load tool_dev/autoconf-2.71
-module load tool_dev/automake-1.16.5
-module load tool_dev/libtool-2.4.7
+module load tooldev/autoconf-2.71
+module load tooldev/automake-1.16.5
+module load tooldev/libtool-2.4.7
 
 ./autogen.sh
+
 mkdir build  &&  cd build
 ```
 
@@ -365,11 +368,11 @@ export PATH=$PATH:${myCOMPILER}/bin
 export CC=clang export CXX=clang++ export FC=flang
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.14
+export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-master
 
 ../configure --enable-mt --prefix=${myPREFIX}
 
-make -j 16 && make install 
+make -j 16 && make install
 ```
 
 ### Make module file
@@ -381,8 +384,7 @@ at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2
 set     topdir          /home1/p001cao/local/app/tooldev/ucx-1.13-llvm
 
 prepend-path    PATH                    $topdir/bin
-prepend-path    INCLUDE 	               $topdir/include
+prepend-path    INCLUDE                 $topdir/include
 prepend-path    LD_LIBRARY_PATH         $topdir/lib
-prepend-path    PKG_CONFIG_PATH 	       $topdir/lib/pkgconfig
+prepend-path    PKG_CONFIG_PATH         $topdir/lib/pkgconfig
 ```
-
