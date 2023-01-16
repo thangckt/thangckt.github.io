@@ -2,8 +2,9 @@
 hide:
   # - toc
   # - navigation
-ᴴₒᴴₒᴴₒ: true
+ᴴₒᴴₒᴴₒ: false
 ---
+
 
 
 
