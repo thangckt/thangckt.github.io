@@ -1,11 +1,13 @@
 ---
-sort: 6
+hide:
+  # - nav
 ---
 
 # UCX
 
 <img src="https://openucx.org/wp-content/themes/jello/img/UCX_Logo_930x933.png" width=120 />
-UCX is need to compile OpenMPI to use InfiniBand
+
+UCX is needed to compile OpenMPI to use InfiniBand
 
 Work with UCX in short:
 
@@ -344,13 +346,14 @@ make -j 16 && make install
 
 ```note
 - consider to update: `autoconf`, `libtool`, and `automake`
-- So far, error with `libuct_ib.la: command not found`
+- To solve error with `libuct_ib.la: command not found`, use `./contrib/configure-release` but not `/configure`
+- It work now.
 ```
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
-git clone --branch master https://github.com/openucx/ucx.git  ucx-master
-cd ucx-master
+git clone --branch v1.14.x https://github.com/openucx/ucx.git  ucx-1.14.x
+cd ucx-1.14.x
 module load tooldev/autoconf-2.71
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
@@ -368,9 +371,9 @@ export PATH=$PATH:${myCOMPILER}/bin
 export CC=clang export CXX=clang++ export FC=flang
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-master
+export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.14
 
-../configure --enable-mt --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
@@ -381,7 +384,7 @@ at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2
 
 ```shell
 # for Tcl script use only
-set     topdir          /home1/p001cao/local/app/tooldev/ucx-1.13-llvm
+set     topdir          /home1/p001cao/local/app/tooldev/ucx-1.14
 
 prepend-path    PATH                    $topdir/bin
 prepend-path    INCLUDE                 $topdir/include
