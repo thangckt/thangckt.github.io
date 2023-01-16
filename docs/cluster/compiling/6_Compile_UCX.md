@@ -326,20 +326,6 @@ cd xpmem-2.6.3
 cd /home1/p001cao/local/wSourceCode/tooldev
 tar xvf ucx-1.13.1.tar.gz
 cd ucx-1.13.1
-mkdir build && cd build
-
-module load compiler/llvm-14          # clang + lld
-
-export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
-export PATH=$PATH:${myCOMPILER}/bin
-export CC=clang export CXX=clang++ export FC=flang
-export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.13-llvm
-
-../configure --enable-mt --prefix=${myPREFIX}
-
-make -j 16 && make install
 ```
 
 ### From source code
@@ -357,13 +343,16 @@ cd ucx-1.14.x
 module load tooldev/autoconf-2.71
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
+export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 
 ./autogen.sh
-
-mkdir build  &&  cd build
 ```
 
+### Building
+
 ```shell
+mkdir build  &&  cd build
+
 module load compiler/llvm-14          # clang + lld
 
 export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
