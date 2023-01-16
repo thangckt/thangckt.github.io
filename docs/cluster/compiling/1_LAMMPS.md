@@ -204,6 +204,7 @@ For multicore CPUs using OpenMP, set these 2 variables.
     ```
 
 - **New udate from LAMMPS**: LAPACK & BLAS now can be compiled internally in LAMMPS with option `-DUSE_INTERNAL_LINALG=yes`. So new setting in file: `../cmake/Modules/Packages/PLUMED.cmake` should be
+
    ```shell
       find_package(LAPACK REQUIRED)
       find_package(BLAS REQUIRED)
@@ -226,6 +227,11 @@ For multicore CPUs using OpenMP, set these 2 variables.
           UPDATE_COMMAND ""
     ```
 
+    ```sh
+    module load tooldev/gsl-2.7
+
+    -DPKG_PLUMED=yes -DUSE_INTERNAL_LINALG=yes  \
+    ```
 
 12.[**ML_QUIP**] ([source code](https://github.com/libAtoms/QUIP))
 compile QUIP the minimum requirements are:
@@ -1024,7 +1030,7 @@ mkdir build_LLVM && cd build_LLVM
 ```sh
 module load tooldev/cmake-3.24
 module load tooldev/binutils-2.37
-module load tooldev/gsl-2.6
+module load tooldev/gsl-2.7
 module load fftw/fftw3.3.10-ompi4.1.4-clang14
 module load mpi/ompi4.1.x-clang14
 
@@ -1045,9 +1051,9 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPKG_GPU=no -DPKG_KOKKOS=no -DPKG_INTEL=no -DPKG_MDI=no \
 -DPKG_SCAFACOS=no -DPKG_ADIOS=no -DPKG_NETCDF=no -DPKG_VTK=no -DPKG_H5MD=no \
 -DPKG_MESONT=no -DPKG_LATTE=no -DPKG_MSCG=no -DPKG_ATC=no -DPKG_KIM=no \
--DPKG_PLUMED=yes -DPKG_ML-PACE=no -DPKG_ML-HDNNP=no \
--DPKG_ML-QUIP=no  -DUSE_INTERNAL_LINALG=yes \
 -DPKG_LEPTON=yes -DLEPTON_ENABLE_JIT=no \
+-DPKG_ML-QUIP=no -DPKG_ML-PACE=no -DPKG_ML-HDNNP=no \
+-DPKG_PLUMED=yes -DUSE_INTERNAL_LINALG=yes  \
 -DFFT=FFTW3 \
 -DZLIB_INCLUDE_DIR=${myZLIB} -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
 -DCMAKE_INSTALL_PREFIX=${myPREFIX}
