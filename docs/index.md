@@ -7,6 +7,7 @@ hide:
 
 
 
+
 <!-- add pictures in table-->
 <!-- ![](./assets/images/my_picture3x3.jpg)
   [![](./assets/images/icon_linkedin.jpg)](https://www.linkedin.com/in/thang-nguyen-5b458a218)
