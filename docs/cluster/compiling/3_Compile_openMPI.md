@@ -318,15 +318,43 @@ make -j 16 && make install
 
 ???+ note
 
-- To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"`. But might not be used?
+    - To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"`. But might not be used?
 
 ### USC2(Cenntos 6.9)
 
+#### Download pre-release code
+
 ```sh
+cd /home1/p001cao/local/wSourceCode
+wget https://github.com/open-mpi/ompi/releases/tag/v4.1.4/ompi-4.1.4.tar.gz
 tar xvf openmpi-4.1.4.tar.gz
 cd openmpi-4.1.4
 mkdir build_clang && cd build_clang
+```
 
+#### Download source code
+
+???+ note
+
+    - How to build from source-code [see here](https://docs.open-mpi.org/en/main/developers/prerequisites.html#sphinx)
+    - Now, work with this
+
+```sh
+cd /home1/p001cao/local/wSourceCode
+git clone --branch v4.1.x https://github.com/open-mpi/ompi.git  ompi-4.1.x
+cd ompi-4.1.x
+module load tooldev/autoconf-2.71
+module load tooldev/automake-1.16.5
+module load tooldev/libtool-2.4.7
+export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
+
+./autogen.pl
+mkdir build_clang && cd build_clang
+```
+
+### Building
+
+```sh
 module load compiler/llvm-14          # clang + lld
 
 export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
@@ -334,10 +362,10 @@ export PATH=${myCOMPILER}/bin:$PATH
 export CC=clang export CXX=clang++ export FC=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.13-llvm
+export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.14
+export myPREFIX=/home1/p001cao/local/app/openmpi/4.1.x-clang14
 
-../configure --with-sge --without-verbs --with-ucx=${myUCX} \
---prefix=/home1/p001cao/local/app/openmpi/4.1.4-clang14
+../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 ```
 
 ```sh
@@ -352,6 +380,5 @@ export my_libevent=/home1/p001cao/local/app/tool_dev/libevent-2.1.11       # req
 export my_hwloc=/home1/p001cao/local/app/tool_dev/hwloc-2.8.0
 
 ../configure --with-sge --without-verbs \
---with-ucx=${my_UCX} --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc} \
---prefix=/home1/p001cao/local/app/openmpi/4.1.4-clang14
+--with-ucx=${my_UCX} --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc} --prefix=${myPREFIX}
 ```
