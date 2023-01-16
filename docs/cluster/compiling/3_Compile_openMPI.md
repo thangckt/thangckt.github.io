@@ -329,15 +329,15 @@ cd /home1/p001cao/local/wSourceCode
 wget https://github.com/open-mpi/ompi/releases/tag/v4.1.4/ompi-4.1.4.tar.gz
 tar xvf openmpi-4.1.4.tar.gz
 cd openmpi-4.1.4
-mkdir build_clang && cd build_clang
 ```
 
 #### Download source code
 
 ???+ note
 
-    - How to build from source-code [see here](https://docs.open-mpi.org/en/main/developers/prerequisites.html#sphinx)
+    - How to build from source code [see here](https://docs.open-mpi.org/en/main/developers/prerequisites.html#sphinx)
     - Now, work with this
+    - `./autogen.pl` is the same as `./autogen.sh`
 
 ```sh
 cd /home1/p001cao/local/wSourceCode
@@ -349,12 +349,13 @@ module load tooldev/libtool-2.4.7
 export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 
 ./autogen.pl
-mkdir build_clang && cd build_clang
 ```
 
 ### Building
 
 ```sh
+mkdir build_clang && cd build_clang
+
 module load compiler/llvm-14          # clang + lld
 
 export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
