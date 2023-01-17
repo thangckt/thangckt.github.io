@@ -10,7 +10,6 @@ style="float:left; margin-right:20px" width="190" />
 
 [Visual Studio Code](https://code.visualstudio.com/) is free, lightweight, and platform-independent.
 
-
 ## I. [Windows](https://code.visualstudio.com/docs/setup/windows)
 
 Can install the Visual Studio Code installer for Windows, or use Zip archive, extract it and run Code from there.
@@ -72,22 +71,25 @@ Official guide [here](https://code.visualstudio.com/docs/editor/workspaces)
 
 * In the VScode, navigate to `File --> Open Folder --> root_folder`, then all settings in the `.json` files will be applied
 
+### Useful extensions
+
 In file `.vscode/extensions.json`:
 
 ```js
 {
   // Recommend extensions
   "recommendations": [
-    "james-yu.latex-workshop",
-    "znck.grammarly",
-    "ms-python.python",
-    "seansassenrath.vscode-theme-superonedark",
+    "james-yu.latex-workshop",         // [Latex]()
+    "znck.grammarly",                  // [Grammarly]()
+    "ms-python.python",               // python
+    "ms-python.vscode-pylance",
+    "thfriedrich.lammps",             // Lammps
+    "akamud.vscode-theme-onedark",   // [theme: Atom One Dark]()
+    "executablebookproject.myst-highlight",  // MyST syntax
 
-    //"zhuangtongfa.material-theme",
-    // "dcasella.monokai-plusplus",
-    // "monokai.theme-monokai-pro-vscode",
-    // "github.github-vscode-theme"
-    ]
+    // "gencay.vscode-chatgpt",        // [chatGPT](https://github.com/gencay/vscode-chatgpt)
+    // "zhuangtongfa.material-theme",    // [theme: One Dark Pro]()
+  ]
 }
 ```
 
@@ -278,16 +280,17 @@ Why VScode for Jupyter Notebooks refs:
 
     - [here](https://pbpython.com/vscode-notebooks.html)
     - [here](https://pbpython.com/vscode-notebooks.html)
-    
+
 ### Python & Conda envs
+
 ```
      //=== Python and Conda envs
     "python.defaultInterpreterPath": "C:/DevProgram/miniconda3/python.exe",
     "python.condaPath": "C:/DevProgram/miniconda3/Scripts/conda.exe",
     "python.terminal.activateEnvironment": true,
 ```
+
 ???+ tip "See also"
 
   1. [python/environments](https://code.visualstudio.com/docs/python/environments)
   2. [Efficient Way to Activate Conda in VSCode](https://medium.com/analytics-vidhya/efficient-way-to-activate-conda-in-vscode-ef21c4c231f2)
-
