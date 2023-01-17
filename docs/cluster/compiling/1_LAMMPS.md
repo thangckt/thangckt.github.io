@@ -741,11 +741,10 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 
 ## Compile with openMPI-conda & MKL-conda
 
-I. Require:
+Note:
 
-openMPI & MKL must be installed in conda
-
-Note: not yet support ucx
+- not yet support ucx
+- openMPI & MKL must be installed in conda
 
 ```shell
 conda install -c conda-forge cmake mkl mkl-include libjpeg-turbo libpng
@@ -771,6 +770,27 @@ cmake  -C ../cmake/presets/all_on.cmake \
 -D FFT=MKL \
 -D MKL_LIBRARY=/home1/p001cao/local/miniconda3/envs/py37ompi/lib \
 -D CMAKE_C_COMPILER=mpicc -D CMAKE_CXX_COMPILER=mpic++ -D CMAKE_Fortran_COMPILER=mpifort \../cmake
+```
+
+### Lammps conda on Tacheon
+
+**Create env**
+
+Note: `py39` requires a new GLIBC, avoid using
+
+```sh
+module load conda/conda3
+conda create -n py37Lammps_conda python=3.7
+```
+
+**Create module file for python_conda**
+
+**Install Lammps**
+
+```sh
+module load conda/conda3
+source activate py37Lammps_conda
+conda install -c conda-forge lammps=2022.06.23 openmpi=4.1.4 plumed=2.8.1
 ```
 
 ## Compile with openMPI4.0.1-gcc7.4.0 on CAN
