@@ -56,4 +56,5 @@ In essence, these notes are not written for you; however, it's glad if you find 
 </div>
 
 <br>
-# Welcome to my site
+#
+<!-- # Welcome to my site -->
