@@ -196,7 +196,7 @@ nav:
       - LAMMPS: cluster/compiling/1_LAMMPS.md
       - GCC: cluster/compiling/2_Compile_GCC.md
       - Open MPI: cluster/compiling/3_Compile_openMPI.md
-      - cluster/compiling/4_Compile_LAPACK.md
+      - cluster/compiling/CP2K.md
       - cluster/compiling/CMake.md
       - cluster/compiling/Libtool.md
       - cluster/compiling/6_Compile_UCX.md
@@ -206,6 +206,7 @@ nav:
       - cluster/compiling/10_LLVM.md
       - cluster/compiling/11_Conda_MPI.md
       - cluster/compiling/12_PMIX.md
+      - cluster/compiling/Dependencies.md
     - Setting:
       - cluster/appSetting/Conda.md
       - cluster/appSetting/Pip.md
