@@ -40,7 +40,7 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 
 ## DFT
 
-- Modeling materials using density functional theory  | [html](http://kitchingroup.cheme.cmu.edu/dft-book/dft.html){target="_blank"}
+- Modeling materials using density functional theory  | [html](http://kitchingroup.cheme.cmu.edu/dft-book/dft.html){target="_blank"}, [pdf](http://kitchingroup.cheme.cmu.edu/dft-book/dft.pdf){target="_blank"}
 
 - Computational Chemistry from Laptop to HPC | eChem team | [Notebook](https://kthpanor.github.io/echem){target="_blank"}
 
