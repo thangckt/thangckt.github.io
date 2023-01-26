@@ -65,8 +65,8 @@ Alternatively, you can open a WSL window directly from VS Code:
 
 ???+ tip "See also"
 
-  1. [Developing in WSL](https://code.visualstudio.com/docs/remote/wsl)
-  2. [remote/wsl-tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial)
+    1. [Developing in WSL](https://code.visualstudio.com/docs/remote/wsl)
+    2. [remote/wsl-tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial)
 
 ## Install conda in WSL
 
@@ -89,4 +89,4 @@ choose dir: `/home/tha/app/miniconda3`
 
 ???+ tip "See also"
 
-  [Install Anaconda on Windows Ubuntu Terminal](https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da)
+    [Install Anaconda on Windows Ubuntu Terminal](https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da)
