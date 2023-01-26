@@ -39,7 +39,19 @@ open Powershell:
 cd /mnt/d/folder
 ```
 
-- delete folder `rm -r folder`
+- delete folder 
+```
+rm -r folder`
+```
+- [Add/remove user](https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-20-04)
+- Set [default user](https://superuser.com/questions/1566022/how-to-set-default-user-for-manually-installed-wsl-distro). In `cmd`
+```
+wsl -u username 
+```
+or 
+```
+wsl -d distroname -u username
+```
 
 ## Using VScode with WSL
 
