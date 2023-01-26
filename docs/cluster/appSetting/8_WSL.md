@@ -32,7 +32,10 @@ open Powershell:
     ```sh
     wsl --install -d Ubuntu-22.04
     ```
+    
 ### Unintall
+
+Remove and reinstall in the case some errors
 ```
 wsl --shutdown                          // shutdown wsl
 wsl -l                                  // list all distros
