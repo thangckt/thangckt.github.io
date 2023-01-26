@@ -111,6 +111,12 @@ sh  Miniconda3-py39_4.12.0-Linux-x86_64.sh
 
 choose dir: `/home/tha/app/miniconda3`
 
+**Install Jupyter**
+Install `jupyter` in env `base`
+```
+conda install jupyter
+```
+
 ???+ tip "See also"
 
     [Install Anaconda on Windows Ubuntu Terminal](https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da)
