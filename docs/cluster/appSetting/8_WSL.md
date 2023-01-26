@@ -17,11 +17,17 @@ Some conda packages are not available for Windows; therefore we in WSL. And VSco
 
 open Powershell:
 
-```sh
-wsl --list --online
-wsl --install -d openSUSE-42
-wsl --install -d SLES-12
-```
+- See all available distro
+
+    ```sh
+    wsl --list --online
+    ```
+
+- Install
+
+    ```sh
+    wsl --install -d Ubuntu-22.04
+    ```
 
 ## Use
 
@@ -63,6 +69,13 @@ Alternatively, you can open a WSL window directly from VS Code:
 ## Install conda in WSL
 
 In WSL terminal `Ubuntu 22.04`
+
+**Update GCC-11:**
+
+```sh
+sudo apt-get update
+sudo apt-get install gcc-11 g++-11
+```
 
 **Download**
 
