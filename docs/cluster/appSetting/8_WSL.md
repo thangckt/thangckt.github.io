@@ -8,12 +8,14 @@ Windows Subsystem for Linux
 
 Some conda packages are not available for Windows; therefore we in WSL. And VScode has an extension to work with WSL from Windows.
 
-## Enable BIOS & windows setting
+## Installation
 
-- Enable Virtual Techology in BIOS
+### Enable BIOS & windows setting
+
+- Enable [Virtual Techology in BIOS](https://www.sony-asia.com/electronics/support/articles/S500016173)
 - Win Setting: `Control Panel` --> `Program` --> `Turn Windows features on or off` --> `Windows Subsystem for Linux`
 
-## Install Unbutu
+### Install Unbutu
 
 open Powershell:
 
@@ -29,7 +31,7 @@ open Powershell:
     wsl --install -d Ubuntu-22.04
     ```
 
-## Use
+## Usage
 
 - Access Windows folder from WSL:
 
