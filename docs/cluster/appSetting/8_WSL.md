@@ -2,38 +2,62 @@
 sort: 42
 ---
 
-# WSL 
+# WSL
 
 Windows Subsystem for Linux
 
+Some conda packages are not available for Windows; therefore we in WSL. And VScode has an extension to work with WSL from Windows.
+
 ## Enable BIOS & windows setting
+
 - Enable Virtual Techology in BIOS
 - Win Setting: `Control Panel` --> `Program` --> `Turn Windows features on or off` --> `Windows Subsystem for Linux`
 
 ## Install Unbutu
 
 open Powershell:
-```
+
+```sh
 wsl --list --online
 wsl --install -d openSUSE-42
 wsl --install -d SLES-12
 ```
 
 ## Use
-- Access a folder: 
-```
+
+- Access Windows folder from WSL:
+
+```sh
 cd /mnt/d/folder
 ```
 
 ## Using VScode with WSL
 
+The Visual Studio Code WSL extension lets you use the Windows Subsystem for Linux (WSL) as your full-time development environment right from VS Code. You can develop in a Linux-based environment, use Linux-specific toolchains and utilities, and run and debug your Linux-based applications all from the comfort of Windows.
+
+![](https://code.visualstudio.com/assets/docs/remote/wsl/architecture-wsl.png)
+
+**Install**
+
+- Install VScode in Windows
 - In VScode: install extension `WSL` (ms-vscode-remote.remote-wsl)
 - Check WSL: open `cmd`, type `wsl`. If no linux distro --> install one
   - Search bar: ubuntu
 
+### Open a remote folder or workspace
 
+1. From the `WSL` terminal:
+    - Navigate to a folder you'd like to open in VS Code: `cd /mnt/d/folder`
+    - Type `code .`
 
+2. Or from the VScode
+Alternatively, you can open a WSL window directly from VS Code:
+    - Press `F1`, select `WSL: New WSL Window`
+    - Use the File menu to open your folder
 
-``` tip "See also"
-https://code.visualstudio.com/docs/remote/wsl-tutorial
-```
+???+ tip "See also"
+
+  1. [Developing in WSL](https://code.visualstudio.com/docs/remote/wsl)
+  2. [remote/wsl-tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial)
+
+## Install conda in WSL
