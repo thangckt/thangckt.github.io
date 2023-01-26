@@ -37,6 +37,8 @@ open Powershell:
 cd /mnt/d/folder
 ```
 
+- delete folder `rm -r folder`
+
 ## Using VScode with WSL
 
 The Visual Studio Code WSL extension lets you use the Windows Subsystem for Linux (WSL) as your full-time development environment right from VS Code. You can develop in a Linux-based environment, use Linux-specific toolchains and utilities, and run and debug your Linux-based applications all from the comfort of Windows.
@@ -69,13 +71,6 @@ Alternatively, you can open a WSL window directly from VS Code:
 ## Install conda in WSL
 
 In WSL terminal `Ubuntu 22.04`
-
-**Update GCC-11:**
-
-```sh
-sudo apt-get update
-sudo apt-get install gcc-11 g++-11
-```
 
 **Download**
 
