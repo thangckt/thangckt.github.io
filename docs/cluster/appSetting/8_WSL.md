@@ -63,8 +63,8 @@ Alternatively, you can open a WSL window directly from VS Code:
 
 ???+ tip "See also"
 
-      1. [Developing in WSL](https://code.visualstudio.com/docs/remote/wsl)
-      2. [remote/wsl-tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial)
+    1. [Developing in WSL](https://code.visualstudio.com/docs/remote/wsl)
+    2. [remote/wsl-tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial)
 
 ## Install conda in WSL
 
