@@ -61,3 +61,24 @@ Alternatively, you can open a WSL window directly from VS Code:
   2. [remote/wsl-tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial)
 
 ## Install conda in WSL
+
+In WSL terminal `Ubuntu 22.04`
+
+**Download**
+
+```sh
+cd /mnt/c/Users/thang/Downloads
+wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
+```
+
+**Install**
+
+```sh
+sh  Miniconda3-py39_4.12.0-Linux-x86_64.sh
+```
+
+choose dir: `/home/tha/app/miniconda3`
+
+???+ tip "See also"
+
+  [Install Anaconda on Windows Ubuntu Terminal](https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da)
