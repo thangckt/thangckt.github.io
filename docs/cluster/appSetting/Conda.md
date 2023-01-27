@@ -6,6 +6,7 @@
    - Use `llvm` suite, it contains compiler and linker `clang lld lldb llvm-tools`. The compiler `clang` also include its dependencies (libc++, libcxxabi), so do not need to istall `libclang libclangxx`  
    - LLVM can be used as a replacement for GCC (GNU Compiler Collection) and G++ (GNU C++ Compiler) to compile C and C++ code, respectively. LLVM includes the Clang C and C++ compilers. Use `clang` and `clang++` in place of `gcc` and `g++`. 
    - Can install some packages: `openmpi`, `scalapack`,...
+   - Should install all packages from `conda-forge`, then they can linked to each other. Avoid using `pip`, since it can not provide proper link.
    
 
 ## I. Installation
