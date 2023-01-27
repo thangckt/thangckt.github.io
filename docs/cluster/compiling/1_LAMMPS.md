@@ -21,14 +21,14 @@ This note intends to the struggling work to deploy [LAMMPS](https://www.lammps.o
 cmake -D OPTION_A=VALUE_A -D OPTION_B=VALUE_B ...     ../cmake make
 ```
 
-- Module evironment
+- Module environment
 
 ```shell
 module load <module_name>
 module display <module_name>
 ```
 
-- Only one installation for `eagle/lion/leopard/cheetah`, but need to load different OpenMPI for each cluster. Also need to load Conda to overwrite default python of the system (different Ver. of python may cause runtime error)
+- Only one installation for `eagle/lion/leopard/cheetah`, but need to load different OpenMPI for each cluster. Also need to load Conda to overwrite the default python of the system (different Ver. of python may cause runtime error)
 
 ### 2. Download
 
@@ -56,7 +56,7 @@ git pull origin develop
 !!! note
 
     - include these OPTIONS in Cmake command, to build package-lib automatically:
-    - python > 3.7.12 require to update GCC-conda=11: `conda install -c conda-forge libstdcxx-ng=11 libgcc-ng=11 libgfortran-ng=11`. But dont use this to void requiring higher GLIBC. Also, `zlib=1.2.12` require GLIBC=2.14.
+    - python > 3.7.12 require to update GCC-conda=11: `conda install -c conda-forge gcc=11 gxx=11`. But don't use this to void requiring higher GLIBC. Also, `zlib=1.2.12` require GLIBC=2.14.
     - To void hidden libs by conda, need to downgrade libs versions in conda < libs in linux system. So that to void these errors, use `conda install -c conda-forge libgcc-ng=7 zlib=1.2.8 python=3.7.12`
     - Do not use GCC-11 to avoid error: Dwarf Error: found dwarf version '5', use: export CFLAGS='-gdwarf-4 -gstrict-dwarf' not solve this error
     - install openBLAS for LAPACK and BLAS, so need load GSL
@@ -739,60 +739,6 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/gccSHMEM-master
 ```
 
-## Compile with openMPI-conda & MKL-conda
-
-Note:
-
-- not yet support ucx
-- openMPI & MKL must be installed in conda
-
-```shell
-conda install -c conda-forge cmake mkl mkl-include libjpeg-turbo libpng
-conda install -c conda-forge openmpi openmpi-mpicc openmpi-mpicxx openmpi-mpifort
-
-## infiniBand
-conda install -c conda-forge libibverbs-cos6-x86_64
-```
-
-```shell
-module load conda/py37ompi
-
-cmake  -C ../cmake/presets/all_on.cmake \
--D CMAKE_INSTALL_PREFIX=/home1/p001cao/local/lammps/20Nov19conda  \
--D BUILD_MPI=yes -D LAMMPS_MACHINE=mpi \
--D BUILD_LIB=yes -D BUILD_SHARED_LIBS=yes -D LAMMPS_EXCEPTIONS=yes \
--D PKG_GPU=no -D PKG_KIM=no -D PKG_LATTE=no -D PKG_MSCG=no -D PKG_KOKKOS=no \
--D DOWNLOAD_VORO=yes -D DOWNLOAD_EIGEN3=yes \
--D BUILD_OMP=yes -D PKG_USER-OMP=yes -D PKG_USER-INTEL=no \
--D PKG_USER-ADIOS=no -D PKG_USER-NETCDF=no -D PKG_USER-QUIP=no -D PKG_USER-SCAFACOS=no \
--D PKG_USER-QMMM=no -D PKG_USER-VTK=no -D PKG_USER-H5MD=no \
--D PKG_USER-PLUMED=no -D DOWNLOAD_PLUMED=no -D PLUMED_MODE=shared \
--D FFT=MKL \
--D MKL_LIBRARY=/home1/p001cao/local/miniconda3/envs/py37ompi/lib \
--D CMAKE_C_COMPILER=mpicc -D CMAKE_CXX_COMPILER=mpic++ -D CMAKE_Fortran_COMPILER=mpifort \../cmake
-```
-
-### Lammps conda on Tacheon
-
-**Create env**
-
-Note: `py39` requires a new GLIBC, avoid using
-
-```sh
-module load conda/conda3
-conda create -n py37Lammps_conda python=3.7
-```
-
-**Create module file for python_conda**
-
-**Install Lammps**
-
-```sh
-module load conda/conda3
-source activate py37Lammps_conda
-conda install -c conda-forge lammps=2022.06.23 openmpi=4.1.4 plumed=2.8.1
-```
-
 ## Compile with openMPI4.0.1-gcc7.4.0 on CAN
 
 ```shell
@@ -1088,4 +1034,38 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 
 ```sh
 make -j 16 && make install
+```
+
+## Compile with Conda
+
+This way may eliminate some work on installing dependencies
+
+???+ note
+    - Use the `clang` compiler
+    - Should in all packages available in `conda-forge`
+    - For infiniBand, use `libibverbs-cos6-x86_64`
+
+### USC2_Tachyon - Centos 6.9
+
+**Install Lammps** in Conda-env
+
+```shell
+module load conda/conda3
+conda create -n py39Lammps_conda python=3.9
+source activate py39Lammps_conda
+
+conda install -c conda-forge clang lld llvm-tools llvm-openmp openmpi=4.1 libibverbs-cos6-x86_64
+
+conda install -c conda-forge lammps=2022.06.23 plumed=2.8.1
+```
+
+**Create a module file** for Lammps
+
+```tcl
+set     topdir          /home1/p001cao/local/app/miniconda3/envs/py39Lammps_conda
+
+prepend-path    PATH                $topdir/bin
+prepend-path    LD_LIBRARY_PATH     $topdir/lib
+prepend-path    INCLUDE             $topdir/include
+prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is required in order to config libs
 ```
