@@ -1065,7 +1065,7 @@ conda install -c conda-forge lammps=2022.06.23 plumed=2.8.1
 set     topdir          /home1/p001cao/local/app/miniconda3/envs/py39Lammps_conda
 
 prepend-path    PATH                $topdir/bin
-prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    INCLUDE             $topdir/include
+prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is required in order to config libs
 ```
