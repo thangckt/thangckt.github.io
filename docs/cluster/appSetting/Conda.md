@@ -1,6 +1,12 @@
 
 # Conda
 
+???+ note
+
+   - Use `llvm-tools` which include `clang` compiler
+   - Can install some packages: `openmpi`, `scalapack`,...
+   
+
 ## I. Installation
 
 ### 1. Install Anaconda on Linux (USC-locally installation)
