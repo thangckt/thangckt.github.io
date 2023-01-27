@@ -7,7 +7,7 @@ This way may eliminate some work on installing dependencies
     - Use the `clang` compiler
     - Should in all packages available in `conda-forge`
     - For infiniBand, use `libibverbs-cos6-x86_64`
-    - `libgcc-ng`>11 require GLIBC=2.17, so void this.
+    - `libgcc-ng`>11 require GLIBC=2.17. Also, `zlib=1.2.12` require GLIBC=2.14. so void this.
 
 ## LAMMPS
 
