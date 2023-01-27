@@ -23,16 +23,18 @@ Consider Miniconda for light, and reduce error
 
 ```sh
 cd /home1/p001cao/local/wSourceCode
-wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
+wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh
 ```
 
 Install
 ???+ note
-   Newer conda may require higher GLIBC --> use old version
+
+   - Newer conda may require higher GLIBC --> use old version
+   - Run `sh <file>`, or `sh <file> -u`
 
 **UCS2 Tacheon**
 ```sh
-sh Miniconda3-py39_4.9.2-Linux-x86_64.sh -u
+sh Miniconda3-py39_4.10.3-Linux-x86_64.sh -u
 ```
 
 choose folder to install:   `/home1/p001cao/local/app/miniconda3`
