@@ -41,7 +41,7 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 
 **Install GPAW** in Conda-env
 
-```shell
+```sh
 module load conda/conda3
 conda create -n py37gpaw python=3.7
 source activate py37gpaw
