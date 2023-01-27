@@ -3,7 +3,7 @@
 
 ???+ note
 
-   - Use `llvm-tools` which include `clang` compiler
+   - Use compilers: `clang, clangxx, libclang, libclang-cpp, llvm-openmp, llld`
    - Can install some packages: `openmpi`, `scalapack`,...
    
 
