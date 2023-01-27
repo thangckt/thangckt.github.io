@@ -22,23 +22,16 @@ Anaconda3-2019.03-Linux-x86_64
 Consider Miniconda for light, and reduce error
 
 ```sh
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+cd /home1/p001cao/local/wSourceCode
+wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh -u
 ```
 
-Put this file in the folder: `/`uhome/p001cao/local/W_Source_Code`
-
+Install
 ```sh
-cd /uhome/p001cao/local/W_Source_Code
-
-module load compiler/gcc-11.2
-export PATH=/uhome/p001cao/local/app/compiler/gcc-11.2/bin:$PATH
-export CC=gcc  export CXX=g++  export FORTRAN=gfortran
-
-bash Miniconda3-py37_4.9.2-Linux-x86_64.sh -u
-# or bash Miniconda3-py37_4.9.2-Linux-x86_64.sh
+sh Miniconda3-py39_4.10.3-Linux-x86_64.sh -u
 ```
 
-choose folder to install:   /uhome/p001cao/local/app/miniconda3
+choose folder to install:   `/home1/p001cao/local/app/miniconda3`
 running conda init?  NO
 ... finish
 
