@@ -1040,32 +1040,4 @@ make -j 16 && make install
 
 This way may eliminate some work on installing dependencies
 
-???+ note
-    - Use the `clang` compiler
-    - Should in all packages available in `conda-forge`
-    - For infiniBand, use `libibverbs-cos6-x86_64`
-
-### USC2_Tachyon - Centos 6.9
-
-**Install Lammps** in Conda-env
-
-```shell
-module load conda/conda3
-conda create -n py39Lammps_conda python=3.9
-source activate py39Lammps_conda
-
-conda install -c conda-forge clang lld llvm-tools llvm-openmp openmpi=4.1 libibverbs-cos6-x86_64
-
-conda install -c conda-forge lammps=2022.06.23 plumed=2.8.1
-```
-
-**Create a module file** for Lammps
-
-```tcl
-set     topdir          /home1/p001cao/local/app/miniconda3/envs/py39Lammps_conda
-
-prepend-path    PATH                $topdir/bin
-prepend-path    INCLUDE             $topdir/include
-prepend-path    LD_LIBRARY_PATH     $topdir/lib
-prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is required in order to config libs
-```
+See [this link](./conda_packages.md)

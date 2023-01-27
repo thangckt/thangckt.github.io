@@ -193,7 +193,7 @@ nav:
   # - About: index.md
   - Cluster:
     - Compiling:
-      - LAMMPS: cluster/compiling/1_LAMMPS.md
+      - LAMMPS: cluster/compiling/LAMMPS.md
       - GCC: cluster/compiling/2_Compile_GCC.md
       - Open MPI: cluster/compiling/3_Compile_openMPI.md
       - cluster/compiling/CP2K.md
@@ -207,6 +207,7 @@ nav:
       - cluster/compiling/11_Conda_MPI.md
       - cluster/compiling/12_PMIX.md
       - cluster/compiling/Dependencies.md
+      - cluster/compiling/conda_packages.md
     - Setting:
       - cluster/appSetting/Conda.md
       - cluster/appSetting/Pip.md
