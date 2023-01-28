@@ -9,7 +9,11 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 
 # Computational Methods
 
-- Thang's note on Computational Mechanics & Multiscale methods  &nbsp; &nbsp;  [Notebook](https://thangckt.github.io/note_comp_mech){target="_blank"}
+
+## Thang's Note
+
+- Computational Mechanics & Multiscale methods    [Notebook](https://thangckt.github.io/note_comp_mech){target="_blank"}
+- Modelling with DFT    [Notebook](https://thangckt.github.io/note_dft){target="_blank"}
 
 ## Multiscale
 
