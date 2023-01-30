@@ -7,7 +7,7 @@ This way may eliminate some work on installing dependencies
     - Use the `clang` compiler
     - Should in all packages available in `conda-forge`
     - For infiniBand, use `libibverbs-cos6-x86_64`
-    - Some packages require GLIBC=2.17. Solve by installing `libgcc-ng=12` (and may be python=3.10)
+    - Some packages require GLIBC=2.17. Solve by installing `libgcc-ng=12` (and may be python=3.10.8)
     - Remember `ucx` and `openmp` for `openmpi`
 
 ## USC2_Tachyon - Centos 6.9
@@ -84,8 +84,7 @@ conda create -n py310gpaw_lammps python=3.10
 source activate py310gpaw_lammps
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12
-conda install -y -c conda-forge libibverbs-cos6-x86_64 openmpi=4.1.4 ucx openmp
-conda install -y -c conda-forge fftw blas libxc scalapack elpa libvdwxc
+conda install -y -c conda-forge fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp libibverbs-cos6-x86_64
 conda install -y -c conda-forge ase gpaw lammps plumed
 ```
 
