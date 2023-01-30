@@ -4,24 +4,28 @@ This way may eliminate some work on installing dependencies
 
 ???+ note
 
-    - Use the `clang` compiler
     - Should in all packages available in `conda-forge`
     - For infiniBand, use `libibverbs-cos6-x86_64`
-    - `libgcc-ng`>11 require GLIBC=2.17. Also, `zlib=1.2.12` require GLIBC=2.14. so void this.
+    - Note `libgcc-ng>9` require GLIBC=2.17. So any package requires `libgcc-ng>9` will cause errors due to GLIBC.
+    - Packages require `libgcc-ng>9`: `zlib=1.2.12`, lammps,...
+    - Use the `clang` compiler(`clang lld llvm-tools llvm-openmp`) may require new `libgcc-ng` and thus new GLIBC
 
 ## LAMMPS
 
 ### USC2_Tachyon - Centos 6.9
 
+!!! note
+    require new `libgcc-ng>10` and thus new `GLIBC>=2.17`(available on centos 7)
+
 **Install Lammps** in Conda-env
 
 ```shell
 module load conda/conda3
-conda create -n py37Lammps_conda python=3.7
+conda create -n py37Lammps_conda python=3.7.9
 source activate py37Lammps_conda
 
-conda install -c conda-forge clang lld llvm-tools llvm-openmp libibverbs-cos6-x86_64 libgcc-ng=9
-conda install -c conda-forge openmpi lammps=2022.06.23 plumed=2.8.1
+conda install -c conda-forge clang lld llvm-tools llvm-openmp libibverbs-cos6-x86_64 libgcc-ng=11
+conda install -c conda-forge openmpi  lammps=2022.06.23 plumed=2.8.1
 ```
 
 **Create a module file** for Lammps
