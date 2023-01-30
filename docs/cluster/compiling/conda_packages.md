@@ -4,28 +4,29 @@ This way may eliminate some work on installing dependencies
 
 ???+ note
 
+    - Use the `clang` compiler
     - Should in all packages available in `conda-forge`
     - For infiniBand, use `libibverbs-cos6-x86_64`
-    - Note `libgcc-ng>9` require GLIBC=2.17. So any package requires `libgcc-ng>9` will cause errors due to GLIBC.
-    - Packages require `libgcc-ng>9`: `zlib=1.2.12`, lammps,...
-    - Use the `clang` compiler(`clang lld llvm-tools llvm-openmp`) may require new `libgcc-ng` and thus new GLIBC
+    - Some packages require GLIBC=2.17. Solve by installing `libgcc-ng=12` (and may be python=3.10)
+    - Remember `ucx` and `openmp` for `openmpi`
 
 ## LAMMPS
 
 ### USC2_Tachyon - Centos 6.9
 
 !!! note
-    require new `libgcc-ng>10` and thus new `GLIBC>=2.17`(available on centos 7)
+    install `libgcc-ng=12` to solve for requirement `GLIBC>=2.17`
 
 **Install Lammps** in Conda-env
 
 ```shell
 module load conda/conda3
-conda create -n py37Lammps_conda python=3.7.9
-source activate py37Lammps_conda
+conda create -n py310lammps python=3.7.9
+source activate py310lammps
 
-conda install -c conda-forge clang lld llvm-tools llvm-openmp libibverbs-cos6-x86_64 libgcc-ng=11
-conda install -c conda-forge openmpi  lammps=2022.06.23 plumed=2.8.1
+conda install -c conda-forge clang lld llvm-tools libgcc-ng=12
+conda install -c conda-forge llvm-openmp libibverbs-cos6-x86_64 openmpi ucx
+conda install -c conda-forge lammps=2022.06.23 plumed=2.8.1
 ```
 
 **Create a module file** for Lammps
@@ -50,8 +51,8 @@ module load conda/conda3
 conda create -n py37gpaw python=3.7
 source activate py37gpaw
 
-conda install -c conda-forge clang lld llvm-tools llvm-openmp libibverbs-cos6-x86_64 libgcc-ng=9
-conda install -c conda-forge fftw blas libxc scalapack elpa libvdwxc ase gpaw
+conda install -c conda-forge clang lld llvm-tools llvm-openmp libibverbs-cos6-x86_64 libgcc-ng=12
+conda install -c conda-forge openmpi ucx fftw blas libxc scalapack elpa libvdwxc ase gpaw plumed
 ```
 
 **Create a module file** for GPAW
