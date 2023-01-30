@@ -6,16 +6,19 @@ This way may eliminate some work on installing dependencies
 
     - Use the `clang` compiler
     - Should in all packages available in `conda-forge`
-    - For infiniBand, use `libibverbs-cos6-x86_64`
-    - Some packages require GLIBC=2.17. Solve by installing `libgcc-ng=12` (and may be python=3.10.8)
+    - Some packages require GLIBC=2.17.
+        - May solve by installing `libgcc-ng=12` + `zlib=1.2.11`
     - Remember `ucx` and `openmp` for `openmpi`
+    - For infiniBand, use `libibverbs-cos6-x86_64`
 
 ## USC2_Tachyon - Centos 6.9
 
 ### LAMMPS
 
 !!! note
-    install `libgcc-ng=12` to solve for requirement `GLIBC>=2.17`
+
+    - Some dependence require `libgcc-ng=12`
+    - If running Lammmps requires `GLIBC>=2.17`, maybe solving by downgrade `zlib=1.2.11`
 
 **Install Lammps** in Conda-env
 
@@ -24,9 +27,9 @@ module load conda/conda3
 conda create -n py310lammps python=3.10
 source activate py310lammps
 
-conda install -c conda-forge clang lld llvm-tools libgcc-ng=12
-conda install -c conda-forge libibverbs-cos6-x86_64 openmpi ucx openmp
-conda install -c conda-forge lammps plumed
+conda install -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
+    libibverbs-cos6-x86_64 openmpi ucx openmp \
+    plumed lammps
 ```
 
 **Create a module file** for Lammps
@@ -56,9 +59,9 @@ module load conda/conda3
 conda create -n py310gpaw python=3.10
 source activate py310gpaw
 
-conda install -c conda-forge clang lld llvm-tools libgcc-ng=12
-conda install -c conda-forge libibverbs-cos6-x86_64 openmpi ucx openmp
-conda install -c conda-forge fftw blas libxc scalapack elpa libvdwxc ase gpaw plumed
+conda install -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
+    libibverbs-cos6-x86_64 openmpi ucx openmp \
+    fftw blas libxc scalapack elpa libvdwxc ase gpaw plumed
 ```
 
 **Create a module file** for GPAW
@@ -76,6 +79,8 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 
 This is for some convenience in linking and saving space.
 
+clang lld llvm-tools
+
 **Install** in Conda-env
 
 ```sh
@@ -83,9 +88,9 @@ module load conda/conda3
 conda create -n py310gpaw_lammps python=3.10
 source activate py310gpaw_lammps
 
-conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12
-conda install -y -c conda-forge fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp libibverbs-cos6-x86_64
-conda install -y -c conda-forge ase gpaw lammps plumed
+conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
+    fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp libibverbs-cos6-x86_64 \
+    ase gpaw plumed lammps
 ```
 
 **Create a module file** for GPAW
