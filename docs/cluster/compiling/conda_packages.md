@@ -30,7 +30,7 @@ module load conda/conda3
 conda create -n py310lammps python=3.10
 source activate py310lammps
 
-conda install -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
+conda install -c conda-forge -y clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
     libibverbs-cos6-x86_64 openmpi ucx openmp \
     lammps
 ```
