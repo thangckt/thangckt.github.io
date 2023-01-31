@@ -14,6 +14,7 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 
 - Computational Mechanics & Multiscale methods    [Notebook](https://thangckt.github.io/note_comp_mech){target="_blank"}
 - Modelling with DFT    [Notebook](https://thangckt.github.io/note_dft){target="_blank"}
+- Modelling with MD    [Notebook](https://thangckt.github.io/note_md){target="_blank"}
 
 ## Multiscale
 

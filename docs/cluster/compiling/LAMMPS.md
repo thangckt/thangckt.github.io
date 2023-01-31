@@ -1013,7 +1013,7 @@ export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 ## python (require py3), BLAS+LAPACK
-export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py39Lammps
+export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py39link_lammps
 export myZLIB=/home1/p001cao/local/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
 export myPREFIX=/home1/p001cao/local/app/lammps/llvmOMPI4-dev
 
