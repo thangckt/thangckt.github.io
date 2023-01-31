@@ -10,6 +10,7 @@ This way may eliminate some work on installing dependencies
         - May solve by installing `libgcc-ng=12` + `zlib=1.2.11`
     - Remember `ucx` and `openmp` for `openmpi`
     - For infiniBand, use `libibverbs-cos6-x86_64`
+    - Don't use `mamba`, will cause crash
 
 ## USC2_Tachyon - Centos 6.9
 
@@ -19,6 +20,8 @@ This way may eliminate some work on installing dependencies
 
     - Some dependence require `libgcc-ng=12`
     - If running Lammmps requires `GLIBC>=2.17`, maybe solving by downgrade `zlib=1.2.11`
+    - `Plumed` in conda does not support MPI and may have [limited features](https://www.plumed.org/doc-v2.8/user-doc/html/_installation.html).
+    - LAMMPS in conda may have [limited features?](https://docs.lammps.org/Install_conda.html)
 
 **Install Lammps** in Conda-env
 
@@ -29,7 +32,7 @@ source activate py310lammps
 
 conda install -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
     libibverbs-cos6-x86_64 openmpi ucx openmp \
-    plumed lammps
+    lammps
 ```
 
 **Create a module file** for Lammps
