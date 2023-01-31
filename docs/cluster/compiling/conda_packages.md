@@ -21,7 +21,7 @@ This way may eliminate some work on installing dependencies
     - Some dependence require `libgcc-ng=12`
     - If running Lammmps requires `GLIBC>=2.17`, maybe solving by downgrade `zlib=1.2.11`
     - `Plumed` in conda does not support MPI and may have [limited features](https://www.plumed.org/doc-v2.8/user-doc/html/_installation.html).
-    - LAMMPS in conda may have [limited features?](https://docs.lammps.org/Install_conda.html)
+    - LAMMPS in conda may have [limited features?](https://docs.lammps.org/Install_conda.html). LAMMPS in conda also included Plumed
 
 **Install Lammps** in Conda-env
 
@@ -31,8 +31,7 @@ conda create -n py310lammps python=3.10
 source activate py310lammps
 
 conda install -c conda-forge -y clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
-    libibverbs-cos6-x86_64 openmpi ucx openmp \
-    lammps
+    libibverbs-cos6-x86_64 openmpi ucx openmp  lammps
 ```
 
 **Create a module file** for Lammps
@@ -64,7 +63,7 @@ source activate py310gpaw
 
 conda install -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
     libibverbs-cos6-x86_64 openmpi ucx openmp \
-    fftw blas libxc scalapack elpa libvdwxc ase gpaw plumed
+    fftw blas libxc scalapack elpa libvdwxc ase gpaw 
 ```
 
 **Create a module file** for GPAW
@@ -93,7 +92,7 @@ source activate py310gpaw_lammps
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
     fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp libibverbs-cos6-x86_64 \
-    ase gpaw plumed=2.8 lammps=2022
+    ase gpaw lammps=2022
 ```
 
 **Create a module file** for GPAW
