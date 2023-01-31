@@ -7,7 +7,6 @@ hide:
 
 
 
-
 <!-- add pictures in table-->
 <!-- ![](./assets/images/my_picture3x3.jpg)
   [![](./assets/images/icon_linkedin.jpg)](https://www.linkedin.com/in/thang-nguyen-5b458a218)
@@ -38,7 +37,7 @@ This site dedicates to my personal notes. <br>
 These notes do not reflect either community or third-party rules. <br>
 These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
-In essence, these notes are not written for you; however, it's glad if you find something valid here. In other cases, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I did.
+In essence, these notes are not written for you; notwithstanding, it's glad if you find something valid here. In other cases, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I did.
 <br> <br>
 
 <!--
