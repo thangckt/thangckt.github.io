@@ -29,8 +29,8 @@ Install
 
 ???+ note
 
-  - Newer conda may require higher GLIBC --> use old version
-  - Run `sh <file>`, or `sh <file> -u`
+    - Newer conda may require higher GLIBC --> use old version
+    - Run `sh <file>`, or `sh <file> -u`
 
 **UCS2 Tacheon**
 
@@ -74,34 +74,6 @@ prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE                 $topdir/include
 ```
 
-or :
-
-```tcl
-## python27env_conda3
-set     topdir          /uhome/p001cao/local/Anaconda3
-module load conda3
-```
-
-```tcl
-if [ module-info mode load ] {
-   puts stdout "source   $topdir/bin/activate py27env"
-}
-Note: in each env, using pip to install or update pkgs.
-module   load python37env_conda3
-pip    install       numpy scipy tess
-pip     update     --all
-
-Or use conda with specific name of env
-module load conda3
-conda install -n py37env numpy scipy
-```
-
-```sh
-# or
-module load conda3
-source activate py37env
-pip install tess              #  voro++ library
-```
 
 References:
 <https://stackoverflow.com/questions/22885134/how-to-load-virtualenv-using-environmental-module-file-tcl-script>
