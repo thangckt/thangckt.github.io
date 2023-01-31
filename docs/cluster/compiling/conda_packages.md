@@ -10,7 +10,7 @@ This way may eliminate some work on installing dependencies
         - May solve by installing `libgcc-ng=12` + `zlib=1.2.11`
     - Remember `ucx` and `openmp` for `openmpi`
     - For infiniBand, use `libibverbs-cos6-x86_64`
-    - Don't use `mamba`, will cause crash
+    - Don't use `mamba`, will cause the crash
 
 ## USC2_Tachyon - Centos 6.9
 
