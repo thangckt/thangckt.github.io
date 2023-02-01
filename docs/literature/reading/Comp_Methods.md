@@ -31,7 +31,7 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 ## ML Basic
 
 
-- PyTorch for Deep Learning   &nbsp; &nbsp; [Notebook](https://thangckt.github.io/pytorch_deep_learning){target="_blank"}
+- PyTorch for Deep Learning   &nbsp; &nbsp; [Notebook](https://www.learnpytorch.io/){target="_blank"}
 
 - Physics-based Deep Learning | N. Thuerey| [pdf](https://arxiv.org/pdf/2109.05237.pdf){target="_blank"},  [Notebook](http://physicsbaseddeeplearning.org/intro.html){target="_blank"}
 - An Introduction to Machine Learning | | [pdf](./pdf_ML/An_Introduction_to_Machine_Learning.pdf){target="_blank"}
