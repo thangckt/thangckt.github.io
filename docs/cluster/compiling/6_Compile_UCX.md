@@ -317,7 +317,7 @@ cd xpmem-2.6.3
 
 #### Prepare source code
 
-Use one of these two following options
+Use one of these two following options (now use from source code)
 
 **From pre-configured Release**
 
@@ -344,6 +344,8 @@ cd ucx-1.13.1
 cd /home1/p001cao/local/wSourceCode/tooldev
 git clone --branch v1.14.x https://github.com/openucx/ucx.git  ucx-1.14.x
 cd ucx-1.14.x
+# git pull origin v1.14.x
+
 module load tooldev/autoconf-2.71
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
