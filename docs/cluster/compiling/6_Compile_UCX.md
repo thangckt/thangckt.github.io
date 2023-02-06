@@ -357,6 +357,7 @@ export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 #### Building
 
 ```shell
+rm -rf build
 mkdir build  &&  cd build
 
 module load compiler/llvm-14          # clang + lld
