@@ -337,7 +337,7 @@ tar xvf openmpi-4.1.4.tar.gz
 cd openmpi-4.1.4
 ```
 
-**Download source code**
+**Download source code** (now working with this)
 
 ???+ note
 
@@ -349,6 +349,8 @@ cd openmpi-4.1.4
 cd /home1/p001cao/local/wSourceCode
 git clone --branch v4.1.x https://github.com/open-mpi/ompi.git  ompi-4.1.x
 cd ompi-4.1.x
+# git pull origin v4.1.x
+
 module load tooldev/autoconf-2.71
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
@@ -360,7 +362,7 @@ export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 #### Building
 
 ```sh
-mkdir build_clang && cd build_clang
+rm -rf build_clang && mkdir build_clang && cd build_clang
 
 module load compiler/llvm-14          # clang + lld
 
