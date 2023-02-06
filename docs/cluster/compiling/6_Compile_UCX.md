@@ -321,10 +321,10 @@ Use one of these two following options
 
 **From pre-configured Release**
 
-```note
-- ucx-1.12.1 cause compiling error due to missing file. But ucx-1.13 work
-- "-fuse-ld=lld -lrt" error with ucx-1.12.0, so use 'gold' temporary. But lld work with ucx-1.13
-```
+???+ note
+    - ucx-1.12.1 cause compiling error due to missing file. But ucx-1.13 work
+    - "-fuse-ld=lld -lrt" error with ucx-1.12.0, so use 'gold' temporary. But lld work with ucx-1.13
+
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
@@ -334,11 +334,11 @@ cd ucx-1.13.1
 
 **From source code**
 
-```note
-- consider to update: `autoconf`, `libtool`, and `automake`
-- To solve error with `libuct_ib.la: command not found`, use `./contrib/configure-release` but not `/configure`
-- It work now.
-```
+???+ note
+    - consider to update: `autoconf`, `libtool`, and `automake`
+    - To solve error with `libuct_ib.la: command not found`, use `./contrib/configure-release` but not `/configure`
+    - It work now.
+
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
