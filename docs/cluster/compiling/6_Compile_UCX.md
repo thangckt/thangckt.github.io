@@ -317,7 +317,7 @@ cd xpmem-2.6.3
 
 #### Prepare source code
 
-Use one of these two following options (now use from source code)
+Use one of these two following options (now using **from source code**)
 
 **From pre-configured Release**
 
