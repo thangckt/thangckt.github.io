@@ -4,10 +4,9 @@ sort: 3
 
 # OpenMPI-4
 
-<img src="https://www.open-mpi.org/images/open-mpi-logo.png" style="float:left; margin-right:20px" width="150" />
+<img src="https://www.open-mpi.org/images/open-mpi-logo.png" style="float:left; margin-right:20px" width="150" /> <br>
 
 [Open MPI](https://www.open-mpi.org/) is a Message Passing Interface (MPI) library project combining technologies and resources from several other projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI). 
-<br>
 
 ???+ note
 
