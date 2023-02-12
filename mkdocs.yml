@@ -225,7 +225,10 @@ nav:
 
 
   - Literature:
-    - literature/3_research_ethic.md
+    - Video_series:
+      - Researh Ethics: literature/literature/videos/1_research_ethic.md
+      - literature/literature/videos/2_calculus_essence.md
+
     - Research Writing:
       - Preparing:
         - Instroduction of research paper: literature/research_writing/11_introduction_paper.md
