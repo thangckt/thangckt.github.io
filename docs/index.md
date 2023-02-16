@@ -34,10 +34,10 @@ else:
 <!-- <img src="./1images/monkey.png" style="float:left; margin-right:20px" width="190" /> -->
 <img src="./1images/my_picture3x3.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" />
 This site dedicates to my personal notes. <br>
-These notes do not reflect either community or third-party rules. <br>
+These notes reflect neither community nor third-party rules. <br>
 These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
-In essence, these notes are not written for you; notwithstanding, it's glad if you find something valid here. In other cases, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I did.
+In essence, this is my dark site; notwithstanding, it's glad if you find something valid here. In other cases, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I did.
 <br> <br>
 
 <!--
