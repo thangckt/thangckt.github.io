@@ -3,7 +3,8 @@
 By Jingchao Zhang, Yifan Li and Akhil Docca <br>
 From [NVIDIA's blog](https://developer.nvidia.com/blog/accelerated-molecular-simulation-using-deep-potential-workflow-with-ngc/)
 
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-1.png"   />
+<p align="center">
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-1.png"   /> </p>
 
 Molecular simulation communities have faced the accuracy-versus-efficiency dilemma in modeling the potential energy surface and interatomic forces for decades. Deep Potential, the artificial neural network force field, solves this problem by combining the speed of classical molecular dynamics (MD) simulation with the accuracy of density functional theory (DFT) calculation.1 This is achieved by using the GPU-optimized package DeePMD-kit, which is a deep learning package for many-body potential energy representation and MD simulation.2
 
@@ -15,7 +16,8 @@ Deep potential is essentially a combination of machine learning and physical pri
 
 The image shows the new computing paradigm that combines molecular modeling, machine learning and high-performance computing to understand the interatomic forces of molecules compared to the traditional methods.
 
-![img2](https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-2.png)<br>
+<p align="center">
+![img2](https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-2.png) </p> <br>
 *Figure 1. A new computing paradigm composed of molecular modeling, AI, and HPC. (Figure courtesy: Dr. Linfeng Zhang, DP Technology)*
 
 The entire workflow is shown in Figure 2. The data generation step is done with VASP and QE. The data preparation, model training, testing, and compression steps are done using DeePMD-kit. The model deployment is in LAMMPS.
