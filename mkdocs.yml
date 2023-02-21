@@ -164,7 +164,7 @@ plugins:
       # GLOBAL CATEGORY: configs for {{ blog_content }}
       dirs:
         - blog
-      template: override/custom-blog.html
+      # template: override/custom-blog.html
 
       # INDIVIDUAL CATEGORIES: configs for {{ blog_content name }}
       categories:
