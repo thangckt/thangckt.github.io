@@ -54,7 +54,7 @@ In essence, this is my dark cave; notwithstanding, I'm glad if you find somethin
 </iframe>
 </div>
 
-<!--
+
 <br>
-# Welcome to my site -->
+# Welcome to my site
 
