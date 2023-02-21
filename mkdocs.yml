@@ -160,25 +160,25 @@ plugins:
           #   - https://mkdocstrings.github.io/autorefs/objects.inv
   # - enumerate-headings
 
-  - blogging:   # https://github.com/liang2kl/mkdocs-blogging-plugin
-      # GLOBAL CATEGORY: configs for {{ blog_content }}
-      dirs:
-        - blog
-      # template: override/custom-blog.html
+  # - blogging:   # https://github.com/liang2kl/mkdocs-blogging-plugin
+  #     # GLOBAL CATEGORY: configs for {{ blog_content }}
+  #     dirs:
+  #       - blog
+  #     # template: override/custom-blog.html
 
-      # INDIVIDUAL CATEGORIES: configs for {{ blog_content name }}
-      categories:
-        - name: reviews
-          dirs:
-            - reviews
+  #     # INDIVIDUAL CATEGORIES: configs for {{ blog_content name }}
+  #     categories:
+  #       - name: reviews
+  #         dirs:
+  #           - reviews
 
-      # GLOBAL CONFIG: configs apply to all categories
-      time_format: '%d/%m/%y %H:%M:%S'
-      meta_time_format: '%Y-%m-%d %H:%M:%S'
-      features:
-        tags:
-          index_page: tags.md
-          insert: top
+  #     # GLOBAL CONFIG: configs apply to all categories
+  #     time_format: '%d/%m/%y %H:%M:%S'
+  #     meta_time_format: '%Y-%m-%d %H:%M:%S'
+  #     features:
+  #       tags:
+  #         index_page: tags.md
+  #         insert: top
 
 
 ### Extra theme
@@ -275,5 +275,5 @@ nav:
     - Reading list:
       - miscell/reading/1_read_list.md
 
-#   - News:
-#     - blog/posts/DeePMD_kit.md
+  - News:
+    - blog/posts/DeePMD_kit.md
