@@ -3,7 +3,7 @@
 By Jingchao Zhang, Yifan Li and Akhil Docca <br>
 From [NVIDIA's blog](https://developer.nvidia.com/blog/accelerated-molecular-simulation-using-deep-potential-workflow-with-ngc/)
 
-![img1](https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-1.png)
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-1.png" width=700 style="center" />
 
 Molecular simulation communities have faced the accuracy-versus-efficiency dilemma in modeling the potential energy surface and interatomic forces for decades. Deep Potential, the artificial neural network force field, solves this problem by combining the speed of classical molecular dynamics (MD) simulation with the accuracy of density functional theory (DFT) calculation.1 This is achieved by using the GPU-optimized package DeePMD-kit, which is a deep learning package for many-body potential energy representation and MD simulation.2
 
