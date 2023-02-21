@@ -17,7 +17,7 @@ Deep potential is essentially a combination of machine learning and physical pri
 The image shows the new computing paradigm that combines molecular modeling, machine learning and high-performance computing to understand the interatomic forces of molecules compared to the traditional methods.
 
 <p align="center">
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-2.png">
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-2.png"> <br>
 <em>Figure 1. A new computing paradigm composed of molecular modeling, AI, and HPC. (Figure courtesy: Dr. Linfeng Zhang, DP Technology)</em> </p>
 
 The entire workflow is shown in Figure 2. The data generation step is done with VASP and QE. The data preparation, model training, testing, and compression steps are done using DeePMD-kit. The model deployment is in LAMMPS.
@@ -25,7 +25,7 @@ The entire workflow is shown in Figure 2. The data generation step is done with 
 This figure displays the workflow of training and deploying a deep potential model. The workflow includes data generation, data preparation, model training, model testing, model compression, and model deployment.
 
 <p align="center">
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/11/Deep-Potential-NGC-Fig2.png" >
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/11/Deep-Potential-NGC-Fig2.png" > <br>
 <em>Figure 2. Diagram of the DeePMD workflow.</em> </p>
 
 ## Why Containers?
@@ -59,7 +59,7 @@ The projector-augmented wave pseudopotentials are employed to describe the inter
 This figure displays the top view of a single layer graphene system with 98 carbon atoms.
 
 <p align="center">
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-3-1.png" >
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-3-1.png" > <br>
 <em>Figure 3. A graphene system composed of 98 carbon atoms is used in AIMD simulation.</em> </p>
 
 ## Quantum Espresso
@@ -140,7 +140,7 @@ The DeePMD-kit prints detailed information on the training and validation data s
 This image is a screenshot of the DP training output. Summaries of the training and validation dataset are shown with detailed information on the number of atoms, batch size, number of batches in the system and the probability of using the system.
 
 <p align="center">
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/11/DeePMD-Fig-3.jpg" >
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/11/DeePMD-Fig-3.jpg" > <br>
 <em>Figure 4. Screenshot of the DP training output.</em> </p>
 
 During the training, the error of the model is tested every disp_freq training step with the batch used to train the model and with numb_btch batches from the validating data. The training error and validation error are printed correspondingly in the file disp_file (default is lcurve.out). The batch size can be set in the input script by the key batch_size in the corresponding sections for training and validation data set.
@@ -166,7 +166,7 @@ $ singularity exec --nv docker://nvcr.io/hpc/deepmd-kit:v2.0.3 dp test -m frozen
 This image shows the total training loss, energy loss, force loss and learning rate decay with training steps from 0 to 1,000,000. Both the training and validation loss decrease monotonically with training steps.
 
 <p align="center">
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-4-1.png" >
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-4-1.png" > <br>
 <em>Figure 5. Training loss with steps</em> </p>
 
 The results are shown in Figure 6.
@@ -174,7 +174,7 @@ The results are shown in Figure 6.
 This image displays the inferenced energy and force in the y-axis, and the ground true on the x-axis. The inferenced values soundly coincide with the ground truth with all data distributed in the diagonal direction.
 
 <p align="center">
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/11/DeePMD-Fig-4.jpg.png" >
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/11/DeePMD-Fig-4.jpg.png" > <br>
 <em>Figure 6. Test of the prediction accuracy of trained DP model with AIMD energies and forces.</em> </p>
 
 ## Model export and compression
@@ -221,7 +221,7 @@ The system configuration after NVT relaxation is shown in Figure 7. It can be ob
 The image displays the side view of the single layer graphene system after thermal relaxation in LAMMPS.
 
 <p align="center">
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-7-1.png" >
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-7-1.png" > <br>
 <em>Figure 7.  Atomic configuration of the graphene system after relaxation with deep potential.</em> </p>
 
 The system temperature is shown in Figure 8.
@@ -229,7 +229,7 @@ The system temperature is shown in Figure 8.
 The image displays the temperature profiles of the graphene system under NVT and NVE ensembles from 0 to 20 picoseconds. The first 10 picosecond is NVT and the second 10 picosecond is NVE.
 
 <p align="center">
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-8-1.png" >
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Deep-Potential-Fig-8-1.png" > <br>
 <em>Figure 8. System temperature under NVT and NVE ensembles. The MD system driven by deep potential is very stable after relaxation.</em> </p>
 
 To validate the accuracy of the trained DP model, the calculated radial distribution function (RDF) from AIMD, DP and Tersoff, are plotted in Figure 9. The DP model-generated RDF is very close to that of AIMD, which indicates that the crystalline structure of graphene can be well presented by the DP model.
@@ -237,7 +237,7 @@ To validate the accuracy of the trained DP model, the calculated radial distribu
 This image displays the plotted radial distribution function from three different methods, including DP, Tersoff and AIMD, which are denoted in black, red and blue solid lines respectively.
 
 <p align="center">
-<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/11/DeePMD-Fig-8.jpg.png" >
+<img src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/11/DeePMD-Fig-8.jpg.png" > <br>
 <em>Figure 9. Radial distribution function calculated by AIMD, DP and Tersoff potential, respectively. It can be observed that the RDF calculated by DP is very close to that of AIMD.</em> </p>
 
 ## Conclusion
