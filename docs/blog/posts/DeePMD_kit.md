@@ -1,4 +1,3 @@
-
 # Accelerated Molecular Simulation Using Deep Potential Workflow with NGC
 
 By Jingchao Zhang, Yifan Li and Akhil Docca <br>
@@ -30,7 +29,7 @@ This figure displays the workflow of training and deploying a deep potential mod
 
 A container is a portable unit of software that combines the application, and all its dependencies, into a single package that is agnostic to the underlying host OS.
 
-The workflow in this post involves AIMD, DP training, and LAMMPS MD simulation. It is nontrivial and time-consuming to install each software package from source with the correct setup of compiler, MPI, GPU library, and optimization flags.
+The workflow in this post involves AIMD, DP training, and LAMMPS MD simulation. It is nontrivial and time-consuming to install each software package from source with the correct setup of the compiler, MPI, GPU library, and optimization flags.
 
 Containers solve this problem by providing a highly optimized GPU-enabled computing environment for each step, and eliminates the time to install and test software.
 
