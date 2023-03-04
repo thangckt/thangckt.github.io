@@ -17,4 +17,3 @@ Content of `/site` is available at `http://thangckt.github.io`
 
 The error that breakdown header is possible due to:
 - `pip install mkdocs-jupyter` in github-action --> conflict with tabs_header_thang. (This error my be solved in Version 9)
-
