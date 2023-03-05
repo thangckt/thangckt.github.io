@@ -32,7 +32,7 @@ else:
 <!--- #### [My CV](https://thangckt.github.io/cv) -->
 
 <!-- <img src="./1images/monkey.png" style="float:left; margin-right:20px" width="190" /> -->
-<img src="./1images/my_picture3x3.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" />
+<img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" />
 This site dedicates to my personal notes. <br>
 These notes reflect neither community nor third-party rules. <br>
 These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
@@ -42,7 +42,6 @@ In essence, this is my dark cave; notwithstanding, I'm glad if you find somethin
 
 <!--
 !!! quote ""
-
     You cannot teach a man anything, you can only help him find it within himself - Galileo Galilei (1564–1642)
 -->
 
@@ -54,7 +53,4 @@ In essence, this is my dark cave; notwithstanding, I'm glad if you find somethin
 </iframe>
 </div>
 
-
-
-# Welcome 
-
+# Welcome

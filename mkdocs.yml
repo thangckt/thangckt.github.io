@@ -77,9 +77,9 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/thangckt
       name: thangckt on Linkedin
-    - icon: fontawesome/brands/orcid
-      link: https://orcid.org/0000-0001-9826-5397
-      name: thangckt on ORCID
+    # - icon: fontawesome/brands/orcid
+    #   link: https://orcid.org/0000-0001-9826-5397
+    #   name: thangckt on ORCID
     # - icon: fontawesome/brands/discord
     #   link: https://discord.com/channels/@thangckt#9473
     #   name: thangckt on Discord
