@@ -203,6 +203,7 @@ nav:
       - LAMMPS: cluster/compiling/LAMMPS.md
       - GCC: cluster/compiling/2_Compile_GCC.md
       - Open MPI: cluster/compiling/3_Compile_openMPI.md
+      - cluster/compiling/Plumed.md
       - cluster/compiling/CP2K.md
       - cluster/compiling/CMake.md
       - cluster/compiling/Libtool.md
