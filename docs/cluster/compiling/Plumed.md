@@ -5,7 +5,11 @@ PLUMED 2.4 requires a compiler that supports C++11, and needs one of the followi
 - clang 3.3
 - intel 15        (need to install Intel)
 
-NOTE: Intel alone does not fully support C++11 if the environment is without gcc 4.8 or newer. Installing an external GCC is a solution for this, but this may cause some errors when running Plumed due to cross-compiling.
+Intel alone does not fully support C++11 if the environment is without gcc 4.8 or newer. Installing an external GCC is a solution for this, but this may cause some errors when running Plumed due to cross-compiling.
+
+!!! note
+    - Making lepton library faster `--enable-asmjit`
+
 
 ## Dowload
 - [github](https://github.com/plumed/plumed2)
@@ -58,8 +62,6 @@ c. or use internal link: (blas & lapack is automatically built, need FORTRAN com
 VMD trajectory plugins
 https://www.plumed.org/doc-master/user-doc/html/_installation.html
 
-Making lepton library faster
---enable-asmjit
 
 #Configuring PLUMED
 ./configure --prefix=/uhome/p001cao/local/app/plumed2/2.6htt \
@@ -110,50 +112,11 @@ Configure
 --enable-openmp --enable-modules=all --enable-asmjit \
 --prefix=/uhome/p001cao/local/app/plumed2/2.6httIMPI \
 
-# 2. USC 2:
-# impi2016 (not support openMP)
-module load mpi/intel-xe2016/impi-xe2016u4
-module load compiler/intel/xe2016u4
-check: $ which mpiicpc
 
-# or impi2019
-(source /home1/p001cao/local/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin/mpivars.sh)
-NOTE: https://software.intel.com/en-us/articles/using-environment-modules-with-the-intel-development-tools
-module load mpi/impi-xe19u5
-module load intel/mkl-xe19u5
-module load compiler/gcc-9.2.0
-source mpivars.sh
-Configure
-./configure CXX=mpiicpc CC=mpiicc LIBS="-mkl" \
---enable-openmp --enable-modules=all --enable-asmjit \
---prefix=/home1/p001cao/local/app/plumed2/2.7htt-impi
-
-III. OMPI+ GCC
-don't use external "mkl" --> will cannot compile
-# USC 1
-module load mpi/ompi4.0.3-gcc9.2.0
-Configure
-./configure CXX=mpic++ CC=mpicc \
---enable-openmp --enable-modules=all --enable-asmjit \
---prefix=/uhome/p001cao/local/app/plumed2/2.7htt-gcc
-###############################
 
 
 # USC 2
-module load mpi/ompi4.0.3-gcc9.2.0
-module load tool_dev/binutils-2.32              # gold linker -->  must use the same linker with MPI
-Configure
-./configure CXX=mpic++ CC=mpicc LDFLAGS="-fuse-ld=gold -lrt" \
---enable-openmp --enable-modules=all --enable-asmjit \
---prefix=/home1/p001cao/local/app/plumed2/2.7htt-gcc
 
-################
-module load compiler/gcc/7.4.0
-module load mpi/gcc-7.4.0/ompi/3.1.4
-Configure
-./configure CXX=mpic++ CC=mpicc \
---enable-openmp --enable-modules=all --enable-asmjit \
---prefix=/home1/p001cao/local/app/plumed2/2.7htt-gcc3
 
 IV. Install PLUMED using openmpi-4.0.1 + GCC-7.4.0 (CAN)
 1. Module load:
@@ -177,12 +140,32 @@ CXX=mpic++ --disable-external-blas --disable-external-lapack \
 
 ### with Conda
 
-module load mpi/ompi4.0.3-clang10
-Configure
-./configure CXX=mpic++ CC=mpicc \
---enable-openmp --enable-modules=all --enable-asmjit \
---prefix=/home1/p001cao/local/app/plumed2/2.7htt-clang
+Need create conda env and install `ompi`, [see this](https://thangckt.github.io/cluster/compiling/conda_packages/#usc2_tachyon-centos-69)
 
+check MPI compiler:  `mpic++ --version`
+
+```sh
+cd /home1/p001cao/local/wSourceCode
+git clone  -b master   https://github.com/plumed/plumed2.git    plumed  # hack-the-tree  master
+cd plumed
+git pull origin master
+```
+
+```sh
+module load mpi/ompi4.0.3-clang10
+export myCOMPILER=/home1/p001cao/local/app/openmpi/4.1.x-clang14
+export PATH=${myCOMPILER}/bin:$PATH
+export CC=mpicc  export CXX=mpic++  export FC=mpifort
+export myPREFIX=/home1/p001cao/local/app/plumed2/ompi_conda_master
+
+./configure --prefix=${myPREFIX} \
+--enable-openmp --enable-modules=all --enable-asmjit \
+--disable-external-blas --disable-external-lapack
+```
+
+```sh
+make -j 16 && make install
+```
 
 ???+ "see also"
     [1] https://www.plumed.org/doc-master/user-doc/html/_installation.html <br>
