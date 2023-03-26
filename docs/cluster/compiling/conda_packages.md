@@ -20,7 +20,7 @@ This way may eliminate some work on installing dependencies
 
     - Some dependence require `libgcc-ng=12`
     - If running Lammmps requires `GLIBC>=2.17`, maybe solving by downgrade `zlib=1.2.11`
-    - `Plumed` in conda does not support MPI and may have [limited features](https://www.plumed.org/doc-v2.8/user-doc/html/_installation.html).
+    - `Plumed` in conda does not support MPI and may have [limited features](https://www.plumed.org/doc-v2.8/user-doc/html/_installation.html). Therefore, compile PLUMED separately, using MPI in [conda evironment](https://thangckt.github.io/cluster/compiling/Plumed/)
     - LAMMPS in conda may have [limited features?](https://docs.lammps.org/Install_conda.html). LAMMPS in conda also included Plumed
 
 **Install Lammps** in Conda-env
