@@ -152,8 +152,8 @@ git pull origin master
 ```
 
 ```sh
-module load mpi/ompi4.0.3-clang10
-export myCOMPILER=/home1/p001cao/local/app/openmpi/4.1.x-clang14
+module load conda/py310lammps
+export myCOMPILER=/home1/p001cao/local/app/miniconda3/envs/py310lammps
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export myPREFIX=/home1/p001cao/local/app/plumed2/ompi_conda_master
