@@ -23,6 +23,7 @@ This way may eliminate some work on installing dependencies
     - If running Lammmps requires `GLIBC>=2.17`, maybe solving by downgrade `zlib=1.2.11`
     - `Plumed` in conda does not support MPI and may have [limited features](https://www.plumed.org/doc-v2.8/user-doc/html/_installation.html). Therefore, compile PLUMED separately, using MPI in [conda evironment](https://thangckt.github.io/cluster/compiling/Plumed/)
     - LAMMPS in conda may have [limited features?](https://docs.lammps.org/Install_conda.html). LAMMPS in conda also included Plumed
+    - `libgcc-ng=12 libgfortran-ng=12` is required for lammps=2022
 
 **Install Lammps** in Conda-env
 
@@ -31,7 +32,7 @@ module load conda/conda3
 conda create -n py39lammps python=3.9
 source activate py39lammps
 
-conda install -c conda-forge -y clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
+conda install -c conda-forge -y clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 zlib=1.2.11 \
     libibverbs-cos6-x86_64 openmpi ucx openmp  lammps=2022
 ```
 
