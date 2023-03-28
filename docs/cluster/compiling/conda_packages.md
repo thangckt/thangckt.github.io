@@ -8,9 +8,10 @@ This way may eliminate some work on installing dependencies
     - Should in all packages available in `conda-forge`
     - Some packages require GLIBC=2.17.
         - May solve by installing `libgcc-ng=12` + `zlib=1.2.11`
-    - Remember `ucx` and `openmp` for `openmpi`
     - For infiniBand, use `libibverbs-cos6-x86_64`
     - Don't use `mamba`, will cause the crash
+    - Remember `ucx` and `openmp` for `openmpi`
+    - Note `openmpi` may have problem with python `3.10`. Should use python `3.9`
 
 ## USC2_Tachyon - Centos 6.9
 
@@ -87,8 +88,8 @@ clang lld llvm-tools
 
 ```sh
 module load conda/conda3
-conda create -n py310gpaw_lammps python=3.10
-source activate py310gpaw_lammps
+conda create -n py39gpaw_lammps python=3.9
+source activate py39gpaw_lammps
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
     fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp libibverbs-cos6-x86_64 \
