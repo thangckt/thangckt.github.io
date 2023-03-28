@@ -4,7 +4,7 @@ This way may eliminate some work on installing dependencies
 
 ???+ note
 
-    - Use the `clang` compiler
+    - Consider `clang` compiler. But `clang lld llvm-tools` may have conflicts with `gcc`, so avoid using.
     - Should in all packages available in `conda-forge`
     - Some packages require GLIBC=2.17.
         - May solve by installing `libgcc-ng=12` + `zlib=1.2.11`
@@ -32,7 +32,7 @@ module load conda/conda3
 conda create -n py39lammps python=3.9
 source activate py39lammps
 
-conda install -c conda-forge -y clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 zlib=1.2.11 \
+conda install -c conda-forge -y  libgcc-ng=12 libgfortran-ng=12 zlib=1.2.11 \
     libibverbs-cos6-x86_64 openmpi ucx openmp  lammps=2022
 ```
 
