@@ -13,7 +13,6 @@ This way may eliminate some work on installing dependencies
         - `libstdcxx-ng` is required for `openmp`
         - `libgfortran-ng` is required for `openmpi`
         - `libibverbs-cos6-x86_64` is required for infiniBand
-    - Note `openmpi` may have problem with python `3.10`. Should use python `3.9`
 
 ## USC2_Tachyon - Centos 6.9
 
@@ -31,14 +30,14 @@ This way may eliminate some work on installing dependencies
 
 ```shell
 module load conda/conda3
-conda create -n py39lammps python=3.9
-source activate py39lammps
+conda create -n py310lammps python=3.10
+source activate py310lammps
 
 conda install -c conda-forge -y clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
     libibverbs-cos6-x86_64 \
 ```  
 ```sh 
-conda install -c conda-forge -y openmpi ucx openmp  lammps=2022
+conda install -c conda-forge -y openmpi ucx openmp  lammps=2022.06.23
 ```
 
 **Create a module file** for Lammps
