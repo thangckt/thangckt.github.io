@@ -4,13 +4,15 @@ This way may eliminate some work on installing dependencies
 
 ???+ note
 
-    - Consider `clang` compiler. But `clang lld llvm-tools` may have conflicts with `gcc`, so avoid using.
+    - Consider `clang` compiler. 
     - Should in all packages available in `conda-forge`
+    - Don't use `mamba`, will cause the crash
     - Some packages require GLIBC=2.17.
         - May solve by installing `libgcc-ng=12` + `zlib=1.2.11`
-    - For infiniBand, use `libibverbs-cos6-x86_64`
-    - Don't use `mamba`, will cause the crash
     - Remember `ucx` and `openmp` for `openmpi`
+        - `libstdcxx-ng` is required for `openmp`
+        - `libgfortran-ng` is required for `openmpi`
+        - `libibverbs-cos6-x86_64` is required for infiniBand
     - Note `openmpi` may have problem with python `3.10`. Should use python `3.9`
 
 ## USC2_Tachyon - Centos 6.9
@@ -32,7 +34,7 @@ module load conda/conda3
 conda create -n py39lammps python=3.9
 source activate py39lammps
 
-conda install -c conda-forge -y  libgcc-ng=12 libgfortran-ng=12 zlib=1.2.11 \
+conda install -c conda-forge -y clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
     libibverbs-cos6-x86_64 openmpi ucx openmp  lammps=2022
 ```
 
