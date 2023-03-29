@@ -229,6 +229,7 @@ nav:
       - cluster/appSetting/8_WSL.md
     - Useful:
       - cluster/appSetting/VScode_perspectives.md
+      - cluster/appSetting/check_mail.md
       - cluster/refPage/cheatsheet.md
       - cluster/refPage/docs_syntax.md
 
