@@ -104,6 +104,14 @@ C:\DevProgram\miniconda3\envs\py37\Scripts
 C:\DevProgram\miniconda3\envs\py37\Library\bin
 ```
 
+- if install location by default
+
+```sh
+C:\Users\tha\miniconda3
+C:\Users\tha\miniconda3\Scripts
+C:\Users\tha\miniconda3\Library\bin
+```
+
 - Set default environment in anaconda On Windows: <https://tinyurl.com/y2meq2wm>
 right-lick on: Anaconda Powershell Prompt (miniconda3) shorcut --> properties -->Target:
 
