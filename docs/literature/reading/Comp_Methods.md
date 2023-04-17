@@ -54,9 +54,13 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 
 - Understanding Molecular Simulation | D. Frenkel |    [pdf](https://www.eng.uc.edu/~beaucag/Classes/AdvancedMaterialsThermodynamics/Books/%5BComputational%20science%20(San%20Diego,%20Calif.)%5D%20Daan%20Frenkel_%20Berend%20Smit%20-%20Understanding%20molecular%20simulation%20_%20from%20algorithms%20to%20applications%20(2002,%20Academic%20Press%20)%20-%20libgen.lc.pdf){target="_blank"}
 - Molecular Modelling: Priciples and Applications  |  |  [pdf](https://chz276.ust.hk/public/Cloud::siqin/References/From-MD-to-MSM/Molecular%20Modelling%20Principles%20and%20Applications.pdf){target="_blank"}
-- Enhanced sampling methods for molecular dynamics simulations  | |   [pdf](./pdf/Enhanced_sampling_for_MD.pdf){target="_blank"}
+
 - Theory and Modeling of Polymer Nanocomposites  | |  [pdf](https://link.springer.com/content/pdf/10.1007/978-3-030-60443-1.pdf){target="_blank"}
 - Introduction to Materials Informatics  | |  [notebook](https://enze-chen.github.io/mi-book-2021){target="_blank"}
+
+## Enhanced Sampling
+- Enhanced sampling methods for molecular dynamics simulations |   [pdf](./pdf/Enhanced_sampling_for_MD.pdf){target="_blank"}
+- Hands-on tutorials: Advanced sampling methods using GROMACS &nbsp; [html](https://weitsehsu.com/course/advanced_sampling){target="_blank"}
 
 ## FEM
 
