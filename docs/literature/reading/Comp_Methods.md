@@ -16,6 +16,7 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 - Modelling with DFT    &nbsp;  [Notebook](https://thangckt.github.io/note_dft){target="_blank"}
 - Modelling with MD    &nbsp;  [Notebook](https://thangckt.github.io/note_md){target="_blank"}
 - Thang Note for ML    &nbsp;  [Notebook](https://thangckt.github.io/note_ml){target="_blank"}
+- Learn code    &nbsp;  [Notebook](https://thangckt.github.io/learncode){target="_blank"}
 
 ## Multiscale
 
