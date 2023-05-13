@@ -22,28 +22,28 @@ Use [TeXstudio](https://texstudio.org/)
 1.a. To put all Aux-compiled files into a folder:
 For MiKTeX with TeXstudio, go to `Options --> configuration`
 
-    ```
-    ## Use pdflatex compiler:
-    Build:
-    --> Defaul Complier: PdfLatex
-    Commands:
-    --> PdfLaTeX: pdflatex.exe -synctex=1 -interaction=nonstopmode --aux-directory=auxDIR %.tex
-    --> BibTeX: bibtex.exe auxDIR/%
-    ```
+```sh
+## Use pdflatex compiler:
+Build:
+--> Defaul Complier: PdfLatex
+Commands:
+--> PdfLaTeX: pdflatex.exe -synctex=1 -interaction=nonstopmode --aux-directory=auxDIR %.tex
+--> BibTeX: bibtex.exe auxDIR/%
+```
 
-    ```
-    ## Or Use latexmk compiler (inuse):
-    --> Require Install "strawberry perl": https://strawberryperl.com/
-    Build:
-    --> Defaul Complier: Latexmk
-    Commands:
-    --> latexmk:  latexmk -pdf  -synctex=1 -outdir=Zoutdir -f -recorder-  %
-    --> BibTeX: bibtex.exe %
-    ```
+```sh
+## Or Use latexmk compiler (inuse):
+--> Require Install "strawberry perl": https://strawberryperl.com/
+Build:
+--> Defaul Complier: Latexmk
+Commands:
+--> latexmk:  latexmk -pdf  -synctex=1 -outdir=Zoutdir -f -recorder-  %
+--> BibTeX: bibtex.exe %
+```
 
 Log File Seach Paths (in build): `Zoutdir`. Log file is important to figure out the error. So if use --aux-directory, must add "Additional Search Paths" for "Log File" is "Zoutdir"
 
-    ```
+    ```sh
     Build: Show Advanced Options
     --> Additional Search Paths:
         --> Log File: Zoutdir
@@ -62,14 +62,21 @@ Log File Seach Paths (in build): `Zoutdir`. Log file is important to figure out 
     ```
     https://tinyurl.com/y8tq5z9p 
 
-[TexMaker](https://www.xm1math.net/texmaker/download.html) is a parent app of Texstudio
-
 1.d. Dark theme for TextStudio
 - Download the file *.txsprofile elsewhere
 https://www.pauljhurtado.com/teaching/software.html
 https://tex.stackexchange.com/questions/108315/how-can-i-set-a-dark-theme-in-texstudio
 - start TeXstudio -> Options->Load Profile
 - Options->Save current setting
+
+[TexMaker](https://www.xm1math.net/texmaker/download.html) is a parent app of Texstudio
+
+1.e. add TeXLive to TeXstudio's $PATH$
+
+    ```sh
+    Build: Show Advanced Options
+    --> In the "Build Options", fill in the TeXLive bin directory in the "Commands ($PATH)" field: C:\texlive\2022\bin
+    ```
 
 
 ### 2. Latex compiler
