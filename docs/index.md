@@ -37,7 +37,7 @@ These notes reflect neither community nor third-party rules. <br>
 These notes are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
 In essence, this is my dark valley; notwithstanding, I'm glad if you find something valid here. In other cases, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I do.
-<br> <br> <br>
+<br> 
 
 <!--
 !!! quote ""
