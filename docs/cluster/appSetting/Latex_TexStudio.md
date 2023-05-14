@@ -196,3 +196,16 @@ Zotero -> Edit -> Preference -> Better BibTex -> Fields to omit from export: abs
 ### Create database (*.bib file) with Mendeley
 
 https://tinyurl.com/y49dqosw
+
+
+## Zotero
+detect and delete unassociated pdf's in my storage folder using Zotfile
+
+1. Open `ZotFile preferences`, set `Location of Files --> Custom Location` to /tmp folder
+2. Select `My Library` --> select all references, do Right-click --> `Manage Attachments --> Rename and Move`. This will move all associated attachments from the storage folder into /tmp folder and leave the unassociated files in the old folder (/storage).
+3. Using the file browser, select all files in path/to/storage, move to trash
+4. Set `Location of Files --> Custom Location` to its original value,
+6. Select `My Library` --> select all references, do Right-click --> `Manage Attachments --> Rename and Move` again. This will move all attachments back to the original storage folder.
+
+
+
