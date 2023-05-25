@@ -262,8 +262,8 @@ nav:
 
 
   # - Codedocs: codedocs.md
-  - Thatool: https://thangckt.github.io/thatool
-  - MediaLib: https://thangckt.github.io/mediaLib
+  - Thatool: ./thatool
+  - MediaLib: ./mediaLib
 
 
   - Miscellaneous:      # Miscellaneous    Heterogeneous
