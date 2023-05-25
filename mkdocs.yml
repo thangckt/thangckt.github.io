@@ -1,6 +1,6 @@
 site_name: Thang Nguyen
 site_author: thangckt
-site_url: https://thangckt.github.io
+site_url: https://thang.eu.org
 repo_url: ""
 edit_uri: "https://github.com/thangckt/src_thangckt.github.io/tree/main/docs"
 
@@ -195,7 +195,7 @@ extra_css:
 ###=======================================
 ## Page tree
 nav:
-  - Home: https://thangckt.github.io
+  - Home: ./
   # - About: index.md
   - Cluster:
     - Compiling:
