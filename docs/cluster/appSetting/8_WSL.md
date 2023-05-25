@@ -13,8 +13,8 @@ Some conda packages are not available for Windows; therefore we in WSL. And VSco
 ### Enable BIOS & windows setting
 
 - Enable [Virtual Techology in BIOS](https://www.sony-asia.com/electronics/support/articles/S500016173)
-- Win Setting: `Control Panel` --> `Program` --> `Turn Windows features on or off` 
-    --> `Windows Subsystem for Linux`
+- Win Setting: `Control Panel` --> `Program` --> `Turn Windows features on or off`  <br>
+    --> `Windows Subsystem for Linux`   <br>
     --> `Virtual Machine Platform`
 
 May also need to update WSL2 Linux kernel, by download at [this link](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
