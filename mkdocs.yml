@@ -195,7 +195,7 @@ extra_css:
 ###=======================================
 ## Page tree
 nav:
-  - Home: ./
+  - Home: thangckt.github.io
   # - About: index.md
   - Cluster:
     - Compiling:
@@ -262,8 +262,8 @@ nav:
 
 
   # - Codedocs: codedocs.md
-  - Thatool: ./thatool
-  - MediaLib: ./mediaLib
+  - Thatool: thangckt.github.io/thatool
+  - MediaLib: thangckt.github.io/mediaLib
 
 
   - Miscellaneous:      # Miscellaneous    Heterogeneous
