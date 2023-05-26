@@ -1,2 +1,0 @@
-# Preparing tables and figures
-

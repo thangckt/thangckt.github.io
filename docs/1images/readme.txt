@@ -1,1 +1,0 @@
-https://www.iconsdb.com/orange-icons/one-note-icon.html
