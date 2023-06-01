@@ -3,7 +3,7 @@ name: Build & Deploy to GitHub Pages manually (to can add CNAME)
 on:
   push:
     branches:
-      - main
+      - stop_branch # main
 
 jobs:
   deploy:
