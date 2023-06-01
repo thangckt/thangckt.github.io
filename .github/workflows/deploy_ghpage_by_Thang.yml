@@ -11,10 +11,11 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Install mkdocs
         run: |
+          pip install mkdocs
           pip install git+https://github.com/thangckt/mkdocs-material.git@master         # tabs_header_v8    master    tabs_header_yinkh
           pip install mkdocstrings[python]>=0.18
           
