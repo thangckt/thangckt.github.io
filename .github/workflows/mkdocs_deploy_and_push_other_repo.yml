@@ -30,8 +30,7 @@ jobs:
           # pip install mkdocs-enumerate-headings-plugin #  mkdocs
 
       - name: MkDocs gh-deploy    # This will create `gh-pages` branch contain `mkdocs-site`
-        run: |
-          mkdocs gh-deploy --force --verbose
+        run: mkdocs gh-deploy --force --verbose
 
 
       # - name: Push to another repository  # This step to copy a folder and push to another repo
