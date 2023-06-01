@@ -197,6 +197,11 @@ extra_css:
 nav:
   - Home: thangckt.github.io
   # - About: index.md
+  # - Codedocs: codedocs.md
+  - thatool: thangckt.github.io/thatool
+  - molbuilder: thangckt.github.io/molbuilder
+  - MediaLib: thangckt.github.io/mediaLib
+  
   - Cluster:
     - Compiling:
       - LAMMPS: cluster/compiling/LAMMPS.md
@@ -232,7 +237,6 @@ nav:
       - cluster/refPage/cheatsheet.md
       - cluster/refPage/docs_syntax.md
 
-
   - Literature:
     - Video_series:
       - Researh Ethics: literature/videos/1_research_ethic.md
@@ -259,12 +263,6 @@ nav:
     - Reading:
       - Engineering: literature/reading/Mech_Science.md
       - Computational: literature/reading/Comp_Methods.md
-
-
-  # - Codedocs: codedocs.md
-  - Thatool: thangckt.github.io/thatool
-  - MediaLib: thangckt.github.io/mediaLib
-
 
   - Miscellaneous:      # Miscellaneous    Heterogeneous
     - Music:
