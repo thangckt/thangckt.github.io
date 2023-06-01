@@ -27,11 +27,13 @@ jobs:
           git config --local user.name "GitHub Actions"
           
       - name: Create CNAME file
-        run: |
-          echo "thang.eu.org" > site/CNAME
+        run: echo "thang.eu.org" > site/CNAME
     
       - name: Add CNAME file to Git index
         run: git --work-tree=site add CNAME
+        
+      - name: Copy rest/defaults.liquid to _includes directory
+        run: cp rest/defaults.liquid site/_includes
       
       - name: Create and push to gh-pages branch
         run: |
