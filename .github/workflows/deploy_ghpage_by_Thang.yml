@@ -28,8 +28,10 @@ jobs:
           
       - name: Create CNAME file
         run: |
-          echo "thang.eu.org" > CNAME
-          git --work-tree=site add CNAME
+          echo "thang.eu.org" > site/CNAME
+    
+      - name: Add CNAME file to Git index
+        run: git --work-tree=site add CNAME
       
       - name: Create and push to gh-pages branch
         run: |
