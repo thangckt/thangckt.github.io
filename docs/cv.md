@@ -7,4 +7,4 @@ hide:
 
 Loading...
 
-<meta http-equiv="refresh" content="0; URL=../cv/2023_Thang_CV.pdf" />
+<meta http-equiv="refresh" content="0; URL=../cv/2023_Thang_CV_acad.pdf" />
