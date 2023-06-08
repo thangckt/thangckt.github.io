@@ -37,7 +37,7 @@ This site dedicates to my personal notes. <br>
 These notes reflect neither community nor third-party rules. They are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
 This is my dark valley in essence; howbeit, I'm glad if you find something valid here. In other cases, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I do. <br>
-If you can "understand" Vietnamese then I will happy to introduce a famous song telling you [the scent of a dark night](https://www.youtube.com/watch?v=GKv8pgyPV8g).
+If you can "understand" the Vietnamese then I will happy to introduce a famous song telling you [the scent of a dark night](https://www.youtube.com/watch?v=GKv8pgyPV8g).
 <br>
 <br>
 
