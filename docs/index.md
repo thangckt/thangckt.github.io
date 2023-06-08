@@ -36,7 +36,7 @@ else:
 This site dedicates to my personal notes. <br>
 These notes reflect neither community nor third-party rules. They are random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
 
-This is my dark valley in essence; howbeit, I'm glad if you find something valid here. In other cases, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I do. Or if you can "understand" the Vietnamese, I will be happy to introduce a famous song telling you [a scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g).
+This is my dark valley in essence; howbeit, I'm glad if you find something valid here. In other cases, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I do. Or if you can "understand" the Vietnamese, I will be happy to introduce a famous song telling you [the scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g).
 <br>
 <br>
 
