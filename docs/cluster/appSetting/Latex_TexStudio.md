@@ -97,18 +97,20 @@ https://tex.stackexchange.com/questions/2063/how-can-i-manually-install-a-packag
 
 ![](./figure/fig1_miktex1.png)
 
+
 ## II. Use Language Tool in TexStudio
 
 https://tex.stackexchange.com/questions/155148/installing-language-tool-in-texstudio/401103
 - Download Language Tool (https://languagetool.org/download/): get .zip file
 - Unzip LT -> runlanguagetool.jar. Go to Text Checking > Options> Genera, then check Run as server on port>8081
+```
 ###########
 (kill process on port 8081 windows (if need): https://stackoverflow.com/questions/39632667/how-do-i-kill-the-process-currently-using-a-port-on-localhost-in-windows)
 Open Windows PowerShell as Administrator:
 netstat -aon | findstr 8081
 taskkill /f /pid 19984
 #############
-
+```
 ### Configure TextStudio to use LT
 
 go to `Options --> Configure TeXstudio... > Language checking`
