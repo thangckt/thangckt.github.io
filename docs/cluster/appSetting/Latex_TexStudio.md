@@ -89,6 +89,8 @@ Can install from Internet or offline installation (Should use this. because live
 - Download [ISO image](https://lab.uklee.pe.kr/tex-archive/systems/texlive/Images/).  
 - run (or double click): `install-tl-windows.bat`
 
+Open `TLShell Tex Live Manager` in Windows
+
 #### MiKTeX
 
 1.c. install a package on MiKTeX (Windows)
