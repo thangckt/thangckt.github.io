@@ -342,9 +342,9 @@ cd ucx-1.13.1
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
-git clone --branch v1.14.x https://github.com/openucx/ucx.git  ucx-1.14.x
+# git clone --branch v1.14.x https://github.com/openucx/ucx.git  ucx-1.14.x
 cd ucx-1.14.x
-# git pull origin v1.14.x
+git pull origin v1.14.x
 
 module load tooldev/autoconf-2.71
 module load tooldev/automake-1.16.5
