@@ -325,7 +325,7 @@ make -j 16 && make install
 ```shell
 cd /home1/p001cao/local/wSourceCode
 # git clone --branch v5.0.x --recursive https://github.com/open-mpi/ompi.git  ompi-5.0.x
-cd ompi-v5.0.x
+cd ompi-5.0.x
 git pull origin v5.0.x
 
 module load tooldev/autoconf-2.71
