@@ -326,7 +326,7 @@ make -j 16 && make install
 
     - To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"`. But might not be used?
 
-### USC2(Cenntos 6.9)
+### USC2(Cenntos 6.9) - OPMI 4
 
 #### Prepare source code
 
@@ -351,9 +351,9 @@ cd openmpi-4.1.4
 
 ```sh
 cd /home1/p001cao/local/wSourceCode
-git clone --branch v4.1.x https://github.com/open-mpi/ompi.git  ompi-4.1.x
+# git clone --branch v4.1.x https://github.com/open-mpi/ompi.git  ompi-4.1.x
 cd ompi-4.1.x
-# git pull origin v4.1.x
+git pull origin v4.1.x
 
 module load tooldev/autoconf-2.71
 module load tooldev/automake-1.16.5
@@ -375,7 +375,7 @@ export PATH=${myCOMPILER}/bin:$PATH
 export CC=clang export CXX=clang++ export FC=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.14
+export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
 export myPREFIX=/home1/p001cao/local/app/openmpi/4.1.x-clang14
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
@@ -394,4 +394,41 @@ export my_hwloc=/home1/p001cao/local/app/tool_dev/hwloc-2.8.0
 
 ../configure --with-sge --without-verbs \
 --with-ucx=${my_UCX} --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc} --prefix=${myPREFIX}
+```
+
+
+### USC2(Cenntos 6.9) - OPMI 5
+
+```shell
+cd /home1/p001cao/local/wSourceCode
+# git clone --branch v5.0.x https://github.com/open-mpi/ompi.git  ompi-5.0.x
+cd ompi-v5.0.x
+git pull origin v5.0.x
+
+module load tooldev/autoconf-2.71
+module load tooldev/automake-1.16.5
+module load tooldev/libtool-2.4.7
+export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
+
+./autogen.pl
+```
+
+```shell
+rm -rf build_clang && mkdir build_clang && cd build_clang
+
+module load compiler/llvm-14          # clang + lld
+
+export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
+export PATH=${myCOMPILER}/bin:$PATH
+export CC=clang export CXX=clang++ export FC=gfortran
+export LDFLAGS="-fuse-ld=lld -lrt"
+export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
+export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
+export myPREFIX=/home1/p001cao/local/app/openmpi/5.0.x-clang14
+
+../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
+```
+
+```sh
+make  -j 16 && make install
 ```
