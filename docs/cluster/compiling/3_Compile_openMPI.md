@@ -321,6 +321,7 @@ make -j 16 && make install
 ```
 
 ### USC2(Cenntos 6.9) - Clang
+- So far, compiling fail with error `ld.lld: error: unable to find library -lnuma` and `-ludev`
 
 ``` sh
 cd /home1/p001cao/local/wSourceCode
