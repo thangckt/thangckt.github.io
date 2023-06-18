@@ -342,9 +342,9 @@ cd ucx-1.13.1
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
-# git clone --branch v1.14.x https://github.com/openucx/ucx.git  ucx-1.14.x
-cd ucx-1.14.x
-git pull origin v1.14.x
+# git clone --branch v1.15.x https://github.com/openucx/ucx.git  ucx-1.15.x
+cd ucx-1.15.x
+git pull origin v1.15.x
 
 module load tooldev/autoconf-2.71
 module load tooldev/automake-1.16.5
@@ -367,7 +367,7 @@ export PATH=$PATH:${myCOMPILER}/bin
 export CC=clang export CXX=clang++ export FC=flang
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.14
+export myPREFIX=/home1/p001cao/local/app/tooldev/ucx-1.15
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
