@@ -322,7 +322,7 @@ make -j 16 && make install
 
 ### USC2(Cenntos 6.9) - Clang
 
-```shell
+``` sh
 cd /home1/p001cao/local/wSourceCode
 # git clone --branch v5.0.x --recursive https://github.com/open-mpi/ompi.git  ompi-5.0.x
 cd ompi-5.0.x
@@ -336,7 +336,7 @@ export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 ./autogen.pl
 ```
 
-```shell
+``` sh
 rm -rf build_clang && mkdir build_clang && cd build_clang
 
 module load compiler/llvm-14          # clang + lld
@@ -349,7 +349,7 @@ export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avo
 export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
 export myPREFIX=/home1/p001cao/local/app/openmpi/5.0.x-clang14
 
-../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
+../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
 ```
 
 ```sh
