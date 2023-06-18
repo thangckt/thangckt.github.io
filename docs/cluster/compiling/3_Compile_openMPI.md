@@ -320,6 +320,43 @@ export myUCX=/home1/p001cao/local/app/tool_dev/ucx-1.12               ## UCX
 make -j 16 && make install
 ```
 
+### USC2(Cenntos 6.9) - Clang
+
+```shell
+cd /home1/p001cao/local/wSourceCode
+# git clone --branch v5.0.x --recursive https://github.com/open-mpi/ompi.git  ompi-5.0.x
+cd ompi-v5.0.x
+git pull origin v5.0.x
+
+module load tooldev/autoconf-2.71
+module load tooldev/automake-1.16.5
+module load tooldev/libtool-2.4.7
+export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
+
+./autogen.pl
+```
+
+```shell
+rm -rf build_clang && mkdir build_clang && cd build_clang
+
+module load compiler/llvm-14          # clang + lld
+
+export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
+export PATH=${myCOMPILER}/bin:$PATH
+export CC=clang export CXX=clang++ export FC=gfortran
+export LDFLAGS="-fuse-ld=lld -lrt"
+export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
+export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
+export myPREFIX=/home1/p001cao/local/app/openmpi/5.0.x-clang14
+
+../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
+```
+
+```sh
+make  -j 16 && make install
+```
+
+
 ## 2. Compiling OpenMPI + Clang
 
 ???+ note
@@ -397,38 +434,4 @@ export my_hwloc=/home1/p001cao/local/app/tool_dev/hwloc-2.8.0
 ```
 
 
-### USC2(Cenntos 6.9) - OPMI 5
 
-```shell
-cd /home1/p001cao/local/wSourceCode
-# git clone --branch v5.0.x https://github.com/open-mpi/ompi.git  ompi-5.0.x
-cd ompi-v5.0.x
-git pull origin v5.0.x
-
-module load tooldev/autoconf-2.71
-module load tooldev/automake-1.16.5
-module load tooldev/libtool-2.4.7
-export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
-
-./autogen.pl
-```
-
-```shell
-rm -rf build_clang && mkdir build_clang && cd build_clang
-
-module load compiler/llvm-14          # clang + lld
-
-export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
-export PATH=${myCOMPILER}/bin:$PATH
-export CC=clang export CXX=clang++ export FC=gfortran
-export LDFLAGS="-fuse-ld=lld -lrt"
-export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
-export myPREFIX=/home1/p001cao/local/app/openmpi/5.0.x-clang14
-
-../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
-```
-
-```sh
-make  -j 16 && make install
-```
