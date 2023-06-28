@@ -49,18 +49,23 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 
 Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages.
 
-- [Website](https://www.gnu.org/software/automake/)
+- [Website](https://www.gnu.org/software/autoconf/)
 - [Repo](https://ftp.gnu.org/gnu/autoconf/?C=M;O=D)
 
 ```sh
 cd /home1/p001cao/local/wSourceCode/tooldev
-wget ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.71.tar.gz
-tar zxf autoconf-2.71.tar.gz
-cd autoconf-2.71
+wget https://ftp.gnu.org/gnu/autoconf/autoconf-2.71.tar.gz
+```
+Alpha/beta releases of Autoconf
+```sh
+cd /home1/p001cao/local/wSourceCode/tooldev
+wget https://alpha.gnu.org/pub/gnu/autoconf/autoconf-2.72c.tar.gz --no-check-certificate
+tar zxf autoconf-2.72c.tar.gz
+cd autoconf-2.72c
 ```
 
 ```sh
-./configure --prefix=/home1/p001cao/local/app/tooldev/autoconf-2.71
+./configure --prefix=/home1/p001cao/local/app/tooldev/autoconf-2.72c
 
 make && make install
 ```
@@ -69,7 +74,7 @@ make && make install
 
 ```shell
 # for Tcl script use only
-set     topdir          /home1/p001cao/local/app/tooldev/autoconf-2.71
+set     topdir          /home1/p001cao/local/app/tooldev/autoconf-2.72
 
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/share
