@@ -296,7 +296,7 @@ mkdir build_eagle && cd build_eagle
 
 - On Tacheon, UCX may give better performance.
 
-```shell
+``` shell
 module load tool_dev/autoconf-2.69b
 module load tool_dev/libtool-2.4.6
 module load tool_dev/automake-1.14
@@ -305,7 +305,7 @@ cd openmpi_5
 ./autogen.pl
 ```
 
-```shell
+``` shell
 cd openmpi-5.0.0rc3
 mkdir buildGCC && cd buildGCC
 ##
@@ -321,7 +321,7 @@ make -j 16 && make install
 ```
 
 ### USC2(Cenntos 6.9) - Clang
-- So far, with version `5.0.0rc12`, compiling fail with error `ld.lld: error: unable to find library -lnuma` and `-ludev`
+- So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`
 
 ``` sh
 cd /home1/p001cao/local/wSourceCode
@@ -329,7 +329,7 @@ cd /home1/p001cao/local/wSourceCode
 cd ompi-5.0.x
 git pull origin v5.0.x
 
-module load tooldev/autoconf-2.71
+module load tooldev/autoconf-2.72c
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
 export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
