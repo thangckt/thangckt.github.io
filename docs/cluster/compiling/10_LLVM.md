@@ -199,9 +199,9 @@ rm -rf build && mkdir build && cd build
 ```
 
 ``` sh
-module load tool_dev/cmake-3.24
-module load conda/py37Lammps
-module load tool_dev/binutils-2.37
+module load tooldev/cmake-3.24
+module load tooldev/binutils-2.37
+module load conda/py39link_lammps
 module load compiler/gcc-12.2
 
 export myGCC=/home1/p001cao/local/app/compiler/gcc-12.2
@@ -212,13 +212,14 @@ export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12           # avoid zl
 export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
--DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libclc;lld;openmp;polly;flang;pstl;mlir;libcxx;libcxxabi" \
+-DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libclc;lld;openmp;polly;flang;pstl;mlir" \
+-DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi" \
 -DGCC_INSTALL_PREFIX=${myGCC} \
 -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,${myGCC}/lib64 -L${myGCC}/lib64" \
--DCMAKE_CXX_STANDARD=17 -DLLVM_TEMPORARILY_ALLOW_OLD_TOOLCHAIN=ON \
+-DCMAKE_CXX_STANDARD=17 \
 -DCMAKE_C_FLAGS="-flax-vector-conversions" -DCMAKE_C_FLAGS_RELEASE="-flax-vector-conversions" \
 -DZLIB_INCLUDE_DIR=${myZLIB} -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/compiler/llvm-15
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/compiler/llvm-16
 
 make -j 16 && make install
 ```
