@@ -180,7 +180,7 @@ cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 make -j 16 && make install
 ```
 
-## LLVM 15
+## LLVM 16
 
 !!! note
 
@@ -189,13 +189,16 @@ make -j 16 && make install
 
 ### USC2: Tachyon - Centos 6.9
 
-```shell
-git clone -b release/15.x https://github.com/llvm/llvm-project.git llvm-15x
-git pull origin release/15.x
-mkdir build && cd build
+``` sh
+cd /home1/p001cao/local/wSourceCode
+git clone -b release/16.x https://github.com/llvm/llvm-project.git llvm-16x
+
+cd llvm-16x
+git pull origin release/16.x
+rm -rf build && mkdir build && cd build
 ```
 
-```shell
+``` sh
 module load tool_dev/cmake-3.24
 module load conda/py37Lammps
 module load tool_dev/binutils-2.37
