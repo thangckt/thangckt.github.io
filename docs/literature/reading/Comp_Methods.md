@@ -24,13 +24,12 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 
 ## ML in Computational
 
-- Machine learing in Computational fluid mechanics &nbsp; &nbsp; [Notebook](https://thangckt.github.io/lec_ml_cfd){target="_blank"},  [Github](https://github.com/AndreWeiner/ml-cfd-lecture){target="_blank"}
+- Machine learning in Computational fluid mechanics &nbsp; &nbsp; [Notebook](https://thangckt.github.io/lec_ml_cfd){target="_blank"},  [Github](https://github.com/AndreWeiner/ml-cfd-lecture){target="_blank"}
 - Deep Learning in Computational Mechanics &nbsp; &nbsp; [pdf](https://link.springer.com/content/pdf/10.1007%2F978-3-030-76587-3.pdf){target="_blank"}
 - Deep Learning for Particle Physicists &nbsp; &nbsp; [Notebook](https://lewtun.github.io/dl4phys){target="_blank"}
 - Deep Learning for Molecules and Materials &nbsp; &nbsp; [Notebook](https://dmol.pub/){target="_blank"}
 
 ## ML Basic
-
 
 - PyTorch for Deep Learning   &nbsp; &nbsp; [Notebook](https://www.learnpytorch.io/){target="_blank"}
 
@@ -60,6 +59,7 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 - Introduction to Materials Informatics  | |  [notebook](https://enze-chen.github.io/mi-book-2021){target="_blank"}
 
 ## Enhanced Sampling
+
 - Enhanced sampling methods for molecular dynamics simulations |   [pdf](./pdf/Enhanced_sampling_for_MD.pdf){target="_blank"}
 - Hands-on tutorials: Advanced sampling methods using GROMACS &nbsp; [html](https://weitsehsu.com/course/advanced_sampling){target="_blank"}
 
