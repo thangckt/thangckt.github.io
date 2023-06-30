@@ -263,6 +263,7 @@ nav:
     - Reading:
       - Engineering: literature/reading/Mech_Science.md
       - Computational: literature/reading/Comp_Methods.md
+      - Mechanics: literature/reading/mech_solid.md
 
   - Miscellaneous:      # Miscellaneous    Heterogeneous
     - Music:
