@@ -9,7 +9,6 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 
 # Computational Methods
 
-
 ## Thang's Note
 
 - Computational Mechanics & Multiscale methods    &nbsp;  [Notebook](https://thangckt.github.io/note_comp_mech){target="_blank"}
