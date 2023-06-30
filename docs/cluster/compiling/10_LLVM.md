@@ -113,7 +113,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${myCOMPILER}/lib
 
 at directory: /home1/p001cao/local/1myModfiles/compiler --> create file "llvm-14"
 
-```shell
+``` shell
 # for Tcl script use only
 set     topdir          /home1/p001cao/local/app/compiler/llvm-14
 set     version         clang-14.0
@@ -127,13 +127,13 @@ prepend-path    INCLUDE                 $topdir/include
 ```
 
 #### How to Use Clang without GCC on Linux
-```shell
+``` shell
 export LIBS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc" 
 export CXX=clang++ 
 export CC=clang 
 ```
 
-```shell
+``` shell
 cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ 
 -DCMAKE_EXE_LINKER_FLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"
 ```
@@ -143,13 +143,13 @@ http://tolik1967.azurewebsites.net/clang_no_gcc.html
 
 
 #### use GCC-conda
-```note
+``` note
 use conda can install: gcc, cmake,... and other libs. But note install LLVM, since new GLIBC is required, 
 ```
 
 **Install Conda (Since LLVM require python >= 3.6)
 
-```shell
+``` shell
 conda create -n py37gcc12 python=3.7
 source activate py37gcc12
 conda install -c conda-forge libgcc-ng=12 libstdcxx-ng=12 libgomp=12 cmake=3 binutils
@@ -157,7 +157,7 @@ conda install -c conda-forge libgcc-ng=12 libstdcxx-ng=12 libgomp=12 cmake=3 bin
 
 **Install LLVM
 
-```shell
+``` shell
 git clone -b release/14.x https://github.com/llvm/llvm-project.git llvm-14
 cd llvm-14
 mkdir build_conda && cd build_conda
@@ -182,9 +182,9 @@ make -j 16 && make install
 
 ## LLVM 16
 
-!!! note
+!!! note 
 
-    - not work so far
+    - not work so far (2023 Jun)
     - LLVM 15 cause error `aligned_alloc` --> may require higher GLIBC
 
 ### USC2: Tachyon - Centos 6.9
