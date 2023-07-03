@@ -185,7 +185,7 @@ make -j 16 && make install
 !!! note 
 
     - not work so far (2023 Jun)
-    - LLVM 16 cause error `aligned_alloc` (mlir)--> [see this](https://forums.ni.com/t5/LabWindows-CVI/undefined-symbol-aligned-free-aligned-malloc/td-p/4109546)
+    - LLVM 16 cause error `aligned_alloc` (mlir)--> [see this](https://stackoverflow.com/questions/29247065/compiler-cant-find-aligned-alloc-function)
 
 ### USC2: Tachyon - Centos 6.9
 
@@ -209,7 +209,7 @@ export PATH=$PATH:${myGCC}/bin                                 # :/usr/bin
 export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"   
 export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12           # avoid zlib hidden by conda
-export CPPFLAGS="-std=gnu++11"       # avoid "aligned_alloc" error
+export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libclc;lld;openmp;polly;flang;pstl;mlir" \
