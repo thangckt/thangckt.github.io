@@ -186,6 +186,11 @@ make -j 16 && make install
 
     - not work so far (2023 Jun)
     - LLVM 16 cause error `aligned_alloc` (mlir)--> [see this](https://stackoverflow.com/questions/29247065/compiler-cant-find-aligned-alloc-function)
+        - add following lines to file: 'llvm-16x/mlir/lib/ExecutionEngine/CRunnerUtils.cpp'
+            ```
+            #define _GNU_SOURCE
+            #include <cstdlib>
+            ```
 
 ### USC2: Tachyon - Centos 6.9
 
