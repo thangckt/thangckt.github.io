@@ -143,9 +143,7 @@ make -j 16 && make install
 
 !!! note
 
-    - must run `./contrib/download_prerequisites`
-    - To avoid error `uint64_t or int64_t not found`, use `gcc-10.3` (or a newer system-GCC)
-    - update newer `binutils` to avoid errors. GCC-12 can not be compiled without `binutils`.
+    - Error
 
 ```shell
 cd /home1/p001cao/local/wSourceCode
