@@ -185,13 +185,13 @@ make -j 16 && make install
 !!! note 
 
     - not work so far (2023 Jun)
-    - LLVM 16 cause error `aligned_alloc` (mlir)--> may require higher GLIBC
+    - LLVM 16 cause error `aligned_alloc` (mlir)--> [see this](https://forums.ni.com/t5/LabWindows-CVI/undefined-symbol-aligned-free-aligned-malloc/td-p/4109546)
 
 ### USC2: Tachyon - Centos 6.9
 
 ``` sh
 cd /home1/p001cao/local/wSourceCode
-git clone -b release/16.x https://github.com/llvm/llvm-project.git llvm-16x
+# git clone -b release/16.x https://github.com/llvm/llvm-project.git llvm-16x
 
 cd llvm-16x
 git pull origin release/16.x
@@ -220,7 +220,9 @@ cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_C_FLAGS="-flax-vector-conversions" -DCMAKE_C_FLAGS_RELEASE="-flax-vector-conversions" \
 -DZLIB_INCLUDE_DIR=${myZLIB} -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
 -DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/compiler/llvm-16
+```
 
+``` sh
 make -j 16 && make install
 ```
 
