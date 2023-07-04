@@ -17,13 +17,15 @@ Install: http://www.linuxfromscratch.org/lfs/view/development/chapter06/binutils
 
 ## UCS2: working Ver: 2.32; 2.35.1
 ```shell
+cd /home1/p001cao/local/wSourceCode/tooldev
+wget -c --no-check-certificate https://ftp.gnu.org/gnu/binutils/binutils-2.37.tar.gz    
 tar zxvf binutils-2.37.tar.gz             
 cd binutils-2.37
 mkdir build  &&  cd build
 
-module load compiler/gcc-11.2
+module load compiler/gcc-10.3
 
-export PATH=$PATH:/home1/p001cao/local/app/compiler/gcc-11.2/bin
+export PATH=$PATH:/home1/p001cao/local/app/compiler/gcc-10.3/bin
 export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 
