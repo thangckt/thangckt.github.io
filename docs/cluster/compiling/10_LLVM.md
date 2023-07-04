@@ -185,7 +185,11 @@ make -j 16 && make install
 !!! note 
 
     - not work so far (2023 Jun)
-    - LLVM 16 cause error `aligned_alloc` (mlir)--> [see this](https://stackoverflow.com/questions/29247065/compiler-cant-find-aligned-alloc-function)
+    - LLVM 16 cause error `aligned_alloc` (mlir)--> edit add lines to file `llvm-16x/mlir/lib/ExecutionEngine/CRunnerUtils.cpp`
+        ```
+        #include "mlir/include/mlir/ExecutionEngine/CRunnerUtils.h"
+        #include "mlir/include/mlir/ExecutionEngine/Msan.h"
+        ```
 
 
 ### USC2: Tachyon - Centos 6.9
@@ -214,7 +218,6 @@ export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"   
 export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12           # avoid zlib hidden by conda
 export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
-export CFLAGS="-std=c11"
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libclc;lld;openmp;polly;flang;pstl" \
