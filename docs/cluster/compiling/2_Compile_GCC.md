@@ -128,7 +128,7 @@ cd gcc-12
 git pull origin releases/gcc-12
 
 ./contrib/download_prerequisites
-mkdir build && cd build
+rm -rf build && mkdir build && cd build
 
 module load compiler/gcc-10.3 
 module load tool_dev/binutils-2.37
