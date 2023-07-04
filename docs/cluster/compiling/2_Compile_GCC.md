@@ -1,4 +1,4 @@
-# GCC-11
+# Compile GCC
 
 <img src="https://gcc.gnu.org/img/gccegg-65.png" style="float:left; margin-right:20px" width="150" />
 
@@ -12,7 +12,8 @@ The [GNU Compiler](https://gcc.gnu.org) Collection includes front ends for C, C+
 - cuda does not support gcc > 8 
 ```
 
-## 1. Download:
+## GCC-11
+### 1. Download:
 
 * check all availabe versions GCC
   - [at this link](https://gcc.gnu.org/releases.html)
@@ -32,7 +33,7 @@ The [GNU Compiler](https://gcc.gnu.org) Collection includes front ends for C, C+
   git clone -b releases/gcc-11.2.0 https://github.com/gcc-mirror/gcc gcc-11.2.0
   ```
 
-## 2. Install
+### 2. Install
 Include 2 steps:
 - **download prerequisites:**
 ```shell
@@ -45,7 +46,7 @@ configure error: uint64_t or int64_t not found     --> need at least gcc-4.5
 ```
 
 
-### USC1: (eagle)
+#### USC1: (eagle)
 ```shell
 cd gcc-11.2
 git checkout releases/gcc-11.2
@@ -65,7 +66,7 @@ make install
 # check: g++ -v
 ```
 
-### USC 2
+#### USC 2
 ```shell 
 mkdir build && cd build
 
@@ -74,7 +75,7 @@ mkdir build && cd build
 --prefix=/home1/p001cao/local/app/compiler/gcc-11.2
 ```
 
-### CAN
+#### CAN
 ```shell 
 --prefix=/home/thang/local/app/compiler/gcc-10.3
 ```
@@ -86,7 +87,7 @@ module load compiler/gcc-7.4   # cuda note support gcc > 8
 ```
 
 
-## 3. Make module file 
+### 3. Make module file 
 at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2"
 
 ```shell
@@ -107,9 +108,9 @@ prepend-path    INFOPATH                $topdir/share/info
 ```
 
 
-# GCC-12
+## GCC-12
 
-## USC 2
+### USC 2
 
 !!! note
 
@@ -121,8 +122,11 @@ prepend-path    INFOPATH                $topdir/share/info
 # wget http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-12.2.0/gcc-12.2.0.tar.gz
 # tar xvf gcc-12.2.0.tar.gz
 
+cd /home1/p001cao/local/wSourceCode
 git clone --branch releases/gcc-12 https://github.com/gcc-mirror/gcc.git gcc-12
 cd gcc-12
+git pull origin releases/gcc-12
+
 ./contrib/download_prerequisites
 mkdir build && cd build
 
@@ -131,15 +135,15 @@ module load tool_dev/binutils-2.37
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
 --enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
---prefix=/home1/p001cao/local/app/compiler/gcc-12.2
+--prefix=/home1/p001cao/local/app/compiler/gcc-12
   
 make -j 16 && make install
 ```
 
 
-# GCC-13
+## GCC-13
 
-## USC 2
+### USC 2
 
 !!! note
 
