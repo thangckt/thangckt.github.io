@@ -154,6 +154,8 @@ cd /home1/p001cao/local/wSourceCode
 git clone --branch releases/gcc-13 https://github.com/gcc-mirror/gcc.git gcc-13
 
 cd gcc-13
+git pull origin releases/gcc-13
+
 ./contrib/download_prerequisites
 rm -rf build && mkdir build && cd build
 
