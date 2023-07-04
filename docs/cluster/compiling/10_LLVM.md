@@ -195,7 +195,10 @@ cd /home1/p001cao/local/wSourceCode
 # git clone -b release/16.x https://github.com/llvm/llvm-project.git llvm-16x
 
 cd llvm-16x
-git pull origin release/16.x
+#git pull origin release/16.x
+git reset --hard origin/main
+git pull origin main
+
 rm -rf build && mkdir build && cd build
 ```
 
