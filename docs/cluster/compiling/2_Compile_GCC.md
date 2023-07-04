@@ -131,7 +131,7 @@ git pull origin releases/gcc-12
 rm -rf build && mkdir build && cd build
 
 module load compiler/gcc-10.3 
-module load tool_dev/binutils-2.37
+module load tooldev/binutils-2.37
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
 --enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
