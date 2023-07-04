@@ -211,9 +211,9 @@ rm -rf build && mkdir build && cd build
 module load tooldev/cmake-3.24
 module load tooldev/binutils-2.37
 module load conda/py39link_lammps
-module load compiler/gcc-12.2
+module load compiler/gcc-13
 
-export myGCC=/home1/p001cao/local/app/compiler/gcc-12.2
+export myGCC=/home1/p001cao/local/app/compiler/gcc-13
 export PATH=$PATH:${myGCC}/bin                                 # :/usr/bin
 export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"   
