@@ -185,10 +185,11 @@ make -j 16 && make install
 !!! note 
 
     - not work so far (2023 Jun)
-    - LLVM 16 cause error `aligned_alloc` (mlir)--> edit add lines to file `llvm-16x/mlir/lib/ExecutionEngine/CRunnerUtils.cpp`
+    - LLVM 16 cause error `aligned_alloc` (mlir)--> edit add lines to file `llvm-16x/mlir/lib/ExecutionEngine/CRunnerUtils.cpp`, and compile with flag `export CFLAGS="-std=c11"`
         ```
-        #include "mlir/include/mlir/ExecutionEngine/CRunnerUtils.h"
-        #include "mlir/include/mlir/ExecutionEngine/Msan.h"
+        #include <stdlib.h>
+        #define _aligned_malloc(size, alignment) aligned_alloc(alignment, size)
+        #define _aligned_free(ptr) free(ptr)
         ```
 
 
