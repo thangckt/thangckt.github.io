@@ -393,7 +393,7 @@ cd /home1/p001cao/local/wSourceCode
 cd ompi-4.1.x
 git pull origin v4.1.x
 
-module load tooldev/autoconf-2.71
+module load tooldev/autoconf-2.72c
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
 export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
