@@ -147,7 +147,7 @@ make -j 16 && make install
 
 !!! note
 
-    - Error
+    - Error `fatal error: ld terminated with signal 11` may be due to full of memory
 
 ```shell
 cd /home1/p001cao/local/wSourceCode
