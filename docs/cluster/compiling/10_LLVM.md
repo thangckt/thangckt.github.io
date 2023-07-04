@@ -191,6 +191,7 @@ make -j 16 && make install
         #define _aligned_malloc(size, alignment) aligned_alloc(alignment, size)
         #define _aligned_free(ptr) free(ptr)
         ```
+        [see this](https://github.com/dtegunov/liblion/issues/1)
 
 
 ### USC2: Tachyon - Centos 6.9
