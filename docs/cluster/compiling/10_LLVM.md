@@ -218,7 +218,7 @@ export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libclc;lld;openmp;polly;flang;pstl" \
--DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;llvm-libgcc" \
+-DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi" \
 -DGCC_INSTALL_PREFIX=${myGCC} \
 -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,${myGCC}/lib64 -L${myGCC}/lib64" \
 -DCMAKE_CXX_STANDARD=17 \
