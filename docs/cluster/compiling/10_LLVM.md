@@ -188,8 +188,8 @@ make -j 16 && make install
     - LLVM 16 cause error `aligned_alloc` (mlir)--> edit add lines to file `llvm-16x/mlir/lib/ExecutionEngine/CRunnerUtils.cpp`, and compile with flag `export CFLAGS="-std=c11"`
         ```
         #include <stdlib.h>
-        #define _aligned_malloc(size, alignment) aligned_alloc(alignment, size)
-        #define _aligned_free(ptr) free(ptr)
+        // #define _aligned_malloc(size, alignment) aligned_alloc(alignment, size)
+        // #define _aligned_free(ptr) free(ptr)
         ```
         [see this](https://github.com/dtegunov/liblion/issues/1)
 
