@@ -108,7 +108,7 @@ prepend-path    INFOPATH                $topdir/share/info
 ```
 
 
-## GCC-12
+## GCC-13
 
 ### USC 2
 
@@ -116,40 +116,13 @@ prepend-path    INFOPATH                $topdir/share/info
 
     - must run `./contrib/download_prerequisites`
     - To avoid error `uint64_t or int64_t not found`, use `gcc-10.3` (or a newer system-GCC)
-    - update newer `binutils` to avoid errors. GCC-12 can not be compiled without `binutils`.
+    - update newer `binutils` to avoid errors. GCC-12/13 can not be compiled without `binutils`.
+    - Error `fatal error: ld terminated with signal 11` may be due to full of memory
 
 ```shell
 # wget http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-12.2.0/gcc-12.2.0.tar.gz
 # tar xvf gcc-12.2.0.tar.gz
 
-cd /home1/p001cao/local/wSourceCode
-git clone --branch releases/gcc-12 https://github.com/gcc-mirror/gcc.git gcc-12
-cd gcc-12
-git pull origin releases/gcc-12
-
-./contrib/download_prerequisites
-rm -rf build && mkdir build && cd build
-
-module load compiler/gcc-10.3 
-module load tooldev/binutils-2.37
-
-../configure --enable-languages=c,c++,objc,obj-c++,fortran \
---enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
---prefix=/home1/p001cao/local/app/compiler/gcc-12
-  
-make -j 16 && make install
-```
-
-
-## GCC-13
-
-### USC 2
-
-!!! note
-
-    - Error `fatal error: ld terminated with signal 11` may be due to full of memory
-
-```shell
 cd /home1/p001cao/local/wSourceCode
 git clone --branch releases/gcc-13 https://github.com/gcc-mirror/gcc.git gcc-13
 
@@ -168,3 +141,5 @@ module load tooldev/binutils-2.37
   
 make -j 16 && make install
 ```
+
+
