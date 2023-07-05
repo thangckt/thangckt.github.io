@@ -185,20 +185,25 @@ make -j 16 && make install
 !!! note 
 
     - projects with errors: PROJECTS="mlir;flang"  RUNTIMES="libcxxabi"
-    - LLVM 16 cause error `aligned_alloc` (mlir)--> edit add lines to file `llvm-16x/mlir/lib/ExecutionEngine/CRunnerUtils.cpp`, and compile with flag `export CFLAGS="-std=c11"`
-        ```
-        #include <stdlib.h>
-        // #define _aligned_malloc(size, alignment) aligned_alloc(alignment, size)
-        // #define _aligned_free(ptr) free(ptr)
-        ```
-        [see this](https://github.com/dtegunov/liblion/issues/1)
+    - LLVM 16 cause error `aligned_alloc` (mlir) --> add following lines in the file where error comes
+    ```
+    #include <stdlib.h>
+    
+    void* aligned_alloc(size_t alignment, size_t size) {
+        void* ptr;
+        if (posix_memalign(&ptr, alignment, size) != 0) {
+            return NULL;
+        }
+        return ptr;
+    }
+    ```
     - to disable "mlir", we must disable "flang", since Enabling MLIR as a dependency to flang
     - error `‘PTRACE_SEIZE’ was not declared` --> add following lines in the file where error comes
-        ```
-        #ifndef PTRACE_SEIZE
-        #define PTRACE_SEIZE ((__ptrace_request)0x4206)
-        #endif
-        ```
+    ```
+    #ifndef PTRACE_SEIZE
+    #define PTRACE_SEIZE ((__ptrace_request)0x4206)
+    #endif
+    ```
 
 
 ### USC2: Tachyon - Centos 6.9
@@ -226,8 +231,7 @@ export PATH=$PATH:${myGCC}/bin                                 # :/usr/bin
 export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"   
 export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12           # avoid zlib hidden by conda
-export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
-export CXXFLAGS="${CXXFLAGS} -std=c++17"
+export CFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libclc;lld;openmp;polly;pstl" \
