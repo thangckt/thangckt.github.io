@@ -183,7 +183,6 @@ make -j 16 && make install
 ## LLVM 16
 
 !!! note 
-    - Must build lldb, and -DLLVM_ENABLE_ZLIB=YES : build lld with ZIP support (
     - projects with errors: PROJECTS="mlir;flang"  RUNTIMES="libcxxabi"
     - LLVM 16 cause error `aligned_alloc` (mlir) --> add following lines in the file where error comes
     ```
@@ -236,7 +235,6 @@ export CFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld;lldb;openmp;polly" \
 -DLLVM_ENABLE_RUNTIMES="pstl" \
--DLLVM_ENABLE_ZLIB=YES \
 -DGCC_INSTALL_PREFIX=${myGCC} \
 -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,${myGCC}/lib64 -L${myGCC}/lib64" \
 -DCMAKE_CXX_STANDARD=17 -DCMAKE_CXX_STANDARD_REQUIRED=ON \
