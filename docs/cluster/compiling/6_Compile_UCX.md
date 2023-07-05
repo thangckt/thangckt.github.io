@@ -51,9 +51,10 @@ For compiling from source codes, need [some tools](https://thangckt.github.io/cl
 ```
 
 ```shell
+cd /home1/p001cao/local/wSourceCode/tooldev
 git clone --branch master https://github.com/openucx/ucx.git  ucx-master
 cd ucx-master
-module load tooldev/autoconf-2.71
+module load tooldev/autoconf-2.72c
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
 export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
@@ -346,7 +347,7 @@ cd /home1/p001cao/local/wSourceCode/tooldev
 cd ucx-1.15.x
 git pull origin v1.15.x
 
-module load tooldev/autoconf-2.71
+module load tooldev/autoconf-2.72c
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
 export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
@@ -360,9 +361,9 @@ export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 rm -rf build
 mkdir build  &&  cd build
 
-module load compiler/llvm-14          # clang + lld
+module load compiler/llvm-16          # clang + lld
 
-export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
+export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-16
 export PATH=$PATH:${myCOMPILER}/bin
 export CC=clang export CXX=clang++ export FC=flang
 export LDFLAGS="-fuse-ld=lld -lrt"
@@ -380,7 +381,7 @@ at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2
 
 ```shell
 # for Tcl script use only
-set     topdir          /home1/p001cao/local/app/tooldev/ucx-1.14
+set     topdir          /home1/p001cao/local/app/tooldev/ucx-1.15
 
 prepend-path    PATH                    $topdir/bin
 prepend-path    INCLUDE                 $topdir/include
