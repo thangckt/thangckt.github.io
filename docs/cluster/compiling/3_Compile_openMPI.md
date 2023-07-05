@@ -411,15 +411,15 @@ export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
 ```sh
 rm -rf build_clang && mkdir build_clang && cd build_clang
 
-module load compiler/llvm-14          # clang + lld
+module load compiler/llvm-16          # clang + lld
 
-export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
+export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-16
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=clang export CXX=clang++ export FC=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
-export myPREFIX=/home1/p001cao/local/app/openmpi/4.1.x-clang14
+export myPREFIX=/home1/p001cao/local/app/openmpi/4.1.x-clang16
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 ```
@@ -438,6 +438,4 @@ export my_hwloc=/home1/p001cao/local/app/tool_dev/hwloc-2.8.0
 ../configure --with-sge --without-verbs \
 --with-ucx=${my_UCX} --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc} --prefix=${myPREFIX}
 ```
-
-
 
