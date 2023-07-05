@@ -136,7 +136,7 @@ module load compiler/gcc-10.3
 module load tooldev/binutils-2.37
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
---enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
+--enable-checking=release --enable-shared --disable-multilib --with-system-zlib --disable-elfcompress \
 --prefix=/home1/p001cao/local/app/compiler/gcc-13
   
 make -j 16 && make install
