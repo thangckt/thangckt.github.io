@@ -184,7 +184,7 @@ make -j 16 && make install
 
 !!! note 
 
-    - not work so far (2023 Jun)
+    - projects with errors: PROJECTS="mlir;flang"  RUNTIMES="libcxxabi"
     - LLVM 16 cause error `aligned_alloc` (mlir)--> edit add lines to file `llvm-16x/mlir/lib/ExecutionEngine/CRunnerUtils.cpp`, and compile with flag `export CFLAGS="-std=c11"`
         ```
         #include <stdlib.h>
