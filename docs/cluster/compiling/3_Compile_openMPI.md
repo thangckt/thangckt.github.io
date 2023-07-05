@@ -292,32 +292,36 @@ mkdir build_eagle && cd build_eagle
 --prefix=/uhome/p001cao/local/app/openmpi/5.0.0-gcc11.2-eagle
 ```
 
-### USC2 (Cenntos 6.9)
+### USC2 (Cenntos 6.9) GCC
 
 - On Tacheon, UCX may give better performance.
 
 ``` shell
-module load tool_dev/autoconf-2.69b
-module load tool_dev/libtool-2.4.6
-module load tool_dev/automake-1.14
-git clone --branch v5.0.x --recursive  https://github.com/open-mpi/ompi.git openmpi_5
-cd openmpi_5
+cd /home1/p001cao/local/wSourceCode
+# git clone --branch v5.0.x --recursive https://github.com/open-mpi/ompi.git  ompi-5.0.x
+cd ompi-5.0.x
+git pull origin v5.0.x
+
+module load tooldev/autoconf-2.72c
+module load tooldev/automake-1.16.5
+module load tooldev/libtool-2.4.7
+export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
+
 ./autogen.pl
 ```
 
 ``` shell
-cd openmpi-5.0.0rc3
-mkdir buildGCC && cd buildGCC
-##
-module load tool_dev/binutils-2.37                        # gold
-module load compiler/gcc-10.3
-export myUCX=/home1/p001cao/local/app/tool_dev/ucx-1.12               ## UCX
+rm -rf build_gcc && mkdir build_gcc && cd build_gcc
 
-../configure CC=gcc CXX=g++ FC=gfortran F77=gfortran LDFLAGS="-fuse-ld=gold -lrt" \
---with-sge --with-ucx=${myUCX}  \
---prefix=/home1/p001cao/local/app/openmpi/5.0.0-gcc10.3
+module load compiler/gcc-13          # clang + lld
 
-make -j 16 && make install
+export myCOMPILER=/home1/p001cao/local/app/compiler/gcc-13
+export PATH=${myCOMPILER}/bin:$PATH
+export CC=gcc export CXX=g++ export FC=gfortran
+export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
+export myPREFIX=/home1/p001cao/local/app/openmpi/5.0.x-gcc13
+
+../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
 ```
 
 ### USC2(Cenntos 6.9) - Clang
