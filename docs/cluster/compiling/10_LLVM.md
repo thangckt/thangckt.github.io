@@ -234,7 +234,7 @@ export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12           # avoid zl
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
--DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld;openmp;polly" \
+-DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld;lldb;openmp;polly" \
 -DLLVM_ENABLE_RUNTIMES="pstl" \
 -DLLVM_ENABLE_ZLIB=YES \
 -DGCC_INSTALL_PREFIX=${myGCC} \
