@@ -318,6 +318,7 @@ module load compiler/gcc-13          # clang + lld
 export myCOMPILER=/home1/p001cao/local/app/compiler/gcc-13
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=gcc export CXX=g++ export FC=gfortran
+export LDFLAGS="-fuse-ld=gold -lrt"
 export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
 export myPREFIX=/home1/p001cao/local/app/openmpi/5.0.x-gcc13
 
