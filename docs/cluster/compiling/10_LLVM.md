@@ -183,7 +183,7 @@ make -j 16 && make install
 ## LLVM 16
 
 !!! note 
-    - -DLLVM_ENABLE_ZLIB=YES : build lld with ZIP support
+    - Must build lldb, and -DLLVM_ENABLE_ZLIB=YES : build lld with ZIP support (
     - projects with errors: PROJECTS="mlir;flang"  RUNTIMES="libcxxabi"
     - LLVM 16 cause error `aligned_alloc` (mlir) --> add following lines in the file where error comes
     ```
