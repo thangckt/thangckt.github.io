@@ -193,6 +193,12 @@ make -j 16 && make install
         ```
         [see this](https://github.com/dtegunov/liblion/issues/1)
     - to disable "mlir", we must disable "flang", since Enabling MLIR as a dependency to flang
+    - error `‘PTRACE_SEIZE’ was not declared` --> add following lines in the file where error comes
+        ```
+        #ifndef PTRACE_SEIZE
+        #define PTRACE_SEIZE ((__ptrace_request)0x4206)
+        #endif
+        ```
 
 
 ### USC2: Tachyon - Centos 6.9
