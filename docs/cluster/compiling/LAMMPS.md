@@ -1002,12 +1002,12 @@ mkdir build_LLVM && cd build_LLVM
 
 ```sh
 module load tooldev/cmake-3.24
-module load tooldev/binutils-2.37
+module load tooldev/binutils-2.40
 module load tooldev/gsl-2.7
 module load fftw/fftw3.3.10-ompi4.1.4-clang14
-module load mpi/ompi4.1.x-clang14
+module load mpi/ompi4.1.x-clang16
 
-export myCOMPILER=/home1/p001cao/local/app/openmpi/4.1.x-clang14
+export myCOMPILER=/home1/p001cao/local/app/openmpi/4.1.x-clang16
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
@@ -1028,7 +1028,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPKG_ML-QUIP=no -DPKG_ML-PACE=no -DPKG_ML-HDNNP=no \
 -DPKG_PLUMED=yes -DUSE_INTERNAL_LINALG=yes  \
 -DFFT=FFTW3 \
--DZLIB_INCLUDE_DIR=${myZLIB} -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
+-DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
 -DCMAKE_INSTALL_PREFIX=${myPREFIX}
 ```
 
