@@ -15,24 +15,27 @@ check  binutils version:  ld -v
 
 Install: http://www.linuxfromscratch.org/lfs/view/development/chapter06/binutils.html
 
-## UCS2: working Ver: 2.32; 2.35.1
+## UCS2: 
+- `binutils-2.40` require to install [texinfo](https://ftp.gnu.org/gnu/texinfo/?C=M;O=D)
+
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
-wget -c --no-check-certificate https://ftp.gnu.org/gnu/binutils/binutils-2.37.tar.gz    
-tar zxvf binutils-2.37.tar.gz             
-cd binutils-2.37
-mkdir build  &&  cd build
+wget -c --no-check-certificate https://ftp.gnu.org/gnu/binutils/binutils-2.40.tar.gz    
+tar zxvf binutils-2.40.tar.gz             
+cd binutils-2.40
+rm -rf build && mkdir build  &&  cd build
 
 module load compiler/gcc-10.3
 
 export PATH=$PATH:/home1/p001cao/local/app/compiler/gcc-10.3/bin
 export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
+export PATH=$PATH:/home1/p001cao/local/app/tooldev/texinfo-7.0.3/bin
 
 ../configure --enable-gold=yes --enable-ld=default --enable-lto \
---enable-plugins --enable-shared --disable-werror \
+--enable-plugins --enable-shared --disable-werror  \
 --enable-64-bit-bfd --with-system-zlib \
---prefix=/home1/p001cao/local/app/tool_dev/binutils-2.37
+--prefix=/home1/p001cao/local/app/tooldev/binutils-2.40
 
 make -j 16  && make install
 ```
@@ -74,7 +77,17 @@ wget -c --no-check-certificate https://zlib.net/zlib-1.2.12.tar.gz
 tar zxvf zlib-1.2.12.tar.gz
 cd zlib-1.2.12
 
-./configure --enable-shared --prefix=/home1/p001cao/local/app/tool_dev/zlib-1.2.12
+./configure --enable-shared --prefix=/home1/p001cao/local/app/tooldev/zlib-1.2.12
+make -j 16 && make install
+```
+
+## texinfo
+```shell
+wget -c --no-check-certificate https://ftp.gnu.org/gnu/texinfo/texinfo-7.0.3.tar.gz
+tar zxvf  texinfo-7.0.3.tar.gz
+cd texinfo-7.0.3
+
+./configure  --prefix=/home1/p001cao/local/app/tooldev/texinfo-7.0.3
 make -j 16 && make install
 ```
 
