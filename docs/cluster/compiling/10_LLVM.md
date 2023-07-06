@@ -241,13 +241,14 @@ cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_CXX_STANDARD=17 -DCMAKE_CXX_STANDARD_REQUIRED=ON \
 -DLLVM_ENABLE_ZLIB=ON \
 -DCMAKE_C_FLAGS="-flax-vector-conversions" -DCMAKE_C_FLAGS_RELEASE="-flax-vector-conversions" \
--DZLIB_INCLUDE_DIR=${myZLIB} -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
+-DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
 -DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/compiler/llvm-16
 ```
 
 ``` sh
 make -j 16 && make install
 ```
+
 
 !!! quote 
 
