@@ -33,7 +33,7 @@ export PATH=$PATH:/home1/p001cao/local/app/compiler/gcc-10.3/bin
 export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 export PATH=$PATH:/home1/p001cao/local/app/tooldev/texinfo-7.0.3/bin
-export PATH=/home1/p001cao/local/app/tooldev/bison-3.8.2/bin:$PATH
+export PATH=/home1/p001cao/local/app/tooldev/bison-3.8.2/bin:$PATH       # add custom ver before system's version
 
 ../configure --enable-gold=yes --enable-ld=default --enable-lto \
 --enable-plugins --enable-shared --disable-werror  \
