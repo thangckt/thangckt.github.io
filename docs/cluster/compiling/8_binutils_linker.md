@@ -16,7 +16,9 @@ check  binutils version:  ld -v
 Install: http://www.linuxfromscratch.org/lfs/view/development/chapter06/binutils.html
 
 ## UCS2: 
-- `binutils-2.40` require to install [texinfo](https://ftp.gnu.org/gnu/texinfo/?C=M;O=D)
+- `binutils-2.40` require to install:
+    - [texinfo](https://ftp.gnu.org/gnu/texinfo/?C=M;O=D)
+    - [bison](https://ftp.gnu.org/gnu/bison/?C=M;O=D)
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
@@ -31,6 +33,7 @@ export PATH=$PATH:/home1/p001cao/local/app/compiler/gcc-10.3/bin
 export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 export PATH=$PATH:/home1/p001cao/local/app/tooldev/texinfo-7.0.3/bin
+export PATH=$PATH:/home1/p001cao/local/app/tooldev/bison-3.8.2/bin
 
 ../configure --enable-gold=yes --enable-ld=default --enable-lto \
 --enable-plugins --enable-shared --disable-werror  \
@@ -88,6 +91,17 @@ tar zxvf  texinfo-7.0.3.tar.gz
 cd texinfo-7.0.3
 
 ./configure  --prefix=/home1/p001cao/local/app/tooldev/texinfo-7.0.3
+make -j 16 && make install
+```
+
+
+## bison
+```shell
+wget -c --no-check-certificate https://ftp.gnu.org/gnu/bison/bison-3.8.2.tar.gz
+tar zxvf  bison-3.8.2.tar.gz
+cd bison-3.8.2
+
+./configure  --prefix=/home1/p001cao/local/app/tooldev/bison-3.8.2
 make -j 16 && make install
 ```
 
