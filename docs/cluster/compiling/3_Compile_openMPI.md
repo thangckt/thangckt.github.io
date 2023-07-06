@@ -418,7 +418,6 @@ export PATH=${myCOMPILER}/bin:$PATH
 export CC=clang export CXX=clang++ export FC=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export CFLAGS="-g0"         # no debug info
 export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
 export myPREFIX=/home1/p001cao/local/app/openmpi/4.1.x-clang16
 
