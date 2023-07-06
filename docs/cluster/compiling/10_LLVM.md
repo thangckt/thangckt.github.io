@@ -203,6 +203,7 @@ make -j 16 && make install
     #define PTRACE_SEIZE ((__ptrace_request)0x4206)
     #endif
     ```
+    - must update newer `binutils`
 
 
 ### USC2: Tachyon - Centos 6.9
@@ -221,15 +222,14 @@ rm -rf build && mkdir build && cd build
 
 ``` sh
 module load tooldev/cmake-3.24
-module load tooldev/binutils-2.37
+module load tooldev/binutils-2.40
 module load conda/py39link_lammps
 module load compiler/gcc-13
 
 export myGCC=/home1/p001cao/local/app/compiler/gcc-13
-export PATH=$PATH:${myGCC}/bin                                 # :/usr/bin
+export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
 export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"   
-export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12           # avoid zlib hidden by conda
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
@@ -239,7 +239,7 @@ cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,${myGCC}/lib64 -L${myGCC}/lib64" \
 -DCMAKE_CXX_STANDARD=17 -DCMAKE_CXX_STANDARD_REQUIRED=ON \
 -DCMAKE_C_FLAGS="-flax-vector-conversions" -DCMAKE_C_FLAGS_RELEASE="-flax-vector-conversions" \
--DZLIB_INCLUDE_DIR=${myZLIB} -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
+-DLLVM_ENABLE_ZLIB=ON \
 -DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/compiler/llvm-16
 ```
 
