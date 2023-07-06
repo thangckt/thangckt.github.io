@@ -203,7 +203,7 @@ make -j 16 && make install
     #define PTRACE_SEIZE ((__ptrace_request)0x4206)
     #endif
     ```
-    - must update newer `binutils`
+    - must update newer `binutils`, to avoid zip error
 
 
 ### USC2: Tachyon - Centos 6.9
