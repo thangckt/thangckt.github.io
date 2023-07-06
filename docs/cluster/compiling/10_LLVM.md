@@ -234,7 +234,7 @@ export CFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 export myZLIB=/home1/p001cao/local/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
--DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld;lldb;openmp;polly" \
+-DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld;openmp;polly" \
 -DLLVM_ENABLE_RUNTIMES="pstl" \
 -DGCC_INSTALL_PREFIX=${myGCC} \
 -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,${myGCC}/lib64 -L${myGCC}/lib64" \
