@@ -201,7 +201,7 @@ nav:
   - freeGPT: thangckt.github.io/freeGPT
   - molbuilder: thangckt.github.io/molbuilder
   - thatool: thangckt.github.io/thatool
-  - mediaLib: thangckt.github.io/mediaLib
+  # - mediaLib: thangckt.github.io/mediaLib
 
   - Cluster:
     - Compiling:
