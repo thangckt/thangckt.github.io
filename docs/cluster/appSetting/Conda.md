@@ -30,6 +30,7 @@ Install
 ???+ note
 
     - Newer conda may require higher GLIBC --> use old version
+    - Don't update `conda` on Linux -> will cause error
     - Run `sh <file>`, or `sh <file> -u`
 
 **UCS2 Tacheon**
