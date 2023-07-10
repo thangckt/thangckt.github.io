@@ -1015,13 +1015,10 @@ export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 ## python (require py3), BLAS+LAPACK
-export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py39link_lammps
-export myZLIB=/home1/p001cao/local/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
 export myPREFIX=/home1/p001cao/local/app/lammps/llvmOMPI4-dev
 export LD_LIBRARY_PATH=/home1/p001cao/local/app/compiler/gcc-13/lib64:$LD_LIBRARY_PATH   # to avoid using libstdc++.so in conda
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
--DPython_ROOT_DIR=${pyROOT} \
 -DBUILD_MPI=yes -DBUILD_OMP=yes -DPKG_OPENMP=yes \
 -DLAMMPS_MACHINE=mpi -DBUILD_SHARED_LIBS=yes \
 -DPKG_GPU=no -DPKG_KOKKOS=no -DPKG_INTEL=no -DPKG_MDI=no \
@@ -1031,12 +1028,20 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPKG_ML-QUIP=no -DPKG_ML-PACE=no -DPKG_ML-HDNNP=no \
 -DPKG_PLUMED=yes -DUSE_INTERNAL_LINALG=yes  \
 -DFFT=FFTW3 \
--DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
 -DCMAKE_INSTALL_PREFIX=${myPREFIX}
 ```
 
 ```sh
 make -j 16 && make install
+```
+
+with python
+```
+export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py39link_lammps
+export myZLIB=/home1/p001cao/local/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
+
+-DPython_ROOT_DIR=${pyROOT} \
+-DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
 ```
 
 ## Compile with Conda
