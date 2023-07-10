@@ -983,7 +983,7 @@ source mklvars.sh intel64
 !!! note
 
     - To void libs hidden by conda-lib, set absolute path for dynamic libs (*.so). See compile LLVM for more information
-    - if the error ralates to conda (require new GLIBC), may install `conda install -c conda-forge libgcc-ng=12 libstdcxx-ng=12`
+    - if the error ralates to conda (require new GLIBC), may install `conda install -c conda-forge libgcc-ng=13 libstdcxx-ng=13` (the same version of GCC)
     - if the error relates to `openmpi/mca_pmix_pmix3x.so: undefined symbol:' --> delete isntall folder and reinstall
 
 !!! info
