@@ -1016,6 +1016,7 @@ export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid
 export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py39link_lammps
 export myZLIB=/home1/p001cao/local/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
 export myPREFIX=/home1/p001cao/local/app/lammps/llvmOMPI4-dev
+export LD_LIBRARY_PATH=/home1/p001cao/local/app/compiler/gcc-13/lib64:$LD_LIBRARY_PATH   # to avoid using libstdc++.so in conda
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPython_ROOT_DIR=${pyROOT} \
