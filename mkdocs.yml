@@ -147,13 +147,15 @@ plugins:
       handlers:
         python:
           options:
-            members_order: 'source'
-            docstring_style: 'google'
-            show_source: false
             show_root_heading: true
             show_category_heading: false
+            show_symbol_type_heading: true
+            show_source: false
             show_signature_annotations: true
-            # docstring_section_style: list
+            members_order: 'source'
+            show_submodules: true
+            docstring_style: 'google'      # google, numpy, sphinx
+            docstring_section_style: 'list'  # 'table', 'list', 'spacy'
           # path: [.]
           # import:
           #   - https://docs.python.org/3/objects.inv
@@ -202,7 +204,7 @@ nav:
   - freeGPT: thangckt.github.io/freeGPT
   - molbuilder: thangckt.github.io/molbuilder
   - thatool: thangckt.github.io/thatool
-  # - mediaLib: thangckt.github.io/mediaLib
+  - mediaLib: thangckt.github.io/mediaLib
 
   - Cluster:
     - Compiling:
