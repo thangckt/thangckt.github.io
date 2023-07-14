@@ -1,5 +1,31 @@
-
 # Compiling LAMMPS
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+- [Compiling LAMMPS](#compiling-lammps)
+  - [Preparation](#preparation)
+    - [1. Prerequisite](#1-prerequisite)
+    - [2. Download](#2-download)
+    - [3. Packages](#3-packages)
+  - [I. Compiling with GCC + OMPI](#i-compiling-with-gcc--ompi)
+    - [USC1\_Eagle - Centos 6.5 cluster with InfiniBand](#usc1_eagle---centos-65-cluster-with-infiniband)
+      - [Module file](#module-file)
+    - [USC2\_Tachyon - Centos 6.9 cluster with InfiniBand](#usc2_tachyon---centos-69-cluster-with-infiniband)
+      - [use OMPI\_5](#use-ompi_5)
+      - [use OMPI\_3](#use-ompi_3)
+      - [Module file](#module-file-1)
+    - [CAN2\_GPU - Centos 7 cluster with GPU](#can2_gpu---centos-7-cluster-with-gpu)
+    - [CAN3\_GPU - Ubuntu 20 with GPU](#can3_gpu---ubuntu-20-with-gpu)
+  - [GCC + OpenSHMEM](#gcc--openshmem)
+  - [Compile with openMPI4.0.1-gcc7.4.0 on CAN](#compile-with-openmpi401-gcc740-on-can)
+  - [MVAPICH-GCC](#mvapich-gcc)
+    - [USC2](#usc2)
+  - [Compile with IMPI-2019xe + MKL](#compile-with-impi-2019xe--mkl)
+    - [USC1\_Eagle - Centos 6.5 cluster with InfiniBand](#usc1_eagle---centos-65-cluster-with-infiniband-1)
+  - [Compiling with LLVM + OMPI](#compiling-with-llvm--ompi)
+    - [USC2\_Tachyon - Centos 6.9 cluster with InfiniBand](#usc2_tachyon---centos-69-cluster-with-infiniband-1)
+  - [Compile with Conda](#compile-with-conda)
+
+<!-- /TOC -->
 
 This note intends to the struggling work to deploy [LAMMPS](https://www.lammps.org) on some Linux clusters
 
@@ -983,8 +1009,8 @@ source mklvars.sh intel64
 !!! note
 
     - To void libs hidden by conda-lib, set absolute path for dynamic libs (*.so). See compile LLVM for more information
-    - if the error relates to conda (require new GLIBC), 
-        - relate to `zlib`, install lower version `conda install -c conda-forge zlib=1.2.11` 
+    - if the error relates to conda (require new GLIBC),
+        - relate to `zlib`, install lower version `conda install -c conda-forge zlib=1.2.11`
         - relate to `libstdc++`, use `export LD_LIBRARY_PATH=path/to/new/lib:$LD_LIBRARY_PATH`
     - if the error relates to `openmpi/mca_pmix_pmix3x.so: undefined symbol:' --> delete isntall folder and reinstall
 

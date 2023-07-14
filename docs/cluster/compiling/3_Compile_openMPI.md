@@ -1,12 +1,37 @@
----
-sort: 3
----
-
 # OpenMPI-4
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
-<img src="https://www.open-mpi.org/images/open-mpi-logo.png" style="float:left; margin-right:20px" width="150" /> 
+- [OpenMPI-4](#openmpi-4)
+  - [Possible errors](#possible-errors)
+  - [1. Download](#1-download)
+  - [2. Compiling OpenMPI + GCC](#2-compiling-openmpi--gcc)
+    - [USC1: (Cenntos 6.5)](#usc1-cenntos-65)
+      - [InfiniBand cluster](#infiniband-cluster)
+      - [no InfiniBand cluster](#no-infiniband-cluster)
+    - [USC2: (Cenntos 6.9)](#usc2-cenntos-69)
+    - [CANlab: (Cenntos 5.8)](#canlab-cenntos-58)
+    - [CAN-GPU: (Ubuntu-18)](#can-gpu-ubuntu-18)
+      - [Install conda](#install-conda)
+      - [compile OpenMPI](#compile-openmpi)
+  - [3. Compiling OpenMPI + Intel](#3-compiling-openmpi--intel)
+    - [USC1: (Cenntos 6.5)](#usc1-cenntos-65-1)
+      - [InfiniBand cluster](#infiniband-cluster-1)
+    - [USC2: (Cenntos 6.9)](#usc2-cenntos-69-1)
+  - [4. Make module file](#4-make-module-file)
+  - [OpenMPI-5](#openmpi-5)
+    - [USC1: (Cenntos 6.5)](#usc1-cenntos-65-2)
+    - [USC2 (Cenntos 6.9) GCC](#usc2-cenntos-69-gcc)
+    - [USC2(Cenntos 6.9) - Clang](#usc2cenntos-69---clang)
+  - [2. Compiling OpenMPI + Clang](#2-compiling-openmpi--clang)
+    - [USC2(Cenntos 6.9) - OPMI 4](#usc2cenntos-69---opmi-4)
+      - [Prepare source code](#prepare-source-code)
+      - [Building](#building)
 
-[Open MPI](https://www.open-mpi.org/) is a Message Passing Interface (MPI) library project combining technologies and resources from several other projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI). 
+<!-- /TOC -->
+
+<img src="https://www.open-mpi.org/images/open-mpi-logo.png" style="float:left; margin-right:20px" width="150" />
+
+[Open MPI](https://www.open-mpi.org/) is a Message Passing Interface (MPI) library project combining technologies and resources from several other projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI).
 
 <br>
 <br>
@@ -34,7 +59,7 @@ sort: 3
         module load tool_dev/binutils-2.32
         LDFLAGS="-fuse-ld=gold -lrt"
         ```
- 
+
 
 ## Possible errors
 

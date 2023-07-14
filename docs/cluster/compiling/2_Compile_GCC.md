@@ -1,4 +1,19 @@
 # Compile GCC
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+- [Compile GCC](#compile-gcc)
+  - [GCC-11](#gcc-11)
+    - [1. Download:](#1-download)
+    - [2. Install](#2-install)
+      - [USC1: (eagle)](#usc1-eagle)
+      - [USC 2](#usc-2)
+      - [CAN](#can)
+    - [CAN\_GPU](#can_gpu)
+    - [3. Make module file](#3-make-module-file)
+  - [GCC-13](#gcc-13)
+    - [USC 2](#usc-2-1)
+
+<!-- /TOC -->
 
 <img src="https://gcc.gnu.org/img/gccegg-65.png" style="float:left; margin-right:20px" width="150" />
 
@@ -9,7 +24,7 @@ The [GNU Compiler](https://gcc.gnu.org) Collection includes front ends for C, C+
 - Some applications require C++11, this is only supported on GCC 4.8 or newer
 - [intel 2018 support gcc versions 4.3 - 6.3](https://software.intel.com/en-us/articles/intel-c-compiler-180-for-linux-release-notes-for-intel-parallel-studio-xe-2018)
 - compile GCC outside source-dir, to avoid modifying source code when compiling get fail
-- cuda does not support gcc > 8 
+- cuda does not support gcc > 8
 ```
 
 ## GCC-11
@@ -53,7 +68,7 @@ git checkout releases/gcc-11.2
 ./contrib/download_prerequisites
 
 mkdir build && cd build
-module load compiler/gcc-10.3         # to avoid:  uint64_t or int64_t not found 
+module load compiler/gcc-10.3         # to avoid:  uint64_t or int64_t not found
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
 --enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
@@ -67,7 +82,7 @@ make install
 ```
 
 #### USC 2
-```shell 
+```shell
 mkdir build && cd build
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
@@ -76,18 +91,18 @@ mkdir build && cd build
 ```
 
 #### CAN
-```shell 
+```shell
 --prefix=/home/thang/local/app/compiler/gcc-10.3
 ```
 
 ### CAN_GPU
-```shell 
-module load compiler/gcc-7.4   # cuda note support gcc > 8 
+```shell
+module load compiler/gcc-7.4   # cuda note support gcc > 8
 --prefix=/home/thang/local/app/compiler/gcc-10.3'
 ```
 
 
-### 3. Make module file 
+### 3. Make module file
 at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2"
 
 ```shell
@@ -132,13 +147,13 @@ git pull origin releases/gcc-13
 ./contrib/download_prerequisites
 rm -rf build && mkdir build && cd build
 
-module load compiler/gcc-10.3 
+module load compiler/gcc-10.3
 module load tooldev/binutils-2.40
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
 --enable-checking=release --enable-shared --disable-multilib --with-system-zlib  \
 --prefix=/home1/p001cao/local/app/compiler/gcc-13
-  
+
 make -j 16 && make install
 ```
 

@@ -4,6 +4,30 @@ hide:
 ---
 
 # UCX
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+- [UCX](#ucx)
+  - [Compile from Source vs. from pre-configured Release](#compile-from-source-vs-from-pre-configured-release)
+    - [1. install from Source](#1-install-from-source)
+    - [2. install from UCX pre-configured Release](#2-install-from-ucx-pre-configured-release)
+  - [Compile with GCC](#compile-with-gcc)
+    - [USC2](#usc2)
+    - [USC1 (eagle)](#usc1-eagle)
+  - [Compile with Intel](#compile-with-intel)
+  - [II. UCX optional Libs](#ii-ucx-optional-libs)
+    - [1. rdma-core (fail)](#1-rdma-core-fail)
+    - [2. libnuma-devel](#2-libnuma-devel)
+    - [3. openMPI/UCX: libfabric ()](#3-openmpiucx-libfabric-)
+    - [4. openMPI/UCX: KNEM](#4-openmpiucx-knem)
+    - [5. openMPI/UCX: XPMEM](#5-openmpiucx-xpmem)
+  - [Compile with LLVM](#compile-with-llvm)
+    - [USC2](#usc2-1)
+      - [Prepare source code](#prepare-source-code)
+      - [Building](#building)
+      - [Make module file](#make-module-file)
+
+<!-- /TOC -->
+
 
 <img src="https://openucx.org/wp-content/themes/jello/img/UCX_Logo_930x933.png" width=120 />
 
@@ -39,7 +63,7 @@ Try to experiment with different TLS's see here for more info.
     - OpenMPI 4.0,3 support `ucx` 1.7 or older
     - OpenMPI 4.0,4 support newer `ucx`
 
-## Complie from Source vs. from pre-configured Release
+## Compile from Source vs. from pre-configured Release
 
 For compiling from source codes, need [some tools](https://thangckt.github.io/cluster/compiling/Libtool/)
 
@@ -178,7 +202,7 @@ export myOFI=/home1/p001cao/local/app/tooldev/libfabric-1.10.1
 https://developer.arm.com/tools-and-software/server-and-hpc/help/porting-and-tuning/building-open-mpi-with-openucx/running-openmpi-with-openucx
 ```
 
-## Complie with Intel
+## Compile with Intel
 
 ```shell
 module load intel/compiler-xe19u5
