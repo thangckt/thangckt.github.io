@@ -83,15 +83,14 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 
 ### LAMMPS + GPAW
 
-This is for some convenience in linking and saving space.
-
-clang lld llvm-tools
+- This is for some convenience in linking and saving space.
+- work with python 3.10 to avoid conflicts
 
 **Install** in Conda-env
 
 ```sh
 module load conda/conda3
-conda create -n py11ase python=3.11
+conda create -n py10ase python=3.10
 source activate py11ase
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
@@ -102,7 +101,7 @@ conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
 **Create a module file** for GPAW
 
 ``` tcl
-set     topdir          /home1/p001cao/local/app/miniconda3/envs/py11ase
+set     topdir          /home1/p001cao/local/app/miniconda3/envs/py10ase
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
