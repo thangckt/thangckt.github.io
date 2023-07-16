@@ -91,8 +91,8 @@ clang lld llvm-tools
 
 ```sh
 module load conda/conda3
-conda create -n py39gpaw_lammps python=3.9
-source activate py39gpaw_lammps
+conda create -n py11ase python=3.11
+source activate py11ase
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
     fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp libibverbs-cos6-x86_64 \
@@ -102,7 +102,7 @@ conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
 **Create a module file** for GPAW
 
 ``` tcl
-set     topdir          /home1/p001cao/local/app/miniconda3/envs/py310gpaw_lammps
+set     topdir          /home1/p001cao/local/app/miniconda3/envs/py11ase
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
