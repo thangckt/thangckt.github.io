@@ -101,10 +101,11 @@ conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
 
 **Create a module file** for GPAW
 
-```tcl
+``` tcl
 set     topdir          /home1/p001cao/local/app/miniconda3/envs/py310gpaw_lammps
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
 prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
+```
