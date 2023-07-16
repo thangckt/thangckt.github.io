@@ -95,7 +95,7 @@ source activate py10ase
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
     fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp libibverbs-cos6-x86_64 \
-    ase gpaw lammps=2022
+    ase gpaw lammps=2023
 ```
 
 **Create a module file** for GPAW
