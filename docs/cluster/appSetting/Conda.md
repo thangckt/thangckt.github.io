@@ -39,8 +39,12 @@ Install
 sh Miniconda3-py39_4.9.2-Linux-x86_64.sh -u
 ```
 
-choose folder to install:   `/home1/p001cao/local/app/miniconda3`
+choose folder to install:   
+```
+/home1/p001cao/local/app/miniconda3
+```
 running conda init?  NO
+
 ... finish
 
 #### 1. Create Conda module
