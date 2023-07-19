@@ -18,23 +18,23 @@ Download Anaconda installer for Linux from [anaconda repo](https://repo.anaconda
 
 Consider Miniconda for light, and reduce error
 
-```sh
-cd /home1/p001cao/local/wSourceCode
-wget https://repo.continuum.io/miniconda/Miniconda3-py39_23.5.2-0-Linux-x86_64.sh
-```
-
-Install
-
 ???+ note
 
-    - Newer conda may require higher GLIBC --> use old version
+    - Newer conda may require higher GLIBC --> use old version. glibc 2.12 only support up to `Miniconda3-py39_4.9.2-Linux-x86_64.sh`
     - Don't update `conda` on Linux -> will cause error
     - Run `sh <file>`, or `sh <file> -u`
 
-**UCS2 Tacheon**
+Install
+
+#### UCS2 Tacheon
 
 ```sh
-sh Miniconda3-py39_23.5.2-0-Linux-x86_64.sh -u
+cd /home1/p001cao/local/wSourceCode
+wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
+```
+
+```sh
+sh Miniconda3-py39_4.9.2-Linux-x86_64.sh -u
 ```
 
 choose folder to install:   
