@@ -85,7 +85,8 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 ### LAMMPS + GPAW
 
 - This is for some convenience in linking and saving space.
-- work with python 3.10 to avoid conflicts
+- work with Python 3.10 to avoid conflicts
+- Should install all dependencies (openmpi, cuda,...), before installing `gpaw`, `lammps`
 
 **Install** in Conda-env
 
@@ -94,9 +95,11 @@ module load conda/conda3
 conda create -n py10ase python=3.10
 source activate py10ase
 
-conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
-    fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp=4.1.2 libibverbs-cos6-x86_64 \
-    ase gpaw lammps=2023
+conda install -y -c conda-forge clang lld c-compiler cxx-compiler libgcc-ng=12 libstdcxx-ng=12 \
+      openmpi=4.1.2 ucx openmp libibverbs-cos6-x86_64 zlib=1.2.11 \
+      blas libxc scalapack fftw elpa libvdwxc  
+
+conda install -y -c conda-forge  ase gpaw lammps
 ```
 
 **Create a module file** for GPAW
