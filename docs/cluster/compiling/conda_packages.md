@@ -91,15 +91,17 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 - `libffi.so` requires GLIBC_2.14 -> solved: install `libffi=3.4.2`
 - `zlib=1.2.11` can avoid requiring newer GLIBC
 
+- libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 c-compiler cxx-compiler libffi=3.4.2
+
 **Install** in Conda-env
 
 ```sh
 module load conda/conda3
-conda create -n py10ase python=3.10
+conda create -n py10ase python=3.10.7
 source activate py10ase
 
-conda install -y -c conda-forge c-compiler cxx-compiler libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
-      openmpi=4.1.2 ucx openmp libibverbs-cos6-x86_64 libffi=3.4.2 zlib=1.2.11 \
+conda install -y -c conda-forge clang libclang clangxx libclang-cpp lld llvm-tools\
+      openmpi=4.0.5 ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 \
       blas libxc scalapack fftw elpa libvdwxc ase
 
 conda install -y -c conda-forge  gpaw  lammps
