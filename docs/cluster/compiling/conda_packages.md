@@ -89,6 +89,7 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 - Should install all dependencies (openmpi, cuda,...), before installing `gpaw`, `lammps`
 - Need install `ase` before installing `gpaw`
 - `libffi.so` requires GLIBC_2.14 -> solved: install `libffi=3.4.2`
+- `zlib=1.2.11` can avoid requiring newer GLIBC
 
 **Install** in Conda-env
 
@@ -98,7 +99,7 @@ conda create -n py10ase python=3.10
 source activate py10ase
 
 conda install -y -c conda-forge c-compiler cxx-compiler libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
-      openmpi=4.1.2 ucx openmp libibverbs-cos6-x86_64 libffi=3.4.2 \
+      openmpi=4.1.2 ucx openmp libibverbs-cos6-x86_64 libffi=3.4.2 zlib=1.2.11 \
       blas libxc scalapack fftw elpa libvdwxc ase
 
 conda install -y -c conda-forge  gpaw  lammps
