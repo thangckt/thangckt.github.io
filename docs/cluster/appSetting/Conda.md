@@ -12,17 +12,15 @@
 
 ### 1. Install Anaconda on Linux (USC-locally installation)
 
-Download [Anaconda installer for Linux](https://repo.anaconda.com/miniconda/)
+Download Anaconda installer for Linux from [anaconda repo](https://repo.anaconda.com/miniconda/)
 
-```sh
-Anaconda3-2019.03-Linux-x86_64
-```
+`Anaconda3-2019.03-Linux-x86_64.sh`
 
 Consider Miniconda for light, and reduce error
 
 ```sh
 cd /home1/p001cao/local/wSourceCode
-wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
+wget https://repo.continuum.io/miniconda/Miniconda3-py39_23.5.2-0-Linux-x86_64.sh
 ```
 
 Install
@@ -36,7 +34,7 @@ Install
 **UCS2 Tacheon**
 
 ```sh
-sh Miniconda3-py39_4.9.2-Linux-x86_64.sh -u
+sh Miniconda3-py39_23.5.2-0-Linux-x86_64.sh -u
 ```
 
 choose folder to install:   
