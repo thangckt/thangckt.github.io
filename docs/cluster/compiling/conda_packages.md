@@ -97,7 +97,7 @@ module load conda/conda3
 conda create -n py10ase python=3.10
 source activate py10ase
 
-conda install -y -c conda-forge clang lld c-compiler cxx-compiler libgcc-ng=12 libstdcxx-ng=12 \
+conda install -y -c conda-forge c-compiler cxx-compiler libgcc-ng=12 libstdcxx-ng=12 \
       openmpi=4.1.2 ucx openmp libibverbs-cos6-x86_64 zlib=1.2.11 libffi=3.4.2 \
       blas libxc scalapack fftw elpa libvdwxc ase
 
