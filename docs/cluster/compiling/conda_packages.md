@@ -85,7 +85,7 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 ### LAMMPS + GPAW
 
 - This is for some convenience in linking and saving space.
-- work with Python 3.10 to avoid conflicts
+- work with Python 3.10.4. beyond may be have troubles.
 - Should install all dependencies (openmpi, cuda,...), before installing `gpaw`, `lammps`
 - Need install `ase` before installing `gpaw`
 - `libffi.so` requires GLIBC_2.14 -> solved: install `libffi=3.4.2`
