@@ -13,6 +13,7 @@ This way may eliminate some work on installing dependencies
         - `libstdcxx-ng` is required for `openmp`
         - `libgfortran-ng` is required for `openmpi`
         - `libibverbs-cos6-x86_64` is required for infiniBand
+    - `openmpi>4.1.2` have a path problem (error `mpirun` not found). So avoid installing them.
 
 ## USC2_Tachyon - Centos 6.9
 
@@ -94,7 +95,7 @@ conda create -n py10ase python=3.10
 source activate py10ase
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
-    fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp libibverbs-cos6-x86_64 \
+    fftw blas libxc scalapack elpa libvdwxc openmpi ucx openmp=4.1.2 libibverbs-cos6-x86_64 \
     ase gpaw lammps=2023
 ```
 
