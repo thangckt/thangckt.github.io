@@ -21,8 +21,12 @@ Consider Miniconda for light, and reduce error
 ???+ note
 
     - Newer conda may require higher GLIBC --> use old version. glibc 2.12 only support up to `Miniconda3-py39_4.9.2-Linux-x86_64.sh`
-    - Don't update `conda` on Linux -> will cause error
-    - Run `sh <file>`, or `sh <file> -u`
+    - update `conda` in base-env can cause error: CondaHTTPError: HTTP 000 CONNECTION FAILED --> solved by [this](https://stackoverflow.com/questions/70963033/condahttperror-http-000-connection-failed-for-url-on-centos-6)
+        - download 2 files [ca-certificate](https://anaconda.org/conda-forge/ca-certificates/2021.10.8/download/linux-64/ca-certificates-2021.10.8-ha878542_0.tar.bz2) and [openssl](https://anaconda.org/conda-forge/openssl/1.1.1k/download/linux-64/openssl-1.1.1k-h7f98852_0.tar.bz2), and install into base-env
+        ```
+        conda install openssl-1.1.1k-h7f98852_0.tar.bz2
+        conda install ca-certificates-2021.10.8-ha878542_0.tar.bz2
+        ```
 
 Install
 
