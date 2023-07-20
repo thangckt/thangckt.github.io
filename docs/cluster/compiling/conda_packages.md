@@ -21,7 +21,6 @@ This way may eliminate some work on installing dependencies
 
 !!! note
 
-    - update `conda` for better performance (dont update in base-env)
     - Some dependence require `libgcc-ng=12`
     - If running Lammmps requires `GLIBC>=2.17`, maybe solving by downgrade `zlib=1.2.11`
     - `Plumed` in conda does not support MPI and may have [limited features](https://www.plumed.org/doc-v2.8/user-doc/html/_installation.html). Therefore, compile PLUMED separately, using MPI in [conda evironment](https://thangckt.github.io/cluster/compiling/Plumed/)
@@ -92,7 +91,8 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
     - old conda have many problems, but new conda require newer GLIBC
         - `libffi.so` requires GLIBC_2.14 -> solved: install `libffi=3.4.2`
         - `zlib=1.2.11` can avoid requiring newer GLIBC
-    - work with Python 3.10.4. beyond maybe have troubles.
+    - update `conda` for better performance (don't update in base-env)
+    - work with Python 3.10
     - Should install all dependencies (openmpi, cuda,...), before installing `gpaw`, `lammps`
     - libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 c-compiler cxx-compiler libffi=3.4.2
     - clang libclang clangxx libclang-cpp lld llvm-tools
@@ -101,7 +101,7 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 
 ```sh
 module load conda/conda3
-conda create -n py10ase python=3.10.3
+conda create -n py10ase python=3.10
 source activate py10ase
 
 conda install -y -c conda-forge openmpi=4.0.5 ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 \
