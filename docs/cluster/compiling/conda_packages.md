@@ -107,8 +107,9 @@ conda create -n py10ase python=3.10
 source activate py10ase
 
 conda install conda
-conda install -y -c conda-forge openmpi ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
-      libblas=3.8 numpy=1.19 libxc scalapack fftw elpa libvdwxc ase
+conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
+        openmpi ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 \
+        blas libxc scalapack fftw elpa libvdwxc ase
 
 conda install -y -c conda-forge  gpaw  lammps
 ```
