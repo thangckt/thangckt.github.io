@@ -21,6 +21,7 @@ This way may eliminate some work on installing dependencies
 
 !!! note
 
+    - update `conda` for better performance (dont update in base-env)
     - Some dependence require `libgcc-ng=12`
     - If running Lammmps requires `GLIBC>=2.17`, maybe solving by downgrade `zlib=1.2.11`
     - `Plumed` in conda does not support MPI and may have [limited features](https://www.plumed.org/doc-v2.8/user-doc/html/_installation.html). Therefore, compile PLUMED separately, using MPI in [conda evironment](https://thangckt.github.io/cluster/compiling/Plumed/)
@@ -34,6 +35,7 @@ module load conda/conda3
 conda create -n py310lammps python=3.10
 source activate py310lammps
 
+conda install -c anaconda conda
 conda install -c conda-forge -y clang lld llvm-tools libclang libclang-cpp libgcc-ng=12 \
         libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 libibverbs-cos6-x86_64 \
         openmpi ucx openmp  lammps=2022.06.23
