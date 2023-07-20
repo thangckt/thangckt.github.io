@@ -54,4 +54,3 @@ This is my dark valley in essence; howbeit, I'm glad if you find something valid
 
 # Welcome
 
-
