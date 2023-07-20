@@ -34,7 +34,6 @@ module load conda/conda3
 conda create -n py310lammps python=3.10
 source activate py310lammps
 
-conda install -c anaconda conda
 conda install -c conda-forge -y clang lld llvm-tools libclang libclang-cpp libgcc-ng=12 \
         libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 libibverbs-cos6-x86_64 \
         openmpi ucx openmp  lammps=2022.06.23
@@ -90,12 +89,13 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
     - This is for some convenience in linking and saving space.
     - old conda have many problems, but new conda require newer GLIBC
         - `libffi.so` requires GLIBC_2.14 -> solved: install `libffi=3.4.2`
-        - `zlib=1.2.11` can avoid requiring newer GLIBC
-    - update `conda` for better performance (don't update in base-env)
+        - `zlib=1.2.11 libgcc-ng=12` can avoid requiring newer GLIBC
     - work with Python 3.10
     - Should install all dependencies (openmpi, cuda,...), before installing `gpaw`, `lammps`
-    - libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 c-compiler cxx-compiler libffi=3.4.2
-    - clang libclang clangxx libclang-cpp lld llvm-tools
+    - Some libs to consider:
+        - libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 c-compiler cxx-compiler libffi=3.4.2
+        - clang libclang clangxx libclang-cpp lld llvm-tools
+    - update `conda` for better performance (don't update in base-env) --> helpful `conda install conda`
 
 **Install** in Conda-env
 
@@ -104,7 +104,8 @@ module load conda/conda3
 conda create -n py10ase python=3.10
 source activate py10ase
 
-conda install -y -c conda-forge openmpi=4.0.5 ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 \
+conda install -c anaconda conda
+conda install -y -c conda-forge openmpi ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
       blas libxc scalapack fftw elpa libvdwxc ase
 
 conda install -y -c conda-forge  gpaw  lammps
