@@ -84,24 +84,25 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 
 ### LAMMPS + GPAW
 
-- This is for some convenience in linking and saving space.
-- work with Python 3.10.4. beyond may be have troubles.
-- Should install all dependencies (openmpi, cuda,...), before installing `gpaw`, `lammps`
-- Need install `ase` before installing `gpaw`
-- `libffi.so` requires GLIBC_2.14 -> solved: install `libffi=3.4.2`
-- `zlib=1.2.11` can avoid requiring newer GLIBC
+!!! note
 
-- libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 c-compiler cxx-compiler libffi=3.4.2
+    - This is for some convenience in linking and saving space.
+    - old conda have many problems, but new conda require newer GLIBC
+        - `libffi.so` requires GLIBC_2.14 -> solved: install `libffi=3.4.2`
+        - `zlib=1.2.11` can avoid requiring newer GLIBC
+    - work with Python 3.10.4. beyond maybe have troubles.
+    - Should install all dependencies (openmpi, cuda,...), before installing `gpaw`, `lammps`
+    - libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 c-compiler cxx-compiler libffi=3.4.2
+    - clang libclang clangxx libclang-cpp lld llvm-tools
 
 **Install** in Conda-env
 
 ```sh
 module load conda/conda3
-conda create -n py10ase python=3.10.7
+conda create -n py10ase python=3.10.3
 source activate py10ase
 
-conda install -y -c conda-forge clang libclang clangxx libclang-cpp lld llvm-tools\
-      openmpi=4.0.5 ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 \
+conda install -y -c conda-forge openmpi=4.0.5 ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 \
       blas libxc scalapack fftw elpa libvdwxc ase
 
 conda install -y -c conda-forge  gpaw  lammps
