@@ -91,7 +91,8 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
         - `libffi.so` requires GLIBC_2.14 -> solved by installing `libffi=3.4.2`
         - `zlib=1.2.11 libgcc-ng=12` can avoid requiring newer GLIBC
         - 'libgcc-ng>12' requires GLIBC 2.14 --> solved by installing `libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12`
-        - `libblas.so` requires GLIBC 2.14 --> solved by 
+        - `libblas.so` requires GLIBC 2.14 --> solved by `libblas=3.8`
+        - `numpy=1.25` requires GLIBC2.24 --> `numpy=1.19`
     - Some dependencies for `gpaw` only available with Python 3.10
     - Some libs to consider:
         - c-compiler cxx-compiler 
@@ -107,7 +108,7 @@ source activate py10ase
 
 conda install conda
 conda install -y -c conda-forge openmpi ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
-      libblas=3.8 libxc scalapack fftw elpa libvdwxc ase
+      libblas=3.8 numpy=1.19 libxc scalapack fftw elpa libvdwxc ase
 
 conda install -y -c conda-forge  gpaw  lammps
 ```
