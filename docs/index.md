@@ -32,10 +32,10 @@ else:
 
 <!-- <img src="./1images/monkey.png" style="float:left; margin-right:20px" width="190" /> -->
 <img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" />
-This site dedicates to my personal notes. <br>
-These notes reflect neither community nor third-party rules. They're random, messy, improvised, and inevitable for some rare situations but helpless for almost others.
+This site serves as my personal notes repo. <br>
+The contents reflect neither community nor third-party rules, rather, they're random, messy, improvised, and inevitable for some rare situations but not applicable for almost others.
 
-This is my dark valley in essence; howbeit, I'm glad if you find something valid here. In other cases, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I do. Or if you can "understand" the Vietnamese, I will be happy to introduce a reputed descant telling you [the scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g).
+This is my dark valley in essence; howbeit, I'm glad if you find something valid here. Alternatively, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64 as I do. Or if you can comprehend Vietnamese, I will be pleased to introduce a reputed descant that captures [the scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g).
 <br>
 <br>
 
