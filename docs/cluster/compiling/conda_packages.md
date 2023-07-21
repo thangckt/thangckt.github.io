@@ -93,8 +93,10 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
         - 'libgcc-ng>12' requires GLIBC 2.14 --> solved by installing `libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12`
         - `libblas.so` requires GLIBC 2.14 --> solved by `libblas=3.8`
         - `numpy=1.25` requires GLIBC2.24 --> `numpy=1.19`
+    - Python version:
+        - `gpaw` works with py11, but some dependencies for `gpaw` only available with py10
+        - `numpy` in py10 may require high GLIBC
     - update `conda` for better performance (don't update in base-env) --> helpful `conda install conda`
-    - Some dependencies for `gpaw` only available with Python 3.10
     - Some libs to consider:
         - c-compiler cxx-compiler 
         - clang libclang clangxx libclang-cpp lld llvm-tools
