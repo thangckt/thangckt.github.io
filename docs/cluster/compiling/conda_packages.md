@@ -113,7 +113,7 @@ source activate py9ase
 
 conda install conda
 
-conda install -y -c conda-forge python=3.9.4 clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
+conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
         openmpi=4.1.2 ucx openmp libibverbs-cos6-x86_64 libffi=3.3 \
         libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
