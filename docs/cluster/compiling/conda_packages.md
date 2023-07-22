@@ -84,6 +84,8 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 
 ### LAMMPS + GPAW
 
+On Centos 6.9, GLIBC=2.12
+
 !!! note
 
     - This is for some convenience in linking and saving space.
@@ -92,9 +94,11 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
         - `zlib=1.2.11 libgcc-ng=12` can avoid requiring newer GLIBC
         - 'libgcc-ng>12' requires GLIBC 2.14 --> solved by installing `libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12`
         - `libblas.so` requires GLIBC 2.14 --> solved by `libblas=3.8`
-    - Python version: (3.9)
+        - `libffi=3.3`
+    - Python version: (3.9.7)
         - `gpaw` works with py11, but some dependencies for `gpaw` only available with py10
         - `gpaw` requires `numpy`, but `numpy` in py10 may require high GLIBC. So use py9
+        - use python 3.9.7, don't use higher
     - update `conda` for better performance (don't update in base-env) --> helpful `conda install conda`
     - Some libs to consider:
         - c-compiler cxx-compiler 
@@ -106,14 +110,14 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 
 ```sh
 module load conda/conda3
-conda create -n py9ase python=3.9.17
+conda create -n py9ase python=3.9.7  # don't use higher python
 source activate py9ase
 
 conda install conda
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
         openmpi ucx openmp libibverbs-cos6-x86_64  zlib=1.2.11 \
-        libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
+        libblas=3.8 libffi=3.3 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
 
 **Create a module file** for GPAW
