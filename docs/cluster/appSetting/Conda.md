@@ -73,10 +73,10 @@ or download `*.conda` files
 ``` sh
 cd /home1/p001cao/local/wSourceCode
 wget --no-check-certificate https://anaconda.org/conda-forge/ca-certificates/2023.5.7/download/linux-64/ca-certificates-2023.5.7-hbcca054_0.conda
-wget --no-check-certificate https://anaconda.org/conda-forge/openssl/1.1.1u/download/linux-64/openssl-1.1.1u-h7f8727e_0.conda
+wget --no-check-certificate https://anaconda.org/conda-forge/openssl/1.1.1u/download/linux-64/openssl-1.1.1u-hd590300_0.conda
 
 conda install ca-certificates-2023.5.7-hbcca054_0.conda
-conda install openssl-1.1.1u-h7f8727e_0.conda
+conda install openssl-1.1.1u-hd590300_0.conda
 ```
 
 
