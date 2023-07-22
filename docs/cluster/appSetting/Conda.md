@@ -52,11 +52,16 @@ prepend-path    INCLUDE                 $topdir/include
 and put this file into folder:  /uhome/p001cao/local/share/lmodfiles
 ```
 
-update
+Update conda:
+Never use this:
 ``` sh
 conda update -n base -c defaults conda
 ```
-Solve update error: update `conda` in base-env can cause error: CondaHTTPError: HTTP 000 CONNECTION FAILED --> solved by [this](https://stackoverflow.com/questions/70963033/condahttperror-http-000-connection-failed-for-url-on-centos-6)
+Should use
+``` sh
+conda install conda
+```
+Solve update error: update `conda` can cause error: CondaHTTPError: HTTP 000 CONNECTION FAILED --> solved by [this](https://stackoverflow.com/questions/70963033/condahttperror-http-000-connection-failed-for-url-on-centos-6)
     - download 2 files [ca-certificate](https://anaconda.org/conda-forge/ca-certificates/2021.10.8/download/linux-64/ca-certificates-2021.10.8-ha878542_0.tar.bz2) and [openssl](https://anaconda.org/conda-forge/openssl/1.1.1k/download/linux-64/openssl-1.1.1k-h7f98852_0.tar.bz2), and install into base-env
     ```
     conda install openssl-1.1.1k-h7f98852_0.tar.bz2
@@ -67,10 +72,12 @@ or download `*.conda` files
 cd /home1/p001cao/local/wSourceCode
 wget --no-check-certificate https://anaconda.org/conda-forge/ca-certificates/2023.5.7/download/linux-64/ca-certificates-2023.5.7-hbcca054_0.conda
 wget --no-check-certificate https://anaconda.org/conda-forge/openssl/3.1.1/download/linux-64/openssl-3.1.1-hd590300_1.conda
+wget --no-check-certificate https://anaconda.org/anaconda/ruamel_yaml/files/linux-64/ruamel_yaml-0.17.21-py311h5eee18b_0.tar.bz2
 conda install ca-certificates-2023.5.7-hbcca054_0.conda
 conda install openssl-3.1.1-hd590300_1.conda
 ```
 
+conda install ruamel_yaml-0.17.21-py39h5eee18b_0.tar.bz2
 
 #### 2. Create Python Environments in conda
 
