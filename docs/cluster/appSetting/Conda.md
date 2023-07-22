@@ -52,13 +52,15 @@ prepend-path    INCLUDE                 $topdir/include
 and put this file into folder:  /uhome/p001cao/local/share/lmodfiles
 ```
 
-Update conda:
+#### 2. Update conda:
 Never use this:
 ``` sh
 conda update -n base -c defaults conda
 ```
 Should use
 ``` sh
+module load conda/conda3
+conda activate base
 conda install conda
 ```
 Solve update error: update `conda` can cause error: CondaHTTPError: HTTP 000 CONNECTION FAILED --> solved by [this](https://stackoverflow.com/questions/70963033/condahttperror-http-000-connection-failed-for-url-on-centos-6)
@@ -71,13 +73,13 @@ or download `*.conda` files
 ``` sh
 cd /home1/p001cao/local/wSourceCode
 wget --no-check-certificate https://anaconda.org/conda-forge/ca-certificates/2023.5.7/download/linux-64/ca-certificates-2023.5.7-hbcca054_0.conda
-wget --no-check-certificate https://anaconda.org/conda-forge/openssl/3.1.1/download/linux-64/openssl-3.1.1-hd590300_1.conda
-wget --no-check-certificate https://anaconda.org/anaconda/ruamel_yaml/files/linux-64/ruamel_yaml-0.17.21-py311h5eee18b_0.tar.bz2
+wget --no-check-certificate https://anaconda.org/conda-forge/openssl/1.1.1u/download/linux-64/openssl-1.1.1u-h7f8727e_0.conda
+
 conda install ca-certificates-2023.5.7-hbcca054_0.conda
-conda install openssl-3.1.1-hd590300_1.conda
+conda install openssl-1.1.1u-h7f8727e_0.conda
 ```
 
-conda install ruamel_yaml-0.17.21-py39h5eee18b_0.tar.bz2
+
 
 #### 2. Create Python Environments in conda
 
