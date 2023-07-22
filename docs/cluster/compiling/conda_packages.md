@@ -88,7 +88,7 @@ On Centos 6.9, GLIBC=2.12
 
 !!! note
 
-    - Should update `conda` for better linking
+    - Should update `conda` for better linking (important)
     - This is for some convenience in linking and saving space.
     - old conda have many problems, but new conda require newer GLIBC
         - `libffi.so` requires GLIBC_2.14 -> solved by installing `libffi=3.4.2`
