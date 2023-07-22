@@ -1,4 +1,3 @@
-
 # Conda
 
 !!! note
@@ -6,7 +5,7 @@
     - Use `llvm` suite, it contains compiler and linker `clang lld lldb llvm-tools`. The compiler `clang` also include its dependencies (libc++, libcxxabi), so do not need to istall `libclang libclangxx`
     - LLVM can be used as a replacement for GCC (GNU Compiler Collection) and G++ (GNU C++ Compiler) to compile C and C++ code, respectively. LLVM includes the Clang C and C++ compilers. Use `clang` and `clang++` in place of `gcc` and `g++`.
     - Can install some packages: `openmpi`, `scalapack`,...
-    - Should install all packages from `conda-forge`, then they can linked to each other. Avoid using `pip`, since it can not provide proper link.
+    - Should install all packages from `conda-forge`, then they can link to each other. Avoid using `pip`, since it can not provide a proper link.
 
 ## I. Installation
 
@@ -21,13 +20,7 @@ Consider Miniconda for light, and reduce error
 ???+ note
 
     - Newer conda may require higher GLIBC --> use old version. glibc 2.12 only support up to `Miniconda3-py39_4.9.2-Linux-x86_64.sh`
-    - update `conda` in base-env can cause error: CondaHTTPError: HTTP 000 CONNECTION FAILED --> solved by [this](https://stackoverflow.com/questions/70963033/condahttperror-http-000-connection-failed-for-url-on-centos-6)
-        - download 2 files [ca-certificate](https://anaconda.org/conda-forge/ca-certificates/2021.10.8/download/linux-64/ca-certificates-2021.10.8-ha878542_0.tar.bz2) and [openssl](https://anaconda.org/conda-forge/openssl/1.1.1k/download/linux-64/openssl-1.1.1k-h7f98852_0.tar.bz2), and install into base-env
-        ```
-        conda install openssl-1.1.1k-h7f98852_0.tar.bz2
-        conda install ca-certificates-2021.10.8-ha878542_0.tar.bz2
-        ```
-
+    
 Install
 
 #### UCS2 Tacheon
@@ -58,6 +51,26 @@ prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE                 $topdir/include
 and put this file into folder:  /uhome/p001cao/local/share/lmodfiles
 ```
+
+update
+``` sh
+conda update -n base -c defaults conda
+```
+Solve update error: update `conda` in base-env can cause error: CondaHTTPError: HTTP 000 CONNECTION FAILED --> solved by [this](https://stackoverflow.com/questions/70963033/condahttperror-http-000-connection-failed-for-url-on-centos-6)
+    - download 2 files [ca-certificate](https://anaconda.org/conda-forge/ca-certificates/2021.10.8/download/linux-64/ca-certificates-2021.10.8-ha878542_0.tar.bz2) and [openssl](https://anaconda.org/conda-forge/openssl/1.1.1k/download/linux-64/openssl-1.1.1k-h7f98852_0.tar.bz2), and install into base-env
+    ```
+    conda install openssl-1.1.1k-h7f98852_0.tar.bz2
+    conda install ca-certificates-2021.10.8-ha878542_0.tar.bz2
+    ```
+or download `*.conda` files
+``` sh
+cd /home1/p001cao/local/wSourceCode
+wget --no-check-certificate https://anaconda.org/conda-forge/ca-certificates/2023.5.7/download/linux-64/ca-certificates-2023.5.7-hbcca054_0.conda
+wget --no-check-certificate https://anaconda.org/conda-forge/openssl/3.1.1/download/linux-64/openssl-3.1.1-hd590300_1.conda
+conda install ca-certificates-2023.5.7-hbcca054_0.conda
+conda install openssl-3.1.1-hd590300_1.conda
+```
+
 
 #### 2. Create Python Environments in conda
 
