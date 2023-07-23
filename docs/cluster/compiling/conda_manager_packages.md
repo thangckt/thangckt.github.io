@@ -136,14 +136,15 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 
 !!! note
 
-    - use python 3.10, since some libs for `gpaw` not available in python 11
+    - new GLIBC can void tons of error due to old GLIBC
+    - use python 3.10, since some libs for `gpaw` are not available in python 11
 
 ```sh
 module load conda/conda3
-conda create -n py10ase python=3.10
+conda  create -n py10ase python=3.10
 source activate py10ase
 
-conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
-        openmpi=4.1.2 ucx openmp libibverbs-cos6-x86_64 libffi=3.3 \
-        libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
+conda install -y -c conda-forge clang lld llvm-tools  \
+        openmpi ucx openmp libibverbs-cos6-x86_64 \
+        blas libxc scalapack fftw elpa libvdwxc ase gpaw  lammps
 ```
