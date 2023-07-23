@@ -2,9 +2,12 @@
 
 This way may eliminate some work on installing dependencies
 
-???+ note
 
-    - Consider `clang` compiler. 
+## Centos 6 - Tachyon
+
+!!! note
+
+    - Consider `clang` compiler.
     - Should in all packages available in `conda-forge`
     - Don't use `mamba`, will cause the crash
     - Some packages require GLIBC=2.17.
@@ -14,8 +17,6 @@ This way may eliminate some work on installing dependencies
         - `libgfortran-ng` is required for `openmpi`
         - `libibverbs-cos6-x86_64` is required for infiniBand
     - `openmpi>4.1.2` have a path problem (error `mpirun` not found). So avoid installing them.
-
-## USC2_Tachyon - Centos 6.9
 
 ### LAMMPS
 
@@ -68,7 +69,7 @@ source activate py310gpaw
 
 conda install -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
     libibverbs-cos6-x86_64 openmpi ucx openmp \
-    fftw blas libxc scalapack elpa libvdwxc ase gpaw 
+    fftw blas libxc scalapack elpa libvdwxc ase gpaw
 ```
 
 **Create a module file** for GPAW
@@ -99,12 +100,12 @@ On Centos 6.9, GLIBC=2.12
         - `gpaw` requires `numpy`, but `numpy` in py10 may require high GLIBC. So use py9
         - use python 3.9.4, don't use higher will require higher GLIBC
     - Some libs to consider:
-        - c-compiler cxx-compiler 
+        - c-compiler cxx-compiler
         - clang libclang clangxx libclang-cpp lld llvm-tools
-    
+
 !!! note
     so far, `gpaw` does not recognize `openmpi` in conda
-    
+
 
 **Install** in Conda-env
 
@@ -131,7 +132,18 @@ prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 ```
 
-## USC1_Eagle - Centos 7.4
-``` sh
-cd /uhome/p001cao/local/wSourceCode
-wget https://repo.continuum.io/miniconda/
+## Centos 7 - Eagle
+
+!!! note
+
+    - use python 3.10, since some libs for `gpaw` not available in python 11
+
+```sh
+module load conda/conda3
+conda create -n py10ase python=3.10
+source activate py10ase
+
+conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
+        openmpi=4.1.2 ucx openmp libibverbs-cos6-x86_64 libffi=3.3 \
+        libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
+```

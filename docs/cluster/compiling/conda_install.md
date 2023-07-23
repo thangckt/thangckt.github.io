@@ -26,7 +26,7 @@
 
 !!! note
 
-    - Use `llvm` suite, it contains compiler and linker `clang lld lldb llvm-tools`. The compiler `clang` also include its dependencies (libc++, libcxxabi), so do not need to istall `libclang libclangxx`
+    - Use `llvm` suite, it contains the compiler and linker `clang lld lldb llvm-tools`. The compiler `clang` also include its dependencies (libc++, libcxxabi), so do not need to install `libclang libclangxx`
     - LLVM can be used as a replacement for GCC (GNU Compiler Collection) and G++ (GNU C++ Compiler) to compile C and C++ code, respectively. LLVM includes the Clang C and C++ compilers. Use `clang` and `clang++` in place of `gcc` and `g++`.
     - Can install some packages: `openmpi`, `scalapack`,...
     - Should install all packages from `conda-forge`, then they can link to each other. Avoid using `pip`, since it can not provide a proper link.
@@ -38,7 +38,7 @@ Consider Miniconda for light, and reduce error
 ### Install
 ???+ note
 
-    - Newer `conda` may require higher GLIBC --> use old version. glibc 2.12 only support up to `Miniconda3-py39_4.9.2-Linux-x86_64.sh`
+    - Newer `conda` may require higher GLIBC --> use old version. glibc 2.12 only supports up to `Miniconda3-py39_4.9.2-Linux-x86_64.sh`
 
 ```sh
 cd /home1/p001cao/local/wSourceCode
@@ -102,18 +102,19 @@ conda install openssl-1.1.1u-hd590300_0.conda
 !!! note
 
     - new GLIBC can avoid tons of error
+    - now can not use folder `uhome`
 
 ### install
 
 ```sh
-cd /home1/p001cao/local/wSourceCode
+cd /uwork/p001cao/local/wSourceCode
 wget https://repo.continuum.io/miniconda/Miniconda3-py39_23.5.2-0-Linux-x86_64.sh
 
 sh Miniconda3-py39_23.5.2-0-Linux-x86_64.sh -u
 ```
 choose a folder to install:
 ```
-/uhome/p001cao/local/app/miniconda3
+/uwork/p001cao/local/app/miniconda3
 ```
 running conda init?  --> NO
 
@@ -121,13 +122,13 @@ running conda init?  --> NO
 ### module file
 
 ``` tcl
-set     topdir          /uhome/p001cao/local/app/miniconda3
+set     topdir          /uwork/p001cao/local/app/miniconda3
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE                 $topdir/include
 prepend-path    PKG_CONFIG_PATH 	    $topdir/lib/pkgconfig
 ```
-and put this file into folder:  `/uhome/p001cao/local/thang_Module_file`
+and put this file into folder:  `/uwork/p001cao/local/thang_Module_file`
 
 
 ## Create Python Environments in conda
