@@ -1,3 +1,14 @@
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+- [Install packages with conda](#install-packages-with-conda)
+  - [Centos 6 - Tachyon](#centos-6---tachyon)
+    - [LAMMPS](#lammps)
+    - [GPAW](#gpaw)
+    - [LAMMPS + GPAW](#lammps--gpaw)
+  - [Centos 7 - Eagle](#centos-7---eagle)
+
+<!-- /TOC -->
+
 # Install packages with conda
 
 This way may eliminate some work on installing dependencies
@@ -104,7 +115,7 @@ On Centos 6.9, GLIBC=2.12
         - clang libclang clangxx libclang-cpp lld llvm-tools
 
 !!! note
-    so far, `gpaw` does not recognize `openmpi` in conda
+    so far, `gpaw` does not recognize `openmpi` in conda --> move to Eagle
 
 
 **Install** in Conda-env
@@ -136,15 +147,26 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 
 !!! note
 
-    - new GLIBC can void tons of error due to old GLIBC
-    - use python 3.10, since some libs for `gpaw` are not available in python 11
+    - new GLIBC can void tons of errors due to old GLIBC
+    - use python 3.11
 
+**Install**
 ```sh
 module load conda/conda3
-conda  create -n py10ase python=3.10
-source activate py10ase
+conda  create -n py11ase python=3.11
+source activate py11ase
 
-conda install -y -c conda-forge clang lld llvm-tools  \
+conda install -y -c conda-forge clang lld llvm-tools \
         openmpi ucx openmp libibverbs-cos6-x86_64 \
-        blas libxc scalapack fftw elpa libvdwxc ase gpaw  lammps
+        blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
+```
+
+**module file**
+``` tcl
+set     topdir          /uwork/p001cao/local/app/miniconda3/envs/py11ase
+
+prepend-path    PATH                $topdir/bin
+prepend-path    INCLUDE             $topdir/include
+prepend-path    LD_LIBRARY_PATH     $topdir/lib
+prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 ```
