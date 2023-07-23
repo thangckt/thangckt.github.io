@@ -160,6 +160,10 @@ conda install -y -c conda-forge clang lld llvm-tools \
         openmpi ucx openmp libibverbs-cos6-x86_64 \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
+Test
+``` sh
+gpaw test
+```
 
 **module file**
 ``` tcl
