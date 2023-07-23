@@ -102,19 +102,19 @@ conda install openssl-1.1.1u-hd590300_0.conda
 !!! note
 
     - new GLIBC can avoid tons of error
-    - now can not use folder `uhome`
+    - apps only run from folder `uhome`, check if out of memory
 
 ### install
 
 ```sh
-cd /uwork/p001cao/local/wSourceCode
+cd /uhome/p001cao/local/wSourceCode
 wget https://repo.continuum.io/miniconda/Miniconda3-py39_23.5.2-0-Linux-x86_64.sh
 
 sh Miniconda3-py39_23.5.2-0-Linux-x86_64.sh -u
 ```
 choose a folder to install:
 ```
-/uwork/p001cao/local/app/miniconda3
+/uhome/p001cao/local/app/miniconda3
 ```
 running conda init?  --> NO
 
@@ -122,13 +122,13 @@ running conda init?  --> NO
 ### module file
 
 ``` tcl
-set     topdir          /uwork/p001cao/local/app/miniconda3
+set     topdir          /uhome/p001cao/local/app/miniconda3
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE                 $topdir/include
-prepend-path    PKG_CONFIG_PATH 	    $topdir/lib/pkgconfig
+prepend-path    PKG_CONFIG_PATH 	      $topdir/lib/pkgconfig
 ```
-and put this file into folder:  `/uwork/p001cao/local/thang_Module_file`
+and put this file into the folder:  `/uhome/p001cao/local/thang_Module_file`
 
 
 ## Create Python Environments in conda
