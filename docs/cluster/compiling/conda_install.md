@@ -1,4 +1,28 @@
-# Conda
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+- [Conda Installation](#conda-installation)
+  - [Centos 6 (Tachyon)](#centos-6-tachyon)
+    - [Install](#install)
+    - [Create Conda module file](#create-conda-module-file)
+    - [Update conda](#update-conda)
+  - [Centos 7 (Eagle)](#centos-7-eagle)
+    - [install](#install-1)
+    - [module file](#module-file)
+  - [Create Python Environments in conda](#create-python-environments-in-conda)
+    - [2. Install Miniconda on Windows](#2-install-miniconda-on-windows)
+  - [II. Environments management \& installation packages](#ii-environments-management--installation-packages)
+    - [Install \& Update packages in Conda](#install--update-packages-in-conda)
+  - [pre-release](#pre-release)
+  - [IV. Some useful packages Numpy, scipy, pandas, matplotlib](#iv-some-useful-packages-numpy-scipy-pandas-matplotlib)
+      - [reset all packages in an environment](#reset-all-packages-in-an-environment)
+  - [Some setting envs](#some-setting-envs)
+  - [Using `environment.yml`](#using-environmentyml)
+
+<!-- /TOC -->
+
+# Conda Installation
+
+## Centos 6 (Tachyon)
 
 !!! note
 
@@ -7,69 +31,63 @@
     - Can install some packages: `openmpi`, `scalapack`,...
     - Should install all packages from `conda-forge`, then they can link to each other. Avoid using `pip`, since it can not provide a proper link.
 
-## I. Installation
-
-### 1. Install Anaconda on Linux (USC-locally installation)
-
-Download Anaconda installer for Linux from [anaconda repo](https://repo.anaconda.com/miniconda/)
-
-`Anaconda3-2019.03-Linux-x86_64.sh`
+Download the Anaconda installer for Linux from [Anaconda repo](https://repo.anaconda.com/miniconda/) `Anaconda3-2019.03-Linux-x86_64.sh`
 
 Consider Miniconda for light, and reduce error
 
+### Install
 ???+ note
 
-    - Newer conda may require higher GLIBC --> use old version. glibc 2.12 only support up to `Miniconda3-py39_4.9.2-Linux-x86_64.sh`
-    
-Install
-
-#### UCS2 Tacheon
+    - Newer `conda` may require higher GLIBC --> use old version. glibc 2.12 only support up to `Miniconda3-py39_4.9.2-Linux-x86_64.sh`
 
 ```sh
 cd /home1/p001cao/local/wSourceCode
 wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
-```
 
-```sh
 sh Miniconda3-py39_4.9.2-Linux-x86_64.sh -u
 ```
 
-choose folder to install:   
+choose a folder to install:
 ```
 /home1/p001cao/local/app/miniconda3
 ```
-running conda init?  NO
+running conda init?  --> NO
 
 ... finish
 
-#### 1. Create Conda module
+### Create Conda module file
 
-```sh
-set     topdir          /uhome/p001cao/local/miniconda3
+``` tcl
+set     topdir          /home1/p001cao/local/app/miniconda3
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE                 $topdir/include
-and put this file into folder:  /uhome/p001cao/local/share/lmodfiles
+prepend-path    PKG_CONFIG_PATH 	    $topdir/lib/pkgconfig
 ```
 
-#### 2. Update conda:
+### Update conda
+
 Never use this:
 ``` sh
 conda update -n base -c defaults conda
 ```
+
 Should use
 ``` sh
 module load conda/conda3
 conda activate base
 conda install conda
 ```
+
 Solve update error: update `conda` can cause error: CondaHTTPError: HTTP 000 CONNECTION FAILED --> solved by [this](https://stackoverflow.com/questions/70963033/condahttperror-http-000-connection-failed-for-url-on-centos-6)
     - download 2 files [ca-certificate](https://anaconda.org/conda-forge/ca-certificates/2021.10.8/download/linux-64/ca-certificates-2021.10.8-ha878542_0.tar.bz2) and [openssl](https://anaconda.org/conda-forge/openssl/1.1.1k/download/linux-64/openssl-1.1.1k-h7f98852_0.tar.bz2), and install into base-env
     ```
     conda install openssl-1.1.1k-h7f98852_0.tar.bz2
     conda install ca-certificates-2021.10.8-ha878542_0.tar.bz2
     ```
+
 or download `*.conda` files
+
 ``` sh
 cd /home1/p001cao/local/wSourceCode
 wget --no-check-certificate https://anaconda.org/conda-forge/ca-certificates/2023.5.7/download/linux-64/ca-certificates-2023.5.7-hbcca054_0.conda
@@ -79,9 +97,40 @@ conda install ca-certificates-2023.5.7-hbcca054_0.conda
 conda install openssl-1.1.1u-hd590300_0.conda
 ```
 
+## Centos 7 (Eagle)
+
+!!! note
+
+    - new GLIBC can avoid tons of error
+
+### install
+
+```sh
+cd /home1/p001cao/local/wSourceCode
+wget https://repo.continuum.io/miniconda/Miniconda3-py39_23.5.2-0-Linux-x86_64.sh
+
+sh Miniconda3-py39_23.5.2-0-Linux-x86_64.sh -u
+```
+choose a folder to install:
+```
+/uhome/p001cao/local/app/miniconda3
+```
+running conda init?  --> NO
 
 
-#### 2. Create Python Environments in conda
+### module file
+
+``` tcl
+set     topdir          /uhome/p001cao/local/app/miniconda3
+prepend-path    PATH                    $topdir/bin
+prepend-path    LD_LIBRARY_PATH         $topdir/lib
+prepend-path    INCLUDE                 $topdir/include
+prepend-path    PKG_CONFIG_PATH 	    $topdir/lib/pkgconfig
+```
+and put this file into folder:  `/uhome/p001cao/local/thang_Module_file`
+
+
+## Create Python Environments in conda
 
 ref: [environment-modules](https://manjusri.ucsc.edu/2017/09/08/environment-modules)
 

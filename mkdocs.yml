@@ -223,9 +223,9 @@ nav:
       - cluster/compiling/11_Conda_MPI.md
       - cluster/compiling/12_PMIX.md
       - cluster/compiling/Dependencies.md
-      - cluster/compiling/conda_packages.md
+      - cluster/appSetting/conda_install.md
+      - cluster/compiling/conda_manager_packages.md
     - Setting:
-      - cluster/appSetting/Conda.md
       - cluster/appSetting/Pip.md
       - cluster/appSetting/Latex_TexStudio.md
       - cluster/appSetting/Latex_VScode.md
