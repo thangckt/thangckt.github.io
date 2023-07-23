@@ -102,6 +102,8 @@ On Centos 6.9, GLIBC=2.12
         - c-compiler cxx-compiler 
         - clang libclang clangxx libclang-cpp lld llvm-tools
     
+!!! note
+    so far, `gpaw` does not recognize `openmpi` in conda
     
 
 **Install** in Conda-env
@@ -128,3 +130,8 @@ prepend-path    INCLUDE             $topdir/include
 prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 ```
+
+## USC1_Eagle - Centos 7.4
+``` sh
+cd /uhome/p001cao/local/wSourceCode
+wget https://repo.continuum.io/miniconda/
