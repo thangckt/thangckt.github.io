@@ -1,4 +1,4 @@
-# Compile GCC
+
 <!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
 - [Compile GCC](#compile-gcc)
@@ -14,6 +14,8 @@
     - [USC 2](#usc-2-1)
 
 <!-- /TOC -->
+
+# Compile GCC
 
 <img src="https://gcc.gnu.org/img/gccegg-65.png" style="float:left; margin-right:20px" width="150" />
 

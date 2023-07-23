@@ -1,4 +1,4 @@
-# OpenMPI-4
+
 <!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
 - [OpenMPI-4](#openmpi-4)
@@ -28,6 +28,8 @@
       - [Building](#building)
 
 <!-- /TOC -->
+
+# OpenMPI-4
 
 <img src="https://www.open-mpi.org/images/open-mpi-logo.png" style="float:left; margin-right:20px" width="150" />
 

@@ -1,6 +1,16 @@
----
-sort: 7
----
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+- [FFTW](#fftw)
+  - [Download FFTW](#download-fftw)
+  - [Compile with OMPI + GCC](#compile-with-ompi--gcc)
+    - [USC1](#usc1)
+    - [USC2](#usc2)
+    - [CAN-GPU](#can-gpu)
+  - [4. Make module file](#4-make-module-file)
+  - [Compile with OMPI + LLVM](#compile-with-ompi--llvm)
+    - [USC2](#usc2-1)
+
+<!-- /TOC -->
 
 # FFTW
 

@@ -3,7 +3,7 @@ hide:
   # - nav
 ---
 
-# UCX
+
 <!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
 - [UCX](#ucx)
@@ -28,7 +28,7 @@ hide:
 
 <!-- /TOC -->
 
-
+# UCX
 <img src="https://openucx.org/wp-content/themes/jello/img/UCX_Logo_930x933.png" width=120 />
 
 UCX is needed to compile OpenMPI to use InfiniBand

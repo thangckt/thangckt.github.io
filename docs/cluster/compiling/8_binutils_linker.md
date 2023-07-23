@@ -1,6 +1,17 @@
 ---
 sort: 8
 ---
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+- [Binutils](#binutils)
+  - [UCS2:](#ucs2)
+  - [UCS1:](#ucs1)
+  - [create module file](#create-module-file)
+  - [Zlib](#zlib)
+  - [texinfo](#texinfo)
+  - [bison](#bison)
+
+<!-- /TOC -->
 
 # Binutils
 
@@ -15,15 +26,15 @@ check  binutils version:  ld -v
 
 Install: http://www.linuxfromscratch.org/lfs/view/development/chapter06/binutils.html
 
-## UCS2: 
+## UCS2:
 - `binutils-2.40` require to install:
     - [texinfo](https://ftp.gnu.org/gnu/texinfo/?C=M;O=D)
     - [bison](https://ftp.gnu.org/gnu/bison/?C=M;O=D)
 
 ```shell
 cd /home1/p001cao/local/wSourceCode/tooldev
-wget -c --no-check-certificate https://ftp.gnu.org/gnu/binutils/binutils-2.40.tar.gz    
-tar zxvf binutils-2.40.tar.gz             
+wget -c --no-check-certificate https://ftp.gnu.org/gnu/binutils/binutils-2.40.tar.gz
+tar zxvf binutils-2.40.tar.gz
 cd binutils-2.40
 rm -rf build && mkdir build  &&  cd build
 
@@ -46,11 +57,11 @@ make -j 16  && make install
 check:  ld -v
 
 
-## UCS1: 
+## UCS1:
 - work with binutils-2.36.1, to avoid error in GCC-11
 
 ```shell
-tar zxvf binutils-2.36.1.tar.gz             
+tar zxvf binutils-2.36.1.tar.gz
 cd binutils-2.36.1
 mkdir build  &&  cd build
 

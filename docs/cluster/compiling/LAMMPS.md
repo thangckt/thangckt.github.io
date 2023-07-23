@@ -1,4 +1,4 @@
-# Compiling LAMMPS
+
 <!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
 - [Compiling LAMMPS](#compiling-lammps)
@@ -26,10 +26,12 @@
   - [Compile with Conda](#compile-with-conda)
 
 <!-- /TOC -->
+# Compiling LAMMPS
 
 This note intends to the struggling work to deploy [LAMMPS](https://www.lammps.org) on some Linux clusters
 
 ![Lammps logo](https://www.lammps.org/movies/logo.gif)
+
 
 ## Preparation
 

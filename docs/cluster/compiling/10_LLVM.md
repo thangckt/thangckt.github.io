@@ -1,4 +1,19 @@
-# LLVM 
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+- [LLVM](#llvm)
+  - [Download](#download)
+  - [LLVM 14](#llvm-14)
+    - [USC2: Tachyon - Centos 6.9](#usc2-tachyon---centos-69)
+      - [use GCC](#use-gcc)
+    - [Module file](#module-file)
+      - [How to Use Clang without GCC on Linux](#how-to-use-clang-without-gcc-on-linux)
+      - [use GCC-conda](#use-gcc-conda)
+  - [LLVM 16](#llvm-16)
+    - [USC2: Tachyon - Centos 6.9](#usc2-tachyon---centos-69-1)
+
+<!-- /TOC -->
+
+# LLVM
 
 The [LLVM project](https://llvm.org/) has multiple components. The core of the project is itself called "LLVM". This contains all of the tools, libraries, and header files needed to process intermediate representations and convert them into object files. Tools include an assembler, disassembler, bitcode analyzer, and bitcode optimizer. It also contains basic regression tests.
 
@@ -9,12 +24,12 @@ Other components include: the [libc++ C++](https://libcxx.llvm.org/) standard li
 **Requirements
 Compiling LLVM requires that you have several software packages installed. The table below lists those required packages. The Package column is the usual name for the software package that LLVM depends on. The Version column provides “known to work” versions of the package. The Notes column describes how LLVM uses the package and provides other details.
 
-|Package | Version |
-|--|--|
-|Cmakte | >=3.13.4|
-| GCC   | >=7.1.0 |
-| Python| >= 3.6 |
-| BINUTILS | newer is better|
+| Package  | Version         |
+| -------- | --------------- |
+| Cmakte   | >=3.13.4        |
+| GCC      | >=7.1.0         |
+| Python   | >= 3.6          |
+| BINUTILS | newer is better |
 
 [See here](https://llvm.org/docs/GettingStarted.html#id14)
 
@@ -38,7 +53,7 @@ mkdir build && cd build
 
 !!! note
 
-    - May need GCC >= 9. 
+    - May need GCC >= 9.
     - Use `-DCMAKE_CXX_STANDARD=17` to avoid no digit exponent.
     - use `CMAKE_C_FLAGS="-flax-vector-conversions"` avoid 128i convert error.
     - consider -DLLVM_TARGETS_TO_BUILD="AArch64".
@@ -49,7 +64,7 @@ mkdir build && cd build
     - See more https://llvm.org/docs/CMake.html
     - LLDB require SWIG > 3.0
     - LLVM require python >= 3.6, and python 3.6 require zlib>1.2.11 require GLIBC_2.14 (libgcc-ng=9). And zlib=1.2.11 will cause hidden libs by conda, so should update  zlib>1.2.11 to hidden error. Or should use static-link (libs*.a) or use absolute path to dynamic libs (*.so) in cmake to avoid this error. Note, link a dynamic lib (*.so) to a static lib (*.a) may cause " Dyanmic reloc overflow runtime" error, so best way is use absolute path to dynamic libs (*.so).
-    
+
 
 ```shell
 source activate py37Lammps
@@ -70,7 +85,7 @@ module load compiler/gcc-12.2
 export myGCC=/home1/p001cao/local/app/compiler/gcc-12.2
 export PATH=$PATH:${myGCC}/bin                                 # :/usr/bin
 export CC=gcc export CXX=g++
-export LDFLAGS="-fuse-ld=gold -lrt"   
+export LDFLAGS="-fuse-ld=gold -lrt"
 export myZLIB=/home1/p001cao/local/app/tool_dev/zlib-1.2.12           # avoid zlib hidden by conda
 export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 
@@ -107,7 +122,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${myCOMPILER}/lib
 
     [1] https://stackoverflow.com/questions/69683755/libpng-apngerror-o-requires-dynamic-r-x86-64-pc32-reloc-against-stderr
     [2] [Dynamic relocs, runtime overflows and -fPIC](https://tinyurl.com/2bw9jo5q)
-    
+
 
 ### Module file
 
@@ -128,13 +143,13 @@ prepend-path    INCLUDE                 $topdir/include
 
 #### How to Use Clang without GCC on Linux
 ``` shell
-export LIBS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc" 
-export CXX=clang++ 
-export CC=clang 
+export LIBS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"
+export CXX=clang++
+export CC=clang
 ```
 
 ``` shell
-cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ 
+cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
 -DCMAKE_EXE_LINKER_FLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"
 ```
 
@@ -144,7 +159,7 @@ http://tolik1967.azurewebsites.net/clang_no_gcc.html
 
 #### use GCC-conda
 ``` note
-use conda can install: gcc, cmake,... and other libs. But note install LLVM, since new GLIBC is required, 
+use conda can install: gcc, cmake,... and other libs. But note install LLVM, since new GLIBC is required,
 ```
 
 **Install Conda (Since LLVM require python >= 3.6)
@@ -182,12 +197,12 @@ make -j 16 && make install
 
 ## LLVM 16
 
-!!! note 
+!!! note
     - projects with errors: PROJECTS="mlir;flang"  RUNTIMES="libcxxabi"
     - LLVM 16 cause error `aligned_alloc` (mlir) --> add following lines in the file where error comes
     ```
     #include <stdlib.h>
-    
+
     void* aligned_alloc(size_t alignment, size_t size) {
         void* ptr;
         if (posix_memalign(&ptr, alignment, size) != 0) {
@@ -229,7 +244,7 @@ module load compiler/gcc-13
 export myGCC=/home1/p001cao/local/app/compiler/gcc-13
 export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
 export CC=gcc export CXX=g++
-export LDFLAGS="-fuse-ld=gold -lrt"   
+export LDFLAGS="-fuse-ld=gold -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
 export myZLIB=/home1/p001cao/local/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
 
@@ -250,6 +265,6 @@ make -j 16 && make install
 ```
 
 
-!!! quote 
+!!! quote
 
     ReleaseNotes: https://releases.llvm.org/15.0.0/docs/ReleaseNotes.html
