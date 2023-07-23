@@ -163,7 +163,7 @@ conda install -y -c conda-forge clang lld llvm-tools \
 
 **module file**
 ``` tcl
-set     topdir          /uwork/p001cao/local/app/miniconda3/envs/py11ase
+set     topdir          /uhome/p001cao/local/app/miniconda3/envs/py11ase
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
