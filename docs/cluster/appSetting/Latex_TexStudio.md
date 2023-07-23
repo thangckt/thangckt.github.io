@@ -1,12 +1,29 @@
 ---
 sort: 3
 ---
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
+- [Latex from Zero](#latex-from-zero)
+  - [I. LaTex Editor and Compiler](#i-latex-editor-and-compiler)
+    - [1. Latex Editor](#1-latex-editor)
+    - [2. Latex compiler](#2-latex-compiler)
+      - [Tex Live](#tex-live)
+      - [MiKTeX](#miktex)
+  - [II. Use Language Tool in TexStudio](#ii-use-language-tool-in-texstudio)
+    - [Configure TextStudio to use LT](#configure-textstudio-to-use-lt)
+    - [Use texstudio.zip (no need installation)](#use-texstudiozip-no-need-installation)
+    - [Download dictionary](#download-dictionary)
+  - [III. Citation management](#iii-citation-management)
+    - [Create database (\*.bib file) with Zotero](#create-database-bib-file-with-zotero)
+    - [Create database (\*.bib file) with Mendeley](#create-database-bib-file-with-mendeley)
+  - [Zotero](#zotero)
+
+<!-- /TOC -->
 # Latex from Zero
 
 What is LaTeX?
 
-LaTeX is a typesetting program that takes a plain text file with "various commands" in it and converts it to a formatted document based on the commands that it has been given. The source file for the document has a file extension of .tex. For more information on LaTeX, see LaTeX on Athena Basics, provided by the Athena On-Line Help system. 
+LaTeX is a typesetting program that takes a plain text file with "various commands" in it and converts it to a formatted document based on the commands that it has been given. The source file for the document has a file extension of .tex. For more information on LaTeX, see LaTeX on Athena Basics, provided by the Athena On-Line Help system.
 
 ## I. LaTex Editor and Compiler
 
@@ -60,7 +77,7 @@ Log File Seach Paths (in build): `Zoutdir`. Log file is important to figure out 
     ```
     right-click shotcut  --> properties --> then include "--start-always" into target
     ```
-    https://tinyurl.com/y8tq5z9p 
+    https://tinyurl.com/y8tq5z9p
 
 1.d. Dark theme for TextStudio
 - Download the file *.txsprofile elsewhere
@@ -86,7 +103,7 @@ Can use [Miktex](https://miktex.org) or [TeX Live](https://www.tug.org/texlive/)
 #### Tex Live
 
 Can install from Internet or offline installation (Should use this. because live installation takes long time)
-- Download [ISO image](https://lab.uklee.pe.kr/tex-archive/systems/texlive/Images/).  
+- Download [ISO image](https://lab.uklee.pe.kr/tex-archive/systems/texlive/Images/).
 - run (or double click): `install-tl-windows.bat`
 
 Open `TLShell Tex Live Manager` in Windows. Or run command line : https://www.tug.org/texlive/doc/texlive-en/texlive-en.html#tlportable
@@ -141,7 +158,7 @@ Download Langtool.zip --> upzip --> then, copy whole langtool folder into texstu
 Build:
 --> Defaul Complier: Latexmk
 Commands:
---> latexmk:  latexmk -pdf   -silent -synctex=1 % -auxdir=auxDIR -f -recorder-  
+--> latexmk:  latexmk -pdf   -silent -synctex=1 % -auxdir=auxDIR -f -recorder-
 Language checking:
 --> spell check:
     --> Thesaurus database: [txs-app-dir]\dictionaries\th_en_US_v2.dat
@@ -174,7 +191,7 @@ From the dialog box that pops up, select the BibTeX format, and click OK.
 Navigate to the directory where you are storing your manuscript (your .tex file), and save the file. This will generate a file in the appropriate format for BibTeX to read and create a bibliography from.
 
 Auto-syncing from Zotero to BibTeX:
-Auto-updating your .bib file when you make changes or additions to your Zotero Library is not available directly in Zotero. You can, however, install and enable a Zotero extension, Better BibTeX, to grant you these features. 
+Auto-updating your .bib file when you make changes or additions to your Zotero Library is not available directly in Zotero. You can, however, install and enable a Zotero extension, Better BibTeX, to grant you these features.
 Once Better BibTeX is enabled, select the folder/library/items you wish to include in your .bib file as you would do in the basic export process described above.
 In the export dialog box, you will now see many more options for your export format. Select the “Better BibTeX” option, and, to set up the autosync, make sure you also check the “Keep updated” box.
 Click Ok, name your .bib file and save in the same location as your LaTeX file.

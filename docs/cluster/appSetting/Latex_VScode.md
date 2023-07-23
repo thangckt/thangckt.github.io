@@ -1,4 +1,12 @@
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
+- [Latex in VScode](#latex-in-vscode)
+  - [Config Latex Workshop](#config-latex-workshop)
+  - [Some problems](#some-problems)
+  - [Grammarly in VScode](#grammarly-in-vscode)
+  - [Some problem in Tex files](#some-problem-in-tex-files)
+
+<!-- /TOC -->
 
 # Latex in VScode
 
@@ -40,7 +48,7 @@ Can use Latex in VScode with the extension `Latex Workshop`
   "latex-workshop.linting.chktex.enabled": true,
   "latex-workshop.synctex.afterBuild.enabled": true,
   "latex-workshop.view.pdf.viewer": "tab",
-  
+
 
   // Compile latex
   "latex-workshop.latex.recipes": [
@@ -58,7 +66,7 @@ Can use Latex in VScode with the extension `Latex Workshop`
                       "-interaction=nonstopmode",
                       "-file-line-error",
                       "-pdf",
-                      "-outdir=%OUTDIR%",  
+                      "-outdir=%OUTDIR%",
                       "%DOC%",
                       "-silent -f",
                       "--shell-escape",
@@ -70,9 +78,9 @@ Can use Latex in VScode with the extension `Latex Workshop`
           "name": "copyPDFcmd",
           "command": "cmd.exe",
           "args": [
-              "/c", 
-              "copy",  
-              "%OUTDIR%\\%DOCFILE%.pdf", 
+              "/c",
+              "copy",
+              "%OUTDIR%\\%DOCFILE%.pdf",
               "%DIR%",
           ],
           "env": {}
@@ -104,7 +112,7 @@ See [Why to switch from TexStudio to VScode](https://0x0f0f0f.github.io/blog/tex
 
 ## Grammarly in VScode
 
-- [Github](https://github.com/znck/grammarly) 
+- [Github](https://github.com/znck/grammarly)
 
 ```
 {

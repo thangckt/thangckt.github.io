@@ -1,7 +1,22 @@
 ---
 hide:
 ---
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
+- [I. [Windows](https://code.visualstudio.com/docs/setup/windows)](#i-windowshttpscodevisualstudiocomdocssetupwindows)
+  - [Python in Visual Studio Code](#python-in-visual-studio-code)
+- [II. To change the indentation based on programming language](#ii-to-change-the-indentation-based-on-programming-language)
+- [IV. Workspace settings](#iv-workspace-settings)
+  - [Useful extensions](#useful-extensions)
+- [Thang's Setting](#thangs-setting)
+  - [Editor & Theme](#editor-theme)
+  - [Grammarly](#grammarly)
+  - [Files](#files)
+  - [Latex-workshop](#latex-workshop)
+  - [Jupyter Notebooks](#jupyter-notebooks)
+  - [Python & Conda envs](#python-conda-envs)
+
+<!-- /TOC -->
 
 # VScode setting
 
