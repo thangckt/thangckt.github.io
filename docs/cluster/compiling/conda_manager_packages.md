@@ -157,7 +157,7 @@ conda  create -n py11ase python=3.11
 source activate py11ase
 
 conda install -y -c conda-forge clang lld llvm-tools \
-        openmpi ucx openmp libibverbs-cos7-x86_64 \
+        openmpi ucx openmp libibverbs-cos7-x86_64 pandas \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
 Test
@@ -173,4 +173,5 @@ prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
 prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
+prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw  # to see GPAW dataset
 ```
