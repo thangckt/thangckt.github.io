@@ -149,7 +149,7 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 
     - new GLIBC can void tons of errors due to old GLIBC
     - use python 3.11
-    - to use infiniband `numactl-libs-cos7-x86_64 librdmacm-devel-cos7-x86_64 libibverbs-cos7-x86_64`
+    - to use infiniband `libibverbs-cos7-x86_64`
 
 **Install**
 ```sh
@@ -158,7 +158,7 @@ conda  create -n py11ase python=3.11
 source activate py11ase
 
 conda install -y -c conda-forge -c rapidsai-nightly clang lld llvm-tools \
-        openmpi ucx openmp numactl-libs-cos7-x86_64 librdmacm-devel-cos7-x86_64 libibverbs-cos7-x86_64 \
+        openmpi ucx openmp libibverbs-cos7-x86_64 \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
 Test
