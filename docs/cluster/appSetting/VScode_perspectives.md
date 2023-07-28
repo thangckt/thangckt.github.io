@@ -2,7 +2,7 @@
 hide:
 ---
 
-# Some Perspectives on VScode
+# VScode usage & extensions
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/113px-Visual_Studio_Code_1.35_icon.svg.png"
 style="float:left; margin-right:20px" width="190" />
@@ -32,3 +32,6 @@ style="float:left; margin-right:20px" width="190" />
 - Plugins
 
 read more [here](https://pbpython.com/vscode-notebooks.html)
+
+## Marks to outline
+[Link](https://marketplace.visualstudio.com/items?itemName=roabramov.marks-to-outline)
