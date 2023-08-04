@@ -158,9 +158,11 @@ module load conda/conda3
 conda  create -n py11ase python=3.11
 source activate py11ase
 
-conda install -y -c conda-forge -c rapidsai-nightly clang lld llvm-tools \
-        openmpi ucx ucx-py openmp libibverbs-cos7-x86_64 \
+conda install -y -c conda-forge clang lld llvm-tools \
+        openmpi ucx openmp libibverbs-cos7-x86_64 \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
+
+conda install -y -c rapidsai-nightly  ucx-py
 ```
 Test
 ``` sh
