@@ -150,7 +150,7 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
     - new GLIBC can void tons of errors due to old GLIBC
     - use python 3.11
     - to use infiniband `libibverbs-cos7-x86_64`
-    - `ucx=1.14` is not renognized
+    - `ucx=1.14` is not recognized
 
 **Install**
 ```sh
@@ -159,7 +159,7 @@ conda  create -n py11ase python=3.11
 source activate py11ase
 
 conda install -y -c conda-forge clang lld llvm-tools \
-        openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 \
+        openmpi ucx ucx-py openmp libibverbs-cos7-x86_64 \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
 Test
