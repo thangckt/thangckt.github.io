@@ -141,18 +141,18 @@ conda create -n py11ase_ompi python=3.11
 source activate py11ase_ompi
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
-        openmpi ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core=28.* \
+        openmpi ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core \
         libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
 
 Use mpich
 ``` sh
 module load conda/conda3
-conda create -n py11ase_mpich python=3.11 # 
+conda create -n py11ase_mpich python=3.11 
 source activate py11ase_mpich
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
-        mpich ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core=28.* \
+        mpich ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core \
         libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
 
