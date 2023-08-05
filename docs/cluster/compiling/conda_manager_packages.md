@@ -13,6 +13,10 @@
 
 This way may eliminate some work on installing dependencies
 
+Some options for MPI
+- Openmpi: `conda install -y -c conda-forge openmpi ucx=1.13`
+- MPICH: `conda install -c conda-forge mpich`
+- IntelMPI: `conda install -c intel mpi4py`
 
 ## Centos 6 - Tachyon
 
@@ -127,14 +131,28 @@ source activate py9ase
 
 conda install conda
 
-conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
+conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
         openmpi=4.1.2 ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core=28.* \
         libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
-Use mpich
+``` sh
+module load conda/conda3
+conda create -n py11ase_ompi python=3.11 
+source activate py11ase_ompi
+
+conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
+        openmpi ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core=28.* \
+        libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
-conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
-        mpich=4.1.2 ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core=28.* \
+
+Use mpich
+``` sh
+module load conda/conda3
+conda create -n py11ase_mpich python=3.11 # 
+source activate py11ase_mpich
+
+conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
+        mpich ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core=28.* \
         libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
 
@@ -157,11 +175,6 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
     - use python 3.11
     - to use infiniband `libibverbs-cos7-x86_64`
     - `ucx=1.14` is not recognized
-    
-Some options for MPI
-- Openmpi: `conda install -y -c conda-forge openmpi ucx=1.13`
-- MPICH: `conda install -c conda-forge mpich`
-- IntelMPI: `conda install -c intel mpi4py`
 
 **Install**
 ``` sh
