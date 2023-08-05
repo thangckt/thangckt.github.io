@@ -121,6 +121,11 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 !!! note
     so far, `gpaw` does not recognize `openmpi` in conda --> move to Eagle
 
+Install `glibc`
+```
+conda install -y -c conda-forge -c neok.m4700 patchelf glibc
+```
+
 
 **Install** in Conda-env
 
@@ -184,7 +189,7 @@ source activate py11ase
 ```
 
 ``` sh
-conda install -y -c conda-forge clang lld llvm-tools \
+conda install -y -c conda-forge clang lld llvm-tools llvmdev \
         openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 rdma-core=28.* \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
