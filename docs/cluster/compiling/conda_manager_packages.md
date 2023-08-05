@@ -16,6 +16,8 @@ This way may eliminate some work on installing dependencies
 
 ## Centos 6 - Tachyon
 
+On Centos 6.9, GLIBC=2.12
+
 !!! note
 
     - Consider `clang` compiler.
@@ -94,13 +96,11 @@ prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is required in order to config libs
 ```
 
-### LAMMPS + GPAW
-
-On Centos 6.9, GLIBC=2.12
+### ASE
 
 !!! note
 
-    - Should update `conda` for better linking (important) --> helpful `conda install conda`
+    - Should update `conda` for better linking (important) --> use: `conda install conda`
     - This is for some convenience in linking and saving space.
     - old conda have many problems, but new conda require newer GLIBC, use these to avoid this requirement
         - `libffi=3.3 zlib=1.2.11 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 libblas=3.8`
