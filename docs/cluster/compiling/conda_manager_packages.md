@@ -170,21 +170,10 @@ conda  create -n py11ase python=3.11
 source activate py11ase
 ```
 
-with OpenMPI:
 ``` sh
 conda install -y -c conda-forge clang lld llvm-tools \
-        openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 rdma-core=28.* 
-```
-
-with MPICH:
-``` sh
-conda install -y -c conda-forge clang lld llvm-tools \
-        mpich ucx openmp libibverbs-cos7-x86_64 rdma-core=28.* 
-```
-
-Install Gpaw:
-``` sh
-conda install -y -c conda-forge blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
+        openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 rdma-core=28.* \
+        blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
 
 Test
