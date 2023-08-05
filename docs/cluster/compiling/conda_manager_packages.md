@@ -128,7 +128,13 @@ source activate py9ase
 conda install conda
 
 conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
-        openmpi=4.1.2 ucx openmp libibverbs-cos6-x86_64 libffi=3.3 \
+        openmpi=4.1.2 ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core=28.* \
+        libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
+```
+Use mpich
+```
+conda install -y -c conda-forge clang lld llvm-tools libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
+        mpich=4.1.2 ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core=28.* \
         libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
 
@@ -151,19 +157,36 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
     - use python 3.11
     - to use infiniband `libibverbs-cos7-x86_64`
     - `ucx=1.14` is not recognized
+    
+Some options for MPI
+- Openmpi: `conda install -y -c conda-forge openmpi ucx=1.13`
+- MPICH: `conda install -c conda-forge mpich`
+- IntelMPI: `conda install -c intel mpi4py`
 
 **Install**
-```sh
+``` sh
 module load conda/conda3
 conda  create -n py11ase python=3.11
 source activate py11ase
-
-conda install -y -c conda-forge clang lld llvm-tools \
-        openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 rdma-core=28.* \
-        blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
-
-conda install -y -c conda-forge -c rapidsai-nightly  c-compiler cxx-compiler  ucx-py
 ```
+
+with OpenMPI:
+``` sh
+conda install -y -c conda-forge clang lld llvm-tools \
+        openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 rdma-core=28.* 
+```
+
+with MPICH:
+``` sh
+conda install -y -c conda-forge clang lld llvm-tools \
+        mpich ucx openmp libibverbs-cos7-x86_64 rdma-core=28.* 
+```
+
+Install Gpaw:
+``` sh
+conda install -y -c conda-forge blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
+```
+
 Test
 ``` sh
 gpaw test
@@ -178,4 +201,9 @@ prepend-path    INCLUDE             $topdir/include
 prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw  # to see GPAW dataset
+```
+
+To consider:
+```
+conda install -y -c conda-forge -c rapidsai-nightly  c-compiler cxx-compiler  ucx-py
 ```
