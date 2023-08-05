@@ -108,9 +108,9 @@ conda install openssl-1.1.1u-hd590300_0.conda
 
 ```sh
 cd /uhome/p001cao/local/wSourceCode
-wget https://repo.continuum.io/miniconda/Miniconda3-py39_23.5.2-0-Linux-x86_64.sh
+wget https://repo.continuum.io/miniconda/Miniconda3-py311_23.5.2-0-Linux-x86_64.sh
 
-sh Miniconda3-py39_23.5.2-0-Linux-x86_64.sh -u
+sh Miniconda3-py311_23.5.2-0-Linux-x86_64.sh -u
 ```
 choose a folder to install:
 ```
