@@ -103,11 +103,12 @@ conda install openssl-1.1.1u-hd590300_0.conda
 
     - new GLIBC can avoid tons of error
     - apps only run from folder `uhome`, check if out of memory
+    - save source-code on `uwork` to save memory
 
 ### install
 
 ```sh
-cd /uhome/p001cao/local/wSourceCode
+cd /uwork/p001cao/local/#SourceCode
 wget https://repo.continuum.io/miniconda/Miniconda3-py311_23.5.2-0-Linux-x86_64.sh
 
 sh Miniconda3-py311_23.5.2-0-Linux-x86_64.sh -u
