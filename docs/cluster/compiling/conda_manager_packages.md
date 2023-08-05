@@ -159,7 +159,7 @@ conda  create -n py11ase python=3.11
 source activate py11ase
 
 conda install -y -c conda-forge clang lld llvm-tools \
-        openmpi ucx openmp libibverbs-cos7-x86_64 rdma-core=28.* \
+        openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 rdma-core=28.* \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 
 conda install -y -c conda-forge -c rapidsai-nightly  c-compiler cxx-compiler  ucx-py
