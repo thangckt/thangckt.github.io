@@ -14,9 +14,8 @@
 This way may eliminate some work on installing dependencies
 
 Some options for MPI
-- Openmpi: `conda install -y -c conda-forge openmpi ucx=1.13`
-- MPICH: `conda install -c conda-forge mpich`
-- IntelMPI: `conda install -c intel mpi4py`
+  - Openmpi: `conda install -y -c conda-forge openmpi ucx=1.13`
+  - MPICH: `conda install -c conda-forge mpich`
 
 ## Centos 6 - Tachyon
 
@@ -156,7 +155,7 @@ module load conda/conda3
 conda create -n py9ase_mpich python=3.9.2
 source activate py9ase_mpich
 
-conda install -y -c conda-forge libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
+conda install -y -c conda-forge libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
         mpich ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core \
         libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
