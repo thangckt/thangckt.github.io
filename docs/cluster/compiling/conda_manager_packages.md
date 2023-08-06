@@ -109,10 +109,8 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
         - `libffi=3.3 zlib=1.2.11 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 libblas=3.8`
         - new `openmpi` is not recognized in old GLIBC, so must downgrade thia package
     - `clang lld llvm-tools` can avoid requiring higher GLIBC ?
-    - Python version: (3.9.4)
-        - `gpaw` works with py11, but some dependencies for `gpaw` only available with py10
-        - `gpaw` requires `numpy`, but `numpy` in py10 may require high GLIBC. So use py9
-        - use python 3.9.4, don't use higher will require higher GLIBC
+    - Python version: (3.9.4 or 3.11.1, don't use higher)
+        - `gpaw` requires `numpy`, but `numpy` may require high GLIBC. 
     - Some libs to consider:
         - c-compiler cxx-compiler
         - clang libclang clangxx libclang-cpp lld llvm-tools
@@ -128,24 +126,14 @@ conda install -y -c conda-forge -c neok.m4700 patchelf glibc
 
 **Install** in Conda-env
 
-```sh
-module load conda/conda3
-conda create -n py9ase python=3.9.4  # don't use higher python
-source activate py9ase
-
-conda install conda
-
-conda install -y -c conda-forge clang lld llvm-tools llvmdev libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
-        openmpi=4.1.2 ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core=28.* \
-        libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
-```
+Use OpenMPI
 ``` sh
 module load conda/conda3
-conda create -n py9ase_ompi python=3.9.3 
+conda create -n py9ase_ompi python=3.11.1   # don't use higher python
 source activate py9ase_ompi
 
-conda install -y -c conda-forge libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
-        openmpi ucx openmp libffi=3.3 libibverbs-cos6-x86_64 rdma-core \
+conda install -y -c conda-forge clang lld llvm-tools llvmdev libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
+        openmpi ucx openmp libffi=3.3 libibverbs-cos6-x86_64 \
         libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
 
@@ -189,7 +177,7 @@ source activate py11ase
 
 ``` sh
 conda install -y -c conda-forge clang lld llvm-tools llvmdev \
-        openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 rdma-core=28.* \
+        openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
 
