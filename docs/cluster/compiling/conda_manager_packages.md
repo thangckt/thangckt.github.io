@@ -109,8 +109,9 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
         - `libffi=3.3 zlib=1.2.11 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 libblas=3.8`
         - new `openmpi` is not recognized in old GLIBC, so must downgrade thia package
     - `clang lld llvm-tools` can avoid requiring higher GLIBC ?
-    - Python version: (3.9.4 or 3.11.1, don't use higher)
+    - Python version: (3.9.4 or 3.11.0, don't use higher)
         - `gpaw` requires `numpy`, but `numpy` may require high GLIBC. 
+        = `python=3.11.1` require `libffi>=3.4`
     - Some libs to consider:
         - c-compiler cxx-compiler
         - clang libclang clangxx libclang-cpp lld llvm-tools
@@ -129,7 +130,7 @@ conda install -y -c conda-forge -c neok.m4700 patchelf glibc
 Use OpenMPI
 ``` sh
 module load conda/conda3
-conda create -n py11ase_ompi python=3.11.1   # don't use higher python
+conda create -n py11ase_ompi python=3.11.0   # don't use higher python
 source activate py11ase_ompi
 
 conda install -y -c conda-forge libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
@@ -140,7 +141,7 @@ conda install -y -c conda-forge libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 z
 Use mpich
 ``` sh
 module load conda/conda3
-conda create -n py11ase_mpich python=3.11.1   # don't use higher python
+conda create -n py11ase_mpich python=3.11.0   # don't use higher python
 source activate py11ase_mpich
 
 conda install -y -c conda-forge libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
