@@ -14,12 +14,12 @@
 This way may eliminate some work on installing dependencies
 
 Some options for MPI
-  - Openmpi: `conda install -y -c conda-forge openmpi`. Ucx is built, but disabled by default, to use `export OMPI_MCA_pml=ucx export OMPI_MCA_osc=ucx`
+  - Openmpi: `conda install -y -c conda-forge openmpi`. 
   - MPICH: `conda install -c conda-forge mpich`
 
-## Centos 6 - Tachyon
+## Centos 6.9 - Tachyon
 
-On Centos 6.9, GLIBC=2.12
+GLIBC=2.12
 
 !!! note
 
@@ -153,7 +153,7 @@ prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 ```
 
-## Centos 6.9 - CAN-GPU
+## Centos 6.8 - CAN-GPU
 
 **Install** in Conda-env
 
