@@ -88,31 +88,6 @@ fileLAMMPS=text.lmp
 mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -log LOG_${fileLAMMPS//.lmp/}_np$NSLOTS.log
 ```
 
-### GPAW
-
-**Install GPAW** in Conda-env
-
-```sh
-module load conda/conda3
-conda create -n py310gpaw python=3.10
-source activate py310gpaw
-
-conda install -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
-    libibverbs-cos6-x86_64 openmpi ucx openmp \
-    fftw blas libxc scalapack elpa libvdwxc ase gpaw
-```
-
-**Create a module file** for GPAW
-
-```tcl
-set     topdir          /home1/p001cao/app/miniconda3/envs/py310gpaw
-
-prepend-path    PATH                $topdir/bin
-prepend-path    INCLUDE             $topdir/include
-prepend-path    LD_LIBRARY_PATH     $topdir/lib
-prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is required in order to config libs
-```
-
 ### ASE
 
 !!! note
@@ -126,9 +101,9 @@ module load conda/conda3
 conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
-conda install -y -c conda-forge openmpi libibverbs-cos6-x86_64 \
-        libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
+conda install -y -c conda-forge libibverbs-cos6-x86_64 openmpi ase gpaw lammps
 ```
+conda install -y -c conda-forge openmpi ase gpaw lammps
 
 **Create a module file** for GPAW
 
@@ -159,7 +134,6 @@ conda install -y -c conda-forge cudatoolkit openmpi libxc scalapack fftw elpa li
 
 conda install -y -c conda-forge cudatoolkit openmpi ase gpaw lammps
 ```
-conda install -y -c conda-forge openmpi ase gpaw lammps
 
 ``` sh
 gpaw test
