@@ -103,7 +103,7 @@ conda install openssl-1.1.1u-hd590300_0.conda
 
     - new GLIBC can avoid tons of error
     - apps only run from folder `uhome`, check if out of memory
-    - save source-code on `uwork` to save memory
+    - save source-codes in dir `uwork` to save memory of `uhome`
 
 ### install
 
@@ -115,7 +115,7 @@ sh Miniconda3-py311_23.5.2-0-Linux-x86_64.sh -u
 ```
 choose a folder to install:
 ```
-/uhome/p001cao/local/app/miniconda3
+/uhome/p001cao/app/miniconda3
 ```
 running conda init?  --> NO
 
@@ -123,13 +123,42 @@ running conda init?  --> NO
 ### module file
 
 ``` tcl
-set     topdir          /uhome/p001cao/local/app/miniconda3
+set     topdir          /uhome/p001cao/app/miniconda3
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE                 $topdir/include
 prepend-path    PKG_CONFIG_PATH 	      $topdir/lib/pkgconfig
 ```
-and put this file into the folder:  `/uhome/p001cao/local/thang_Module_file`
+and put this file into the folder:  `/uhome/p001cao/app/1module_files/conda/conda3`
+
+
+## Centos 7.8 - Dumpo
+
+### install
+
+```sh
+cd /gpfs/home/p001c21/tha/#SourceCode
+wget https://repo.continuum.io/miniconda/Miniconda3-py311_23.5.2-0-Linux-x86_64.sh
+
+sh Miniconda3-py311_23.5.2-0-Linux-x86_64.sh -u
+```
+
+```
+/gpfs/home/p001c21/tha/app/miniconda3
+```
+--> NO
+
+### module file
+
+``` tcl
+set     topdir          /gpfs/home/p001c21/tha/app/miniconda3
+prepend-path    PATH                    $topdir/bin
+prepend-path    LD_LIBRARY_PATH         $topdir/lib
+prepend-path    INCLUDE                 $topdir/include
+prepend-path    PKG_CONFIG_PATH 	      $topdir/lib/pkgconfig
+```
+and put this file into the folder:  `/gpfs/home/p001c21/tha/app/1module_files/conda/conda3`
+
 
 
 ## Create Python Environments in conda
@@ -154,7 +183,6 @@ prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE                 $topdir/include
 ```
 
-
 References:
 <https://stackoverflow.com/questions/22885134/how-to-load-virtualenv-using-environmental-module-file-tcl-script>
 
@@ -163,7 +191,7 @@ References:
 3) No .bashrc file in my home directory
 4) Using vi, the Unix Visual Editor
 
-### 2. Install Miniconda on Windows
+## 2. Install Miniconda on Windows
 
 Anaconda: <https://www.anaconda.com/distribution/#windows>
 Miniconda: <https://repo.anaconda.com/miniconda/>
