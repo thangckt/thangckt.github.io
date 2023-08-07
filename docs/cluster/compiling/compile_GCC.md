@@ -145,20 +145,22 @@ prepend-path    INFOPATH                $topdir/share/info
     - update newer `binutils` to avoid errors. GCC-12/13 can not be compiled without `binutils`.
     - Error `fatal error: ld terminated with signal 11` may be due to full of memory
 
-```shell
+``` sh
 # wget http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-12.2.0/gcc-12.2.0.tar.gz
 # tar xvf gcc-12.2.0.tar.gz
 
 cd /home1/p001cao/local/wSourceCode
-git clone --branch releases/gcc-13 https://github.com/gcc-mirror/gcc.git gcc-13
-
+git clone --branch releases/gcc-13 https://github.com/gcc-mirror/gcc.git  gcc-13
 cd gcc-13
-git pull origin releases/gcc-13
+# git pull origin releases/gcc-13
 
 ./contrib/download_prerequisites
+```
+
+``` sh
 rm -rf build && mkdir build && cd build
 
-module load compiler/gcc-10.3
+# module load compiler/gcc-10.3
 module load tooldev/binutils-2.40
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \

@@ -217,7 +217,7 @@ nav:
       - cluster/compiling/Libtool.md
       - cluster/compiling/compile_UCX.md
       - cluster/compiling/compile_FTTW.md
-      - cluster/compiling/8_binutils_linker.md
+      - cluster/compiling/binutils_linker.md
       - cluster/compiling/9_MPI_window.md
       - cluster/compiling/LLVM.md
       - cluster/compiling/11_Conda_MPI.md

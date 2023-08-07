@@ -47,7 +47,7 @@ mkdir build && cd build
 ```
 
 ## LLVM 14
-### USC2: Tachyon - Centos 6.9
+### Tachyon - Centos 6.9
 
 #### use GCC
 
