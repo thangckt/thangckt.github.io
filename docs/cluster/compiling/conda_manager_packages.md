@@ -14,7 +14,7 @@
 This way may eliminate some work on installing dependencies
 
 Some options for MPI
-  - Openmpi: `conda install -y -c conda-forge openmpi`. 
+  - Openmpi: `conda install -y -c conda-forge openmpi`.
   - MPICH: `conda install -c conda-forge mpich`
 
 ## Centos 6.9 - Tachyon
@@ -155,30 +155,23 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 
 ## Centos 6.8 - CAN-GPU
 
+!!! note
+    Python 3.10 require newer GLIBC.
+
 **Install** in Conda-env
 
-Use OpenMPI
 ``` sh
 module load conda/conda3
-conda install -y -c conda-forge gcc_linux-64=11.2
-conda create -n py11ase_ompi python=3.11.0   # don't use higher python
-source activate py11ase_ompi
+conda create -n py9ase python=3.9.0   # don't use higher python
+source activate py9ase
 
-conda install -y -c conda-forge gcc_linux-64=11.2 zlib=1.2.11 \
-        openmpi libffi=3.3 libblas=3.8 libibverbs-cos6-x86_64 \
-        libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
+conda install -y -c conda-forge cudatoolkit openmpi libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
-
 
 **Create a module file** for GPAW
 
 ``` tcl
-set     topdir          /home1/p001cao/local/app/miniconda3/envs/py11ase_ompi
-
-prepend-path    PATH                $topdir/bin
-prepend-path    INCLUDE             $topdir/include
-prepend-path    LD_LIBRARY_PATH     $topdir/lib
-prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
+set     topdir          /home/thang/app/miniconda3/envs/py9ase
 ```
 
 
@@ -200,7 +193,7 @@ source activate py11ase
 
 ``` sh
 conda install -y -c conda-forge openmpi libibverbs-cos7-x86_64 \
-        blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
+        libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
 
 Test
@@ -252,8 +245,8 @@ source activate py11ase
 ```
 
 ``` sh
-conda install -y -c conda-forge openmpi ucx libibverbs-cos7-x86_64 cudatoolkit \
-        blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
+conda install -y -c conda-forge openmpi libibverbs-cos7-x86_64 cudatoolkit \
+        libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
 
 Test
