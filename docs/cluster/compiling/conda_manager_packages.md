@@ -14,25 +14,39 @@
 This way may eliminate some work on installing dependencies
 
 Some options for MPI
-  - Openmpi: `conda install -y -c conda-forge openmpi`.
-  - MPICH: `conda install -c conda-forge mpich`
+    - Openmpi: `conda install -y -c conda-forge openmpi`.
+    - MPICH: `conda install -c conda-forge mpich`
+
+Some hints to work around old GLIBC
+    - Should update `conda` for better linking (important) --> use: `conda install conda`
+    - This is for some convenience in linking and saving space.
+    - old conda have many problems, but new conda require newer GLIBC, use these to avoid this requirement
+        - `zlib=1.2.11 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12`, can use `gcc_linux-64=12`
+        - `libffi=3.3  libblas=3.8`
+        - new `openmpi` is not recognized in old GLIBC, so must downgrade thia package
+    - `clang lld llvm-tools` can avoid requiring higher GLIBC ?
+    - Python version: (3.9.4 or 3.11.0, don't use higher)
+        - `gpaw` requires `numpy`, but `numpy` may require high GLIBC.
+        = `python=3.11.1` require `libffi>=3.4`
+    - Use `libblas=*=*mkl`
+    - Some libs to consider:
+        - c-compiler cxx-compiler
+        - clang libclang clangxx libclang-cpp lld llvm-tools
+    - Try to use the Intel [oneAPI Toolkits](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-windows/2023-0/conda.html)
+    - Consider `clang` compiler.
+    - Don't use `mamba`, will cause the crash
+    - Some packages require GLIBC=2.17.
+        - May solve by installing `libgcc-ng=12` + `zlib=1.2.11`
+    - `libibverbs-cos6-x86_64` is required for infiniBand
+
+Install `glibc` (may not work)
+```
+conda install -y -c conda-forge -c neok.m4700 patchelf glibc
+```
 
 ## Centos 6.9 - Tachyon
 
 GLIBC=2.12
-
-!!! note
-
-    - Consider `clang` compiler.
-    - Should in all packages available in `conda-forge`
-    - Don't use `mamba`, will cause the crash
-    - Some packages require GLIBC=2.17.
-        - May solve by installing `libgcc-ng=12` + `zlib=1.2.11`
-    - Remember `ucx` and `openmp` for `openmpi`
-        - `libstdcxx-ng` is required for `openmp`
-        - `libgfortran-ng` is required for `openmpi`
-        - `libibverbs-cos6-x86_64` is required for infiniBand
-    - `openmpi>4.1.2` have a path problem (error `mpirun` not found). So avoid installing them.
 
 ### LAMMPS
 
@@ -59,7 +73,7 @@ conda install -c conda-forge -y clang lld llvm-tools libclang libclang-cpp libgc
 **Create a module file** for Lammps
 
 ```tcl
-set     topdir          /home1/p001cao/local/app/miniconda3/envs/py310lammps
+set     topdir          /home1/p001cao/app/miniconda3/envs/py310lammps
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
@@ -91,7 +105,7 @@ conda install -c conda-forge clang lld llvm-tools libgcc-ng=12 zlib=1.2.11 \
 **Create a module file** for GPAW
 
 ```tcl
-set     topdir          /home1/p001cao/local/app/miniconda3/envs/py310gpaw
+set     topdir          /home1/p001cao/app/miniconda3/envs/py310gpaw
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
@@ -103,57 +117,33 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
 
 !!! note
 
-    - Should update `conda` for better linking (important) --> use: `conda install conda`
-    - This is for some convenience in linking and saving space.
-    - old conda have many problems, but new conda require newer GLIBC, use these to avoid this requirement
-        - `zlib=1.2.11 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12`, can use `gcc_linux-64=12`
-        - `libffi=3.3  libblas=3.8`
-        - new `openmpi` is not recognized in old GLIBC, so must downgrade thia package
-    - `clang lld llvm-tools` can avoid requiring higher GLIBC ?
-    - Python version: (3.9.4 or 3.11.0, don't use higher)
-        - `gpaw` requires `numpy`, but `numpy` may require high GLIBC.
-        = `python=3.11.1` require `libffi>=3.4`
-    - Use `libblas=*=*mkl`
-    - Some libs to consider:
-        - c-compiler cxx-compiler
-        - clang libclang clangxx libclang-cpp lld llvm-tools
-    - Try to use the Intel [oneAPI Toolkits](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-windows/2023-0/conda.html)
-
-!!! note
-    so far, `gpaw` does not recognize `openmpi` in conda --> move to Eagle
-
-Install `glibc`
-```
-conda install -y -c conda-forge -c neok.m4700 patchelf glibc
-```
-
+    - higher python (>3.9.2) require newer GLIBC, and have many conflicts.
 
 **Install** in Conda-env
 
-Use OpenMPI
 ``` sh
 module load conda/conda3
-conda create -n py11ase_ompi python=3.11.0   # don't use higher python
-source activate py11ase_ompi
+conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
+source activate py9ase
 
-conda install -y -c conda-forge gcc_linux-64=11.2 zlib=1.2.11 \
-        openmpi libffi=3.3 libblas=3.8 libibverbs-cos6-x86_64 \
+conda install -y -c conda-forge openmpi libibverbs-cos6-x86_64 \
         libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
-
 
 **Create a module file** for GPAW
 
 ``` tcl
-set     topdir          /home1/p001cao/local/app/miniconda3/envs/py11ase_ompi
+set     topdir          /home1/p001cao/app/miniconda3/envs/py9ase
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
 prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
+prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw      # to see GPAW dataset
 ```
 
 ## Centos 6.8 - CAN-GPU
+GLIBC=2.12
 
 !!! note
     Python 3.10 require newer GLIBC.
@@ -162,10 +152,17 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 
 ``` sh
 module load conda/conda3
-conda create -n py9ase python=3.9.0   # don't use higher python
+conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
 conda install -y -c conda-forge cudatoolkit openmpi libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
+
+conda install -y -c conda-forge cudatoolkit openmpi ase gpaw lammps
+```
+conda install -y -c conda-forge openmpi ase gpaw lammps
+
+``` sh
+gpaw test
 ```
 
 **Create a module file** for GPAW
@@ -203,7 +200,7 @@ gpaw test
 
 **module file**
 ``` tcl
-set     topdir          /uhome/p001cao/local/app/miniconda3/envs/py11ase
+set     topdir          /uhome/p001cao/app/miniconda3/envs/py11ase
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
