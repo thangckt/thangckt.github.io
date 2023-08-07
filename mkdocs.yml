@@ -209,17 +209,17 @@ nav:
   - Cluster:
     - Compiling:
       - LAMMPS: cluster/compiling/LAMMPS.md
-      - GCC: cluster/compiling/2_Compile_GCC.md
-      - Open MPI: cluster/compiling/3_Compile_openMPI.md
+      - GCC: cluster/compiling/compile_GCC.md
+      - Open MPI: cluster/compiling/compile_openMPI.md
       - cluster/compiling/Plumed.md
       - cluster/compiling/CP2K.md
       - cluster/compiling/CMake.md
       - cluster/compiling/Libtool.md
-      - cluster/compiling/6_Compile_UCX.md
-      - cluster/compiling/7_Compile_FTTW.md
+      - cluster/compiling/compile_UCX.md
+      - cluster/compiling/compile_FTTW.md
       - cluster/compiling/8_binutils_linker.md
       - cluster/compiling/9_MPI_window.md
-      - cluster/compiling/10_LLVM.md
+      - cluster/compiling/LLVM.md
       - cluster/compiling/11_Conda_MPI.md
       - cluster/compiling/12_PMIX.md
       - cluster/compiling/Dependencies.md

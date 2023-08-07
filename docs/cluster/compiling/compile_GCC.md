@@ -29,8 +29,7 @@ The [GNU Compiler](https://gcc.gnu.org) Collection includes front ends for C, C+
 - cuda does not support gcc > 8
 ```
 
-## GCC-11
-### 1. Download:
+## 1. Download:
 
 * check all availabe versions GCC
   - [at this link](https://gcc.gnu.org/releases.html)
@@ -50,7 +49,7 @@ The [GNU Compiler](https://gcc.gnu.org) Collection includes front ends for C, C+
   git clone -b releases/gcc-11.2.0 https://github.com/gcc-mirror/gcc gcc-11.2.0
   ```
 
-### 2. Install
+## 2. Install
 Include 2 steps:
 - **download prerequisites:**
 ```shell
@@ -62,9 +61,10 @@ cd gcc-11.2.0
 configure error: uint64_t or int64_t not found     --> need at least gcc-4.5
 ```
 
+### Eagle - Centos 7.8
 
-#### USC1: (eagle)
 ```shell
+git clone -b releases/gcc-11.2.0 https://github.com/gcc-mirror/gcc gcc-11.2.0
 cd gcc-11.2
 git checkout releases/gcc-11.2
 ./contrib/download_prerequisites
@@ -73,8 +73,8 @@ mkdir build && cd build
 module load compiler/gcc-10.3         # to avoid:  uint64_t or int64_t not found
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
---enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
---prefix=/uhome/p001cao/local/app/compiler/gcc-11.2
+  --enable-shared --disable-multilib --with-system-zlib \
+  --enable-checking=release --prefix=/uhome/p001cao/app/compiler/gcc-11.2
 ```
 
 ```make
@@ -83,24 +83,33 @@ make install
 # check: g++ -v
 ```
 
-#### USC 2
-```shell
+### Tachyon - Centos 6.9
+
+``` sh
+cd /home1/p001cao/#SourceCode
+# git clone -b releases/gcc-11.4.0 https://github.com/gcc-mirror/gcc  gcc-11.4
+cd gcc-11.4
+# git checkout releases/gcc-11.2
+./contrib/download_prerequisites
+```
+
+``` sh
 mkdir build && cd build
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
---enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
---prefix=/home1/p001cao/local/app/compiler/gcc-11.2
+  --enable-shared --disable-multilib --with-system-zlib \
+  --enable-checking=release --prefix=/home1/p001cao/app/compiler/gcc-11.4
 ```
 
-#### CAN
+### CAN
 ```shell
---prefix=/home/thang/local/app/compiler/gcc-10.3
+--prefix=/home/thang/app/compiler/gcc-10.3
 ```
 
 ### CAN_GPU
 ```shell
 module load compiler/gcc-7.4   # cuda note support gcc > 8
---prefix=/home/thang/local/app/compiler/gcc-10.3'
+--prefix=/home/thang/app/compiler/gcc-10.3'
 ```
 
 
@@ -109,7 +118,7 @@ at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2
 
 ```shell
 # for Tcl script use only
-set             topdir          /uhome/p001cao/local/app/compiler/gcc-11.2
+set             topdir          /uhome/p001cao/app/compiler/gcc-11.2
 
 setenv           CC gcc
 setenv           CXX g++
@@ -154,7 +163,7 @@ module load tooldev/binutils-2.40
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
 --enable-checking=release --enable-shared --disable-multilib --with-system-zlib  \
---prefix=/home1/p001cao/local/app/compiler/gcc-13
+--prefix=/home1/p001cao/app/compiler/gcc-13
 
 make -j 16 && make install
 ```

@@ -155,8 +155,8 @@ copy new pair_eam.cpp & pair_eam.h into /src and delete corresponding files in /
 - Use external LAPACK & BLAS
 
 ```shell
-  export myLAPACK=/uhome/p001cao/local/app/lapack-3.10/liblapack.a
-  export myBLAS=/uhome/p001cao/local/app/lapack-3.10/libblas.a
+  export myLAPACK=/uhome/p001cao/app/lapack-3.10/liblapack.a
+  export myBLAS=/uhome/p001cao/app/lapack-3.10/libblas.a
 
   -DLAPACK_LIBRARIES=${myLAPACK} -DBLAS_LIBRARIES=${myBLAS}
 ```
@@ -318,7 +318,7 @@ make distrib
 ```shell
 cd vmd-1.9.4a51
 module load compiler/gcc-10.3
-export VMDINSTALLDIR=/uhome/p001cao/local/app/vmd
+export VMDINSTALLDIR=/uhome/p001cao/app/vmd
 ./configure LINUXPPC64 OPENGL SILENT PTHREADS
 cd src
 make
@@ -348,16 +348,16 @@ module load conda/py37Lammps
 - use Python_ROOT_DIR (same as module load): --> will encounter the error: Anaconda environments prevent CMake from generating a safe runtime search path --> cannot be solved so far.
 
 ```shell
-export pyROOT=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps
+export pyROOT=/uhome/p001cao/app/miniconda3/envs/py37Lammps
 -DPython_ROOT_DIR=${pyROOT}   # this setting must be put on the head of cmake
 ```
 
 - use Python_EXECUTABLE # (Python_EXECUTABLE depend on cmake's version) (but this case still use system Python while compiling, so cannot use on multi-OS with different Versions )
 
 ```shell
-export pyEXE=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/bin/python
-export pyINC=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/include/python3.7m
-export pyLIB=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/lib/libpython3.7m.a
+export pyEXE=/uhome/p001cao/app/miniconda3/envs/py37Lammps/bin/python
+export pyINC=/uhome/p001cao/app/miniconda3/envs/py37Lammps/include/python3.7m
+export pyLIB=/uhome/p001cao/app/miniconda3/envs/py37Lammps/lib/libpython3.7m.a
 
 -DPython_EXECUTABLE=${pyEXE} -DPython_INCLUDE_DIR=${pyINC} -DPython_LIBRARY=${pyLIB}
 ```
@@ -369,7 +369,7 @@ export pyLIB=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/lib/libpython3.
     - must export compilers to to avoid miss matching compilers
 
     ```shell
-    export PATH=/uhome/p001cao/local/app/openmpi/4.1.1-gcc11.2-noUCX-eagle/bin:$PATH
+    export PATH=/uhome/p001cao/app/openmpi/4.1.1-gcc11.2-noUCX-eagle/bin:$PATH
     export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort
     ## can use: -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ -DCMAKE_Fortran_COMPILER=mpif90 \
     ```
@@ -400,8 +400,8 @@ export pyLIB=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps/lib/libpython3.
 
     ```shell
     module load tooldev/gsl-2.6
-    export myLAPACK=/uhome/p001cao/local/app/lapack-3.10/liblapack.a
-    export myBLAS=/uhome/p001cao/local/app/lapack-3.10/libblas.a
+    export myLAPACK=/uhome/p001cao/app/lapack-3.10/liblapack.a
+    export myBLAS=/uhome/p001cao/app/lapack-3.10/libblas.a
 
     -DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myLAPACK}
     ```
@@ -446,11 +446,11 @@ module load tooldev/cmake-3.21
 module load fftw/fftw3.3.10-ompi5.0-gcc11.2
 module load mpi/ompi5.0.0-gcc11.2
 
-export PATH=/uhome/p001cao/local/app/openmpi/5.0.0-gcc11.2-eagle/bin:$PATH
+export PATH=/uhome/p001cao/app/openmpi/5.0.0-gcc11.2-eagle/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
 ## MOLFILE_plugins/ python 3/ LAPACK&BLAS
 export PlugIncDIR=/uhome/p001cao/local/wSourceCode/vmd/vmd-1.9/plugins/include
-export pyROOT=/uhome/p001cao/local/app/miniconda3/envs/py37Lammps
+export pyROOT=/uhome/p001cao/app/miniconda3/envs/py37Lammps
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=gold -lrt" \
@@ -465,7 +465,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPKG_PLUMED=yes -DDOWNLOAD_PLUMED=yes\
 -DFFT=FFTW3 \
 -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ -DCMAKE_Fortran_COMPILER=mpif90 \
--DCMAKE_INSTALL_PREFIX=/uhome/p001cao/local/app/lammps/gccOMPI5-dev
+-DCMAKE_INSTALL_PREFIX=/uhome/p001cao/app/lammps/gccOMPI5-dev
 
 make -j 20
 ## test:  mpirun -np 2 lmp_mpi
@@ -479,7 +479,7 @@ make install
 module load conda/py37Lammps
 module load fftw/fftw3.3.10-ompi5.0-gcc11.2
 ## for Tcl script use only
-set     topdir          /uhome/p001cao/local/app/lammps/gccOMPI5-29Sep21
+set     topdir          /uhome/p001cao/app/lammps/gccOMPI5-29Sep21
 
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/lib64
@@ -498,11 +498,11 @@ module load tooldev/cmake-3.20.3
 module load fftw/fftw3.3.10-ompi4.1.3-gcc10.3
 module load mpi/ompi4.1.3-gcc10.3
 
-export PATH=$PATH:/home1/p001cao/local/app/openmpi/4.1.3-gcc10.3/bin
+export PATH=$PATH:/home1/p001cao/app/openmpi/4.1.3-gcc10.3/bin
 export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
 export CFLAGS='-gdwarf-4 -gstrict-dwarf'
 ### python (require py3) & BLAS+LAPACK
-export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py37Lammps
+export pyROOT=/home1/p001cao/app/miniconda3/envs/py37Lammps
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=gold -lrt" \
@@ -515,7 +515,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPKG_ML-PACE=yes -DPKG_ML-QUIP=no -DPKG_ML-HDNNP=no -DPKG_MDI=no \
 -DPKG_PLUMED=yes \
 -DFFT=FFTW3 \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/gccOMPI4-dev
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/lammps/gccOMPI4-dev
 
 make -j 16 && make install
 ```
@@ -533,7 +533,7 @@ module load tooldev/cmake-3.20.3
 module load fftw/fftw3.3.10-ompi5.0-gcc11.2
 module load mpi/ompi5.0.0-gcc10.3
 
-export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py37Lammps
+export pyROOT=/home1/p001cao/app/miniconda3/envs/py37Lammps
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=gold -lrt" \
@@ -547,7 +547,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPKG_MESONT=no -DPKG_ML-QUIP=yes -DDOWNLOAD_QUIP=yes \
 -DPKG_PLUMED=yes -DDOWNLOAD_PLUMED=yes\
 -DFFT=FFTW3 \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/gccOMPI5-dev
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/lammps/gccOMPI5-dev
 
 ```
 
@@ -561,7 +561,7 @@ module load cmake/3.16.2
 module load fftw/3.3.8/gcc-7.4.0/ompi-3.1.4/double
 module load mpi/gcc-7.4.0/ompi/3.1.4
 
-export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py37Lammps
+export pyROOT=/home1/p001cao/app/miniconda3/envs/py37Lammps
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=gold -lrt" \
@@ -575,7 +575,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPKG_MESONT=no -DPKG_ML-QUIP=no \
 -DPKG_PLUMED=yes -DDOWNLOAD_PLUMED=yes\
 -DFFT=FFTW3 \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/gccOMPI3-dev
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/lammps/gccOMPI3-dev
 ```
 
 \## use Internal LAPACK&BLAS, then no need (GSL & MKL): open file: ../cmake/Modules/Packages/USER_PLUMED.cmake
@@ -587,7 +587,7 @@ source mklvars.sh intel64
 -DFFT=MKL \    ## must set before Plumed
 \## or use openBLAS (bad performance)
 module load tooldev/gsl-2.6
-export myBLAS=/home1/p001cao/local/app/tooldev/openBLAS-0.3.19/lib64/libopenblas.a
+export myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.19/lib64/libopenblas.a
 -DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS}
 
 \## load plumed separately (bad alloc)
@@ -605,7 +605,7 @@ module load conda/py37Lammps
 module load fftw/fftw3.3.10-ompi5.0-gcc11.2
 
 ## for Tcl script use only
-set     topdir          /home1/p001cao/local/app/lammps/gccOMPI5-dev
+set     topdir          /home1/p001cao/app/lammps/gccOMPI5-dev
 
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/lib64
@@ -618,8 +618,8 @@ prepend-path    INCLUDE                 $topdir/include/lammps
 
 ```shell
 ## cuda
-export CUDA_PATH=/home/thang/local/app/cuda-10.2
-export bin2c=/home/thang/local/app/cuda-10.2/bin/bin2c
+export CUDA_PATH=/home/thang/app/cuda-10.2
+export bin2c=/home/thang/app/cuda-10.2/bin/bin2c
 
 -DPKG_GPU=yes -DGPU_API=cuda -DGPU_ARCH=sm_61 -DBIN2C=${bin2c} -DGPU_PREC=double \
 ```
@@ -631,13 +631,13 @@ module load mpi/ompi4.1-gcc7.4-cuda      ## cuda-10 only support to gcc-8
 module load cmake-3.20.3
 module load fftw/fftw3.3.8-ompi4.1-gcc7.4
 
-export PATH=$PATH:/home/thang/local/app/openmpi/4.1.1-gcc7.4-cuda/bin
+export PATH=$PATH:/home/thang/app/openmpi/4.1.1-gcc7.4-cuda/bin
 export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
 ## python (require py3)
-export pyROOT=/home/thang/local/app/miniconda3/envs/py37Lammps
+export pyROOT=/home/thang/app/miniconda3/envs/py37Lammps
 ## cuda
-export CUDA_PATH=/home/thang/local/app/cuda-10.2
-export bin2c=/home/thang/local/app/cuda-10.2/bin/bin2c
+export CUDA_PATH=/home/thang/app/cuda-10.2
+export bin2c=/home/thang/app/cuda-10.2/bin/bin2c
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPython_ROOT_DIR=${pyROOT} \
@@ -651,7 +651,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DPKG_MESONT=no -DPKG_ML-QUIP=no \
 -DPKG_PLUMED=yes -DDOWNLOAD_PLUMED=yes\
 -DFFT=FFTW3 \
--DCMAKE_INSTALL_PREFIX=/home/thang/local/app/lammps/gccOMPI-dev
+-DCMAKE_INSTALL_PREFIX=/home/thang/app/lammps/gccOMPI-dev
 ```
 
 ### CAN3_GPU - Ubuntu 20 with GPU
@@ -715,7 +715,7 @@ $ENV{TBBROOT}/build/linux_intel64_gcc_cc9.2.0_libc2.12_kernel2.6.32_release)
 https://github.com/kokkos/kokkos/blob/master/BUILD.md
 ###-- must use
 https://stackoverflow.com/questions/52018092/how-to-set-rpath-and-runpath-with-gcc-ld##52020177
-export myGCC=/home1/p001cao/local/app/compiler/gcc-9.2.0
+export myGCC=/home1/p001cao/app/compiler/gcc-9.2.0
 -DCMAKE_CXX_LINK_FLAGS="-L${myGCC}/lib64 -Wl,-rpath,${myGCC}/lib64" \
 
 ```
@@ -738,7 +738,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DDOWNLOAD_VORO=yes -DDOWNLOAD_EIGEN3=yes \
 -DPKG_USER-ADIOS=no -DPKG_USER-NETCDF=no -DPKG_USER-QUIP=no -DPKG_USER-SCAFACOS=no \
 -DPKG_USER-QMMM=no -DPKG_USER-VTK=no -DPKG_USER-H5MD=no \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/05May20-gcc
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/lammps/05May20-gcc
 ```
 
 ## GCC + OpenSHMEM
@@ -749,7 +749,7 @@ module load tooldev/binutils-2.35                ## gold
 module load tooldev/cmake-3.18.0
 module load fftw/fftw3.3.8-ompi4.1-gcc10.2
 
-export PATH=$PATH:/home1/p001cao/local/app/openmpi/4.1.0-gcc10.2/bin
+export PATH=$PATH:/home1/p001cao/app/openmpi/4.1.0-gcc10.2/bin
 export CC=shmemcc
 export CXX=shmemc++
 export FORTRAN=shmemfort
@@ -764,7 +764,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DFFT=FFTW3 \
 -DPKG_USER-PLUMED=yes -DDOWNLOAD_PLUMED=yes\
 -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ -DCMAKE_Fortran_COMPILER=mpifort \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/gccSHMEM-master
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/lammps/gccSHMEM-master
 ```
 
 ## Compile with openMPI4.0.1-gcc7.4.0 on CAN
@@ -776,7 +776,7 @@ module load cmake-3.12
 -D PKG_USER-ATC=no -D PKG_VORONOI=no -D PKG_USER-SMD=no -D PKG_USER-PLUMED=no
 
 cmake  -C ../cmake/presets/all_on.cmake \
--D CMAKE_INSTALL_PREFIX=/home/thang/local/app/lammps/20Nov19 \
+-D CMAKE_INSTALL_PREFIX=/home/thang/app/lammps/20Nov19 \
 -D BUILD_MPI=yes -D LAMMPS_MACHINE=mpi \
 -D BUILD_LIB=yes -D BUILD_SHARED_LIBS=yes -D LAMMPS_EXCEPTIONS=yes \
 -D PKG_GPU=no -D PKG_KIM=no -D PKG_LATTE=no -D PKG_MSCG=no -D PKG_KOKKOS=no \
@@ -809,7 +809,7 @@ cmake ../cmake -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=gold -lrt" \
 -DPKG_USER-QMMM=no -DPKG_USER-VTK=no -DPKG_USER-H5MD=no \
 -DPKG_USER-PLUMED=yes -DDOWNLOAD_PLUMED=no -DPLUMED_MODE=shared \
 -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ -DCMAKE_Fortran_COMPILER=mpifort \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/19Mar20-mva
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/lammps/19Mar20-mva
 ```
 
 <https://github.com/lammps/lammps/blob/master/lib/message/cslib/src/STUBS_ZMQ/zmq.h>
@@ -905,7 +905,7 @@ cd build
 Configure
 
 ```shell
-cmake ../cmake -C ../cmake/presets/all_on.cmake \ -DBUILD_MPI=yes -DLAMMPS_MACHINE=mpi \ -DBUILD_OMP=yes -DKokkos_ARCH_WSM=yes -DKokkos_ENABLE_OPENMP=yes \ -DBUILD_SHARED_LIBS=yes -DLAMMPS_EXCEPTIONS=yes \ -DPKG_GPU=no -DPKG_LATTE=no -DPKG_KIM=no -DPKG_MSCG=no -DPKG_USER-INTEL=no\ -DDOWNLOAD_VORO=yes -DDOWNLOAD_EIGEN3=yes \ -DPKG_USER-ADIOS=no -DPKG_USER-NETCDF=no -DPKG_USER-QUIP=no -DPKG_USER-SCAFACOS=no \ -DPKG_USER-QMMM=no -DPKG_USER-VTK=no -DPKG_USER-H5MD=no \ -DPKG_USER-PLUMED=yes -DDOWNLOAD_PLUMED=no -DPLUMED_MODE=shared \ -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ \ -DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/05May20
+cmake ../cmake -C ../cmake/presets/all_on.cmake \ -DBUILD_MPI=yes -DLAMMPS_MACHINE=mpi \ -DBUILD_OMP=yes -DKokkos_ARCH_WSM=yes -DKokkos_ENABLE_OPENMP=yes \ -DBUILD_SHARED_LIBS=yes -DLAMMPS_EXCEPTIONS=yes \ -DPKG_GPU=no -DPKG_LATTE=no -DPKG_KIM=no -DPKG_MSCG=no -DPKG_USER-INTEL=no\ -DDOWNLOAD_VORO=yes -DDOWNLOAD_EIGEN3=yes \ -DPKG_USER-ADIOS=no -DPKG_USER-NETCDF=no -DPKG_USER-QUIP=no -DPKG_USER-SCAFACOS=no \ -DPKG_USER-QMMM=no -DPKG_USER-VTK=no -DPKG_USER-H5MD=no \ -DPKG_USER-PLUMED=yes -DDOWNLOAD_PLUMED=no -DPLUMED_MODE=shared \ -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ \ -DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/lammps/05May20
 ```
 
 ## Compile with IMPI-2019xe + MKL
@@ -929,7 +929,7 @@ cd lammps-folder
 mkdir build
 cd build
 cmake  -C ../cmake/presets/all_on.cmake \
--D CMAKE_INSTALL_PREFIX=/uhome/p001cao/local/app/lammps/20Nov19impi \
+-D CMAKE_INSTALL_PREFIX=/uhome/p001cao/app/lammps/20Nov19impi \
 -D BUILD_MPI=yes -D LAMMPS_MACHINE=mpi \
 -D BUILD_LIB=yes -D BUILD_SHARED_LIBS=yes -D LAMMPS_EXCEPTIONS=yes \
 -D PKG_GPU=no -D PKG_KIM=no -D PKG_LATTE=no -D PKG_MSCG=no -D PKG_KOKKOS=no \
@@ -939,7 +939,7 @@ cmake  -C ../cmake/presets/all_on.cmake \
 -D PKG_USER-QMMM=no -D PKG_USER-VTK=no -D PKG_USER-H5MD=no \
 -D PKG_USER-PLUMED=yes -D DOWNLOAD_PLUMED=no -D PLUMED_MODE=shared \
 -D FFT=MKL \
--D MKL_LIBRARY=/uhome/p001cao/local/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin \
+-D MKL_LIBRARY=/uhome/p001cao/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin \
 -D CMAKE_C_COMPILER=mpiicc -D CMAKE_CXX_COMPILER=mpiicpc -D CMAKE_Fortran_COMPILER=mpiifort \
 ../cmake
 
@@ -976,7 +976,7 @@ module load tooldev/cmake-3.18.0
 module load tooldev/gsl-2.6
 module load tooldev/binutils-2.32                # gold
 
-export PATH=$PATH:/home1/p001cao/local/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/bin
+export PATH=$PATH:/home1/p001cao/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/bin
 export CC=mpiicc
 export CXX=mpiicpc
 export FORTRAN=mpiifort
@@ -992,7 +992,7 @@ cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DFFT=MKL \
 -DPKG_USER-PLUMED=yes -DDOWNLOAD_PLUMED=yes\
 -DCMAKE_C_COMPILER=mpiicc -DCMAKE_CXX_COMPILER=mpiicpc -DCMAKE_Fortran_COMPILER=mpiifort \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/lammps/impi-master
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/lammps/impi-master
 #-- NOTE: Kokkos require TBB lib
 module load intel/tbb-xe20u2
 ##-- edit /cmake/Modules/FindTBB_MALLOC.cmake
@@ -1010,11 +1010,11 @@ source mklvars.sh intel64
 
 !!! note
 
-    - To void libs hidden by conda-lib, set absolute path for dynamic libs (*.so). See compile LLVM for more information
-    - if the error relates to conda (require new GLIBC),
-        - relate to `zlib`, install lower version `conda install -c conda-forge zlib=1.2.11`
-        - relate to `libstdc++`, use `export LD_LIBRARY_PATH=path/to/new/lib:$LD_LIBRARY_PATH`
-    - if the error relates to `openmpi/mca_pmix_pmix3x.so: undefined symbol:' --> delete isntall folder and reinstall
+  - To void libs hidden by conda-lib, set absolute path for dynamic libs (*.so). See compile LLVM for more information
+  - if the error relates to conda (require new GLIBC),
+    - relate to `zlib`, install lower version `conda install -c conda-forge zlib=1.2.11`
+    - relate to `libstdc++`, use `export LD_LIBRARY_PATH=path/to/new/lib:$LD_LIBRARY_PATH`
+  - if the error relates to `openmpi/mca_pmix_pmix3x.so: undefined symbol:' --> delete isntall folder and reinstall
 
 !!! info
 
@@ -1024,7 +1024,7 @@ source mklvars.sh intel64
     - `LEPTON_ENABLE_JIT` requires 'sys/auxv.h' that is only available on newer GLIBC. So disable it.
 
 ```shell
-cd /home1/p001cao/local/wSourceCode/lammps_dev
+cd /home1/p001cao/#SourceCode/lammps_dev
 git pull origin develop
 rm -rf build_LLVM
 mkdir build_LLVM && cd build_LLVM
@@ -1037,14 +1037,14 @@ module load tooldev/gsl-2.7
 module load fftw/fftw3.3.10-ompi4.1.4-clang14
 module load mpi/ompi4.1.x-clang16
 
-export myCOMPILER=/home1/p001cao/local/app/openmpi/4.1.x-clang16
+export myCOMPILER=/home1/p001cao/app/openmpi/4.1.x-clang16
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 ## python (require py3), BLAS+LAPACK
-export myPREFIX=/home1/p001cao/local/app/lammps/llvmOMPI4-dev
-export LD_LIBRARY_PATH=/home1/p001cao/local/app/compiler/gcc-13/lib64:$LD_LIBRARY_PATH   # to avoid using libstdc++.so in conda
+export myPREFIX=/home1/p001cao/app/lammps/llvmOMPI4-dev
+export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-13/lib64:$LD_LIBRARY_PATH   # to avoid using libstdc++.so in conda
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DBUILD_MPI=yes -DBUILD_OMP=yes -DPKG_OPENMP=yes \
@@ -1065,8 +1065,8 @@ make -j 16 && make install
 
 with python
 ```
-export pyROOT=/home1/p001cao/local/app/miniconda3/envs/py39link_lammps
-export myZLIB=/home1/p001cao/local/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
+export pyROOT=/home1/p001cao/app/miniconda3/envs/py39link_lammps
+export myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
 
 -DPython_ROOT_DIR=${pyROOT} \
 -DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
