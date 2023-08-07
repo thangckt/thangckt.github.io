@@ -112,9 +112,11 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
     - Python version: (3.9.4 or 3.11.0, don't use higher)
         - `gpaw` requires `numpy`, but `numpy` may require high GLIBC. 
         = `python=3.11.1` require `libffi>=3.4`
+    - Use `libblas=*=*mkl`
     - Some libs to consider:
         - c-compiler cxx-compiler
         - clang libclang clangxx libclang-cpp lld llvm-tools
+    - Try to use the Intel [oneAPI Toolkits](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-windows/2023-0/conda.html)
 
 !!! note
     so far, `gpaw` does not recognize `openmpi` in conda --> move to Eagle
@@ -134,8 +136,8 @@ conda create -n py11ase_ompi python=3.11.0   # don't use higher python
 source activate py11ase_ompi
 
 conda install -y -c conda-forge libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
-        openmpi libffi=3.3 libibverbs-cos6-x86_64 \
-        libblas=3.8 libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
+        openmpi libffi=3.3 libblas=*=*mkl libibverbs-cos6-x86_64 \
+        libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
 ```
 
 Use mpich
