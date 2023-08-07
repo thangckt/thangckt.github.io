@@ -180,7 +180,7 @@ source activate py11ase
 
 ``` sh
 conda install -y -c conda-forge clang lld llvm-tools llvmdev \
-        openmpi ucx=1.13 openmp libibverbs-cos7-x86_64 \
+        openmpi ucx=1.13 libibverbs-cos7-x86_64 \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
 
@@ -203,4 +203,41 @@ prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw  # to see GPAW dataset
 To consider:
 ```
 conda install -y -c conda-forge -c rapidsai-nightly  c-compiler cxx-compiler  ucx-py
+```
+
+## Centos 7 GPU - Dumpo
+
+!!! note
+
+  Open MPI is built with CUDA awareness but this support is disabled by default.
+  To enable it, please set the environment variable OMPI_MCA_opal_cuda_support=true before
+  launching your MPI processes. Equivalently, you can set the MCA parameter in the command line:
+  mpiexec --mca opal_cuda_support 1 ...
+  
+  In addition, the UCX support is also built but disabled by default.
+  To enable it, first install UCX (conda install -c conda-forge ucx). Then, set the environment
+  variables OMPI_MCA_pml="ucx" OMPI_MCA_osc="ucx" before launching your MPI processes.
+  Equivalently, you can set the MCA parameters in the command line:
+  mpiexec --mca pml ucx --mca osc ucx ...
+  Note that you might also need to set UCX_MEMTYPE_CACHE=n for CUDA awareness via UCX.
+
+```
+export OMPI_MCA_opal_cuda_support=true
+```
+
+**Install**
+``` sh
+module load conda/conda3
+conda  create -n py11ase python=3.11
+source activate py11ase
+```
+
+``` sh
+conda install -y -c conda-forge openmpi ucx libibverbs-cos7-x86_64 cudatoolkit \
+        blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
+```
+
+Test
+``` sh
+gpaw test
 ```
