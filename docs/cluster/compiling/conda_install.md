@@ -160,6 +160,32 @@ prepend-path    PKG_CONFIG_PATH 	      $topdir/lib/pkgconfig
 ```
 and put this file into the folder:  `/gpfs/home/p001c21/tha/app/1module_files/conda/conda3`
 
+## Centos 6.9 - CAN-GPU
+
+### install
+
+```sh
+cd /home/thang/#SourceCode
+wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
+
+sh Miniconda3-py39_4.9.2-Linux-x86_64.sh -u
+```
+
+```
+/home/thang/app/miniconda3
+```
+--> NO
+
+### module file
+
+``` tcl
+set     topdir          /home/thang/app/miniconda3
+prepend-path    PATH                    $topdir/bin
+prepend-path    LD_LIBRARY_PATH         $topdir/lib
+prepend-path    INCLUDE                 $topdir/include
+prepend-path    PKG_CONFIG_PATH 	      $topdir/lib/pkgconfig
+```
+and put this file into the folder:  `/home/thang/app/1module_files/conda/conda3`
 
 
 ## Create Python Environments in conda

@@ -111,7 +111,7 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig          # this is req
         - new `openmpi` is not recognized in old GLIBC, so must downgrade thia package
     - `clang lld llvm-tools` can avoid requiring higher GLIBC ?
     - Python version: (3.9.4 or 3.11.0, don't use higher)
-        - `gpaw` requires `numpy`, but `numpy` may require high GLIBC. 
+        - `gpaw` requires `numpy`, but `numpy` may require high GLIBC.
         = `python=3.11.1` require `libffi>=3.4`
     - Use `libblas=*=*mkl`
     - Some libs to consider:
@@ -152,6 +152,35 @@ prepend-path    INCLUDE             $topdir/include
 prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 ```
+
+## Centos 6.9 - CAN-GPU
+
+**Install** in Conda-env
+
+Use OpenMPI
+``` sh
+module load conda/conda3
+conda install -y -c conda-forge gcc_linux-64=11.2
+conda create -n py11ase_ompi python=3.11.0   # don't use higher python
+source activate py11ase_ompi
+
+conda install -y -c conda-forge gcc_linux-64=11.2 zlib=1.2.11 \
+        openmpi libffi=3.3 libblas=3.8 libibverbs-cos6-x86_64 \
+        libxc scalapack fftw elpa libvdwxc ase gpaw  # lammps
+```
+
+
+**Create a module file** for GPAW
+
+``` tcl
+set     topdir          /home1/p001cao/local/app/miniconda3/envs/py11ase_ompi
+
+prepend-path    PATH                $topdir/bin
+prepend-path    INCLUDE             $topdir/include
+prepend-path    LD_LIBRARY_PATH     $topdir/lib
+prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
+```
+
 
 ## Centos 7 - Eagle
 
@@ -203,7 +232,7 @@ conda install -y -c conda-forge -c rapidsai-nightly  c-compiler cxx-compiler  uc
   To enable it, please set the environment variable OMPI_MCA_opal_cuda_support=true before
   launching your MPI processes. Equivalently, you can set the MCA parameter in the command line:
   mpiexec --mca opal_cuda_support 1 ...
-  
+
   In addition, the UCX support is also built but disabled by default.
   To enable it, first install UCX (conda install -c conda-forge ucx). Then, set the environment
   variables OMPI_MCA_pml="ucx" OMPI_MCA_osc="ucx" before launching your MPI processes.
