@@ -179,8 +179,7 @@ source activate py11ase
 ```
 
 ``` sh
-conda install -y -c conda-forge clang lld llvm-tools llvmdev \
-        openmpi ucx=1.13 libibverbs-cos7-x86_64 \
+conda install -y -c conda-forge openmpi ucx=1.13 libibverbs-cos7-x86_64 \
         blas libxc scalapack fftw elpa libvdwxc ase gpaw lammps
 ```
 
