@@ -160,8 +160,7 @@ source activate py11ase
 ```
 
 ``` sh
-conda install -y -c conda-forge openmpi libibverbs-cos7-x86_64 \
-        libxc scalapack fftw elpa libvdwxc ase gpaw lammps
+conda install -y -c conda-forge libibverbs-cos6-x86_64 openmpi ase gpaw lammps
 ```
 
 Test
@@ -213,8 +212,7 @@ source activate py11ase
 ```
 
 ``` sh
-conda install -y -c conda-forge openmpi libibverbs-cos7-x86_64 cudatoolkit \
-        libxc scalapack fftw elpa libvdwxc ase gpaw lammps
+conda install -y -c conda-forge libibverbs-cos6-x86_64 cudatoolkit openmpi ase gpaw
 ```
 
 Test
