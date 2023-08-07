@@ -41,7 +41,7 @@ Consider Miniconda for light, and reduce error
     - Newer `conda` may require higher GLIBC --> use old version. glibc 2.12 only supports up to `Miniconda3-py39_4.9.2-Linux-x86_64.sh`
 
 ```sh
-cd /home1/p001cao/local/wSourceCode
+cd /home1/p001cao/#SourceCode
 wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
 
 sh Miniconda3-py39_4.9.2-Linux-x86_64.sh -u
@@ -49,7 +49,7 @@ sh Miniconda3-py39_4.9.2-Linux-x86_64.sh -u
 
 choose a folder to install:
 ```
-/home1/p001cao/local/app/miniconda3
+/home1/p001cao/app/miniconda3
 ```
 running conda init?  --> NO
 
@@ -58,12 +58,13 @@ running conda init?  --> NO
 ### Create Conda module file
 
 ``` tcl
-set     topdir          /home1/p001cao/local/app/miniconda3
+set     topdir          /home1/p001cao/app/miniconda3
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE                 $topdir/include
 prepend-path    PKG_CONFIG_PATH 	    $topdir/lib/pkgconfig
 ```
+and put this file into the folder:  `/home1/p001cao/app/1module_files/conda/conda3`
 
 ### Update conda
 
