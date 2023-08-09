@@ -33,6 +33,7 @@ Install: http://www.linuxfromscratch.org/lfs/view/development/chapter06/binutils
 - `binutils-2.40` require to install:
     - [texinfo](https://ftp.gnu.org/gnu/texinfo/?C=M;O=D)
     - [bison](https://ftp.gnu.org/gnu/bison/?C=M;O=D)
+    - need new GCC
 
 ```shell
 cd /home1/p001cao/0SourceCode/tooldev
@@ -42,24 +43,19 @@ tar zxvf binutils-2.40.tar.gz
 cd binutils-2.40
 rm -rf build && mkdir build  &&  cd build
 
+export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
 export PATH=/home1/p001cao/app/tooldev/texinfo-7.0.3/bin:$PATH
 export PATH=/home1/p001cao/app/tooldev/bison-3.8.2/bin:$PATH       # add custom ver before system's version
-export PATH=/home1/p001cao/app/tooldev/help2man-1.49.3/bin:$PATH 
 
 ../configure --enable-gold=yes --enable-ld=default --enable-lto \
-    --enable-plugins --enable-shared --disable-werror \
+    --enable-plugins --enable-shared --disable-werror  \
     --enable-64-bit-bfd --with-system-zlib \
     --prefix=/home1/p001cao/app/tooldev/binutils-2.40
 
 make -j 16  && make install
 ```
 
-check:  ld -v
-
-Option
-```
-export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
-```
+check:  ld -v   #  --enable-gprofng=no
 
 ## UCS1:
 - work with binutils-2.36.1, to avoid error in GCC-11
@@ -120,16 +116,6 @@ cd bison-3.8.2
 
 ./configure --prefix=/home1/p001cao/app/tooldev/bison-3.8.2
 make -j 16 && make install
-```
-
-## help2man
-``` sh
-cd /home1/p001cao/0SourceCode/tooldev
-wget -c --no-check-certificate http://ftp.gnu.org/gnu/help2man/help2man-1.49.3.tar.xz
-tar xf help2man-1.49.3.tar.xz
-cd help2man-1.49.3
-
-./configure --prefix=/home1/p001cao/app/tooldev/help2man-1.49.3
 ```
 
 
