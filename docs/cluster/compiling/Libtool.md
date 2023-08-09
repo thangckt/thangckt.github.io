@@ -126,12 +126,12 @@ prepend-path    PATH                    $topdir/bin
 [GSL](https://www.gnu.org/software/gsl/) is needed to link LAPACK & BLAS libraries when installing Plumed in Lammps (but no need now)
 
 ```sh
-cd /home1/p001cao/local/wSourceCode/tooldev
+cd /home1/p001cao/0SourceCode/tooldev
 wget ftp://ftp.gnu.org/gnu/gsl/gsl-2.7.tar.gz
 tar xvzf gsl-2.7.tar.gz
 cd gsl-2.7
 
-./configure --prefix=/home1/p001cao/local/app/tooldev/gsl-2.7
+./configure --prefix=/home1/p001cao/app/tooldev/gsl-2.7
 
 make && make install
 ```
@@ -139,7 +139,7 @@ make && make install
 **Module files**
 
 ```tcl
-set     topdir          /home1/p001cao/local/app/tooldev/gsl-2.7
+set     topdir          /home1/p001cao/app/tooldev/gsl-2.7
 
 prepend-path    PATH                $topdir/bin
 prepend-path    LD_LIBRARY_PATH     $topdir/lib
