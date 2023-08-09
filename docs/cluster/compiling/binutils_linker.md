@@ -87,7 +87,7 @@ prepend-path    INCLUDE 	        $topdir/include
 
 ## Zlib
 ```shell
-cd /home1/p001cao/#SourceCode/tooldev
+cd /home1/p001cao/0SourceCode/tooldev
 wget -c --no-check-certificate https://zlib.net/zlib-1.2.12.tar.gz
 tar zxvf zlib-1.2.12.tar.gz
 cd zlib-1.2.12
