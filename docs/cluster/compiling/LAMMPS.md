@@ -1024,14 +1024,14 @@ source mklvars.sh intel64
     - `LEPTON_ENABLE_JIT` requires 'sys/auxv.h' that is only available on newer GLIBC. So disable it.
 
 ```shell
-cd /home1/p001cao/#SourceCode/lammps_dev
+cd /home1/p001cao/0SourceCode/lammps_dev
 git pull origin develop
 rm -rf build_LLVM
 mkdir build_LLVM && cd build_LLVM
 ```
 
 ```sh
-module load tooldev/cmake-3.24
+module load tooldev/cmake-3.27
 module load tooldev/binutils-2.40
 module load tooldev/gsl-2.7
 module load fftw/fftw3.3.10-ompi4.1.4-clang14
