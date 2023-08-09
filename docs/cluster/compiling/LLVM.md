@@ -224,6 +224,8 @@ make -j 16 && make install
 
 ### USC2: Tachyon - Centos 6.9
 
+`conda install gcc_linux-64=11.2 zlib=1.2.11 libzlib-1.2.11 `
+
 ``` sh
 cd /home1/p001cao/0SourceCode
 # git clone -b release/16.x https://github.com/llvm/llvm-project.git llvm-16x
@@ -237,17 +239,15 @@ rm -rf build && mkdir build && cd build
 ```
 
 ``` sh
-module load tooldev/cmake-3.24
+module load tooldev/cmake-3.27
 module load tooldev/binutils-2.40
-module load conda/py39link_lammps
+module load conda/py9link_lammps
 module load compiler/gcc-13
 
 export myGCC=/home1/p001cao/local/app/compiler/gcc-13
 export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
 export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"
-export CFLAGS="-gdwarf-4 -gstrict-dwarf"       # avoid dwarf5 error
-export myZLIB=/home1/p001cao/local/app/tooldev/zlib-1.2.12               # avoid zlib hidden by conda
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld;openmp;polly" \
@@ -257,8 +257,7 @@ cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_CXX_STANDARD=17 -DCMAKE_CXX_STANDARD_REQUIRED=ON \
 -DLLVM_ENABLE_ZLIB=ON \
 -DCMAKE_C_FLAGS="-flax-vector-conversions" -DCMAKE_C_FLAGS_RELEASE="-flax-vector-conversions" \
--DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/local/app/compiler/llvm-16
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/compiler/llvm-16
 ```
 
 ``` sh
@@ -269,3 +268,11 @@ make -j 16 && make install
 !!! quote
 
     ReleaseNotes: https://releases.llvm.org/15.0.0/docs/ReleaseNotes.html
+
+options:
+```
+export CFLAGS="-gdwarf-4 -gstrict-dwarf"                 # avoid dwarf5 error
+export myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12     # avoid zlib hidden by conda
+
+-DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
+```
