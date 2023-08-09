@@ -5,7 +5,7 @@
 - or download CMake from: [https://cmake.org/download](https://cmake.org/download)
 
 ```shell
-cd /home1/p001cao/#SourceCode/tooldev
+cd /home1/p001cao/0SourceCode/tooldev
 wget https://cmake.org/files/v3.27/cmake-3.27.0.tar.gz
 tar zxvf cmake-3.27.0.tar.gz
 cd cmake-3.27.0
@@ -24,7 +24,10 @@ make install
 ## USC 2 (Tacheon)
 
 ```shell
-module load compiler/gcc-11.2
+cd /home1/p001cao/0SourceCode/tooldev
+cd cmake-3.27.0
+
+export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
 
 ./configure --prefix=/home1/p001cao/app/tooldev/cmake-3.27
 ```
