@@ -33,19 +33,20 @@ export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
 ```
 
 ## create module file
-cd /uhome/p001cao/local/Imodfiles  -->  create file "cmake-3.20.3"
-```shell
-# for Tcl script use only
-set         topdir                  /uhome/p001cao/app/tooldev/cmake-3.18.0
-set         version                cmake-3.20.3
+cd /uhome/p001cao/local/Imodfiles  -->  create file "cmake-3.27"
 
-setenv              cmake           $topdir
-prepend-path        PATH            $topdir/bin
+``` sh
+# for Tcl script use only
+set         topdir              /uhome/p001cao/app/tooldev/cmake-3.27
+
+setenv          cmake           $topdir
+prepend-path    PATH            $topdir/bin
+prepend-path    INCLUDE 	      $topdir/share/cmake-3.27/include
 ```
 
 Validate installation:
-```shell
-module load cmake-3.20.3
+``` sh
+module load cmake-3.27
 cmake --version
 ```
 
