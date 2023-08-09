@@ -1,6 +1,3 @@
----
-sort: 8
----
 <!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
 - [Binutils](#binutils)
@@ -18,13 +15,18 @@ sort: 8
 to use Gold linker (first released in binutils version 2.19), should to avoid link-error
 https://mirror.yongbok.net/gnu/binutils/?C=M&O=D
 There are three linkers available on modern GNU/Linux systems:
+
     - ld, maintained by GNU binutils,
     - gold, maintained by GNU binutils, "still in beta test",
     - lld, developed as part of the LLVM project.
+    
 For speed benchmarks, see: https://www.phoronix.com/scan.php?page=article&item=lld4-linux-tests&num=2 TL, DR: lld is fastest, followed by gold, followed by ld
 check  binutils version:  ld -v
 
 Install: http://www.linuxfromscratch.org/lfs/view/development/chapter06/binutils.html
+
+!!! note
+  do not use `#` in folder name
 
 ## Tachyon - Centos 6.9
 
@@ -33,18 +35,13 @@ Install: http://www.linuxfromscratch.org/lfs/view/development/chapter06/binutils
     - [bison](https://ftp.gnu.org/gnu/bison/?C=M;O=D)
 
 ```shell
-cd /home1/p001cao/#SourceCode/tooldev
+cd /home1/p001cao/0SourceCode/tooldev
 wget -c --no-check-certificate https://ftp.gnu.org/gnu/binutils/binutils-2.40.tar.gz
 tar zxvf binutils-2.40.tar.gz
 
 cd binutils-2.40
 rm -rf build && mkdir build  &&  cd build
 
-module load compiler/gcc-10.3
-
-export PATH=$PATH:/home1/p001cao/app/compiler/gcc-10.3/bin
-export CC=gcc export CXX=g++ export FC=gfortran
-export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 export PATH=/home1/p001cao/app/tooldev/texinfo-7.0.3/bin:$PATH
 export PATH=/home1/p001cao/app/tooldev/bison-3.8.2/bin:$PATH       # add custom ver before system's version
 
@@ -100,7 +97,7 @@ make -j 16 && make install
 
 ## texinfo
 ```shell
-cd /home1/p001cao/#SourceCode/tooldev
+cd /home1/p001cao/0SourceCode/tooldev
 wget -c --no-check-certificate https://ftp.gnu.org/gnu/texinfo/texinfo-7.0.3.tar.gz
 tar zxvf  texinfo-7.0.3.tar.gz
 cd texinfo-7.0.3
