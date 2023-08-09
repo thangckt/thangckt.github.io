@@ -28,7 +28,7 @@ cd /home1/p001cao/0SourceCode/tooldev
 tar zxvf cmake-3.27.0.tar.gz
 cd cmake-3.27.0
 
-export PATH=/home1/p001cao/app/compiler/gcc-13/bin:$PATH
+module load compiler/gcc-13
 
 ./configure --prefix=/home1/p001cao/app/tooldev/cmake-3.27
 
