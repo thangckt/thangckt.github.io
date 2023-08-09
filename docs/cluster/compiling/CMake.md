@@ -6,9 +6,9 @@
 
 ```shell
 cd /home1/p001cao/0SourceCode/tooldev
-wget https://cmake.org/files/v3.27/cmake-3.27.0.tar.gz
-tar zxvf cmake-3.27.0.tar.gz
-cd cmake-3.27.0
+wget https://cmake.org/files/v3.24/cmake-3.24.0-rc1.tar.gz
+tar zxvf cmake-3.24.0-rc1.tar.gz
+cd cmake-3.24.0-rc1
 ```
 
 ## USC 1 (Eagle)
@@ -25,12 +25,12 @@ make -j 20 && make install
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
-tar zxvf cmake-3.27.0.tar.gz
-cd cmake-3.27.0
+tar zxvf cmake-3.24.0-rc1.tar.gz
+cd cmake-3.24.0-rc1
 
-module load compiler/gcc-13
+export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
 
-./configure --prefix=/home1/p001cao/app/tooldev/cmake-3.27
+./configure --prefix=/home1/p001cao/app/tooldev/cmake-3.24
 
 make -j 16 && make install
 ```
