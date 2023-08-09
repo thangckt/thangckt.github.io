@@ -198,6 +198,7 @@ make -j 16 && make install
 ## LLVM 16
 
 !!! note
+
     - projects with errors: PROJECTS="mlir;flang"  RUNTIMES="libcxxabi"
     - LLVM 16 cause error `aligned_alloc` (mlir) --> add following lines in the file where error comes
     ```
@@ -224,7 +225,7 @@ make -j 16 && make install
 ### USC2: Tachyon - Centos 6.9
 
 ``` sh
-cd /home1/p001cao/local/wSourceCode
+cd /home1/p001cao/0SourceCode
 # git clone -b release/16.x https://github.com/llvm/llvm-project.git llvm-16x
 
 cd llvm-16x
