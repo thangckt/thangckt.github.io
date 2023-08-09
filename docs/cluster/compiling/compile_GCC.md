@@ -117,6 +117,8 @@ module load compiler/gcc-7.4   # cuda note support gcc > 8
 at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2"
 
 ```shell
+module load compiler/gcc/9.5.0
+
 # for Tcl script use only
 set             topdir          /uhome/p001cao/app/compiler/gcc-11.2
 
