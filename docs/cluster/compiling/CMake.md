@@ -12,24 +12,27 @@ cd cmake-3.27.0
 ```
 
 ## USC 1 (Eagle)
-```shell
+
+``` sh
 module load compiler/gcc-10.3
 
 ./configure --prefix=/uhome/p001cao/app/tooldev/cmake-3.27
 
-make -j 20
-make install
+make -j 20 && make install
 ```
 
 ## USC 2 (Tacheon)
 
-```shell
+``` sh
 cd /home1/p001cao/0SourceCode/tooldev
+tar zxvf cmake-3.27.0.tar.gz
 cd cmake-3.27.0
 
-export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
+export PATH=/home1/p001cao/app/compiler/gcc-13/bin:$PATH
 
 ./configure --prefix=/home1/p001cao/app/tooldev/cmake-3.27
+
+make -j 16 && make install
 ```
 
 ## create module file
