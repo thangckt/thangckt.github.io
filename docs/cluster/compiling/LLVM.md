@@ -228,10 +228,10 @@ make -j 16 && make install
 
 ``` sh
 cd /home1/p001cao/0SourceCode
-# git clone -b release/16.x https://github.com/llvm/llvm-project.git llvm-16x
+# git clone -b release/17.x https://github.com/llvm/llvm-project.git llvm-17x
 
-cd llvm-16x
-#git pull origin release/16.x
+cd llvm-17x
+#git pull origin release/17.x
 git reset --hard origin/main
 git pull origin main
 
@@ -259,7 +259,7 @@ cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DLLVM_ENABLE_ZLIB=ON \
 -DCMAKE_C_FLAGS="-flax-vector-conversions" -DCMAKE_C_FLAGS_RELEASE="-flax-vector-conversions" \
 -DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
--DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/compiler/llvm-16
+-DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/compiler/llvm-17
 ```
 
 ``` sh

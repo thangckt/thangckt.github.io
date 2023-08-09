@@ -373,7 +373,7 @@ cd ucx-1.13.1
 ???+ note
     - consider to update: `autoconf`, `libtool`, and `automake`
     - To solve error with `libuct_ib.la: command not found`, use `./contrib/configure-release` but not `/configure`
-    - It work now.
+    - It deos not work with clang 16 (not use now).
 
 
 ```shell

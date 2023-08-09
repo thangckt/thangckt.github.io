@@ -443,8 +443,6 @@ export myCOMPILER=/home1/p001cao/app/compiler/llvm-16
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=clang export CXX=clang++ export FC=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myUCX=/home1/p001cao/app/tooldev/ucx-1.15
 export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang16
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
@@ -456,10 +454,16 @@ make  -j 16 && make install
 
 Or just this
 
+```
+export myUCX=/home1/p001cao/app/tooldev/ucx-1.15
+
+```
+
 ```sh
 export my_PMIX=/home1/p001cao/app/tool_dev/pmix-4.1.2
 export my_libevent=/home1/p001cao/app/tool_dev/libevent-2.1.11       # require by PMIX
 export my_hwloc=/home1/p001cao/app/tool_dev/hwloc-2.8.0
+export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 
 ../configure --with-sge --without-verbs \
 --with-ucx=${my_UCX} --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc} --prefix=${myPREFIX}
