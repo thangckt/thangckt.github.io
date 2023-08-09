@@ -149,7 +149,7 @@ prepend-path    INFOPATH                $topdir/share/info
 # wget http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-12.2.0/gcc-12.2.0.tar.gz
 # tar xvf gcc-12.2.0.tar.gz
 
-cd /home1/p001cao/local/wSourceCode
+cd /home1/p001cao/local/0SourceCode
 git clone --branch releases/gcc-13 https://github.com/gcc-mirror/gcc.git  gcc-13
 cd gcc-13
 # git pull origin releases/gcc-13
@@ -170,4 +170,5 @@ module load tooldev/binutils-2.40
 make -j 16 && make install
 ```
 
+export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
 
