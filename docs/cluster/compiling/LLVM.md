@@ -248,6 +248,7 @@ export myGCC=/home1/p001cao/local/app/compiler/gcc-13
 export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
 export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"
+export myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12     # avoid zlib hidden by conda
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld;openmp;polly" \
@@ -257,13 +258,13 @@ cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_CXX_STANDARD=17 -DCMAKE_CXX_STANDARD_REQUIRED=ON \
 -DLLVM_ENABLE_ZLIB=ON \
 -DCMAKE_C_FLAGS="-flax-vector-conversions" -DCMAKE_C_FLAGS_RELEASE="-flax-vector-conversions" \
+-DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
 -DCMAKE_INSTALL_PREFIX=/home1/p001cao/app/compiler/llvm-16
 ```
 
 ``` sh
 make -j 16 && make install
 ```
-
 
 !!! quote
 
@@ -272,7 +273,4 @@ make -j 16 && make install
 options:
 ```
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                 # avoid dwarf5 error
-export myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12     # avoid zlib hidden by conda
-
--DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
 ```
