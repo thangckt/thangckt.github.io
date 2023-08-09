@@ -1,4 +1,3 @@
-
 <!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
 
 - [OpenMPI-4](#openmpi-4)
@@ -97,7 +96,7 @@ Installation OPTIONS in README.txt or `./configure -h`
 - use UCX: `--with-ucx=path`
 
 ```shell
-export myUCX=/uhome/p001cao/local/app/tool_dev/ucx-1.9
+export myUCX=/uhome/p001cao/app/tool_dev/ucx-1.9
 ../configure...  --with-ucx=${myUCX}
 ```
 
@@ -111,7 +110,7 @@ export myUCX=/uhome/p001cao/local/app/tool_dev/ucx-1.9
 ```shell
 module load tool_dev/binutils-2.36                       # gold, should use to avoid link-error
 module load compiler/gcc-11.2
-export myKNEM=/uhome/p001cao/local/app/tool_dev/knem-1.1.4
+export myKNEM=/uhome/p001cao/app/tool_dev/knem-1.1.4
 ```
 
 #### InfiniBand cluster
@@ -122,7 +121,7 @@ mkdir build_eagle && cd build_eagle
 
 ../configure CC=gcc CXX=g++ FC=gfortran F77=gfortran LDFLAGS="-fuse-ld=gold -lrt" \
 --with-sge --without-ucx --with-verbs --with-knem=${myKNEM} \
---prefix=/uhome/p001cao/local/app/openmpi/4.1.1-gcc11.2-noUCX-eagle
+--prefix=/uhome/p001cao/app/openmpi/4.1.1-gcc11.2-noUCX-eagle
 ```
 
 #### no InfiniBand cluster
@@ -132,7 +131,7 @@ cd openmpi-4.1.1
 mkdir build_lion && cd build_lion
 ../configure CC=gcc CXX=g++ FC=gfortran F77=gfortran LDFLAGS="-fuse-ld=gold -lrt" \
 --with-sge --without-ucx --without-verbs --with-knem=${myKNEM} \
---prefix=/uhome/p001cao/local/app/openmpi/4.1.1-gcc11.2-noUCX-lion
+--prefix=/uhome/p001cao/app/openmpi/4.1.1-gcc11.2-noUCX-lion
 ```
 
 ```make
@@ -152,14 +151,14 @@ mkdir buildGCC && cd buildGCC
 module load tool_dev/binutils-2.37                        # gold
 module load compiler/gcc-10.3
 
-export PATH=$PATH:/home1/p001cao/local/app/compiler/gcc-10.3/bin
+export PATH=$PATH:/home1/p001cao/app/compiler/gcc-10.3/bin
 export CC=gcc export CXX=g++ export FORTRAN=gfortran
 export LDFLAGS="-fuse-ld=gold -lrt"
 export CFLAGS='-gdwarf-4 -gstrict-dwarf'
-export myUCX=/home1/p001cao/local/app/tool_dev/ucx-1.12              ## ucx-1.12  ucx-master
+export myUCX=/home1/p001cao/app/tool_dev/ucx-1.12              ## ucx-1.12  ucx-master
 
 ../configure --with-sge --with-ucx=${myUCX} --without-verbs \
---prefix=/home1/p001cao/local/app/openmpi/4.1.3-gcc10.3
+--prefix=/home1/p001cao/app/openmpi/4.1.3-gcc10.3
 
 make  -j 16 && make install
 ```
@@ -172,7 +171,7 @@ module load compiler/gcc-10.3
 export LDFLAGS="-fuse-ld=gold -lrt"
 
 ../configure --with-sge --with-verbs --without-ucx  \
---prefix=/home1/p001cao/local/app/openmpi/4.1.1-gcc10.3-noUCX
+--prefix=/home1/p001cao/app/openmpi/4.1.1-gcc10.3-noUCX
 ```
 
 ### CANlab: (Cenntos 5.8)
@@ -182,7 +181,7 @@ module load gcc/gcc-7.4.0
 
 ../configure CC=gcc CXX=g++ FC=gfortran F77=gfortran \
 --with-sge --without-verbs --without-ucx  \
---prefix=/home/thang/local/app/openmpi/4.0.2-gcc7.4.0
+--prefix=/home/thang/app/openmpi/4.0.2-gcc7.4.0
 ```
 
 ### CAN-GPU: (Ubuntu-18)
@@ -207,7 +206,7 @@ module load gcc/gcc-7.4.0
 
   ```shell
   module load compiler/gcc-7.4
-  sh cuda_10.2.89_440.33.01_rhel6.run --toolkitpath=/home/thang/local/app/cuda-10.2
+  sh cuda_10.2.89_440.33.01_rhel6.run --toolkitpath=/home/thang/app/cuda-10.2
   ```
 
   2. after install Cuda, start the graphical environment again
@@ -227,8 +226,8 @@ module load binutils-2.35
 
 ../configure CC=gcc CXX=g++ FC=gfortran F77=gfortran \
 --with-sge --without-ucx \
---with-cuda=/home/thang/local/app/cuda-10.2 \
---prefix=/home/thang/local/app/openmpi/4.1.1-gcc7.4-cuda
+--with-cuda=/home/thang/app/cuda-10.2 \
+--prefix=/home/thang/app/openmpi/4.1.1-gcc7.4-cuda
 ```
 
 ## 3. Compiling OpenMPI + Intel
@@ -246,12 +245,12 @@ mkdir build_eagle && cd build_eagle
 module load intel/compiler-xe19u5
 module load compiler/gcc/9.1.0
 # check: icpc -v
-export PATH=/home1/p001cao/local/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/bin/intel64:$PATH
+export PATH=/home1/p001cao/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/bin/intel64:$PATH
 export CC=icc  export CXX=icpc  export FORTRAN=ifort
 
 ../configure CC=icc CXX=icpc FC=ifort F77=ifort \
 --with-sge --without-ucx --with-verbs --with-knem=${myKNEM} \
---prefix=/uhome/p001cao/local/app/openmpi/4.1.1-intelxe19u5-noUCX-eagle
+--prefix=/uhome/p001cao/app/openmpi/4.1.1-intelxe19u5-noUCX-eagle
 ```
 
 ### USC2: (Cenntos 6.9)
@@ -261,13 +260,13 @@ export CC=icc  export CXX=icpc  export FORTRAN=ifort
 module load compiler/gcc-10.1.0
 module load intel/compiler-xe19u5       # lld
 ##
-export PATH=/home1/p001cao/local/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/bin/intel64:$PATH
+export PATH=/home1/p001cao/app/intel/xe19u5/compilers_and_libraries_2019.5.281/linux/bin/intel64:$PATH
 export CC=icc  export CXX=icpc  export FORTRAN=ifort
-export myUCX=/home1/p001cao/local/app/tool_dev/ucx-1.8-intel
+export myUCX=/home1/p001cao/app/tool_dev/ucx-1.8-intel
 
 ../configure CC=icc CXX=icpc FC=ifort F77=ifort LDFLAGS="-fuse-ld=lld -lrt" \
 --with-sge --without-verbs --with-ucx=${myUCX} \
---prefix=/home1/p001cao/local/app/openmpi/4.0.4-intelxe19u5
+--prefix=/home1/p001cao/app/openmpi/4.0.4-intelxe19u5
 ```
 
 ## 4. Make module file
@@ -279,7 +278,7 @@ at directory: /uhome/p001cao/local/share/lmodfiles/mpi--> create file "ompi4.1.1
 module load compiler/gcc-11.2
 module load tool_dev/binutils-2.37
 
-set     topdir          /uhome/p001cao/local/app/openmpi/4.1.1-gcc11.2-noUCX-eagle
+set     topdir          /uhome/p001cao/app/openmpi/4.1.1-gcc11.2-noUCX-eagle
 
 prepend-path   PATH                $topdir/bin
 prepend-path   LD_LIBRARY_PATH     $topdir/lib
@@ -307,7 +306,7 @@ mpic++ -v
 ```shell
 module load tool_dev/binutils-2.36                       # gold, should use to avoid link-error
 module load compiler/gcc-11.2
-export myUCX=/uhome/p001cao/local/app/tool_dev/ucx-1.11
+export myUCX=/uhome/p001cao/app/tool_dev/ucx-1.11
 ```
 
 ```shell
@@ -316,7 +315,7 @@ mkdir build_eagle && cd build_eagle
 
 ../configure CC=gcc CXX=g++ FC=gfortran F77=gfortran LDFLAGS="-fuse-ld=gold -lrt" \
 --with-sge --with-ucx=${myUCX}  \
---prefix=/uhome/p001cao/local/app/openmpi/5.0.0-gcc11.2-eagle
+--prefix=/uhome/p001cao/app/openmpi/5.0.0-gcc11.2-eagle
 ```
 
 ### USC2 (Cenntos 6.9) GCC
@@ -332,7 +331,7 @@ git pull origin v5.0.x
 module load tooldev/autoconf-2.72c
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
-export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
+export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 
 ./autogen.pl
 ```
@@ -342,12 +341,12 @@ rm -rf build_gcc && mkdir build_gcc && cd build_gcc
 
 module load compiler/gcc-13          # clang + lld
 
-export myCOMPILER=/home1/p001cao/local/app/compiler/gcc-13
+export myCOMPILER=/home1/p001cao/app/compiler/gcc-13
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=gcc export CXX=g++ export FC=gfortran
 export LDFLAGS="-fuse-ld=gold -lrt"
-export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
-export myPREFIX=/home1/p001cao/local/app/openmpi/5.0.x-gcc13
+export myUCX=/home1/p001cao/app/tooldev/ucx-1.15
+export myPREFIX=/home1/p001cao/app/openmpi/5.0.x-gcc13
 
 ../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
 ```
@@ -364,7 +363,7 @@ git pull origin v5.0.x
 module load tooldev/autoconf-2.72c
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
-export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
+export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 
 ./autogen.pl
 ```
@@ -374,13 +373,13 @@ rm -rf build_clang && mkdir build_clang && cd build_clang
 
 module load compiler/llvm-14          # clang + lld
 
-export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
+export myCOMPILER=/home1/p001cao/app/compiler/llvm-14
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=clang export CXX=clang++ export FC=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CPPFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
-export myPREFIX=/home1/p001cao/local/app/openmpi/5.0.x-clang14
+export myUCX=/home1/p001cao/app/tooldev/ucx-1.15
+export myPREFIX=/home1/p001cao/app/openmpi/5.0.x-clang14
 
 ../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
 ```
@@ -420,7 +419,7 @@ cd openmpi-4.1.4
     - `./autogen.pl` is the same as `./autogen.sh`
 
 ```sh
-cd /home1/p001cao/local/wSourceCode
+cd /home1/p001cao/0SourceCode
 # git clone --branch v4.1.x https://github.com/open-mpi/ompi.git  ompi-4.1.x
 cd ompi-4.1.x
 git pull origin v4.1.x
@@ -428,7 +427,7 @@ git pull origin v4.1.x
 module load tooldev/autoconf-2.72c
 module load tooldev/automake-1.16.5
 module load tooldev/libtool-2.4.7
-export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
+export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 
 ./autogen.pl
 ```
@@ -440,13 +439,13 @@ rm -rf build_clang && mkdir build_clang && cd build_clang
 
 module load compiler/llvm-16          # clang + lld
 
-export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-16
+export myCOMPILER=/home1/p001cao/app/compiler/llvm-16
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=clang export CXX=clang++ export FC=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
-export myUCX=/home1/p001cao/local/app/tooldev/ucx-1.15
-export myPREFIX=/home1/p001cao/local/app/openmpi/4.1.x-clang16
+export myUCX=/home1/p001cao/app/tooldev/ucx-1.15
+export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang16
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 ```
@@ -458,9 +457,9 @@ make  -j 16 && make install
 Or just this
 
 ```sh
-export my_PMIX=/home1/p001cao/local/app/tool_dev/pmix-4.1.2
-export my_libevent=/home1/p001cao/local/app/tool_dev/libevent-2.1.11       # require by PMIX
-export my_hwloc=/home1/p001cao/local/app/tool_dev/hwloc-2.8.0
+export my_PMIX=/home1/p001cao/app/tool_dev/pmix-4.1.2
+export my_libevent=/home1/p001cao/app/tool_dev/libevent-2.1.11       # require by PMIX
+export my_hwloc=/home1/p001cao/app/tool_dev/hwloc-2.8.0
 
 ../configure --with-sge --without-verbs \
 --with-ucx=${my_UCX} --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc} --prefix=${myPREFIX}

@@ -19,7 +19,7 @@ There are three linkers available on modern GNU/Linux systems:
     - ld, maintained by GNU binutils,
     - gold, maintained by GNU binutils, "still in beta test",
     - lld, developed as part of the LLVM project.
-    
+
 For speed benchmarks, see: https://www.phoronix.com/scan.php?page=article&item=lld4-linux-tests&num=2 TL, DR: lld is fastest, followed by gold, followed by ld
 check  binutils version:  ld -v
 
@@ -71,9 +71,6 @@ mkdir build  &&  cd build
 --prefix=/uhome/p001cao/app/tool_dev/binutils-2.36
 ```
 
-
-
-
 ## create module file
 cd /uhome/p001cao/local/Imodfiles  -->  create file "cmake-3.20.3"
 ```shell
@@ -85,16 +82,6 @@ prepend-path    LD_LIBRARY_PATH         $topdir/lib
 prepend-path    INCLUDE 	        $topdir/include
 ```
 
-## Zlib
-```shell
-cd /home1/p001cao/0SourceCode/tooldev
-wget -c --no-check-certificate https://zlib.net/zlib-1.2.12.tar.gz
-tar zxvf zlib-1.2.12.tar.gz
-cd zlib-1.2.12
-
-./configure --enable-shared --prefix=/home1/p001cao/app/tooldev/zlib-1.2.12
-make -j 16 && make install
-```
 
 ## texinfo
 ```shell

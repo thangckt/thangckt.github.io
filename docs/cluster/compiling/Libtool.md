@@ -1,7 +1,3 @@
----
-sort: 5
----
-
 # Libtool
 
 Libtool needed in the case compiling from source code. Some source codes do not release with `configure` file, then `libtool` is used to accompanied with `autoconf` and `automake` to run:
@@ -21,14 +17,14 @@ The above command with produce `configure` file, after the configuration can be 
 [Website](https://www.gnu.org/software/libtool/)
 
 ```sh
-cd /home1/p001cao/local/wSourceCode/tooldev
+cd /home1/p001cao/0SourceCode/tooldev
 wget http://ftp.jaist.ac.jp/pub/GNU/libtool/libtool-2.4.7.tar.gz
 tar xvfz libtool-2.4.7.tar.gz
 cd libtool-2.4.7
 ```
 
 ```sh
-./configure --prefix=/home1/p001cao/local/app/tooldev/libtool-2.4.7
+./configure --prefix=/home1/p001cao/app/tooldev/libtool-2.4.7
 
 make && make install
 ```
@@ -37,7 +33,7 @@ make && make install
 
 ```shell
 # for Tcl script use only
-set     topdir          /home1/p001cao/local/app/tooldev/libtool-2.4.7
+set     topdir          /home1/p001cao/app/tooldev/libtool-2.4.7
 
 prepend-path    PATH                $topdir/bin
 prepend-path    LD_LIBRARY_PATH     $topdir/lib
@@ -53,7 +49,7 @@ Autoconf is an extensible package of M4 macros that produce shell scripts to aut
 - [Repo](https://ftp.gnu.org/gnu/autoconf/?C=M;O=D)
 
 ```sh
-cd /home1/p001cao/local/wSourceCode/tooldev
+cd /home1/p001cao/0SourceCode/tooldev
 wget https://ftp.gnu.org/gnu/autoconf/autoconf-2.71.tar.gz
 ```
 Alpha/beta releases of Autoconf
@@ -65,16 +61,16 @@ cd autoconf-2.72c
 ```
 
 ```sh
-./configure --prefix=/home1/p001cao/local/app/tooldev/autoconf-2.72c
+./configure --prefix=/home1/p001cao/app/tooldev/autoconf-2.72c
 
 make && make install
 ```
 
 **Module file**
 
-```shell
+``` sh
 # for Tcl script use only
-set     topdir          /home1/p001cao/local/app/tooldev/autoconf-2.72
+set     topdir          /home1/p001cao/app/tooldev/autoconf-2.72
 
 prepend-path    PATH                    $topdir/bin
 prepend-path    LD_LIBRARY_PATH         $topdir/share
@@ -92,16 +88,16 @@ Require autoconf>=2.65
 ```
 
 ```sh
-cd /home1/p001cao/local/wSourceCode/tooldev
+cd /home1/p001cao/0SourceCode/tooldev
 wget http://ftp.gnu.org/gnu/automake/automake-1.16.5.tar.gz
 tar xvzf automake-1.16.5.tar.gz
 cd automake-1.16.5
-
-module load tooldev/autoconf-2.71
 ```
 
 ```sh
-./configure --prefix=/home1/p001cao/local/app/tooldev/automake-1.16.5
+module load tooldev/autoconf-2.72c
+
+./configure --prefix=/home1/p001cao/app/tooldev/automake-1.16.5
 
 make && make install
 ```
@@ -109,14 +105,14 @@ make && make install
 usage:
 
 ```sh
-export ACLOCAL_PATH=/home1/p001cao/local/app/tooldev/libtool-2.4.7/share/aclocal
+export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 ```
 
 **Module file**
 
 ```shell
 # for Tcl script use only
-set     topdir          /home1/p001cao/local/app/tooldev/automake-1.16.5
+set     topdir          /home1/p001cao/app/tooldev/automake-1.16.5
 
 prepend-path    PATH                    $topdir/bin
 ```
@@ -151,3 +147,15 @@ prepend-path   PKG_CONFIG_PATH      $topdir/lib/pkgconfig
 ???+ tip "See also"
 
     [Install GSL on Linux (Ubuntu, Centros, Redhat, Mac OS) + Simple Installation of gcc Compilers](https://coral.ise.lehigh.edu/jild13/2016/07/11/hello/)
+
+
+## zlib
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+wget -c --no-check-certificate https://zlib.net/zlib-1.2.12.tar.gz
+tar zxvf zlib-1.2.12.tar.gz
+cd zlib-1.2.12
+
+./configure --enable-shared --prefix=/home1/p001cao/app/tooldev/zlib-1.2.12
+make -j 16 && make install
+```
