@@ -395,9 +395,9 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 ```shell
 rm -rf build && mkdir build  &&  cd build
 
-module load compiler/llvm-16          # clang + lld
+module load compiler/llvm-17          # clang + lld
 
-export PATH=/home1/p001cao/app/compiler/llvm-16/bin:$PATH
+export PATH=/home1/p001cao/app/compiler/llvm-17/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
 export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15
