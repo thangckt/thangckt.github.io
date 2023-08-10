@@ -86,7 +86,7 @@ make install
 ### Tachyon - Centos 6.9
 
 ``` sh
-cd /home1/p001cao/#SourceCode
+cd /home1/p001cao/0SourceCode
 # git clone -b releases/gcc-11.4.0 https://github.com/gcc-mirror/gcc  gcc-11.4
 cd gcc-11.4
 # git checkout releases/gcc-11.2
@@ -97,8 +97,10 @@ cd gcc-11.4
 mkdir build && cd build
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
-  --enable-shared --disable-multilib --with-system-zlib \
-  --enable-checking=release --prefix=/home1/p001cao/app/compiler/gcc-11.4
+  --enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
+  --prefix=/home1/p001cao/app/compiler/gcc-11.4
+
+make -j 16 && make install
 ```
 
 ### CAN
@@ -137,6 +139,7 @@ prepend-path    INFOPATH                $topdir/share/info
 
 
 ## GCC-13
+- complied, but don't use, since some source code can not recognize
 
 ### USC 2
 
