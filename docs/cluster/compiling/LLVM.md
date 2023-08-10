@@ -244,7 +244,7 @@ module load tooldev/binutils-2.40
 module load conda/py9link_lammps
 module load compiler/gcc-13
 
-export myGCC=/home1/p001cao/local/app/compiler/gcc-13
+export myGCC=/home1/p001cao/compiler/gcc-13
 export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
 export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"
