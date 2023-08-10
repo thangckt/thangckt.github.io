@@ -200,7 +200,7 @@ make -j 16 && make install
 !!! note
 
     - do not use GCC-13, since some source can not recognize compiler version
-    - projects with errors: PROJECTS="mlir;flang"  RUNTIMES="libcxxabi"
+    - projects with errors: PROJECTS="mlir;flang;clang-tools-extra;"  RUNTIMES="libcxxabi"
     - LLVM 16 cause error `aligned_alloc` (mlir) --> add following lines in the file where error comes
     ```
     #include <stdlib.h>
@@ -253,7 +253,7 @@ export LDFLAGS="-fuse-ld=gold -lrt"
 export myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12     # avoid zlib hidden by conda
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
--DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld;openmp;polly" \
+-DLLVM_ENABLE_PROJECTS="clang;lld;openmp;polly" \
 -DLLVM_ENABLE_RUNTIMES="pstl" \
 -DGCC_INSTALL_PREFIX=${myGCC} \
 -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,${myGCC}/lib64 -L${myGCC}/lib64" \
