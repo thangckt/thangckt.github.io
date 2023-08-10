@@ -402,7 +402,7 @@ export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
 export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15
 
-../contrib/configure-release --enable-mt --prefix=${myPREFIX}
+CC=clang ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
