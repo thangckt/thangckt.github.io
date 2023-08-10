@@ -94,7 +94,7 @@ cd gcc-11.4
 ```
 
 ``` sh
-mkdir build && cd build
+rm -rf build && mkdir build && cd build
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
   --enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
