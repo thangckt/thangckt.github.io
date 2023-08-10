@@ -233,9 +233,9 @@ cd /home1/p001cao/0SourceCode
 # git clone -b release/17.x https://github.com/llvm/llvm-project.git llvm-17x
 
 cd llvm-17x
-#git pull origin release/17.x
-git reset --hard origin/main
-git pull origin main
+git pull origin release/17.x
+# git reset --hard origin/main
+# git pull origin main
 
 rm -rf build && mkdir build && cd build
 ```
