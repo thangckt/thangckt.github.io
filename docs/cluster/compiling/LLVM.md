@@ -225,7 +225,8 @@ make -j 16 && make install
 
 ### USC2: Tachyon - Centos 6.9
 
-`conda install gcc_linux-64=11.2 zlib=1.2.11 libzlib-1.2.11 `
+- Use GCC-9.5 from USC
+- `conda install gcc_linux-64=11.2 zlib=1.2.11 libzlib-1.2.11 `
 
 ``` sh
 cd /home1/p001cao/0SourceCode
