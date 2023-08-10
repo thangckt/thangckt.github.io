@@ -96,6 +96,8 @@ cd gcc-11.4
 ``` sh
 rm -rf build && mkdir build && cd build
 
+export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
+
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
   --enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
   --prefix=/home1/p001cao/app/compiler/gcc-11.4
