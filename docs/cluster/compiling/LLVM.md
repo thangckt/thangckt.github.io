@@ -225,7 +225,7 @@ make -j 16 && make install
 
 ### USC2: Tachyon - Centos 6.9
 
-- Use GCC-9.5 from USC
+- Use GCC-11.4
 - `conda install gcc_linux-64=11.2 zlib=1.2.11 libzlib-1.2.11 `
 
 ``` sh
@@ -244,9 +244,9 @@ rm -rf build && mkdir build && cd build
 module load tooldev/cmake-3.27
 module load tooldev/binutils-2.40
 module load conda/py9link_lammps
-module load compiler/gcc-9.5
+module load compiler/gcc-11.4
 
-export myGCC=/home2/app/compiler/gcc/9.5.0
+export myGCC=/home1/p001cao/app/compiler/gcc-1.4
 export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
 export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"
