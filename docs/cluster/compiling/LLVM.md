@@ -199,6 +199,7 @@ make -j 16 && make install
 
 !!! note
 
+    - do not use GCC-13, since some source can not recognize compiler version
     - projects with errors: PROJECTS="mlir;flang"  RUNTIMES="libcxxabi"
     - LLVM 16 cause error `aligned_alloc` (mlir) --> add following lines in the file where error comes
     ```
@@ -242,9 +243,9 @@ rm -rf build && mkdir build && cd build
 module load tooldev/cmake-3.27
 module load tooldev/binutils-2.40
 module load conda/py9link_lammps
-module load compiler/gcc-13
+module load compiler/gcc-9.5
 
-export myGCC=/home1/p001cao/compiler/gcc-13
+export myGCC=/home2/app/compiler/gcc/9.5.0
 export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
 export CC=gcc export CXX=g++
 export LDFLAGS="-fuse-ld=gold -lrt"
