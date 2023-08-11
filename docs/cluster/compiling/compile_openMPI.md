@@ -437,13 +437,14 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 ```sh
 rm -rf build_clang && mkdir build_clang && cd build_clang
 
-module load compiler/llvm-16          # clang + lld
+module load compiler/llvm-17          # clang + lld
 
-export myCOMPILER=/home1/p001cao/app/compiler/llvm-16
+export myCOMPILER=/home1/p001cao/app/compiler/llvm-17
 export PATH=${myCOMPILER}/bin:$PATH
-export CC=clang export CXX=clang++ export FC=gfortran
+export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
-export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang16
+export myUCX=/home1/p001cao/app/tooldev/ucx-1.15
+export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang17
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 ```
