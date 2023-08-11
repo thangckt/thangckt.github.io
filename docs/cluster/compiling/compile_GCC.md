@@ -87,21 +87,21 @@ make install
 
 ``` sh
 cd /home1/p001cao/0SourceCode
-# git clone -b releases/gcc-11.4.0 https://github.com/gcc-mirror/gcc  gcc-11.4
-cd gcc-11.4
-# git checkout releases/gcc-11.4
+# git clone -b releases/gcc-11 https://github.com/gcc-mirror/gcc  gcc-11
+cd gcc-11
+# git checkout releases/gcc-11
 ./contrib/download_prerequisites
 ```
 
 ``` sh
 rm -rf build && mkdir build && cd build
 
-module load tooldev/binutils-2.40
+# module load tooldev/binutils-2.40
 export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
   --enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
-  --prefix=/home1/p001cao/app/compiler/gcc-11.4
+  --prefix=/home1/p001cao/app/compiler/gcc-11
 
 make -j 16 && make install
 ```
