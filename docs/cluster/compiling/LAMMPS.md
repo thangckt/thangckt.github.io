@@ -1026,25 +1026,24 @@ source mklvars.sh intel64
 ```shell
 cd /home1/p001cao/0SourceCode/lammps_dev
 git pull origin develop
-rm -rf build_LLVM
-mkdir build_LLVM && cd build_LLVM
+rm -rf build_LLVM && mkdir build_LLVM && cd build_LLVM
 ```
 
 ```sh
 module load tooldev/cmake-3.27
 module load tooldev/binutils-2.40
 module load tooldev/gsl-2.7
-module load fftw/fftw3.3.10-ompi4.1.4-clang14
-module load mpi/ompi4.1.x-clang16
+module load fftw/fftw3.3.10-ompi4.1.x-clang17
+module load mpi/ompi4.1.x-clang17
 
-export myCOMPILER=/home1/p001cao/app/openmpi/4.1.x-clang16
+export myCOMPILER=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=${myCOMPILER}/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
+# export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 ## python (require py3), BLAS+LAPACK
 export myPREFIX=/home1/p001cao/app/lammps/llvmOMPI4-dev
-export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-13/lib64:$LD_LIBRARY_PATH   # to avoid using libstdc++.so in conda
+export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH   # to avoid using libstdc++.so in conda
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DBUILD_MPI=yes -DBUILD_OMP=yes -DPKG_OPENMP=yes \
