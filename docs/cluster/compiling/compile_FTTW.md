@@ -102,6 +102,8 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 ### USC2
 
 ```shell
+cd /home1/p001cao/0SourceCode/tooldev
+tar -xvzf fftw-3.3.10.tar.gz
 cd fftw-3.3.10
 rm -rf build_LLVM && mkdir build_LLVM && cd build_LLVM
 
