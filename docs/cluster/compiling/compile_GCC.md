@@ -96,7 +96,6 @@ cd gcc-11
 ``` sh
 rm -rf build && mkdir build && cd build
 
-# module load tooldev/binutils-2.40
 export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
