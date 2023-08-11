@@ -401,6 +401,7 @@ export PATH=/home1/p001cao/app/compiler/llvm-17/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
 export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15
+export CFLAGS="-Wno-unused-but-set-variable"
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
