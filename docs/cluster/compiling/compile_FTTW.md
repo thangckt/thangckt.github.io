@@ -42,43 +42,43 @@ Compiling FFTW 3.3.10 (Single,Double)
 
 ```shell
 module load mpi/ompi5.0.0-gcc11.2
-export PATH=/uhome/p001cao/local/app/openmpi/5.0.0-gcc11.2-eagle/bin:$PATH
+export PATH=/uhome/p001cao/app/openmpi/5.0.0-gcc11.2-eagle/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 
 ../configure --enable-sse2 \
 --enable-threads --enable-openmp --enable-mpi --enable-shared \
---prefix=/uhome/p001cao/local/app/fftw/3.3.10-ompi5.0-gcc11.2
+--prefix=/uhome/p001cao/app/fftw/3.3.10-ompi5.0-gcc11.2
 ```
 
 ### USC2
 
 ```shell
 module load mpi/ompi4.1.3-gcc10.3
-export PATH=$PATH:/home1/p001cao/local/app/openmpi/4.1.3-gcc10.3/bin
+export PATH=$PATH:/home1/p001cao/app/openmpi/4.1.3-gcc10.3/bin
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 
 ../configure --enable-sse2 \
 --enable-threads --enable-openmp --enable-mpi --enable-shared \
---prefix=/home1/p001cao/local/app/fftw/3.3.10-ompi4.1.3-gcc10.3
+--prefix=/home1/p001cao/app/fftw/3.3.10-ompi4.1.3-gcc10.3
 ```
 
 ### CAN-GPU
 
 ```shell
 module load mpi/ompi4.1-gcc7.4-cuda
-export PATH=$PATH:/home/thang/local/app/openmpi/4.1.1-gcc7.4-cuda/bin
+export PATH=$PATH:/home/thang/app/openmpi/4.1.1-gcc7.4-cuda/bin
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 
 ../configure --enable-sse2 \
 --enable-threads --enable-openmp --enable-mpi \
---prefix=/home/thang/local/app/fftw/3.3.8-ompi4.1-gcc7.4
+--prefix=/home/thang/app/fftw/3.3.8-ompi4.1-gcc7.4
 ```
 
 make -j 12
 make install
 
 validate:
-Inside "/uhome/p001cao/local/app/fftw/3.3.8-ompi4.1-gcc10.3/lib" you should see at least the files below
+Inside "/uhome/p001cao/app/fftw/3.3.8-ompi4.1-gcc10.3/lib" you should see at least the files below
 libfftw3.a libfftw3_mpi.a libfftw3_omp.a libfftw3_threads.a .... ....
 
 ## 4. Make module file
@@ -88,7 +88,7 @@ at directory: /uhome/p001cao/local/share/lmodfiles/mpi--> create file "ompi4.1.1
 ```shell
 # for Tcl script use only
 # for Tcl script use only
-set     topdir          /uhome/p001cao/local/app/fftw/3.3.10-ompi5.0-gcc11.2
+set     topdir          /uhome/p001cao/app/fftw/3.3.10-ompi5.0-gcc11.2
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
@@ -103,16 +103,17 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 
 ```shell
 cd fftw-3.3.10
-mkdir build_LLVM && cd build_LLVM
+rm -rf build_LLVM && mkdir build_LLVM && cd build_LLVM
 
-module load mpi/ompi4.1.4-clang14
+module load mpi/ompi4.1.x-clang17
 
-export myCOMPILER=/home1/p001cao/local/app/compiler/llvm-14
-export PATH=$PATH:${myCOMPILER}/bin
+export PATH=/home1/p001cao/app/openmpi/4.1.x-clang17/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
+export myPREFIX=/home1/p001cao/app/fftw/3.3.10-ompi4.1.x-clang17
 
 ../configure --enable-sse2 \
---enable-threads --enable-openmp --enable-mpi --enable-shared \
---prefix=/home1/p001cao/local/app/fftw/3.3.10-ompi4.1.4-clang14
+  --enable-threads --enable-openmp --enable-mpi --enable-shared --prefix=${myPREFIX}
+
+make -j 16 && make install
 ```
