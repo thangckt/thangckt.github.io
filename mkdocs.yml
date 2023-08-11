@@ -235,6 +235,7 @@ nav:
       - cluster/appSetting/6_Lammps.md
       - cluster/appSetting/7_packing_python.md
       - cluster/appSetting/8_WSL.md
+      - cluster/appSetting/NGC_container.md
     - Useful:
       - cluster/appSetting/VScode_perspectives.md
       - cluster/appSetting/check_mail.md
