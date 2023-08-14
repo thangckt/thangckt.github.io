@@ -39,7 +39,7 @@ Some hints to work around old GLIBC
     - Don't use `mamba`, will cause the crash
     - Some packages require GLIBC=2.17.
         - May solve by installing `libgcc-ng=12` + `zlib=1.2.11`
-    - `libibverbs-cos6-x86_64` is required for infiniBand
+    - `libibverbs-cos7-x86_64` is required for infiniBand
 
 Install `glibc` (may not work)
 ```
@@ -103,7 +103,7 @@ module load conda/conda3
 conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
-conda install -y -c conda-forge libibverbs-cos7-x86_64 ucx=1.13 openmpi ase gpaw  # lammps
+conda install -y -c conda-forge gcc_linux-64=12 libibverbs-cos7-x86_64 ucx=1.13 openmpi ase gpaw  # lammps
 ```
 
 **Create a module file** for GPAW
