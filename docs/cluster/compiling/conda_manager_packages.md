@@ -14,10 +14,12 @@
 This way may eliminate some work on installing dependencies
 
 Some options for MPI
+
     - Openmpi: `conda install -y -c conda-forge openmpi`.
     - MPICH: `conda install -c conda-forge mpich`
 
 Some hints to work around old GLIBC
+
     - Should update `conda` for better linking (important) --> use: `conda install conda`
     - This is for some convenience in linking and saving space.
     - old conda have many problems, but new conda require newer GLIBC, use these to avoid this requirement
