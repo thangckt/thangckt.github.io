@@ -11,3 +11,5 @@ The error:
 check `End of Line Sequence` of `submit.bash` file. On the Linux system, it must be `LF` but not `CRLF`
 
 When open in VSCode:
+
+<img src="figure/End_of_Line.png" >
