@@ -101,7 +101,7 @@ module load conda/conda3
 conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
-conda install -y -c conda-forge libibverbs-cos6-x86_64 ucx openmpi ase gpaw  # lammps
+conda install -y -c conda-forge libibverbs-cos6-x86_64 ucx=1.13 openmpi ase gpaw  # lammps
 ```
 
 **Create a module file** for GPAW
@@ -160,7 +160,7 @@ source activate py11ase
 ```
 
 ``` sh
-conda install -y -c conda-forge libibverbs-cos6-x86_64 openmpi ase gpaw lammps
+conda install -y -c conda-forge libibverbs-cos6-x86_64 ucx=1.13 openmpi ase gpaw lammps
 ```
 
 Test
