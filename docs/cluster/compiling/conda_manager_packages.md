@@ -110,17 +110,17 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 !!! note
 
     - higher python (>3.9.2) require newer GLIBC, and have many conflicts.
-    - `ucx=1.14` does not recognize Infiniband transport, check `ucx_info -d | grep Transport`
+    - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`
     - `libffi=3.3` to avoid higher GLIBC
 
 **Install** in Conda-env
 
 ``` sh
 module load conda/conda3
-conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
+conda create -n py9ase python=3.9.1   # higher python require newer GLIBC.
 source activate py9ase
 
-conda install -y -c conda-forge python=3.9.0 gcc_linux-64=12 libffi=3.3 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
+conda install --update-specs -y -c conda-forge python=3.9.1 gcc_linux-64=12 libffi=3.3 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
      ucx=1.13 openmpi ase gpaw  # lammps   
 ```
 
@@ -172,7 +172,7 @@ set     topdir          /home/thang/app/miniconda3/envs/py9ase
     - new GLIBC can void tons of errors due to old GLIBC
     - use python 3.11
     - to use infiniband `libibverbs-cos7-x86_64`
-    - `ucx=1.14` is not recognized, so that use `ucx=1.13`
+    - `ucx=1.14` is not recognized, use `--update-specs` to solve this (or use `ucx=1.13`)
 
 **Install**
 ``` sh
@@ -182,8 +182,8 @@ source activate py11ase
 ```
 
 ``` sh
-conda install -y -c conda-forge  libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
-     ucx=1.13 openmpi ase gpaw  lammps
+conda install --update-specs -y -c conda-forge  libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
+     ucx openmpi ase gpaw  lammps
 ```
 
 Test
