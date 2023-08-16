@@ -152,7 +152,7 @@ conda create -n py9ase_ucx_ompi python=3.9.1  # higher python require newer GLIB
 source activate py9ase_ucx_ompi
 
 conda install --update-specs -y -c conda-forge python=3.9.1 gcc_linux-64=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
-    libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64 perf
+    libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64
 ```
 #### UCX
 ``` sh
