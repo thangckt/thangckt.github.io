@@ -111,6 +111,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 
     - higher python (>3.9.2) require newer GLIBC, and have many conflicts.
     - `ucx=1.14` does not recognize Infiniband transport, check `ucx_info -d | grep Transport`
+    - `libffi=3.3` to avoid higher GLIBC
 
 **Install** in Conda-env
 
@@ -119,8 +120,8 @@ module load conda/conda3
 conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
-conda install -y -c conda-forge gcc_linux-64=12 libblas=3.8 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
-     ucx=1.13 openmpi ase gpaw  # lammps
+conda install -y -c conda-forge python=3.9.0 gcc_linux-64=12 libffi=3.3 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
+     ucx=1.13 openmpi ase gpaw  # lammps   
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
