@@ -120,7 +120,7 @@ conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
 conda install -y -c conda-forge -c rapidsai gcc_linux-64=12 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
-     ucx ucx-py openmpi ase gpaw  # lammps
+     ucx-proc=*=cpu ucx-py ucx=1.13 openmpi ase gpaw  # lammps
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
@@ -181,13 +181,16 @@ source activate py11ase
 ```
 
 ``` sh
-conda install -y -c conda-forge libibverbs-cos6-x86_64 ucx=1.13 openmpi ase gpaw lammps
+conda install -y -c conda-forge -c rapidsai gcc_linux-64=13 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
+     ucx-proc=*=cpu ucx-py ucx=1.13 openmpi ase gpaw  lammps
 ```
 
 Test
 ``` sh
 gpaw test
 ```
+
+To see ucx transports: `ucx_info -d | grep Transport`
 
 **module file**
 ``` tcl
