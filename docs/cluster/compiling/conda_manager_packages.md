@@ -165,6 +165,7 @@ export PATH=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi/bin:$PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi/lib:$LD_LIBRARY_PATH
 export CC=gcc export CXX=g++
 export CFLAGS="-Wno-shadow"
+export CPFLAGS="-std=c++1z"
 export myPREFIX=/home1/p001cao/app/openmpi/conda_ucx-1.15
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
