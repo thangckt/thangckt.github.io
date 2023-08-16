@@ -53,13 +53,13 @@ UCX usage:
         crw-rw-rw- 1 root root  10,  56 Aug 20  2022 /dev/infiniband/rdma_cm
         crw-rw-rw- 1 root root 231, 192 Aug 20  2022 /dev/infiniband/uverbs0
         ```
-    - `numactl-libs-cos7-x86_64` needed for ucx.    
+    - `numactl-libs-cos7-x86_64` needed for ucx.
     - `libibverbs-cos7-x86_64` needed for Infiniband libs.
     - To see ucx transports: `ucx_info -d | grep Transport`
     - use UCX with Open MPI: `export OMPI_MCA_pml=ucx export OMPI_MCA_osc=ucx`
     - set InfiniBand transports: `export UCX_TLS=self,rc_verbs,ud_verbs`  [see more](https://docs.nvidia.com/networking/display/HPCXv215/Unified+Communication+-+X+Framework+Library)
 
-    
+
 
 ## Centos 6.9 - Tachyon
 
@@ -121,7 +121,7 @@ conda create -n py9ase python=3.9.1   # higher python require newer GLIBC.
 source activate py9ase
 
 conda install --update-specs -y -c conda-forge python=3.9.1 gcc_linux-64=12 libffi=3.3 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
-     ucx=1.13 openmpi ase gpaw  # lammps   
+     ucx=1.13 openmpi ase gpaw  # lammps
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
@@ -137,6 +137,42 @@ prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw      # to see GPAW dataset
 ```
+
+### UCX+OMPI
+
+!!! note
+
+    - ucx-infiniband conda does not work
+    - create `py9ase` env, but do not install `ucx openmpi`
+
+#### conda env
+``` sh
+module load conda/conda3
+conda create -n py9ase_ucx_ompi python=3.9.1  # higher python require newer GLIBC.
+source activate py9ase_ucx_ompi
+
+conda install --update-specs -y -c conda-forge python=3.9.1 gcc_linux-64=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
+    libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64 perf
+```
+#### UCX
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+cd ucx-1.15.x
+rm -rf build_ase && mkdir build_ase  &&  cd build_ase
+
+module load conda/py9ase_ucx_ompi
+export PATH=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi/bin:$PATH
+export CC=gcc export CXX=g++
+export CFLAGS="-Wno-shadow"
+export CXXFLAGS="-std=c++0x"
+export myPREFIX=/home1/p001cao/app/openmpi/conda_ucx-1.15
+
+../contrib/configure-release --enable-mt --enable-cma --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+### OMPI
+
 
 ## Centos 6.8 - CAN-GPU
 GLIBC=2.12
