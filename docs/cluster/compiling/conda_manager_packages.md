@@ -46,6 +46,21 @@ Install `glibc` (may not work)
 conda install -y -c conda-forge -c neok.m4700 patchelf glibc
 ```
 
+UCX usage:
+
+    - check if InfiniBand support is active: `ls -l /dev/infiniband/{rdma_cm,uverbs*}`
+        ```
+        crw-rw-rw- 1 root root  10,  56 Aug 20  2022 /dev/infiniband/rdma_cm
+        crw-rw-rw- 1 root root 231, 192 Aug 20  2022 /dev/infiniband/uverbs0
+        ```
+    - `numactl-libs-cos7-x86_64` needed for ucx.    
+    - `libibverbs-cos7-x86_64` needed for Infiniband libs.
+    - To see ucx transports: `ucx_info -d | grep Transport`
+    - use UCX with Open MPI: `export OMPI_MCA_pml=ucx export OMPI_MCA_osc=ucx`
+    - set InfiniBand transports: `export UCX_TLS=self,rc_verbs,ud_verbs`  [see more](https://docs.nvidia.com/networking/display/HPCXv215/Unified+Communication+-+X+Framework+Library)
+
+    
+
 ## Centos 6.9 - Tachyon
 
 GLIBC=2.12
@@ -95,6 +110,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 !!! note
 
     - higher python (>3.9.2) require newer GLIBC, and have many conflicts.
+    - `ucx=1.14` does not recognize Infiniband transport, check `ucx_info -d | grep Transport`
 
 **Install** in Conda-env
 
@@ -103,8 +119,11 @@ module load conda/conda3
 conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
-conda install -y -c conda-forge gcc_linux-64=12 libibverbs-cos7-x86_64 ucx=1.13 openmpi ase gpaw  # lammps
+conda install -y -c conda-forge -c rapidsai gcc_linux-64=12 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
+     ucx ucx-py openmpi ase gpaw  # lammps
 ```
+
+To see ucx transports: `ucx_info -d | grep Transport`
 
 **Create a module file** for GPAW
 
