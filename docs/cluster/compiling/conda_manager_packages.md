@@ -161,21 +161,17 @@ cd ucx-1.15.x
 rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 
 module load conda/py9ase_ucx_ompi
-export topdir=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
-export PATH=${topdir}/bin:$PATH
+export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
+export PATH=${envDIR}/bin:$PATH
 export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-Wno-shadow"
-export myPREFIX=${topdir}
+export myPREFIX=${envDIR}
 
-../contrib/configure-release --enable-mt --with-verbs=${topdir} --with-rdmacm=${topdir} \
+../contrib/configure-release --enable-mt --with-verbs=${envDIR} --with-rdmacm=${envDIR} \
     --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
-
-export LDFLAGS="-lrt"
-export CPFLAGS="-std=c++1z"
-
 
 ### OMPI
 
