@@ -18,7 +18,7 @@ conda create -y -n py9ase_ucx_ompi python=3.9.0  # higher python require newer G
 source activate py9ase_ucx_ompi
 
 conda install --update-specs -y -c conda-forge python=3.9.0 gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
-    zlib=1.2.11 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64 rdma-core
+    zlib=1.2.11 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64 rdma-core-cos7-x86_64 librdmacm-cos7-x86_64
 ```
 #### UCX
 ``` sh
@@ -33,8 +33,8 @@ export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
-../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} \
-    --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud \
+    --with-verbs=${envDIR} --with-rdmacm=${envDIR} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
