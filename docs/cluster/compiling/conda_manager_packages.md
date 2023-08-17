@@ -148,11 +148,11 @@ prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw      # to see GPAW datase
 #### conda env
 ``` sh
 module load conda/conda3
-conda create -n py9ase_ucx_ompi python=3.9.0  # higher python require newer GLIBC.
+conda create -n py9ase_ucx_ompi python=3.9.1  # higher python require newer GLIBC.
 source activate py9ase_ucx_ompi
 
-conda install --update-specs -y -c conda-forge python=3.9.0 gcc_linux-64=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
-    libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64 binutils
+conda install --update-specs -y -c conda-forge python=3.9.1 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.12 \
+    libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64
 ```
 #### UCX
 ``` sh
@@ -162,16 +162,20 @@ rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 
 module load conda/py9ase_ucx_ompi
 export PATH=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi/bin:$PATH
-export LD_LIBRARY_PATH=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi/lib:$LD_LIBRARY_PATH
-export CC=gcc export CXX=g++
+export CC=clang export CXX=clang++
+export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-Wno-shadow"
-export CPFLAGS="-std=c++1z"
 export myPREFIX=/home1/p001cao/app/openmpi/conda_ucx-1.15
 
-../contrib/configure-release --enable-mt --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
+
+export LDFLAGS="-lrt"
+export CPFLAGS="-std=c++1z"
+
+
 ### OMPI
 
 
