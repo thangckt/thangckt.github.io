@@ -162,7 +162,7 @@ rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 
 module load conda/py9ase_ucx_ompi
 export PATH=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi/bin:$PATH
-export CC=gcc export CXX=g++
+export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-Wno-shadow"
 export myPREFIX=/home1/p001cao/app/openmpi/conda_ucx-1.15
 
