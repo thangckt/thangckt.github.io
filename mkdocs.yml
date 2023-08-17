@@ -225,6 +225,7 @@ nav:
       - cluster/compiling/Dependencies.md
       - cluster/compiling/conda_install.md
       - cluster/compiling/conda_manager_packages.md
+      - cluster/compiling/conda_hybrid.md
     - Setting:
       - cluster/appSetting/Pip.md
       - cluster/appSetting/Latex_TexStudio.md

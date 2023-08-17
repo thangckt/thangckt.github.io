@@ -1,0 +1,68 @@
+# Use conda hybrid
+
+## Centos 6.9 - Tachyon
+
+GLIBC=2.12
+
+### UCX+OMPI
+
+!!! note
+
+    - ucx-infiniband conda does not work
+    - create `py9ase` env, but do not install `ucx openmpi`
+
+#### conda env
+``` sh
+module load conda/conda3
+conda create -y -n py9ase_ucx_ompi python=3.9.0  # higher python require newer GLIBC.
+source activate py9ase_ucx_ompi
+
+conda install --update-specs -y -c conda-forge python=3.9.0 gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
+    zlib=1.2.11 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64 rdma-core
+```
+#### UCX
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+cd ucx-1.15.x
+rm -rf build_ase && mkdir build_ase  &&  cd build_ase
+
+module load conda/py9ase_ucx_ompi
+export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
+export PATH=${envDIR}/bin:$PATH
+export CC=gcc export CXX=g++ export FC=gfortran
+export CFLAGS="-Wno-shadow"
+export myPREFIX=${envDIR}
+
+../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} \
+    --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
+#### OMPI
+```sh
+cd /home1/p001cao/0SourceCode
+cd ompi-4.1.x
+
+rm -rf build_ase && mkdir build_ase && cd build_ase
+
+module load conda/py9ase_ucx_ompi
+export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
+export PATH=${envDIR}/bin:$PATH
+export CC=gcc export CXX=g++ export FC=gfortran
+export CFLAGS="-Wno-shadow"
+export myPREFIX=${envDIR}
+
+../configure --with-sge --without-verbs --with-ucx=${envDIR} --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
+#### ASE+GPAW
+
+``` sh
+module load conda/conda3
+source activate py9ase_ucx_ompi
+
+conda install --update-specs -y -c conda-forge ase gpaw
+```
