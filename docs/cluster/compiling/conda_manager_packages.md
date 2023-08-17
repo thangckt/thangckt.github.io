@@ -152,7 +152,7 @@ module load conda/conda3
 conda create -y -n py9ase_ucx_ompi python=3.9.1  # higher python require newer GLIBC.
 source activate py9ase_ucx_ompi
 
-conda install --update-specs -y -c conda-forge python=3.9.1 gcc=12 gxx=12 gfortran=11 \
+conda install --update-specs -y -c conda-forge python=3.9.0 gcc=12 gxx=12 gfortran=11 \
     libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.12 libibverbs-cos6-x86_64
 ```
 #### UCX
