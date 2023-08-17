@@ -10,6 +10,7 @@ GLIBC=2.12
 
     - ucx-infiniband conda does not work
     - create `py9ase` env, but do not install `ucx openmpi`
+    `numactl-libs-cos7-x86_64 libibumad-cos7-x86_64 `
 
 #### conda env
 ``` sh
@@ -18,7 +19,7 @@ conda create -y -n py9ase_ucx_ompi python=3.9.0  # higher python require newer G
 source activate py9ase_ucx_ompi
 
 conda install --update-specs -y -c conda-forge python=3.9.0 gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
-    zlib=1.2.11 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64 rdma-core-cos7-x86_64 librdmacm-cos7-x86_64
+    zlib=1.2.11 libibverbs-cos7-x86_64 rdma-core-cos7-x86_64 librdmacm-cos7-x86_64
 ```
 #### UCX
 ``` sh
