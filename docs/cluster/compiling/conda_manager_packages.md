@@ -144,7 +144,6 @@ prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw      # to see GPAW datase
 
     - ucx-infiniband conda does not work
     - create `py9ase` env, but do not install `ucx openmpi`
-    - do not instal `libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64`
 
 #### conda env
 ``` sh
@@ -152,8 +151,8 @@ module load conda/conda3
 conda create -y -n py9ase_ucx_ompi python=3.9.0  # higher python require newer GLIBC.
 source activate py9ase_ucx_ompi
 
-conda install --update-specs -y -c conda-forge python=3.9.0 gcc=11 gxx=11 gfortran=11 \
-    libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 libibverbs-cos7-aarch64
+conda install --update-specs -y -c conda-forge python=3.9.0 gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 \
+    zlib=1.2.11 libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 libibumad-cos7-x86_64
 ```
 #### UCX
 ``` sh
@@ -162,12 +161,14 @@ cd ucx-1.15.x
 rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 
 module load conda/py9ase_ucx_ompi
-export PATH=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi/bin:$PATH
+export topdir=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
+export PATH=${topdir}/bin:$PATH
 export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-Wno-shadow"
-export myPREFIX=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
+export myPREFIX=${topdir}
 
-../contrib/configure-release --enable-mt --with-verbs --with-rdmacm --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-verbs=${topdir} --with-rdmacm=${topdir} \
+    --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
