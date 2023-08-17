@@ -21,7 +21,7 @@ source activate py9ase_ucx_ompi
 conda install -y --revision 0
 
 conda install --update-specs -y -c conda-forge python=3.9.0 gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 \
-    zlib=1.2.11 rdma-core-devel-cos7-x86_64
+    zlib=1.2.11 rdma-core-devel-cos7-x86_64 librdmacm-devel-cos6-x86_64
 ```
 #### UCX
 ``` sh
