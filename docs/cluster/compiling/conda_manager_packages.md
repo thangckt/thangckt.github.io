@@ -167,7 +167,8 @@ export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-Wno-shadow"
 export myPREFIX=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 
-../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --prefix=${myPREFIX}
+../configure --enable-mt --with-rc --with-dc --with-ud --with-ib-hw-tm \
+    --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
