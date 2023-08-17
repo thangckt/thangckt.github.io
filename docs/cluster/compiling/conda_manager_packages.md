@@ -152,8 +152,8 @@ module load conda/conda3
 conda create -y -n py9ase_ucx_ompi python=3.9.1  # higher python require newer GLIBC.
 source activate py9ase_ucx_ompi
 
-conda install --update-specs -y -c conda-forge python=3.9.1 gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.12
-
+conda install --update-specs -y -c conda-forge python=3.9.1 gcc=12 gxx=12 gfortran=11 \
+    libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.12 libibverbs-cos6-x86_64
 ```
 #### UCX
 ``` sh
@@ -167,8 +167,7 @@ export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-Wno-shadow"
 export myPREFIX=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 
-../configure --enable-mt --with-rc --with-dc --with-ud --with-ib-hw-tm \
-    --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-verbs --with-rdmacm --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
