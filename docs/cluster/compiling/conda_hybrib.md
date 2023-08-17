@@ -38,7 +38,7 @@ export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
 ../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud \
-    --with-verbs=${envDIR} --with-rdmacm=${envDIR} --prefix=${myPREFIX}
+    --with-verbs=${envDIR}  --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
