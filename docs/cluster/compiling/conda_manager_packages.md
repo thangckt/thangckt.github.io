@@ -148,7 +148,7 @@ prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw      # to see GPAW datase
 #### conda env
 ``` sh
 module load conda/conda3
-conda create -n py9ase_ucx_ompi python=3.9.1  # higher python require newer GLIBC.
+conda create -y -n py9ase_ucx_ompi python=3.9.1  # higher python require newer GLIBC.
 source activate py9ase_ucx_ompi
 
 conda install --update-specs -y -c conda-forge python=3.9.1 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.12 \
