@@ -10,8 +10,7 @@ GLIBC=2.12
 
     - ucx-infiniband conda does not work
     - create `py9ase` env, but do not install `ucx openmpi`
-    - `libibverbs-cos6-x86_64 numactl-cos6-x86_64 librdmacm-cos6-x86_64`
-    - `-c rapidsai-nightly rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64`. --with-verbs=${envDIR}
+    - `rdma-core` needed for IB. Then, use `--with-verbs --with-rdmacm` ([see this](https://ucx-py.readthedocs.io/en/latest/install.html))
 
 #### conda env
 ``` sh
@@ -21,8 +20,9 @@ source activate py9ase_ucx_ompi
 
 conda install --update-specs -y --revision 0
 
-conda install --update-specs -y -c conda-forge python=3.9.0 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 zlib=1.2.11 \
-    clang clangxx clang-tools rdma-core
+conda install --update-specs -y -c conda-forge -c lcls-ii python=3.9.0 \
+    gcc=11 gxx=11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 zlib=1.2.11 \
+    libfabric rdma-core
 ```
 
 #### UCX
@@ -32,13 +32,12 @@ Don't install, since ucx does not recognize IB. Use system UCX.
 cd /home1/p001cao/0SourceCode/tooldev
 # wget https://github.com/openucx/ucx/releases/download/v1.13.1/ucx-1.13.1.tar.gz    # v1.15.0-rc3/ucx-1.15.0.tar.gz
 # tar xvf ucx-1.13.1.tar.gz
-cd ucx-1.13.1
+cd ucx-1.15.0
 rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH:/usr
-export CC=clang export CXX=clang++
 # export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
