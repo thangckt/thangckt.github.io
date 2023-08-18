@@ -21,42 +21,28 @@ source activate py9ase_ucx_ompi
 
 conda install --update-specs -y --revision 0
 
-conda install --update-specs -y -c conda-forge python=3.9.0 gcc=11 gxx=11 libgcc-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
-    libibverbs-devel-cos6-x86_64 numactl-cos6-x86_64
-
-```
-#### libfabric
-``` sh
-cd /home1/p001cao/0SourceCode/tooldev
-# wget https://github.com/ofiwg/libfabric/releases/download/v1.18.1/libfabric-1.18.1.tar.bz2
-# tar xf libfabric-1.18.1.tar.bz2
-cd libfabric-1.18.1
-
-module load conda/py9ase_ucx_ompi
-export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
-export PATH=${envDIR}/bin:$PATH
-export myPREFIX=${envDIR}
-
-./configure --prefix=${myPREFIX}
+conda install --update-specs -y -c conda-forge python=3.9.0 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 zlib=1.2.11 \
+    clang clangxx clang-tools rdma-core
 ```
 
 #### UCX
-Don't use gcc>11
+Don't install, since ucx does not recognize IB. Use system UCX.
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
-# wget https://github.com/openucx/ucx/releases/download/v1.15.0-rc3/ucx-1.15.0.tar.gz
-# tar xvf ucx-1.15.0.tar.gz
-cd ucx-1.15.0
+# wget https://github.com/openucx/ucx/releases/download/v1.13.1/ucx-1.13.1.tar.gz    # v1.15.0-rc3/ucx-1.15.0.tar.gz
+# tar xvf ucx-1.13.1.tar.gz
+cd ucx-1.13.1
 rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
-export PATH=${envDIR}/bin:$PATH
+export PATH=${envDIR}/bin:$PATH:/usr
+export CC=clang export CXX=clang++
 # export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
-../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-verbs --with-rdmacm --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
@@ -72,7 +58,7 @@ export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export myPREFIX=${envDIR}
 
-../configure --with-sge --with-ucx=${envDIR} --prefix=${myPREFIX}
+../configure --with-sge --with-ucx=/usr --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
