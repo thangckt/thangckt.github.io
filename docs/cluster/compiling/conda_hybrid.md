@@ -22,7 +22,7 @@ source activate py9ase_ucx_ompi
 conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge python=3.9.0 gcc=11 gxx=11 libgcc-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
-    libibverbs-devel-cos6-x86_64
+    libibverbs-devel-cos6-x86_64 numactl-cos6-x86_64
 
 ```
 #### libfabric
@@ -53,15 +53,14 @@ rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
-export CFLAGS="-Wno-shadow"
+# export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
-../contrib/configure-release --enable-mt  \
-    --with-verbs=${envDIR}  --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
---with-rc --with-dc --with-ud
+
 #### OMPI
 ```sh
 cd /home1/p001cao/0SourceCode
