@@ -126,7 +126,7 @@ conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly python=3.9.0 \
     gcc=12 gxx=12 libgcc-ng=12 libstdcxx-ng=12 libgfortran-ng=12 zlib=1.2.11 \
-    rdma-core librdmacm-cos6-x86_64 libffi=3.3 ucx openmpi=4.0 ase gpaw  # lammps
+    rdma-core libnuma libibverbs-cos6-x86_64 libffi=3.3 ucx openmpi=4.1.3 ase gpaw  # lammps
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
