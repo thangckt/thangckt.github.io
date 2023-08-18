@@ -22,11 +22,11 @@ conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly python=3.9.0 \
     gcc=11 gxx=11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 zlib=1.2.11 \
-    rdma-core libibverbs-devel-cos7-x86_64 numactl-devel-cos7-x86_64 libnuma
+    rdma-core libibverbs-cos7-x86_64 numactl-cos7-x86_64 libibumad-cos7-x86_64 ibacm-cos7-x86_64
 ```
 
 #### UCX
-Don't install, since ucx does not recognize IB. Use system UCX.
+Be sure that ucx to recognize IB. `UCT modules:   < ib cma knem >`
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
@@ -39,15 +39,12 @@ module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
-# export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
-../contrib/configure-release --enable-mt --with-verbs=${envDIR} --with-rdmacm=${envDIR} --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-verbs=${envDIR} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
-
-
 
 #### OMPI
 ```sh
@@ -60,7 +57,7 @@ export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export myPREFIX=${envDIR}
 
-../configure --with-sge --with-ucx=/usr --prefix=${myPREFIX}
+../configure --with-sge --with-ucx=${envDIR} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
