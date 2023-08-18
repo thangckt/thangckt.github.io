@@ -18,7 +18,7 @@ module load conda/conda3
 conda create -y -n py9ase_ucx_ompi python=3.9.0  # higher python require newer GLIBC.
 source activate py9ase_ucx_ompi
 
-conda install -y --revision 0
+conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c rapidsai-nightly python=3.9.0 \
     gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.12 \
