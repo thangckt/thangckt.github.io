@@ -112,6 +112,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
     - higher python (>3.9.2) require newer GLIBC, and have many conflicts.
     - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`
     - `libffi=3.3` to avoid higher GLIBC
+    - `-c rapidsai-nightly rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64`
 
 **Install** in Conda-env
 
@@ -122,10 +123,8 @@ source activate py9ase
 
 conda install --update-specs -y --revision 0
 
-conda install --update-specs -y -c conda-forge -c rapidsai-nightly python=3.9.1 \
-    gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
-    rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64 hpccm \
-    libffi=3.3 ucx openmpi ase gpaw  # lammps
+conda install --update-specs -y -c conda-forge python=3.9.1 gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
+    hpccm libffi=3.3 ucx openmpi ase gpaw  # lammps
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
