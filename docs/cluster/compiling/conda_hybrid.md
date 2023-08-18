@@ -10,7 +10,8 @@ GLIBC=2.12
 
     - ucx-infiniband conda does not work
     - create `py9ase` env, but do not install `ucx openmpi`
-    `libibverbs-cos6-x86_64 numactl-cos6-x86_64 librdmacm-cos6-x86_64 `
+    - `libibverbs-cos6-x86_64 numactl-cos6-x86_64 librdmacm-cos6-x86_64`
+    - `-c rapidsai-nightlyrdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64`. --with-verbs=${envDIR}
 
 #### conda env
 ``` sh
@@ -21,8 +22,8 @@ source activate py9ase_ucx_ompi
 conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c rapidsai-nightly python=3.9.0 \
-    gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.12 \
-    rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64
+    gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11
+
 ```
 #### UCX
 ``` sh
@@ -38,7 +39,7 @@ export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
 ../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud \
-    --with-verbs=${envDIR}  --prefix=${myPREFIX}
+      --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
@@ -47,14 +48,12 @@ make -j 16 && make install
 ```sh
 cd /home1/p001cao/0SourceCode
 cd ompi-4.1.x
-
 rm -rf build_ase && mkdir build_ase && cd build_ase
 
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export CC=gcc export CXX=g++ export FC=gfortran
-export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
 ../configure --with-sge --without-verbs --with-ucx=${envDIR} --prefix=${myPREFIX}
