@@ -22,7 +22,7 @@ conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c lcls-ii python=3.9.0 \
     gcc=11 gxx=11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 zlib=1.2.11 \
-    rdma-core libibverbs-cos6-x86_64 numactl-cos6-x86_64  # libfabric
+    rdma-core libfabric #  libibverbs-devel-cos6-x86_64 numactl-devel-cos6-x86_64 libnuma
 ```
 
 #### UCX
@@ -46,6 +46,8 @@ export myPREFIX=${envDIR}
 
 make -j 16 && make install
 ```
+
+
 
 #### OMPI
 ```sh
