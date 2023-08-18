@@ -22,7 +22,7 @@ source activate py9ase_ucx_ompi
 conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c rapidsai-nightly python=3.9.0 \
-    gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11
+    gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 
 
 ```
 #### UCX
