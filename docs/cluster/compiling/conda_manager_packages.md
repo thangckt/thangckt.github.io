@@ -120,10 +120,12 @@ module load conda/conda3
 conda create -n py9ase python=3.9.1   # higher python require newer GLIBC.
 source activate py9ase
 
+conda install --update-specs -y --revision 0
+
 conda install --update-specs -y -c conda-forge -c rapidsai-nightly python=3.9.1 \
-    gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.12 \
-    rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64 \
-    libffi=3.3 ucx=1.13 openmpi ase gpaw  # lammps
+    gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
+    rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64 hpccm \
+    libffi=3.3 ucx openmpi ase gpaw  # lammps
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
