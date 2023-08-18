@@ -22,7 +22,7 @@ conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c lcls-ii python=3.9.0 \
     gcc=11 gxx=11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 zlib=1.2.11 \
-    rdma-core librdmacm-cos7-x86_64  # libfabric
+    rdma-core librdmacm-cos6-x86_64 # libfabric
 ```
 
 #### UCX
@@ -38,6 +38,7 @@ rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
+export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
 # export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
