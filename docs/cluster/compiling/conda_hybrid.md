@@ -25,6 +25,9 @@ conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly py
     rdma-core libibverbs-cos7-x86_64 numactl-cos7-x86_64 libibumad-cos7-x86_64 ibacm-cos7-x86_64
 ```
 
+#### rdma-core
+- `rdma-core` needed for IB, but package in conda is not available for older GLIBC.
+
 #### UCX
 Be sure that ucx to recognize IB. `UCT modules:   < ib cma knem >`
 
@@ -41,7 +44,7 @@ export PATH=${envDIR}/bin:$PATH
 export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
 export myPREFIX=${envDIR}
 
-../contrib/configure-release --enable-mt --with-verbs=${envDIR} --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
