@@ -113,17 +113,18 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
     - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`
     - `libffi=3.3` to avoid higher GLIBC
     - `-c rapidsai-nightly rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64`
+    - `gfortran=12 libgfortran-ng=12`
 
 **Install** in Conda-env
 
 ``` sh
 module load conda/conda3
-conda create -n py9ase python=3.9.7   # higher python require newer GLIBC.
+conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
 conda install --update-specs -y --revision 0
 
-conda install --update-specs -y -c conda-forge python=3.9.7 gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
+conda install --update-specs -y -c conda-forge python=3.9.0 gcc=12 gxx=12 libgcc-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
     libffi=3.3 ucx openmpi=4.1.4=ha1ae619_100 ase gpaw  # lammps
 ```
 
