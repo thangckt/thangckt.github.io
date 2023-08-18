@@ -123,7 +123,7 @@ source activate py9ase
 
 conda install --update-specs -y --revision 0
 
-conda install --update-specs -y -c conda-forge python=3.9.7 gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
+conda install --update-specs -y -c conda-forge python=3.9.7 gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 \
     libffi=3.3 ucx openmpi ase gpaw  # lammps
 ```
 

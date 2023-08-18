@@ -11,7 +11,7 @@ GLIBC=2.12
     - ucx-infiniband conda does not work
     - create `py9ase` env, but do not install `ucx openmpi`
     - `libibverbs-cos6-x86_64 numactl-cos6-x86_64 librdmacm-cos6-x86_64`
-    - `-c rapidsai-nightlyrdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64`. --with-verbs=${envDIR}
+    - `-c rapidsai-nightly rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64`. --with-verbs=${envDIR}
 
 #### conda env
 ``` sh
@@ -22,7 +22,8 @@ source activate py9ase_ucx_ompi
 conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c rapidsai-nightly python=3.9.0 \
-    gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 
+    gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
+    libibverbs-cos7-x86_64
 
 ```
 #### UCX
@@ -56,7 +57,7 @@ export PATH=${envDIR}/bin:$PATH
 export CC=gcc export CXX=g++ export FC=gfortran
 export myPREFIX=${envDIR}
 
-../configure --with-sge --without-verbs --with-ucx=${envDIR} --prefix=${myPREFIX}
+../configure --with-sge --with-verbs=${envDIR} --with-ucx=${envDIR} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
