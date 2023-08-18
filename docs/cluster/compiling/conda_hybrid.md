@@ -20,9 +20,9 @@ source activate py9ase_ucx_ompi
 
 conda install --update-specs -y --revision 0
 
-conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly python=3.9.0 \
+conda install --update-specs -y -c conda-forge -c lcls-ii python=3.9.0 \
     gcc=11 gxx=11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 zlib=1.2.11 \
-    rdma-core libnuma libibverbs-cos6-x86_64  # libfabric
+    rdma-core libibverbs-cos6-x86_64 numactl-cos6-x86_64  # libfabric
 ```
 
 #### UCX
