@@ -118,12 +118,12 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 
 ``` sh
 module load conda/conda3
-conda create -n py9ase python=3.9.1   # higher python require newer GLIBC.
+conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
 conda install --update-specs -y --revision 0
 
-conda install --update-specs -y -c conda-forge python=3.9.1 gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
+conda install --update-specs -y -c conda-forge python=3.9.0 gcc=11 gxx=11 gfortran=11 libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
     hpccm libffi=3.3 ucx openmpi ase gpaw  # lammps
 ```
 
