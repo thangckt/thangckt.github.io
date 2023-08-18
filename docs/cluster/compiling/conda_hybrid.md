@@ -54,7 +54,6 @@ rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
-export CC=gcc export CXX=g++ export FC=gfortran
 export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
@@ -73,7 +72,6 @@ rm -rf build_ase && mkdir build_ase && cd build_ase
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
-export CC=gcc export CXX=g++ export FC=gfortran
 export myPREFIX=${envDIR}
 
 ../configure --with-sge --with-ucx=${envDIR} --prefix=${myPREFIX}
