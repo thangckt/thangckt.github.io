@@ -125,8 +125,8 @@ source activate py9ase
 conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly  python=3.9.0 \
-    gcc=12 gxx=12 libgcc-ng=12 libstdcxx-ng=12 libgfortran-ng=12 zlib=1.2.11 \
-    rdma-core libibverbs-cos7-x86_64 numactl-cos7-x86_64 libnuma libffi=3.3 ucx=1.14 openmpi ase gpaw  # lammps
+    gcc=9 gxx=9 libgcc-ng=9 libstdcxx-ng=9 libgfortran-ng=9 zlib=1.2.11 \
+    rdma-core libibverbs-cos7-x86_64 numactl-cos7-x86_64 libnuma libffi=3.3 ucx=1.12 openmpi=4.1.1 ase gpaw  # lammps
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
