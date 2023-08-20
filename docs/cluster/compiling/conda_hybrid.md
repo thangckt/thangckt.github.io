@@ -42,6 +42,7 @@ module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
+export CC=clang export CXX=clang++
 export CFLAGS="-Wno-shadow"
 export myPREFIX=/home1/p001cao/app/conda_lib/ucx-1.15
 
