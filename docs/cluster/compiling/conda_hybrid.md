@@ -22,7 +22,7 @@ conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge  -c rapidsai-nightly python=3.9.0 \
     clang clangxx lld zlib=1.2.11 \
-    rdma-core libibverbs-cos7-x86_64 numactl-cos7-x86_64 libibumad-cos7-x86_64 ibacm-cos7-x86_64
+    libibverbs-cos7-x86_64 numactl-cos7-x86_64 libibumad-cos7-x86_64 ibacm-cos7-x86_64
 ```
 
 #### rdma-core
