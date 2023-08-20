@@ -18,10 +18,10 @@ module load conda/conda3
 conda create -y -n py9ase_ucx_ompi python=3.9.0  # higher python require newer GLIBC.
 source activate py9ase_ucx_ompi
 
-conda install --update-specs -y --revision 0
+conda install -y --revision 0
 
-conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly python=3.9.0 \
-    clang clangxx lld gcc=11 gxx=11 libgcc-ng=11 libstdcxx-ng=11 zlib=1.2.11 \
+conda install -y -c conda-forge -c lcls-ii -c rapidsai-nightly python=3.9.0 \
+    gcc=11 gxx=11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 zlib=1.2.11 \
     rdma-core libibverbs-cos7-x86_64 numactl-cos7-x86_64 libibumad-cos7-x86_64 ibacm-cos7-x86_64
 ```
 
@@ -42,13 +42,17 @@ module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
-export CC=clang export CXX=clang++
 export CFLAGS="-Wno-shadow"
 export myPREFIX=/home1/p001cao/app/conda_lib
 
 ../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} --prefix=${myPREFIX}
 
 make -j 16 && make install
+```
+Test
+```
+module load mpi/ompi4.1.x-conda
+ucx_info -d | grep Transport
 ```
 
 #### OMPI
@@ -57,6 +61,7 @@ cd /home1/p001cao/0SourceCode
 cd ompi-4.1.x
 rm -rf build_ase && mkdir build_ase && cd build_ase
 
+module load mpi/ompi4.1.x-conda
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
