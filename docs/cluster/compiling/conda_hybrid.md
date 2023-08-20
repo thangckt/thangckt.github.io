@@ -42,7 +42,7 @@ module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
-export myPREFIX=${envDIR}
+export myPREFIX=/home1/p001cao/app/conda/ucx-15
 
 ../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} --prefix=${myPREFIX}
 
@@ -58,7 +58,7 @@ rm -rf build_ase && mkdir build_ase && cd build_ase
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
-export myPREFIX=${envDIR}
+export myPREFIX=/home1/p001cao/app/conda/ompi-4.1.x
 
 ../configure --with-sge --with-ucx=${envDIR} --prefix=${myPREFIX}
 
@@ -68,6 +68,7 @@ make -j 16 && make install
 #### ASE+GPAW
 
 ``` sh
+module load conda/py9ase_ucx_ompi
 module load conda/conda3
 source activate py9ase_ucx_ompi
 
