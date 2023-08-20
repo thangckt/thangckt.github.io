@@ -43,7 +43,7 @@ export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
 export CFLAGS="-Wno-shadow"
-export myPREFIX=/home1/p001cao/app/conda_lib
+export myPREFIX=${envDIR}
 
 ../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} --prefix=${myPREFIX}
 
@@ -51,7 +51,7 @@ make -j 16 && make install
 ```
 Test
 ```
-module load mpi/ompi4.1.x-conda
+module load conda/py9ase_ucx_ompi
 ucx_info -d | grep Transport
 ```
 
