@@ -21,7 +21,7 @@ source activate py9ase_ucx_ompi
 conda install --update-specs -y --revision 0
 
 conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly python=3.9.0 \
-    clang clangxx lld zlib=1.2.11 \
+    clang clangxx lld gcc=11 gxx=11 zlib=1.2.11 \
     rdma-core libibverbs-cos7-x86_64 numactl-cos7-x86_64 libibumad-cos7-x86_64 ibacm-cos7-x86_64
 ```
 
@@ -44,7 +44,7 @@ export PATH=${envDIR}/bin:$PATH
 export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
 export CC=clang export CXX=clang++
 export CFLAGS="-Wno-shadow"
-export myPREFIX=/home1/p001cao/app/conda_lib/ucx-1.15
+export myPREFIX=/home1/p001cao/app/conda_lib
 
 ../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} --prefix=${myPREFIX}
 
