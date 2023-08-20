@@ -29,7 +29,8 @@ conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly py
 - `rdma-core` needed for IB, but package in conda is not available for older GLIBC.
 
 #### UCX
-Be sure that ucx to recognize IB. `UCT modules:   < ib cma knem >`
+- Be sure that ucx to recognize IB. `UCT modules:   < ib cma knem >`
+- Use system UCX.
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
@@ -60,9 +61,9 @@ rm -rf build_ase && mkdir build_ase && cd build_ase
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
-export myPREFIX=/home1/p001cao/app/conda/ompi-4.1.x
+export myPREFIX=/home1/p001cao/app/conda_lib
 
-../configure --with-sge --with-ucx=${envDIR} --prefix=${myPREFIX}
+../configure --with-sge --with-ucx=/home1/p001cao/app/conda_lib --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
