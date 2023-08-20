@@ -30,7 +30,6 @@ conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly py
 
 #### UCX
 - Be sure that ucx to recognize IB. `UCT modules:   < ib cma knem >`
-- Use system UCX.
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev

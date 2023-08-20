@@ -109,7 +109,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 
 !!! note
 
-    - higher python (>3.9.2) require newer GLIBC, and have many conflicts.
+    - higher python (>3.9.2) require newer GLIBC, and have many conflicts. avoid `--update-specs`
     - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`
     - `libffi=3.3` to avoid higher GLIBC
     - `-c rapidsai-nightly rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64`
@@ -122,9 +122,9 @@ module load conda/conda3
 conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
 source activate py9ase
 
-conda install --update-specs -y --revision 0
+conda install  -y --revision 0
 
-conda install --update-specs -y -c conda-forge  python=3.9.0 \
+conda install  -y -c conda-forge  python=3.9.0 \
     zlib=1.2.11 openmpi ase gpaw  # lammps
 ```
 
