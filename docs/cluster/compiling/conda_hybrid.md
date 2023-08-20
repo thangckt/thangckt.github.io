@@ -42,7 +42,7 @@ module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
-export myPREFIX=/home1/p001cao/app/conda/ucx-15
+export myPREFIX=/home1/p001cao/app/conda/ucx-1.15
 
 ../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} --prefix=${myPREFIX}
 
