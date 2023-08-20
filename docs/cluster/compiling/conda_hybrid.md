@@ -21,7 +21,7 @@ source activate py9ase_ucx_ompi
 conda install -y --revision 0
 
 conda install -y -c conda-forge -c lcls-ii -c rapidsai-nightly python=3.9.0 \
-    gcc=9 gxx=9 libgcc-ng=9 libstdcxx-ng=9 libgfortran-ng=9 zlib=1.2.11 clang clangxx \
+    gcc=11.2 gxx=11.2 libgcc-ng=11.2 libstdcxx-ng=11.2 libgfortran-ng=11.2 zlib=1.2.11 \
     rdma-core libibverbs-cos7-x86_64 numactl-cos7-x86_64 libibumad-cos7-x86_64 ibacm-cos7-x86_64
 ```
 

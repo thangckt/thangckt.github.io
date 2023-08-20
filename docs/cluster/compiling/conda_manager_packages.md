@@ -125,8 +125,8 @@ source activate py9ase
 
 conda install  -y --revision 0
 
-conda install  -y -c conda-forge  python=3.9.0 gcc=12 gxx=12 gfortran=12 libgcc-ng=12 libstdcxx-ng=12 libgfortran-ng=12\
-    zlib=1.2.11 openmpi=4.0 ase gpaw  # lammps
+conda install  -y -c conda-forge  python=3.9.7 libgcc-ng=12 libstdcxx-ng=12 libgfortran-ng=12\
+    zlib=1.2.11 openmpi=4.1 ase gpaw  # lammps
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
