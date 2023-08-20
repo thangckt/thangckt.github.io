@@ -10,7 +10,7 @@ GLIBC=2.12
 
     - ucx-infiniband conda does not work
     - create `py9ase` env, but do not install `ucx openmpi`
-    - `rdma-core` needed for IB. Then, use `--with-verbs --with-rdmacm` ([see this](https://ucx-py.readthedocs.io/en/latest/install.html))
+    - `-c lcls-ii rdma-core` needed for IB. Then, use `--with-verbs --with-rdmacm` ([see this](https://ucx-py.readthedocs.io/en/latest/install.html))
 
 #### conda env
 ``` sh
@@ -20,7 +20,7 @@ source activate py9ase_ucx_ompi
 
 conda install --update-specs -y --revision 0
 
-conda install --update-specs -y -c conda-forge -c lcls-ii -c rapidsai-nightly python=3.9.0 \
+conda install --update-specs -y -c conda-forge  -c rapidsai-nightly python=3.9.0 \
     clang clangxx lld zlib=1.2.11 \
     rdma-core libibverbs-cos7-x86_64 numactl-cos7-x86_64 libibumad-cos7-x86_64 ibacm-cos7-x86_64
 ```
@@ -42,7 +42,8 @@ module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
 export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
-export myPREFIX=/home1/p001cao/app/conda/ucx-1.15
+export CFLAGS="-Wno-shadow"
+export myPREFIX=/home1/p001cao/app/conda_lib/ucx-1.15
 
 ../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} --prefix=${myPREFIX}
 
