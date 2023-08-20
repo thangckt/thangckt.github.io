@@ -191,7 +191,7 @@ source activate py11ase
 ```
 
 ``` sh
-conda install --update-specs -y -c conda-forge  libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
+conda install -y -c conda-forge rdma-core libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
      ucx openmpi ase gpaw  lammps
 ```
 
