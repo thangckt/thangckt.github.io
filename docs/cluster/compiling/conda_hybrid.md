@@ -51,7 +51,6 @@ make -j 16 && make install
 ```
 Test
 ``` sh
-module load conda/py9ase_ucx_ompi
 ucx_info -d | grep Transport
 ```
 
