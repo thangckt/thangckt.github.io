@@ -60,7 +60,6 @@ cd /home1/p001cao/0SourceCode
 cd ompi-4.1.x
 rm -rf build_ase && mkdir build_ase && cd build_ase
 
-module load mpi/ompi4.1.x-conda
 module load conda/py9ase_ucx_ompi
 export envDIR=/home1/p001cao/app/miniconda3/envs/py9ase_ucx_ompi
 export PATH=${envDIR}/bin:$PATH
