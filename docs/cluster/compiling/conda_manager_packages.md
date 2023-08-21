@@ -125,7 +125,7 @@ source activate py9ase
 
 conda install -y --revision 0
 
-conda install -y -c conda-forge -c lcls-ii python=3.9 libgcc-ng=13 libstdcxx-ng=13 libgfortran-ng=13 \
+conda install -y -c conda-forge -c lcls-ii python=3.9 \
     rdma-core ucx=1.13 openmpi=4.1.4=ha1ae619_100 ase # gpaw lammps
 
 pip install git+https://gitlab.com/gpaw/gpaw@master
