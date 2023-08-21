@@ -45,7 +45,7 @@ export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
 export CFLAGS="-Wno-shadow"
 export myPREFIX=${envDIR}
 
-../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --with-verbs=${envDIR} --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-verbs=${envDIR} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
