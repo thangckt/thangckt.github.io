@@ -128,6 +128,8 @@ conda install -y --revision 0
 conda install -y -c conda-forge -c lcls-ii python=3.11 \
     rdma-core rdma-core-devel-cos7-x86_64 numactl ucx=1.13 openmpi ase # gpaw lammps
 
+conda install -y -c conda-forge gpaw
+
 pip install git+https://gitlab.com/gpaw/gpaw@master
 ```
 
