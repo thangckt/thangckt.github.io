@@ -124,8 +124,8 @@ source activate py9ase
 
 conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 \
-     ucx=1.9 openmpi=4.1.5 ase gpaw=23  # lammps
+conda install -y -c conda-forge python=3.11 \
+     ucx=1.9 openmpi=4.1.5 ase   # gpaw=23 lammps
 
 pip install git+https://gitlab.com/gpaw/gpaw@master
 ```
