@@ -79,3 +79,8 @@ source activate py9ase_ucx_ompi
 
 conda install -y -c conda-forge ase gpaw
 ```
+
+Test
+``` sh
+gpaw test
+```
