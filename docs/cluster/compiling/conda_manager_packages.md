@@ -110,7 +110,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 !!! note
 
     - higher python (>3.9.2) require newer GLIBC, and have many conflicts. avoid `--update-specs`
-    - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`. But infiniband may only work with ucx=1.9, and need to down openmpi=4.1.1. But gpaw conda only recognize openmpi=4.1.5, then may need `pip install` to install from source (need gcc, gxx).
+    - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`. But infiniband may only work with ucx=1.9, and need to down openmpi=4.1.1. But gpaw conda only recognize openmpi=4.1.5, then may need `pip install` to install from source (need gcc, gxx,.. use gcc-11 to avoid requiring high GLIBC).
     - `libffi=3.3` to avoid higher GLIBC
     - system UCX=1.6 (not work),
 
@@ -126,14 +126,14 @@ conda install -y --revision 0
 conda install -y -c conda-forge python=3.11 gcc=11 gxx=11 \
     ucx=1.9 openmpi=4.1.1 ase libxc blas scalapack fftw # gpaw=23 lammps
 
-pip install git+https://gitlab.com/gpaw/gpaw.git@23.6.1
+pip install git+https://gitlab.com/gpaw/gpaw.git@master
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
 
 other option
 ``` sh
-pip install git+https://gitlab.com/gpaw/gpaw.git@master
+pip install git+https://gitlab.com/gpaw/gpaw.git@master  # @23.6.1  @master
 
 -c rapidsai-nightly librdmacm-devel-cos7-x86_64
 -c lcls-ii rdma-core
