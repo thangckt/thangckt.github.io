@@ -110,7 +110,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 !!! note
 
     - higher python (>3.9.2) require newer GLIBC, and have many conflicts. avoid `--update-specs`
-    - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`. But infiniband may only work with ucx=1.9, and need to down openmpi=4.1.1. But gpaw conda only recognize openmpi=4.1.5, then may need pip install.
+    - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`. But infiniband may only work with ucx=1.9, and need to down openmpi=4.1.1. But gpaw conda only recognize openmpi=4.1.5, then may need `pip install` to install from source (need gcc, gxx).
     - `libffi=3.3` to avoid higher GLIBC
     - system UCX=1.6 (not work),
 
@@ -123,10 +123,10 @@ source activate py9ase
 
 conda install -y --revision 0
 
-conda install -y -c conda-forge python=3.11 gcc=12 gxx=12\
-     ucx=1.9 openmpi=4.1.1 ase   # gpaw=23 lammps
+conda install -y -c conda-forge python=3.11 gcc=11 gxx=11 \
+    ucx=1.9 openmpi=4.1.1 ase libxc blas scalapack fftw # gpaw=23 lammps
 
-pip install git+https://gitlab.com/gpaw/gpaw.git@master
+pip install git+https://gitlab.com/gpaw/gpaw.git@23.6.1
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
