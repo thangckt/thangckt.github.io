@@ -124,6 +124,7 @@ source activate py9ase
 
 conda install -y --revision 0
 
+export PATH=/dev/infiniband:$PATH
 conda install -y -c conda-forge python=3.11 \
      ucx=1.13 openmpi ase  # gpaw lammps
 
