@@ -126,7 +126,7 @@ source activate py9ase
 conda install -y --revision 0
 
 conda install -y -c conda-forge -c lcls-ii python=3.11 \
-    rdma-core rdma-core-devel-cos7-x86_64 ucx=1.13 openmpi ase # gpaw lammps
+    rdma-core rdma-core-devel-cos7-x86_64 numactl-devel-cos7-x86_64 ucx=1.13 openmpi ase # gpaw lammps
 
 pip install git+https://gitlab.com/gpaw/gpaw@master
 ```
