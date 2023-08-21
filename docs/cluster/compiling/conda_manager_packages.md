@@ -125,8 +125,8 @@ source activate py9ase
 conda install -y --revision 0
 
 export PATH=/dev/infiniband:$PATH         # rdma driver
-conda install -y -c conda-forge -c lcls-ii python=3.11 \
-    rdma-core ucx=1.13 openmpi=4.1.5 ase gpaw=23  # lammps
+conda install -y -c conda-forge -c python=3.11 \
+     ucx=1.9 openmpi=4.1.5 ase gpaw=23  # lammps
 
 conda install -y -c conda-forge gpaw
 ```
