@@ -123,7 +123,7 @@ source activate py9ase
 
 conda install -y --revision 0
 
-conda install -y -c conda-forge python=3.11 \
+conda install -y -c conda-forge python=3.11 gcc=12 gxx=12\
      ucx=1.9 openmpi=4.1.1 ase   # gpaw=23 lammps
 
 pip install git+https://gitlab.com/gpaw/gpaw.git@master
@@ -133,7 +133,7 @@ To see ucx transports: `ucx_info -d | grep Transport`
 
 other option
 ``` sh
-pip install git+https://gitlab.com/gpaw/gpaw@master
+pip install git+https://gitlab.com/gpaw/gpaw.git@master
 
 -c rapidsai-nightly librdmacm-devel-cos7-x86_64
 -c lcls-ii rdma-core
