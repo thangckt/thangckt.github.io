@@ -112,9 +112,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
     - higher python (>3.9.2) require newer GLIBC, and have many conflicts. avoid `--update-specs`
     - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`
     - `libffi=3.3` to avoid higher GLIBC
-    - `-c rapidsai-nightly rdma-core-devel-cos7-x86_64 librdmacm-devel-cos7-x86_64`
-    - `-c lcls-ii rdma-core rdma-core-devel-cos7-x86_64 numactl`
-    - `gfortran=12 libgfortran-ng=12 gcc=13 gxx=13 libgcc-ng=13 libstdcxx-ng=13`
+
     - system UCX=1.6 (not work), `openmpi=4.1.4=ha1ae619_100``
 
 **Install** in Conda-env
@@ -137,6 +135,11 @@ To see ucx transports: `ucx_info -d | grep Transport`
 other option
 ``` sh
 pip install git+https://gitlab.com/gpaw/gpaw@master
+
+-c rapidsai-nightly librdmacm-devel-cos7-x86_64
+-c lcls-ii rdma-core
+rdma-core-devel-cos7-x86_64 numactl
+gfortran=12 libgfortran-ng=12 gcc=13 gxx=13 libgcc-ng=13 libstdcxx-ng=13
 ```
 
 **Create a module file** for GPAW
