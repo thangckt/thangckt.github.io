@@ -124,7 +124,6 @@ source activate py9ase
 
 conda install -y --revision 0
 
-export PATH=/dev/infiniband:$PATH         # rdma driver
 conda install -y -c conda-forge -c python=3.11 \
      ucx=1.9 openmpi=4.1.5 ase gpaw=23  # lammps
 
@@ -141,6 +140,7 @@ pip install git+https://gitlab.com/gpaw/gpaw@master
 -c lcls-ii rdma-core
 rdma-core-devel-cos7-x86_64 numactl
 gfortran=12 libgfortran-ng=12 gcc=13 gxx=13 libgcc-ng=13 libstdcxx-ng=13
+export PATH=/dev/infiniband:$PATH         # rdma driver
 ```
 
 **Create a module file** for GPAW
