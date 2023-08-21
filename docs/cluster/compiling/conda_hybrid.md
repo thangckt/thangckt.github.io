@@ -77,7 +77,9 @@ after compile UCX, install gpaw (don't compile ompi)
 module load conda/conda3
 source activate py9ase_ucx_ompi
 
-conda install -y -c conda-forge ase gpaw
+conda install -y -c conda-forge ase ase libxc openblas scalapack fftw scipy
+
+pip install git+https://gitlab.com/gpaw/gpaw.git@23.6.1
 ```
 
 Test
