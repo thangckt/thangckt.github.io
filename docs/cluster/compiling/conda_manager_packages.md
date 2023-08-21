@@ -119,12 +119,12 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 
 ``` sh
 module load conda/conda3
-conda create -y -n py9ase python=3.11   # now work with python 11
+conda create -y -n py9ase python=3.9.0   # now work with python 11
 source activate py9ase
 
 conda install -y --revision 0
 
-conda install -y -c conda-forge -c python=3.11 \
+conda install -y -c conda-forge  python=3.11 \
      ucx=1.9 openmpi=4.1.5 ase gpaw=23  # lammps
 
 conda install -y -c conda-forge gpaw
