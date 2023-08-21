@@ -21,7 +21,7 @@ source activate py9ase_ucx_ompi
 conda install -y --revision 0
 
 conda install -y -c conda-forge -c lcls-ii python=3.9 \
-    gcc=11.2 gxx=11.2 libgcc-ng=11.2 libstdcxx-ng=11.2 libgfortran-ng=11.2 zlib=1.2.11 \
+    gcc=11.2 gxx=11.2 libgcc-ng=11.2 libstdcxx-ng=11.2 libgfortran-ng=11.2 zlib=1.2.11 sysroot_linux-64=2.12 \
     rdma-core
 ```
 
