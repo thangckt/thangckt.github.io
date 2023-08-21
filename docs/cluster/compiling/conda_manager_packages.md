@@ -126,7 +126,7 @@ conda install -y --revision 0
 
 export PATH=/dev/infiniband:$PATH         # rdma driver
 conda install -y -c conda-forge python=3.11 \
-    ucx openmpi ase  # gpaw lammps
+    ucx=1.13 openmpi ase  # gpaw lammps
 
 conda install -y -c conda-forge gpaw
 ```
