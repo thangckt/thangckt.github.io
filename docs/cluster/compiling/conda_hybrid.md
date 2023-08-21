@@ -22,7 +22,7 @@ conda install -y --revision 0
 
 conda install -y -c conda-forge -c lcls-ii python=3.9 \
     gcc=11.2 gxx=11.2 libgcc-ng=11.2 libstdcxx-ng=11.2 libgfortran-ng=11.2 zlib=1.2.11 \
-    rdma-core ase libxc openblas scalapack fftw scipy
+    rdma-core
 ```
 
 #### rdma-core
