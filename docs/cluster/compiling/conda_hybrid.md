@@ -55,7 +55,7 @@ ucx_info -d | grep Transport
 ```
 
 #### OMPI
-```sh
+<!-- ```sh
 cd /home1/p001cao/0SourceCode
 cd ompi-4.1.x
 rm -rf build_ase && mkdir build_ase && cd build_ase
@@ -68,14 +68,14 @@ export myPREFIX=/home1/p001cao/app/conda_lib
 ../configure --with-sge --with-ucx=/home1/p001cao/app/conda_lib --prefix=${myPREFIX}
 
 make -j 16 && make install
-```
+``` -->
 
 #### ASE+GPAW
+after compile UCX, install gpaw (don't compile ompi)
 
 ``` sh
-module load conda/py9ase_ucx_ompi
 module load conda/conda3
 source activate py9ase_ucx_ompi
 
-conda install --update-specs -y -c conda-forge ase gpaw
+conda install -y -c conda-forge ase gpaw
 ```
