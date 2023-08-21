@@ -15,14 +15,14 @@ GLIBC=2.12
 #### conda env
 ``` sh
 module load conda/conda3
-conda create -y -n py9ase_ucx_ompi python=3.9.0  # higher python require newer GLIBC.
+conda create -y -n py9ase_ucx_ompi python=3.9.0  # higher python require newer GLIBC (don't work with py 11)
 source activate py9ase_ucx_ompi
 
 conda install -y --revision 0
 
-conda install -y -c conda-forge -c lcls-ii python=3.11 \
+conda install -y -c conda-forge -c lcls-ii python=3.9 \
     gcc=11.2 gxx=11.2 libgcc-ng=11.2 libstdcxx-ng=11.2 libgfortran-ng=11.2 zlib=1.2.11 \
-    rdma-core 
+    rdma-core
 ```
 
 #### rdma-core
