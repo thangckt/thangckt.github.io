@@ -130,11 +130,14 @@ conda install -y -c conda-forge python=3.11 \
      ucx=1.13 openmpi ase  # gpaw lammps
 
 conda install -y -c conda-forge gpaw
-
-pip install git+https://gitlab.com/gpaw/gpaw@master
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
+
+other option
+``` sh
+pip install git+https://gitlab.com/gpaw/gpaw@master
+```
 
 **Create a module file** for GPAW
 
