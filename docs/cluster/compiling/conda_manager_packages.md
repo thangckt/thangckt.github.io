@@ -119,7 +119,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 
 ``` sh
 module load conda/conda3
-conda create -y -n py9ase python=3.9.0   # now work with python 11
+conda create -y -n py9ase python=3.9.0   # now work with python 11, but create env with python 9
 source activate py9ase
 
 conda install -y --revision 0
