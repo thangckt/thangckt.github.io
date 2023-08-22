@@ -21,18 +21,18 @@ GLIBC=2.12
 ``` sh
 module load forge/forge3
 mamba create -y -n py7ase python=3.7   # now work with python 11, but create env with python 9, version 0 not work, so create new env
-source activate py11ase
+source activate py9ase
 ```
 
 
-
 ```sh
+mamba install -y python=3.9 \
+    ucx=1.9 openmpi=4.1.1 ase gpaw=23 # lammps
+
+
 mamba install -y -c cctbx202211 python=3.11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 \
     ucx=1.9 openmpi=4.1.1 gpaw=23  # lammps
 
-
-mamba install -y python=3.11 \
-    ucx=1.9 openmpi=4.1.1 ase gpaw=23 # lammps
 
 pip install git+https://gitlab.com/gpaw/gpaw.git@23.6.1
 ```
