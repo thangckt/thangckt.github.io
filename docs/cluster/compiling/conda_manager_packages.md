@@ -205,7 +205,7 @@ set     topdir          /home/thang/app/miniconda3/envs/py9ase
     - new GLIBC can void tons of errors due to old GLIBC
     - use python 3.11
     - to use infiniband `libibverbs-cos7-x86_64`
-    - `ucx=1.14` is not recognized, use `--update-specs` to solve this (or use `ucx=1.13`)
+    - `ucx=1.14` is not recognized, use `--update-specs` to solve this
 
 **Install**
 ``` sh
