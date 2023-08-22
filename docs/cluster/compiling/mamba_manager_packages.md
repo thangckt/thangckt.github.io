@@ -20,28 +20,26 @@ GLIBC=2.12
 
 ``` sh
 module load forge/forge3
-mamba create -y -n py7ase python=3.7   # now work with python 11, but create env with python 9, version 0 not work, so create new env
+mamba create -y -n py9ase python=3.9.0   # now work with python 11, but create env with python 9, version 0 not work, so create new env
 source activate py9ase
 ```
 
-
+Python 9:
 ```sh
-mamba install -y python=3.9 \
-    ucx=1.9 openmpi=4.1.1 ase gpaw=23 # lammps
-
-
-mamba install -y python=3.11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 \
-    ucx=1.9 openmpi=4.1.1 gpaw=23  # lammps
-
-
+mamba install -y python=3.9.0 ucx=1.9 openmpi=4.1.1 libzlib=1.2.11 gcc=11 gxx=11 openssl gpaw=23 # gpaw=23 lammps
 pip install git+https://gitlab.com/gpaw/gpaw.git@23.6.1
+```
+
+Python 11: not work, require GLIBC=2.17
+```sh
+mamba install -y python=3.11 libgcc-ng=12 libstdcxx-ng=12 libgfortran-ng=12 ucx=1.9 openmpi=4.1.1 gpaw=23
 ```
 
 To see ucx transports:
 ```sh
-ucx_info -d | grep Transport
-mpirun --version
 gpaw test
+mpirun --version
+ucx_info -d | grep Transport
 ```
 
 other option
