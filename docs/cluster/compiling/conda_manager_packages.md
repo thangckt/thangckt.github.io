@@ -111,17 +111,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 
     - some cases, `--update-specs` is required for high python.
     - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`. But infiniband may only work with ucx=1.9, and need to down openmpi=4.1.1. But gpaw conda only recognize openmpi=4.1.5, then may need `pip install` to install from source (need gcc, gxx,.. use gcc-11 to avoid requiring high GLIBC).
-    - system UCX=1.6 (not work).
-    ``` sh ucx_info -d | grep Transport
-        #   Transport: tcp
-        #   Transport: self
-        #   Transport: mm
-        #   Transport: mm
-        #   Transport: ud
-        #   Transport: rc
-        #   Transport: cm
-        #   Transport: knem
-    ```
+    - system UCX=1.6 (not work). Since new openmpi require newer ucx.
 
 **Install** in Conda-env
 
@@ -153,7 +143,7 @@ Python 11: work
 conda create -y -n py11gpaw python=3.11.4
 source activate py11gpaw
 
-conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
+conda install -y --update-specs -c conda-forge python=3.11.4 ucx=1.13 gpaw=23 # lammps
 ```
 
 
@@ -220,7 +210,7 @@ set     topdir          /home/thang/app/miniconda3/envs/py9ase
 **Install**
 ``` sh
 module load conda/conda3
-conda  create -n py11gpaw python=3.11
+conda  create -y -n py11gpaw python=3.11
 source activate py11gpaw
 ```
 
