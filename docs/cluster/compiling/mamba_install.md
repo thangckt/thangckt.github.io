@@ -2,7 +2,7 @@
 
 [doccumentation](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html#mamba)
 
-## Centos 6.8 (Tachyon)
+## Centos 6.9 (Tachyon)
 
 ```sh
 cd /home1/p001cao/0SourceCode
