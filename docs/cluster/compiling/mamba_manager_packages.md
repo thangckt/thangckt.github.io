@@ -29,7 +29,7 @@ mamba create -y -n py9ase python=3.9.0  # version 0 not work in mamba, so create
 source activate py9ase
 mamba clean -a -y
 
-mamba install -y python=3.9.0 numpy=1.22.3 gpaw=23  # lammps  ; this also install openmpi
+mamba install -y python=3.9.0 numpy=1.21.0 gpaw=23  # lammps  ; this also install openmpi
 ```
 
 Python 11: not work, require GLIBC=2.17
@@ -37,7 +37,7 @@ Python 11: not work, require GLIBC=2.17
 mamba create -y -n py11ase python=3.11.0
 source activate py11ase
 
-mamba install -y python=3.11.0 ucx=1.13 numpy=1.21.3 gpaw=23
+mamba install -y python=3.11 gpaw=23
 ```
 
 To see ucx transports:
