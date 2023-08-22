@@ -128,10 +128,10 @@ conda install -y -c conda-forge python=3.9.0 gpaw=23 # lammps
 
 To see ucx transports: `ucx_info -d | grep Transport`
 
-Python 11:
+Python 11: work
 !!! note
 
-    with python=11, must use `--update-specs`
+    with python=11, must use `--update-specs`  --> then everthing worked
 
 ``` sh
 conda create -y -n py11ase python=3.11.0
