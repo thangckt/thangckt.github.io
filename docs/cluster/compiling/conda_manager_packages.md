@@ -141,7 +141,7 @@ Python 11: work
 conda create -y -n py11gpaw python=3.11.4
 source activate py11gpaw
 
-conda install -y --update-specs -c conda-forge python=3.11.4 ucx=1.13 gpaw=23 # lammps
+conda install -y --update-specs -c conda-forge python=3.11.4 ucx gpaw=23 # lammps
 ```
 
 
@@ -152,8 +152,6 @@ pip install git+https://gitlab.com/gpaw/gpaw.git@master  # @23.6.1  @master
 -c rapidsai-nightly librdmacm-devel-cos7-x86_64
 -c lcls-ii rdma-core
 rdma-core-devel-cos7-x86_64 numactl
-gfortran=12 libgfortran-ng=12 gcc=13 gxx=13 libgcc-ng=13 libstdcxx-ng=13
-export PATH=/dev/infiniband:$PATH         # rdma driver
 ```
 
 **Create a module file** for GPAW
