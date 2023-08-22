@@ -36,7 +36,10 @@ mamba install -y python=3.9.0 numpy=1.22.3 gpaw=23  # lammps  ; this also instal
 
 Python 11: not work, require GLIBC=2.17
 ```sh
-mamba install -y python=3.11 libgcc-ng=12 libstdcxx-ng=12 libgfortran-ng=12 ucx=1.9 openmpi=4.1.1 gpaw=23
+mamba create -y -n py11ase python=3.11.0
+source activate py11ase
+
+mamba install -y python=3.11.0 ucx=1.13 gpaw=23
 ```
 
 To see ucx transports:
