@@ -14,20 +14,17 @@ GLIBC=2.12
     - py=3.11 require libgcc-ng>=12, require GLIBC=2.17
     - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`. But infiniband may only work with ucx=1.9, and need to down openmpi=4.1.1. But gpaw conda only recognize openmpi=4.1.5, then may need `pip install` to install from source (need gcc, gxx,.. use gcc-11 to avoid requiring high GLIBC).
     - `libffi=3.3 libgcc-ng=12 libstdcxx-ng=12 libgfortran-ng=12 ` to avoid higher GLIBC
-    - `sysroot_linux-64=2.12`
+    - `sysroot_linux-64=2.12` libzlib=1.2.11
 
 **Install** in Conda-env
 
-``` sh
-module load forge/forge3
-mamba create -y -n py9ase python=3.9.0   # now work with python 11, but create env with python 9, version 0 not work, so create new env
-source activate py9ase
-```
-
 Python 9:
 ```sh
-mamba install -y python=3.9.1 libzlib=1.2.11 ucx=1.9 openmpi=4.1.1  gcc=11 gxx=11 gpaw=23 # gpaw=23 lammps
-pip install git+https://gitlab.com/gpaw/gpaw.git@23.6.1
+module load forge/forge3
+mamba create -y -n py9ase python=3.9.0  # version 0 not work in mamba, so create new env
+source activate py9ase
+
+mamba install -y python=3.9.0 ucx=1.12 openmpi=4.1.5 gpaw=23  # gpaw=23 lammps
 ```
 
 Python 11: not work, require GLIBC=2.17
