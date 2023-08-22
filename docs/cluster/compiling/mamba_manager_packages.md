@@ -23,7 +23,7 @@ source activate py8ase
 ```
 
 ```sh
-mamba install -y python=3.11.0 numpy=1.23 libgcc-ng=12 libstdcxx-ng=12 libgfortran-ng=12 \
+mamba install -y python=3.11.0 numpy=1.23 libgcc-ng=12.0 libstdcxx-ng=12.0 libgfortran-ng=12.0 \
     ucx openmpi gpaw=23 # lammps
 
 
