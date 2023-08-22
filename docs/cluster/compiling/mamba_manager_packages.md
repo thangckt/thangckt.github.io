@@ -30,7 +30,7 @@ source activate py9ase
 
 mamba clean -a -y
 
-mamba install -y python=3.9.0 numpy=1.21.6 gpaw=23  # lammps  ; this also install openmpi
+mamba install -y python=3.9.0 numpy=1.22.0 gpaw=23  # lammps  ; this also install openmpi
 ```
 
 
