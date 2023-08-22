@@ -109,10 +109,9 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 
 !!! note
 
-    - higher python (>3.9.2) require newer GLIBC, and have many conflicts. avoid `--update-specs`
+    - some cases, `--update-specs` is helpful
     - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`. But infiniband may only work with ucx=1.9, and need to down openmpi=4.1.1. But gpaw conda only recognize openmpi=4.1.5, then may need `pip install` to install from source (need gcc, gxx,.. use gcc-11 to avoid requiring high GLIBC).
-    - `libffi=3.3` to avoid higher GLIBC
-    - system UCX=1.6 (not work),
+    - system UCX=1.6 (not work). but openmpi conda does not recognize infiniband.
 
 **Install** in Conda-env
 
