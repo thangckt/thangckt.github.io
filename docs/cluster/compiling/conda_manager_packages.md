@@ -79,12 +79,10 @@ GLIBC=2.12
 
 ```shell
 module load conda/conda3
-conda create -n py310lammps python=3.10
-source activate py310lammps
+conda create -n py11lammps python=3.11
+source activate py11lammps
 
-conda install -c conda-forge -y clang lld llvm-tools libclang libclang-cpp libgcc-ng=12 \
-        libgfortran-ng=12 libstdcxx-ng=12 zlib=1.2.11 libibverbs-cos6-x86_64 \
-        openmpi ucx openmp  lammps=2022.06.23
+conda install -y --update-specs -c conda-forge lammps
 ```
 
 **Create a module file** for Lammps
