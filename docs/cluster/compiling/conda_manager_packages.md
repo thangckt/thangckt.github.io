@@ -215,7 +215,7 @@ source activate py11gpaw
 ```
 
 ``` sh
-conda install -y -c conda-forge rdma-core gpaw  lammps
+conda install -y -c conda-forge rdma-core gpaw # lammps
 ```
 
 Test
