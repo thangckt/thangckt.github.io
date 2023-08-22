@@ -22,7 +22,7 @@ Python 8:
 mamba create -y -n py8ase python=3.7.0
 source activate py7ase
 
-mamba install -y python=3.7  gpaw=23
+mamba install -y python=3.7*  gpaw=23
 ```
 
 Python 9:
