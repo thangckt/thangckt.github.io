@@ -118,8 +118,8 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 Python 9: work
 ``` sh
 module load conda/conda3
-conda create -y -n py9ase python=3.9.0   # don't use higher python
-source activate py9ase
+conda create -y -n py9gpaw python=3.9.0   # don't use higher python
+source activate py9gpaw
 conda install -y --revision 0
 
 conda install -y -c conda-forge python=3.9.0 gpaw=23 # lammps
@@ -136,8 +136,8 @@ Python 11: work
     with python=11, must use `--update-specs`  --> then everthing worked
 
 ``` sh
-conda create -y -n py11ase python=3.11.0
-source activate py11ase
+conda create -y -n py11gpaw python=3.11.0
+source activate py11gpaw
 
 conda install -y --update-specs -c conda-forge python=3.11 gpaw=23 # lammps
 ```
@@ -157,7 +157,7 @@ export PATH=/dev/infiniband:$PATH         # rdma driver
 **Create a module file** for GPAW
 
 ``` tcl
-set     topdir          /home1/p001cao/app/miniconda3/envs/py9ase
+set     topdir          /home1/p001cao/app/miniconda3/envs/py11gpaw
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
@@ -165,7 +165,6 @@ prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw      # to see GPAW dataset
 ```
-
 
 
 ## Centos 6.8 - CAN-GPU
@@ -178,10 +177,10 @@ GLIBC=2.12
 
 ``` sh
 module load conda/conda3
-conda create -n py9ase python=3.9.0   # higher python require newer GLIBC.
-source activate py9ase
+conda create -n py9gpaw python=3.9.0   # higher python require newer GLIBC.
+source activate py9gpaw
 
-conda install -y -c conda-forge cudatoolkit openmpi ase gpaw  # lammps
+conda install -y -c conda-forge cudatoolkit gpaw  # lammps
 ```
 
 ``` sh
@@ -207,25 +206,23 @@ set     topdir          /home/thang/app/miniconda3/envs/py9ase
 **Install**
 ``` sh
 module load conda/conda3
-conda  create -n py11ase python=3.11
-source activate py11ase
+conda  create -n py11gpaw python=3.11
+source activate py11gpaw
 ```
 
 ``` sh
-conda install -y -c conda-forge rdma-core libibverbs-cos7-x86_64 numactl-libs-cos7-x86_64 \
-     ucx openmpi ase gpaw  lammps
+conda install -y -c conda-forge rdma-core gpaw  lammps
 ```
 
 Test
 ``` sh
 gpaw test
+ucx_info -d | grep Transport
 ```
-
-To see ucx transports: `ucx_info -d | grep Transport`
 
 **module file**
 ``` tcl
-set     topdir          /uhome/p001cao/app/miniconda3/envs/py11ase
+set     topdir          /uhome/p001cao/app/miniconda3/envs/py11gpaw
 
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
