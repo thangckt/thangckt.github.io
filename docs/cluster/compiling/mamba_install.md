@@ -3,6 +3,7 @@
 [doccumentation](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html#mamba)
 
 ## Centos 6.9 (Tachyon)
+ldd --version    --> GLIBC=2.12
 
 ```sh
 cd /home1/p001cao/0SourceCode
@@ -25,3 +26,18 @@ prepend-path    INCLUDE                 $topdir/include
 prepend-path    PKG_CONFIG_PATH 	    $topdir/lib/pkgconfig
 ```
 and put this file into the folder:  `/home1/p001cao/app/1module_files/forge/forge3`
+
+## Centos 7 (Eagle)
+ldd --version    --> GLIBC=2.17
+
+```sh
+cd /uwork/p001cao/0SourceCode
+wget https://github.com/conda-forge/miniforge/releases/download/23.3.1-0/Miniforge3-Linux-x86_64.sh
+
+bash Miniforge3-Linux-x86_64.sh
+```
+
+choose a folder to install:
+```sh
+/uhome/p001cao/app/miniforge3
+```

@@ -109,7 +109,7 @@ conda install openssl-1.1.1u-hd590300_0.conda
 ### install
 
 ```sh
-cd /uwork/p001cao/#SourceCode
+cd /uwork/p001cao/0SourceCode
 wget https://repo.continuum.io/miniconda/Miniconda3-py311_23.5.2-0-Linux-x86_64.sh
 
 sh Miniconda3-py311_23.5.2-0-Linux-x86_64.sh -u
