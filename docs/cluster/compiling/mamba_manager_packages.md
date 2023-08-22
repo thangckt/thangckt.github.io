@@ -18,6 +18,14 @@ GLIBC=2.12
 
 **Install** in Conda-env
 
+Python 8:
+```sh
+mamba create -y -n py8ase python=3.8.0
+source activate py8ase
+
+mamba install -y python=3.8 gpaw=23
+```
+
 Python 9:
 !!! note
 
