@@ -41,3 +41,13 @@ choose a folder to install:
 ```sh
 /uhome/p001cao/app/miniforge3
 ```
+
+**Module file**
+``` tcl
+set     topdir          /uhome/p001cao/app/miniforge3
+prepend-path    PATH                    $topdir/bin
+prepend-path    LD_LIBRARY_PATH         $topdir/lib
+prepend-path    INCLUDE                 $topdir/include
+prepend-path    PKG_CONFIG_PATH 	      $topdir/lib/pkgconfig
+```
+and put this file into the folder:  `/uhome/p001cao/app/1module_files/forge/forge3`
