@@ -32,7 +32,6 @@ mamba clean -a -y
 mamba install -y python=3.9.0 numpy=1.22.3 gpaw=23  # lammps  ; this also install openmpi
 ```
 
-
 Python 11: not work, require GLIBC=2.17
 ```sh
 mamba create -y -n py11ase python=3.11.0
