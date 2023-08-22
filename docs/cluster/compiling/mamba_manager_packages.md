@@ -24,7 +24,9 @@ module load forge/forge3
 mamba create -y -n py9ase python=3.9.0  # version 0 not work in mamba, so create new env
 source activate py9ase
 
-mamba install -y python=3.9.0 ucx=1.12 openmpi=4.1.5 gpaw=23  # gpaw=23 lammps
+mamba clean -a -y 
+
+mamba install -y python=3.9.0 ucx=1.13 openmpi=4.1.5 gpaw=23  # gpaw=23 lammps
 ```
 
 Python 11: not work, require GLIBC=2.17
