@@ -116,17 +116,30 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 
 **Install** in Conda-env
 
+Python 9: work
 ``` sh
 module load conda/conda3
-conda create -y -n py9ase python=3.9.0   # now work with python 11, but create env with python 9
+conda create -y -n py9ase python=3.9.0   # don't use higher python
 source activate py9ase
-
 conda install -y --revision 0
 
 conda install -y -c conda-forge python=3.9.0 gpaw=23 # lammps
 ```
 
 To see ucx transports: `ucx_info -d | grep Transport`
+
+Python 11:
+!!! note
+
+    with python=11, must use `--update-specs`
+
+``` sh
+conda create -y -n py11ase python=3.11.0
+source activate py11ase
+
+conda install -y --update-specs -c conda-forge python=3.11 gpaw=23 # lammps
+```
+
 
 other option
 ``` sh
