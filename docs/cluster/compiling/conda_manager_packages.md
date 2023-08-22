@@ -118,7 +118,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 Python 9: work
 ``` sh
 module load conda/conda3
-conda create -y -n py9gpaw python=3.9.0   # don't use higher python
+conda create -y -n py9gpaw python=3.9.0   
 source activate py9gpaw
 conda install -y --revision 0
 
