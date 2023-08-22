@@ -19,10 +19,10 @@ GLIBC=2.12
 
 Python 8:
 ```sh
-mamba create -y -n py8ase python=3.8.0
-source activate py8ase
+mamba create -y -n py8ase python=3.7.0
+source activate py7ase
 
-mamba install -y python=3.8 gpaw=23
+mamba install -y python=3.7  gpaw=23
 ```
 
 Python 9:
