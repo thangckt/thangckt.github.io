@@ -26,7 +26,7 @@ source activate py9ase
 
 Python 9:
 ```sh
-mamba install -y python=3.9.0 ucx=1.9 openmpi=4.1.1 libzlib=1.2.11 gcc=11 gxx=11 openssl gpaw=23 # gpaw=23 lammps
+mamba install -y python=3.9.1 libzlib=1.2.11 ucx=1.9 openmpi=4.1.1  gcc=11 gxx=11 gpaw=23 # gpaw=23 lammps
 pip install git+https://gitlab.com/gpaw/gpaw.git@23.6.1
 ```
 
