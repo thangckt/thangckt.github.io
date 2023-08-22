@@ -116,13 +116,17 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 **Install** in Conda-env
 
 Python 9: work
+!!! note
+
+    with python>3.9.0, must use `--update-specs`. If not, python will require GLIBC=2.17
+
 ``` sh
 module load conda/conda3
-conda create -y -n py9gpaw python=3.9.0
+conda create -y -n py9gpaw python=3.9.17
 source activate py9gpaw
 conda install -y --revision 0
 
-conda install -y -c conda-forge python=3.9.0 gpaw=23 # lammps
+conda install -y --update-specs -c conda-forge python=3.9.17 gpaw=23 # lammps
 ```
 
 To see ucx transports:
@@ -133,7 +137,7 @@ ucx_info -d | grep Transport
 Python 11: work
 !!! note
 
-    with python=11, must use `--update-specs`  --> then everthing worked
+    with python=11, must use `--update-specs`. If not, python will require GLIBC=2.17
 
 ``` sh
 conda create -y -n py11gpaw python=3.11.4
