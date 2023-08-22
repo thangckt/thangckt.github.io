@@ -41,14 +41,14 @@ Consider Miniconda for light, and reduce error
     - Newer `conda` may require higher GLIBC --> use old version. glibc 2.12 only supports up to `Miniconda3-py39_4.9.2-Linux-x86_64.sh`
 
 ```sh
-cd /home1/p001cao/#SourceCode
+cd /home1/p001cao/0SourceCode
 wget https://repo.continuum.io/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
 
 sh Miniconda3-py39_4.9.2-Linux-x86_64.sh -u
 ```
 
 choose a folder to install:
-```
+``` sh
 /home1/p001cao/app/miniconda3
 ```
 running conda init?  --> NO
@@ -496,3 +496,4 @@ pip install git+https://github.com/Zulko/moviepy.git
  ```sh
  conda env update --file environment.yml --prune   # (--name myenv)
  ```
+
