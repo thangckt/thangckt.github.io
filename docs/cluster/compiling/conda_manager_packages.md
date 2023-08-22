@@ -118,7 +118,7 @@ mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -lo
 Python 9: work
 ``` sh
 module load conda/conda3
-conda create -y -n py9gpaw python=3.9.0   
+conda create -y -n py9gpaw python=3.9.0
 source activate py9gpaw
 conda install -y --revision 0
 
@@ -136,10 +136,10 @@ Python 11: work
     with python=11, must use `--update-specs`  --> then everthing worked
 
 ``` sh
-conda create -y -n py11gpaw python=3.11.0
+conda create -y -n py11gpaw python=3.11.4
 source activate py11gpaw
 
-conda install -y --update-specs -c conda-forge python=3.11 gpaw=23 # lammps
+conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
 ```
 
 
