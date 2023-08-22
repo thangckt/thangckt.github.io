@@ -30,7 +30,7 @@ mamba install -y python=3.9 \
     ucx=1.9 openmpi=4.1.1 ase gpaw=23 # lammps
 
 
-mamba install -y -c cctbx202211 python=3.11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 \
+mamba install -y python=3.11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 \
     ucx=1.9 openmpi=4.1.1 gpaw=23  # lammps
 
 
