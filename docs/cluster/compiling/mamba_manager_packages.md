@@ -11,7 +11,7 @@ GLIBC=2.12
 !!! note
 
     - gpaw require py>=3.9
-    - py=3.11 require libgcc-ng>=12
+    - py=3.11 require libgcc-ng>=12, require GLIBC=2.17
     - `ucx=1.14` does not recognize Infiniband, use `ucx=1.13`, check `ucx_info -d | grep Transport`. But infiniband may only work with ucx=1.9, and need to down openmpi=4.1.1. But gpaw conda only recognize openmpi=4.1.5, then may need `pip install` to install from source (need gcc, gxx,.. use gcc-11 to avoid requiring high GLIBC).
     - `libffi=3.3 libgcc-ng=12 libstdcxx-ng=12 libgfortran-ng=12 ` to avoid higher GLIBC
     - `sysroot_linux-64=2.12`
@@ -27,7 +27,7 @@ source activate py11ase
 
 
 ```sh
-mamba install -y python=3.11.3 sysroot_linux-64=2.12 libgcc-ng=9 libstdcxx-ng=9 libgfortran-ng=9  \
+mamba install -y -c cctbx202211 python=3.11 libgcc-ng=11 libstdcxx-ng=11 libgfortran-ng=11 \
     ucx=1.9 openmpi=4.1.1 gpaw=23  # lammps
 
 
