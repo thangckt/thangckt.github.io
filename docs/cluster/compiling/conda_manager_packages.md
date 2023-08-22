@@ -141,7 +141,7 @@ Python 11: work
 conda create -y -n py11gpaw python=3.11.4
 source activate py11gpaw
 
-conda install -y --update-specs -c conda-forge python=3.11.4 ucx gpaw=23 # lammps
+conda install -y --update-specs -c conda-forge python=3.11.4 rdma-core rdma-core-devel-cos7-x86_64 ucx gpaw=23 # lammps
 ```
 
 
