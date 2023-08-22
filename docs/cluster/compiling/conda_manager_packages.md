@@ -145,6 +145,13 @@ source activate py11gpaw
 conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
 ```
 
+``` sh
+conda create -y -n py11gpaw_mpich python=3.11.4
+source activate py11gpaw_mpich
+
+conda install -y --update-specs -c conda-forge python=3.11.4 mpich gpaw=23 # lammps
+```
+
 
 other option
 ``` sh
