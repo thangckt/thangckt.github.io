@@ -37,7 +37,7 @@ Python 11: not work, require GLIBC=2.17
 mamba create -y -n py11ase python=3.11.0
 source activate py11ase
 
-mamba install -y python=3.11.0 ucx=1.13 gpaw=23
+mamba install -y python=3.11.0 ucx=1.13 numpy=1.21.3 gpaw=23
 ```
 
 To see ucx transports:
