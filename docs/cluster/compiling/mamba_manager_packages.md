@@ -17,14 +17,6 @@ GLIBC=2.12
 
 **Install** in Conda-env
 
-Python 8:
-```sh
-mamba create -y -n py7ase python=3.7.0
-source activate py7ase
-
-mamba install -y python=3.7  gpaw=23
-```
-
 Python 9:
 !!! note
 
@@ -44,7 +36,7 @@ Python 11: not work, python 11 require GLIBC=2.17
 mamba create -y -n py11ase python=3.11.0
 source activate py11ase
 
-mamba install -y python=3.11 gpaw=23
+mamba install -y --update-specs python=3.11 gpaw=23
 ```
 
 To see ucx transports:
@@ -52,17 +44,6 @@ To see ucx transports:
 gpaw test
 mpirun --version
 ucx_info -d | grep Transport
-```
-
-other option
-``` sh
-pip install git+https://gitlab.com/gpaw/gpaw.git@master  # @23.6.1  @master
-
--c rapidsai-nightly librdmacm-devel-cos7-x86_64
--c lcls-ii rdma-core
-rdma-core-devel-cos7-x86_64 numactl
-gfortran=12 libgfortran-ng=12 gcc=13 gxx=13 libgcc-ng=13 libstdcxx-ng=13
-export PATH=/dev/infiniband:$PATH         # rdma driver
 ```
 
 **Create a module file** for GPAW
