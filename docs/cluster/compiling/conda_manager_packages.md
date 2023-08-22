@@ -125,7 +125,10 @@ conda install -y --revision 0
 conda install -y -c conda-forge python=3.9.0 gpaw=23 # lammps
 ```
 
-To see ucx transports: `ucx_info -d | grep Transport`
+To see ucx transports:
+```sh
+ucx_info -d | grep Transport
+```
 
 Python 11: work
 !!! note
