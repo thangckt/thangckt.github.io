@@ -21,7 +21,7 @@ GLIBC=2.12
 Python 9:
 !!! note
 
-    numpy>1.23, require GLIBC=2.14
+    numpy>1.22.3, require GLIBC=2.14
 
 ```sh
 module load forge/forge3
@@ -30,7 +30,7 @@ source activate py9ase
 
 mamba clean -a -y
 
-mamba install -y python=3.9.0 numpy=1.22.0 gpaw=23  # lammps  ; this also install openmpi
+mamba install -y python=3.9.0 numpy=1.22.3 gpaw=23  # lammps  ; this also install openmpi
 ```
 
 
