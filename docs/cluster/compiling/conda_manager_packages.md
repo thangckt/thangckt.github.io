@@ -105,7 +105,7 @@ fileLAMMPS=text.lmp
 mpirun -np $NSLOTS -hostfile $TMPDIR/machines    lmp_mpi  -in ${fileLAMMPS}  -log LOG_${fileLAMMPS//.lmp/}_np$NSLOTS.log
 ```
 
-### ASE
+### GPAW
 
 !!! note
 
