@@ -107,26 +107,31 @@ export myPREFIX=/home1/p001cao/app/fftw/3.3.10-ompi4.1.x-gcc9
 make -j 16 && make install
 ```
 
-### libxc
-
-```sh
+#### BLACS
+``` sh
 cd /home1/p001cao/0SourceCode/tooldev
-wget https://gitlab.com/libxc/libxc/-/releases/6.2.2.tar.gz
-tar -xf libxc-5.2.0.tar.gz
-cd libxc-5.2.0
-./configure --enable-shared --disable-fortran --prefix=$HOME/libxc-5.2.0
-make
-make install
+wget https://www.netlib.org/blacs/mpiblacs.tgz
+tar -xvf mpiblacs.tgz
+cd mpiblacs
+```
+
+``` sh
+
+```
+
+
 
 ### conda env
+Install all libs without needed MPI in conda to save time: libxc
+
+
 ``` sh
 module load conda/conda3
 conda create -y -n py11ase_ucx_ompi python=3.11  # higher python require newer GLIBC (don't work with py 11)
 source activate py11ase_ucx_ompi
+# conda install -y --revision 0
 
-conda install -y --revision 0
-
-# conda install -y -c conda-forge python=3.11 \
+conda install -y --update-specs -c conda-forge python=3.11 libxc \
 ```
 
 
