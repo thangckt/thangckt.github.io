@@ -146,10 +146,10 @@ conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
 ```
 
 ``` sh
-conda create -y -n py11gpaw_mpich python=3.11.4
-source activate py11gpaw_mpich
+conda create -y -n py11gpaw_test python=3.11.4
+source activate py11gpaw_test
 
-conda install -y --update-specs -c conda-forge python=3.11.4 mpich gpaw=23 # lammps
+conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
 ```
 
 
@@ -173,6 +173,33 @@ prepend-path    LD_LIBRARY_PATH     $topdir/lib
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw      # to see GPAW dataset
 ```
+
+#### UCX
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+# wget https://github.com/openucx/ucx/releases/download/v1.13.1/ucx-1.13.1.tar.gz    # v1.15.0-rc3/ucx-1.15.0.tar.gz
+# tar xvf ucx-1.13.1.tar.gz
+cd ucx-1.15.0
+rm -rf build_gpaw && mkdir build_gpaw && cd build_gpaw
+
+module load conda/py9gpaw_test
+export envDIR=/home1/p001cao/app/miniconda3/envs/py9gpaw_test
+export PATH=${envDIR}/bin:$PATH
+export LD_LIBRARY_PATH=${envDIR}/lib:$LD_LIBRARY_PATH
+export CFLAGS="-Wno-shadow"
+export myPREFIX=${envDIR}
+
+../contrib/configure-release --enable-mt --with-verbs=${envDIR} --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+Test
+``` sh
+ucx_info -d | grep Transport
+```
+
+
+
 
 
 ## Centos 6.8 - CAN-GPU
