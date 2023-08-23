@@ -187,7 +187,7 @@ rm -rf build_gpaw && mkdir build_gpaw && cd build_gpaw
 module load compiler/gcc-9.5
 export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
 export CFLAGS='-gdwarf-4 -gstrict-dwarf'
-export myPREFIX=/home1/p001cao/app/tooldev/ucx-15-gcc
+export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
