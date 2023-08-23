@@ -150,7 +150,14 @@ conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
 conda create -y -n py11gpaw_test python=3.11.4
 source activate py11gpaw_test
 
-conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
+conda install -y --update-specs -c conda-forge python=3.11.4 ucx ucx-py gpaw=23 # lammps
+```
+
+``` sh
+conda create -y -n py11gpaw_test1 python=3.11.4
+source activate py11gpaw_test1
+
+conda install -y --update-specs -c conda-forge python=3.11.4 ucx ucx-py gpaw=23 # lammps
 ```
 
 
