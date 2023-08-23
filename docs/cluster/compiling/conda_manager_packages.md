@@ -149,7 +149,7 @@ conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
 conda create -y -n py11gpaw_test python=3.11.4
 source activate py11gpaw_test
 
-conda install -y --update-specs -c conda-forge python=3.11.4 ucx=1.9 gpaw=23 # lammps
+conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
 ```
 
 
@@ -181,13 +181,13 @@ Compile UCX separately (not work)
 cd /home1/p001cao/0SourceCode/tooldev
 # wget https://github.com/openucx/ucx/releases/download/v1.13.1/ucx-1.13.1.tar.gz    # v1.15.0-rc3/ucx-1.15.0.tar.gz
 # tar xvf ucx-1.13.1.tar.gz
-cd ucx-1.13.1
+cd ucx-1.15.0
 rm -rf build_gpaw && mkdir build_gpaw && cd build_gpaw
 
 module load compiler/gcc-9.5
 export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
 export CFLAGS='-gdwarf-2 -gstrict-dwarf'
-export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.13-gcc
+export myPREFIX=/home1/p001cao/app/miniconda3/envs/py11gpaw_test   # required
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
