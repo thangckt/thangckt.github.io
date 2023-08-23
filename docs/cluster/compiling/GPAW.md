@@ -1,4 +1,4 @@
-# Use conda hybrid
+# GPAW from source
 
 ## UCX+OMPI Centos 6.9 - Tachyon
 GLIBC=2.12
@@ -34,7 +34,9 @@ module load tooldev/ucx-1.15-gcc
 ucx_info -d | grep Transport
 ```
 
-### OMPI --without-verbs
+### OMPI
+NOTE: --with-verbs (default - auto detect)
+
 ```sh
 cd /home1/p001cao/0SourceCode
 cd ompi-4.1.x
@@ -47,10 +49,19 @@ export myUCX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
 export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-gcc9
 
 
-../configure --with-sge --with-ucx=${myUCX}  --prefix=${myPREFIX}
+../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
+
+Test
+``` sh
+module load mpi/ompi4.1.x-gcc9
+mpirun --version
+```
+
+### scalapack
+
 
 ### conda env
 ``` sh
@@ -62,9 +73,6 @@ conda install -y --revision 0
 
 # conda install -y -c conda-forge python=3.11 \
 ```
-
-
-
 
 
 
