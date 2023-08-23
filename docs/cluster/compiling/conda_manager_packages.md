@@ -136,7 +136,8 @@ ucx_info -d | grep Transport
 Python 11: work
 !!! note
 
-    with python=11, must use `--update-specs`. If not, python will require GLIBC=2.17
+    - with python=11, must use `--update-specs`. If not, python will require GLIBC=2.17
+    - don't install ucx, but compile it separately.
 
 ``` sh
 conda create -y -n py11gpaw python=3.11.4
