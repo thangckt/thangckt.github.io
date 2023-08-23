@@ -181,7 +181,7 @@ Compile UCX separately
 cd /home1/p001cao/0SourceCode/tooldev
 # wget https://github.com/openucx/ucx/releases/download/v1.13.1/ucx-1.13.1.tar.gz    # v1.15.0-rc3/ucx-1.15.0.tar.gz
 # tar xvf ucx-1.13.1.tar.gz
-cd ucx-1.15.0
+cd ucx-1.13.1
 rm -rf build_gpaw && mkdir build_gpaw && cd build_gpaw
 
 module load compiler/gcc-9.5
