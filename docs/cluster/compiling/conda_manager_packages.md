@@ -153,7 +153,7 @@ conda install -y --update-specs -c conda-forge python=3.11.4 gpaw=23 # lammps
 ```
 
 
-other option
+other option (not work)
 ``` sh
 pip install git+https://gitlab.com/gpaw/gpaw.git@master  # @23.6.1  @master
 
