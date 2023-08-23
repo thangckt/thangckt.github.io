@@ -62,6 +62,17 @@ mpirun --version
 
 ### scalapack
 
+```sh
+cd /home1/p001cao/0SourceCode/tooldev
+# git clone -b tags/v2.2.1 https://github.com/Reference-ScaLAPACK/scalapack.git ScaLAPACK-2.2.1
+cd ScaLAPACK-2.2.1
+mkdir build && cd build
+```
+
+```sh
+```
+
+
 
 ### conda env
 ``` sh
