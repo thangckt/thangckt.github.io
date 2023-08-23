@@ -60,19 +60,63 @@ module load mpi/ompi4.1.x-gcc9
 mpirun --version
 ```
 
-### scalapack
+### Libs need MPI
+
+#### scalapack
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone -b tags/v2.2.1 https://github.com/Reference-ScaLAPACK/scalapack.git ScaLAPACK-2.2.1
 cd ScaLAPACK-2.2.1
-mkdir build && cd build
+rm -rf build && mkdir build && cd build
 ```
 
 ```sh
+module load cmake/3.16.2
+module load mpi/ompi4.1.x-gcc9
+
+export PATH=/home1/p001cao/app/openmpi/4.1.x-gcc9/bin:$PATH
+export CC=mpicc  export CXX=mpic++  export F90=mpif90 export F77=mpif77
+export myPREFIX=/home1/p001cao/local/app/tooldev/ScaLAPACK-2.2
+
+cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=on \
+    -DCMAKE_INSTALL_PREFIX=${myPREFIX}
+
+make -j 16 && make install
 ```
 
+#### FFTW
 
+```shell
+cd /home1/p001cao/0SourceCode/tooldev
+# tar -xvzf fftw-3.3.10.tar.gz
+cd fftw-3.3.10
+rm -rf build_ase && mkdir build_ase && cd build_ase
+```
+```sh
+module load mpi/ompi4.1.x-gcc9
+
+export PATH=/home1/p001cao/app/openmpi/4.1.x-gcc9/bin:$PATH
+export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
+export myPREFIX=/home1/p001cao/app/fftw/3.3.10-ompi4.1.x-gcc9
+
+../configure --enable-sse2 \
+--enable-threads --enable-openmp --enable-mpi --enable-shared \
+--prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
+### libxc
+
+```sh
+cd /home1/p001cao/0SourceCode/tooldev
+wget https://gitlab.com/libxc/libxc/-/releases/6.2.2.tar.gz
+tar -xf libxc-5.2.0.tar.gz
+cd libxc-5.2.0
+./configure --enable-shared --disable-fortran --prefix=$HOME/libxc-5.2.0
+make
+make install
 
 ### conda env
 ``` sh
@@ -88,6 +132,13 @@ conda install -y --revision 0
 
 
 ### GPAW
+
+``` sh
+cd /home1/p001cao/0SourceCode
+git clone -b master https://gitlab.com/gpaw/gpaw.git gpaw-master      # 23.6.1  master
+# git pull origin master
+cd gpaw-master
+```
 
 ``` sh
 module load conda/conda3
