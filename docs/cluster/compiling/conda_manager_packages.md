@@ -175,7 +175,7 @@ prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw      # to see GPAW datase
 ```
 
 #### UCX
-Compile UCX separately
+Compile UCX separately (not work)
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
