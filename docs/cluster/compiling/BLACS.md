@@ -1,5 +1,6 @@
 #### BLACS
 https://thelinuxcluster.com/2011/03/27/compiling-blacs-on-centos-5/
+
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
 # wget --no-check-certificate https://www.netlib.org/blacs/mpiblacs.tgz
@@ -8,7 +9,11 @@ tar -xvf mpiblacs.tgz
 tar -xvf mpiblacs-patch03.tgz
 cd BLACS
 cp ./BMAKES/Bmake.MPI-LINUX Bmake.inc
+
+module load mpi/ompi4.1.x-gcc9
 ```
+
+
 
 1. Edit file `Bmake.in`
 
