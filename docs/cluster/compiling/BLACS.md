@@ -1,9 +1,7 @@
 #### BLACS
+
 https://thelinuxcluster.com/2011/03/27/compiling-blacs-on-centos-5/
 
-!!! note
-
-   - must compile Openmpi with `F77=g77 FC=gfortran`
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
@@ -13,7 +11,9 @@ tar -xvf mpiblacs.tgz
 tar -xvf mpiblacs-patch03.tgz
 cd BLACS
 cp ./BMAKES/Bmake.MPI-LINUX Bmake.inc
+```
 
+``` sh
 module load mpi/ompi4.1.x-gcc9
 ```
 
