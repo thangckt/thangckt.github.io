@@ -125,12 +125,12 @@ conda install -y --update-specs -c conda-forge python=3.11 ase libxc pip openbla
 
 ``` sh
 module load mpi/fftw3.3.10-ompi4.1.x-gcc9
+module load mpi/ScaLAPACK-2.2
 module load mpi/ompi4.1.x-gcc9
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
 export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/home1/p001cao/local/app/mpi/ScaLAPACK-2.2/lib:$LD_LIBRARY_PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90 export F77=mpif77
 
 module load conda/conda3
@@ -139,17 +139,31 @@ source activate py11gpaw_source
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
-git clone -b master https://gitlab.com/gpaw/gpaw.git gpaw-master      # 23.6.1  master
+# git clone -b master https://gitlab.com/gpaw/gpaw.git gpaw-master      # 23.6.1  master
 # git pull origin master
 cd gpaw-master
+```
 
+Create file `siteconfig.py`
+``` py
+mpi = True
+compiler = '/home1/p001cao/app/openmpi/4.1.x-gcc9/bin/mpicc'
+library_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc9/lib/']
+include_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc9/include/']
+
+fftw = True
+libraries = ['xc', 'fftw3']
+library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc9/lib']
+include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc9/include']
+
+scalapack = True
+libraries += ['scalapack']
+library_dirs += ['/home1/p001cao/app/mpi/ScaLAPACK-2.2/lib']
+```
+
+``` sh
 pip install -e .
 ```
-
-Edit `siteconfig.py`
-``` py
-```
-
 
 
 Test
