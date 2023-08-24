@@ -101,9 +101,9 @@ cd fftw-3.3.10
 rm -rf build_ase && mkdir build_ase && cd build_ase
 ```
 ```sh
-module load mpi/ompi4.1.x-gcc9
+module load mpi/ompi4.1.x-gcc11
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 export myPREFIX=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc9
