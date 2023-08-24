@@ -124,13 +124,13 @@ conda install -y --update-specs -c conda-forge python=3.11 ase libxc pip openbla
 ### GPAW
 
 ``` sh
-module load fftw/fftw3.3.10-ompi4.1.x-gcc9
+module load mpi/fftw3.3.10-ompi4.1.x-gcc9
 module load mpi/ompi4.1.x-gcc9
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
 export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/home1/p001cao/local/app/tooldev/ScaLAPACK-2.2/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home1/p001cao/local/app/mpi/ScaLAPACK-2.2/lib:$LD_LIBRARY_PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90 export F77=mpif77
 
 module load conda/conda3
