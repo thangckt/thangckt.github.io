@@ -107,69 +107,17 @@ export myPREFIX=/home1/p001cao/app/fftw/3.3.10-ompi4.1.x-gcc9
 make -j 16 && make install
 ```
 
-#### BLACS
-https://thelinuxcluster.com/2011/03/27/compiling-blacs-on-centos-5/
-``` sh
-cd /home1/p001cao/0SourceCode/tooldev
-wget --no-check-certificate https://www.netlib.org/blacs/mpiblacs.tgz
-wget --no-check-certificate https://www.netlib.org/blacs/mpiblacs-patch03.tgz
-tar -xvf mpiblacs.tgz
-tar -xvf mpiblacs-patch03.tgz
-cd BLACS
-cp ./BMAKES/Bmake.MPI-LINUX Bmake.inc
-```
-
-1. Edit file `Bmake.in`
-
-``` sh
-#=============================================================================
-#====================== SECTION 1: PATHS AND LIBRARIES =======================
-#=============================================================================
-BTOPdir = /home1/p001cao/0SourceCode/tooldev/BLACS
-#  -------------------------------------
-#  Name and location of the MPI library.
-#  -------------------------------------
-   MPIdir = /home1/p001cao/app/openmpi/4.1.x-gcc9
-   MPILIBdir =
-   MPIINCdir = $(MPIdir)/include
-   MPILIB =
-
-#=============================================================================
-#========================= SECTION 2: BLACS INTERNALS ========================
-#=============================================================================
-   SYSINC =
-   INTFACE = -Df77IsF2C
-   SENDIS =
-   BUFF =
-   TRANSCOMM = -DUseMpi2
-   WHATMPI =
-   SYSERRORS =
-
-#=============================================================================
-#=========================== SECTION 3: COMPILERS ============================
-#=============================================================================
-   F77            = /home1/p001cao/app/openmpi/4.1.x-gcc9/bin/mpif77
-   CC             = /home1/p001cao/app/openmpi/4.1.x-gcc9/bin/mpicc
-```
-2. Compile the Blacs tests
-``` sh
-cd TESTING
-make clean
-make
-```
-
-
 ### conda env
 Install all libs without needed MPI in conda to save time: libxc
 
 
 ``` sh
 module load conda/conda3
-conda create -y -n py11ase_ucx_ompi python=3.11  # higher python require newer GLIBC (don't work with py 11)
-source activate py11ase_ucx_ompi
+conda create -y -n py11gpaw_source python=3.11  # higher python require newer GLIBC (don't work with py 11)
+source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 libxc \
+conda install -y --update-specs -c conda-forge python=3.11 libxc pip \
 ```
 
 
@@ -184,12 +132,20 @@ cd gpaw-master
 ```
 
 ``` sh
+module load fftw/fftw3.3.10-ompi4.1.x-gcc9
+module load mpi/ompi4.1.x-gcc9
+
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
+export PATH=$OPENMPI/bin:$PATH
+export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home1/p001cao/local/app/tooldev/ScaLAPACK-2.2/lib:$LD_LIBRARY_PATH
+export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
+
+
 module load conda/conda3
-source activate py9ase_ucx_ompi
+source activate py11gpaw_source
 
-conda install -y -c conda-forge ase libxc openblas scalapack fftw
-
-pip install git+https://gitlab.com/gpaw/gpaw.git@23.6.1
+pip install .
 ```
 
 Test
