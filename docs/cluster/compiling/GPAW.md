@@ -65,7 +65,7 @@ mpirun --version
 
 ### Libs need MPI
 
-#### scalapack
+#### scalapack and BLACS
 !!! note
 
     - BLACS is a part of scaLAPACK, don't need to install it separately.
