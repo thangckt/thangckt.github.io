@@ -64,7 +64,10 @@ mpirun --version
 ### Libs need MPI
 
 #### scalapack
-NOTE: BLACS is a part of scaLAPACK, so need to involve it to avoid separately install.
+!!! note
+
+    - BLACS is a part of scaLAPACK, so need to involve it to avoid separately install.
+    - sometimes, need `-DMPI_C_COMPILER=$OPENMPI/bin/mpicc -DCMAKE_Fortran_COMPILER=$OPENMPI/bin/mpif90 `
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
@@ -83,7 +86,6 @@ export CC=mpicc  export CXX=mpic++  export F90=mpif90 export F77=mpif77
 export myPREFIX=/home1/p001cao/app/mpi/scaLAPACK-2.2
 
 cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=on -DBUILD_SHARED_LIBS=on \
-    -DMPI_C_COMPILER=$OPENMPI/bin/mpicc -DCMAKE_Fortran_COMPILER=$OPENMPI/bin/mpif90 \
     -DSCALAPACK_BUILD_TESTS=on -DCMAKE_INSTALL_PREFIX=${myPREFIX}
 
 make -j 16 && make install
