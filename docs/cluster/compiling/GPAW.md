@@ -224,6 +224,7 @@ cd gpaw-master
 
 1. Create file `siteconfig.py`
 ``` py
+mpi = True
 compiler = '/home1/p001cao/app/openmpi/4.1.x-gcc11/bin/mpicc'
 library_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc11/lib/']
 include_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc11/include/']
@@ -234,18 +235,19 @@ library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11/lib']
 include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11/include']
 
 scalapack = True
-libraries += ['scalapack','mpiblas']
+libraries += ['scalapack']
 library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK-2.2/lib']
 
 elpa = True
 elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11'
-libraries += ['elpa']
+libraries += ['elpa_openmp']
 library_dirs += ['{}/lib'.format(elpadir)]
+runtime_library_dirs = ['{}/lib'.format(elpadir)]
 include_dirs += ['{}/include/elpa_openmp-2023.05.001'.format(elpadir)]
 
 libvdwxc = True
 libraries += ['vdwxc']
-library_dirs += ['/home1/p001cao/app/miniconda3/envs/py11gpaw_source/lib']
+library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11/lib']
 ```
 
 2. Install
