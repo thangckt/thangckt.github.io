@@ -107,8 +107,7 @@ export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 export myPREFIX=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11
 
-../configure --enable-sse2 --enable-threads --enable-openmp --enable-mpi --enable-shared \
---prefix=${myPREFIX}
+../configure --enable-sse2 --enable-threads --enable-openmp --enable-mpi --enable-shared --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
@@ -132,19 +131,17 @@ rm -rf build && mkdir build && cd build
 
 ```sh
 module load mpi/scaLAPACK-2.2
-module load mpi/ompi4.1.x-gcc9
-# module load intel/mkl-xe2016u4
+module load mpi/ompi4.1.x-gcc11
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
-export myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc9
+export myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11
 myScaLapack=/home1/p001cao/app/mpi/scaLAPACK-2.2
 export SCALAPACK_LDFLAGS="-L$myScaLapack/lib"
 export SCALAPACK_FCFLAGS="-L$myScaLapack/lib"
 
-../configure --with-mpi=yes --enable-openmp --enable-python \
---prefix=${myPREFIX}
+../configure --with-mpi=yes --enable-openmp --enable-python --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
