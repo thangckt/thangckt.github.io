@@ -1,4 +1,4 @@
-#### BLACS
+#### BLACS (fail)
 
 https://thelinuxcluster.com/2011/03/27/compiling-blacs-on-centos-5/
 
@@ -16,7 +16,6 @@ cp ./BMAKES/Bmake.MPI-LINUX Bmake.inc
 ``` sh
 module load mpi/ompi4.1.x-gcc9
 ```
-
 
 
 1. Edit file `Bmake.in`
