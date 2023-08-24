@@ -35,7 +35,7 @@ else:
 This site serves as my personal notes repo. <br>
 The contents reflect neither community nor third-party rules, rather, they're random, messy, improvised, and inevitable for some rare situations but inapplicable for almost others.
 
-The site is my dark valley in essence; I'd be glad if you could find anything valid. Alternatively, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64. Or if you can comprehend Vietnamese, I will be pleased to introduce a reputed descant that captures [the scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g).
+The site is my dark valley in essence; I'd be glad if you could find anything valid. Alternatively, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64. For whom with Vietnamese comprehension, I will be pleased to introduce a reputed descant that captures [the scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g).
 <br>
 <br>
 
