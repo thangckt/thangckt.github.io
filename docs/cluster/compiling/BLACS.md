@@ -47,8 +47,8 @@ BTOPdir = /home1/p001cao/0SourceCode/tooldev/BLACS
 #=============================================================================
 #=========================== SECTION 3: COMPILERS ============================
 #=============================================================================
-   F77            = /home1/p001cao/app/openmpi/4.1.x-gcc9/bin/mpif77
-   CC             = /home1/p001cao/app/openmpi/4.1.x-gcc9/bin/mpicc
+   F77            = $(MPIdir)/mpif77
+   CC             = $(MPIdir)/mpicc
 ```
 2. Edit `TESTING/Makefile`
 ```make
