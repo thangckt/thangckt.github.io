@@ -136,12 +136,14 @@ module load mpi/ompi4.1.x-gcc11
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
-export myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11
 myScaLapack=/home1/p001cao/app/mpi/scaLAPACK-2.2
 export SCALAPACK_LDFLAGS="-L$myScaLapack/lib"
 export SCALAPACK_FCFLAGS="-L$myScaLapack/lib"
+export CFLAG="-mmmx -msse -msse2 -mssse3 -msse4.1 -msse4.2"
+export myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11
 
-../configure --with-mpi=yes --enable-openmp --enable-python --prefix=${myPREFIX}
+../configure --with-mpi=yes --enable-openmp --enable-python --without-threading-support-check-during-build \
+--disable-sse --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
