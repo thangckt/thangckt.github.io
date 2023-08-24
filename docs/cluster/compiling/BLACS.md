@@ -18,7 +18,7 @@ module load mpi/ompi4.1.x-gcc9
 ```
 
 
-1. Edit file `Bmake.in`
+1. Edit file `Bmake.in`  [see this](https://www.open-mpi.org/faq/?category=mpi-apps#blacs)
 
 ``` sh
 #=============================================================================
@@ -50,6 +50,7 @@ BTOPdir = /home1/p001cao/0SourceCode/tooldev/BLACS
    F77            = $(MPIdir)/mpif77
    CC             = $(MPIdir)/mpicc
 ```
+
 2. Edit `TESTING/Makefile`
 ```make
 blacstest.o : blacstest.f
