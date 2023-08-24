@@ -140,9 +140,10 @@ myScaLapack=/home1/p001cao/app/mpi/scaLAPACK-2.2
 export SCALAPACK_LDFLAGS="-L$myScaLapack/lib"
 export SCALAPACK_FCFLAGS="-L$myScaLapack/lib"
 export myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11
+export CFLAGS=" -mmmx -msse -msse2 -mssse3 -msse4.1 -msse4.2 "
 
-../configure --with-mpi=yes --enable-openmp --enable-python --without-threading-support-check-during-build \
---disable-sse --disable-avx --prefix=${myPREFIX}
+../configure --with-mpi=yes --enable-openmp --without-threading-support-check-during-build \
+--disable-sse --disable-avx --disable-avx2 --enable-avx512=no --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
