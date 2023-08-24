@@ -71,8 +71,8 @@ mpirun --version
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
-# git clone -b tags/v2.2.1 https://github.com/Reference-ScaLAPACK/scalapack.git ScaLAPACK-2.2.1
-cd ScaLAPACK-2.2.1
+# git clone -b master https://github.com/Reference-ScaLAPACK/scalapack.git ScaLAPACK-master  #   v2.2.1  master
+cd ScaLAPACK-master
 rm -rf build && mkdir build && cd build
 ```
 
