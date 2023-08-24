@@ -17,8 +17,9 @@ cd /home1/p001cao/0SourceCode/tooldev
 cd ucx-1.15.0
 rm -rf build_ase && mkdir build_ase  &&  cd build_ase
 
-module load compiler/gcc-9.5
-export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
+module load compiler/gcc-11
+myGCC=/home1/p001cao/app/compiler/gcc-11
+export PATH=$myGCC/bin:$PATH
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"
 export CFLAGS="-Wno-shadow"
 export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
@@ -44,11 +45,12 @@ cd /home1/p001cao/0SourceCode
 cd ompi-4.1.x
 rm -rf build_ase && mkdir build_ase && cd build_ase
 
-module load compiler/gcc-9.5
-export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
+module load compiler/gcc-11
+myGCC=/home1/p001cao/app/compiler/gcc-11
+export PATH=$myGCC/bin:$PATH
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"
 export myUCX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
-export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-gcc9
+export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-gcc11
 
 ../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
 
@@ -57,7 +59,7 @@ make -j 16 && make install
 
 Test
 ``` sh
-module load mpi/ompi4.1.x-gcc9
+module load mpi/ompi4.1.x-gcc11
 mpirun --version
 ```
 
