@@ -132,16 +132,18 @@ rm -rf build && mkdir build && cd build
 
 ```sh
 module load mpi/scaLAPACK-2.2
-module load mpi/blacs
 module load mpi/ompi4.1.x-gcc9
-module load intel/mkl-xe2016u4
+# module load intel/mkl-xe2016u4
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 export myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc9
+myScaLapack=/home1/p001cao/app/mpi/scaLAPACK-2.2
+export SCALAPACK_LDFLAGS="-L$myScaLapack/lib -llibscalapack"
+export SCALAPACK_FCFLAGS="-L$myScaLapack/lib -llibscalapack"
 
-../configure --with-mpi=yes --enable-openmp \
+../configure --with-mpi=yes --enable-openmp --enable-python \
 --prefix=${myPREFIX}
 
 make -j 16 && make install
