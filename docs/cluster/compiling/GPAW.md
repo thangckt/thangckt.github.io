@@ -154,9 +154,9 @@ make -j 16 && make install
 Install all libs without needed MPI in conda to save time: libxc, matplotlib,..
 
 ``` sh
-module load mpi/ompi4.1.x-gcc9
+module load mpi/ompi4.1.x-gcc11
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 ```
@@ -167,18 +167,18 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 ase libxc libvdwxc pip elpa
+conda install -y --update-specs -c conda-forge python=3.11 ase libxc libvdwxc pip
 ```
 
 
 ### GPAW
 
 ``` sh
-module load mpi/fftw3.3.10-ompi4.1.x-gcc9
+module load mpi/fftw3.3.10-ompi4.1.x-gcc11
 module load mpi/scaLAPACK-2.2
-module load mpi/ompi4.1.x-gcc9
+module load mpi/ompi4.1.x-gcc11
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90 export F77=mpif77
@@ -194,29 +194,39 @@ cd /home1/p001cao/0SourceCode/tooldev
 cd gpaw-master
 ```
 
-Create file `siteconfig.py`
+1. Create file `siteconfig.py`
 ``` py
-mpi = True
-compiler = '/home1/p001cao/app/openmpi/4.1.x-gcc9/bin/mpicc'
-library_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc9/lib/']
-include_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc9/include/']
+compiler = '/home1/p001cao/app/openmpi/4.1.x-gcc11/bin/mpicc'
+library_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc11/lib/']
+include_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc11/include/']
 
 fftw = True
 libraries = ['xc', 'fftw3']
-library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc9/lib']
-include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc9/include']
+library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11/lib']
+include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11/include']
 
 scalapack = True
-libraries += ['scalapack']
+libraries += ['scalapack','mpiblas']
 library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK-2.2/lib']
+
+elpa = True
+elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11'
+libraries += ['elpa']
+library_dirs += ['{}/lib'.format(elpadir)]
+include_dirs += ['{}/include/elpa_openmp-2023.05.001'.format(elpadir)]
+
+libvdwxc = True
+libraries += ['vdwxc']
+library_dirs += ['/home1/p001cao/app/miniconda3/envs/py11gpaw_source/lib']
 ```
 
+2. Install
 ``` sh
 pip install -e .
 ```
 
 
-Test
+3. Test
 ``` sh
 gpaw test
 ```
