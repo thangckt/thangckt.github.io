@@ -66,7 +66,7 @@ mpirun --version
 #### scalapack
 !!! note
 
-    - BLACS is a part of scaLAPACK, so need to involve it to avoid separately install.
+    - BLACS is a part of scaLAPACK, don't need to install it separately.
     - sometimes, need `-DMPI_C_COMPILER=$OPENMPI/bin/mpicc -DCMAKE_Fortran_COMPILER=$OPENMPI/bin/mpif90 `
 
 ```sh
@@ -140,8 +140,8 @@ export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 export myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc9
 myScaLapack=/home1/p001cao/app/mpi/scaLAPACK-2.2
-export SCALAPACK_LDFLAGS="-L$myScaLapack/lib -llibscalapack"
-export SCALAPACK_FCFLAGS="-L$myScaLapack/lib -llibscalapack"
+export SCALAPACK_LDFLAGS="-L$myScaLapack/lib"
+export SCALAPACK_FCFLAGS="-L$myScaLapack/lib"
 
 ../configure --with-mpi=yes --enable-openmp --enable-python \
 --prefix=${myPREFIX}
