@@ -109,7 +109,28 @@ make -j 16 && make install
 ```
 
 #### Elpa
+```sh
+cd /home1/p001cao/0SourceCode/tooldev
+# git clone -b new_release_2023.05.001 https://gitlab.mpcdf.mpg.de/elpa/elpa.git elpa-2023.05     #   new_release_2023.05.001  master
+cd elpa-2023.05
+rm -rf build && mkdir build && cd build
+```
 
+```sh
+module load mpi/scaLAPACK-2.2
+module load mpi/blacs
+module load mpi/ompi4.1.x-gcc9
+
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
+export PATH=$OPENMPI/bin:$PATH
+export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
+export myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc9
+
+../configure --with-mpi=yes --enable-openmp \
+--prefix=${myPREFIX}
+
+make -j 16 && make install
+```
 
 
 
