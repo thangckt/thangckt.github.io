@@ -117,19 +117,12 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 libxc pip
+conda install -y --update-specs -c conda-forge python=3.11 libxc pip git
 ```
 
 
 
 ### GPAW
-
-``` sh
-cd /home1/p001cao/0SourceCode
-git clone -b master https://gitlab.com/gpaw/gpaw.git gpaw-master      # 23.6.1  master
-# git pull origin master
-cd gpaw-master
-```
 
 ``` sh
 module load fftw/fftw3.3.10-ompi4.1.x-gcc9
@@ -139,13 +132,35 @@ OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
 export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/local/app/tooldev/ScaLAPACK-2.2/lib:$LD_LIBRARY_PATH
-export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
-
+export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90 export F77=mpif77
 
 module load conda/conda3
 source activate py11gpaw_source
+```
+
+1. ASE
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+git clone -b master https://gitlab.com/ase/ase.git ase-master     # 3.23.0 master
+# git pull origin master
+cd ase-master
 
 pip install -e .
+```
+
+2. Gpaw
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+git clone -b master https://gitlab.com/gpaw/gpaw.git gpaw-master      # 23.6.1  master
+# git pull origin master
+cd gpaw-master
+
+pip install -e .
+```
+
+
+
+
 ```
 
 Test
