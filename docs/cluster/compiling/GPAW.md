@@ -77,7 +77,7 @@ module load mpi/ompi4.1.x-gcc9
 
 export PATH=/home1/p001cao/app/openmpi/4.1.x-gcc9/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export F90=mpif90 export F77=mpif77
-export myPREFIX=/home1/p001cao/local/app/tooldev/ScaLAPACK-2.2
+export myPREFIX=/home1/p001cao/local/app/mpi/ScaLAPACK-2.2
 
 cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=on \
     -DCMAKE_INSTALL_PREFIX=${myPREFIX}
@@ -144,6 +144,12 @@ cd gpaw-master
 
 pip install -e .
 ```
+
+Edit `siteconfig.py`
+``` py
+```
+
+
 
 Test
 ``` sh
