@@ -243,7 +243,7 @@ elpa = True
 elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11'
 libraries += ['elpa_openmp']
 library_dirs += ['{}/lib'.format(elpadir)]
-runtime_library_dirs = ['{}/lib'.format(elpadir)]
+# runtime_library_dirs = ['{}/lib'.format(elpadir)]
 include_dirs += ['{}/include/elpa_openmp-2023.05.001'.format(elpadir)]
 
 libvdwxc = True
