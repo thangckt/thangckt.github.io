@@ -51,7 +51,6 @@ export CFLAGS="-gdwarf-2 -gstrict-dwarf"
 export myUCX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
 export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-gcc9
 
-
 ../configure --with-sge --with-ucx=${myUCX} F77=g77 FC=gfortran --prefix=${myPREFIX}
 
 make -j 16 && make install
