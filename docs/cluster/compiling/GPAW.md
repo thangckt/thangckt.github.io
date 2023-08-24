@@ -148,6 +148,25 @@ export CFLAGS=" -mmmx -msse -msse2 -mssse3 -msse4.1 -msse4.2 "
 make -j 16 && make install
 ```
 
+#### libvdwxc
+https://libvdwxc.gitlab.io/libvdwxc/configuring-libvdwxc.html
+
+```sh
+cd /home1/p001cao/0SourceCode/tooldev
+git clone https://gitlab.com/libvdwxc/libvdwxc.git
+cd libvdwxc
+rm -rf build && mkdir build && cd build
+
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
+export PATH=$OPENMPI/bin:$PATH
+export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
+export CFLAGS="-O3 -march=native"
+export FCFLAGS="-g -O2"
+export myPREFIX=/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11
+
+../configure --with-mpi --prefix=${myPREFIX}
+
+```
 
 
 ### conda env
