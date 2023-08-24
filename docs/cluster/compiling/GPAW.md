@@ -116,7 +116,7 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 numpy scipy matplotlib libxc pip git
+conda install -y --update-specs -c conda-forge python=3.11 numpy scipy libxc pip
 ```
 
 
