@@ -116,7 +116,7 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 libxc pip openblas cmake pyproject-parser
+conda install -y --update-specs -c conda-forge python=3.11 ase libxc pip openblas
 ```
 
 
@@ -136,17 +136,6 @@ module load conda/conda3
 source activate py11gpaw_source
 ```
 
-1. ASE
-``` sh
-cd /home1/p001cao/0SourceCode/tooldev
-git clone -b master https://gitlab.com/ase/ase.git ase-master     # 3.23.0 master
-# git pull origin master
-cd ase-master
-
-pip install -e .
-```
-
-2. Gpaw
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
 git clone -b master https://gitlab.com/gpaw/gpaw.git gpaw-master      # 23.6.1  master
@@ -154,11 +143,6 @@ git clone -b master https://gitlab.com/gpaw/gpaw.git gpaw-master      # 23.6.1  
 cd gpaw-master
 
 pip install -e .
-```
-
-
-
-
 ```
 
 Test
