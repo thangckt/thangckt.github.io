@@ -64,6 +64,7 @@ mpirun --version
 ### Libs need MPI
 
 #### scalapack
+NOTE: BLACS is a part of scaLAPACK, so need to involve it to avoid separately install.
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
@@ -82,6 +83,7 @@ export CC=mpicc  export CXX=mpic++  export F90=mpif90 export F77=mpif77
 export myPREFIX=/home1/p001cao/app/mpi/scaLAPACK-2.2
 
 cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=on -DBUILD_SHARED_LIBS=on \
+    -DMPI_C_COMPILER=$OPENMPI/bin/mpicc -DCMAKE_Fortran_COMPILER=$OPENMPI/bin/mpif90 \
     -DCMAKE_INSTALL_PREFIX=${myPREFIX}
 
 make -j 16 && make install
@@ -114,6 +116,15 @@ make -j 16 && make install
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone -b new_release_2023.05.001 https://gitlab.mpcdf.mpg.de/elpa/elpa.git elpa-2023.05     #   new_release_2023.05.001  master
 cd elpa-2023.05
+
+module load conda/py11gpaw_source
+module load tooldev/autoconf-2.72c
+module load tooldev/automake-1.16.5
+module load tooldev/libtool-2.4.7
+export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
+
+./autogen.sh
+
 rm -rf build && mkdir build && cd build
 ```
 
@@ -121,6 +132,7 @@ rm -rf build && mkdir build && cd build
 module load mpi/scaLAPACK-2.2
 module load mpi/blacs
 module load mpi/ompi4.1.x-gcc9
+module load intel/mkl-xe2016u4
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
 export PATH=$OPENMPI/bin:$PATH
