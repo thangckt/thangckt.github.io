@@ -225,9 +225,10 @@ cd gpaw-master
 1. Create file `siteconfig.py`
 ``` py
 mpi = True
-compiler = '/home1/p001cao/app/openmpi/4.1.x-gcc11/bin/mpicc'
-library_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc11/lib/']
-include_dirs = ['/home1/p001cao/app/openmpi/4.1.x-gcc11/include/']
+mpidir='/home1/p001cao/app/openmpi/4.1.x-gcc11'
+compiler = '{}/bin/mpicc'.format(mpidir)
+library_dirs = ['{}/lib'.format(mpidir)]
+include_dirs = ['{}/include'.format(mpidir)]
 
 fftw = True
 libraries = ['xc', 'fftw3']
