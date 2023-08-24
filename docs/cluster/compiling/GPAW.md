@@ -184,7 +184,7 @@ include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc9/include']
 
 scalapack = True
 libraries += ['scalapack']
-library_dirs += ['/home1/p001cao/app/mpi/ScaLAPACK-2.2/lib']
+library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK-2.2/lib']
 ```
 
 ``` sh
