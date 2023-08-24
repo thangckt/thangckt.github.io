@@ -149,23 +149,31 @@ make -j 16 && make install
 ```
 
 #### libvdwxc
+require FFTW3
+
 https://libvdwxc.gitlab.io/libvdwxc/configuring-libvdwxc.html
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
 git clone https://gitlab.com/libvdwxc/libvdwxc.git
 cd libvdwxc
+./autogen.sh
 rm -rf build && mkdir build && cd build
+
+module load mpi/fftw3.3.10-ompi4.1.x-gcc11
+module load mpi/ompi4.1.x-gcc11
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 export CFLAGS="-O3 -march=native"
 export FCFLAGS="-g -O2"
-export myPREFIX=/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11
+myPREFIX=/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11
 
-../configure --with-mpi --prefix=${myPREFIX}
+../configure --with-mpi --with-fftw3=$myFFTW --prefix=$myPREFIX
 
+make -j 16 && make install
 ```
 
 
