@@ -74,7 +74,7 @@ rm -rf build && mkdir build && cd build
 ```
 
 ```sh
-module load cmake/3.16.2
+module load tooldev/cmake-3.27 
 module load mpi/ompi4.1.x-gcc9
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
