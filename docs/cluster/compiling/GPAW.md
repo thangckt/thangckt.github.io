@@ -35,7 +35,10 @@ ucx_info -d | grep Transport
 ```
 
 ### OMPI
-NOTE: --with-verbs (default - auto detect)
+!!! note
+
+   - `--with-verbs` (default - auto detect)
+   - `F77=g77 FC=gfortran` need to compile BLACS
 
 ```sh
 cd /home1/p001cao/0SourceCode
@@ -49,7 +52,7 @@ export myUCX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
 export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-gcc9
 
 
-../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
+../configure --with-sge --with-ucx=${myUCX} F77=g77 FC=gfortran --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
