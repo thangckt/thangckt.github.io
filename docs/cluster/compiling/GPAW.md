@@ -139,6 +139,14 @@ make -j 16 && make install
 Install all libs without needed MPI in conda to save time: libxc, matplotlib,..
 
 ``` sh
+module load mpi/ompi4.1.x-gcc9
+
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc9
+export PATH=$OPENMPI/bin:$PATH
+export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
+```
+
+``` sh
 module load conda/conda3
 conda create -y -n py11gpaw_source python=3.11  # higher python require newer GLIBC (don't work with py 11)
 source activate py11gpaw_source
