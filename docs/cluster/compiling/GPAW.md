@@ -188,7 +188,8 @@ module load tooldev/cmake-3.27
 module load compiler/gcc-11
 myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
-myPREFIX=/home1/p001cao/app/tooldev/libxc
+export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++
+myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
 
 cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
