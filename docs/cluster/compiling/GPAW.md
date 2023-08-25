@@ -85,9 +85,9 @@ module load mpi/ompi4.1.x-gcc11
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export F90=mpif90 export F77=mpif77
-export myPREFIX=/home1/p001cao/app/mpi/scaLAPACK-2.2
+myPREFIX=/home1/p001cao/app/mpi/scaLAPACK-2.2
 
-cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=on -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=${myPREFIX}
+cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=on -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
 make -j 16 && make install
 ```
@@ -176,6 +176,25 @@ myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11
 make -j 16 && make install
 ```
 
+### libxc
+
+```sh
+cd /home1/p001cao/0SourceCode/tooldev
+git clone https://gitlab.com/libxc/libxc.git
+cd libxc
+rm -rf build && mkdir build && cd build
+
+module load tooldev/cmake-3.27
+module load compiler/gcc-11
+myGCC=/home1/p001cao/app/compiler/gcc-11
+export PATH=$myGCC/bin:$PATH
+myPREFIX=/home1/p001cao/app/tooldev/libxc
+
+cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+
+make -j 16 && make install
+```
+
 
 ### conda env
 Install all libs without needed MPI in conda to save time: libxc, matplotlib,..
@@ -194,7 +213,7 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 ase libxc scipy pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
+conda install -y --update-specs -c conda-forge python=3.11 ase libxc scipy openblas pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
 ```
 
 
@@ -203,6 +222,7 @@ conda install -y --update-specs -c conda-forge python=3.11 ase libxc scipy pip l
 ``` sh
 module load mpi/fftw3.3.10-ompi4.1.x-gcc11
 module load mpi/elpa2023.05-ompi4.1.x-gcc11
+module load mpi/libvdwxc-ompi4.1.x-gcc11
 module load mpi/scaLAPACK-2.2
 module load mpi/ompi4.1.x-gcc11
 
