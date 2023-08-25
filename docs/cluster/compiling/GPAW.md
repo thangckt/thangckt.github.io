@@ -182,7 +182,7 @@ make -j 16 && make install
 cd /home1/p001cao/0SourceCode/tooldev
 git clone --depth 1 -b 6.2.2 https://gitlab.com/libxc/libxc.git libxc-6.2.2
 cd libxc-6.2.2
-# rm -rf build && mkdir build && cd build
+rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
 module load compiler/gcc-11
@@ -192,10 +192,9 @@ export PATH=$myGCC/bin:$PATH
 export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=gfortran
 myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
 
-cmake -H. -Bobjdir -DBUILD_SHARED_LIBS=on -DNAMESPACE_INSTALL_INCLUDEDIR=on \
+cmake .. -DBUILD_SHARED_LIBS=on -DNAMESPACE_INSTALL_INCLUDEDIR=on \
 -DENABLE_GENERIC=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
-cd objdir
 make -j 16 && make install
 ```
 
@@ -242,21 +241,30 @@ source activate py11gpaw_source
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
-# git clone -b master https://gitlab.com/gpaw/gpaw.git gpaw-master      # 23.6.1  master
+# git clone -b 23.6.1 https://gitlab.com/gpaw/gpaw.git gpaw-23.6.1     # 23.6.1  master
 # git pull origin master
-cd gpaw-master
+cd gpaw-23.6.1
 ```
 
 1. Create file `siteconfig.py`
 ``` py
+condadir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
+library_dirs = [condadir+'/lib']
+include_dirs = [condadir+'/include']
+
+xc = '/home1/p001cao/app/tooldev/libxc-6.2.2'
+libraries = ['xc']
+library_dirs += [xc + '/lib64']
+include_dirs += [xc + '/includeon']
+
 mpi = True
 mpidir='/home1/p001cao/app/openmpi/4.1.x-gcc11'
-compiler = '{}/bin/mpicc'.format(mpidir)
-library_dirs = ['{}/lib'.format(mpidir)]
-include_dirs = ['{}/include'.format(mpidir)]
+compiler = mpidir+'/bin/mpicc'
+library_dirs += [mpidir+'/lib']
+include_dirs += [mpidir+'/include']
 
 fftw = True
-libraries = ['xc', 'fftw3']
+libraries = ['fftw3']
 library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11/lib']
 include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11/include']
 
@@ -267,13 +275,13 @@ library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK-2.2/lib']
 elpa = True
 elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11'
 libraries += ['elpa_openmp']
-library_dirs += ['{}/lib'.format(elpadir)]
-# runtime_library_dirs = ['{}/lib'.format(elpadir)]
-include_dirs += ['{}/include/elpa_openmp-2023.05.001'.format(elpadir)]
+library_dirs += [elpadir+'/lib']
+include_dirs += [elpadir+'/include/elpa_openmp-2023.05.001']
 
 libvdwxc = True
 libraries += ['vdwxc']
 library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11/lib']
+include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11/include']
 ```
 
 2. Install
