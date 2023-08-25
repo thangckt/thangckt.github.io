@@ -220,7 +220,7 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 ase scipy openblas pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
+conda install -y --update-specs -c conda-forge python=3.11 ase scipy openblas pip libgcc-ng=13 libgfortran-ng=13 libstdcxx-ng=13
 ```
 
 
@@ -234,7 +234,7 @@ conda install -y --update-specs -c conda-forge python=3.11 ase scipy openblas pi
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
-git checkout master   # 23.6.1  master  22.8.0
+git checkout 23.6.1   # 23.6.1  master  22.8.0
 ```
 
 ``` sh
