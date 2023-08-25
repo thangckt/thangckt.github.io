@@ -289,7 +289,7 @@ library_dirs += [elpadir+'/lib']
 include_dirs += [elpadir+'/include/elpa_openmp-2023.05.001']
 
 libvdwxc = True
-libraries += ['vdwxc','libvdwxc']
+libraries += ['vdwxc']
 library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11/lib']
 include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11/include']
 ```
