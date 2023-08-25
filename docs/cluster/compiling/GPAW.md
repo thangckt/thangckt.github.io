@@ -188,11 +188,11 @@ module load tooldev/cmake-3.27
 module load compiler/gcc-11
 myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
-export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++
+export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export F90=$myGCC/bin/g90
 myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
 
 cmake .. -DBUILD_SHARED_LIBS=on -DNAMESPACE_INSTALL_INCLUDEDIR=on \
--DCMAKE_INSTALL_PREFIX=$myPREFIX
+-DENABLE_GENERIC=on -DENABLE_FORTRAN=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
 make -j 16 && make install
 ```
