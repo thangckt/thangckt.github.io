@@ -262,9 +262,10 @@ include_dirs = [condadir+'/include']
 
 libraries = ['xc']
 # xcdir = condadir
-xcdir = '/home1/p001cao/app/tooldev/libxc-5.1.5'
+xcdir = '/home1/p001cao/app/tooldev/libxc-6.2.2'
 library_dirs += [xcdir + '/lib64']
 include_dirs += [xcdir + '/include']
+runtime_library_dirs = [xcdir + '/lib64']
 
 mpi = True
 mpidir='/home1/p001cao/app/openmpi/4.1.x-gcc11'
@@ -288,7 +289,7 @@ library_dirs += [elpadir+'/lib']
 include_dirs += [elpadir+'/include/elpa_openmp-2023.05.001']
 
 libvdwxc = True
-libraries += ['vdwxc']
+libraries += ['vdwxc','libvdwxc']
 library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11/lib']
 include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11/include']
 ```
