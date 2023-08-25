@@ -194,7 +194,7 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 ase libxc pip libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11
+conda install -y --update-specs -c conda-forge python=3.11 ase libxc openblas pip libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11
 ```
 
 
