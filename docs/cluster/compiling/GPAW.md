@@ -180,8 +180,8 @@ make -j 16 && make install
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
-git clone https://gitlab.com/libxc/libxc.git
-cd libxc
+git clone -b 6.2.2 https://gitlab.com/libxc/libxc.git libxc-6.2.2
+cd libxc-6.2.2
 rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
@@ -213,7 +213,7 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 ase libxc scipy openblas pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
+conda install -y --update-specs -c conda-forge python=3.11 ase scipy openblas pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
 ```
 
 
@@ -224,6 +224,7 @@ module load mpi/fftw3.3.10-ompi4.1.x-gcc11
 module load mpi/elpa2023.05-ompi4.1.x-gcc11
 module load mpi/libvdwxc-ompi4.1.x-gcc11
 module load mpi/scaLAPACK-2.2
+module load tooldev/libxc
 module load mpi/ompi4.1.x-gcc11
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
