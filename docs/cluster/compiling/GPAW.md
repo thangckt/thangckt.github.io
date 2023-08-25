@@ -180,7 +180,7 @@ make -j 16 && make install
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
-git clone -b 6.2.2 https://gitlab.com/libxc/libxc.git libxc-6.2.2
+git clone --depth 1 -b 6.2.2 https://gitlab.com/libxc/libxc.git libxc-6.2.2
 cd libxc-6.2.2
 rm -rf build && mkdir build && cd build
 
