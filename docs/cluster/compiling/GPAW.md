@@ -177,11 +177,15 @@ make -j 16 && make install
 ```
 
 ### libxc
+!!! note
+
+    - `libxc>5.1.5` has different api with no more `XC_FAMILY_HYB_GGA`
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
-git clone --depth 1 -b 6.2.2 https://gitlab.com/libxc/libxc.git libxc-6.2.2
-cd libxc-6.2.2
+git clone https://gitlab.com/libxc/libxc.git libxc
+cd libxc
+git checkout 5.1.5
 rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
@@ -190,10 +194,9 @@ module load compiler/gcc-11
 myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
 export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=gfortran
-myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
+myPREFIX=/home1/p001cao/app/tooldev/libxc-5.1.5
 
-cmake .. -DBUILD_SHARED_LIBS=on -DNAMESPACE_INSTALL_INCLUDEDIR=on \
--DBUILD_TESTING=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
 make -j 16 && make install
 ```
@@ -216,18 +219,22 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 ase scipy openblas libxc=5 pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
+conda install -y --update-specs -c conda-forge python=3.11 ase scipy openblas pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
 ```
 
 
 ### GPAW
+
+!!! note
+
+    - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc>5.1.5` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
 
 ``` sh
 module load mpi/fftw3.3.10-ompi4.1.x-gcc11
 module load mpi/elpa2023.05-ompi4.1.x-gcc11
 module load mpi/libvdwxc-ompi4.1.x-gcc11
 module load mpi/scaLAPACK-2.2
-module load tooldev/libxc-6.2.2
+module load tooldev/libxc-5.1.5
 module load mpi/ompi4.1.x-gcc11
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
@@ -241,10 +248,9 @@ source activate py11gpaw_source
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
-# git clone -b 23.6.1 https://gitlab.com/gpaw/gpaw.git gpaw-23.6.1     # 23.6.1  master
-# git pull origin master
-tar xvf gpaw-23.6.1.tar.gz
-cd gpaw-23.6.1
+# git clone https://gitlab.com/gpaw/gpaw.git gpaw
+cd gpaw
+git checkout master  # 23.6.1  master
 ```
 
 1. Create file `siteconfig.py`
@@ -253,11 +259,11 @@ condadir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
 library_dirs = [condadir+'/lib']
 include_dirs = [condadir+'/include']
 
-# xcdir = '/home1/p001cao/app/tooldev/libxc-6.2.2'
-xcdir = condadir
 libraries = ['xc']
+# xcdir = condadir
+xcdir = '/home1/p001cao/app/tooldev/libxc-5.1.5'
 library_dirs += [xcdir + '/lib64']
-include_dirs += [xcdir + '/includeon']
+include_dirs += [xcdir + '/include']
 
 mpi = True
 mpidir='/home1/p001cao/app/openmpi/4.1.x-gcc11'
