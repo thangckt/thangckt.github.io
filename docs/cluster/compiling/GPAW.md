@@ -228,7 +228,7 @@ conda install -y --update-specs -c conda-forge python=3.11 ase scipy openblas pi
 
 !!! note
 
-    - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc>5.1.5` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
+    - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
 
 ``` sh
 module load mpi/fftw3.3.10-ompi4.1.x-gcc11
