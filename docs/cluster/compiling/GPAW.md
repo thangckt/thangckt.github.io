@@ -194,7 +194,7 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 ase libxc openblas pip libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11
+conda install -y --update-specs -c conda-forge python=3.11 ase libxc scipy pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
 ```
 
 
@@ -213,7 +213,6 @@ export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90 ex
 
 module load conda/conda3
 source activate py11gpaw_source
-module load conda/py11gpaw_source
 ```
 
 ``` sh
