@@ -250,7 +250,7 @@ source activate py11gpaw_source
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
-git checkout master  # 23.6.1  master
+git checkout 23.6.1    # 23.6.1  master  22.8.0
 ```
 
 1. Create file `siteconfig.py`
