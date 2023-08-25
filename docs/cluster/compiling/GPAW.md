@@ -180,12 +180,13 @@ make -j 16 && make install
 !!! note
 
     - `libxc>5.1.5` has different api with no more `XC_FAMILY_HYB_GGA`
+    - use `libxc=6.2.2`, not master
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
 git clone https://gitlab.com/libxc/libxc.git libxc
 cd libxc
-git checkout 5.1.5
+git checkout 6.2.2  # master  6.2.2
 rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
@@ -194,7 +195,7 @@ module load compiler/gcc-11
 myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
 export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=gfortran
-myPREFIX=/home1/p001cao/app/tooldev/libxc-5.1.5
+myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
 
 cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
