@@ -213,6 +213,7 @@ export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90 ex
 
 module load conda/conda3
 source activate py11gpaw_source
+module load conda/py11gpaw_source
 ```
 
 ``` sh
