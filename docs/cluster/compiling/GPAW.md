@@ -191,7 +191,8 @@ export PATH=$myGCC/bin:$PATH
 export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++
 myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
 
-cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+cmake .. -DBUILD_SHARED_LIBS=on -DNAMESPACE_INSTALL_INCLUDEDIR=on \
+-DCMAKE_INSTALL_PREFIX=$myPREFIX
 
 make -j 16 && make install
 ```
