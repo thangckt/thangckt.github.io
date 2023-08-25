@@ -180,8 +180,8 @@ make -j 16 && make install
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
-git clone --depth 1 -b 6.2.2 https://gitlab.com/libxc/libxc.git libxc-6.2.2
-cd libxc-6.2.2
+git clone --depth 1 -b 6.2.1 https://gitlab.com/libxc/libxc.git libxc-6.2.1
+cd libxc-6.2.1
 rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
@@ -190,10 +190,10 @@ module load compiler/gcc-11
 myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
 export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=gfortran
-myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
+myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.1
 
 cmake .. -DBUILD_SHARED_LIBS=on -DNAMESPACE_INSTALL_INCLUDEDIR=on \
--DENABLE_GENERIC=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+-DBUILD_TESTING=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
 make -j 16 && make install
 ```
@@ -216,7 +216,7 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.11 ase scipy openblas pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
+conda install -y --update-specs -c conda-forge python=3.11 ase scipy openblas libxc=6.2.0 pip libgcc-ng=12 libgfortran-ng=12 libstdcxx-ng=12
 ```
 
 
