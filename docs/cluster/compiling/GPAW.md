@@ -182,18 +182,20 @@ make -j 16 && make install
 cd /home1/p001cao/0SourceCode/tooldev
 git clone --depth 1 -b 6.2.2 https://gitlab.com/libxc/libxc.git libxc-6.2.2
 cd libxc-6.2.2
-rm -rf build && mkdir build && cd build
+# rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
 module load compiler/gcc-11
+
 myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
-export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export F90=$myGCC/bin/g90
+export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=gfortran
 myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
 
-cmake .. -DBUILD_SHARED_LIBS=on -DNAMESPACE_INSTALL_INCLUDEDIR=on \
--DENABLE_GENERIC=on -DENABLE_FORTRAN=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+cmake -H. -Bobjdir -DBUILD_SHARED_LIBS=on -DNAMESPACE_INSTALL_INCLUDEDIR=on \
+-DENABLE_GENERIC=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
+cd objdir
 make -j 16 && make install
 ```
 
@@ -226,7 +228,7 @@ module load mpi/fftw3.3.10-ompi4.1.x-gcc11
 module load mpi/elpa2023.05-ompi4.1.x-gcc11
 module load mpi/libvdwxc-ompi4.1.x-gcc11
 module load mpi/scaLAPACK-2.2
-module load tooldev/libxc-6.2.2
+module load tooldev/libxc
 module load mpi/ompi4.1.x-gcc11
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
