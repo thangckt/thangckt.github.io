@@ -133,9 +133,11 @@ module load mpi/ompi4.1.x-gcc11
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export F90=mpif90 export F77=mpif77
+export myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.a
 myPREFIX=/home1/p001cao/app/mpi/scaLAPACK-2.2
 
-cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=on -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=on -DBUILD_SHARED_LIBS=on \
+-DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS} -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
 make -j 16 && make install
 ```
