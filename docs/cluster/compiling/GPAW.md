@@ -231,17 +231,9 @@ conda install -y --update-specs -c conda-forge python=3.11 ase openblas pip
     - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
 
 ``` sh
-cd /home1/p001cao/0SourceCode/tooldev
-# git clone https://gitlab.com/gpaw/gpaw.git gpaw
-cd gpaw
-git checkout 23.6.1   # 23.6.1  master  22.8.0
-rm -rf build
-
 module load conda/conda3
 source activate py11gpaw_source
-```
 
-``` sh
 module load mpi/fftw3.3.10-ompi4.1.x-gcc11
 module load mpi/elpa2023.05-ompi4.1.x-gcc11
 module load mpi/libvdwxc-ompi4.1.x-gcc11
@@ -253,6 +245,14 @@ OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90 export F77=mpif77
+```
+
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+# git clone https://gitlab.com/gpaw/gpaw.git gpaw
+cd gpaw
+git checkout 23.6.1   # 23.6.1  master  22.8.0
+rm -rf build
 ```
 
 1. Create file `siteconfig.py`
