@@ -236,6 +236,9 @@ cd /home1/p001cao/0SourceCode/tooldev
 cd gpaw
 git checkout 23.6.1   # 23.6.1  master  22.8.0
 rm -rf build
+
+module load conda/conda3
+source activate py11gpaw_source
 ```
 
 ``` sh
@@ -250,9 +253,6 @@ OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
 export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90 export F77=mpif77
-
-module load conda/conda3
-source activate py11gpaw_source
 ```
 
 1. Create file `siteconfig.py`
