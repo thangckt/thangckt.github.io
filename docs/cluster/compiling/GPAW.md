@@ -71,7 +71,7 @@ mpirun --version
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
-git clone https://gitlab.com/libxc/libxc.git libxc
+# git clone https://gitlab.com/libxc/libxc.git libxc
 cd libxc
 git checkout 6.2.2  # master  6.2.2
 rm -rf build && mkdir build && cd build
