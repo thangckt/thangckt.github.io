@@ -63,6 +63,54 @@ module load mpi/ompi4.1.x-gcc11
 mpirun --version
 ```
 
+### libxc
+!!! note
+
+    - `libxc>5.1.5` has different api with no more `XC_FAMILY_HYB_GGA`
+    - use `libxc=6.2.2`, not master
+
+```sh
+cd /home1/p001cao/0SourceCode/tooldev
+git clone https://gitlab.com/libxc/libxc.git libxc
+cd libxc
+git checkout 6.2.2  # master  6.2.2
+rm -rf build && mkdir build && cd build
+
+module load tooldev/cmake-3.27
+module load compiler/gcc-11
+
+myGCC=/home1/p001cao/app/compiler/gcc-11
+export PATH=$myGCC/bin:$PATH
+export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=$myGCC/bin/gfortran
+myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
+
+cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+
+make -j 16 && make install
+```
+
+### OpenBLAS
+OpenBLAS contains BLAS and LAPACK
+```sh
+cd /home1/p001cao/0SourceCode/tooldev
+git clone https://github.com/xianyi/OpenBLAS.git openBLAS
+cd openBLAS
+git checkout v0.3.23
+rm -rf build && mkdir build && cd build
+
+module load tooldev/cmake-3.27
+module load compiler/gcc-11
+
+myGCC=/home1/p001cao/app/compiler/gcc-11
+export PATH=$myGCC/bin:$PATH
+export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=$myGCC/bin/gfortran
+myPREFIX=/home1/p001cao/app/tooldev/openBLAS-0.3.23
+
+cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+
+make -j 16 && make install
+```
+
 ### Libs need MPI
 
 #### scalapack and BLACS
@@ -179,52 +227,6 @@ myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11
 make -j 16 && make install
 ```
 
-### libxc
-!!! note
-
-    - `libxc>5.1.5` has different api with no more `XC_FAMILY_HYB_GGA`
-    - use `libxc=6.2.2`, not master
-
-```sh
-cd /home1/p001cao/0SourceCode/tooldev
-git clone https://gitlab.com/libxc/libxc.git libxc
-cd libxc
-git checkout 6.2.2  # master  6.2.2
-rm -rf build && mkdir build && cd build
-
-module load tooldev/cmake-3.27
-module load compiler/gcc-11
-
-myGCC=/home1/p001cao/app/compiler/gcc-11
-export PATH=$myGCC/bin:$PATH
-export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=$myGCC/bin/gfortran
-myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
-
-cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
-
-make -j 16 && make install
-```
-
-### OpenBLAS
-```sh
-cd /home1/p001cao/0SourceCode/tooldev
-git clone https://github.com/xianyi/OpenBLAS.git openBLAS
-cd openBLAS
-git checkout v0.3.23
-rm -rf build && mkdir build && cd build
-
-module load tooldev/cmake-3.27
-module load compiler/gcc-11
-
-myGCC=/home1/p001cao/app/compiler/gcc-11
-export PATH=$myGCC/bin:$PATH
-export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=$myGCC/bin/gfortran
-myPREFIX=/home1/p001cao/app/tooldev/openBLAS-0.3.23
-
-cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
-
-make -j 16 && make install
-```
 
 ### conda env
 Install all libs without needed MPI in conda to save time: libxc, matplotlib,.. libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11
@@ -244,7 +246,7 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 ase openblas pip
+conda install -y --update-specs -c conda-forge python=3.11
 ```
 
 
