@@ -113,10 +113,13 @@ make -j 16 && make install
 ```
 
 #### Elpa
+Don't use master
+
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
-# git clone -b new_release_2023.05.001 https://gitlab.mpcdf.mpg.de/elpa/elpa.git elpa-2023.05     #   new_release_2023.05.001  master
-cd elpa-2023.05
+# git clone https://gitlab.mpcdf.mpg.de/elpa/elpa.git elpa        #   new_release_2023.05.001  master
+cd elpa
+git checkout new_release_2023.05.001
 
 module load conda/py11gpaw_source
 module load tooldev/autoconf-2.72c
