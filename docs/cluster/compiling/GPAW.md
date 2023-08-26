@@ -93,7 +93,7 @@ make -j 16 && make install
 OpenBLAS contains BLAS and LAPACK
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
-git clone https://github.com/xianyi/OpenBLAS.git openBLAS
+# git clone https://github.com/xianyi/OpenBLAS.git openBLAS
 cd openBLAS
 git checkout v0.3.23
 rm -rf build && mkdir build && cd build
@@ -103,7 +103,7 @@ module load compiler/gcc-11
 
 myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
-export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=$myGCC/bin/gfortran
+export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FC=$myGCC/bin/gfortran
 myPREFIX=/home1/p001cao/app/tooldev/openBLAS-0.3.23
 
 cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
