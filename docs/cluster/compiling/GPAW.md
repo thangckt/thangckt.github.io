@@ -129,6 +129,7 @@ rm -rf build && mkdir build && cd build
 ```sh
 module load tooldev/cmake-3.27
 module load mpi/ompi4.1.x-gcc11
+module load tooldev/openBLAS-0.3.23
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
