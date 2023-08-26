@@ -266,12 +266,13 @@ module load mpi/elpa2023.05-ompi4.1.x-gcc11
 module load mpi/libvdwxc-ompi4.1.x-gcc11
 module load mpi/scaLAPACK-2.2
 module load tooldev/libxc-6.2.2
+module load tooldev/openBLAS-0.3.23
 module load mpi/ompi4.1.x-gcc11
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
-export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90 export F77=mpif77
+export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90 export F77=mpif77
 ```
 
 ``` sh
