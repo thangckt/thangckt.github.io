@@ -235,6 +235,7 @@ cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
 git checkout 23.6.1   # 23.6.1  master  22.8.0
+rm -rf build
 ```
 
 ``` sh
