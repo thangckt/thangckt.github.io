@@ -204,7 +204,7 @@ make -j 16 && make install
 
 
 ### conda env
-Install all libs without needed MPI in conda to save time: libxc, matplotlib,..
+Install all libs without needed MPI in conda to save time: libxc, matplotlib,.. libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11
 
 ``` sh
 module load mpi/ompi4.1.x-gcc11
@@ -220,7 +220,7 @@ conda create -y -n py11gpaw_source python=3.11  # higher python require newer GL
 source activate py11gpaw_source
 # conda install -y --revision 0
 
-conda install -y --update-specs -c conda-forge python=3.9.0 ase scipy openblas pip libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11
+conda install -y --update-specs -c conda-forge python=3.9.0 ase openblas pip
 ```
 
 
