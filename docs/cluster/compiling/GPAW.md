@@ -335,3 +335,8 @@ gpaw install-data --register gpaw-datasets
 ``` sh
 gpaw test
 ```
+
+
+
+conda create -y -n py9gpaw_source python=3.9.0
+source activate py9gpaw_source
