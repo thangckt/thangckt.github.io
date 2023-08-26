@@ -237,7 +237,7 @@ module load mpi/ompi4.1.x-gcc11
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
-export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
+export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
 ```
 
 ``` sh
@@ -247,7 +247,7 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11
+conda install -y --update-specs -c conda-forge python=3.11 pillow
 ```
 
 
