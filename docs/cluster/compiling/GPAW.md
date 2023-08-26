@@ -81,7 +81,7 @@ module load compiler/gcc-11
 
 myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
-export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FORTRAN=$myGCC/bin/gfortran
+export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FC=$myGCC/bin/gfortran
 myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
 
 cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
@@ -133,11 +133,11 @@ module load tooldev/openBLAS-0.3.23
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
-export CC=mpicc  export CXX=mpic++  export F90=mpif90 export F77=mpif77
+export CC=mpicc  export CXX=mpic++ export FC=mpifort export F90=mpif90 export F77=mpif77
 export myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.a
 myPREFIX=/home1/p001cao/app/mpi/scaLAPACK-2.2
 
-cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=on -DBUILD_SHARED_LIBS=on \
+cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=yes -DBUILD_SHARED_LIBS=on \
 -DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS} -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
 make -j 16 && make install
