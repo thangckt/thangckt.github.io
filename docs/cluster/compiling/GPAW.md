@@ -219,9 +219,10 @@ export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 
 ``` sh
 module load conda/conda3
-conda create -y -n py11gpaw_source python=3.11  # higher python require newer GLIBC (don't work with py 11)
+conda create -y -n py11gpaw_source python=3.11
 source activate py11gpaw_source
 # conda install -y --revision 0
+conda clean -a -y
 
 conda install -y --update-specs -c conda-forge python=3.11 ase openblas pip
 ```
@@ -236,7 +237,6 @@ conda install -y --update-specs -c conda-forge python=3.11 ase openblas pip
 ``` sh
 module load conda/conda3
 source activate py11gpaw_source
-conda clean -a -y
 
 module load mpi/fftw3.3.10-ompi4.1.x-gcc11
 module load mpi/elpa2023.05-ompi4.1.x-gcc11
