@@ -233,14 +233,6 @@ make -j 16 && make install
 Install all libs without needed MPI in conda to save time: libxc, matplotlib,.. libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11
 
 ``` sh
-module load mpi/ompi4.1.x-gcc11
-
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
-export PATH=$OPENMPI/bin:$PATH
-export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
-```
-
-``` sh
 module load conda/conda3
 conda create -y -n py11gpaw_source python=3.11
 source activate py11gpaw_source
@@ -250,6 +242,11 @@ conda clean -a -y
 conda install -y --update-specs -c conda-forge python=3.11 pillow
 ```
 
+``` sh
+conda create -y -n py9gpaw_source python=3.9.0
+source activate py9gpaw_source
+conda install -y libzlib=1.2.11
+```
 
 ### GPAW
 
@@ -337,6 +334,3 @@ gpaw test
 ```
 
 
-
-conda create -y -n py9gpaw_source python=3.9.0
-source activate py9gpaw_source
