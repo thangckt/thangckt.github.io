@@ -112,10 +112,9 @@ module load mpi/ompi4.1.x-clang17
 export PATH=/home1/p001cao/app/openmpi/4.1.x-clang17/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
-export myPREFIX=/home1/p001cao/app/fftw/3.3.10-ompi4.1.x-clang17
+export myPREFIX=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 
-../configure --enable-sse2 \
-  --enable-threads --enable-openmp --enable-mpi --enable-shared --prefix=${myPREFIX}
+../configure --enable-sse2 --enable-threads --enable-openmp --enable-mpi --enable-shared --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
