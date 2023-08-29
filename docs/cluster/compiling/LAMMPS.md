@@ -1033,11 +1033,11 @@ rm -rf build_LLVM && mkdir build_LLVM && cd build_LLVM
 module load tooldev/cmake-3.27
 module load tooldev/binutils-2.40
 module load tooldev/gsl-2.7
-module load fftw/fftw3.3.10-ompi4.1.x-clang17
+module load mpi/fftw3.3.10-ompi4.1.x-clang17
 module load mpi/ompi4.1.x-clang17
 
-export myCOMPILER=/home1/p001cao/app/openmpi/4.1.x-clang17
-export PATH=${myCOMPILER}/bin:$PATH
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
+export PATH=${OPENMPI}/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
 # export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
