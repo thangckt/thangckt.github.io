@@ -1042,8 +1042,10 @@ export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
 # export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 ## python (require py3), BLAS+LAPACK
-export myPREFIX=/home1/p001cao/app/lammps/llvmOMPI4-dev
+openBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23
+export LD_LIBRARY_PATH=$openBLAS:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH   # to avoid using libstdc++.so in conda
+export myPREFIX=/home1/p001cao/app/lammps/llvmOMPI4-dev
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
 -DBUILD_MPI=yes -DBUILD_OMP=yes -DPKG_OPENMP=yes \
