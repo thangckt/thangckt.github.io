@@ -165,12 +165,10 @@ Type `open settings`
 		}
 	},
 	"[markdown]": {
-		"editor.formatOnSave": true,
 		"editor.snippetSuggestions": "none",
 	},
 	"[latex]": {
 		"editor.tabSize": 2,
-		"editor.formatOnSave": true,
 		"editor.minimap.enabled": false,
 	},
 	"[python]": {
