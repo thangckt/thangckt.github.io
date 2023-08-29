@@ -119,146 +119,141 @@ Type `open settings`
 ### Editor & Theme
 
 ```js
-  "window.zoomLevel": 0,
-  "security.workspace.trust.enabled": false,
-  "workbench.colorTheme": "One Dark Pro Darker",         // "One Dark Pro Darker"  "Super One Dark"
-  // "workbench.iconTheme": "vs-minimal",
-  // "zenMode.hideLineNumbers": true,
-  // "breadcrumbs.enabled": true,
-  "debug.console.fontSize": 12,
-  "terminal.integrated.fontSize": 12,
+	///==== Theme
+	"workbench.colorTheme": "One Dark Pro",
+	"terminal.integrated.tabFocusMode": false,
+	"debug.console.fontSize": 12,
+	"terminal.integrated.fontSize": 12,
+	//==== Editor
+	"editor.fontFamily": "roboto mono, monospace",
+	"editor.tabSize": 4,
+	"editor.formatOnSave": true,
+	"editor.minimap.enabled": true,
+	"editor.rulers": [
+		80
+	],
+	"editor.wordWrap": "on", //  wordWrapColumn    bounded   on
+	"editor.wrappingIndent": "same", //  none  same  indent
+	"editor.fontSize": 14,
+	"editor.letterSpacing": -0.5,
+```
 
-  //=== Setting Editor & Theme
-  "editor.tabSize": 4,
-  // "editor.formatOnSave": true,
-  "editor.minimap.enabled": true,
-  "editor.rulers": [ 80  ],
-  "editor.wordWrap": "on",            //  wordWrapColumn    bounded   on
-  "editor.wrappingIndent": "same",
-  // "editor.wordWrapColumn": 100,
-  "editor.fontFamily": "roboto mono", //  'anonymous pro',   tahoma   consolas   monospace  verdana  monaco
-  "editor.fontSize": 13.5,
-  "editor.letterSpacing": -0.2,
-  // "editor.renderControlCharacters": true,
+
+### Files
+
+```js
+"files.autoSave": "afterDelay",
+	"files.trimTrailingWhitespace": true,
+	"files.eol": "\n",
+	"files.associations": {
+		"*.lmp": "lmps",
+		"*.in": "lmps",
+		"*.mod": "lmps",
+		"*.lmp*": "lmps",
+		"*.lammps": "lmps",
+		"*.log": "log",
+		"*.out": "log",
+		"*.txt": "txt",
+	},
+	"[lmps]": {
+		"editor.tabSize": 2,
+		"editor.snippetSuggestions": "none",
+		"editor.quickSuggestions": {
+			"other": false,
+			"comments": false,
+			"strings": false
+		}
+	},
+	"[markdown]": {
+		"editor.formatOnSave": true,
+		"editor.snippetSuggestions": "none",
+	},
+	"[latex]": {
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true,
+		"editor.minimap.enabled": false,
+	},
+	"[python]": {
+		"editor.formatOnSave": false,
+		"editor.snippetSuggestions": "none",
+		"editor.detectIndentation": true,
+		"editor.insertSpaces": true,
+	},
 ```
 
 ### Grammarly
 
 ``` js
-  //=== Grammarly
-  "grammarly.files.include": [ "**/*.md", "**/*.tex", "**/*.txt"  ],
-```
-
-### Files
-
-```js
-    //=== Files & Linting
-  "files.autoSave": "afterDelay",
-  "files.trimTrailingWhitespace": true,
-  "files.associations": {
-    "*.lmp": "lmps", "*.in": "lmps", "*.mod": "lmps", "*.lmp*": "lmps", "*.lammps": "lmps",
-    "*.log": "log", "*.out": "log",
-    "*.txt": "txt",
-  },
-  "[lmps]": {
-    "editor.tabSize": 2,
-    "editor.snippetSuggestions": "none",
-    "editor.quickSuggestions": {
-      "other": false,
-      "comments": false,
-      "strings": false
-    }
-  },
-
-  "[markdown]": {
-    "editor.formatOnSave": true,
-    "editor.snippetSuggestions": "none",
-  },
-
-  "[latex]": {
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "editor.minimap.enabled": false,
-  },
-
-  "[python]": {
-    "editor.formatOnSave": false,
-    "editor.snippetSuggestions": "none",
-    "editor.detectIndentation": true,
-    "editor.insertSpaces": true,
-  },
-
-  //=== Linting
-  "python.analysis.diagnosticSeverityOverrides": {
-    "reportUnusedImport": "information",
-    "reportMissingImports": "none"
-  },
-
+	//==== Grammarly
+	"grammarly.files.include": [
+		"**/*.md",
+		"**/*.tex",
+		"**/*.txt"
+	],
 ```
 
 ### Latex-workshop
 
 ```js
-  //=== Setting for latex-workshop
-  "latex-workshop.latex.recipe.default": "latexmk ➞ copyPDF",
-  "latex-workshop.latex.outDir": "Zoutdir",
-  "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.texcount.autorun": "onSave",
-  "latex-workshop.message.badbox.show": false,
-  // "latex-workshop.linting.chktex.enabled": true,
-  // "latex-workshop.linting.lacheck.enabled": true,
-  "latex-workshop.synctex.synctexjs.enabled": true,
-  "latex-workshop.synctex.afterBuild.enabled": true,
-  "latex-workshop.view.pdf.viewer": "tab",
-  // "latex-workshop.view.pdf.invert": 1,
-  // "latex-workshop.view.pdf.invertMode.grayscale": 0.6,
-  // Compile latex
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "latexmk ➞ copyPDF",
-      "tools": [
-        "latexmk_tha",
-        "copyPDFshell"
-      ]
-    }
-  ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "latexmk_tha",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        "-f",
-        "--shell-escape",
-        "-outdir=%OUTDIR%",
-        "%DOC%",
-      ],
-      "env": {}
-    },
-    // Tool to copy PDF
-    {
-      "name": "copyPDFcmd",
-      "command": "cmd.exe",
-      "args": [
-        "/c",
-        "copy",
-        "'%OUTDIR%\\%DOCFILE%.pdf'",
-        "%DIR%",
-      ],
-      "env": {}
-    },
-    {
-      "name": "copyPDFshell",
-      "command": "powershell.exe",
-      "args": [
-        "copy '%OUTDIR%\\%DOCFILE%.pdf' %DIR%" //  copy move
-      ],
-      "env": {}
-    }
-  ],
+	"latex-workshop.latex.recipe.default": "latexmk -> copyPDF",
+	"latex-workshop.latex.outDir": "0outdir",
+	"latex-workshop.latex.autoBuild.run": "onSave",
+	"latex-workshop.texcount.autorun": "onSave",
+	"latex-workshop.message.badbox.show": false,
+	// "latex-workshop.linting.chktex.enabled": true,
+	// "latex-workshop.linting.lacheck.enabled": true,
+	"latex-workshop.synctex.synctexjs.enabled": true,
+	"latex-workshop.synctex.afterBuild.enabled": true,
+	"latex-workshop.view.pdf.viewer": "tab",
+	// "latex-workshop.view.pdf.invert": 1,
+	// "latex-workshop.view.pdf.invertMode.grayscale": 0.6,
+	//== Compile latex
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "latexmk -> copyPDF",
+			"tools": [
+				"latexmk",
+				"copyPDFshell"
+			]
+		}
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"name": "latexmk",
+			"command": "latexmk",
+			"args": [
+				"--shell-escape",
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"-f",
+				"-outdir=%OUTDIR%",
+				"%DOC%",
+			],
+			"env": {}
+		},
+		//== Tool to copy PDF
+		{
+			"name": "copyPDFcmd",
+			"command": "cmd.exe",
+			"args": [
+				"/c",
+				"copy",
+				"'%OUTDIR%\\%DOCFILE%.pdf'",
+				"%DIR%",
+			],
+			"env": {}
+		},
+		{
+			"name": "copyPDFshell",
+			"command": "powershell.exe",
+			"args": [
+				"copy '%OUTDIR%\\%DOCFILE%.pdf' %DIR%" //  copy move
+			],
+			"env": {}
+		}
+	],
 ```
 
 ### Jupyter Notebooks
@@ -266,13 +261,13 @@ Type `open settings`
 * [github](https://github.com/microsoft/vscode-jupyter)
 
 ```js
-  //=== Setting for Jupyter Notebooks
-  "notebook.lineNumbers": "on",
-  "notebook.showCellStatusBar": "hidden",
-  "notebook.markup.fontSize": 13.5,
-  "markdown.preview.fontFamily": "roboto",
-  "markdown.preview.fontSize": 14,
-  "notebook.cellFocusIndicator": "border",
+	//==== Jupyter Notebooks
+	"notebook.lineNumbers": "on",
+	"notebook.showCellStatusBar": "hidden",
+	"notebook.markup.fontSize": 14,
+	"markdown.preview.fontFamily": "roboto",
+	"markdown.preview.fontSize": 14,
+	"notebook.cellFocusIndicator": "border",
 ```
 
 1. Extensions:
@@ -298,11 +293,22 @@ Why VScode for Jupyter Notebooks refs:
 
 ### Python & Conda envs
 
+```js
+	//==== Python and Conda envs
+	//  "python.defaultInterpreterPath": "C:/DevProgram/miniconda3/python.exe",
+	//  "python.condaPath": "C:/DevProgram/miniconda3/Scripts/conda.exe",
+	"python.terminal.activateEnvironment": true,
+	"python.analysis.diagnosticSeverityOverrides": {
+		"reportUnusedImport": "information",
+		"reportMissingImports": "none"
+	},
 ```
-     //=== Python and Conda envs
-    "python.defaultInterpreterPath": "C:/DevProgram/miniconda3/python.exe",
-    "python.condaPath": "C:/DevProgram/miniconda3/Scripts/conda.exe",
-    "python.terminal.activateEnvironment": true,
+### Output
+```js
+	//==== Output
+	"security.workspace.trust.enabled": false,
+	"git.enableSmartCommit": true,
+	"window.zoomLevel": 0,
 ```
 
 ???+ tip "See also"
