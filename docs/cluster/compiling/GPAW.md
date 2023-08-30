@@ -209,14 +209,14 @@ condadir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
 library_dirs = [condadir+'/lib']
 include_dirs = [condadir+'/include']
 
-libraries = ['xc']
-# xcdir = condadir
-xcdir = '/home1/p001cao/app/tooldev/libxc-6.2.2'
-library_dirs += [xcdir + '/lib64']
-include_dirs += [xcdir + '/include']
-runtime_library_dirs = [xcdir + '/lib64']
+# libraries = ['xc']
+# # xcdir = condadir
+# xcdir = '/home1/p001cao/app/tooldev/libxc-6.2.2'
+# library_dirs += [xcdir + '/lib64']
+# include_dirs += [xcdir + '/include']
+# runtime_library_dirs = [xcdir + '/lib64']
 
-# nolibxc = True  # use GPAW's libxc
+nolibxc = True  # use GPAW's libxc
 
 mpi = True
 mpidir='/home1/p001cao/app/openmpi/4.1.x-clang17'
@@ -243,6 +243,9 @@ libvdwxc = True
 libraries += ['vdwxc']
 library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-clang17/lib']
 include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-clang17/include']
+
+extra_compile_args = ['-fopenmp']
+extra_link_args = ['-fopenmp']
 ```
 
 2. Install
@@ -251,7 +254,6 @@ pip install -e .
 
 gpaw install-data --register gpaw-datasets
 ```
-
 
 3. Test
 ``` sh
