@@ -139,41 +139,6 @@ make  -j 20         # not use -j to know what error
 make install
 ```
 
-### USC2: (Cenntos 6.9)
-
-- On Tacheon, UCX may give better performance.
-- Do not use GCC-11, to avoid error. this does not work `export CFLAGS='-gdwarf-4 -gstrict-dwarf'`
-
-```shell
-cd openmpi-4.1.3
-mkdir buildGCC && cd buildGCC
-##
-module load tool_dev/binutils-2.37                        # gold
-module load compiler/gcc-10.3
-
-export PATH=$PATH:/home1/p001cao/app/compiler/gcc-10.3/bin
-export CC=gcc export CXX=g++ export FORTRAN=gfortran
-export LDFLAGS="-fuse-ld=gold -lrt"
-export CFLAGS='-gdwarf-4 -gstrict-dwarf'
-export myUCX=/home1/p001cao/app/tool_dev/ucx-1.12              ## ucx-1.12  ucx-master
-
-../configure --with-sge --with-ucx=${myUCX} --without-verbs \
---prefix=/home1/p001cao/app/openmpi/4.1.3-gcc10.3
-
-make  -j 16 && make install
-```
-
-**without UCX**
-
-```shell
-module load tool_dev/binutils-2.35                        # gold
-module load compiler/gcc-10.3
-export LDFLAGS="-fuse-ld=gold -lrt"
-
-../configure --with-sge --with-verbs --without-ucx  \
---prefix=/home1/p001cao/app/openmpi/4.1.1-gcc10.3-noUCX
-```
-
 ### CANlab: (Cenntos 5.8)
 
 ```shell
