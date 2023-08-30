@@ -165,12 +165,6 @@ conda clean -a -y
 conda install -y --update-specs -c conda-forge python=3.11 pip pillow
 ```
 
-``` sh
-conda create -y -n py9gpaw_source python=3.9.0
-source activate py9gpaw_source
-conda install -y conda libzlib=1.2.11 ase
-```
-
 ### GPAW
 
 !!! note
