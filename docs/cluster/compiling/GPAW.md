@@ -153,7 +153,9 @@ make -j 16 && make install
 
 
 ### conda env
-Install all libs without needed MPI in conda to save time: libxc, matplotlib,.. libgcc-ng=11 libgfortran-ng=11 libstdcxx-ng=11
+Install all libs without needed MPI in conda to save time: libxc, matplotlib,..
+
+Don't install gcc, pillow, to avoid address error.
 
 ``` sh
 module load conda/conda3
@@ -162,7 +164,7 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pip pillow
+conda install -y --update-specs -c conda-forge python=3.11 pip  pyproject-parser
 ```
 
 ### GPAW
@@ -190,6 +192,12 @@ export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90 export 
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 ```
+
+<!-- Install `pillow`:
+``` sh
+export CC=gcc  export CXX=g++
+pip install pillow
+``` -->
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
