@@ -307,8 +307,8 @@ rm -rf build_clang && mkdir build_clang && cd build_clang
 
 module load compiler/llvm-17          # clang + lld
 
-LLVM=/home1/p001cao/app/compiler/llvm-17
-export PATH=$LLVM/bin:$PATH
+myLLVM=/home1/p001cao/app/compiler/llvm-17
+export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"                                # avoid dwarf5 error

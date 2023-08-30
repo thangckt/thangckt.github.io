@@ -1,6 +1,7 @@
 # GPAW from source
 
 ## UCX+OMPI Centos 6.9 - Tachyon
+
 GLIBC=2.12
 
 !!! note
@@ -13,7 +14,7 @@ See [compile UCX](./UCX.md)
 
 Test
 ``` sh
-module load tooldev/ucx-1.15-gcc
+module load tooldev/ucx-1.15
 ucx_info -d | grep Transport
 ```
 
@@ -41,11 +42,12 @@ git checkout 6.2.2  # master  6.2.2
 rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
-module load compiler/gcc-11
+module load compiler/llvm-17
 
-myGCC=/home1/p001cao/app/compiler/gcc-11
-export PATH=$myGCC/bin:$PATH
-export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FC=$myGCC/bin/gfortran
+myLLVM=/home1/p001cao/app/compiler/llvm-17
+export PATH=$myLLVM/bin:$PATH
+export CC=clang export CXX=clang++
+export LDFLAGS="-fuse-ld=lld -lrt"
 myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
 
 cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
@@ -54,25 +56,14 @@ make -j 16 && make install
 ```
 
 ### OpenBLAS
-OpenBLAS contains BLAS and LAPACK
+
+See [compile OpenMPI-4](./OpenBLAS.md)
+
+To use
 ```sh
-cd /home1/p001cao/0SourceCode/tooldev
-# git clone https://github.com/xianyi/OpenBLAS.git openBLAS
-cd openBLAS
-git checkout v0.3.23
-rm -rf build && mkdir build && cd build
+export myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.so
 
-module load tooldev/cmake-3.27
-module load compiler/gcc-11
-
-myGCC=/home1/p001cao/app/compiler/gcc-11
-export PATH=$myGCC/bin:$PATH
-export CC=$myGCC/bin/gcc export CXX=$myGCC/bin/g++ export FC=$myGCC/bin/gfortran
-myPREFIX=/home1/p001cao/app/tooldev/openBLAS-0.3.23
-
-cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
-
-make -j 16 && make install
+-DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS}
 ```
 
 ### Libs need MPI
