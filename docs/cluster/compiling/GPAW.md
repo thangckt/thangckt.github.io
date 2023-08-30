@@ -164,10 +164,10 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pip 
+conda install -y --update-specs -c conda-forge python=3.11 pip
 ```
 
-### pillow
+#### pillow
 
 https://pillow.readthedocs.io/en/stable/installation.html
 
@@ -184,7 +184,7 @@ source activate py11gpaw_source
 pip install -e .
 ```
 
-### GPAW
+#### GPAW
 
 !!! note
 
