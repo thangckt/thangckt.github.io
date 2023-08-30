@@ -184,7 +184,7 @@ source activate py11gpaw_source
 module load mpi/fftw3.3.10-ompi4.1.x-gcc11
 module load mpi/elpa2023.05-ompi4.1.x-gcc11
 module load mpi/libvdwxc-ompi4.1.x-gcc11
-module load mpi/scaLAPACK-2.2
+module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
 module load tooldev/libxc-6.2.2
 module load tooldev/openBLAS-0.3.23
 module load mpi/ompi4.1.x-gcc11
