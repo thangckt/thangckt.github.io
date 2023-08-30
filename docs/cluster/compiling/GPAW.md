@@ -19,8 +19,13 @@ ucx_info -d | grep Transport
 
 ### OMPI
 
+See [compile OpenMPI-4](./OpenMPI_4.md)
 
-
+Test
+``` sh
+module load mpi/ompi4.1.x-gcc11
+mpirun --version
+```
 
 ### libxc
 !!! note
