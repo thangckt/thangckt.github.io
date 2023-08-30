@@ -7,6 +7,7 @@ GLIBC=2.12
 !!! note
 
     - ucx-infiniband conda does not work. So need [compile GPAW from source](https://wiki.fysik.dtu.dk/gpaw/platforms/Linux/centos.html)
+    - use LLVM
 
 ### UCX
 
@@ -78,7 +79,7 @@ See [compile scaLAPACK and BLACS](./scaLAPACK_BLACS.md)
 
 #### FFTW
 
-
+See [compile FFTW](./FFTW.md)
 
 #### Elpa
 Don't use master
