@@ -17,8 +17,9 @@ module load tooldev/cmake-3.27
 module load compiler/llvm-17
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
+myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myLLVM/bin:$PATH
-export CC=clang export CXX=clang++
+export CC=clang export CXX=clang++ export FC=$myGCC/bin/gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 myPREFIX=/home1/p001cao/app/tooldev/openBLAS-0.3.23
 
