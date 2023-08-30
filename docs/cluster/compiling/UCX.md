@@ -105,12 +105,12 @@ cd ucx-1.12.0
 mkdir build && cd build
 ```
 
-## Compile with GCC
 
-### USC2
+## Tachyon
+
+### GCC
 
 ```note
-- Error: No components were able to be opened in the pml framework: not solve
 - do not use GCC-11 to avoid error: Dwarf Error: found dwarf version '5', use: export CFLAGS='-gdwarf-4 -gstrict-dwarf'
 export CFLAGS='-gdwarf-4 -gstrict-dwarf'
 ```
@@ -130,18 +130,25 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 ```
 
 ``` sh
-rm -rf build && mkdir build  &&  cd build
+# tar xvf ucx-1.13.1.tar.gz
+cd ucx-1.15.0
 
-module load compiler/gcc-13
-
-export PATH=/home1/p001cao/app/compiler/gcc-13/bin:$PATH
-export CC=gcc export CXX=gcc++ FORTRAN=gfortran
-export LDFLAGS="-lrt"
-export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15
+module load compiler/gcc-11
+myGCC=/home1/p001cao/app/compiler/gcc-11
+export PATH=$myGCC/bin:$PATH
+export CFLAGS="-gdwarf-2 -gstrict-dwarf"
+export CFLAGS="-Wno-shadow"
+export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
 make -j 16 && make install
+```
+
+Test
+``` sh
+module load tooldev/ucx-1.15-gcc
+ucx_info -d | grep Transport
 ```
 
 Option:
@@ -158,7 +165,66 @@ CFLAGS="-I$myNUMA/include" \
 ../contrib/configure-release  --enable-optimizations
 ```
 
-### USC1 (eagle)
+### LLVM
+
+**From source code**
+
+???+ note
+    - consider to update: `autoconf`, `libtool`, and `automake`
+    - To solve error with `libuct_ib.la: command not found`, use `./contrib/configure-release` but not `/configure`
+    - It deos not work with clang 16 (not use now).
+
+
+```shell
+cd /home1/p001cao/0SourceCode/tooldev
+# git clone --branch v1.15.x https://github.com/openucx/ucx.git  ucx-1.15.x
+cd ucx-1.15.x
+git pull origin v1.15.x
+
+module load tooldev/autoconf-2.72c
+module load tooldev/automake-1.16.5
+module load tooldev/libtool-2.4.7
+export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
+
+./autogen.sh
+```
+
+#### Building
+
+```shell
+rm -rf build && mkdir build  &&  cd build
+
+module load compiler/llvm-17          # clang + lld
+
+export PATH=/home1/p001cao/app/compiler/llvm-17/bin:$PATH
+export CC=clang export CXX=clang++
+export LDFLAGS="-fuse-ld=lld -lrt"
+export CFLAGS='-gdwarf-4 -gstrict-dwarf'
+export CFLAGS="-Wno-unused-but-set-variable"
+export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15
+
+
+../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
+#### Make module file
+
+at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2"
+
+```shell
+# for Tcl script use only
+set     topdir          /home1/p001cao/app/tooldev/ucx-1.15
+
+prepend-path    PATH                    $topdir/bin
+prepend-path    INCLUDE                 $topdir/include
+prepend-path    LD_LIBRARY_PATH         $topdir/lib
+prepend-path    PKG_CONFIG_PATH         $topdir/lib/pkgconfig
+```
+
+
+## USC1 (eagle)
 
 ```shell
 module load tooldev/binutils-2.36              # gold
@@ -347,79 +413,4 @@ cd xpmem-2.6.3
 ./configure --prefix=/home1/p001cao/app/tooldev/xpmem-2.6.2
 ```
 
-## Compile with LLVM
 
-### USC2
-
-#### Prepare source code
-
-Use one of these two following options (now using **from source code**)
-
-**From pre-configured Release**
-
-???+ note
-    - ucx-1.12.1 cause compiling error due to missing file. But ucx-1.13 work
-    - "-fuse-ld=lld -lrt" error with ucx-1.12.0, so use 'gold' temporary. But lld work with ucx-1.13
-
-
-```shell
-cd /home1/p001cao/local/wSourceCode/tooldev
-tar xvf ucx-1.13.1.tar.gz
-cd ucx-1.13.1
-```
-
-**From source code**
-
-???+ note
-    - consider to update: `autoconf`, `libtool`, and `automake`
-    - To solve error with `libuct_ib.la: command not found`, use `./contrib/configure-release` but not `/configure`
-    - It deos not work with clang 16 (not use now).
-
-
-```shell
-cd /home1/p001cao/0SourceCode/tooldev
-# git clone --branch v1.15.x https://github.com/openucx/ucx.git  ucx-1.15.x
-cd ucx-1.15.x
-git pull origin v1.15.x
-
-module load tooldev/autoconf-2.72c
-module load tooldev/automake-1.16.5
-module load tooldev/libtool-2.4.7
-export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
-
-./autogen.sh
-```
-
-#### Building
-
-```shell
-rm -rf build && mkdir build  &&  cd build
-
-module load compiler/llvm-17          # clang + lld
-
-export PATH=/home1/p001cao/app/compiler/llvm-17/bin:$PATH
-export CC=clang export CXX=clang++
-export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS='-gdwarf-4 -gstrict-dwarf'
-export CFLAGS="-Wno-unused-but-set-variable"
-export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15
-
-
-../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --prefix=${myPREFIX}
-
-make -j 16 && make install
-```
-
-#### Make module file
-
-at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2"
-
-```shell
-# for Tcl script use only
-set     topdir          /home1/p001cao/app/tooldev/ucx-1.15
-
-prepend-path    PATH                    $topdir/bin
-prepend-path    INCLUDE                 $topdir/include
-prepend-path    LD_LIBRARY_PATH         $topdir/lib
-prepend-path    PKG_CONFIG_PATH         $topdir/lib/pkgconfig
-```

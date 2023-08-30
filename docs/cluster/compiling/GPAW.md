@@ -8,26 +8,8 @@ GLIBC=2.12
     - ucx-infiniband conda does not work. So need [compile GPAW from source](https://wiki.fysik.dtu.dk/gpaw/platforms/Linux/centos.html)
 
 ### UCX
-- Be sure that ucx to recognize IB. `UCT modules:   < ib cma knem >`
 
-``` sh
-cd /home1/p001cao/0SourceCode/tooldev
-# wget https://github.com/openucx/ucx/releases/download/v1.13.1/ucx-1.13.1.tar.gz    # v1.15.0-rc3/ucx-1.15.0.tar.gz
-# tar xvf ucx-1.13.1.tar.gz
-cd ucx-1.15.0
-rm -rf build_ase && mkdir build_ase  &&  cd build_ase
-
-module load compiler/gcc-11
-myGCC=/home1/p001cao/app/compiler/gcc-11
-export PATH=$myGCC/bin:$PATH
-export CFLAGS="-gdwarf-2 -gstrict-dwarf"
-export CFLAGS="-Wno-shadow"
-export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
-
-../contrib/configure-release --enable-mt --prefix=${myPREFIX}
-
-make -j 16 && make install
-```
+See [compile UCX](./UCX.md)
 
 Test
 ``` sh
@@ -239,7 +221,7 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pillow
+conda install -y --update-specs -c conda-forge python=3.11 pip
 ```
 
 ``` sh
