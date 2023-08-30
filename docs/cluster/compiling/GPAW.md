@@ -181,15 +181,15 @@ conda install -y conda libzlib=1.2.11 ase
 module load conda/conda3
 source activate py11gpaw_source
 
-module load mpi/fftw3.3.10-ompi4.1.x-gcc11
-module load mpi/elpa2023.05-ompi4.1.x-gcc11
-module load mpi/libvdwxc-ompi4.1.x-gcc11
+module load mpi/fftw3.3.10-ompi4.1.x-clang17
+module load mpi/elpa2023.05-ompi4.1.x-clang17
+module load mpi/libvdwxc-ompi4.1.x-clang17
 module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
+module load mpi/ompi4.1.x-clang17
 module load tooldev/libxc-6.2.2
 module load tooldev/openBLAS-0.3.23
-module load mpi/ompi4.1.x-gcc11
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90 export F77=mpif77
@@ -217,30 +217,30 @@ include_dirs += [xcdir + '/include']
 runtime_library_dirs = [xcdir + '/lib64']
 
 mpi = True
-mpidir='/home1/p001cao/app/openmpi/4.1.x-gcc11'
+mpidir='/home1/p001cao/app/openmpi/4.1.x-clang17'
 compiler = mpidir+'/bin/mpicc'
 library_dirs += [mpidir+'/lib']
 include_dirs += [mpidir+'/include']
 
 fftw = True
 libraries = ['fftw3']
-library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11/lib']
-include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11/include']
+library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17/lib']
+include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17/include']
 
 scalapack = True
 libraries += ['scalapack']
 library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK-2.2/lib']
 
 elpa = True
-elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11'
+elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-clang17'
 libraries += ['elpa_openmp']
 library_dirs += [elpadir+'/lib']
 include_dirs += [elpadir+'/include/elpa_openmp-2023.05.001']
 
 libvdwxc = True
 libraries += ['vdwxc']
-library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11/lib']
-include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11/include']
+library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-clang17/lib']
+include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-clang17/include']
 ```
 
 2. Install
