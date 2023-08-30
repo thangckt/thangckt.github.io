@@ -187,6 +187,8 @@ OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90 export F77=mpif77
+export LDFLAGS="-fuse-ld=lld -lrt"
+export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 ```
 
 ``` sh
