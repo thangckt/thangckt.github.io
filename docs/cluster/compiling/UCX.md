@@ -196,15 +196,16 @@ rm -rf build && mkdir build  &&  cd build
 
 module load compiler/llvm-17          # clang + lld
 
-export PATH=/home1/p001cao/app/compiler/llvm-17/bin:$PATH
+myLLVM=/home1/p001cao/app/compiler/llvm-17
+export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS='-gdwarf-4 -gstrict-dwarf'
+export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 export CFLAGS="-Wno-unused-but-set-variable"
 export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15
 
 
-../contrib/configure-release --enable-mt --with-rc --with-dc --with-ud --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
