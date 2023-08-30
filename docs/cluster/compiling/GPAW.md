@@ -164,12 +164,12 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pip
+conda install -y --update-specs -c conda-forge python=3.11 pip pillow
 ```
 
 #### pillow
 
-https://pillow.readthedocs.io/en/stable/installation.html
+<!-- https://pillow.readthedocs.io/en/stable/installation.html
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
@@ -183,7 +183,7 @@ source activate py11gpaw_source
 module load compiler/llvm-17
 
 pip install -e .
-```
+``` -->
 
 #### GPAW
 
@@ -210,12 +210,6 @@ export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90 export 
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 ```
-
-<!-- Install `pillow`:
-``` sh
-export CC=gcc  export CXX=g++
-pip install pillow
-``` -->
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
