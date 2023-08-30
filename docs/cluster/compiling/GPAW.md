@@ -164,7 +164,24 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pip  pyproject-parser
+conda install -y --update-specs -c conda-forge python=3.11 pip 
+```
+
+### pillow
+
+https://pillow.readthedocs.io/en/stable/installation.html
+
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+# git clone https://github.com/python-pillow/Pillow pillow
+cd pillow
+# git checkout 23.6.1
+rm -rf build
+
+module load conda/conda3
+source activate py11gpaw_source
+
+pip install -e .
 ```
 
 ### GPAW
