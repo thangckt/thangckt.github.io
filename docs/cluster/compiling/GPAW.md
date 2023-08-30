@@ -18,32 +18,9 @@ ucx_info -d | grep Transport
 ```
 
 ### OMPI
-!!! note
 
-   - `--with-verbs` (default - auto detect)
 
-```sh
-cd /home1/p001cao/0SourceCode
-cd ompi-4.1.x
-rm -rf build_ase && mkdir build_ase && cd build_ase
 
-module load compiler/gcc-11
-myGCC=/home1/p001cao/app/compiler/gcc-11
-export PATH=$myGCC/bin:$PATH
-export CFLAGS="-gdwarf-2 -gstrict-dwarf"
-export myUCX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
-export myPREFIX=/home1/p001cao/app/openmpi/4.1.x-gcc11
-
-../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
-
-make -j 16 && make install
-```
-
-Test
-``` sh
-module load mpi/ompi4.1.x-gcc11
-mpirun --version
-```
 
 ### libxc
 !!! note
