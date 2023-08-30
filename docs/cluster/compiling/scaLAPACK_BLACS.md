@@ -8,7 +8,8 @@
 
 ## Tachyon - Centos 6.9
 
-### OpenMPI+LLVM (inuse)
+### OpenMPI+LLVM
+ Error:
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
@@ -23,6 +24,7 @@ module load tooldev/openBLAS-0.3.23
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++ export FC=mpifort export F90=mpif90 export F77=mpif77
+export CFLAGS="-Wno-implicit-function-declaration"
 export myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.so
 myPREFIX=/home1/p001cao/app/mpi/scaLAPACK-2.2
 
