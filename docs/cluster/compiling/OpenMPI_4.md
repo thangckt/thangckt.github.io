@@ -311,7 +311,7 @@ LLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$LLVM/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
+export CFLAGS="-gdwarf-2 -gstrict-dwarf"                                # avoid dwarf5 error
 myUCX=/home1/p001cao/app/tooldev/ucx-1.15
 myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang17
 
