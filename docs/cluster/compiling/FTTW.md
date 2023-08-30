@@ -50,18 +50,6 @@ export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
 --prefix=/uhome/p001cao/app/fftw/3.3.10-ompi5.0-gcc11.2
 ```
 
-### USC2
-
-```shell
-module load mpi/ompi4.1.3-gcc10.3
-export PATH=$PATH:/home1/p001cao/app/openmpi/4.1.3-gcc10.3/bin
-export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
-
-../configure --enable-sse2 \
---enable-threads --enable-openmp --enable-mpi --enable-shared \
---prefix=/home1/p001cao/app/fftw/3.3.10-ompi4.1.3-gcc10.3
-```
-
 ### CAN-GPU
 
 ```shell
@@ -93,13 +81,12 @@ set     topdir          /uhome/p001cao/app/fftw/3.3.10-ompi5.0-gcc11.2
 prepend-path    PATH                $topdir/bin
 prepend-path    INCLUDE             $topdir/include
 prepend-path    LD_LIBRARY_PATH     $topdir/lib
-
 prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 ```
 
-## Compile with OMPI + LLVM
+## USC2
 
-### USC2
+### With OMPI + LLVM
 
 ```shell
 cd /home1/p001cao/0SourceCode/tooldev
@@ -113,6 +100,25 @@ export PATH=/home1/p001cao/app/openmpi/4.1.x-clang17/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
 export myPREFIX=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
+
+../configure --enable-sse2 --enable-threads --enable-openmp --enable-mpi --enable-shared --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
+
+### With OMPI + GCC
+
+```shell
+cd fftw-3.3.10
+rm -rf build_ase && mkdir build_ase && cd build_ase
+
+module load mpi/ompi4.1.x-gcc11
+
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
+export PATH=$OPENMPI/bin:$PATH
+export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
+export myPREFIX=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11
 
 ../configure --enable-sse2 --enable-threads --enable-openmp --enable-mpi --enable-shared --prefix=${myPREFIX}
 
