@@ -204,7 +204,6 @@ export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 export CFLAGS="-Wno-unused-but-set-variable"
 export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15
 
-
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
 make -j 16 && make install
