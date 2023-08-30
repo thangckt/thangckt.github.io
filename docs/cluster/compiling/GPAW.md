@@ -180,6 +180,7 @@ rm -rf build
 
 module load conda/conda3
 source activate py11gpaw_source
+module load compiler/llvm-17
 
 pip install -e .
 ```
