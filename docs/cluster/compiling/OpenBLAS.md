@@ -25,3 +25,20 @@ cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
 make -j 16 && make install
 ```
+
+### LLVM 17
+
+```sh
+module load tooldev/cmake-3.27
+module load compiler/llvm-17
+
+myLLVM=/home1/p001cao/app/compiler/llvm-17
+export PATH=$myLLVM/bin:$PATH
+export CC=clang export CXX=clang++
+export LDFLAGS="-fuse-ld=lld -lrt"
+myPREFIX=/home1/p001cao/app/tooldev/openBLAS-0.3.23
+
+cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+
+make -j 16 && make install
+```
