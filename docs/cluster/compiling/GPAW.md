@@ -272,6 +272,7 @@ pip install -e .
 3. Test
 ``` sh
 gpaw test
+
 gpaw install-data --register gpaw-datasets
 ```
 
