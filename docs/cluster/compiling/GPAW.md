@@ -103,16 +103,18 @@ rm -rf build && mkdir build && cd build
 
 ```sh
 module load mpi/scaLAPACK-2.2
-module load mpi/ompi4.1.x-gcc11
+module load mpi/ompi4.1.x-clang17
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
-export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
+export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
+export LDFLAGS="-fuse-ld=lld -lrt"
+
 myScaLapack=/home1/p001cao/app/mpi/scaLAPACK-2.2
 export SCALAPACK_LDFLAGS="-L$myScaLapack/lib"
 export SCALAPACK_FCFLAGS="-L$myScaLapack/lib"
-export myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-gcc11
 export CFLAGS=" -mmmx -msse -msse2 -mssse3 -msse4.1 -msse4.2 "
+myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-clang17
 
 ../configure --with-mpi=yes --enable-openmp --without-threading-support-check-during-build \
 --disable-sse --disable-avx --disable-avx2 --enable-avx512=no --prefix=${myPREFIX}
@@ -132,16 +134,17 @@ cd libvdwxc
 ./autogen.sh
 rm -rf build && mkdir build && cd build
 
-module load mpi/fftw3.3.10-ompi4.1.x-gcc11
-module load mpi/ompi4.1.x-gcc11
+module load mpi/fftw3.3.10-ompi4.1.x-clang17
+module load mpi/ompi4.1.x-clang17
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
-export CC=mpicc  export CXX=mpic++  export FORTRAN=mpifort  export F90=mpif90
+export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
 export CFLAGS="-O3 -march=native"
 export FCFLAGS="-g -O2"
-myPREFIX=/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-gcc11
-myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11
+export LDFLAGS="-fuse-ld=lld -lrt"
+myPREFIX=/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-clang17
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 
 ../configure --with-mpi --with-fftw3=$myFFTW --prefix=$myPREFIX
 
