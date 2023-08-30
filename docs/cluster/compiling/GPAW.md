@@ -162,7 +162,7 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pip
+conda install -y --update-specs -c conda-forge python=3.11 pip pillow
 ```
 
 ``` sh
@@ -215,6 +215,8 @@ xcdir = '/home1/p001cao/app/tooldev/libxc-6.2.2'
 library_dirs += [xcdir + '/lib64']
 include_dirs += [xcdir + '/include']
 runtime_library_dirs = [xcdir + '/lib64']
+
+# nolibxc = True  # use GPAW's libxc
 
 mpi = True
 mpidir='/home1/p001cao/app/openmpi/4.1.x-clang17'
