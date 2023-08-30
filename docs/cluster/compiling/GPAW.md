@@ -68,11 +68,12 @@ export myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.so
 
 ### Libs need MPI
 
-#### scalapack and BLACS
+#### scaLAPACK and BLACS
 !!! note
 
     - BLACS is a part of scaLAPACK, don't need to install it separately.
     - sometimes, need `-DMPI_C_COMPILER=$OPENMPI/bin/mpicc -DCMAKE_Fortran_COMPILER=$OPENMPI/bin/mpif90 `
+
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
