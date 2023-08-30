@@ -247,13 +247,12 @@ extra_link_args = ['-fopenmp']
 2. Install
 ``` sh
 pip install -e .
-
-gpaw install-data --register gpaw-datasets
 ```
 
 3. Test
 ``` sh
 gpaw test
+gpaw install-data --register gpaw-datasets
 ```
 
 
