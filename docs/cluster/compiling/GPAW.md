@@ -164,7 +164,7 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pillow
+conda install -y --update-specs -c conda-forge python=3.11 pillow matplotlib=3.7.0
 ```
 
 #### GPAW
@@ -197,7 +197,13 @@ export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 
 Install ASE
 ``` sh
-pip install git+https://gitlab.com/ase/ase.git
+cd /home1/p001cao/0SourceCode/tooldev
+git clone https://gitlab.com/ase/ase.git
+cd ase
+git checkout master   #  master 3.22.1
+rm -rf build
+
+pip install -e .
 ```
 
 
@@ -205,7 +211,7 @@ pip install git+https://gitlab.com/ase/ase.git
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
-git checkout 23.6.1   # 23.6.1  master  22.8.0
+git checkout master   # 23.6.1  master  22.8.0
 rm -rf build
 ```
 
