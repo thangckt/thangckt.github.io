@@ -207,9 +207,9 @@ export GPAW_FFTWSO=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17/lib/fftw3
 Install ASE
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
-git clone https://gitlab.com/ase/ase.git
+# git clone https://gitlab.com/ase/ase.git
 cd ase
-git checkout master   #  master 3.22.1
+git checkout 3.19.0    #  master 3.22.1
 rm -rf build
 
 pip install -e .
