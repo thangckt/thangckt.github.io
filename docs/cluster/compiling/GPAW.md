@@ -159,18 +159,19 @@ Don't install gcc, pillow, to avoid address error.
 
 ``` sh
 module load conda/conda3
-conda create -y -n py11gpaw_source python=3.10
+conda create -y -n py11gpaw_source python=3.11
 source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.10 pillow matplotlib=3.7.0
+conda install -y --update-specs -c conda-forge python=3.11 pillow
 ```
 
 ``` sh
 module load conda/conda3
 conda create -y -n py9gpaw_source python=3.9.0
 source activate py9gpaw_source
+
 conda install -y --update-specs -c conda-forge python=3.9.0
 ```
 
