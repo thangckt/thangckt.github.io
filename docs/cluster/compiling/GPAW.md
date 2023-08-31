@@ -155,7 +155,7 @@ make -j 16 && make install
 ### conda env
 Install all libs without needed MPI in conda to save time: libxc, matplotlib,..
 
-Use python 9
+Use python 9, python 11 error compile pillow
 
 ``` sh
 module load conda/conda3
@@ -171,6 +171,8 @@ conda install -y --update-specs -c conda-forge python=3.11 pillow
 module load conda/conda3
 conda create -y -n py9gpaw_source python=3.9.0
 source activate py9gpaw_source
+# conda install -y --revision 0
+conda clean -a -y
 
 conda install -y --update-specs -c conda-forge python=3.9.0
 ```
