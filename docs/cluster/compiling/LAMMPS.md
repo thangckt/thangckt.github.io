@@ -1038,9 +1038,9 @@ module load mpi/ompi4.1.x-clang17
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=${OPENMPI}/bin:$PATH
-export CC=mpicc  export CXX=mpic++  export FC=mpifort
+export CC=mpicc CXX=mpic++ FC=mpifort MPICC=mpicc MPICXX=mpic++
 export LDFLAGS="-fuse-ld=lld -lrt"
-# export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
+export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 ## python (require py3), BLAS+LAPACK
 myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.so
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH   # to avoid using libstdc++.so in conda
