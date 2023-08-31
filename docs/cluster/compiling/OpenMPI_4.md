@@ -315,7 +315,7 @@ export CFLAGS="-gdwarf-2 -gstrict-dwarf"                                # avoid 
 myUCX=/home1/p001cao/app/tooldev/ucx-1.15
 myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang17
 
-../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
+../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 
 make  -j 16 && make install
 ```

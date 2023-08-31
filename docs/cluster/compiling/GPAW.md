@@ -214,9 +214,11 @@ cd /home1/p001cao/0SourceCode/tooldev
 cd gpaw
 git checkout master   # 23.6.1  master  22.8.0
 rm -rf build
+
+pip install -e .
 ```
 
-1. Create file `siteconfig.py`
+NOTE: Create file `siteconfig.py`
 ``` py
 condadir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
 library_dirs = [condadir+'/lib']
@@ -261,12 +263,7 @@ extra_compile_args = ['-fopenmp']
 extra_link_args = ['-fopenmp']
 ```
 
-2. Install
-``` sh
-pip install -e .
-```
-
-3. Test
+Test
 ``` sh
 gpaw test
 
