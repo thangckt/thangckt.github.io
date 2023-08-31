@@ -155,8 +155,6 @@ make -j 16 && make install
 ### conda env
 Install all libs without needed MPI in conda to save time: libxc, matplotlib,..
 
-Don't install gcc, pillow, to avoid address error.
-
 ``` sh
 module load conda/conda3
 conda create -y -n py11gpaw_source python=3.11
