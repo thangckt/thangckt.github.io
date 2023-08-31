@@ -107,7 +107,7 @@ module load mpi/ompi4.1.x-clang17
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
-export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
+export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90
 export LDFLAGS="-fuse-ld=lld -lrt"
 
 myScaLapack=/home1/p001cao/app/mpi/scaLAPACK-2.2
@@ -164,26 +164,8 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pip pillow
+conda install -y --update-specs -c conda-forge python=3.11 pillow
 ```
-
-#### pillow
-
-<!-- https://pillow.readthedocs.io/en/stable/installation.html
-
-``` sh
-cd /home1/p001cao/0SourceCode/tooldev
-# git clone https://github.com/python-pillow/Pillow pillow
-cd pillow
-# git checkout 23.6.1
-rm -rf build
-
-module load conda/conda3
-source activate py11gpaw_source
-module load compiler/llvm-17
-
-pip install -e .
-``` -->
 
 #### GPAW
 
@@ -203,14 +185,21 @@ module load mpi/ompi4.1.x-clang17
 module load tooldev/libxc-6.2.2
 module load tooldev/openBLAS-0.3.23
 
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
-export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export MPICC=mpicc MPICXX=mpic++             #
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 ```
+
+Install ASE
+``` sh
+pip install git+https://gitlab.com/ase/ase.git
+```
+
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
