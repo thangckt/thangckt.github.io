@@ -193,6 +193,7 @@ export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export MPICC=mpicc MPICXX=mpic++             #
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS='-gdwarf-2 -gstrict-dwarf'
+export GPAW_FFTWSO=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17/lib/fftw3.so
 ```
 
 Install ASE
