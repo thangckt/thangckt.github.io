@@ -207,40 +207,42 @@ nav:
   - mediaLib: thangckt.github.io/mediaLib
 
   - Cluster:
-    - Compiling:
-      - LAMMPS: cluster/compiling/LAMMPS.md
-      - GCC: cluster/compiling/compile_GCC.md
-      - Open MPI: cluster/compiling/compile_openMPI.md
-      - cluster/compiling/Plumed.md
-      - cluster/compiling/CP2K.md
-      - cluster/compiling/CMake.md
-      - cluster/compiling/Libtool.md
-      - cluster/compiling/compile_UCX.md
-      - cluster/compiling/compile_FTTW.md
-      - cluster/compiling/binutils_linker.md
-      - cluster/compiling/9_MPI_window.md
-      - cluster/compiling/LLVM.md
-      - cluster/compiling/11_Conda_MPI.md
-      - cluster/compiling/12_PMIX.md
-      - cluster/compiling/Dependencies.md
-      - cluster/compiling/conda_install.md
-      - cluster/compiling/conda_manager_packages.md
-      - cluster/compiling/conda_hybrid.md
-    - Setting:
-      - cluster/appSetting/Pip.md
-      - cluster/appSetting/Latex_TexStudio.md
-      - cluster/appSetting/Latex_VScode.md
-      - cluster/appSetting/3_JupyterLab.md
-      - cluster/appSetting/setting_VScode.md
-      - cluster/appSetting/5_git.md
-      - cluster/appSetting/6_Lammps.md
-      - cluster/appSetting/7_packing_python.md
-      - cluster/appSetting/8_WSL.md
-      - cluster/appSetting/NGC_container.md
-      - cluster/appSetting/sge.md
+    - Compile:
+      - LAMMPS: cluster/compile/LAMMPS.md
+      - GCC: cluster/compile/compile_GCC.md
+      - OpenMPI:
+        - cluster/compile/openMPI_4.md
+        - cluster/compile/openMPI_5.md
+      - cluster/compile/Plumed.md
+      - cluster/compile/CP2K.md
+      - cluster/compile/CMake.md
+      - cluster/compile/Libtool.md
+      - cluster/compile/UCX.md
+      - cluster/compile/FTTW.md
+      - cluster/compile/binutils_linker.md
+      - cluster/compile/9_MPI_window.md
+      - cluster/compile/LLVM.md
+      - cluster/compile/11_Conda_MPI.md
+      - cluster/compile/12_PMIX.md
+      - cluster/compile/Dependencies.md
+      - cluster/compile/conda_install.md
+      - cluster/compile/conda_manager_packages.md
+      - cluster/compile/conda_hybrid.md
+    - Config:
+      - cluster/appConfig/Pip.md
+      - cluster/appConfig/Latex_TexStudio.md
+      - cluster/appConfig/Latex_VScode.md
+      - cluster/appConfig/3_JupyterLab.md
+      - cluster/appConfig/setting_VScode.md
+      - cluster/appConfig/5_git.md
+      - cluster/appConfig/6_Lammps.md
+      - cluster/appConfig/7_packing_python.md
+      - cluster/appConfig/8_WSL.md
+      - cluster/appConfig/NGC_container.md
+      - cluster/appConfig/sge.md
+      - cluster/appConfig/VScode_perspectives.md
+      - cluster/appConfig/check_mail.md
     - Useful:
-      - cluster/appSetting/VScode_perspectives.md
-      - cluster/appSetting/check_mail.md
       - cluster/refPage/cheatsheet.md
       - cluster/refPage/docs_syntax.md
 
