@@ -193,6 +193,7 @@ Type `open settings`
 ### Latex-workshop
 
 ```js
+	//==== Latex-workshop
 	"latex-workshop.latex.recipe.default": "latexmk -> copyPDF",
 	"latex-workshop.latex.outDir": "0outdir",
 	"latex-workshop.latex.autoBuild.run": "onSave",
@@ -205,14 +206,31 @@ Type `open settings`
 	"latex-workshop.view.pdf.viewer": "tab",
 	// "latex-workshop.view.pdf.invert": 1,
 	// "latex-workshop.view.pdf.invertMode.grayscale": 0.6,
-	//== Compile latex
+	//== Compile latex : https://tex.stackexchange.com/questions/615318/vs-code-latex-change-only-pdf-out-dir
 	"latex-workshop.latex.recipes": [
 		{
-			"name": "latexmk -> copyPDF",
+			"name": "latexmk -> copy_pdf_Windows",
 			"tools": [
 				"latexmk",
-				"copyPDFshell"
-			]
+				"copy_pdf_Windows"
+			] // or "copy_pdf_LinuxnMac" if you are on linux or mac
+		},
+		{
+			"name": "latexmk -> copy_pdf_LinuxnMac",
+			"tools": [
+				"latexmk",
+				"copy_pdf_LinuxnMac"
+			] // or "copy_pdf_LinuxnMac" if you are on linux or mac
+		},
+		{
+			"name": "pdflatex -> bibtex -> pdflatex * 2",
+			"tools": [
+				"pdflatex",
+				"bibtex",
+				"pdflatex",
+				"pdflatex",
+				"copy_pdf_Windows"
+			] // or "copy_pdf_LinuxnMac" if you are on linux or mac
 		}
 	],
 	"latex-workshop.latex.tools": [
@@ -221,16 +239,56 @@ Type `open settings`
 			"command": "latexmk",
 			"args": [
 				"--shell-escape",
+				"-f",
 				"-synctex=1",
 				"-interaction=nonstopmode",
 				"-file-line-error",
 				"-pdf",
-				"-f",
 				"-outdir=%OUTDIR%",
 				"%DOC%",
 			],
 			"env": {}
 		},
+		{
+			"name": "pdflatex",
+			"command": "pdflatex",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"%DOC%"
+			],
+			"env": {}
+		},
+		{
+			"name": "bibtex",
+			"command": "bibtex",
+			"args": [
+				"%DOCFILE%"
+			],
+			"env": {}
+		},
+		//== Tool to copy PDF
+		{
+			"name": "copy_pdf_Windows",
+			"command": "copy",
+			"args": [
+				"%OUTDIR_W32%\\%DOCFILE%.pdf",
+				"%DIR_W32%\\"
+			]
+		},
+		{
+			"name": "copy_pdf_LinuxnMac",
+			"command": "cp",
+			"args": [
+				"%OUTDIR%/%DOCFILE%.pdf",
+				"%DIR%/"
+			]
+		}
+	],
+```
+Old tool for copy PDF
+``` js
 		//== Tool to copy PDF
 		{
 			"name": "copyPDFcmd",
