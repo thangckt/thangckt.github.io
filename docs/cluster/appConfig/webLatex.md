@@ -39,3 +39,9 @@ Just need to create file `.devcontainer/devcontainer.json` in root folder of the
 ```
 
 Note that, WeLatex only work in Codespace. What is difference between `github.dev` and `Codespace` [see here](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)
+
+We can connect to Codespace from github.dev: Run and Debug -> work on...
+
+- Create new Codespace
+- Clone and open locally
+- Open remote repo without cloning it (extension Remote repo)
