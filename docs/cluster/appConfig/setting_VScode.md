@@ -194,6 +194,9 @@ Type `open settings`
 
 ```js
 	//==== Latex-workshop
+	"latex-workshop.latex.clean.fileTypes": [
+		"*.aux",
+	],
 	"latex-workshop.latex.recipe.default": "latexmk -> copy_pdf_Windows",
 	"latex-workshop.latex.outDir": "0outdir",
 	"latex-workshop.latex.autoBuild.run": "onSave",
@@ -204,8 +207,14 @@ Type `open settings`
 	"latex-workshop.synctex.synctexjs.enabled": true,
 	"latex-workshop.synctex.afterBuild.enabled": true,
 	"latex-workshop.view.pdf.viewer": "tab",
+	"latex-workshop.latex.autoClean.run": "onBuilt",
+	"latex-workshop.latex.clean.subfolder.enabled": true,
+	//== pdf dark mode (2 first lines of 3 last lines)
 	// "latex-workshop.view.pdf.invert": 1,
 	// "latex-workshop.view.pdf.invertMode.grayscale": 0.6,
+	// "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#171717", // For Dark Viewwer
+	// "latex-workshop.view.pdf.color.dark.pageColorsForeground": "#FFFFFF", // For Dark Viewer
+	// "latex-workshop.view.pdf.color.dark.backgroundColor": "#171717", // For Dark Viewer
 	//== Compile latex : https://tex.stackexchange.com/questions/615318/vs-code-latex-change-only-pdf-out-dir
 	"latex-workshop.latex.recipes": [
 		{
