@@ -194,7 +194,7 @@ Type `open settings`
 
 ```js
 	//==== Latex-workshop
-	"latex-workshop.latex.recipe.default": "latexmk -> copyPDF",
+	"latex-workshop.latex.recipe.default": "latexmk -> copy_pdf_Windows",
 	"latex-workshop.latex.outDir": "0outdir",
 	"latex-workshop.latex.autoBuild.run": "onSave",
 	"latex-workshop.texcount.autorun": "onSave",
@@ -284,30 +284,6 @@ Type `open settings`
 				"%OUTDIR%/%DOCFILE%.pdf",
 				"%DIR%/"
 			]
-		}
-	],
-```
-Old tool for copy PDF
-``` js
-		//== Tool to copy PDF
-		{
-			"name": "copyPDFcmd",
-			"command": "cmd.exe",
-			"args": [
-				"/c",
-				"copy",
-				"'%OUTDIR%\\%DOCFILE%.pdf'",
-				"%DIR%",
-			],
-			"env": {}
-		},
-		{
-			"name": "copyPDFshell",
-			"command": "powershell.exe",
-			"args": [
-				"copy '%OUTDIR%\\%DOCFILE%.pdf' %DIR%" //  copy move
-			],
-			"env": {}
 		}
 	],
 ```
