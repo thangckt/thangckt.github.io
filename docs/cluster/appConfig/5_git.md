@@ -1,7 +1,3 @@
----
-sort: 10
----
-
 # Use git
 
 ## 1. Download a Repo (clone)
