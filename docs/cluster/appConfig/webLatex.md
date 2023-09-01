@@ -37,3 +37,5 @@ Just need to create file `.devcontainer/devcontainer.json` in root folder of the
     }
 }
 ```
+
+Note that, WeLatex only work in Codespace. What is difference between `github.dev` and `Codespace` [see here](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)
