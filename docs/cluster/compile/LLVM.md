@@ -196,7 +196,7 @@ cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
 make -j 16 && make install
 ```
 
-## LLVM 17
+### LLVM 17
 
 !!! note
 
