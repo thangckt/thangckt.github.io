@@ -312,3 +312,11 @@ rm -rf build
 
 pip install --no-cache-dir -e .
 ```
+
+module load conda/conda3
+conda create -y -n py9gpaw_source python=3.7.0
+source activate py9gpaw_source
+# conda install -y --revision 0
+conda clean -a -y
+
+conda install -y --update-specs -c conda-forge python=3.7
