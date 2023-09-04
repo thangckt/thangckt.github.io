@@ -382,3 +382,52 @@ rm -rf build
 
 pip install .  --prefix=$condadir
 ```
+
+NOTE: Create file `siteconfig.py`
+``` py
+library_dirs = []
+include_dirs = []
+
+# condadir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
+# library_dirs += [condadir+'/lib']
+# include_dirs += [condadir+'/include']
+
+# libraries = ['xc']
+# xcdir = '/home1/p001cao/app/tooldev/libxc5.1.4-gcc9'
+# library_dirs += [xcdir + '/lib64']
+# include_dirs += [xcdir + '/include']
+# runtime_library_dirs = [xcdir + '/lib64']
+
+nolibxc = True  # use GPAW's libxc
+# xcdir = condadir
+
+mpi = True
+mpidir='/home1/p001cao/app/openmpi/4.1.x-clang17'
+compiler = mpidir+'/bin/mpicc'
+library_dirs += [mpidir+'/lib']
+include_dirs += [mpidir+'/include']
+undef_macros = ['GPAW_MPI_INPLACE']
+
+fftw = True
+libraries = ['fftw3']
+library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17/lib']
+include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17/include']
+
+scalapack = True
+libraries += ['scalapack']
+library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK2.2-ompi4.1.x-clang17/lib']
+
+elpa = True
+elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-clang17'
+libraries += ['elpa_openmp']
+library_dirs += [elpadir+'/lib']
+include_dirs += [elpadir+'/include/elpa_openmp-2023.05.001']
+
+libvdwxc = True
+libraries += ['vdwxc']
+library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-clang17/lib']
+include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-clang17/include']
+
+extra_compile_args = ['-fopenmp']
+extra_link_args = ['-fopenmp']
+```
