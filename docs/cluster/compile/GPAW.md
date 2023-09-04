@@ -224,12 +224,12 @@ Use python 9, python 11 error compile pillow
 
 ``` sh
 module load conda/conda3
-conda create -y -n py11gpaw_source python=3.11
+conda create -y -n py11gpaw_source python=3.11.4
 source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pillow libstdcxx-ng=9
+conda install -y --update-specs -c conda-forge python=3.11.4 pillow libstdcxx-ng=9
 ```
 
 ``` sh
@@ -265,8 +265,8 @@ module load mpi/ompi4.1.5-gcc9-noUCX             # use openmpi-4.1.5
 
 OPENMPI=/home1/p001cao/app/openmpi/4.1.5-gcc9-noUCX
 export PATH=$OPENMPI/bin:$PATH
-export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
-export MPICC=mpicc MPICXX=mpic++
+export CC=$OPENMPI/bin/mpicc CXX=$OPENMPI/bin/mpic++
+export MPICC=$OPENMPI/bin/mpicc MPICXX=mpic++
 myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 ```
@@ -287,7 +287,7 @@ pip install -e .
 cd /home1/p001cao/0SourceCode/tooldev      # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
-git checkout master   # 23.6.1  master  22.8.0
+git checkout 23.6.1   # 23.6.1  master  22.8.0
 rm -rf build
 
 pip install .              # --prefix=$condadir
