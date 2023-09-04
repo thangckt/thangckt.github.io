@@ -202,25 +202,25 @@ make -j 16 && make install
 
     - do not use GCC-13, since some source can not recognize compiler version
     - projects with errors: PROJECTS="mlir;flang;clang-tools-extra;"  RUNTIMES="libc;libclc;libcxx;libcxxabi". Try with few projects, then increasing.
-    - LLVM 16 cause error `aligned_alloc` (mlir) --> add following lines in the file where error comes
-    ```
-    #include <stdlib.h>
+    - LLVM 16 cause error: `'aligned_alloc' was not declared in this scope` (mlir) --> add following lines in the `namespace` of the file where error comes
+        ```c
+        #include <stdlib.h>
 
-    void* aligned_alloc(size_t alignment, size_t size) {
-        void* ptr;
-        if (posix_memalign(&ptr, alignment, size) != 0) {
-            return NULL;
+        void* aligned_alloc(size_t alignment, size_t size) {
+            void* ptr;
+            if (posix_memalign(&ptr, alignment, size) != 0) {
+                return NULL;
+            }
+            return ptr;
         }
-        return ptr;
-    }
-    ```
+        ```
     - to disable "mlir", we must disable "flang", since Enabling MLIR as a dependency to flang
     - error `‘PTRACE_SEIZE’ was not declared` --> add following lines in the file where error comes
-    ```
-    #ifndef PTRACE_SEIZE
-    #define PTRACE_SEIZE ((__ptrace_request)0x4206)
-    #endif
-    ```
+        ```c
+        #ifndef PTRACE_SEIZE
+        #define PTRACE_SEIZE ((__ptrace_request)0x4206)
+        #endif
+        ```
     - must update newer `binutils`, to avoid zip error
     - Use GCC-11.4
     - `conda install gcc_linux-64=11.2 zlib=1.2.11 libzlib-1.2.11 `
