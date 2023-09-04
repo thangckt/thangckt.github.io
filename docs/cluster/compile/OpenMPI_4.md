@@ -358,7 +358,7 @@ export CFLAGS="-gdwarf-2 -gstrict-dwarf"
 myUCX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
 myPREFIX=/home1/p001cao/app/openmpi/4.1.x-gcc11
 
-../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
+../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
@@ -381,7 +381,7 @@ export PATH=$myGCC/bin:$PATH
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-gcc9
 myPREFIX=/home1/p001cao/app/openmpi/4.1.5-gcc9
 
-../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
+../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
