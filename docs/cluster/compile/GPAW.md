@@ -300,7 +300,6 @@ export PATH=$OPENMPI/bin:$PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export MPICC=mpicc MPICXX=mpic++             #
-export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 ```
 
