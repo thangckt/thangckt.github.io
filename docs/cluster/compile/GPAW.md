@@ -205,7 +205,7 @@ export MPICC=mpicc MPICXX=mpic++
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS="-g0"   # "-gdwarf-2 -gstrict-dwarf"
+# export CFLAGS="-g0"   # "-gdwarf-2 -gstrict-dwarf"
 ```
 
 Install ASE
