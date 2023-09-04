@@ -41,7 +41,7 @@ GCC
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/libxc/libxc.git libxc
 cd libxc
-git checkout 6.2.2  # master  6.2.2
+git checkout 5.1.4        # master  6.2.2  5.1.4
 rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
@@ -50,7 +50,7 @@ module load compiler/gcc-9.5
 myGCC=/home2/app/compiler/gcc/9.5.0
 export PATH=$myGCC/bin:$PATH
 export CC=$myGCC/bin/gcc CXX=$myGCC/bin/g++
-myPREFIX=/home1/p001cao/app/tooldev/libxc6.2.2-gcc9
+myPREFIX=/home1/p001cao/app/tooldev/libxc5.1.4-gcc9
 
 cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
@@ -224,12 +224,12 @@ Use python 9, python 11 error compile pillow
 
 ``` sh
 module load conda/conda3
-conda create -y -n py11gpaw_source python=3.11.4
+conda create -y -n py11gpaw_source python=3.11.0
 source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11.4 pillow libstdcxx-ng=9
+conda install -y --update-specs -c conda-forge python=3.11.5 pillow
 ```
 
 ``` sh
@@ -253,7 +253,7 @@ conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy
 ##### GCC 9
 ``` sh
 module load conda/conda3
-source activate py9gpaw_source
+source activate py11gpaw_source
 condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
 module load mpi/fftw3.3.10-ompi4.1.5-gcc9
