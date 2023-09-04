@@ -247,7 +247,6 @@ myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
 export CC=gcc CXX=g++ FC=gfortran
 export LDFLAGS="-fuse-ld=gold -lrt"
-export CFLAGS="-Wno-implicit-function-declaration"
 myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12     # avoid zlib hidden by conda
 myFREFIX=/home1/p001cao/app/compiler/llvm-17
 
