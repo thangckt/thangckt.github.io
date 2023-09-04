@@ -261,13 +261,13 @@ module load mpi/libvdwxc-ompi4.1.5-gcc9
 module load mpi/scaLAPACK2.2-ompi4.1.5-gcc9
 module load tooldev/libxc6.2.2-gcc9
 module load tooldev/openBLAS0.3.23-gcc9
-module load mpi/ompi4.1.5-gcc9             # use openmpi-4.1.5
+module load mpi/ompi4.1.5-gcc9-noUCX             # use openmpi-4.1.5
 
-myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9
-OPENMPI=/home1/p001cao/app/openmpi/4.1.5-gcc9
+OPENMPI=/home1/p001cao/app/openmpi/4.1.5-gcc9-noUCX
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export MPICC=mpicc MPICXX=mpic++
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 ```
 
