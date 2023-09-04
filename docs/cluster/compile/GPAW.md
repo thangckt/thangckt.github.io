@@ -239,7 +239,7 @@ source activate py9gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11
+conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy=1.6 numpy=1.22
 ```
 
 #### GPAW
@@ -248,12 +248,13 @@ conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11
 
     - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
     - use "-gdwarf-2 -gstrict-dwarf" cuase error
+    - with gcc9, must use `scipy=1.6 numpy=1.22`
 
 ##### GCC 9
 ``` sh
 module load conda/conda3
 source activate py9gpaw_source
-condadir=/home1/p001cao/app/miniconda3/envs/py9gpaw_source
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
 module load mpi/fftw3.3.10-ompi4.1.5-gcc9
 module load mpi/elpa2023.05-ompi4.1.5-gcc9
@@ -290,7 +291,7 @@ cd gpaw
 git checkout 23.6.1   # 23.6.1  master  22.8.0
 rm -rf build
 
-pip install .              # --prefix=$condadir
+pip install .  --prefix=$condadir
 ```
 
 NOTE: Create file `siteconfig.py`
