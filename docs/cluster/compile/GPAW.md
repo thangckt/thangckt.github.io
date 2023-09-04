@@ -174,7 +174,7 @@ source activate py9gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy=1.9
+conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy=1.9.0
 ```
 
 #### GPAW
@@ -226,7 +226,7 @@ cd gpaw
 git checkout master   # 23.6.1  master  22.8.0
 rm -rf build
 
-pip install . --upgrade --force-reinstall --prefix=$condadir
+pip install . --upgrade --prefix=$condadir
 ```
 
 NOTE: Create file `siteconfig.py`
