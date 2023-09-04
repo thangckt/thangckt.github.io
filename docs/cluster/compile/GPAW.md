@@ -224,7 +224,7 @@ cd gpaw
 git checkout master   # 23.6.1  master  22.8.0
 rm -rf build
 
-pip install -e .
+pip install --no-cache-dir -e .
 ```
 
 NOTE: Create file `siteconfig.py`
