@@ -252,8 +252,8 @@ conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11
 ##### GCC 9
 ``` sh
 module load conda/conda3
-source activate py11gpaw_source
-condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
+source activate py9gpaw_source
+condadir=/home1/p001cao/app/miniconda3/envs/py9gpaw_source
 
 module load mpi/fftw3.3.10-ompi4.1.5-gcc9
 module load mpi/elpa2023.05-ompi4.1.5-gcc9
