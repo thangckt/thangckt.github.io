@@ -27,7 +27,7 @@ export CC=mpicc  export CXX=mpic++ export FC=mpifort export F90=mpif90 export F7
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-Wno-implicit-function-declaration"
 export myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.so
-myPREFIX=/home1/p001cao/app/mpi/scaLAPACK-2.2
+myPREFIX=/home1/p001cao/app/mpi/scaLAPACK2.2-ompi4.1.x-clang17
 
 cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=yes -DBUILD_SHARED_LIBS=on \
 -DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS} -DCMAKE_INSTALL_PREFIX=$myPREFIX
@@ -46,7 +46,7 @@ OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++ export FC=mpifort export F90=mpif90 export F77=mpif77
 export myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.so
-myPREFIX=/home1/p001cao/app/mpi/scaLAPACK-2.2
+myPREFIX=/home1/p001cao/app/mpi/scaLAPACK2.2-ompi4.1.x-gcc11
 
 cmake .. -DUSE_OPTIMIZED_LAPACK_BLAS=yes -DBUILD_SHARED_LIBS=on \
 -DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS} -DCMAKE_INSTALL_PREFIX=$myPREFIX

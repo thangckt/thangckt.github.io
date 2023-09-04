@@ -183,6 +183,7 @@ conda install -y --update-specs -c conda-forge python=3.9.0
 
     - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
 
+##### LLVM
 ``` sh
 module load conda/conda3
 source activate py11gpaw_source
@@ -280,4 +281,35 @@ gpaw -P 4 test
 gpaw install-data --register gpaw-datasets
 ```
 
+##### GCC
+``` sh
+module load conda/conda3
+source activate py9gpaw_source
 
+module load mpi/fftw3.3.10-ompi4.1.x-gcc11
+module load mpi/elpa2023.05-ompi4.1.x-gcc11
+module load mpi/libvdwxc-ompi4.1.x-gcc11
+module load mpi/scaLAPACK2.2-ompi4.1.x-gcc11
+module load mpi/ompi4.1.x-gcc11
+module load tooldev/libxc-6.2.2
+module load tooldev/openBLAS-0.3.23
+
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
+export PATH=$OPENMPI/bin:$PATH
+export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
+export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
+export MPICC=mpicc MPICXX=mpic++             #
+export LDFLAGS="-fuse-ld=lld -lrt"
+export CFLAGS='-gdwarf-2 -gstrict-dwarf'
+```
+
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+# git clone https://gitlab.com/gpaw/gpaw.git gpaw
+cd gpaw
+git checkout master   # 23.6.1  master  22.8.0
+rm -rf build
+
+pip install --no-cache-dir -e .
+```
