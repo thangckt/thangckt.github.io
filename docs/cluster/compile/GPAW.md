@@ -348,9 +348,8 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11.4 pillow
+conda install -y --update-specs -c conda-forge python=3.11.5 pillow
 ```
-
 
 ``` sh
 condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
