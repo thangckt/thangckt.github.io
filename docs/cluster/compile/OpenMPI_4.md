@@ -323,6 +323,10 @@ make  -j 16 && make install
 
 Test:
 ```sh
+mpiexec -np 2 hello_c
+```
+
+```sh
 module load mpi/ompi4.1.x-clang17
 mpiexec --version
 ```
