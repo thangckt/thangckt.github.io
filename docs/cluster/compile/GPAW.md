@@ -7,7 +7,7 @@ GLIBC=2.12
 !!! note
 
     - ucx-infiniband conda does not work. So need [compile GPAW from source](https://wiki.fysik.dtu.dk/gpaw/platforms/Linux/centos.html)
-    - Dont use UCX to void error dwarf
+    - Dont use UCX to void error: Caught signal 11 (Segmentation fault: address not mapped)
 
 ### UCX
 
