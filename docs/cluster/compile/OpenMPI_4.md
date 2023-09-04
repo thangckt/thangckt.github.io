@@ -310,7 +310,7 @@ module load compiler/llvm-17          # clang + lld
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
-export CC=clang CXX=clang++ FC=flang
+export CC=clang CXX=clang++ FC=flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"                                # avoid dwarf5 error
 myUCX=/home1/p001cao/app/tooldev/ucx-1.15
