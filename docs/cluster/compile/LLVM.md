@@ -243,7 +243,7 @@ module load compiler/gcc-11
 
 myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
-export CC=gcc CXX=g++ FC=gfortran
+export CC=gcc CXX=g++ FC=clang-new
 export LDFLAGS="-fuse-ld=gold -lrt"
 export CXXFLAGS="-std=c++17"
 myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12     # avoid zlib hidden by conda
