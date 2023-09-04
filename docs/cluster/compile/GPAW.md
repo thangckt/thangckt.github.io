@@ -275,6 +275,7 @@ extra_link_args = ['-fopenmp']
 Test
 ``` sh
 gpaw test
+gpaw -P 4 test
 
 gpaw install-data --register gpaw-datasets
 ```
