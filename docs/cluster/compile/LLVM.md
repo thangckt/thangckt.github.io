@@ -201,7 +201,7 @@ make -j 16 && make install
 !!! note
 
     - do not use GCC-13, since some source codes can not recognize compiler version
-    - projects with errors: PROJECTS="mlir;flang;clang-tools-extra;"  RUNTIMES="libc;libclc;libcxx;libcxxabi". Try with few projects, then increasing.
+    - projects with errors: PROJECTS="mlir;flang;clang-tools-extra;libclc"  RUNTIMES="libc;libcxx;libcxxabi". Try with few projects, then increasing.
     - LLVM 16 cause error: `'aligned_alloc' was not declared in this scope` (mlir) --> add following lines in the `namespace` of the file where error comes
         ```c
         #include <stdlib.h>
@@ -251,8 +251,8 @@ myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12     # avoid zlib hidden by conda
 myFREFIX=/home1/p001cao/app/compiler/llvm-17
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
-    -DLLVM_ENABLE_PROJECTS="clang;lld;openmp;polly;flang" \
-    -DLLVM_ENABLE_RUNTIMES="pstl" \
+    -DLLVM_ENABLE_PROJECTS="clang;lld;openmp;polly;flang;libclc" \
+    -DLLVM_ENABLE_RUNTIMES="pstl;libc;libcxx;libcxxabi" \
     -DGCC_INSTALL_PREFIX=${myGCC} \
     -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,${myGCC}/lib64 -L${myGCC}/lib64" \
     -DCMAKE_CXX_STANDARD=17 -DCMAKE_CXX_STANDARD_REQUIRED=ON \
