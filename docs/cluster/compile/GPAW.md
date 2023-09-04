@@ -225,7 +225,7 @@ cd gpaw
 git checkout master   # 23.6.1  master  22.8.0
 rm -rf build
 
-pip install --upgrade . -u
+pip install . --user --upgrade
 ```
 
 NOTE: Create file `siteconfig.py`
