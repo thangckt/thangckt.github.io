@@ -194,7 +194,7 @@ module load mpi/fftw3.3.10-ompi4.1.x-clang17
 module load mpi/elpa2023.05-ompi4.1.x-clang17
 module load mpi/libvdwxc-ompi4.1.x-clang17
 module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
-module load mpi/ompi4.1.x-clang17
+module load mpi/ompi4.1.5-clang17             # use openmpi-4.1.5
 module load tooldev/libxc-6.2.2
 module load tooldev/openBLAS-0.3.23
 
@@ -224,7 +224,7 @@ pip install -e .
 cd /home1/p001cao/0SourceCode/tooldev      # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
-git checkout master   # 23.6.1  master  22.8.0
+git checkout 23.6.1   # 23.6.1  master  22.8.0
 rm -rf build
 
 pip install . --upgrade                 # --prefix=$condadir
