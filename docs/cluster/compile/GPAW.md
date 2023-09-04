@@ -200,8 +200,8 @@ module load tooldev/openBLAS-0.3.23
 myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
-export CC=MPICC CXX=MPICXX FC=mpifort F90=mpif90 F77=mpif77
-# export MPICC = mpicc
+export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
+export MPICC=mpicc MPICXX=mpic++
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
@@ -221,7 +221,7 @@ pip install -e .
 
 
 ``` sh
-cd $condadir/lib/python3.11/site-packages      # this may important
+cd /home1/p001cao/0SourceCode/tooldev      # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
 git checkout master   # 23.6.1  master  22.8.0

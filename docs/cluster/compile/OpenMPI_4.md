@@ -283,7 +283,7 @@ mpic++ -v
 
 ```sh
 cd /home1/p001cao/0SourceCode
-# git clone --branch v4.1.x https://github.com/open-mpi/ompi.git  ompi-4.1.x
+# git clone -b v4.1.x https://github.com/open-mpi/ompi.git  ompi-4.1.x
 cd ompi-4.1.x
 git pull origin v4.1.x
 
