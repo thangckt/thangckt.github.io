@@ -203,7 +203,7 @@ export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS='-gdwarf-2 -gstrict-dwarf'
+export CFLAGS="-gdwarf-2 -gstrict-dwarf"
 ```
 
 Install ASE
