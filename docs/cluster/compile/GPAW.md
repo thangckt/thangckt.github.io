@@ -186,7 +186,7 @@ conda install -y --update-specs -c conda-forge python=3.9.0
 ##### LLVM
 ``` sh
 module load conda/conda3
-source activate py11gpaw_source
+source activate py9gpaw_source
 
 module load mpi/fftw3.3.10-ompi4.1.x-clang17
 module load mpi/elpa2023.05-ompi4.1.x-clang17
@@ -207,7 +207,7 @@ export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 ```
 
 Install ASE
-``` sh
+<!-- ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/ase/ase.git
 cd ase
@@ -215,7 +215,7 @@ git checkout master    #  master 3.22.1
 rm -rf build
 
 pip install -e .
-```
+``` -->
 
 
 ``` sh
