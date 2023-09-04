@@ -283,6 +283,7 @@ mpic++ -v
 
 ```sh
 cd /home1/p001cao/0SourceCode
+# wget https://github.com/open-mpi/ompi/releases/download/v4.1.5/ompi-4.1.5.tar.gz
 # git clone -b v4.1.x https://github.com/open-mpi/ompi.git  ompi-4.1.x
 cd ompi-4.1.x
 git pull origin v4.1.x
@@ -304,13 +305,6 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 
 
 #### Building
-
-```sh
-cd /home1/p001cao/0SourceCode
-# wget https://github.com/open-mpi/ompi/releases/download/v4.1.5/ompi-4.1.5.tar.gz
-tar xvf ompi-4.1.5.tar.gz
-cd ompi-4.1.5
-```
 
 ```sh
 rm -rf build_clang && mkdir build_clang && cd build_clang
