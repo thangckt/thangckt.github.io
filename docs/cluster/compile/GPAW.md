@@ -256,7 +256,7 @@ include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17/include']
 
 scalapack = True
 libraries += ['scalapack']
-library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK-2.2/lib']
+library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK2.2-ompi4.1.x-clang17/lib']
 
 elpa = True
 elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-clang17'
