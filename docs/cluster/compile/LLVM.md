@@ -202,17 +202,9 @@ make -j 16 && make install
 
     - do not use GCC-13, since some source codes can not recognize compiler version
     - projects with errors: PROJECTS="mlir;flang;clang-tools-extra;libclc"  RUNTIMES="libc;libcxx;libcxxabi". Try with few projects, then increasing.
-    - LLVM 16 cause error: `'aligned_alloc' was not declared in this scope` (mlir) --> add following lines in the `namespace` of the file where error comes
+    - LLVM 16 cause error: `'aligned_alloc' was not declared in this scope` (mlir) --> `aligned_alloc` should availabe with`#include <stdlib.h>`, but if system does not support it, then define it in the `namespace` of the file where error comes [see this](https://stackoverflow.com/questions/3839922/aligned-malloc-in-gcc)
         ```c
-        #include <stdlib.h>
-
-        void* aligned_alloc(size_t alignment, size_t size) {
-            void* ptr;
-            if (posix_memalign(&ptr, alignment, size) != 0) {
-                return NULL;
-            }
-            return ptr;
-        }
+        void *aligned_alloc(size_t alignment, size_t size);
         ```
     - to disable "mlir", we must disable "flang", since Enabling MLIR as a dependency to flang
     - error `‘PTRACE_SEIZE’ was not declared` --> add following lines in the file where error comes
