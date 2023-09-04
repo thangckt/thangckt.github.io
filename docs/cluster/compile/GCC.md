@@ -96,10 +96,12 @@ cd gcc-11
 ``` sh
 rm -rf build && mkdir build && cd build
 
-export PATH=/home2/app/compiler/gcc/9.5.0/bin:$PATH
+myGCC=/home2/app/compiler/gcc/9.5.0
+export PATH=$myGCC/bin:$PATH
+export LD_LIBRARY_PATH=$myGCC/lib64:$LD_LIBRARY_PATH
 
 ../configure --enable-languages=c,c++,objc,obj-c++,fortran \
-  --enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
+  --enable-gold=yes --enable-checking=release --enable-shared --disable-multilib --with-system-zlib \
   --prefix=/home1/p001cao/app/compiler/gcc-11
 
 make -j 16 && make install
