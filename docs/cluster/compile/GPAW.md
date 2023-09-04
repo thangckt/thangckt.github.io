@@ -7,7 +7,7 @@ GLIBC=2.12
 !!! note
 
     - ucx-infiniband conda does not work. So need [compile GPAW from source](https://wiki.fysik.dtu.dk/gpaw/platforms/Linux/centos.html)
-    - use LLVM
+    - Use GCC9 to avoid error
 
 ### UCX
 
@@ -20,6 +20,7 @@ ucx_info -d | grep Transport
 ```
 
 ### OMPI
+Use openmpi-4.1.5, dont use higher
 
 See [compile OpenMPI-4](./OpenMPI_4.md)
 

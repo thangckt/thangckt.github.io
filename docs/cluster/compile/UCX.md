@@ -108,7 +108,7 @@ mkdir build && cd build
 
 ## Tachyon
 
-### GCC
+### GCC 11
 
 ```note
 - do not use GCC-11 to avoid error: Dwarf Error: found dwarf version '5', use: export CFLAGS='-gdwarf-4 -gstrict-dwarf'
@@ -164,6 +164,24 @@ CFLAGS="-I$myNUMA/include" \
 
 ../contrib/configure-release  --enable-optimizations
 ```
+
+### GCC 9
+``` sh
+# tar xvf ucx-1.13.1.tar.gz
+cd ucx-1.15.0
+rm -rf build_gcc && mkdir build_gcc && cd build_gcc
+
+module load compiler/gcc-9.5
+myGCC=/home2/app/compiler/gcc/9.5.0
+export PATH=$myGCC/bin:$PATH
+export CFLAGS="-Wno-shadow"
+export myPREFIX=/home1/p001cao/app/tooldev/ucx1.15-gcc9
+
+../contrib/configure-release --enable-mt --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
 
 ### LLVM
 

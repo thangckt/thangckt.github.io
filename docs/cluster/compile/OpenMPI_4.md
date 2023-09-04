@@ -344,7 +344,7 @@ export my_hwloc=/home1/p001cao/app/tool_dev/hwloc-2.8.0
 --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc}
 ```
 
-### GCC
+### GCC 11
 
 ```sh
 cd /home1/p001cao/0SourceCode
@@ -367,4 +367,21 @@ Test
 ``` sh
 module load mpi/ompi4.1.x-gcc11
 mpirun --version
+```
+
+### GCC 9
+```sh
+cd /home1/p001cao/0SourceCode
+cd ompi-4.1.5
+rm -rf build_gcc && mkdir build_gcc && cd build_gcc
+
+module load compiler/gcc-9.5
+myGCC=/home2/app/compiler/gcc/9.5.0
+export PATH=$myGCC/bin:$PATH
+myUCX=/home1/p001cao/app/tooldev/ucx1.15-gcc9
+myPREFIX=/home1/p001cao/app/openmpi/4.1.5-gcc9
+
+../configure --with-sge --with-ucx=${myUCX} --prefix=${myPREFIX}
+
+make -j 16 && make install
 ```
