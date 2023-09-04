@@ -224,8 +224,9 @@ cd /home1/p001cao/0SourceCode/tooldev
 cd gpaw
 git checkout master   # 23.6.1  master  22.8.0
 rm -rf build
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
-pip install . --user --upgrade
+pip install . --upgrade --prefix=$condadir
 ```
 
 NOTE: Create file `siteconfig.py`
