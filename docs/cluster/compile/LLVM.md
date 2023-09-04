@@ -46,8 +46,9 @@ git pull origin release/14.x
 mkdir build && cd build
 ```
 
-## LLVM 14
-### Tachyon - Centos 6.9
+## Tachyon - Centos 6.9
+
+### LLVM 14
 
 #### use GCC
 
@@ -124,7 +125,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${myCOMPILER}/lib
     [2] [Dynamic relocs, runtime overflows and -fPIC](https://tinyurl.com/2bw9jo5q)
 
 
-### Module file
+#### Module file
 
 at directory: /home1/p001cao/local/1myModfiles/compiler --> create file "llvm-14"
 
@@ -221,12 +222,8 @@ make -j 16 && make install
     #endif
     ```
     - must update newer `binutils`, to avoid zip error
-
-
-### USC2: Tachyon - Centos 6.9
-
-- Use GCC-11.4
-- `conda install gcc_linux-64=11.2 zlib=1.2.11 libzlib-1.2.11 `
+    - Use GCC-11.4
+    - `conda install gcc_linux-64=11.2 zlib=1.2.11 libzlib-1.2.11 `
 
 ``` sh
 cd /home1/p001cao/0SourceCode
