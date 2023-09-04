@@ -174,7 +174,7 @@ source activate py9gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 libstdcxx-ng=11.2
+conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy=1.9
 ```
 
 #### GPAW
