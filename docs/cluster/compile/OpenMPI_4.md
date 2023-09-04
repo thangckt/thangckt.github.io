@@ -385,3 +385,19 @@ myPREFIX=/home1/p001cao/app/openmpi/4.1.5-gcc9
 
 make -j 16 && make install
 ```
+
+### GCC 9 - no UCX
+```sh
+cd /home1/p001cao/0SourceCode
+cd ompi-4.1.5
+rm -rf build_gcc && mkdir build_gcc && cd build_gcc
+
+module load compiler/gcc-9.5
+myGCC=/home2/app/compiler/gcc/9.5.0
+export PATH=$myGCC/bin:$PATH
+myPREFIX=/home1/p001cao/app/openmpi/4.1.5-gcc9-noUCX
+
+../configure --with-sge --with-verbs --without-ucx --prefix=${myPREFIX}
+
+make -j 16 && make install
+```

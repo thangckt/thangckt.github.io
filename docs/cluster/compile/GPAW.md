@@ -229,7 +229,7 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11 pillow
+conda install -y --update-specs -c conda-forge python=3.11 pillow libgcc=9.5
 ```
 
 ``` sh
@@ -239,7 +239,7 @@ source activate py9gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 
+conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11
 ```
 
 #### GPAW
