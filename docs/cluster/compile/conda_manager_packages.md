@@ -160,6 +160,8 @@ source activate py11gpaw_test1
 conda install -y --update-specs -c conda-forge -c rapidsai ucx-py python=3.11.4 ucx gpaw=23 # lammps
 ```
 
+conda create -y -n py11gpaw_test "gpaw=*=*openmpi*" "ucx=*=*cpu" "openmpi=*=h*"
+
 
 other option (not work)
 ``` sh
