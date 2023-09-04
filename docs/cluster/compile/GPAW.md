@@ -7,7 +7,7 @@ GLIBC=2.12
 !!! note
 
     - ucx-infiniband conda does not work. So need [compile GPAW from source](https://wiki.fysik.dtu.dk/gpaw/platforms/Linux/centos.html)
-    - Use GCC9 to avoid error
+    - Dont use UCX to void error
 
 ### UCX
 
@@ -229,7 +229,7 @@ source activate py11gpaw_source
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11.5 pillow
+conda install -y --update-specs -c conda-forge python=3.11.5 pillow scipy=1.6 numpy=1.22
 ```
 
 ``` sh
@@ -288,7 +288,7 @@ pip install -e .
 cd /home1/p001cao/0SourceCode/tooldev      # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
-git checkout 23.6.1   # 23.6.1  master  22.8.0
+git checkout master   # 23.6.1  master  22.8.0
 rm -rf build
 
 pip install .  --prefix=$condadir
