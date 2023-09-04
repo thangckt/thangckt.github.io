@@ -306,6 +306,13 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 #### Building
 
 ```sh
+cd /home1/p001cao/0SourceCode
+# wget https://github.com/open-mpi/ompi/releases/download/v4.1.5/ompi-4.1.5.tar.gz
+tar xvf ompi-4.1.5.tar.gz
+cd ompi-4.1.5
+```
+
+```sh
 rm -rf build_clang && mkdir build_clang && cd build_clang
 
 module load compiler/llvm-17          # clang + lld
@@ -316,7 +323,7 @@ export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"                                # avoid dwarf5 error
 myUCX=/home1/p001cao/app/tooldev/ucx-1.15
-myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang17
+myPREFIX=/home1/p001cao/app/openmpi/4.1.5-clang17
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 
