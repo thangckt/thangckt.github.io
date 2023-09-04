@@ -201,7 +201,7 @@ make -j 16 && make install
 !!! note
 
     - do not use GCC-13, since some source can not recognize compiler version
-    - projects with errors: PROJECTS="mlir;flang;clang-tools-extra;"  RUNTIMES="libc;libclc;libcxx;libcxxabi"
+    - projects with errors: PROJECTS="mlir;flang;clang-tools-extra;"  RUNTIMES="libc;libclc;libcxx;libcxxabi". Try with few projects, then increasing.
     - LLVM 16 cause error `aligned_alloc` (mlir) --> add following lines in the file where error comes
     ```
     #include <stdlib.h>
