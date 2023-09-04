@@ -300,6 +300,8 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 ???+ note
 
     - To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"`. But might not be used?
+    - To solve `error: unknown argument: '-soname'` --> [see this](https://github.com/CopernicaMarketingSoftware/PHP-CPP/issues/368)
+
 
 #### Building
 
@@ -310,8 +312,7 @@ module load compiler/llvm-17          # clang + lld
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
-export CC=clang CXX=clang++ FC=flang-new
-export LIBTOOL=$myLLVM/bin/llvm-libtool-darwin
+export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"                                # avoid dwarf5 error
 myUCX=/home1/p001cao/app/tooldev/ucx-1.15
