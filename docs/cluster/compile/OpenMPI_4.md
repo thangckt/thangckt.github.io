@@ -261,6 +261,7 @@ mpic++ -v
 
 
 ## USC2(Cenntos 6.9)
+
 !!! note
 
    - `--with-verbs` (default - auto detect)
@@ -309,7 +310,7 @@ module load compiler/llvm-17          # clang + lld
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
-export CC=clang export CXX=clang++
+export CC=clang CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"                                # avoid dwarf5 error
 myUCX=/home1/p001cao/app/tooldev/ucx-1.15
@@ -318,6 +319,12 @@ myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang17
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 
 make  -j 16 && make install
+```
+
+Test:
+```sh
+module load mpi/ompi4.1.x-clang17
+mpiexec --version
 ```
 
 Other options
