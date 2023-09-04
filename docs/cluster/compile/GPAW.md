@@ -186,7 +186,7 @@ conda install -y --update-specs -c conda-forge python=3.9.0
 ##### LLVM
 ``` sh
 module load conda/conda3
-source activate py11gpaw_source
+source activate py9gpaw_source
 
 module load mpi/fftw3.3.10-ompi4.1.x-clang17
 module load mpi/elpa2023.05-ompi4.1.x-clang17
@@ -204,6 +204,7 @@ export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"
+condadir=/home1/p001cao/app/miniconda3/envs/py9gpaw_source
 ```
 
 Install ASE
@@ -224,7 +225,6 @@ cd /home1/p001cao/0SourceCode/tooldev
 cd gpaw
 git checkout master   # 23.6.1  master  22.8.0
 rm -rf build
-condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
 pip install . --upgrade --prefix=$condadir
 ```
