@@ -252,8 +252,8 @@ myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12     # avoid zlib hidden by conda
 myFREFIX=/home1/p001cao/app/compiler/llvm-17
 
 cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
-    -DLLVM_ENABLE_PROJECTS="clang;lld;openmp;polly;flang;libclc" \
-    -DLLVM_ENABLE_RUNTIMES="pstl;libc;libcxx;libcxxabi" \
+    -DLLVM_ENABLE_PROJECTS="clang;lld;openmp;polly;flang" \
+    -DLLVM_ENABLE_RUNTIMES="pstl" \
     -DGCC_INSTALL_PREFIX=${myGCC} \
     -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,${myGCC}/lib64 -L${myGCC}/lib64" \
     -DCMAKE_CXX_STANDARD_REQUIRED=ON -DLLVM_ENABLE_ZLIB=ON \
