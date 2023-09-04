@@ -247,6 +247,7 @@ myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=${myGCC}/bin:$PATH                                 # :/usr/bin
 export CC=gcc CXX=g++ FC=gfortran
 export LDFLAGS="-fuse-ld=gold -lrt"
+export CXXFLAGS="-std=c++17"
 myZLIB=/home1/p001cao/app/tooldev/zlib-1.2.12     # avoid zlib hidden by conda
 myFREFIX=/home1/p001cao/app/compiler/llvm-17
 
@@ -255,8 +256,7 @@ cmake ../llvm -DCMAKE_BUILD_TYPE=Release \
     -DLLVM_ENABLE_RUNTIMES="pstl;libc;libcxx;libcxxabi" \
     -DGCC_INSTALL_PREFIX=${myGCC} \
     -DCMAKE_CXX_LINK_FLAGS="-Wl,-rpath,${myGCC}/lib64 -L${myGCC}/lib64" \
-    -DCMAKE_CXX_STANDARD=17 -DCMAKE_CXX_STANDARD_REQUIRED=ON \
-    -DLLVM_ENABLE_ZLIB=ON \
+    -DCMAKE_CXX_STANDARD_REQUIRED=ON -DLLVM_ENABLE_ZLIB=ON \
     -DCMAKE_C_FLAGS="-flax-vector-conversions" -DCMAKE_C_FLAGS_RELEASE="-flax-vector-conversions" \
     -DZLIB_INCLUDE_DIR=${myZLIB}/include -DZLIB_LIBRARY=${myZLIB}/lib/libz.so.1.2.12 \
     -DCMAKE_INSTALL_PREFIX=${myFREFIX}
