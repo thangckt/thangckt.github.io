@@ -123,7 +123,28 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 
 rm -rf build && mkdir build && cd build
 ```
+GCC 9
+```sh
+module load mpi/scaLAPACK2.2-ompi4.1.5-gcc9
+module load mpi/ompi4.1.5-gcc9
 
+OPENMPI=/home1/p001cao/app/openmpi/4.1.5-gcc9
+export PATH=$OPENMPI/bin:$PATH
+export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90
+
+myScaLapack=/home1/p001cao/app/mpi/scaLAPACK2.2-ompi4.1.5-gcc9
+export SCALAPACK_LDFLAGS="-L$myScaLapack/lib"
+export SCALAPACK_FCFLAGS="-L$myScaLapack/lib"
+export CFLAGS=" -mmmx -msse -msse2 -mssse3 -msse4.1 -msse4.2 "
+myPREFIX=/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.5-gcc9
+
+../configure --with-mpi=yes --enable-openmp --without-threading-support-check-during-build \
+--disable-sse --disable-avx --disable-avx2 --enable-avx512=no --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
+LLVM
 ```sh
 module load mpi/scaLAPACK-2.2
 module load mpi/ompi4.1.x-clang17
@@ -152,11 +173,32 @@ https://libvdwxc.gitlab.io/libvdwxc/configuring-libvdwxc.html
 
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
-git clone https://gitlab.com/libvdwxc/libvdwxc.git
+# git clone https://gitlab.com/libvdwxc/libvdwxc.git
 cd libvdwxc
 ./autogen.sh
 rm -rf build && mkdir build && cd build
+```
 
+GCC
+```sh
+module load mpi/fftw3.3.10-ompi4.1.5-gcc9
+module load mpi/ompi4.1.5-gcc9
+
+OPENMPI=/home1/p001cao/app/openmpi/4.1.5-gcc9
+export PATH=$OPENMPI/bin:$PATH
+export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
+export CFLAGS="-O3 -march=native"
+export FCFLAGS="-g -O2"
+myPREFIX=/home1/p001cao/app/mpi/libvdwxc-ompi4.1.5-gcc9
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9
+
+../configure --with-mpi --with-fftw3=$myFFTW --prefix=$myPREFIX
+
+make -j 16 && make install
+```
+
+LLVM
+```sh
 module load mpi/fftw3.3.10-ompi4.1.x-clang17
 module load mpi/ompi4.1.x-clang17
 
@@ -207,28 +249,26 @@ conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy
     - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
     - use "-gdwarf-2 -gstrict-dwarf" cuase error
 
-##### LLVM
+##### GCC 9
 ``` sh
 module load conda/conda3
 source activate py11gpaw_source
 condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
-module load mpi/fftw3.3.10-ompi4.1.x-clang17
-module load mpi/elpa2023.05-ompi4.1.x-clang17
-module load mpi/libvdwxc-ompi4.1.x-clang17
-module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
-module load mpi/ompi4.1.5-clang17             # use openmpi-4.1.5
-module load tooldev/libxc-6.2.2
-module load tooldev/openBLAS-0.3.23
+module load mpi/fftw3.3.10-ompi4.1.5-gcc9
+module load mpi/elpa2023.05-ompi4.1.5-gcc9
+module load mpi/libvdwxc-ompi4.1.5-gcc9
+module load mpi/scaLAPACK2.2-ompi4.1.5-gcc9
+module load tooldev/libxc6.2.2-gcc9
+module load tooldev/openBLAS0.3.23-gcc9
+module load mpi/ompi4.1.5-gcc9             # use openmpi-4.1.5
 
-myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9
+OPENMPI=/home1/p001cao/app/openmpi/4.1.5-gcc9
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export MPICC=mpicc MPICXX=mpic++
-export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
-export LDFLAGS="-fuse-ld=lld -lrt"
 ```
 
 Install ASE
@@ -255,44 +295,47 @@ pip install . --upgrade                 # --prefix=$condadir
 
 NOTE: Create file `siteconfig.py`
 ``` py
-condadir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
-library_dirs = [condadir+'/lib']
-include_dirs = [condadir+'/include']
+library_dirs = []
+include_dirs = []
+
+# condadir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
+# library_dirs += [condadir+'/lib']
+# include_dirs += [condadir+'/include']
 
 # libraries = ['xc']
-# # xcdir = condadir
-# xcdir = '/home1/p001cao/app/tooldev/libxc-6.2.2'
+# xcdir = '/home1/p001cao/app/tooldev/libxc6.2.2-gcc9'
 # library_dirs += [xcdir + '/lib64']
 # include_dirs += [xcdir + '/include']
 # runtime_library_dirs = [xcdir + '/lib64']
 
 nolibxc = True  # use GPAW's libxc
+# xcdir = condadir
 
 mpi = True
-mpidir='/home1/p001cao/app/openmpi/4.1.x-clang17'
+mpidir='/home1/p001cao/app/openmpi/4.1.5-gcc9'
 compiler = mpidir+'/bin/mpicc'
 library_dirs += [mpidir+'/lib']
 include_dirs += [mpidir+'/include']
 
 fftw = True
 libraries = ['fftw3']
-library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17/lib']
-include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17/include']
+library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9/lib']
+include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9/include']
 
 scalapack = True
 libraries += ['scalapack']
-library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK2.2-ompi4.1.x-clang17/lib']
+library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK2.2-ompi4.1.5-gcc9/lib']
 
 elpa = True
-elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.x-clang17'
+elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.5-gcc9'
 libraries += ['elpa_openmp']
 library_dirs += [elpadir+'/lib']
 include_dirs += [elpadir+'/include/elpa_openmp-2023.05.001']
 
 libvdwxc = True
 libraries += ['vdwxc']
-library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-clang17/lib']
-include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.x-clang17/include']
+library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.5-gcc9/lib']
+include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.5-gcc9/include']
 
 extra_compile_args = ['-fopenmp']
 extra_link_args = ['-fopenmp']
@@ -305,35 +348,27 @@ gpaw -P 4 test         # gpaw test
 gpaw install-data --register $condadir/share/gpaw
 ```
 
-##### GCC
+##### LLVM
 ``` sh
 module load conda/conda3
-source activate py9gpaw_source
+source activate py11gpaw_source
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
-module load mpi/fftw3.3.10-ompi4.1.x-gcc11
-module load mpi/elpa2023.05-ompi4.1.x-gcc11
-module load mpi/libvdwxc-ompi4.1.x-gcc11
-module load mpi/scaLAPACK2.2-ompi4.1.x-gcc11
-module load mpi/ompi4.1.x-gcc11
+module load mpi/fftw3.3.10-ompi4.1.x-clang17
+module load mpi/elpa2023.05-ompi4.1.x-clang17
+module load mpi/libvdwxc-ompi4.1.x-clang17
+module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
+module load mpi/ompi4.1.5-clang17             # use openmpi-4.1.5
 module load tooldev/libxc-6.2.2
 module load tooldev/openBLAS-0.3.23
 
-myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
-export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
-export MPICC=mpicc MPICXX=mpic++             #
-export CFLAGS='-gdwarf-2 -gstrict-dwarf'
-```
-
-``` sh
-cd /home1/p001cao/0SourceCode/tooldev
-# git clone https://gitlab.com/gpaw/gpaw.git gpaw
-cd gpaw
-git checkout master   # 23.6.1  master  22.8.0
-rm -rf build
-
-pip install -e .
+export MPICC=mpicc MPICXX=mpic++
+export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
+export LDFLAGS="-fuse-ld=lld -lrt"
 ```
 

@@ -90,7 +90,7 @@ prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
 
 ```shell
 cd /home1/p001cao/0SourceCode/tooldev
-tar -xvzf fftw-3.3.10.tar.gz
+# tar -xvzf fftw-3.3.10.tar.gz
 cd fftw-3.3.10
 rm -rf build_LLVM && mkdir build_LLVM && cd build_LLVM
 
@@ -113,12 +113,12 @@ make -j 16 && make install
 cd fftw-3.3.10
 rm -rf build_ase && mkdir build_ase && cd build_ase
 
-module load mpi/ompi4.1.x-gcc11
+module load mpi/ompi4.1.5-gcc9
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-gcc11
+OPENMPI=/home1/p001cao/app/openmpi/4.1.5-gcc9
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc  export CXX=mpic++  export FC=mpifort  export F90=mpif90
-export myPREFIX=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-gcc11
+export myPREFIX=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9
 
 ../configure --enable-sse2 --enable-threads --enable-openmp --enable-mpi --enable-shared --prefix=${myPREFIX}
 
