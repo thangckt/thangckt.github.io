@@ -182,6 +182,7 @@ conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy
 !!! note
 
     - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
+    - use "-gdwarf-2 -gstrict-dwarf" cuase error
 
 ##### LLVM
 ``` sh
@@ -205,7 +206,6 @@ export MPICC=mpicc MPICXX=mpic++
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
-# export CFLAGS="-gdwarf-4"   # "-gdwarf-2 -gstrict-dwarf"
 ```
 
 Install ASE
