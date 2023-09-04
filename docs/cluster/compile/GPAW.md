@@ -7,7 +7,7 @@ GLIBC=2.12
 !!! note
 
     - ucx-infiniband conda does not work. So need [compile GPAW from source](https://wiki.fysik.dtu.dk/gpaw/platforms/Linux/centos.html)
-    - Dont use UCX to void error
+    - Dont use UCX to void error dwarf
 
 ### UCX
 
@@ -217,20 +217,17 @@ make -j 16 && make install
 ```
 
 
-### conda env
-Install all libs without needed MPI in conda to save time: libxc, matplotlib,..
+#### GPAW
 
-Use python 9, python 11 error compile pillow
+!!! note
 
-``` sh
-module load conda/conda3
-conda create -y -n py11gpaw_source python=3.11.0
-source activate py11gpaw_source
-# conda install -y --revision 0
-conda clean -a -y
+    - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
+    - libxc cause error:
 
-conda install -y --update-specs -c conda-forge python=3.11.5 pillow scipy=1.6 numpy=1.22
-```
+##### GCC 9
+!!! note
+
+    - with gcc9, must use `scipy=1.6 numpy=1.22` --> suitable for py=3.9
 
 ``` sh
 module load conda/conda3
@@ -242,18 +239,7 @@ conda clean -a -y
 conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy=1.6 numpy=1.22
 ```
 
-#### GPAW
-
-!!! note
-
-    - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
-    - use "-gdwarf-2 -gstrict-dwarf" cuase error
-    - with gcc9, must use `scipy=1.6 numpy=1.22`
-
-##### GCC 9
 ``` sh
-module load conda/conda3
-source activate py11gpaw_source
 condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
 module load mpi/fftw3.3.10-ompi4.1.5-gcc9
@@ -272,8 +258,8 @@ myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 ```
 
-Install ASE
-<!-- ``` sh
+<!-- Install ASE
+ ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/ase/ase.git
 cd ase
@@ -350,26 +336,49 @@ gpaw install-data --register $condadir/share/gpaw
 ```
 
 ##### LLVM
+
+!!! note
+
+    - `scipy=1.6 numpy=1.22` cannot install in py=3.11 --> require higher GCC --> use LLVM
+
 ``` sh
 module load conda/conda3
+conda create -y -n py11gpaw_source python=3.11.0
 source activate py11gpaw_source
+# conda install -y --revision 0
+conda clean -a -y
+
+conda install -y --update-specs -c conda-forge python=3.11.5 pillow
+```
+
+
+``` sh
 condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
 module load mpi/fftw3.3.10-ompi4.1.x-clang17
 module load mpi/elpa2023.05-ompi4.1.x-clang17
 module load mpi/libvdwxc-ompi4.1.x-clang17
 module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
-module load mpi/ompi4.1.5-clang17             # use openmpi-4.1.5
-module load tooldev/libxc-6.2.2
-module load tooldev/openBLAS-0.3.23
+# module load tooldev/libxc6.2.2-clang17
+module load tooldev/openBLAS0.3.23-clang17
+module load mpi/ompi4.1.x-clang17-noUCX             # use openmpi-4.1.5
 
-myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
+OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17-noUCX
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export MPICC=mpicc MPICXX=mpic++
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
 ```
 
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev                 # this may important
+# git clone https://gitlab.com/gpaw/gpaw.git gpaw
+cd gpaw
+git checkout master   # 23.6.1  master  22.8.0
+rm -rf build
+
+pip install .  --prefix=$condadir
+```

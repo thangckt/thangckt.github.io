@@ -354,7 +354,7 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
-myPREFIX=/home1/p001cao/app/openmpi/4.1.5-clang17-noUCX
+myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang17-noUCX
 
 ../configure --with-sge --with-verbs --without-ucx --prefix=${myPREFIX}
 
