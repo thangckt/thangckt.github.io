@@ -344,6 +344,23 @@ export my_hwloc=/home1/p001cao/app/tool_dev/hwloc-2.8.0
 --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc}
 ```
 
+### LLVM - no UCX
+```sh
+rm -rf build_clang && mkdir build_clang && cd build_clang
+
+module load compiler/llvm-17          # clang + lld
+
+myLLVM=/home1/p001cao/app/compiler/llvm-17
+export PATH=$myLLVM/bin:$PATH
+export CC=clang CXX=clang++ FC=gfortran        # flang-new
+export LDFLAGS="-fuse-ld=lld -lrt"
+myPREFIX=/home1/p001cao/app/openmpi/4.1.5-clang17-noUCX
+
+../configure --with-sge --with-verbs --without-ucx --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
 ### GCC 11
 
 ```sh
