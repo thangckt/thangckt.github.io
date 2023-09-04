@@ -45,11 +45,11 @@ git checkout 6.2.2  # master  6.2.2
 rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
-module load compiler/llvm-17
-
 module load compiler/gcc-9.5
+
 myGCC=/home2/app/compiler/gcc/9.5.0
 export PATH=$myGCC/bin:$PATH
+export CC=$myGCC/bin/gcc CXX=$myGCC/bin/g++
 myPREFIX=/home1/p001cao/app/tooldev/libxc6.2.2-gcc9
 
 cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
@@ -72,7 +72,7 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
-myPREFIX=/home1/p001cao/app/tooldev/libxc-6.2.2
+myPREFIX=/home1/p001cao/app/tooldev/libxc6.2.2-llvm17
 
 cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
@@ -85,7 +85,7 @@ See [compile OpenBLAS](./OpenBLAS.md)
 
 To use
 ```sh
-export myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.so
+export myBLAS=/home1/p001cao/app/tooldev/openBLAS0.3.23-gcc9/lib64/libopenblas.so
 
 -DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS}
 ```
