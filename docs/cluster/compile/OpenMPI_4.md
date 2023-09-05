@@ -302,6 +302,7 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 
     - To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"`. But might not be used?
     - To solve `error: unknown argument: '-soname'` --> [see this](https://github.com/CopernicaMarketingSoftware/PHP-CPP/issues/368)
+    - dont use export CFLAGS="-gdwarf-2 -gstrict-dwarf"
 
 
 #### Building
@@ -315,9 +316,8 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS="-gdwarf-2 -gstrict-dwarf"                                # avoid dwarf5 error
-myUCX=/home1/p001cao/app/tooldev/ucx-1.15
-myPREFIX=/home1/p001cao/app/openmpi/4.1.5-clang17
+myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
+myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.15
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 
@@ -346,7 +346,7 @@ export my_hwloc=/home1/p001cao/app/tool_dev/hwloc-2.8.0
 
 ### LLVM - no UCX
 ```sh
-rm -rf build_clang && mkdir build_clang && cd build_clang
+rm -rf build_noUCX && mkdir build_noUCX && cd build_noUCX
 
 module load compiler/llvm-17          # clang + lld
 
@@ -354,7 +354,7 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
-myPREFIX=/home1/p001cao/app/openmpi/4.1.x-clang17-noUCX
+myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX
 
 ../configure --with-sge --with-verbs --without-ucx --prefix=${myPREFIX}
 
