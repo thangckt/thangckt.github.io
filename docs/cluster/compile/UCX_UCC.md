@@ -191,6 +191,7 @@ make -j 16 && make install
     - consider to update: `autoconf`, `libtool`, and `automake`
     - To solve error with `libuct_ib.la: command not found`, use `./contrib/configure-release` but not `/configure`
     - It deos not work with clang 16 (not use now).
+    - May error `gdwarf`
 
 
 ```shell
@@ -218,7 +219,7 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS='-gdwarf-2 -gstrict-dwarf'
+export CFLAGS='-g gdwarf-2 -gstrict-dwarf'
 export CFLAGS="-Wno-unused-but-set-variable"
 myPREFIX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 
