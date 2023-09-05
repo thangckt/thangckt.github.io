@@ -35,7 +35,10 @@
 [Open MPI](https://www.open-mpi.org/) is a Message Passing Interface (MPI) library project combining technologies and resources from several other projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI).
 
 <br>
-<br>
+
+!!! note
+
+    - OpenIB is an very old Infiband and is not maintained. So newer OpenMPI uses UCX, and openIB will be remove in OpenMPI-5 [see this](https://github.com/open-mpi/ompi/issues/11755)
 
 
 ???+ note
