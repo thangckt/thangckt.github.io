@@ -230,7 +230,7 @@ make -j 16 && make install
 UCC:
 ```shell
 cd /home1/p001cao/0SourceCode/tooldev
-# git clone --branch master https://github.com/openucx/ucx.git  ucc
+# git clone --branch master https://github.com/openucx/ucc.git  ucc
 cd ucc
 git pull origin master
 
@@ -250,7 +250,6 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS="-Wno-unused-but-set-variable"
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 myPREFIX=/home1/p001cao/app/tooldev/ucc1.2
 
