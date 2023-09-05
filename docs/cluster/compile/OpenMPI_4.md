@@ -373,7 +373,7 @@ myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"
 myUCX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
-myPREFIX=/home1/p001cao/app/openmpi/4.1.x-gcc11
+myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-gcc11
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
 
@@ -412,7 +412,7 @@ rm -rf build_gcc && mkdir build_gcc && cd build_gcc
 module load compiler/gcc-9.5
 myGCC=/home2/app/compiler/gcc/9.5.0
 export PATH=$myGCC/bin:$PATH
-myPREFIX=/home1/p001cao/app/openmpi/4.1.5-gcc9-noUCX
+myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.5-gcc9-noUCX
 
 ../configure --with-sge --with-verbs --without-ucx --prefix=${myPREFIX}
 
