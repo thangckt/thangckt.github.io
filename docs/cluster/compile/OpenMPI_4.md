@@ -39,6 +39,7 @@
 !!! note
 
     - OpenIB is an very old Infiband and is not maintained. So newer OpenMPI uses UCX, and openIB will be remove in OpenMPI-5 [see this](https://github.com/open-mpi/ompi/issues/11755)
+    - There is also UCC
 
 
 ???+ note
@@ -314,6 +315,7 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 rm -rf build_llvm && mkdir build_llvm && cd build_llvm
 
 module load compiler/llvm-17          # clang + lld
+module load tooldev/ucc1.2
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
