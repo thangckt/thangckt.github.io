@@ -220,9 +220,41 @@ export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS='-gdwarf-2 -gstrict-dwarf'
 export CFLAGS="-Wno-unused-but-set-variable"
-export myPREFIX=/home1/p001cao/app/tooldev/ucx1.15-clang17
+myPREFIX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
+UCC:
+```shell
+cd /home1/p001cao/0SourceCode/tooldev
+# git clone --branch master https://github.com/openucx/ucx.git  ucc
+cd ucc
+git pull origin master
+
+module load tooldev/autoconf-2.72c
+module load tooldev/automake-1.16.5
+module load tooldev/libtool-2.4.7
+export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
+
+./autogen.sh
+```
+```shell
+rm -rf build && mkdir build  &&  cd build
+
+module load compiler/llvm-17          # clang + lld
+
+myLLVM=/home1/p001cao/app/compiler/llvm-17
+export PATH=$myLLVM/bin:$PATH
+export CC=clang export CXX=clang++
+export LDFLAGS="-fuse-ld=lld -lrt"
+export CFLAGS="-Wno-unused-but-set-variable"
+myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
+myPREFIX=/home1/p001cao/app/tooldev/ucc1.2
+
+../configure --with-ucx=${myUCX} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
