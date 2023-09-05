@@ -108,7 +108,7 @@ mkdir build && cd build
 
 ## Tachyon
 
-### GCC 11
+### UCX 15 - GCC 11
 
 ```note
 - do not use GCC-11 to avoid error: Dwarf Error: found dwarf version '5', use: export CFLAGS='-gdwarf-4 -gstrict-dwarf'
@@ -138,7 +138,7 @@ myGCC=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myGCC/bin:$PATH
 export CFLAGS="-gdwarf-2 -gstrict-dwarf"
 export CFLAGS="-Wno-shadow"
-export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15-gcc
+export myPREFIX=/home1/p001cao/app/tooldev/ucx1.15-gcc11
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
@@ -165,7 +165,7 @@ CFLAGS="-I$myNUMA/include" \
 ../contrib/configure-release  --enable-optimizations
 ```
 
-### GCC 9
+### UCX 15 - GCC 9
 ``` sh
 # tar xvf ucx-1.13.1.tar.gz
 cd ucx-1.15.0
@@ -183,7 +183,7 @@ make -j 16 && make install
 ```
 
 
-### LLVM
+### UCX 15 - LLVM
 
 **From source code**
 
@@ -207,7 +207,7 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 ./autogen.sh
 ```
 
-#### Building
+**Building**
 
 ```shell
 rm -rf build && mkdir build  &&  cd build
@@ -227,7 +227,28 @@ export myPREFIX=/home1/p001cao/app/tooldev/ucx-1.15
 make -j 16 && make install
 ```
 
-#### Make module file
+
+### UCX 13 - LLVM
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev
+tar xvf ucx-1.13.1.tar.gz
+cd ucx-1.13.1
+rm -rf build && mkdir build && cd build
+
+module load compiler/llvm-17
+myLLVM=/home1/p001cao/app/compiler/llvm-17
+export PATH=$myLLVM/bin:$PATH
+export CC=clang export CXX=clang++
+export LDFLAGS="-fuse-ld=lld -lrt"
+export myPREFIX=/home1/p001cao/app/tooldev/ucx1.13-clang17
+
+../contrib/configure-release --enable-mt --prefix=${myPREFIX}
+
+make -j 16 && make install
+```
+
+
+### Make module file
 
 at directory: /uhome/p001cao/local/share/lmodfiles/GCC --> create file "gcc-11.2"
 
