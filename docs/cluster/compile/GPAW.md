@@ -250,7 +250,7 @@ module load tooldev/libxc6.2.2-gcc9
 module load tooldev/openBLAS0.3.23-gcc9
 module load mpi/ompi4.1.5-gcc9-noUCX             # use openmpi-4.1.5
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.5-gcc9-noUCX
+OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.5-gcc9-noUCX
 export PATH=$OPENMPI/bin:$PATH
 export CC=$OPENMPI/bin/mpicc CXX=$OPENMPI/bin/mpic++
 export MPICC=$OPENMPI/bin/mpicc MPICXX=mpic++
@@ -299,7 +299,7 @@ nolibxc = True  # use GPAW's libxc
 # xcdir = condadir
 
 mpi = True
-mpidir='/home1/p001cao/app/openmpi/4.1.5-gcc9'
+mpidir='/home1/p001cao/app/mpi/openmpi4.1.5-gcc9-noUCX'
 compiler = mpidir+'/bin/mpicc'
 library_dirs += [mpidir+'/lib']
 include_dirs += [mpidir+'/include']
@@ -363,7 +363,7 @@ module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
 module load tooldev/openBLAS0.3.23-clang17
 module load mpi/ompi4.1.x-clang17-noUCX             # use openmpi-4.1.5
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17-noUCX
+OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export MPICC=mpicc MPICXX=mpic++
@@ -402,7 +402,7 @@ nolibxc = True  # use GPAW's libxc
 # xcdir = condadir
 
 mpi = True
-mpidir='/home1/p001cao/app/openmpi/4.1.x-clang17'
+mpidir='/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX'
 compiler = mpidir+'/bin/mpicc'
 library_dirs += [mpidir+'/lib']
 include_dirs += [mpidir+'/include']
