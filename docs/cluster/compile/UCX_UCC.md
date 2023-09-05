@@ -219,8 +219,7 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS='-g gdwarf-2 -gstrict-dwarf'
-export CFLAGS="-Wno-unused-but-set-variable"
+export CFLAGS="-gdwarf-2 -gstrict-dwarf -Wno-unused-but-set-variable"
 myPREFIX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
