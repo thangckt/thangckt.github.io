@@ -312,7 +312,7 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 rm -rf build_llvm && mkdir build_llvm && cd build_llvm
 
 module load compiler/llvm-17          # clang + lld
-module load tooldev/ucx1.15-clang17
+module load tooldev/ucx1.11-clang17
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
@@ -320,8 +320,7 @@ export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 myUCC=/home1/p001cao/app/tooldev/ucc1.2
-export LD_LIBRARY_PATH=$myUCX/lib:$LD_LIBRARY_PATH
-myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.15
+myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.11
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --with-ucc=${myUCC} --prefix=${myPREFIX}
 
