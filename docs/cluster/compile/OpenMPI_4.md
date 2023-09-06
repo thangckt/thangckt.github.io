@@ -319,9 +319,10 @@ export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 myUCC=/home1/p001cao/app/tooldev/ucc1.2
+export LD_LIBRARY_PATH=$myUCX/lib:$LD_LIBRARY_PATH
 myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.15
 
-../configure --with-sge --without-verbs --with-ucx=${myUCX} --with-ucx-libdir=${myUCX}/lib --with-ucc=${myUCC} --prefix=${myPREFIX}
+../configure --with-sge --without-verbs --with-ucx=${myUCX} --with-ucc=${myUCC} --prefix=${myPREFIX}
 
 make  -j 16 && make install
 ```
