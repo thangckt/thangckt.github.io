@@ -305,8 +305,8 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 ???+ note
 
     - To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"`. But might not be used?
-    - To solve `error: unknown argument: '-soname'` --> [see this](https://github.com/CopernicaMarketingSoftware/PHP-CPP/issues/368)
-    - dont use export CFLAGS="-gdwarf-2 -gstrict-dwarf"
+    - with `FC=flang-new`, To solve `error: unknown argument: '-soname'` --> [see this](https://github.com/CopernicaMarketingSoftware/PHP-CPP/issues/368)
+    - may need to set `--with-ucx-libdir=`
 
 ```sh
 rm -rf build_llvm && mkdir build_llvm && cd build_llvm
@@ -321,7 +321,7 @@ myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 myUCC=/home1/p001cao/app/tooldev/ucc1.2
 myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.15
 
-../configure --with-sge --without-verbs --with-ucx=${myUCX} --with-ucc=${myUCC} --prefix=${myPREFIX}
+../configure --with-sge --without-verbs --with-ucx=${myUCX} --with-ucx-libdir=${myUCX}/lib --with-ucc=${myUCC} --prefix=${myPREFIX}
 
 make  -j 16 && make install
 ```
