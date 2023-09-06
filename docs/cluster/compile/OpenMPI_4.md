@@ -308,9 +308,6 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
     - To solve `error: unknown argument: '-soname'` --> [see this](https://github.com/CopernicaMarketingSoftware/PHP-CPP/issues/368)
     - dont use export CFLAGS="-gdwarf-2 -gstrict-dwarf"
 
-
-#### Building
-
 ```sh
 rm -rf build_llvm && mkdir build_llvm && cd build_llvm
 
