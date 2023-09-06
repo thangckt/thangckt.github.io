@@ -312,6 +312,7 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 rm -rf build_llvm && mkdir build_llvm && cd build_llvm
 
 module load compiler/llvm-17          # clang + lld
+module load tooldev/ucx1.15-clang17
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
