@@ -255,7 +255,7 @@ module load compiler/llvm-17
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++
-export LDFLAGS="-fuse-ld=lld -lrt"
+export LDFLAGS="-fuse-ld=gold -lrt"
 export CFLAGS="-Wno-unused-but-set-variable"
 export myPREFIX=/home1/p001cao/app/tooldev/ucx1.11-clang17
 

@@ -318,7 +318,7 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
-myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
+myUCX=/home1/p001cao/app/tooldev/ucx1.11-clang17
 myUCC=/home1/p001cao/app/tooldev/ucc1.2
 myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.11
 
