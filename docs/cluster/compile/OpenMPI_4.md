@@ -306,7 +306,7 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 
     - To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"`. But might not be used?
     - with `FC=flang-new`, To solve `error: unknown argument: '-soname'` --> [see this](https://github.com/CopernicaMarketingSoftware/PHP-CPP/issues/368)
-    - may need to set `--with-ucx-libdir=`
+    - may need to set `--with-ucx-libdir=`, to avoid error `address not mapped`
 
 ```sh
 rm -rf build_llvm && mkdir build_llvm && cd build_llvm
