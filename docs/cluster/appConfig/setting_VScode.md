@@ -198,7 +198,7 @@ Type `open settings`
 		"*.aux",
 	],
 	"latex-workshop.latex.recipe.default": "latexmk -> copy_pdf_Windows",
-	"latex-workshop.latex.outDir": "0outdir",
+	"latex-workshop.latex.outDir": "_texdir",
 	"latex-workshop.latex.autoBuild.run": "onSave",
 	"latex-workshop.texcount.autorun": "onSave",
 	"latex-workshop.message.badbox.show": false,
