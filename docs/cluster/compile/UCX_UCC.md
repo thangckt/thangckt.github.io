@@ -55,7 +55,7 @@ Try to experiment with different TLS's see here for more info.
 ???+ note
 
     - OpenMPI 4.0,3 support `ucx` 1.7 or older
-    - OpenMPI 4.0,4 support newer `ucx`
+    - NOTE: UCX >= 1.12.0 requires rdma-core >= 28.0 or MLNX_OFED >= 5.0 for Infiniband and RoCE transports support. This may cause error `address not mapped` on old system
 
 ## Compile from Source vs. from pre-configured Release
 
@@ -165,24 +165,6 @@ CFLAGS="-I$myNUMA/include" \
 ../contrib/configure-release  --enable-optimizations
 ```
 
-### UCX 15 - GCC 9
-``` sh
-# tar xvf ucx-1.13.1.tar.gz
-cd ucx-1.15.0
-rm -rf build_gcc && mkdir build_gcc && cd build_gcc
-
-module load compiler/gcc-9.5
-myGCC=/home2/app/compiler/gcc/9.5.0
-export PATH=$myGCC/bin:$PATH
-export CFLAGS="-Wno-shadow"
-export myPREFIX=/home1/p001cao/app/tooldev/ucx1.15-gcc9
-
-../contrib/configure-release --enable-mt --prefix=${myPREFIX}
-
-make -j 16 && make install
-```
-
-
 ### UCX 15 - LLVM
 
 **From source code**
@@ -259,11 +241,14 @@ make -j 16 && make install
 ```
 
 
-### UCX 13 - LLVM
+### UCX 11 - LLVM
+NOTE: UCX >= 1.12.0 requires rdma-core >= 28.0 or MLNX_OFED >= 5.0 for Infiniband and RoCE transports support. This may cause error `address not mapped` on old system
+
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
-tar xvf ucx-1.13.1.tar.gz
-cd ucx-1.13.1
+wget https://github.com/openucx/ucx/releases/download/v1.11.2/ucx-1.11.2.tar.gz
+tar xvf ucx-1.11.2.tar.gz
+cd ucx-1.11.2
 rm -rf build && mkdir build && cd build
 
 module load compiler/llvm-17
@@ -272,7 +257,7 @@ export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-Wno-unused-but-set-variable"
-export myPREFIX=/home1/p001cao/app/tooldev/ucx1.13-clang17
+export myPREFIX=/home1/p001cao/app/tooldev/ucx1.11-clang17
 
 ../contrib/configure-release --enable-mt --prefix=${myPREFIX}
 
