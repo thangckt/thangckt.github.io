@@ -242,7 +242,10 @@ make -j 16 && make install
 
 
 ### UCX 11 - LLVM
-NOTE: UCX >= 1.12.0 requires rdma-core >= 28.0 or MLNX_OFED >= 5.0 for Infiniband and RoCE transports support. This may cause error `address not mapped` on old system
+
+- NOTE: UCX >= 1.12.0 requires rdma-core >= 28.0 or MLNX_OFED >= 5.0 for Infiniband and RoCE transports support. This may cause error `address not mapped` on old system
+- dont use `lld` with ucx-1.11
+
 
 ``` sh
 cd /home1/p001cao/0SourceCode/tooldev
