@@ -350,6 +350,18 @@ Why VScode for Jupyter Notebooks refs:
 	"security.workspace.trust.enabled": false,
 	"git.enableSmartCommit": true,
 	"window.zoomLevel": 0,
+	//==== Git
+	"git.enableSmartCommit": true,
+	"git.confirmSync": false,
+	"git.autofetch": true,
+	"git.openRepositoryInParentFolders": "never",
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": true,
+		"markdown": true,
+		"scminput": false
+	},
+	"githubPullRequests.pullBranch": "never",
 ```
 
 ???+ tip "See also"
