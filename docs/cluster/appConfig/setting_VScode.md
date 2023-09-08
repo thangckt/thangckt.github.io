@@ -188,33 +188,36 @@ Type `open settings`
 		"**/*.tex",
 		"**/*.txt"
 	],
+	"grammarly.config.documentDialect": "american",
+	"grammarly.config.documentDomain": "academic",
+	"grammarly.config.suggestions.InformalPronounsAcademic": true,
 ```
 
 ### Latex-workshop
 
 ```js
 	//==== Latex-workshop
-	"latex-workshop.latex.clean.fileTypes": [
-		"*.aux",
-	],
 	"latex-workshop.latex.recipe.default": "latexmk -> copy_pdf_Windows",
 	"latex-workshop.latex.outDir": "_texdir_",
+	"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
 	"latex-workshop.latex.autoBuild.run": "onSave",
-	"latex-workshop.texcount.autorun": "onSave",
-	"latex-workshop.message.badbox.show": false,
+	"latex-workshop.latex.autoClean.run": "onFailed",
+	"latex-workshop.latex.clean.subfolder.enabled": true,
+	"latex-workshop.latex.clean.method": "glob",
 	// "latex-workshop.linting.chktex.enabled": true,
 	// "latex-workshop.linting.lacheck.enabled": true,
 	"latex-workshop.synctex.synctexjs.enabled": true,
-	"latex-workshop.synctex.afterBuild.enabled": true,
+	"latex-workshop.synctex.afterBuild.enabled": false,
 	"latex-workshop.view.pdf.viewer": "tab",
-	"latex-workshop.latex.autoClean.run": "onBuilt",
-	"latex-workshop.latex.clean.subfolder.enabled": true,
+	"latex-workshop.view.pdf.trim": 1,
 	//== pdf dark mode (2 first lines of 3 last lines)
 	// "latex-workshop.view.pdf.invert": 1,
 	// "latex-workshop.view.pdf.invertMode.grayscale": 0.6,
 	// "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#171717", // For Dark Viewwer
 	// "latex-workshop.view.pdf.color.dark.pageColorsForeground": "#FFFFFF", // For Dark Viewer
 	// "latex-workshop.view.pdf.color.dark.backgroundColor": "#171717", // For Dark Viewer
+	"latex-workshop.texcount.autorun": "onSave",
+	"latex-workshop.message.badbox.show": false,
 	//== Compile latex : https://tex.stackexchange.com/questions/615318/vs-code-latex-change-only-pdf-out-dir
 	"latex-workshop.latex.recipes": [
 		{
