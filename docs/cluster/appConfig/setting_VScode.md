@@ -222,14 +222,14 @@ Type `open settings`
 			"tools": [
 				"latexmk",
 				"copy_pdf_Windows"
-			] // or "copy_pdf_LinuxnMac" if you are on linux or mac
+			] // or "copy_pdf_LinuxMac" if you are on linux or mac
 		},
 		{
-			"name": "latexmk -> copy_pdf_LinuxnMac",
+			"name": "latexmk -> copy_pdf_LinuxMac",
 			"tools": [
 				"latexmk",
-				"copy_pdf_LinuxnMac"
-			] // or "copy_pdf_LinuxnMac" if you are on linux or mac
+				"copy_pdf_LinuxMac"
+			] // or "copy_pdf_LinuxMac" if you are on linux or mac
 		},
 		{
 			"name": "pdflatex -> bibtex -> pdflatex * 2",
@@ -239,7 +239,7 @@ Type `open settings`
 				"pdflatex",
 				"pdflatex",
 				"copy_pdf_Windows"
-			] // or "copy_pdf_LinuxnMac" if you are on linux or mac
+			] // or "copy_pdf_LinuxMac" if you are on linux or mac
 		}
 	],
 	"latex-workshop.latex.tools": [
@@ -287,7 +287,7 @@ Type `open settings`
 			]
 		},
 		{
-			"name": "copy_pdf_LinuxnMac",
+			"name": "copy_pdf_LinuxMac",
 			"command": "cp",
 			"args": [
 				"%OUTDIR%/%DOCFILE%.pdf",
@@ -305,10 +305,10 @@ Type `open settings`
 	//==== Jupyter Notebooks
 	"notebook.lineNumbers": "on",
 	"notebook.showCellStatusBar": "hidden",
-	"notebook.markup.fontSize": 14,
-	"markdown.preview.fontFamily": "roboto",
-	"markdown.preview.fontSize": 14,
 	"notebook.cellFocusIndicator": "border",
+	"markdown.preview.fontFamily": "roboto",
+	"notebook.markup.fontSize": 14,
+	"markdown.preview.fontSize": 14,
 ```
 
 1. Extensions:
