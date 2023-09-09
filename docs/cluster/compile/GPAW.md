@@ -374,6 +374,8 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 ```
 
 ``` sh
+pip install git+https://gitlab.com/ase/ase.git@master
+
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
