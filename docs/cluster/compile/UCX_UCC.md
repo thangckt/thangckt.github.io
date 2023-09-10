@@ -298,11 +298,11 @@ UCX detects the exiting libraries on the build machine and enables/disables supp
 cd /home1/p001cao/0SourceCode/tooldev
 git clone https://github.com/linux-rdma/rdma-core  rdma-core
 cd rdma-core
-tar xvf rdma-core-30.0.tar.gz
-cd rdma-core-30.0
+# tar xvf rdma-core-30.0.tar.gz
+# cd rdma-core-30.0
 
-module load compiler/gcc-10.1.0
-module load tooldev/cmake-3.17.2
+module load compiler/llvm-17
+module load tooldev/cmake-3.27
 module load tooldev/libnl-3.0
 module load tooldev/libtool-2.4.6
 
