@@ -293,9 +293,11 @@ UCX detects the exiting libraries on the build machine and enables/disables supp
 - NVIDIA GPU support - requires Cuda drives
 - AMD GPU support - requires ROCm drivers
 
-#### 1. rdma-core (fail)
+#### 1. rdma-core (work)
 
 build/bin will contain the sample programs and build/lib will contain the shared libraries. The build is configured to run all the programs 'in-place' and cannot be installed. [see more](https://github.com/linux-rdma/rdma-core)
+
+NOTE: rdma-core does not have install function, so use directly from build folder.
 
 ```shell
 cd /home1/p001cao/0SourceCode/tooldev
