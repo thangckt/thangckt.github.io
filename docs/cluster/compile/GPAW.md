@@ -350,6 +350,7 @@ source activate py11gpaw_source
 conda clean -a -y
 
 conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 pillow
+pip install git+https://gitlab.com/ase/ase.git@master
 ```
 
 ``` sh
@@ -374,8 +375,6 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 ```
 
 ``` sh
-pip install git+https://gitlab.com/ase/ase.git@master
-
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
@@ -457,9 +456,9 @@ module load mpi/libvdwxc-ompi4.1.x-clang17
 module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
 # module load tooldev/libxc6.2.2-clang17
 module load tooldev/openBLAS0.3.23-clang17
-module load mpi/ompi4.1.x-clang17-ucx1.11            # use openmpi-4.1.5
+module load mpi/ompi4.1.x-clang17-ucx1.15            # use openmpi-4.1.5
 
-OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.11
+OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.15
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
