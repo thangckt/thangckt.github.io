@@ -204,7 +204,7 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-2 -gstrict-dwarf -Wno-unused-but-set-variable"
 myPREFIX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 
-../contrib/configure-release --enable-mt --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-rdmacm=/dev/infiniband --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
@@ -284,8 +284,6 @@ prepend-path    PKG_CONFIG_PATH         $topdir/lib/pkgconfig
 
 ### II. UCX optional Libs
 
-#### 1. rdma-core (fail)
-
 UCX detects the exiting libraries on the build machine and enables/disables support for various features accordingly. If some of the modules UCX was built with are not found during runtime, they will be silently disabled.
 
 - Basic shared memory and TCP support - always enabled
@@ -293,6 +291,10 @@ UCX detects the exiting libraries on the build machine and enables/disables supp
 - RDMA support - requires rdma-core or libibverbs library.
 - NVIDIA GPU support - requires Cuda drives
 - AMD GPU support - requires ROCm drivers
+
+#### 1. rdma-core (fail)
+
+build/bin will contain the sample programs and build/lib will contain the shared libraries. The build is configured to run all the programs 'in-place' and cannot be installed. [see more](https://github.com/linux-rdma/rdma-core)
 
 ```shell
 cd /home1/p001cao/0SourceCode/tooldev
@@ -306,8 +308,13 @@ module load tooldev/cmake-3.27
 module load tooldev/libnl-3.0
 module load tooldev/libtool-2.4.6
 
-export LD_LIBRARY_PATH=/home1/p001cao/app/tooldev/libnl-3.0/lib:$LD_LIBRARY_PATH ./build.sh
+export LD_LIBRARY_PATH=/home1/p001cao/app/tooldev/libnl-3.0/lib:$LD_LIBRARY_PATH
+
+./build.sh
 ```
+
+##### libnl
+
 
 #### 2. libnuma-devel
 
