@@ -305,16 +305,26 @@ cd rdma-core
 
 module load compiler/llvm-17
 module load tooldev/cmake-3.27
-module load tooldev/libnl-3.0
+module load tooldev/libnl-3.2
 module load tooldev/libtool-2.4.6
-
-export LD_LIBRARY_PATH=/home1/p001cao/app/tooldev/libnl-3.0/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home1/p001cao/app/tooldev/libnl-3.2.25/lib:$LD_LIBRARY_PATH
 
 ./build.sh
 ```
 
 ##### libnl
+https://topic.alibabacloud.com/a/how-to-compile-libnl-3225-in-centos-6_1_18_20033603.html
 
+```sh
+cd /home1/p001cao/0SourceCode/tooldev
+wget --no-check-certificate https://www.infradead.org/~tgr/libnl/files/libnl-3.2.25.tar.gz
+tar vxf libnl-3.2.25.tar.gz
+cd libnl-3.2.25
+export myPREFIX=/home1/p001cao/app/tooldev/libnl-3.2.25
+
+./configure --prefix=${myPREFIX}
+make -j 16 && make install
+```
 
 #### 2. libnuma-devel
 
