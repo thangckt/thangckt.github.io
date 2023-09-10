@@ -1,10 +1,5 @@
----
-sort: 11
----
-
-
-# PMIX 
-```note 
+# PMIX
+```note
 require libevent and hwloc
 ```
 
@@ -23,7 +18,7 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 
 ./configure --prefix=/home1/p001cao/local/app/tool_dev/libevent-2.1.11
 
-make -j 16 && make install 
+make -j 16 && make install
 ```
 
 ## Compile hwloc
@@ -43,7 +38,7 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 
 ../configure --prefix=/home1/p001cao/local/app/tool_dev/hwloc-2.8.0
 
-make -j 16 && make install 
+make -j 16 && make install
 ```
 
 
@@ -66,7 +61,7 @@ export my_hwloc=/home1/p001cao/local/app/tool_dev/hwloc-2.8.0
 ../configure --with-libevent=${my_libevent} --with-hwloc=${my_hwloc} \
 --prefix=/home1/p001cao/local/app/tool_dev/pmix-4.1.2
 
-make -j 16 && make install 
+make -j 16 && make install
 ```
 
 Refs: \
