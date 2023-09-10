@@ -202,9 +202,10 @@ export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++
 export LDFLAGS="-fuse-ld=lld -lrt"
 export CFLAGS="-gdwarf-2 -gstrict-dwarf -Wno-unused-but-set-variable"
+RMDA=/home1/p001cao/0SourceCode/tooldev/rdma-core/build
 myPREFIX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 
-../contrib/configure-release --enable-mt --with-rdmacm=/dev/infiniband --prefix=${myPREFIX}
+../contrib/configure-release --enable-mt --with-rdmacm=$RMDA --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
@@ -303,11 +304,9 @@ cd rdma-core
 # tar xvf rdma-core-30.0.tar.gz
 # cd rdma-core-30.0
 
-module load compiler/llvm-17
 module load tooldev/cmake-3.27
 module load tooldev/libnl-3.2
-module load tooldev/libtool-2.4.6
-export LD_LIBRARY_PATH=/home1/p001cao/app/tooldev/libnl-3.2.25/lib:$LD_LIBRARY_PATH
+export LDFLAGS="-lrt"
 
 ./build.sh
 ```
