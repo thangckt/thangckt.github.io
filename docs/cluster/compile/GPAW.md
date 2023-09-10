@@ -435,7 +435,7 @@ extra_link_args = ['-fopenmp']
 
 ##### test UCX
 
-so far, not work because error: address not mapped
+so far, not work with UCX because error: address not mapped
 
 ``` sh
 module load conda/conda3
