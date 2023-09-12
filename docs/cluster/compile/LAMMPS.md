@@ -1034,29 +1034,28 @@ module load tooldev/cmake-3.27
 module load tooldev/binutils-2.40
 module load tooldev/gsl-2.7
 module load mpi/fftw3.3.10-ompi4.1.x-clang17
-module load mpi/ompi4.1.x-clang17
+module load mpi/ompi4.1.x-clang17-ucx1.15
 
-OPENMPI=/home1/p001cao/app/openmpi/4.1.x-clang17
+OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.15
 export PATH=${OPENMPI}/bin:$PATH
-export CC=mpicc CXX=mpic++ FC=mpifort MPICC=mpicc MPICXX=mpic++
+export CC=mpicc CXX=mpic++ FC=mpifort
 export LDFLAGS="-fuse-ld=lld -lrt"
-export CFLAGS="-gdwarf-4 -gstrict-dwarf"                                 # avoid dwarf5 error
 ## python (require py3), BLAS+LAPACK
 myBLAS=/home1/p001cao/app/tooldev/openBLAS-0.3.23/lib64/libopenblas.so
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH   # to avoid using libstdc++.so in conda
 export myPREFIX=/home1/p001cao/app/lammps/llvmOMPI4-dev
 
 cmake ../cmake -C ../cmake/presets/all_on.cmake \
--DBUILD_MPI=yes -DBUILD_OMP=yes -DPKG_OPENMP=yes \
--DLAMMPS_MACHINE=mpi -DBUILD_SHARED_LIBS=yes \
--DPKG_GPU=no -DPKG_KOKKOS=no -DPKG_INTEL=no -DPKG_MDI=no \
--DPKG_SCAFACOS=no -DPKG_ADIOS=no -DPKG_NETCDF=no -DPKG_VTK=no -DPKG_H5MD=no \
--DPKG_MESONT=no -DPKG_LATTE=no -DPKG_MSCG=no -DPKG_ATC=no -DPKG_KIM=no \
--DPKG_LEPTON=yes -DLEPTON_ENABLE_JIT=no \
--DPKG_ML-QUIP=no -DPKG_ML-PACE=no -DPKG_ML-HDNNP=no \
--DPKG_PLUMED=yes -DUSE_INTERNAL_LINALG=yes  \
--DFFT=FFTW3 -DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS} \
--DCMAKE_INSTALL_PREFIX=${myPREFIX}
+  -DBUILD_MPI=yes -DBUILD_OMP=yes -DPKG_OPENMP=yes \
+  -DLAMMPS_MACHINE=mpi -DBUILD_SHARED_LIBS=yes \
+  -DPKG_GPU=no -DPKG_KOKKOS=no -DPKG_INTEL=no -DPKG_MDI=no \
+  -DPKG_SCAFACOS=no -DPKG_ADIOS=no -DPKG_NETCDF=no -DPKG_VTK=no -DPKG_H5MD=no \
+  -DPKG_MESONT=no -DPKG_LATTE=no -DPKG_MSCG=no -DPKG_ATC=no -DPKG_KIM=no \
+  -DPKG_LEPTON=yes -DLEPTON_ENABLE_JIT=no \
+  -DPKG_ML-QUIP=no -DPKG_ML-PACE=no -DPKG_ML-HDNNP=no \
+  -DPKG_PLUMED=yes -DUSE_INTERNAL_LINALG=yes  \
+  -DFFT=FFTW3 -DBLAS_LIBRARIES=${myBLAS} -DLAPACK_LIBRARIES=${myBLAS} \
+  -DCMAKE_INSTALL_PREFIX=${myPREFIX}
 ```
 
 ```sh
