@@ -142,7 +142,7 @@ Type `open settings`
 ### Files
 
 ```js
-"files.autoSave": "afterDelay",
+	"files.autoSave": "onFocusChange", // afterDelay onFocusChange onWindowChange
 	"files.trimTrailingWhitespace": true,
 	"files.eol": "\n",
 	"files.associations": {
