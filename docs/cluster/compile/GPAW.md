@@ -359,8 +359,6 @@ myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
-
-condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 ```
 
 ``` sh
@@ -371,10 +369,12 @@ source activate py11gpaw_source
 conda clean -a -y
 
 conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 pillow
-pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
 ```
 
 ``` sh
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
+pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
+
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
