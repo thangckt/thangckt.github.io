@@ -229,19 +229,19 @@ nav:
       - cluster/compile/conda_manager_packages.md
       - cluster/compile/conda_hybrid.md
     - Config:
-      - cluster/appConfig/Pip.md
-      - cluster/appConfig/Latex_TexStudio.md
-      - cluster/appConfig/Latex_VScode.md
-      - cluster/appConfig/3_JupyterLab.md
-      - cluster/appConfig/setting_VScode.md
-      - cluster/appConfig/5_git.md
-      - cluster/appConfig/6_Lammps.md
-      - cluster/appConfig/7_packing_python.md
-      - cluster/appConfig/8_WSL.md
-      - cluster/appConfig/NGC_container.md
-      - cluster/appConfig/sge.md
-      - cluster/appConfig/VScode_perspectives.md
-      - cluster/appConfig/check_mail.md
+      - cluster/configure/Pip.md
+      - cluster/configure/Latex_TexStudio.md
+      - cluster/configure/Latex_VScode.md
+      - cluster/configure/3_JupyterLab.md
+      - cluster/configure/setting_VScode.md
+      - cluster/configure/5_git.md
+      - cluster/configure/6_Lammps.md
+      - cluster/configure/7_packing_python.md
+      - cluster/configure/8_WSL.md
+      - cluster/configure/NGC_container.md
+      - cluster/configure/sge.md
+      - cluster/configure/VScode_perspectives.md
+      - cluster/configure/check_mail.md
     - Useful:
       - cluster/refPage/cheatsheet.md
       - cluster/refPage/docs_syntax.md
