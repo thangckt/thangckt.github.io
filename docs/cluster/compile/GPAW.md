@@ -378,7 +378,7 @@ pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
-git checkout master   # 23.6.1  master  22.8.0
+git pull origin master   # 23.6.1  master  22.8.0
 rm -rf build
 
 pip install --prefix=$condadir --ignore-installed .
