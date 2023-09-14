@@ -381,7 +381,7 @@ cd gpaw
 git checkout master   # 23.6.1  master  22.8.0
 rm -rf build
 
-pip install .  --prefix=$condadir
+pip install --prefix=$condadir --ignore-installed .
 ```
 
 NOTE: Create file `siteconfig.py`
