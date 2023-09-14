@@ -343,19 +343,6 @@ gpaw install-data --register $condadir/share/gpaw
     - `python=3.11 libuuid=2.38.1`
 
 ``` sh
-module load conda/conda3
-conda create -y -n py11gpaw_source python=3.11.0
-source activate py11gpaw_source
-# conda install -y --revision 0
-conda clean -a -y
-
-conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 pillow
-pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
-```
-
-``` sh
-condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
-
 module load mpi/fftw3.3.10-ompi4.1.x-clang17
 module load mpi/elpa2023.05-ompi4.1.x-clang17
 module load mpi/libvdwxc-ompi4.1.x-clang17
@@ -371,6 +358,19 @@ myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
+
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
+```
+
+``` sh
+module load conda/conda3
+conda create -y -n py11gpaw_source python=3.11.0
+source activate py11gpaw_source
+# conda install -y --revision 0
+conda clean -a -y
+
+conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 pillow
+pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
 ```
 
 ``` sh
