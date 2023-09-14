@@ -121,9 +121,10 @@ Type `open settings`
 ```js
 	///==== Theme
 	"workbench.colorTheme": "One Dark Pro",
-	"terminal.integrated.tabFocusMode": false,
 	"debug.console.fontSize": 12,
-	"terminal.integrated.fontSize": 12,
+	"terminal.integrated.fontSize": 13,
+	"terminal.integrated.tabFocusMode": false,
+	"terminal.integrated.defaultProfile.windows": "Command Prompt",
 	//==== Editor
 	"editor.fontFamily": "roboto mono, monospace",
 	"editor.tabSize": 4,
