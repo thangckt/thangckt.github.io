@@ -350,7 +350,7 @@ source activate py11gpaw_source
 conda clean -a -y
 
 conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 pillow
-pip install git+https://gitlab.com/ase/ase.git@master
+pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
 ```
 
 ``` sh
@@ -367,7 +367,6 @@ module load mpi/ompi4.1.x-clang17-noUCX             # use openmpi-4.1.5
 OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
-export MPICC=mpicc MPICXX=mpic++
 myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
