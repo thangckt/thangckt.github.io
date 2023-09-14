@@ -438,18 +438,6 @@ extra_link_args = ['-fopenmp']
 so far, not work with UCX because error: address not mapped. So use openIB in openMPI
 
 ``` sh
-module load conda/conda3
-conda create -y -n py11gpaw_ucx python=3.11.0
-source activate py11gpaw_ucx
-# conda install -y --revision 0
-conda clean -a -y
-
-conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 pillow
-```
-
-``` sh
-condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_ucx
-
 module load mpi/fftw3.3.10-ompi4.1.x-clang17
 module load mpi/elpa2023.05-ompi4.1.x-clang17
 module load mpi/libvdwxc-ompi4.1.x-clang17
@@ -467,6 +455,18 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 ```
 
 ``` sh
+module load conda/conda3
+conda create -y -n py11gpaw_ucx python=3.11.0
+source activate py11gpaw_ucx
+# conda install -y --revision 0
+conda clean -a -y
+
+conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 pillow
+```
+
+``` sh
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_ucx
+
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
