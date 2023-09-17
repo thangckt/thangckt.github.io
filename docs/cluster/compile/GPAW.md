@@ -224,116 +224,6 @@ make -j 16 && make install
     - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
     - libxc cause error:
 
-##### GCC 9
-!!! note
-
-    - with gcc9, must use `scipy=1.6 numpy=1.22` --> suitable for py=3.9
-
-``` sh
-module load conda/conda3
-conda create -y -n py9gpaw_source python=3.9.0
-source activate py9gpaw_source
-# conda install -y --revision 0
-conda clean -a -y
-
-conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy=1.6 numpy=1.22
-```
-
-``` sh
-condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
-
-module load mpi/fftw3.3.10-ompi4.1.5-gcc9
-module load mpi/elpa2023.05-ompi4.1.5-gcc9
-module load mpi/libvdwxc-ompi4.1.5-gcc9
-module load mpi/scaLAPACK2.2-ompi4.1.5-gcc9
-module load tooldev/libxc6.2.2-gcc9
-module load tooldev/openBLAS0.3.23-gcc9
-module load mpi/ompi4.1.5-gcc9-noUCX             # use openmpi-4.1.5
-
-OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.5-gcc9-noUCX
-export PATH=$OPENMPI/bin:$PATH
-export CC=$OPENMPI/bin/mpicc CXX=$OPENMPI/bin/mpic++
-export MPICC=$OPENMPI/bin/mpicc MPICXX=mpic++
-myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9
-export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
-```
-
-<!-- Install ASE
- ``` sh
-cd /home1/p001cao/0SourceCode/tooldev
-# git clone https://gitlab.com/ase/ase.git
-cd ase
-git checkout master    #  master 3.22.1
-rm -rf build
-
-pip install -e .
-``` -->
-
-
-``` sh
-cd /home1/p001cao/0SourceCode/tooldev      # this may important
-# git clone https://gitlab.com/gpaw/gpaw.git gpaw
-cd gpaw
-git checkout master   # 23.6.1  master  22.8.0
-rm -rf build
-
-pip install .  --prefix=$condadir
-```
-
-NOTE: Create file `siteconfig.py`
-``` py
-library_dirs = []
-include_dirs = []
-
-# condadir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
-# library_dirs += [condadir+'/lib']
-# include_dirs += [condadir+'/include']
-
-# libraries = ['xc']
-# xcdir = '/home1/p001cao/app/tooldev/libxc6.2.2-gcc9'
-# library_dirs += [xcdir + '/lib64']
-# include_dirs += [xcdir + '/include']
-# runtime_library_dirs = [xcdir + '/lib64']
-
-nolibxc = True  # use GPAW's libxc
-# xcdir = condadir
-
-mpi = True
-mpidir='/home1/p001cao/app/mpi/openmpi4.1.5-gcc9-noUCX'
-compiler = mpidir+'/bin/mpicc'
-library_dirs += [mpidir+'/lib']
-include_dirs += [mpidir+'/include']
-
-fftw = True
-libraries = ['fftw3']
-library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9/lib']
-include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9/include']
-
-scalapack = True
-libraries += ['scalapack']
-library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK2.2-ompi4.1.5-gcc9/lib']
-
-elpa = True
-elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.5-gcc9'
-libraries += ['elpa_openmp']
-library_dirs += [elpadir+'/lib']
-include_dirs += [elpadir+'/include/elpa_openmp-2023.05.001']
-
-libvdwxc = True
-libraries += ['vdwxc']
-library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.5-gcc9/lib']
-include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.5-gcc9/include']
-
-extra_compile_args = ['-fopenmp']
-extra_link_args = ['-fopenmp']
-```
-
-Test
-``` sh
-gpaw -P 4 test         # gpaw test
-
-gpaw install-data --register $condadir/share/gpaw
-```
 
 ##### LLVM
 
@@ -383,6 +273,14 @@ rm -rf build
 
 pip install --prefix=$condadir --ignore-installed .
 ```
+
+Test
+``` sh
+gpaw -P 4 test         # gpaw test
+
+gpaw install-data --register $condadir/share/gpaw
+```
+
 
 NOTE: Create file `siteconfig.py`
 ``` py
@@ -475,3 +373,98 @@ rm -rf build
 
 pip install --prefix=$condadir --ignore-installed .
 ```
+
+##### GCC 9
+!!! note
+
+    - with gcc9, must use `scipy=1.6 numpy=1.22` --> suitable for py=3.9
+
+``` sh
+module load conda/conda3
+conda create -y -n py9gpaw_source python=3.9.0
+source activate py9gpaw_source
+# conda install -y --revision 0
+conda clean -a -y
+
+conda install -y --update-specs -c conda-forge python=3.9.0 libzlib=1.2.11 scipy=1.6 numpy=1.22
+```
+
+``` sh
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
+
+module load mpi/fftw3.3.10-ompi4.1.5-gcc9
+module load mpi/elpa2023.05-ompi4.1.5-gcc9
+module load mpi/libvdwxc-ompi4.1.5-gcc9
+module load mpi/scaLAPACK2.2-ompi4.1.5-gcc9
+module load tooldev/libxc6.2.2-gcc9
+module load tooldev/openBLAS0.3.23-gcc9
+module load mpi/ompi4.1.5-gcc9-noUCX             # use openmpi-4.1.5
+
+OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.5-gcc9-noUCX
+export PATH=$OPENMPI/bin:$PATH
+export CC=$OPENMPI/bin/mpicc CXX=$OPENMPI/bin/mpic++
+export MPICC=$OPENMPI/bin/mpicc MPICXX=mpic++
+myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9
+export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
+```
+
+
+
+``` sh
+cd /home1/p001cao/0SourceCode/tooldev      # this may important
+# git clone https://gitlab.com/gpaw/gpaw.git gpaw
+cd gpaw
+git checkout master   # 23.6.1  master  22.8.0
+rm -rf build
+
+pip install .  --prefix=$condadir
+```
+
+NOTE: Create file `siteconfig.py`
+``` py
+library_dirs = []
+include_dirs = []
+
+# condadir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
+# library_dirs += [condadir+'/lib']
+# include_dirs += [condadir+'/include']
+
+# libraries = ['xc']
+# xcdir = '/home1/p001cao/app/tooldev/libxc6.2.2-gcc9'
+# library_dirs += [xcdir + '/lib64']
+# include_dirs += [xcdir + '/include']
+# runtime_library_dirs = [xcdir + '/lib64']
+
+nolibxc = True  # use GPAW's libxc
+# xcdir = condadir
+
+mpi = True
+mpidir='/home1/p001cao/app/mpi/openmpi4.1.5-gcc9-noUCX'
+compiler = mpidir+'/bin/mpicc'
+library_dirs += [mpidir+'/lib']
+include_dirs += [mpidir+'/include']
+
+fftw = True
+libraries = ['fftw3']
+library_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9/lib']
+include_dirs += ['/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.5-gcc9/include']
+
+scalapack = True
+libraries += ['scalapack']
+library_dirs += ['/home1/p001cao/app/mpi/scaLAPACK2.2-ompi4.1.5-gcc9/lib']
+
+elpa = True
+elpadir = '/home1/p001cao/app/mpi/elpa2023.05-ompi4.1.5-gcc9'
+libraries += ['elpa_openmp']
+library_dirs += [elpadir+'/lib']
+include_dirs += [elpadir+'/include/elpa_openmp-2023.05.001']
+
+libvdwxc = True
+libraries += ['vdwxc']
+library_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.5-gcc9/lib']
+include_dirs += ['/home1/p001cao/app/mpi/libvdwxc-ompi4.1.5-gcc9/include']
+
+extra_compile_args = ['-fopenmp']
+extra_link_args = ['-fopenmp']
+```
+
