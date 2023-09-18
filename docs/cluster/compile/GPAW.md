@@ -270,7 +270,7 @@ cd gpaw
 git pull origin master   # 23.6.1  master  22.8.0
 rm -rf build
 
-pip install --ignore-installed --prefix=$condadir .
+pip install --prefix=$condadir .
 ```
 
 Test
