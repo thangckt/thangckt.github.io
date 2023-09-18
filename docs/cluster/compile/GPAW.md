@@ -275,7 +275,7 @@ pip install --prefix=$condadir .
 
 Test
 ``` sh
-gpaw -P 4 test         # gpaw test
+gpaw test         # gpaw -P 4 test
 
 gpaw install-data --register $condadir/share/gpaw
 ```
