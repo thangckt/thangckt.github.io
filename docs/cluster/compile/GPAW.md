@@ -262,6 +262,7 @@ conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 # pi
 
 ``` sh
 pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
@@ -269,7 +270,6 @@ cd gpaw
 git pull origin master   # 23.6.1  master  22.8.0
 rm -rf build
 
-condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 pip install --prefix=$condadir --ignore-installed .
 ```
 
