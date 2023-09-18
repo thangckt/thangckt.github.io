@@ -10,7 +10,7 @@ OpenBLAS contains BLAS and LAPACK
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://github.com/xianyi/OpenBLAS.git openBLAS
 cd openBLAS
-git checkout v0.3.23
+git pull origin develop
 rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
