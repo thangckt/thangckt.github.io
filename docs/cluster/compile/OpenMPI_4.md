@@ -359,9 +359,10 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
+OFI=/home1/p001cao/app/tooldev/libfabric-1.19
 myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX
 
-../configure --with-sge --with-verbs --without-ucx --prefix=${myPREFIX}
+../configure --with-sge --with-verbs --without-ucx --with-ofi=${OFI} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
