@@ -468,13 +468,14 @@ prepend-path PKG_CONFIG_PATH $topdir/lib/pkgconfig
 ```
 
 ### 4. openMPI/UCX: KNEM
+Dont use new compiler.
 
 <https://knem.gitlabpages.inria.fr/>
 
 ```shell
 tar zxvf knem-1.1.4.tar.gz
 cd knem-1.1.4
-./configure --prefix=/uhome/p001cao/app/tooldev/knem-1.1.4
+./configure --prefix=/home1/p001cao/app/tooldev/knem-1.1.4
 ```
 
 ### 5. openMPI/UCX: XPMEM
