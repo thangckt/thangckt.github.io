@@ -442,22 +442,25 @@ mkdir build && cd build
 
 ### 3. openMPI/UCX: libfabric ()
 
-wget <https://github.com/ofiwg/libfabric/releases/tag/v1.11.1/libfabric-1.11.1.tar.bz2>
 If building directly from the libfabric git tree, run './autogen.sh' before the configure step.
 
-```shell
-module load tooldev/autoconf-2.69b
+```sh
+# wget https://github.com/ofiwg/libfabric/releases/tag/v1.19.0/libfabric-1.19.0.tar.bz2
+
+cd /home1/p001cao/0SourceCode/tooldev
+git clone -b main https://github.com/ofiwg/libfabric
+cd libfabric
+git pull origin main
+
+module load tooldev/autoconf-2.72c
 ./autogen.sh
+```
 
-tar -xvf libfabric-1.11.1.tar.bz2
-cd libfabric-1.11.1
-module load compiler/gcc-10.2
+```sh
+module load compiler/llvm-17
 
-## IB cluster
-./configure --prefix=/uhome/p001cao/app/tooldev/libfabric-1.11.1-IB
-
-## noIB cluster
-./configure --prefix=/uhome/p001cao/app/tooldev/libfabric-1.11.1-noIB
+./configure --enable-ucx=no --prefix=/home1/p001cao/app/tooldev/libfabric-1.19
+make -j 16 && make install
 
 ## module
 prepend-path PKG_CONFIG_PATH $topdir/lib/pkgconfig
