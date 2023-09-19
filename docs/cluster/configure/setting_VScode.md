@@ -198,7 +198,7 @@ Type `open settings`
 
 ```js
 	//==== Latex-workshop
-	"latex-workshop.latex.recipe.default": "latexmk -> copy_pdf_Windows -> update_viewer",
+	"latex-workshop.latex.recipe.default": "latexmk -> update_viewer -> copy_pdf_Windows",
 	"latex-workshop.latex.outDir": "_texdir_",
 	"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
 	"latex-workshop.latex.autoBuild.run": "onSave",
@@ -228,7 +228,7 @@ Type `open settings`
 	//== Compile latex : https://tex.stackexchange.com/questions/615318/vs-code-latex-change-only-pdf-out-dir
 	"latex-workshop.latex.recipes": [
 		{
-			"name": "latexmk -> copy_pdf_Windows -> update_viewer",
+			"name": "latexmk -> update_viewer -> copy_pdf_Windows",
 			"tools": [
 				"latexmk",
 				"copy_pdf_Windows"
