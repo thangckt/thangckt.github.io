@@ -360,10 +360,10 @@ export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
 OFI=/home1/p001cao/app/tooldev/libfabric-1.19
-KNEW=/home1/p001cao/app/tooldev/knem-1.1.4
+KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
 myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX
 
-../configure --with-sge --with-verbs --without-ucx --with-knem=${KNEW} --with-ofi=${OFI} --prefix=${myPREFIX}
+../configure --with-sge --with-verbs --without-ucx --with-knem=${KNEM} --with-ofi=${OFI} --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
