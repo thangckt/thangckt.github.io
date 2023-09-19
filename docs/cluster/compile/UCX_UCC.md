@@ -327,71 +327,7 @@ export myPREFIX=/home1/p001cao/app/tooldev/libnl-3.2.25
 make -j 16 && make install
 ```
 
-#### 2. libnuma-devel
 
-<https://github.com/numactl/numactl>
-
-```shell
-tar xzf numactl-2.0.13.tar.gz
-cd numactl-2.0.13
-
-module load tooldev/autoconf-2.69b
-./autogen.sh
-
-mkdir build && cd build
-../configure --prefix=/home1/p001cao/app/tooldev/numactl-2.0.13
-```
-
-#### 3. openMPI/UCX: libfabric ()
-
-wget <https://github.com/ofiwg/libfabric/releases/tag/v1.11.1/libfabric-1.11.1.tar.bz2>
-If building directly from the libfabric git tree, run './autogen.sh' before the configure step.
-
-```shell
-module load tooldev/autoconf-2.69b
-./autogen.sh
-
-tar -xvf libfabric-1.11.1.tar.bz2
-cd libfabric-1.11.1
-module load compiler/gcc-10.2
-
-## IB cluster
-./configure --prefix=/uhome/p001cao/app/tooldev/libfabric-1.11.1-IB
-
-## noIB cluster
-./configure --prefix=/uhome/p001cao/app/tooldev/libfabric-1.11.1-noIB
-
-## module
-prepend-path PKG_CONFIG_PATH $topdir/lib/pkgconfig
-```
-
-#### 4. openMPI/UCX: KNEM
-
-<https://knem.gitlabpages.inria.fr/>
-
-```shell
-tar zxvf knem-1.1.4.tar.gz
-cd knem-1.1.4
-./configure --prefix=/uhome/p001cao/app/tooldev/knem-1.1.4
-```
-
-#### 5. openMPI/UCX: XPMEM
-
-<https://github.com/hjelmn/xpmem/releases/tag/v2.6.3>
-
-<https://github.com/hjelmn/xpmem/wiki/Installing-XPMEM>
---> cannot install: require linux kernel 4.x
-
-```shell
-check: uname -a
-```
-
-```shell
-tar zxvf xpmem-2.6.3.tar.gz
-cd xpmem-2.6.3
-
-./configure --prefix=/home1/p001cao/app/tooldev/xpmem-2.6.2
-```
 
 
 
