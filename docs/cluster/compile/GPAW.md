@@ -367,7 +367,7 @@ condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_ucx
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
-git checkout master   # 23.6.1  master  22.8.0
+git git pull orgin master   # 23.6.1  master  22.8.0
 rm -rf build
 
 pip install --prefix=$condadir .
