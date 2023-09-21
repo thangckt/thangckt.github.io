@@ -231,7 +231,7 @@ make -j 16 && make install
 
     - `scipy=1.6 numpy=1.22` cannot install in py=3.11 --> require higher GCC --> use LLVM
     - `python=3.11 libuuid=2.38.1`
-    - need load MPI before install package in conda
+    - need to load MPI before install package in conda
 
 ``` sh
 module load conda/conda3
