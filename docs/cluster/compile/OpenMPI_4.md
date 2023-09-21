@@ -271,7 +271,7 @@ mpic++ -v
 
 !!! note
 
-    - Now, compile with all IB options, and select them by runtime parameters.
+    - Now, compile with all IB options, and select them by runtime parameters. (not work, should exclude UCX)
     - How to build from source code [see here](https://docs.open-mpi.org/en/main/developers/prerequisites.html#sphinx)
     - `--with-verbs` (default - auto detect)
     - `./autogen.pl` is the same as `./autogen.sh`
@@ -344,6 +344,27 @@ export my_libevent=/home1/p001cao/app/tool_dev/libevent-2.1.11       # require b
 export my_hwloc=/home1/p001cao/app/tool_dev/hwloc-2.8.0
 
 --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc}
+```
+
+### LLVM no UCX
+
+```sh
+rm -rf build_llvm && mkdir build_llvm && cd build_llvm
+
+module load compiler/llvm-17          # clang + lld
+module load tooldev/ucx1.15-clang17
+
+myLLVM=/home1/p001cao/app/compiler/llvm-17
+export PATH=$myLLVM/bin:$PATH
+export CC=clang CXX=clang++ FC=gfortran        # flang-new
+export LDFLAGS="-fuse-ld=lld -lrt"
+OFI=/home1/p001cao/app/tooldev/libfabric-1.19
+KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
+myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17
+
+../configure --with-sge --with-verbs --without-ucx --with-knem=${KNEM} --with-ofi=${OFI} --prefix=${myPREFIX}
+
+make  -j 16 && make install
 ```
 
 ### GCC 11
