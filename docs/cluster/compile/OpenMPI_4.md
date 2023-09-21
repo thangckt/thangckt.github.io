@@ -334,6 +334,7 @@ mpirun -np 2 ../examples/hello_c.exe
 ```sh
 module load mpi/ompi4.1.x-clang17
 mpirun --version
+ompi_info
 ```
 
 Other options
