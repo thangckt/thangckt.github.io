@@ -223,6 +223,7 @@ make -j 16 && make install
 
     - there is a problem with var `XC_FAMILY_HYB_GGA` in `libxc-master` as described in [here](https://gitlab.com/gpaw/gpaw/-/issues/953)
     - libxc cause error:
+    - Gpaw may conflict with UCX, so use OpenMPI without UCX.
 
 ##### LLVM
 
