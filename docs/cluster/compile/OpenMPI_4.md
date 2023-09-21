@@ -38,8 +38,11 @@
 
 !!! note
 
-    - OpenIB is an very old Infiband and is not maintained. So newer OpenMPI uses UCX, and openIB will be remove in OpenMPI-5 [see this](https://github.com/open-mpi/ompi/issues/11755)
-    - But some apps may conflict with UCX (e.g., Gpaw), so may use [libfabric](https://github.com/ofiwg/libfabric) to instead of OpenIB.
+    There are 3 ways to use IB in OpenMPI, (let compile with all, and use runtime setting to select)
+
+        - OpenIB is an very old Infiband implemented in OpenMPI. OpenIB is not maintained and will be remove in OpenMPI-5 [see this](https://github.com/open-mpi/ompi/issues/11755)
+        - UCX: newer OpenMPI uses UCX. But some apps may conflict with UCX (e.g., Gpaw)
+        - Libfabric: this may a reasonable choice now [libfabric](https://github.com/ofiwg/libfabric) to instead of OpenIB.
 
 
 ???+ note
@@ -268,7 +271,10 @@ mpic++ -v
 
 !!! note
 
-   - `--with-verbs` (default - auto detect)
+    - Now, compile with all IB options, and select them by runtime parameters.
+    - How to build from source code [see here](https://docs.open-mpi.org/en/main/developers/prerequisites.html#sphinx)
+    - `--with-verbs` (default - auto detect)
+    - `./autogen.pl` is the same as `./autogen.sh`
 
 ```sh
 # cd /home1/p001cao/0SourceCode
@@ -276,14 +282,6 @@ mpic++ -v
 # tar xvf openmpi-4.1.4.tar.gz
 # cd openmpi-4.1.4
 ```
-
-**Download source code** (now working with this)
-
-???+ note
-
-    - How to build from source code [see here](https://docs.open-mpi.org/en/main/developers/prerequisites.html#sphinx)
-    - Now, work with this
-    - `./autogen.pl` is the same as `./autogen.sh`
 
 ```sh
 cd /home1/p001cao/0SourceCode
@@ -306,7 +304,6 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 
     - To use clang libc++, use this link `export CPPFLAGS="-nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc"`. But might not be used?
     - with `FC=flang-new`, To solve `error: unknown argument: '-soname'` --> [see this](https://github.com/CopernicaMarketingSoftware/PHP-CPP/issues/368)
-    - may need to set `--with-ucx-libdir=`, to avoid error `address not mapped` when use UCX
 
 ```sh
 rm -rf build_llvm && mkdir build_llvm && cd build_llvm
