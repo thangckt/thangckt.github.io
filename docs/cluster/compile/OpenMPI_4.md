@@ -309,17 +309,18 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 rm -rf build_llvm && mkdir build_llvm && cd build_llvm
 
 module load compiler/llvm-17          # clang + lld
-module load tooldev/ucx1.11-clang17
+module load tooldev/ucx1.15-clang17
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
-myUCX=/home1/p001cao/app/tooldev/ucx1.11-clang17
-myUCC=/home1/p001cao/app/tooldev/ucc1.2
+myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
+OFI=/home1/p001cao/app/tooldev/libfabric-1.19
+KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
 myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.11
 
-../configure --with-sge --without-verbs --with-ucx=${myUCX} --with-ucc=${myUCC} --prefix=${myPREFIX}
+../configure --with-sge --with-verbs --with-ucx=${myUCX} --with-knem=${KNEM} --with-ofi=${OFI} --prefix=${myPREFIX}
 
 make  -j 16 && make install
 ```
@@ -342,27 +343,6 @@ export my_libevent=/home1/p001cao/app/tool_dev/libevent-2.1.11       # require b
 export my_hwloc=/home1/p001cao/app/tool_dev/hwloc-2.8.0
 
 --with-pmix=${my_PMIX} --with-libevent=${my_libevent} --with-hwloc=${my_hwloc}
-```
-
-### LLVM - no UCX
-OpenIB is an very old Infiband and is not maintained. So newer OpenMPI uses UCX, and openIB will be remove in OpenMPI-5. But some apps may conflict with UCX (e.g., Gpaw), so may use [libfabric](https://github.com/ofiwg/libfabric) to instead of OpenIB.
-
-```sh
-rm -rf build_noUCX && mkdir build_noUCX && cd build_noUCX
-
-module load compiler/llvm-17          # clang + lld
-
-myLLVM=/home1/p001cao/app/compiler/llvm-17
-export PATH=$myLLVM/bin:$PATH
-export CC=clang CXX=clang++ FC=gfortran        # flang-new
-export LDFLAGS="-fuse-ld=lld -lrt"
-OFI=/home1/p001cao/app/tooldev/libfabric-1.19
-KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
-myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX
-
-../configure --with-sge --with-verbs --without-ucx --with-knem=${KNEM} --with-ofi=${OFI} --prefix=${myPREFIX}
-
-make -j 16 && make install
 ```
 
 ### GCC 11
@@ -403,22 +383,6 @@ myUCX=/home1/p001cao/app/tooldev/ucx1.15-gcc9
 myPREFIX=/home1/p001cao/app/openmpi/4.1.5-gcc9
 
 ../configure --with-sge --without-verbs --with-ucx=${myUCX} --prefix=${myPREFIX}
-
-make -j 16 && make install
-```
-
-### GCC 9 - no UCX
-```sh
-cd /home1/p001cao/0SourceCode
-cd ompi-4.1.5
-rm -rf build_gcc && mkdir build_gcc && cd build_gcc
-
-module load compiler/gcc-9.5
-myGCC=/home2/app/compiler/gcc/9.5.0
-export PATH=$myGCC/bin:$PATH
-myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.5-gcc9-noUCX
-
-../configure --with-sge --with-verbs --without-ucx --prefix=${myPREFIX}
 
 make -j 16 && make install
 ```
