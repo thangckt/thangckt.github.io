@@ -56,7 +56,7 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 OFI=/home1/p001cao/app/tooldev/libfabric-1.19
 KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
-myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17
+myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
 
 ../configure --with-sge --with-ucx=${myUCX} --with-knem=${KNEM} --with-ofi=${OFI} --prefix=${myPREFIX}
 
