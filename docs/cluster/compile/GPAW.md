@@ -468,3 +468,23 @@ extra_compile_args = ['-fopenmp']
 extra_link_args = ['-fopenmp']
 ```
 
+### Module file
+```sh
+module load mpi/fftw3.3.10-ompi4.1.x-clang17
+module load mpi/elpa2023.05-ompi4.1.x-clang17
+module load mpi/libvdwxc-ompi4.1.x-clang17
+module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
+module load tooldev/libxc6.2.2-clang17
+module load tooldev/openBLAS0.3.23-clang17
+# module load mpi/ompi4.1.x-clang17
+# module load mpi/ompi4.1.x-clang17-noUCX
+
+# for Tcl script use only
+set     topdir          /home1/p001cao/app/miniconda3/envs/py11gpaw_source
+
+prepend-path    PATH                $topdir/bin
+prepend-path    INCLUDE             $topdir/include
+prepend-path    LD_LIBRARY_PATH     $topdir/lib
+prepend-path    PKG_CONFIG_PATH     $topdir/lib/pkgconfig
+prepend-path    GPAW_SETUP_PATH     $topdir/share/gpaw  # to see GPAW dataset
+```
