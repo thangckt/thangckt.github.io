@@ -59,7 +59,7 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 NUMAlib=/home1/p001cao/app/tooldev/numactl-2.0.13/lib
 UDEVlib=/home1/p001cao/app/tooldev/libudev-zero/lib
 export LD_LIBRARY_PATH=$myLLVM/lib:$NUMAlib:$UDEVlib:$LD_LIBRARY_PATH
-export LDFLAGS="${LDFLAGS} -L$UDEVlib -ludev"
+ln -sf $UDEVlib/libudev.a /home1/p001cao/app/compiler/llvm-17/lib/libudev.so.0
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
 OFI=/home1/p001cao/app/tooldev/libfabric-1.19
