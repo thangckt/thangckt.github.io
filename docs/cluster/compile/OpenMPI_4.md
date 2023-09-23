@@ -419,7 +419,7 @@ cd /home1/p001cao/0SourceCode/tooldev
 tar xzf numactl-2.0.13.tar.gz
 cd numactl-2.0.13
 
-module load tooldev/autoconf-2.69b
+module load tooldev/autoconf-2.72c
 ./autogen.sh
 
 mkdir build && cd build
