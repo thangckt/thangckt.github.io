@@ -56,6 +56,7 @@ export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
 export LD_LIBRARY_PATH=$myLLVM/lib:/lib64:$LD_LIBRARY_PATH
+export LDFLAGS="-L/lib64/libudev.so.0"
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
 myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
@@ -70,22 +71,3 @@ OFI=/home1/p001cao/app/tooldev/libfabric-1.19
 --with-ofi=${OFI}
 ```
 
-### Use GCC
-
-``` sh
-rm -rf build_gcc && mkdir build_gcc && cd build_gcc
-
-module load compiler/gcc-11          # clang + lld
-
-myLLVM=/home1/p001cao/app/compiler/gcc-11
-export PATH=$myLLVM/bin:$PATH
-export CC=gcc CXX=g++ FC=gfortran        # flang-new
-export LD_LIBRARY_PATH=$myLLVM/lib64:$LD_LIBRARY_PATH
-myUCX=/home1/p001cao/app/tooldev/ucx1.15-gcc9
-KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
-myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-gcc11
-
-../configure --with-sge --with-ucx=${myUCX} --with-knem=${KNEM} --prefix=${myPREFIX}
-
-make  -j 16 && make install
-```
