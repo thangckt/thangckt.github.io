@@ -56,7 +56,9 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
-export LD_LIBRARY_PATH=$myLLVM/lib:$LD_LIBRARY_PATH:/home1/p001cao/app/tooldev/numactl-2.0.13/lib:/home1/p001cao/app/tooldev/libudev-zero/lib
+NUMAlib=/home1/p001cao/app/tooldev/numactl-2.0.13/lib
+UDEVlib=/home1/p001cao/app/tooldev/libudev-zero/lib
+export LD_LIBRARY_PATH=$myLLVM/lib:$NUMAlib:$UDEVlib:$LD_LIBRARY_PATH
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
 OFI=/home1/p001cao/app/tooldev/libfabric-1.19
