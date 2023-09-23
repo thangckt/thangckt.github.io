@@ -70,7 +70,7 @@ myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
 ../configure --with-sge --with-ucx=${myUCX} --with-knem=${KNEM} --with-ofi=${OFI} \
     --without-hcoll --prefix=${myPREFIX}
 
-make  -j 16 && make install
+make MAKEINFO=true -j 16 && make install
 ```
 
 
