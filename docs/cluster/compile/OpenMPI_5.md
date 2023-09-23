@@ -31,8 +31,9 @@ mkdir build_eagle && cd build_eagle
 ### Using LLVM
 
 - So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`. This mean the current version of `libudev` no longer work. Tried install [install them](https://github.dev/thangckt/src_thangckt.github.io/tree/main/docs/cluster/compile/OpenMPI_4/)
-- must create link for `libudev`: `ln -sf $UDEVlib/libudev.a $myLLVM/lib/libudev.so.0`
-- `prrte` error now, so temporary disable
+- create link : `ln -sf $UDEVlib/libudev.a $myLLVM/lib/libudev.so.0`
+- `libudev` error can solve by `--without-hcoll` as [discuss here](https://github.com/open-mpi/ompi/issues/10291)
+
 
 ``` sh
 cd /home1/p001cao/0SourceCode
@@ -62,11 +63,11 @@ NUMAlib=/home1/p001cao/app/tooldev/numactl-2.0.13/lib
 UDEVlib=/home1/p001cao/app/tooldev/libudev-zero/lib
 export LD_LIBRARY_PATH=$myLLVM/lib:$NUMAlib:$UDEVlib:$LD_LIBRARY_PATH
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
-KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
+KNEM=/opt/knem-1.1.3.90mlnx1                 # /home1/p001cao/app/tooldev/knem-1.1.4
 OFI=/home1/p001cao/app/tooldev/libfabric-1.19
 myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
 
-../configure --with-sge --with-ucx=${myUCX} --with-knem=${KNEM} --with-ofi=${OFI} --prefix=${myPREFIX}
+../configure --with-sge --with-ucx=${myUCX} --with-knem=${KNEM} --with-ofi=${OFI} --without-hcoll --prefix=${myPREFIX}
 
 make  -j 16 && make install
 ```
