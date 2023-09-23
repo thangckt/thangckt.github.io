@@ -30,7 +30,7 @@ mkdir build_eagle && cd build_eagle
 
 ### Using LLVM
 
-- So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`. This mean the current version of `libudev` no longer work. To solve, [install them](https://github.dev/thangckt/src_thangckt.github.io/tree/main/docs/cluster/compile/OpenMPI_4/)
+- So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`. This mean the current version of `libudev` no longer work. Tried install, but only numa work [install them](https://github.dev/thangckt/src_thangckt.github.io/tree/main/docs/cluster/compile/OpenMPI_4/)
 - create link: `ln -sf /lib64/libudev.so.0.5.1 /home1/p001cao/app/compiler/llvm-17/lib/libudev.so.0`
 
 ``` sh
@@ -59,6 +59,7 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 NUMAlib=/home1/p001cao/app/tooldev/numactl-2.0.13/lib
 UDEVlib=/home1/p001cao/app/tooldev/libudev-zero/lib
 export LD_LIBRARY_PATH=$myLLVM/lib:$NUMAlib:$UDEVlib:$LD_LIBRARY_PATH
+export LDFLAGS="${LDFLAGS} -L$UDEVlib -ludev"
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
 OFI=/home1/p001cao/app/tooldev/libfabric-1.19
