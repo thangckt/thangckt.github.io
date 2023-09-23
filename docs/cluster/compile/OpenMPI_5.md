@@ -65,7 +65,7 @@ KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
 OFI=/home1/p001cao/app/tooldev/libfabric-1.19
 myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
 
-../configure --with-sge --with-ucx=${myUCX} --with-knem=${KNEM} --with-ofi=${OFI} --prefix=${myPREFIX}
+../configure --with-sge --with-ucx=${myUCX} --with-knem=${KNEM} --with-ofi=${OFI} --without-prrte --prefix=${myPREFIX}
 
 make  -j 16 && make install
 ```
