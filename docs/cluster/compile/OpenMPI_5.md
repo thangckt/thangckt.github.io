@@ -35,11 +35,6 @@ mkdir build_eagle && cd build_eagle
 - `libudev` error can solve by `--without-hcoll` as [discuss here](https://github.com/open-mpi/ompi/issues/10291)
 - `prrte` docs error, to disable build docs, delete `docs` in `SUBDIRS` of `/home1/p001cao/0SourceCode/ompi-5.0.x/3rd-party/prrte/Makefile.in` [see this](https://unix.stackexchange.com/questions/430627/how-do-i-avoid-make-to-generate-and-install-man-pages) -> not work. Solve by manually create files in subfolder 3rd-party
 
-Update `prrte`
-``` sh
-cd /home1/p001cao/0SourceCode/ompi-5.0.x/3rd-party
-git clone https://github.com/openpmix/prrte.git
-```
 
 ``` sh
 cd /home1/p001cao/0SourceCode
