@@ -354,7 +354,7 @@ module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
 module load tooldev/openBLAS0.3.23-clang17
 module load mpi/ompi5.0.x-clang17            # use openmpi-4.1.5
 
-OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17
+OPENMPI=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
