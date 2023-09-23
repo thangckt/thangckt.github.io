@@ -352,9 +352,9 @@ module load mpi/libvdwxc-ompi4.1.x-clang17
 module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
 # module load tooldev/libxc6.2.2-clang17
 module load tooldev/openBLAS0.3.23-clang17
-module load mpi/ompi4.1.x-clang17-ucx1.15            # use openmpi-4.1.5
+module load mpi/ompi5.0.x-clang17            # use openmpi-4.1.5
 
-OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-ucx1.15
+OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
@@ -363,6 +363,7 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 ```
 
 ``` sh
+pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
 condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_ucx
 
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
