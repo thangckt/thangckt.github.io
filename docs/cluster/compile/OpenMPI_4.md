@@ -415,6 +415,7 @@ make -j 16 && make install
 <https://github.com/numactl/numactl>
 
 ```shell
+cd /home1/p001cao/0SourceCode/tooldev
 tar xzf numactl-2.0.13.tar.gz
 cd numactl-2.0.13
 
