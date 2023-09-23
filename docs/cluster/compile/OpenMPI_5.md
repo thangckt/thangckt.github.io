@@ -46,6 +46,7 @@ cd /home1/p001cao/0SourceCode
 # git clone --recursive  -b v5.0.x --recursive https://github.com/open-mpi/ompi.git  ompi-5.0.x
 cd ompi-5.0.x
 git pull origin v5.0.x
+git submodule update --recursive
 
 module load tooldev/autoconf-2.72c
 module load tooldev/automake-1.16.5
