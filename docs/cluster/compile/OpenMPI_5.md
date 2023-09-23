@@ -80,7 +80,6 @@ module load compiler/gcc-11          # clang + lld
 myLLVM=/home1/p001cao/app/compiler/gcc-11
 export PATH=$myLLVM/bin:$PATH
 export CC=gcc CXX=g++ FC=gfortran        # flang-new
-export LDFLAGS="-fuse-ld=ld -lrt"
 export LD_LIBRARY_PATH=$myLLVM/lib64:$LD_LIBRARY_PATH
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-gcc9
 KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
