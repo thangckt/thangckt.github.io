@@ -57,7 +57,6 @@ export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
 export LD_LIBRARY_PATH=$myLLVM/lib:/lib64:$LD_LIBRARY_PATH
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
-
 KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
 myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
 
