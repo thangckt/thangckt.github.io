@@ -5,7 +5,8 @@
 - May use UCX with OMPI-5 and do not need seperate installation for Eagle, Lion?
 - May not be used with UCX-1.11
 - See news in 5.x [here](https://github.com/open-mpi/ompi/wiki/5.0.x-FeatureList)
-- Use UCX or Libfabric for IB.
+- Use UCX or Libfabric for IB. (Libfabric may use a lot of memory, so may lead to memory problem)
+- UCX + OMPI4 may cause `address not mapped` error with GPAW.
 
 ## USC1: (Cenntos 6.5)
 
