@@ -426,6 +426,16 @@ rm -rf build && mkdir build && cd build
 ../configure --prefix=/home1/p001cao/app/tooldev/numactl-2.0.13
 ```
 
+### 2. libudev
+NOTE: remove `-Wpedantic` in `Makefile`
+```shell
+cd /home1/p001cao/0SourceCode/tooldev
+git clone https://github.com/illiliti/libudev-zero.git
+cd libudev-zero
+
+make PREFIX=/home1/p001cao/app/tooldev/libudev-zero install
+```
+
 ### 3. openMPI/UCX: libfabric ()
 
 If building directly from the libfabric git tree, run './autogen.sh' before the configure step.
