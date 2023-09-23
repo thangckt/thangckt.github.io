@@ -422,7 +422,7 @@ cd numactl-2.0.13
 module load tooldev/autoconf-2.72c
 ./autogen.sh
 
-mkdir build && cd build
+rm -rf build && mkdir build && cd build
 ../configure --prefix=/home1/p001cao/app/tooldev/numactl-2.0.13
 ```
 
