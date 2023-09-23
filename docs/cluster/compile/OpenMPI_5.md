@@ -32,6 +32,7 @@ mkdir build_eagle && cd build_eagle
 
 - So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`. This mean the current version of `libudev` no longer work. Tried install [install them](https://github.dev/thangckt/src_thangckt.github.io/tree/main/docs/cluster/compile/OpenMPI_4/)
 - must create link for `libudev`: `ln -sf $UDEVlib/libudev.a $myLLVM/lib/libudev.so.0`
+- `prrte` error now, so temporary disable
 
 ``` sh
 cd /home1/p001cao/0SourceCode
