@@ -33,7 +33,7 @@ mkdir build_eagle && cd build_eagle
 - So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`. This mean the current version of `libudev` no longer work. Tried install [install them](https://github.dev/thangckt/src_thangckt.github.io/tree/main/docs/cluster/compile/OpenMPI_4/)
 - create link : `ln -sf $UDEVlib/libudev.a $myLLVM/lib/libudev.so.0`
 - `libudev` error can solve by `--without-hcoll` as [discuss here](https://github.com/open-mpi/ompi/issues/10291)
-- `prrte` docs error, to disable build docs, delete `docs` in `SUBDIRS` of `/home1/p001cao/0SourceCode/ompi-5.0.x/3rd-party/prrte/Makefile.in` [see this](https://unix.stackexchange.com/questions/430627/how-do-i-avoid-make-to-generate-and-install-man-pages) -> not work. Need download new prrte in subfolder 3rd-party
+- `prrte` docs error, to disable build docs, delete `docs` in `SUBDIRS` of `/home1/p001cao/0SourceCode/ompi-5.0.x/3rd-party/prrte/Makefile.in` [see this](https://unix.stackexchange.com/questions/430627/how-do-i-avoid-make-to-generate-and-install-man-pages) -> not work. Solve by manually create files in subfolder 3rd-party
 
 Update `prrte`
 ``` sh
