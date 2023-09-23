@@ -67,7 +67,8 @@ KNEM=/opt/knem-1.1.3.90mlnx1                 # /home1/p001cao/app/tooldev/knem-1
 OFI=/home1/p001cao/app/tooldev/libfabric-1.19
 myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
 
-../configure --with-sge --with-ucx=${myUCX} --with-knem=${KNEM} --with-ofi=${OFI} --without-hcoll --prefix=${myPREFIX}
+../configure --with-sge --with-ucx=${myUCX} --with-knem=${KNEM} --with-ofi=${OFI} \
+    --enable-python-bindings --without-hcoll --prefix=${myPREFIX}
 
 make  -j 16 && make install
 ```
