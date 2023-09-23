@@ -30,7 +30,10 @@ mkdir build_eagle && cd build_eagle
 
 ### Using LLVM
 
-- So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`.
+- So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`. To solve
+
+    - install libnuma
+    - create link for libudev: `ln -sf /lib64/libudev.so.0.5.1 /home1/p001cao/app/compiler/llvm-17/lib/libudev.so.0`
 
 ``` sh
 cd /home1/p001cao/0SourceCode
@@ -55,7 +58,7 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
-export LD_LIBRARY_PATH=$myLLVM/lib:$LD_LIBRARY_PATH:/lib64:/home1/p001cao/app/tooldev/numactl-2.0.13/lib
+export LD_LIBRARY_PATH=$myLLVM/lib:$LD_LIBRARY_PATH:/home1/p001cao/app/tooldev/numactl-2.0.13/lib:/lib64
 myUCX=/home1/p001cao/app/tooldev/ucx1.15-clang17
 KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
 myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
