@@ -30,7 +30,7 @@ mkdir build_eagle && cd build_eagle
 
 ### Using LLVM
 
-- So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`
+- So far, with version `5.0.0rc12`, compiling fails with error `ld.lld: error: unable to find library -lnuma` and `-ludev`.
 
 ``` sh
 cd /home1/p001cao/0SourceCode
