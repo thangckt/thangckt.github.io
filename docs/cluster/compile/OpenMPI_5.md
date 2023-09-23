@@ -52,7 +52,7 @@ export ACLOCAL_PATH=/home1/p001cao/app/tooldev/libtool-2.4.7/share/aclocal
 rm -rf build_clang && mkdir build_clang && cd build_clang
 
 module load compiler/llvm-17          # clang + lld
-ln -sf $UDEVlib/libudev.a $myLLVM/lib/libudev.so.0
+ln -sf $UDEVlib/libudev.a $myLLVM/lib/libudev.so
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
