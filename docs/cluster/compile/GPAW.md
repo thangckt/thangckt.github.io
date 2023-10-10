@@ -301,7 +301,7 @@ nolibxc = True  # use GPAW's libxc
 # xcdir = condadir
 
 mpi = True
-mpidir='/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX'
+mpidir='/home1/p001cao/app/mpi/openmpi4.1.x-clang17'
 compiler = mpidir+'/bin/mpicc'
 library_dirs += [mpidir+'/lib']
 include_dirs += [mpidir+'/include']
