@@ -62,7 +62,7 @@ LLVM
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/libxc/libxc.git libxc
 cd libxc
-git checkout 6.2.2  # master  6.2.2
+git pull origin master  # master  6.2.2
 rm -rf build && mkdir build && cd build
 
 module load tooldev/cmake-3.27
@@ -70,7 +70,7 @@ module load compiler/llvm-17
 
 myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
-export CC=clang export CXX=clang++
+export CC=clang export CXX=clang++ export CXX=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 myPREFIX=/home1/p001cao/app/tooldev/libxc6.2.2-llvm17
 
