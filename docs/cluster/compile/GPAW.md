@@ -58,6 +58,8 @@ make -j 16 && make install
 ```
 
 LLVM
+
+NOTE: may avoid using Cmake
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/libxc/libxc.git libxc
@@ -74,7 +76,7 @@ export CC=clang export CXX=clang++ export CXX=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 myPREFIX=/home1/p001cao/app/tooldev/libxc6.2.2-llvm17
 
-cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX -DCMAKE_C_COMPILER=$myLLVM/bin/clang
+./configure --enable-shared --disable-fortran --prefix=$myPREFIX
 
 make -j 16 && make install
 ```
