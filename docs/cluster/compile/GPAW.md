@@ -59,7 +59,6 @@ make -j 16 && make install
 
 LLVM
 
-NOTE: may avoid using Cmake
 ```sh
 cd /home1/p001cao/0SourceCode/tooldev
 # git clone https://gitlab.com/libxc/libxc.git libxc
@@ -74,7 +73,7 @@ myLLVM=/home1/p001cao/app/compiler/llvm-17
 export PATH=$myLLVM/bin:$PATH
 export CC=clang export CXX=clang++ export CXX=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
-myPREFIX=/home1/p001cao/app/tooldev/libxc6.2.2-llvm17
+myPREFIX=/home1/p001cao/app/tooldev/libxc6.2.2-clang17
 
 cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
 
@@ -261,6 +260,10 @@ myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
+myXC=/home1/p001cao/app/tooldev/libxc6.2.2-clang17
+export C_INCLUDE_PATH=$myXC/include
+export LIBRARY_PATH=$myXC/lib
+export LD_LIBRARY_PATH=$myXC/lib:$LD_LIBRARY_PATH
 ```
 
 ``` sh
