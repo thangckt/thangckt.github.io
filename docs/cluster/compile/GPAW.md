@@ -299,13 +299,12 @@ include_dirs = []
 # include_dirs += [condadir+'/include']
 
 # libraries = ['xc']
-# xcdir = '/home1/p001cao/app/tooldev/libxc5.1.4-gcc9'
+# xcdir = '/home1/p001cao/app/miniconda3/envs/py11gpaw_source'
+# # xcdir = '/home1/p001cao/app/tooldev/libxc6.2.2-clang17'
 # library_dirs += [xcdir + '/lib64']
 # include_dirs += [xcdir + '/include']
-# runtime_library_dirs = [xcdir + '/lib64']
 
 nolibxc = True  # use GPAW's libxc
-# xcdir = condadir
 
 mpi = True
 mpidir='/home1/p001cao/app/mpi/openmpi4.1.x-clang17'
