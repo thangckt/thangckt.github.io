@@ -261,11 +261,11 @@ export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
 ## libxc
-XC=/home1/p001cao/app/tooldev/libxc6.2.2-clang17
-export PATH=$XC/bin:$PATH
-export C_INCLUDE_PATH=$XC/include:$C_INCLUDE_PATH
-export LIBRARY_PATH=$XC/lib64:$LIBRARY_PATH
-export LD_LIBRARY_PATH=$XC/lib64:$LD_LIBRARY_PATH
+# XC=/home1/p001cao/app/tooldev/libxc6.2.2-clang17
+# export PATH=$XC/bin:$PATH
+# export C_INCLUDE_PATH=$XC/include:$C_INCLUDE_PATH
+# export LIBRARY_PATH=$XC/lib64:$LIBRARY_PATH
+# export LD_LIBRARY_PATH=$XC/lib64:$LD_LIBRARY_PATH
 ```
 
 ``` sh
