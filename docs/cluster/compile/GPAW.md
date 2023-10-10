@@ -74,7 +74,7 @@ export CC=clang export CXX=clang++ export CXX=gfortran
 export LDFLAGS="-fuse-ld=lld -lrt"
 myPREFIX=/home1/p001cao/app/tooldev/libxc6.2.2-llvm17
 
-cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX
+cmake .. -DBUILD_SHARED_LIBS=on -DCMAKE_INSTALL_PREFIX=$myPREFIX -DCMAKE_C_COMPILER=$myLLVM/bin/clang
 
 make -j 16 && make install
 ```
