@@ -260,17 +260,17 @@ myFFTW=/home1/p001cao/app/mpi/fftw3.3.10-ompi4.1.x-clang17
 export LD_LIBRARY_PATH=$OPENMPI/lib:$myFFTW/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home1/p001cao/app/compiler/gcc-11/lib64:$LD_LIBRARY_PATH
 export LDFLAGS="-fuse-ld=lld -lrt"
+### OFI
+export OMPI_MCA_btl=^tcp,openib
+export OMPI_MCA_pml=^ucx
+export OMPI_MCA_mtl=ofi
+export OMPI_MCA_mtl_ofi_provider_exclude=tcp
 ## libxc
 # XC=/home1/p001cao/app/tooldev/libxc6.2.2-clang17
 # export PATH=$XC/bin:$PATH
 # export C_INCLUDE_PATH=$XC/include:$C_INCLUDE_PATH
 # export LIBRARY_PATH=$XC/lib64:$LIBRARY_PATH
 # export LD_LIBRARY_PATH=$XC/lib64:$LD_LIBRARY_PATH
-### OFI
-export OMPI_MCA_btl=^tcp,openib
-export OMPI_MCA_pml=^ucx
-export OMPI_MCA_mtl=ofi
-export OMPI_MCA_mtl_ofi_provider_exclude=tcp
 ```
 
 ``` sh
