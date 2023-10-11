@@ -25,8 +25,12 @@ src="blob:https://hplus.com.vn/3415df2e-c6d7-4d14-af51-69b421e5d671"><source src
 
 
 
-<video id="videojs-contrib-hls-player_html5_api" class="vjs-tech" loop="" tabindex="-1" src="blob:http://lich.tvmienphi.tv/905c3f27-6133-489d-b369-a0b6f71b0b55"><source src="https //drm-livecdn.hplus.com.vn/CDN-FPT/
+
+
+
+<!-- <video id="videojs-contrib-hls-player_html5_api" class="vjs-tech" loop="" tabindex="-1" src="blob:http://lich.tvmienphi.tv/905c3f27-6133-489d-b369-a0b6f71b0b55"><source src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8" type="application/x-mpegURL"></video> -->
 
 
 
 
+<video id="videojs-contrib-hls-player_html5_api" class="vjs-tech" loop="" tabindex="-1" role="application" src="blob:https://hplus.com.vn/3415df2e-c6d7-4d14-af51-69b421e5d671"><source src="https://drm-livecdn.hplus.com.vn/CDN-FPT/THVL2-HD-ABR/playlist.m3u8?signKey=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJuYW1lIjoiMTE2Ljk4LjIuMTgwIiwiZW1haWwiOiJlbWFpbEBleGFtcGxlLmNvbSIsInBob25lIjoiMDk4NzY1NDMyMSIsImFwcF9jb2RlIjoiaHR2YyIsImNoYW5uZWxfY29kZSI6IlZUVjEiLCJhcHBfdXNlcl9pZCI6IjExNi45OC4yLjE4MCIsImlhdCI6MTY5NzA0NDM4Mn0.iEZn0V9pgtOvrm-Y1gJ4dNKsTJUb890mk5SnOjqvXlkT8Mo8Icl_4ROMU0X6qMQDysBdg4n8ah_UEZXexKn7OXYX1aRInuV29j15zh1U30Klr3RL7N7sCTI3RaPFkERrknHdWCsIgZV791N1J3teNlvNYEI_H2B3NsiwxctXsq1DPPMhTjt00G0j1UpXM7AbVqLPYkZK7VZtektEcfzKNyJTZciU9qRlRsl2wOmazJhNmh-6SvnbuJuL3iRgopwFw_YhWBHSpgGTJlR_qMYmgdjNVMg8MJYj76bX3jqh1HYVEsKqjALrIaXX6lmkZNqBAWGcHgSCMgTsUSQxms3e3dKedDxosGqkXzxcUNm9EVnZ41psyrZGAmxrlTjXa6APNkUTNQ_ITucuoUn7Fb8eRJ25L3PxnQYLXzTTvxmPgQPwxecJA2WFANDR3zofkynT5ZZdVQXOxdv3wiEsWyaWNOCkehtZgPD8QGExETq2HsNTC8TEu9tr3GdFWeEGnDPsIYRdg_0_5fVgU6e5_2UXxnwAZsoTWXrQzH-_qehzaoG9JyrL0NzYOIXTLT_53KiG_eUp3WMfeNyUy5P6x3FW26aSW7OH5-8poV9mvlTy8AvoZ4ofdSsmP87mLjnZ58DsBfwXa87gPnTx0cSTcv1r-OtzKOsvLLyETrea0snnzLA" type="application/x-mpegURL"></video>
