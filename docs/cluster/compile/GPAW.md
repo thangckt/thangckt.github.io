@@ -266,6 +266,11 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 # export C_INCLUDE_PATH=$XC/include:$C_INCLUDE_PATH
 # export LIBRARY_PATH=$XC/lib64:$LIBRARY_PATH
 # export LD_LIBRARY_PATH=$XC/lib64:$LD_LIBRARY_PATH
+### OFI
+export OMPI_MCA_btl=^tcp,openib
+export OMPI_MCA_pml=^ucx
+export OMPI_MCA_mtl=ofi
+export OMPI_MCA_mtl_ofi_provider_exclude=tcp
 ```
 
 ``` sh
