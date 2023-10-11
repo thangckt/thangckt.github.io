@@ -206,86 +206,86 @@ nav:
   - thatool: thangckt.github.io/thatool
   - mediaLib: thangckt.github.io/mediaLib
 
-  - Cluster:
-    - Compile:
-      - LAMMPS: cluster/compile/LAMMPS.md
-      - GCC: cluster/compile/compile_GCC.md
-      - OpenMPI:
-        - cluster/compile/openMPI_4.md
-        - cluster/compile/openMPI_5.md
-      - cluster/compile/Plumed.md
-      - cluster/compile/CP2K.md
-      - cluster/compile/CMake.md
-      - cluster/compile/Libtool.md
-      - cluster/compile/UCX.md
-      - cluster/compile/FTTW.md
-      - cluster/compile/binutils_linker.md
-      - cluster/compile/9_MPI_window.md
-      - cluster/compile/LLVM.md
-      - cluster/compile/11_Conda_MPI.md
-      - cluster/compile/12_PMIX.md
-      - cluster/compile/Dependencies.md
-      - cluster/compile/conda_install.md
-      - cluster/compile/conda_manager_packages.md
-      - cluster/compile/conda_hybrid.md
-    - Config:
-      - cluster/configure/Pip.md
-      - cluster/configure/Latex_TexStudio.md
-      - cluster/configure/Latex_VScode.md
-      - cluster/configure/3_JupyterLab.md
-      - cluster/configure/setting_VScode.md
-      - cluster/configure/5_git.md
-      - cluster/configure/6_Lammps.md
-      - cluster/configure/7_packing_python.md
-      - cluster/configure/8_WSL.md
-      - cluster/configure/NGC_container.md
-      - cluster/configure/sge.md
-      - cluster/configure/VScode_perspectives.md
-      - cluster/configure/check_mail.md
-    - Useful:
-      - cluster/refPage/cheatsheet.md
-      - cluster/refPage/docs_syntax.md
+  # - Cluster:
+  #   - Compile:
+  #     - LAMMPS: cluster/compile/LAMMPS.md
+  #     - GCC: cluster/compile/compile_GCC.md
+  #     - OpenMPI:
+  #       - cluster/compile/openMPI_4.md
+  #       - cluster/compile/openMPI_5.md
+  #     - cluster/compile/Plumed.md
+  #     - cluster/compile/CP2K.md
+  #     - cluster/compile/CMake.md
+  #     - cluster/compile/Libtool.md
+  #     - cluster/compile/UCX.md
+  #     - cluster/compile/FTTW.md
+  #     - cluster/compile/binutils_linker.md
+  #     - cluster/compile/9_MPI_window.md
+  #     - cluster/compile/LLVM.md
+  #     - cluster/compile/11_Conda_MPI.md
+  #     - cluster/compile/12_PMIX.md
+  #     - cluster/compile/Dependencies.md
+  #     - cluster/compile/conda_install.md
+  #     - cluster/compile/conda_manager_packages.md
+  #     - cluster/compile/conda_hybrid.md
+  #   - Config:
+  #     - cluster/configure/Pip.md
+  #     - cluster/configure/Latex_TexStudio.md
+  #     - cluster/configure/Latex_VScode.md
+  #     - cluster/configure/3_JupyterLab.md
+  #     - cluster/configure/setting_VScode.md
+  #     - cluster/configure/5_git.md
+  #     - cluster/configure/6_Lammps.md
+  #     - cluster/configure/7_packing_python.md
+  #     - cluster/configure/8_WSL.md
+  #     - cluster/configure/NGC_container.md
+  #     - cluster/configure/sge.md
+  #     - cluster/configure/VScode_perspectives.md
+  #     - cluster/configure/check_mail.md
+  #   - Useful:
+  #     - cluster/refPage/cheatsheet.md
+  #     - cluster/refPage/docs_syntax.md
 
-  - Literature:
-    - Video_series:
-      - Researh Ethics: literature/videos/1_research_ethic.md
-      - literature/videos/2_calculus_essence.md
+  # - Literature:
+  #   - Video_series:
+  #     - Researh Ethics: literature/videos/1_research_ethic.md
+  #     - literature/videos/2_calculus_essence.md
 
-    - Research Writing:
-      - Preparing:
-        - Instroduction of research paper: literature/research_writing/11_introduction_paper.md
-        - Ethics of research: literature/research_writing/21_ethic_of_research.md
-        - Identify suitable journal: literature/research_writing/31_suitable_journal.md
-        - Understanding open access: literature/research_writing/32_open_access.md
-      - Writing:
-        - Writing research paper: literature/research_writing/41_writing_paper.md
-        - Tables and Figures: literature/research_writing/42_table_figure.md
-      - Publishing:
-        - Making first impression: literature/research_writing/51_making_impression.md
-        - Facing peer review: literature/research_writing/52_facing_peer_review.md
-      - Writing grant proposal: literature/research_writing/61_grant_proposal.md
-      - Writing cover letter: literature/research_writing/62_cover_letter.md
-    - literature/1_reading.md
-    - literature/2_Mech_Terminologies.md
-    # - research/publication.md
+  #   - Research Writing:
+  #     - Preparing:
+  #       - Instroduction of research paper: literature/research_writing/11_introduction_paper.md
+  #       - Ethics of research: literature/research_writing/21_ethic_of_research.md
+  #       - Identify suitable journal: literature/research_writing/31_suitable_journal.md
+  #       - Understanding open access: literature/research_writing/32_open_access.md
+  #     - Writing:
+  #       - Writing research paper: literature/research_writing/41_writing_paper.md
+  #       - Tables and Figures: literature/research_writing/42_table_figure.md
+  #     - Publishing:
+  #       - Making first impression: literature/research_writing/51_making_impression.md
+  #       - Facing peer review: literature/research_writing/52_facing_peer_review.md
+  #     - Writing grant proposal: literature/research_writing/61_grant_proposal.md
+  #     - Writing cover letter: literature/research_writing/62_cover_letter.md
+  #   - literature/1_reading.md
+  #   - literature/2_Mech_Terminologies.md
+  #   # - research/publication.md
 
-    - Reading:
-      - Engineering: literature/reading/Mech_Science.md
-      - Computational: literature/reading/Comp_Methods.md
-      - Mechanics: literature/reading/mech_solid.md
+  #   - Reading:
+  #     - Engineering: literature/reading/Mech_Science.md
+  #     - Computational: literature/reading/Comp_Methods.md
+  #     - Mechanics: literature/reading/mech_solid.md
 
-  - Miscellaneous:      # Miscellaneous    Heterogeneous
-    - Music:
-      - Love theme: miscell/music/1_Tinh_ca.md
-      - Historical theme: miscell/music/2_Viet_su.md
-      - Fall of Saigon: miscell/music/3_Saigon.md
-      - Classic pieces: miscell/music/4_Classic.md
-      - Lyrical Chord: miscell/music/5_Lyrics.md
-    - Reading list:
-      - miscell/reading/1_read_list.md
+  # - Miscellaneous:      # Miscellaneous    Heterogeneous
+  #   - Music:
+  #     - Love theme: miscell/music/1_Tinh_ca.md
+  #     - Historical theme: miscell/music/2_Viet_su.md
+  #     - Fall of Saigon: miscell/music/3_Saigon.md
+  #     - Classic pieces: miscell/music/4_Classic.md
+  #     - Lyrical Chord: miscell/music/5_Lyrics.md
+  #   - Reading list:
+  #     - miscell/reading/1_read_list.md
 
-  - News:
-    - blog/posts/DeePMD_kit.md
+  # - News:
+  #   - blog/posts/DeePMD_kit.md
 
   - TV:
     - TVonline/kenh1.md
