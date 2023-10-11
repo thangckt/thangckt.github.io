@@ -34,10 +34,10 @@ src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8"
     </video>
 </div>
 
-<!-- <script>
+<script>
     var player = videojs('my_video');
     player.play();
-</script> -->
+</script>
 
 
 
