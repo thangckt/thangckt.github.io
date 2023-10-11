@@ -233,6 +233,10 @@ make -j 16 && make install
     - `scipy=1.6 numpy=1.22` cannot install in py=3.11 --> require higher GCC --> use LLVM
     - `python=3.11 libuuid=2.38.1`
     - need to load MPI before install package in conda
+    - openmpi5 cause error
+        ```module load mpi/ompi5.0.x-clang17             # use openmpi-4.1.5
+            OPENMPI=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
+        ```
 
 ``` sh
 module load conda/conda3
