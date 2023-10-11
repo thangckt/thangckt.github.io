@@ -44,7 +44,7 @@ src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8"
   if(Hls.isSupported()) {
     var video = document.getElementById('video');
     var hls = new Hls();
-    hls.loadSource('http://cdncities.com/deranalive/deranalive/playlist.m3u8');
+    hls.loadSource('https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
