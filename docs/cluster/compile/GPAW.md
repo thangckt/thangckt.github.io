@@ -237,6 +237,7 @@ make -j 16 && make install
         ```module load mpi/ompi5.0.x-clang17             # use openmpi-4.1.5
             OPENMPI=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
         ```
+    - Must compile OpenMPI without UCX
 
 ``` sh
 module load conda/conda3
@@ -255,8 +256,8 @@ module load mpi/libvdwxc-ompi4.1.x-clang17
 module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
 # module load tooldev/libxc6.2.2-clang17
 module load tooldev/openBLAS0.3.23-clang17
-module load mpi/ompi4.1.x-clang17             # use openmpi-4.1.5
-OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17
+module load mpi/ompi4.1.x-clang17-noUCX             # use openmpi-4.1.5
+OPENMPI=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX
 
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
@@ -279,8 +280,8 @@ condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
-# git pull origin master   # 23.6.1  master  22.8.0
-git checkout 23.6.1
+git pull origin master   # 23.6.1  master  22.8.0
+# git checkout 23.6.1
 rm -rf build
 
 pip install --prefix=$condadir .
