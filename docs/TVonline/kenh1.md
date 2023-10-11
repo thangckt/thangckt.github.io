@@ -28,7 +28,8 @@ src="blob:https://hplus.com.vn/3415df2e-c6d7-4d14-af51-69b421e5d671"><source src
 
 
 
-<video id="videojs-contrib-hls-player_html5_api" class="vjs-tech" loop="" tabindex="-1" src="blob:http://lich.tvmienphi.tv/905c3f27-6133-489d-b369-a0b6f71b0b55"><source src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8" type="application/x-mpegURL"></video>
+<video id="my-player" class="video-js" controls preload="auto">
+    <source src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8" type="application/x-mpegURL"></video>
 
 
 
