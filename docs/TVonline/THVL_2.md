@@ -35,7 +35,7 @@ src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8"
 </div> -->
 
 
-<video id="my_video" class="video-js vjs-default-skin" controls preload="auto" style="width:100%;height:100%;position:absolute;left:0px;top:0px;" autoplay="true">
+<video id="my_video" class="video-js vjs-default-skin" controls preload="auto"  autoplay="true">
     <source src="https://drm-livecdn.hplus.com.vn/CDN-FPT/THVL2-HD-ABR/playlist.m3u8" type="application/x-mpegURL">
     </video>
 
