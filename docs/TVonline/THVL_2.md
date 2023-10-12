@@ -29,8 +29,7 @@ src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8"
 
 
 <div style="position:relative; padding-bottom:56.25%">
-    <video id="my_video" class="video-js vjs-fluid vjs-default-skin" controls preload="auto"
-    data-setup='{}'>
+    <video id="my_video" class="video-js vjs-default-skin" controls preload="auto">
     <source src="https://drm-livecdn.hplus.com.vn/CDN-FPT/THVL2-HD-ABR/playlist.m3u8" type="application/x-mpegURL">
     </video>
 </div>

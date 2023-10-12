@@ -1,6 +1,6 @@
 
 
-<video-js id=vid1 width=600 height=300 class="vjs-default-skin" controls>
+<video-js id=vid1 width=600 height=300 class="vjs-default-skin" controls preload="auto" >
   <source src="http://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV7-HD-1080p/playlist.m3u8" type="application/vnd.apple.mpegURL">
 </video-js>
 
