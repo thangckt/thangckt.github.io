@@ -28,12 +28,12 @@ src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8"
 
 
 
-<div style="position:relative; padding-bottom:56.25%">
+<!-- <div style="position:relative; padding-bottom:56.25%">
     <video id="my_video" class="video-js" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
     controls preload="auto" data-setup='{}'>
     <source src="https://drm-livecdn.hplus.com.vn/CDN-FPT/THVL2-HD-ABR/playlist.m3u8" type="application/x-mpegURL">
     </video>
-</div>
+</div> -->
 
 <!-- <script>
     var player = videojs('my_video');
@@ -42,4 +42,8 @@ src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8"
 
 
 
+
+<video width="352" height="198" controls>
+    <source src="https://drm-livecdn.hplus.com.vn/CDN-FPT/THVL2-HD-ABR/playlist.m3u8" type="application/x-mpegURL">
+</video>
 
