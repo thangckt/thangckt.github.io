@@ -36,7 +36,7 @@ src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8"
 
 
 <video id="my_video" class="video-js vjs-default-skin" controls preload="auto"  autoplay="true">
-    <source src="https://drm-livecdn.hplus.com.vn/CDN-FPT/THVL2-HD-ABR/playlist.m3u8" type="application/x-mpegURL">
+    <source src="http://antvlive.ab5c6921.cdnviet.com/antv/chunklist.m3u8" type="application/x-mpegURL">
     </video>
 
 
