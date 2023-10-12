@@ -4,10 +4,10 @@
   <source src="http://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV7-HD-1080p/playlist.m3u8" type="application/x-mpegURL">
 </video-js>
 
-<!-- <script>
+<script>
 var player = videojs('vid1');
 player.play();
-</script> -->
+</script>
 
 
 <!-- <div style="position:relative; padding-bottom:56.25%">
