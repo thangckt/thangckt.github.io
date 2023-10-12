@@ -46,7 +46,3 @@ player.play();
 </script>
 
 
-<video id="play_html5_api" class="vjs-tech" preload="none" poster="/videojs/loading.gif" data-setup="{}" tabindex="-1" role="application" src="blob:http://sv.tvmienphi.tv/68ff493a-8b87-4f54-aff1-aa5eb940883d">
-	<!-- worning text if needed -->
-	<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank" class="vjs-hidden" hidden="hidden">supports HTML5 video</a></p>
-</video>
