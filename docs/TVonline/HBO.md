@@ -1,12 +1,15 @@
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
 
 
-
-<video id="vid1" class="vjs-tech" controls preload="auto"  autoplay="true">
+<video id="vid1" class="vjs-tech" controls preload="auto"  autoplay muted>
     <source src="http://vthanhtivi.pw:5000/hbo/index.m3u8" type="application/x-mpegURL">
-    </video>
+</video>
 
 
 <script>
-var player = videojs('vid1');
-player.play();
+    var player = videojs('vid1');
+    player.play();
 </script>
