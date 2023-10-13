@@ -1,6 +1,6 @@
 
 <div style="position:relative; padding-bottom:56.25%">
-<video id="vid1" class="vjs-tech" controls preload="auto"  autoplay muted style="width:100%;height:100%;position:absolute;left:0px;top:0px;">
+<video id="vid1" class="video-js vjs-default-skin vjs-live vjs-liveui" controls preload="auto"  autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;">
   <source src="https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8" type="application/x-mpegURL">
 </video-js>
 </div>
