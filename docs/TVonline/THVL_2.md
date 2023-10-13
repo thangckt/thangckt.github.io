@@ -54,7 +54,7 @@ player.play();
 // The extra 'liveui' arg below, and two extra classnames are not REQUIRED, but documentation-tutorial
 // refers to it as the newer/preferred API    See:  https://docs.videojs.com/tutorial-live.html
    var  player = videojs('live-video', {liveui: true} );
-   player.src({ src:"https://github.dev/thangckt/src_thangckt.github.io/tree/main/docs/TVonline/iptv_list.m3u", type:'application/x-mpegurl'});
+   player.src({ src:"https://github.com/thangckt/thangckt.github.io/blob/main/docs/TVonline/iptv_list.m3u", type:'application/x-mpegurl'});
    // Note: We begin with the stream playing, but the audio is initially 'muted' (see that attribute in video tag above )
    //   See:   https://stackoverflow.com/questions/70719678/html5-video-autoplay-with-sound-unmuted
    player.play();
