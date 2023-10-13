@@ -1,7 +1,7 @@
 
 
 
-<video id="vid1" class="vjs-default-skin" controls preload="auto"  autoplay >
+<video id="vid1" class="vjs-default-skin" controls preload="auto"  autoplay stalled="Dalvik/2.1.0">
     <source src="http://vthanhtivi.pw:5000/hbo/index.m3u8" type="application/x-mpegURL">
 </video>
 
