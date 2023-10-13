@@ -1,7 +1,7 @@
 
 
 <video-js id=vid1 width=600 height=300 class="vjs-tech" controls preload="auto" >
-  <source src="http://thtg.vn:8001/thtg.m3u8" type="application/x-mpegURL">
+  <source src="https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8" type="application/x-mpegURL">
 </video-js>
 
 <script>
