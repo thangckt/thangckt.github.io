@@ -26,6 +26,6 @@
     player.play();
 </script> -->
 
-<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" version="VideoLAN.VLCPlugin.2"  width="100%"  height="100%" id="vlc" loop="yes" autoplay="yes" target="https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8"></embed>
+<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org"  width="100%"  height="100%" id="vlc" autoplay="yes" target="https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8"></embed>
 
 #
