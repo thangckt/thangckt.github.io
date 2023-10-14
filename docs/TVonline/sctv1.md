@@ -6,12 +6,14 @@
 </div>
 
 <script>
-    videojs.Hls.xhr.beforeRequest = function(options) {
+    var player = videojs('vid1');
+
+    player.Hls.xhr.beforeRequest = function(options) {
         options.headers = { "User-Agent": "ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3" }
         return options
       };
 
-    var player = videojs('vid1');
+
     player.play();
 </script>
 
