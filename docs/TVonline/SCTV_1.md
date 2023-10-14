@@ -1,5 +1,5 @@
 
-<div style="position:relative; padding-bottom:56.25%">
+<!-- <div style="position:relative; padding-bottom:56.25%">
   <video id="vid1" class="video-js vjs-default-skin vjs-live vjs-liveui" controls autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;">
     <source src="https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8" type="application/x-mpegURL">
   </video>
@@ -13,7 +13,7 @@
       };
     var player = videojs('vid1', options);
     player.play();
-</script>
+</script> -->
 
 
 
@@ -25,5 +25,7 @@
     var player = videojs('vid1', options);
     player.play();
 </script> -->
+
+<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" version="VideoLAN.VLCPlugin.2"  width="100%"  height="100%" id="vlc" loop="yes" autoplay="yes" target="https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8"></embed>
 
 #
