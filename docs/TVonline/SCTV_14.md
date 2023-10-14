@@ -11,7 +11,6 @@
 </script> -->
 
 
-
 <script>
     options = {};
     videojs.Hls.xhr.beforeRequest = function(options) {
