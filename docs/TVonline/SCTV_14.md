@@ -17,7 +17,7 @@
         options.headers = { "User-Agent": "ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3" }
         return options
       };
-    var player = videojs('vid1');
+    var player = videojs('vid1', options);
     player.play();
 </script>
 
