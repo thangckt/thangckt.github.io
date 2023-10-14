@@ -9,6 +9,13 @@
 </video>
 </div>
 
+<script>
+    var player = videojs('vid1');
+    player.play();
+</script>
+
+
+
 <!-- <script>
     videojs.Hls.xhr.beforeRequest = function(options) {
         options.headers = { User-Agent: 'header' }
