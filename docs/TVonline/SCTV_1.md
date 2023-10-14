@@ -6,13 +6,20 @@
 </div>
 
 <script>
+    var player = videojs('vid1');
+    player.play();
+</script>
+
+
+
+<!-- <script>
     videojs.Hls.xhr.beforeRequest = function(options) {
         options.headers = { "http-user-agent": "ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3" }
         return options
       };
     var player = videojs('vid1');
     player.play();
-</script>
+</script> -->
 
 
 # SCTV1
