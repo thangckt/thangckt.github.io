@@ -47,14 +47,14 @@ player.play();
 
 <!-- See this link: https://stackoverflow.com/questions/71228784/playing-a-iptv-live-tv-stream-with-videojs-or-similar -->
 
-<video id='live-video' class='video-js   vjs-default-skin    vjs-live  vjs-liveui'    width='640' height='360'  controls  muted>
+<video id='live-video' class='video-js   vjs-default-skin    vjs-live  vjs-liveui'    width='640' height='360'  controls  >
 </video>
 
 <script>
 // The extra 'liveui' arg below, and two extra classnames are not REQUIRED, but documentation-tutorial
 // refers to it as the newer/preferred API    See:  https://docs.videojs.com/tutorial-live.html
    var  player = videojs('live-video', {liveui: true} );
-   player.src({ src:"https://github.com/thangckt/thangckt.github.io/blob/main/docs/TVonline/iptv_list.m3u", type:'application/x-mpegURL'});
+   player.src({ src:"https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8", type:'application/x-mpegURL'});
    // Note: We begin with the stream playing, but the audio is initially 'muted' (see that attribute in video tag above )
    //   See:   https://stackoverflow.com/questions/70719678/html5-video-autoplay-with-sound-unmuted
    player.play();
