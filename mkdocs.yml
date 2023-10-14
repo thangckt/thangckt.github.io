@@ -291,10 +291,10 @@ nav:
     - TVonline/SCTV_1.md
     - TVonline/SCTV_14.md
     - TVonline/THVL_2.md
-    - TVonline/HTV_7.md
     - TVonline/HBO.md
     - TVonline/Discovery.md
     - HTV/HTVC:
       - TVonline/HTV_1.md
       - TVonline/HTV_2.md
       - TVonline/HTV_3.md
+      - TVonline/HTV_7.md

@@ -1,5 +1,6 @@
 #EXTM3U
 # Tìm thêm kênh: https://pixwares.com/list-link-iptv-xem-truyen-hinh-mien-phi, Uu tien: http://iptvh.it/chanpro ; https://playlist.vthanhtivi.pw/; Mot so link "https://code.vthanhtivi.pw", phải kèm phía trước dòng "#EXTVLCOPT:http-user-agent=..."
+# Some link work on VLC, but not on videojs. Check link: http://www.iptvtools.net/
 
 
 ##---------------- SCTV ----------------##
