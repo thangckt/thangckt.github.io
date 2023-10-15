@@ -288,10 +288,10 @@ nav:
   #   - blog/posts/DeePMD_kit.md
 
   - TV:
-    - Movie:
+    - Phim:
       - TVonline/HBO_Asia.md
 
-    - Science:
+    - Phim Viet:
       - TVonline/Discovery.md
 
     - TVonline/SCTV_1.md
@@ -305,10 +305,10 @@ nav:
 
 
     - Local - Song Cuu Long:
-      - TVonline/VINH_LONG_1.md
-      - TVonline/VINH_LONG_2.md
-      - TVonline/VINH_LONG_3.md
-      - TVonline/VINH_LONG_4.md
+      - TVonline/Vinh_Long_1.md
+      - TVonline/Vinh_Long_2.md
+      - TVonline/Vinh_Long_3.md
+      - TVonline/Vinh_Long_4.md
 
     - Local - Nam Trung Bo:
       - TVonline/Phu_Yen.md
