@@ -75,3 +75,27 @@ myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
 make -j 16 && make install
 ```
 
+### LLVM no UCX
+
+```sh
+rm -rf build_noUCX && mkdir build_noUCX && cd build_noUCX
+
+module load compiler/llvm-17          # clang + lld
+module load tooldev/libudev
+
+myLLVM=/home1/p001cao/app/compiler/llvm-17
+export PATH=$myLLVM/bin:$PATH
+export CC=clang CXX=clang++ FC=gfortran        # flang-new
+export LDFLAGS="-fuse-ld=lld -lrt"
+NUMAlib=/home1/p001cao/app/tooldev/numactl-2.0.13/lib
+UDEVlib=/home1/p001cao/app/tooldev/libudev-zero/lib
+export LD_LIBRARY_PATH=$myLLVM/lib:$NUMAlib:$UDEVlib:$LD_LIBRARY_PATH
+KNEM=/opt/knem-1.1.3.90mlnx1                 # /home1/p001cao/app/tooldev/knem-1.1.4
+OFI=/home1/p001cao/app/tooldev/libfabric-1.19
+myPREFIX=/home1/p001cao/app/mpi/openmpi5.0.x-clang17-noUCX
+
+../configure --with-sge --without-ucx --with-knem=${KNEM} --with-ofi=${OFI} \
+    --without-hcoll --enable-mpi1-compatibility --prefix=${myPREFIX}
+
+make -j 16 && make install
+```

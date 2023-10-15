@@ -349,7 +349,7 @@ export my_hwloc=/home1/p001cao/app/tool_dev/hwloc-2.8.0
 ### LLVM no UCX
 
 ```sh
-rm -rf build_llvm && mkdir build_llvm && cd build_llvm
+rm -rf build_noUCX && mkdir build_noUCX && cd build_noUCX
 
 module load compiler/llvm-17          # clang + lld
 
@@ -359,7 +359,7 @@ export CC=clang CXX=clang++ FC=gfortran        # flang-new
 export LDFLAGS="-fuse-ld=lld -lrt"
 OFI=/home1/p001cao/app/tooldev/libfabric-1.19
 KNEM=/home1/p001cao/app/tooldev/knem-1.1.4
-myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17
+myPREFIX=/home1/p001cao/app/mpi/openmpi4.1.x-clang17-noUCX
 
 ../configure --with-sge --with-verbs --without-ucx --with-knem=${KNEM} --with-ofi=${OFI} --prefix=${myPREFIX}
 
