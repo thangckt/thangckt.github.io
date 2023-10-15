@@ -288,11 +288,15 @@ nav:
   #   - blog/posts/DeePMD_kit.md
 
   - TV:
+    - Movie:
+      - TVonline/HBO_Asia.md
+
+    - Science:
+      - TVonline/Discovery.md
+
     - TVonline/SCTV_1.md
     - TVonline/SCTV_14.md
     - TVonline/THVL_2.md
-    - TVonline/HBO.md
-    - TVonline/Discovery.md
     - HTV/HTVC:
       - TVonline/HTV_1.md
       - TVonline/HTV_2.md
@@ -303,3 +307,4 @@ nav:
       - TVonline/Phu_Yen.md
       - TVonline/Da_Nang_1.md
       - TVonline/Da_Nang_2.md
+
