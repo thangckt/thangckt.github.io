@@ -32,7 +32,7 @@
 <video id="video"></video>
 <script>
   var video = document.getElementById('video');
-  var videoSrc = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8';
+  var videoSrc = 'https://code.vthanhtivi.pw/getlink/sctvonline/sctv14/playlist.m3u8';
   //
   // First check for native browser HLS support
   //
