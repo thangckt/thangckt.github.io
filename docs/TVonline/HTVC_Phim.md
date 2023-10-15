@@ -7,7 +7,7 @@
 </div>
 
 <script>
-    var videoSrc = 'https://code.vthanhtivi.pw/getlink/vieon/htv7-hd/playlist.m3u8';
+    var videoSrc = 'https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PHIM-HD-1080p/chunks.m3u8';
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {
         var hls = new Hls();
