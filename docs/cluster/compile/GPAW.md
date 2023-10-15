@@ -345,7 +345,8 @@ extra_link_args = ['-fopenmp']
 
 ##### ompi5
 
-so far, not work with UCX because error: address not mapped. So use openIB in openMPI
+- so far, not work with UCX because error: address not mapped. So use openIB in openMPI
+- can not use with OMPI5, since ORTE is no longer available.
 
 ``` sh
 module load conda/conda3
