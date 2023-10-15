@@ -51,7 +51,6 @@ This has advantage that avoiding conflicts in `video.min.js` with mkdocs theme.
         hls.loadSource(videoSrc);
         hls.attachMedia(video);
         hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-        video.muted = true;
         video.play();
         });
     }

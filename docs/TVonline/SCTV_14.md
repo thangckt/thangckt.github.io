@@ -44,7 +44,6 @@
     hls.loadSource(videoSrc);
     hls.attachMedia(video);
     hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-      video.muted = true;
       video.play();
     });
   }
