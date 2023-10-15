@@ -31,12 +31,12 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
 
 <div style="position:relative; padding-bottom:56.25%">
-<video id="video" controls autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
+<video id="vid1" controls autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
 </div>
 
 <script>
   var videoSrc = 'https://code.vthanhtivi.pw/getlink/sctvonline/sctv14/playlist.m3u8';
-  var video = document.getElementById('video');
+  var video = document.getElementById('vid1');
   if (Hls.isSupported()) {
     var hls = new Hls({
       debug: true,
