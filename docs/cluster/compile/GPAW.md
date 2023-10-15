@@ -376,13 +376,11 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 
 ``` sh
 pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
-condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_ompi5
 
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
-# git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
 git pull origin master   # 23.6.1  master  22.8.0
-# git checkout 23.6.1
 rm -rf build
 
 pip install --prefix=$condadir .
