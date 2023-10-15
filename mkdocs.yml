@@ -12,7 +12,7 @@ copyright: Copyright &copy; 2021 <a href="https://thangckt.github.io">thangckt</
 ## Configuration
 theme:
   name: material     #  "material"    "mkdocs"    "readthedocs"     'rtd-dropdown'   windmill  bootswatch
-  # custom_dir: overrides
+  custom_dir: overrides
   logo: 1images/one-note-128-o.png            # one-note-128-o.png        my_picture3x3.jpg    one-note-128-y.png  snake1  monkey
   favicon: 1images/one-note-128-o.png
   highlightjs: true
@@ -293,8 +293,11 @@ nav:
       - TVonline/Cinemax.md
       - TVonline/AXN.md
 
-    - Phim Viet:
+    - Khoa hoc:
       - TVonline/Discovery.md
+
+    - Phim Viet:
+      - TVonline/Phim_Hay.md
 
     - TVonline/SCTV_1.md
     - TVonline/SCTV_14.md
