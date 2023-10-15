@@ -354,7 +354,7 @@ source activate py11gpaw_ompi5
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1
+conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 pillow
 ```
 
 ``` sh
