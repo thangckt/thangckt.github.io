@@ -21,7 +21,6 @@
 
 <script>
     var videoSrc = 'http://drtdnglive.e49a7c38.cdnviet.com/livedrt1/chunklist.m3u8';
-
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {
         var hls = new Hls();

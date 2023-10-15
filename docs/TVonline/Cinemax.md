@@ -8,7 +8,6 @@
 
 <script>
     var videoSrc = 'https://code.vthanhtivi.pw/getlink/tvfree/cinemax/playlist.m3u8';
-
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {
         var hls = new Hls();
