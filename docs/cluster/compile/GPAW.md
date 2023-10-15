@@ -343,18 +343,18 @@ extra_compile_args = ['-fopenmp']
 extra_link_args = ['-fopenmp']
 ```
 
-##### test UCX
+##### ompi5
 
 so far, not work with UCX because error: address not mapped. So use openIB in openMPI
 
 ``` sh
 module load conda/conda3
-conda create -y -n py11gpaw_ucx python=3.11.0
-source activate py11gpaw_ucx
+conda create -y -n py11gpaw_ompi5 python=3.11.0
+source activate py11gpaw_ompi5
 # conda install -y --revision 0
 conda clean -a -y
 
-conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1 pillow
+conda install -y --update-specs -c conda-forge python=3.11.5 libuuid=2.38.1
 ```
 
 ``` sh
@@ -364,9 +364,9 @@ module load mpi/libvdwxc-ompi4.1.x-clang17
 module load mpi/scaLAPACK2.2-ompi4.1.x-clang17
 # module load tooldev/libxc6.2.2-clang17
 module load tooldev/openBLAS0.3.23-clang17
-module load mpi/ompi5.0.x-clang17            # use openmpi-4.1.5
+module load mpi/ompi5.0.x-clang17-noUCX             # use openmpi-4.1.5
+OPENMPI=/home1/p001cao/app/mpi/openmpi5.0.x-clang17-noUCX
 
-OPENMPI=/home1/p001cao/app/mpi/openmpi5.0.x-clang17
 export PATH=$OPENMPI/bin:$PATH
 export CC=mpicc CXX=mpic++ FC=mpifort F90=mpif90 F77=mpif77
 export LD_LIBRARY_PATH=$OPENMPI/lib:$LD_LIBRARY_PATH
@@ -376,12 +376,13 @@ export LDFLAGS="-fuse-ld=lld -lrt"
 
 ``` sh
 pip install --ignore-installed git+https://gitlab.com/ase/ase.git@master
-condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_ucx
+condadir=/home1/p001cao/app/miniconda3/envs/py11gpaw_source
 
 cd /home1/p001cao/0SourceCode/tooldev                 # this may important
 # git clone https://gitlab.com/gpaw/gpaw.git gpaw
 cd gpaw
 git pull origin master   # 23.6.1  master  22.8.0
+# git checkout 23.6.1
 rm -rf build
 
 pip install --prefix=$condadir .
