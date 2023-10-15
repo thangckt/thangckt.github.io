@@ -27,7 +27,9 @@ https://github.com/videojs/videojs-contrib-hls
 ## Use extension hls.js
 https://github.com/video-dev/hls.js/blob/master/demo/basic-usage.html
 
-This has advantage that avoiding conflicts in `video.min.js` with mkdocs theme.
+https://nochev.github.io/hls.js/docs/html/
+
+This has advantage that no extermal js lib is needed, then avoiding conflicts in `video.min.js` with mkdocs theme.
 
 
 ```html
@@ -44,22 +46,20 @@ This has advantage that avoiding conflicts in `video.min.js` with mkdocs theme.
     <script>
     var videoSrc = 'https://code.vthanhtivi.pw/getlink/sctvonline/sctv14/playlist.m3u8';
     var video = document.getElementById('vid1');
-    if (Hls.isSupported()) {
-        var hls = new Hls({
-        debug: true,
-        });
+    if(Hls.isSupported()) {
+        var hls = new Hls();
         hls.loadSource(videoSrc);
         hls.attachMedia(video);
-        hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+        hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
-        });
+    });
     }
     // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
-    // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element through the `src` property.
+    // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
     // This is using the built-in support of the plain video element, without using hls.js.
     else if (video.canPlayType('application/vnd.apple.mpegurl')) {
         video.src = videoSrc;
-        video.addEventListener('canplay', function () {
+        video.addEventListener('canplay',function() {
         video.play();
         });
     }
