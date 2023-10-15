@@ -290,6 +290,8 @@ nav:
   - TV:
     - Phim:
       - TVonline/HBO_Asia.md
+      - TVonline/Cinemax.md
+      - TVonline/AXN.md
 
     - Phim Viet:
       - TVonline/Discovery.md

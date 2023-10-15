@@ -6,7 +6,7 @@
 </div>
 
 <script>
-    var videoSrc = 'https://code.vthanhtivi.pw/getlink/tvfree/hbo/playlist.m3u8';
+    var videoSrc = 'https://code.vthanhtivi.pw/getlink/tvfree/axn/playlist.m3u8';
 
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {
