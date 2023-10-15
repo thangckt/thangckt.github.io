@@ -6,7 +6,7 @@
 </div>
 
 <script>
-    var videoSrc = 'docs/TVonline/VINH_LONG_1.md';
+    var videoSrc = 'https://code.vthanhtivi.pw/getlink/vieon/thvl2-hd/playlist.m3u8';
 
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {

@@ -1,5 +1,4 @@
 
-
 <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
 
 <div style="position:relative; padding-bottom:56.25%">
@@ -7,7 +6,7 @@
 </div>
 
 <script>
-    var videoSrc = 'http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8';
+    var videoSrc = 'https://code.vthanhtivi.pw/getlink/vieon/thvl3-hd/playlist.m3u8';
 
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {
@@ -29,4 +28,8 @@
     }
 </script>
 
+
 #
+
+
+
