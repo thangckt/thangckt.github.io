@@ -35,7 +35,7 @@
 </div>
 
 <script>
-  var videoSrc = 'https://code.vthanhtivi.pw/getlink/sctvonline/sctv14/playlist.m3u8';
+  var videoSrc = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8';
   var video = document.getElementById('vid1');
   if (Hls.isSupported()) {
     var hls = new Hls({
