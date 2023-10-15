@@ -26,12 +26,12 @@
 
 <!-- Use chrome extension: https://github.com/video-dev/hls.js/blob/master/demo/basic-usage.html -->
 
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12"></script> -->
 <!-- Or if you want the latest version from the main branch -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
 
 <div style="position:relative; padding-bottom:56.25%">
-<video id="vid1" controls autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
+<video id="vid1" controls preload="auto" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
 </div>
 
 <script>

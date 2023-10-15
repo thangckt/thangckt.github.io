@@ -1,54 +1,9 @@
 
 
-
-<!-- <div style="position:relative; padding-bottom:56.25%">
-<iframe
-    src="blob:https://hplus.com.vn/3415df2e-c6d7-4d14-af51-69b421e5d671"
-    style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0" allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" >
-</iframe>
-</div> -->
-
-
-<!-- name="oauth2relay255174962" id="oauth2relay255174962" -->
-
-
-<!-- <div style="position:relative; padding-bottom:56.25%">
-<iframe
-src="https //drm-livecdn.hplus.com.vn/CDN-FPT/THVL1-HD-ABR/playlist.m3u8"
-    style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0" allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" >
-</iframe>
-</div> -->
-
-
-
-
-
-
-<!-- <div style="position:relative; padding-bottom:56.25%">
-    <video id="my_video" class="video-js vjs-default-skin" controls preload="auto" style="width:100%;height:100%;position:absolute;left:0px;top:0px;" autoplay="true">
-    <source src="https://drm-livecdn.hplus.com.vn/CDN-FPT/THVL2-HD-ABR/playlist.m3u8" type="application/x-mpegURL">
-    </video>
-</div> -->
-
-
-<!-- <video id="my_video" class="video-js vjs-default-skin" controls preload="auto"  autoplay="true">
-    <source src="./iptv_list.m3u" type="application/x-mpegURL">
-    </video>
-
-<script>
-var player = videojs('my_video');
-player.play();
-</script> -->
-
-
 <!-- See this link: https://stackoverflow.com/questions/71228784/playing-a-iptv-live-tv-stream-with-videojs-or-similar -->
 
 
-<div style="position:relative; padding-bottom:56.25%">
+<!-- <div style="position:relative; padding-bottom:56.25%">
     <video id='live-video' class='video-js  vjs-default-skin  vjs-live  vjs-liveui' controls autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" >
     </video>
 </div>
@@ -74,6 +29,36 @@ alarabiapublish/alarabiya_360p/chunks.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=418515,RESOLUTION=426x240,CODECS="avc1.42c015,mp4a.40.2",CLOSED-CAPTIONS=NONE
 alarabiapublish/alarabiya_240p/chunks.m3u8
 */
+</script> -->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
+
+<div style="position:relative; padding-bottom:56.25%">
+<video id="vid1" controls preload="auto" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
+</div>
+
+<script>
+    var videoSrc = 'https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8';
+    var video = document.getElementById('vid1');
+    if(Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource(videoSrc);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED,function() {
+        video.play();
+    });
+    }
+    // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+    // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
+    // This is using the built-in support of the plain video element, without using hls.js.
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = videoSrc;
+        video.addEventListener('canplay',function() {
+        video.play();
+        });
+    }
 </script>
 
 
