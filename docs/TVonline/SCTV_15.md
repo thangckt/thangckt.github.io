@@ -5,7 +5,7 @@
 </div>
 
 <script>
-    var videoSrc = 'https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8';
+    var videoSrc = 'https://code.vthanhtivi.pw/getlink/sctvonline/sctv15/playlist.m3u8';
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {
         var hls = new Hls();

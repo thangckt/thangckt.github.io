@@ -299,9 +299,13 @@ nav:
     - Phim Viet:
       - TVonline/Phim_Hay.md
 
-    - TVonline/SCTV_1.md
-    - TVonline/SCTV_14.md
-    - TVonline/THVL_2.md
+
+
+    - SCTV:
+      - TVonline/SCTV_1.md
+      - TVonline/SCTV_14.md
+      - TVonline/SCTV_15.md
+
     - HTV/HTVC:
       - TVonline/HTV_1.md
       - TVonline/HTV_2.md
