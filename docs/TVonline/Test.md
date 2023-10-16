@@ -16,7 +16,7 @@
 
 <script>
     function loadVideo() {
-        var videoURL = document.getElementById("m3u8Link").value;
+        var videoUrl = document.getElementById("m3u8Link").value;
         var video = document.getElementById('vid1');
         if (Hls.isSupported()) {
             var hls = new Hls();
