@@ -10,7 +10,7 @@
     var videoUrl = 'https://code.vthanhtivi.pw/getlink/vieon/htv7-hd/playlist.m3u8';
     var video = document.getElementById('vid1');
     var config = {
-        xhrSetup: function (xhr) {
+        xhrSetup: function (xhr,url) {
             xhr.withCredentials = true; // do send cookies
             // xhr.setRequestHeader("Authorization", "Bearer " + token);
             xhr.setRequestHeader("http-user-agent", "Dalvik/2.1.0");
