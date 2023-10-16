@@ -11,7 +11,7 @@
 
 <label for="m3u8Link">Enter Stream Link: </label>
 <input type="text" id="m3u8Link" style="width: 400px;"> <br>
-<button type="button" onclick="loadVideo()">Load Video</button>
+<button type="button" onclick="loadVideo()" style="color: red;">Load Video</button>
 
 
 <script>
