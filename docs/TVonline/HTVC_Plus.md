@@ -7,7 +7,7 @@
 </div>
 
 <script>
-    var videoSrc = 'HTVC_Phim.md';
+    var videoSrc = 'https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PLUS-HD-1080p/playlist.m3u8';
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {
         var hls = new Hls();
