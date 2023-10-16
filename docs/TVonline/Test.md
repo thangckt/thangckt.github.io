@@ -9,31 +9,29 @@
 </div>
 
 
-<label for="m3u8Link">Enter m3u8 Link:</label>
-<input type="text" id="m3u8Link" style="width: 300px;">
-<button onclick="loadVideo()">Load Video</button>
+  <label for="m3u8Link">Enter m3u8 Link: </label>
+    <input type="text" id="m3u8Link" style="width: 400px;">
+    <button onclick="loadVideo()"> Load Video </button>
 
 
 <script>
-    var videoURL = document.getElementById("m3u8Link").value;
-    var video = document.getElementById('vid1');
-    if(Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(videoURL);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED,function() {
-        video.play();
-    });
-    }
-    // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
-    // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
-    // This is using the built-in support of the plain video element, without using hls.js.
-    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = videoURL;
-        video.addEventListener('canplay',function() {
-        video.play();
-        });
-    }
+    function loadVideo() {
+        var videoURL = document.getElementById("m3u8Link").value;
+        var video = document.getElementById('vid1');
+             if (Hls.isSupported()) {
+                var hls = new Hls();
+                hls.loadSource(videoUrl);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play();
+                });
+            } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+                video.src = videoUrl;
+                video.addEventListener('canplay', function() {
+                    video.play();
+                });
+            }
+        }
 </script>
 
 
