@@ -9,9 +9,9 @@
 </div>
 
 
-  <label for="m3u8Link">Enter m3u8 Link: </label>
-    <input type="text" id="m3u8Link" style="width: 400px;"> <br>
-    <button onclick="loadVideo()"> Load Video </button>
+<label for="m3u8Link">Enter m3u8 Link: </label>
+<input type="text" id="m3u8Link" style="width: 400px;"> <br>
+<button onclick="loadVideo()"> Load Video </button>
 
 
 <script>
