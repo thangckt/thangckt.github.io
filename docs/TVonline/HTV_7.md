@@ -14,6 +14,8 @@
             xhr.withCredentials = true; // do send cookies
             // xhr.setRequestHeader("Authorization", "Bearer " + token);
             xhr.setRequestHeader("http-user-agent", "Dalvik/2.1.0");
+            xhr.setRequestHeader("Access-Control-Allow-Headers","Content-Type, Accept, X-Requested-With");
+            xhr.setRequestHeader("Access-Control-Allow-Credentials","true");
         }};
 
     if(Hls.isSupported()) {
