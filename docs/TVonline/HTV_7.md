@@ -7,16 +7,16 @@
 </div>
 
 <script>
-    var videoSrc = 'https://code.vthanhtivi.pw/getlink/vieon/htv7-hd/playlist.m3u8';
+    var videoUrl = 'https://code.vthanhtivi.pw/getlink/vieon/htv7-hd/playlist.m3u8';
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {
         var hls = new Hls({ xhrSetup: (xhr) => {
                             // xhr.withCredentials = true;
                             // xhr.setRequestHeader("Authorization", "Bearer " + token);
-                            xhr.setRequestHeader("http-user-agent", "Dalvik/2.1.0");
+                            xhr.setRequestHeader("User-Agent", "Dalvik/2.1.0");
                         },
                     });
-        hls.loadSource(videoSrc);
+        hls.loadSource(videoUrl);
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
@@ -26,7 +26,7 @@
     // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
     // This is using the built-in support of the plain video element, without using hls.js.
     else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = videoSrc;
+        video.src = videoUrl;
         video.addEventListener('canplay',function() {
         video.play();
         });
