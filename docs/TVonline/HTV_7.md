@@ -9,13 +9,15 @@
 <script>
     var videoUrl = 'https://code.vthanhtivi.pw/getlink/vieon/htv7-hd/playlist.m3u8';
     var video = document.getElementById('vid1');
+    var config = {
+        xhrSetup: function (xhr, url) {
+            xhr.withCredentials = true; // do send cookies
+            // xhr.setRequestHeader("Authorization", "Bearer " + token);
+            xhr.setRequestHeader("http-user-agent", "Dalvik/2.1.0");
+        }};
+
     if(Hls.isSupported()) {
-        var hls = new Hls({ xhrSetup: (xhr) => {
-                            // xhr.withCredentials = true;
-                            // xhr.setRequestHeader("Authorization", "Bearer " + token);
-                            xhr.setRequestHeader("User-Agent", "Dalvik/2.1.0");
-                        },
-                    });
+        var hls = new Hls(config);
         hls.loadSource(videoUrl);
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED,function() {
