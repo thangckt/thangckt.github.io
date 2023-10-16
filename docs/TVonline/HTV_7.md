@@ -10,7 +10,12 @@
     var videoSrc = 'https://code.vthanhtivi.pw/getlink/vieon/htv7-hd/playlist.m3u8';
     var video = document.getElementById('vid1');
     if(Hls.isSupported()) {
-        var hls = new Hls();
+        var hls = new Hls({ xhrSetup: (xhr) => {
+                            // xhr.withCredentials = true;
+                            // xhr.setRequestHeader("Authorization", "Bearer " + token);
+                            xhr.setRequestHeader("http-user-agent", "Dalvik/2.1.0");
+                        },
+                    });
         hls.loadSource(videoSrc);
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED,function() {
