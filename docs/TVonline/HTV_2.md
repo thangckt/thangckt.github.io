@@ -16,7 +16,7 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.5"></script> -->
 
 <div style="position:relative; padding-bottom:56.25%">
-<video id="vid1" controls preload="auto" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
+<video id="vid1" controls preload="auto" autoplay liveui style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
 </div>
 
 <script>
