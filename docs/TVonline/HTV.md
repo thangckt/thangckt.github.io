@@ -49,11 +49,6 @@
 <script>
     function loadVideo(videoUrl) {
         // var videoUrl = document.getElementById("m3u8Link").value;
-        if (!videoUrl) {
-            alert("Please enter a stream link.");
-            return;
-        }
-
         var video = document.getElementById('vid1');
         if (Hls.isSupported()) {
             var hls = new Hls();

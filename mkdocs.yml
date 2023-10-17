@@ -308,15 +308,7 @@ nav:
       - TVonline/SCTV_15.md
       - TVonline/SCTV_16.md
 
-    - HTV/HTVC:
-      - TVonline/HTV_1.md
-      - TVonline/HTV_2.md
-      - TVonline/HTV_3.md
-      - TVonline/HTV_7.md
-
-      - TVonline/HTVC_Thuan_Viet.md
-      - TVonline/HTVC_Phim.md
-      - TVonline/HTVC_Plus.md
+    - HTV- HTVC: TVonline/HTV.md
 
 
     - Local - Song Cuu Long:
