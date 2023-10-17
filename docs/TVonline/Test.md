@@ -35,21 +35,20 @@
 
 <label for="m3u8Link">Enter Stream Link: </label>
 <input type="text" id="m3u8Link" style="width: 400px;"> <br>
-<button class="pushable" onclick="loadVideo()">Load Video</button>
+<button class="pushable" >
+    <span class="front" onclick="loadVideo()">Load Video</span>
+</button>
 
 
 <script>
     function loadVideo() {
         var videoUrl = document.getElementById("m3u8Link").value;
-        var video = document.getElementById('vid1');
         if (!videoUrl) {
             alert("Please enter a stream link.");
-            if (!video.paused) {
-                video.pause();
-            }
             return;
         }
 
+        var video = document.getElementById('vid1');
         if (Hls.isSupported()) {
             var hls = new Hls();
             hls.loadSource(videoUrl);
