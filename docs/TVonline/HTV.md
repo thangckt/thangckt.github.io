@@ -10,7 +10,7 @@ hide:
   .pushable {
     background: skyblue; /* Changed button color to sky blue */
     /* background: hsl(340deg 100% 32%); */
-    border-radius: 12px;
+    border-radius: 8px;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -18,8 +18,8 @@ hide:
   }
   .front {
     display: block;
-    padding: 12px 24px;
-    border-radius: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
     font-size: 12pt;
     background: hsl(345deg 100% 47%);
     color: white;
@@ -53,11 +53,13 @@ hide:
             hls.attachMedia(video);
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
                 video.play();
+                scrollToTop(); // Scroll to the top after loading the video
             });
         } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
             video.src = videoUrl;
             video.addEventListener('canplay', function() {
                 video.play();
+                scrollToTop(); // Scroll to the top after loading the video
             });
         }
     }
@@ -66,12 +68,6 @@ hide:
     window.addEventListener('load', function() {
         var defaultVideoUrl = 'https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8';
         loadVideo(defaultVideoUrl);
-    });
-
-    // Scroll to the video
-    window.scrollTo({
-        top: video.offsetTop,
-        behavior: 'smooth'
     });
 </script>
 
