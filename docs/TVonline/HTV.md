@@ -98,6 +98,9 @@ hide:
 <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PLUS-HD-1080p/playlist.m3u8')"> <span class="front">HTV Plus</span> </button>
 <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-THUANVIET-HD-1080p/playlist.m3u8')"> <span class="front">HTVC Thuan Viet</span> </button>
 
+## Khoa hoc - Doi song
+<button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/discovery/playlist.m3u8')"> <span class="front">Discovery</span> </button>
+
 ## TH Dia Phuong
 ### Dong Bang Song Cuu Long
 <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl1-hd/playlist.m3u8')"> <span class="front">Vinh Long 1</span> </button>
