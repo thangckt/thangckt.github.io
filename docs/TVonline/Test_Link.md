@@ -3,7 +3,7 @@
   .pushable {
     background: skyblue; /* Changed button color to sky blue */
     /* background: hsl(340deg 100% 32%); */
-    border-radius: 12px;
+    border-radius: 8px;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -11,9 +11,9 @@
   }
   .front {
     display: block;
-    padding: 12px 24px;
-    border-radius: 12px;
-    font-size: 1.25rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12pt;
     background: hsl(345deg 100% 47%);
     color: white;
     transform: translateY(-6px);

@@ -45,6 +45,7 @@ hide:
 
 <script>
     function loadVideo(videoUrl) {
+        window.scrollTo(0, 0); // Scroll to the top after loading the video
         // var videoUrl = document.getElementById("m3u8Link").value;
         var video = document.getElementById('vid1');
         if (Hls.isSupported()) {
@@ -53,13 +54,11 @@ hide:
             hls.attachMedia(video);
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
                 video.play();
-                scrollToTop(); // Scroll to the top after loading the video
             });
         } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
             video.src = videoUrl;
             video.addEventListener('canplay', function() {
                 video.play();
-                scrollToTop(); // Scroll to the top after loading the video
             });
         }
     }
