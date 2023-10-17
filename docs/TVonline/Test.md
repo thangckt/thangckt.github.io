@@ -44,6 +44,9 @@
         var video = document.getElementById('vid1');
         if (!videoUrl) {
             alert("Please enter a stream link.");
+            if (!video.paused) {
+                video.pause();
+            }
             return;
         }
 
