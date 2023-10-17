@@ -12,9 +12,9 @@ hide:
     /* background: hsl(340deg 100% 32%); */
     border-radius: 8px;
     border: none;
-    padding: 4px 4px ;
+    padding: 0;
     cursor: pointer;
-    outline-offset: 4px;
+    outline-offset: 6px;
   }
   .front {
     display: block;
