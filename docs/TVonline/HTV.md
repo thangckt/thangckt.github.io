@@ -24,7 +24,7 @@
   }
   .front {
     display: block;
-    padding: 12px 42px;
+    padding: 12px 12px;
     border-radius: 12px;
     font-size: 1.25rem;
     background: hsl(345deg 100% 47%);
@@ -85,7 +85,5 @@
 
 ## HTVC
 <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PHIM-HD-1080p/chunks.m3u8')"> <span class="front">HTVC Phim</span> </button>
-
 <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PLUS-HD-1080p/playlist.m3u8')"> <span class="front">HTV Plus</span> </button>
-
 <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-THUANVIET-HD-1080p/playlist.m3u8')"> <span class="front">HTVC Thuan Viet</span> </button>
