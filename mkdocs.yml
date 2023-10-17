@@ -288,20 +288,6 @@ nav:
   #   - blog/posts/DeePMD_kit.md
 
   - TV:
-    # - Phim:
-    #   - TVonline/HBO_Asia.md
-    #   - TVonline/Cinemax.md
-    #   - TVonline/AXN.md
-
-    # - Khoa hoc:
-    #   - TVonline/Discovery.md
-
-    # - Phim Viet:
-    #   - TVonline/Phim_Hay.md
-    #   - HTCV Phim: TVonline/HTVC_Phim.md
-
-    # - SCTV - VTV - VTC: TVonline/SCTV_VTV_VTC.md
-
-    - TV Onlin: TVonline/HTV.md
+    - TV Online: TVonline/HTV.md
     - Stream: TVonline/Test_Link.md
 
