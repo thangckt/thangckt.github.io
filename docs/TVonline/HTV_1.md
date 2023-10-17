@@ -11,36 +11,78 @@
 </script> -->
 
 
+<!-- USE BUTTON: https://www.joshwcomeau.com/animation/3d-button/#a-hover-state-4 -->
+<style>
+  .pushable {
+    background: skyblue; /* Changed button color to sky blue */
+    /* background: hsl(340deg 100% 32%); */
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    transform: translateY(-6px);
+  }
+
+  .pushable:active .front {
+    /* background: hsl(215deg 100% 32%); /* Changed the active color */
+    transform: translateY(-2px);
+  }
+</style>
 
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.5"></script> -->
 
 <div style="position:relative; padding-bottom:56.25%">
-<video id="vid1" controls preload="auto" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
+<video id="vid1" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
 </div>
 
 <script>
-    var videoSrc = 'https://epg.pw/stream/1007d830565e93f89444e5b52302ed2d24506870d46b060143ba0d47cbf66900.ctv';
-    var video = document.getElementById('vid1');
-    if(Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(videoSrc);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED,function() {
-        video.play();
+    function loadVideo(videoUrl) {
+        // var videoUrl = document.getElementById("m3u8Link").value;
+        if (!videoUrl) {
+            alert("Please enter a stream link.");
+            return;
+        }
+
+        var video = document.getElementById('vid1');
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoUrl);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                video.play();
+            });
+        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            video.src = videoUrl;
+            video.addEventListener('canplay', function() {
+                video.play();
+            });
+        }
+    }
+
+    // Automatically load and play default video when page loads
+    window.addEventListener('load', function() {
+        var defaultVideoUrl = 'https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8';
+        loadVideo(defaultVideoUrl);
     });
-    }
-    // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
-    // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
-    // This is using the built-in support of the plain video element, without using hls.js.
-    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = videoSrc;
-        video.addEventListener('canplay',function() {
-        video.play();
-        });
-    }
 </script>
 
+
+<!-- ADD LINK FOR CHANNEL -->
+<button class="pushable" onclick="loadVideo('https://epg.pw/stream/1007d830565e93f89444e5b52302ed2d24506870d46b060143ba0d47cbf66900.ctv')"> <span class="front">HTV 1</span> </button>
+
+<button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8')"> <span class="front">HTV 2</span> </button>
+
+<button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV3-SD-480p/playlist.m3u8')"> <span class="front">HTV 3</span> </button>
 
 #
