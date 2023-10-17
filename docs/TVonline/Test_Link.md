@@ -1,7 +1,8 @@
 <!-- USE BUTTON: https://www.joshwcomeau.com/animation/3d-button/#a-hover-state-4 -->
 <style>
   .pushable {
-    background: hsl(340deg 100% 32%);
+    background: skyblue; /* Changed button color to sky blue */
+    /* background: hsl(340deg 100% 32%); */
     border-radius: 12px;
     border: none;
     padding: 0;
@@ -10,7 +11,7 @@
   }
   .front {
     display: block;
-    padding: 12px 42px;
+    padding: 12px 24px;
     border-radius: 12px;
     font-size: 1.25rem;
     background: hsl(345deg 100% 47%);

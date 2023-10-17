@@ -302,25 +302,11 @@ nav:
 
 
 
-    - SCTV:
-      - TVonline/SCTV_1.md
-      - TVonline/SCTV_14.md
-      - TVonline/SCTV_15.md
-      - TVonline/SCTV_16.md
+    - SCTV - VTV - VTC: TVonline/SCTV_VTV_VTC.md
 
-    - HTV- HTVC: TVonline/HTV.md
+    - HTV - HTVC: TVonline/HTV.md
 
+    - TH Dia Phuong: TVonline/Dia_Phuong.md
 
-    - Local - Song Cuu Long:
-      - TVonline/Vinh_Long_1.md
-      - TVonline/Vinh_Long_2.md
-      - TVonline/Vinh_Long_3.md
-      - TVonline/Vinh_Long_4.md
-
-    - Local - Nam Trung Bo:
-      - TVonline/Phu_Yen.md
-      - TVonline/Da_Nang_1.md
-      - TVonline/Da_Nang_2.md
-
-    - Stream: TVonline/Test.md
+    - Stream: TVonline/Test_Link.md
 
