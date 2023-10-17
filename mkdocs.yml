@@ -38,13 +38,13 @@ theme:
 
   palette:
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      # primary: blue grey   #  blue grey, indigo
-      # accent: indigo
-      toggle:
-        icon: material/eye
-        name: Switch to dark mode
+    # - media: "(prefers-color-scheme: light)"
+    #   scheme: default
+    #   # primary: blue grey   #  blue grey, indigo
+    #   # accent: indigo
+    #   toggle:
+    #     icon: material/eye
+    #     name: Switch to dark mode
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
