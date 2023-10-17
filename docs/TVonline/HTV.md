@@ -65,7 +65,7 @@ hide:
 
     // Automatically load and play default video when page loads
     window.addEventListener('load', function() {
-        var defaultVideoUrl = 'https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8';
+        var defaultVideoUrl = 'https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8';
         loadVideo(defaultVideoUrl);
     });
 </script>
