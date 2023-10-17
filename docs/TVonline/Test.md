@@ -41,12 +41,12 @@
 <script>
     function loadVideo() {
         var videoUrl = document.getElementById("m3u8Link").value;
+        var video = document.getElementById('vid1');
         if (!videoUrl) {
             alert("Please enter a stream link.");
             return;
         }
 
-        var video = document.getElementById('vid1');
         if (Hls.isSupported()) {
             var hls = new Hls();
             hls.loadSource(videoUrl);
