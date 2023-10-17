@@ -18,7 +18,7 @@ hide:
   }
   .front {
     display: block;
-    padding: 8px 12px;
+    padding: 8px 10px;
     border-radius: 8px;
     font-size: 12pt;
     background: hsl(345deg 100% 47%);
