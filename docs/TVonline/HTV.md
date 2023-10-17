@@ -12,7 +12,7 @@ hide:
     /* background: hsl(340deg 100% 32%); */
     border-radius: 8px;
     border: none;
-    padding: 0;
+    padding: 4px 4px ;
     cursor: pointer;
     outline-offset: 4px;
   }
