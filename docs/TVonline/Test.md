@@ -1,4 +1,4 @@
-<!-- USE BUTTON -->
+<!-- USE BUTTON: https://www.joshwcomeau.com/animation/3d-button/#a-hover-state-4 -->
 <style>
   .pushable {
     background: hsl(340deg 100% 32%);
@@ -36,9 +36,7 @@
 
 <label for="m3u8Link">Enter Stream Link: </label>
 <input type="text" id="m3u8Link" style="width: 400px;"> <br>
-<button class="pushable" onclick="loadVideo()">
-    <span class="front">Load Video</span>
-</button>
+<button class="pushable" onclick="loadVideo()"> <span class="front">Load Video</span> </button>
 
 
 <script>
