@@ -15,7 +15,7 @@ hide:
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
-    margin: 0px 0px 4px 0px;
+    margin-bottom: 4px;
   }
   .front {
     display: block;
