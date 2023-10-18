@@ -24,6 +24,10 @@ https://github.com/videojs/videojs-contrib-hls
 </body>
 ```
 
+## Use videojs-http-streaming (VHS)
+https://github.com/videojs/http-streaming
+
+
 ## Use extension hls.js
 https://github.com/video-dev/hls.js/blob/master/demo/basic-usage.html
 

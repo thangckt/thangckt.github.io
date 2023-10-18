@@ -37,21 +37,31 @@ hide:
 </style>
 
 
-<!-- videojs-http-streaming (VHS) -->
-<script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
-<script src="https://unpkg.com/browse/@videojs/http-streaming@2.16.2/dist/videojs-http-streaming.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.5"></script> -->
 
 <div style="position:relative; padding-bottom:56.25%">
-<video-js id="vid1" class="vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video-js>
+<video id="vid1" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
 </div>
 
 <script>
     function loadVideo(videoUrl) {
         window.scrollTo(0, 0); // Scroll to the top after loading the video
         // var videoUrl = document.getElementById("m3u8Link").value;
-        var player = videojs('vid1');
-            player.src({src: videoUrl, type: 'application/x-mpegURL'});
-            video.play();
+        var video = document.getElementById('vid1');
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoUrl);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                video.play();
+            });
+        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            video.src = videoUrl;
+            video.addEventListener('canplay', function() {
+                video.play();
+            });
+        }
     }
     // Automatically load and play default video when page loads
     window.addEventListener('load', function() {
