@@ -38,7 +38,7 @@ hide:
 
 
 <!-- videojs-http-streaming (VHS) -->
-<script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+<script src="https://vjs.zencdn.net/8.6.1/video.core.min.js"></script>
 <script src="https://unpkg.com/browse/@videojs/http-streaming@3.7.0/dist/videojs-http-streaming.min.js"></script>
 
 <div style="position:relative; padding-bottom:56.25%">
