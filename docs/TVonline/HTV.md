@@ -38,7 +38,7 @@ hide:
 
 
 <!-- videojs-http-streaming (VHS) -->
-<script src="https://vjs.zencdn.net/8.6.1/video.core.min.js"></script>
+<script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
 <script src="https://unpkg.com/browse/@videojs/http-streaming@3.7.0/dist/videojs-http-streaming.min.js"></script>
 
 <div style="position:relative; padding-bottom:56.25%">
@@ -49,16 +49,7 @@ hide:
     function loadVideo(videoUrl) {
         window.scrollTo(0, 0); // Scroll to the top after loading the video
         // var videoUrl = document.getElementById("m3u8Link").value;
-        var player = videojs('vid1', {
-  html5: {
-    vhs: {
-      overrideNative: true
-    },
-    nativeAudioTracks: false,
-    nativeVideoTracks: false
-  }
-}); 
-                             
+        var player = videojs('vid1');     
             player.src({src: videoUrl, type: 'application/x-mpegURL'});
             video.play();
     }
