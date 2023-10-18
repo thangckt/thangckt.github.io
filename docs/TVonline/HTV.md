@@ -49,8 +49,17 @@ hide:
     function loadVideo(videoUrl) {
         window.scrollTo(0, 0); // Scroll to the top after loading the video
         // var videoUrl = document.getElementById("m3u8Link").value;
-        var player = videojs('vid1');
-            player.src({src: videoUrl, type: 'application/x-mpegURL', withCredentials: true});
+        var player = videojs('vid1', {
+  html5: {
+    vhs: {
+      overrideNative: true
+    },
+    nativeAudioTracks: false,
+    nativeVideoTracks: false
+  }
+}); 
+                             );
+            player.src({src: videoUrl, type: 'application/x-mpegURL'});
             video.play();
     }
     // Automatically load and play default video when page loads
