@@ -592,3 +592,39 @@ https://code.vthanhtivi.pw/getlink/tvfree/boomerang/playlist.m3u8
 #EXTINF:-1 tvg-id="happykids" group-title="Thiếu Nhi Hoạt hình" tvg-logo="https://phuhdtv.github.io/logo/ITB/happy-kids.png", Happy Kids
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3
 https://e4.endpoint.cdn.sctvonline.vn/hls/happykid/index.m3u8
+
+
+
+##---------------- Tin Tuc ----------------##
+#EXTINF:-1 tvg-id="arirang" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/214.png", Arirang
+http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8
+#EXTINF:-1 tvg-id="abcaustralia" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/215.png", ABC Australia
+
+#EXTINF:-1 tvg-id="bloomberg" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/216.png", Bloomberg
+http://210.210.155.35/dr9445/h/h03/01.m3u8
+#EXTINF:-1 tvg-id="bbcworldnews" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/213.png", BBC News
+
+#EXTINF:-1 tvg-id="cnbc" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/217.png", CNBC
+https://code.vthanhtivi.pw/getlink/fptplay/XytQrq6V9v28qXUoqHn4xQ/1697959204/cnbc/chunklist_b2500000.m3u8
+#EXTINF:-1 tvg-id="cnn" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/218.png", CNN
+https://d30x5vsa85tvmd.cloudfront.net/index_5.m3u8
+#EXTINF:-1 tvg-id="cna" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/219.png", CNA
+https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8
+#EXTINF:-1 tvg-id="" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/220.png", CGTN
+https://live.cgtn.com/1000/prog_index.m3u8
+#EXTINF:-1 tvg-id="dw" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/221.png", DW
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8
+#EXTINF:-1 tvg-id="france24eng" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/222.png", France 24
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://code.vthanhtivi.pw/getlink/vieon2/france-24-english/playlist.m3u8
+#EXTINF:-1 tvg-id="kbsworld" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/223.png", KBS World
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://code.vthanhtivi.pw/getlink/vieon/kbs-world/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/224.png", NHK World
+https://b-nhkwlive-xjp.nhkworld.jp/hls/live/2003458-b/nhkwlive-xjp-en/index_1M.m3u8
+#EXTINF:-1 tvg-id="" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/225.png", TV5Monde
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://code.vthanhtivi.pw/getlink/vieon/tv5-monde-asie/playlist.m3u8
+#EXTINF:-1 tvg-id="" group-title="🌏| Đối ngoại/Tin tức quốc tế" tvg-logo="https://cdn.hqth.me/logo/thumbs/226.png", TRT World
+https://tv-trtworld.live.trt.com.tr/master_720.m3u8
