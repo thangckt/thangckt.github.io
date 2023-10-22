@@ -170,23 +170,6 @@ https://code.vthanhtivi.pw/getlink/vieon/vtc14-hd/playlist.m3u8
 https://code.vthanhtivi.pw/getlink/vieon/vtc16-hd/playlist.m3u8
 
 
-##---------------- Giai tri ----------------##
-#EXTINF:-1 group-title="Kenh Phim" tvg-logo="https://phuhdtv.github.io/logo/PayTV/phim-hay.png", Phim Hay
-https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8
-
-#EXTINF:-1 tvg-id="" group-title="Kenh Phim" tvg-logo="https://assets.stickpng.com/thumbs/62987eef7e802c4d1eb20078.png", Cải lương
-http://donglao.duckdns.org/vn360sport/YTB/ytb_cailuong.php
-
-#EXTINF:-1 tvg-id="" group-title="Kenh Phim" tvg-logo="https://assets.stickpng.com/thumbs/62987eef7e802c4d1eb20078.png", Cổ Nhạc
-http://donglao.duckdns.org/vn360sport/YTB/ytb_conhac.php
-
-#EXTINF:-1 tvg-id="" group-title="Kenh Phim" tvg-logo="https://assets.stickpng.com/thumbs/62987eef7e802c4d1eb20078.png", Phim HongKong
-http://donglao.duckdns.org/vn360sport/YTB/ytb_phimhk.php
-
-#EXTINF:-1 tvg-id="" group-title="Kenh Phim" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/tvbv.jpg", TVB Vietnam
-https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8
-
-
 ##---------------- VTV ----------------##
 #EXTINF:-1 tvg-id="vtv1hd" group-title="❤| VTV" tvg-logo="https://cdn.hqth.me/logo/thumbs/1.png", VTV1
 https://code.vthanhtivi.pw/getlink/tv360/WGFVvqetsrFBBGXq4rpi3Q/1697224933/2/playlist.m3u8
@@ -288,6 +271,23 @@ https://liveh34.vtvcab.vn/hls/ACTION/01.m3u8
 #Không có link
 #EXTINF:-1 tvg-id="" group-title="🧡| VTVcab" tvg-logo="https://stvinaprod.vtvcab.vn/720X405/72ac05ac-1ac3-4570-bb0b-ee698b251f0a.jpg", Thể thao Việt
 #Không có link
+
+
+##---------------- Giai tri ----------------##
+#EXTINF:-1 group-title="Kenh Phim" tvg-logo="https://phuhdtv.github.io/logo/PayTV/phim-hay.png", Phim Hay
+https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Kenh Phim" tvg-logo="https://assets.stickpng.com/thumbs/62987eef7e802c4d1eb20078.png", Cải lương
+http://donglao.duckdns.org/vn360sport/YTB/ytb_cailuong.php
+
+#EXTINF:-1 tvg-id="" group-title="Kenh Phim" tvg-logo="https://assets.stickpng.com/thumbs/62987eef7e802c4d1eb20078.png", Cổ Nhạc
+http://donglao.duckdns.org/vn360sport/YTB/ytb_conhac.php
+
+#EXTINF:-1 tvg-id="" group-title="Kenh Phim" tvg-logo="https://assets.stickpng.com/thumbs/62987eef7e802c4d1eb20078.png", Phim HongKong
+http://donglao.duckdns.org/vn360sport/YTB/ytb_phimhk.php
+
+#EXTINF:-1 tvg-id="" group-title="Kenh Phim" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/tvbv.jpg", TVB Vietnam
+https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8
 
 
 ##----------------- Vietsub -----------------##
