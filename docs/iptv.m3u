@@ -304,25 +304,27 @@ https://liveh34.vtvcab.vn/hls/ACTION/01.m3u8
 
 
 ##---------------- Tuyen giao ----------------##
-#EXTINF:-1 tvg-logo="https://imgur.com/kHZtzZw.png" group-title="VTV", ANTV hd
-http://antvlive.ab5c6921.cdnviet.com/antv/chunklist.m3u8
-#EXTINF:-1 tvg-name="qpvn" tvg-id="" tvg-country="Vietnam" tvg-language="Tiếng Việt" tvg-logo="https://epg.pw/media/images/channel/2015/11/21/large/20151121143756629427_28.jpg" group-title="VTV", qpvn hd
-https://epg.pw/stream/ec8db68fb3171734e2ad5c1b6d36d7b58508defb2aec7025a38a897cc3069e49.m3u8
-
-#EXTINF:-1 tvg-id="vovtvhd" group-title="🌐| Thiết yếu" tvg-logo="https://phuhdtv.github.io/logo/qg/VOV-TV.png", VOV TV HD
+#EXTINF:-1 tvg-id="antvhd" group-title="🌐| Thiết yếu" tvg-logo="https://cdn.hqth.me/logo/thumbs/90.png", ANTV HD
+https://liveh34.vtvcab.vn/hls/ONANTV_CL/04.m3u8
+#EXTINF:-1 tvg-id="ttxvnhd" group-title="🌐| Thiết yếu" tvg-logo="https://cdn.hqth.me/logo/thumbs/91.png", VNews
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://code.vthanhtivi.pw/getlink/vieon/vnews-hd/playlist.m3u8
+#EXTINF:-1 tvg-id="nhandan" group-title="🌐| Thiết yếu" tvg-logo="https://cdn.hqth.me/logo/thumbs/92.png", Nhân Dân TV
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://code.vthanhtivi.pw/getlink/vieon/nhan-dan-hd/playlist.m3u8
+#EXTINF:-1 tvg-id="quochoi" group-title="🌐| Thiết yếu" tvg-logo="https://cdn.hqth.me/logo/thumbs/93.png", Quốc Hội HD
+http://113.164.225.140:1935/live/quochoitvlive.stream/chunklist.m3u8
+#EXTINF:-1 tvg-id="qpvnhd" group-title="🌐| Thiết yếu" tvg-logo="https://cdn.hqth.me/logo/thumbs/94.png", QPVN HD
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+https://code.vthanhtivi.pw/getlink/vieon/quoc-phong-hd/playlist.m3u8
+#EXTINF:-1 tvg-id="vovtvhd" group-title="🌐| Thiết yếu" tvg-logo="https://cdn.hqth.me/logo/thumbs/95.png", VOVTV HD
 https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/playlist.m3u8
 
-#EXTINF:-1 tvg-id="ttxvnhd" group-title="🌐| Thiết yếu" tvg-logo="https://phuhdtv.github.io/logo/qg/VNEWS.png", VNews TTXVN HD
-#EXTVLCOPT:http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64)
-https://drm-livecdn.hplus.com.vn/CDN-FPT02/TTXVN-SD-ABR/HTV-ABR/TTXVN-SD-720p/playlist.m3u8
-
-#EXTINF:-1 tvg-id="QuocHoiTV.vn", Quốc Hội (720p)
-http://113.164.225.140:1935/live/quochoitvlive.stream_720p/playlist.m3u8
 
 
 ##---------------- Dia Phuong ----------------## https://bankervn.com/danh-sach-63-tinh-thanh-viet-nam/
 ##---------------- Tay Bac Bo
-#EXTINF:-1 tvg-logo="http://tvmedia.vn/upload/medialibrary/5af/5af210e9c39b3d520063b21bc87cb927.png" group-title="ĐỊA PHƯƠNG", Hoa Bình
+#EXTINF:-1 tvg-logo="http://tvmedia.vn/upload/medialibrary/5af/5af210e9c39b3d520063b21bc87cb927.png" group-title="🇻🇳| Địa phương", Hoa Bình
 http://hoabinhtvlive.746b3ddb.cdnviet.com/hoabinhtv/chunklist.m3u8
 #EXTINF:-1 tvg-id="sonla" group-title="🇻🇳| Địa phương" tvg-logo="https://phuhdtv.github.io/logo/diaphuong/SonLaTV.png", SON LA
 https://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8
@@ -338,7 +340,7 @@ https://live.yenbaitv.org.vn/hls/livestream.m3u8
 ##---------------- Dong Bac Bo
 #EXTINF:-1 tvg-id="phutho" group-title="🇻🇳| Địa phương" tvg-logo="https://cdn.hqth.me/logo/thumbs/163.png", Phu Tho
 https://code.vthanhtivi.pw/getlink/tv360/x-7tyfR2dP9dIuRVbraRTg/1697224933/77/playlist.m3u8
-#EXTINF:-1 tvg-name="ha giang tv" tvg-id="" tvg-country="Vietnam" tvg-language="Vietnamese" tvg-logo="https://epg.pw/media/uploads/tmp_logo/2014/05/21/20140521152818110227_63.jpg" group-title="Other", ha giang tv
+#EXTINF:-1 tvg-name="ha giang tv" tvg-id=""   tvg-logo="https://epg.pw/media/uploads/tmp_logo/2014/05/21/20140521152818110227_63.jpg" group-title="🇻🇳| Địa phương", ha giang tv
 https://epg.pw/stream/a712de26eaa3f42f96fb028ad92ba95c2847107eca4ab4e1c74dd69800de15ab.m3u8
 #EXTINF:-1 tvg-id="TuyenQuangTV.vn", Tuyen Quang TV (540p)
 https://live.tuyenquangtv.vn/hls/ttv.m3u8
@@ -385,13 +387,13 @@ http://vinhphuctv.vn:8090/vinhphuclive/web.stream/playlist.m3u8
 https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8
 
 ##---------------- Bac Trung Bo
-#EXTINF:-1 tvg-name="Thanh Hoa hd" tvg-id="" tvg-country="Vietnam" tvg-language="Tiếng Việt" tvg-logo="https://epg.pw/media/images/channel/2015/11/21/large/20151121165848080472_82.jpg" group-title="Generic", Thanh Hoa hd
+#EXTINF:-1 tvg-name="Thanh Hoa hd" tvg-id=""  tvg-language="Tiếng Việt" tvg-logo="https://epg.pw/media/images/channel/2015/11/21/large/20151121165848080472_82.jpg" group-title="Generic", Thanh Hoa hd
 https://epg.pw/stream/7c1c21a7fd30b2da73c77dc65ed234464f2f3c7e6a08bbd0edfc5651a69bdc3a.m3u8
-#EXTINF:-1 tvg-id="nghean" group-title="Địa phương" tvg-logo="https://i.imgur.com/JjXijIA.png", NGHE AN HD
+#EXTINF:-1 tvg-id="nghean" group-title="🇻🇳| Địa phương" tvg-logo="https://i.imgur.com/JjXijIA.png", NGHE AN HD
 http://103.90.220.236/natvlive/tv1live.m3u8
 #EXTINF:-1 tvg-id="HaTinhTV.vn", Ha Tinh TV (720p)
 https://wse.hatinhtv.net/live/httv1/playlist.m3u8
-#EXTINF:-1 tvg-name="Quang Binh" tvg-id="" tvg-country="Vietnam" tvg-language="Tiếng Việt" tvg-logo="https://epg.pw/media/images/channel/2015/11/21/large/20151121171901068230_40.jpg" group-title="Generic", Quang Binh
+#EXTINF:-1 tvg-name="Quang Binh" tvg-id=""  tvg-language="Tiếng Việt" tvg-logo="https://epg.pw/media/images/channel/2015/11/21/large/20151121171901068230_40.jpg" group-title="Generic", Quang Binh
 https://epg.pw/stream/d5f03904a828b0c8831812ba2113ecae61dea330e1ffe595c8b72ad75b5baaa0.m3u8
 #EXTINF:-1 tvg-id="quangtri" group-title="🇻🇳| Địa phương" tvg-logo="https://cdn.hqth.me/logo/thumbs/170.png", Quang Tri
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
@@ -404,11 +406,11 @@ https://code.vthanhtivi.pw/getlink/tv360/Wc4FgLIs2xDSt6El0YGjFA/1697224933/63/pl
 http://drtdnglive.e49a7c38.cdnviet.com/livedrt1/chunklist.m3u8
 #EXTINF:-1 tvg-id="DaNangTV2.vn", DA NANG TV2 (1080p)
 http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8
-#EXTINF:-1 tvg-logo="http://img.hplus.com.vn/460x260/poster/2018/06/05/764456-QRT.png" group-title="ĐỊA PHƯƠNG", Quang Nam
+#EXTINF:-1 tvg-logo="http://img.hplus.com.vn/460x260/poster/2018/06/05/764456-QRT.png" group-title="🇻🇳| Địa phương", Quang Nam
 http://113.161.6.157:8081/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8
 #EXTINF:-1 tvg-id="quangngai" group-title="🇻🇳| Địa phương" tvg-logo="https://phuhdtv.github.io/logo/diaphuong/QuangNgaiTV.png", Quang Ngai
 http://118.107.85.5:1935/live/smil:PTQ.smil/chunklist_w368064111_b1384000.m3u8
-#EXTINF:-1 tvg-id="binhdinh" group-title="Địa phương" tvg-logo="https://i.imgur.com/0yZnK57.png", BINH DINH
+#EXTINF:-1 tvg-id="binhdinh" group-title="🇻🇳| Địa phương" tvg-logo="https://i.imgur.com/0yZnK57.png", BINH DINH
 http://truyenhinhbinhdinhonline.dynns.com:8086/live.m3u8
 #EXTINF:-1 tvg-id="phuyen" group-title="🇻🇳| Địa phương" tvg-logo="https://phuhdtv.github.io/logo/diaphuong/phuyen.jpg", Phu Yen
 http://113.161.4.48:8080/phuyen/tv/index.m3u8
@@ -422,9 +424,9 @@ http://202.43.109.144:1935/thbttv/bttv/playlist.m3u8
 ##---------------- Tay Nguyen
 #EXTINF:-1 tvg-id="KonTumTV.vn", Kon Tum TV (720p)
 https://tv.kontumtv.vn/live/kontumtv/kontumtv.m3u8
-#EXTINF:-1 tvg-logo="http://tv.101vn.com/images/thgl.png" group-title="ĐỊA PHƯƠNG", Gia Lai
+#EXTINF:-1 tvg-logo="http://tv.101vn.com/images/thgl.png" group-title="🇻🇳| Địa phương", Gia Lai
 http://113.161.25.3:8134/hls/gialaitv/gialaitv.m3u8
-#EXTINF:-1 tvg-name="Dak Lak" tvg-id="" tvg-country="Vietnam" tvg-language="Vietnamese" tvg-logo="https://epg.pw/media/uploads/tmp_logo/2014/05/21/20140521153343572829_38.jpg" group-title="Other", Dak Lak
+#EXTINF:-1 tvg-name="Dak Lak" tvg-id=""   tvg-logo="https://epg.pw/media/uploads/tmp_logo/2014/05/21/20140521153343572829_38.jpg" group-title="🇻🇳| Địa phương", Dak Lak
 https://epg.pw/stream/8de79c8da068ef54149db5ac34d65a9f7fda76c291329ebc39776ee6c15177a1.ctv
 #EXTINF:-1 tvg-id="daknong" tvg-logo="https://phuhdtv.github.io/logo/diaphuong/daknong.jpg" group-title="🇻🇳| Địa phương", Dak Nong
 https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8
@@ -432,7 +434,7 @@ https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng
 http://118.107.85.5:1935/live/smil:LTV.smil/playlist.m3u8
 
 ##---------------- Dong Nam Bo
-#EXTINF:-1 tvg-name="bà rịa – vũng tàu" tvg-id="" tvg-country="Vietnam" tvg-language="Tiếng Việt" tvg-logo="https://epg.pw/media/images/channel/2015/11/21/large/20151121164945194866_84.jpg" group-title="Movie", Vung Tau
+#EXTINF:-1 tvg-name="bà rịa – vũng tàu" tvg-id=""  tvg-language="Tiếng Việt" tvg-logo="https://epg.pw/media/images/channel/2015/11/21/large/20151121164945194866_84.jpg" group-title="Movie", Vung Tau
 https://epg.pw/stream/3f3c97ca17a6eac73158214feea3c0eabfe90acc151332f66be1166bc78df457.m3u8
 #EXTINF:-1 tvg-id="binhduong1" group-title="🇻🇳| Địa phương" tvg-logo="https://phuhdtv.github.io/logo/diaphuong/BTV1.png", Binh Duong 1 HD
 https://code.vthanhtivi.pw/getlink/tv360/vC2qYsjvpY0JhBJka9CWig/1697224933/42/playlist.m3u8
@@ -463,7 +465,7 @@ http://118.107.85.4:1935/live/smil:DNTV2.smil/chunklist_w1490477581_b1384000.m3u
 #EXTINF:-1 tvg-id="dongnai3" group-title="🇻🇳| Địa phương" tvg-logo="https://phuhdtv.github.io/logo/diaphuong/dongnai3.jpg", DONG NAI 3
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://code.vthanhtivi.pw/getlink/dnlive/dnrtv3/playlist.m3u8
-#EXTINF:-1 tvg-logo="http://ttv11.vn/wp-content/themes/ttv11/assets/img/logo.png" group-title="ĐỊA PHƯƠNG", Tay Ninh
+#EXTINF:-1 tvg-logo="http://ttv11.vn/wp-content/themes/ttv11/assets/img/logo.png" group-title="🇻🇳| Địa phương", Tay Ninh
 http://202.43.109.142:1935/ttv11/tntv/playlist.m3u8
 
 ##---------------- Dong Bang Song Cuu Long
@@ -474,20 +476,20 @@ http://ott3.nethubtv.vn/live/angiangtv/playlist.m3u8
 https://tv.thbl.vn/live/tv/tv.m3u8
 #EXTINF:-1 tvg-id="bentre" group-title="🇻🇳| Địa phương" tvg-logo="https://phuhdtv.github.io/logo/diaphuong/BenTreTV.png", Ben Tre
 https://drm-livecdn.hplus.com.vn/CDN-FPT02/BENTRE-SD-ABR/HTV-ABR/BENTRE-SD-720p/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR85kzm0URKyx2FgxFByn3Yfy9gfN9l4Rgq87fb7MZGC8PmXH0r" group-title="ĐỊA PHƯƠNG", Cà Mau HD
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR85kzm0URKyx2FgxFByn3Yfy9gfN9l4Rgq87fb7MZGC8PmXH0r" group-title="🇻🇳| Địa phương", Cà Mau HD
 http://tv.ctvcamau.vn/live/tv/tv.m3u8
 #EXTINF:-1 tvg-id="cantho" group-title="🇻🇳| Địa phương" tvg-logo="https://phuhdtv.github.io/logo/diaphuong/CanThoTV.png", Can Tho 4
 https://live.canthotv.vn/live/tv/chunklist.m3u8
-#EXTINF:-1 tvg-name=" đồng tháp 1" tvg-id="" tvg-country="Vietnam" tvg-language="Vietnamese" tvg-logo="https://epg.pw/media/images/channel/2022/05/25/large/20220525022126306027_91.png" group-title="Other", Dong Thap 1
+#EXTINF:-1 tvg-name=" đồng tháp 1" tvg-id=""   tvg-logo="https://epg.pw/media/images/channel/2022/05/25/large/20220525022126306027_91.png" group-title="🇻🇳| Địa phương", Dong Thap 1
 https://epg.pw/stream/ab4685f34c1134cf08da69427faa40c6af785a59f8ce71e8343957cb2f6bb28f.m3u8
-#EXTINF:-1 tvg-name=" hậu giang" tvg-id="" tvg-country="Vietnam" tvg-language="Vietnamese" tvg-logo="https://epg.pw/media/images/channel/2022/05/25/large/20220525022258653878_91.png" group-title="Other", Hau Giang
+#EXTINF:-1 tvg-name=" hậu giang" tvg-id=""   tvg-logo="https://epg.pw/media/images/channel/2022/05/25/large/20220525022258653878_91.png" group-title="🇻🇳| Địa phương", Hau Giang
 #EXTINF:-1 tvg-id="KienGiangTV1.vn", Kien Giang TV1 (1080p)
 https://tv.kgtv.vn/live/kgtv1/kgtv1.m3u8
-#EXTINF:-1 tvg-logo="http://tv.vinaphone.com.vn/images/channel/KienGiang.jpg" group-title="ĐỊA PHƯƠNG", Kien Giang
+#EXTINF:-1 tvg-logo="http://tv.vinaphone.com.vn/images/channel/KienGiang.jpg" group-title="🇻🇳| Địa phương", Kien Giang
 http://tv.kgtv.vn/live/kgtv/kgtv.m3u8
-#EXTINF:-1 tvg-name=" long an" tvg-id="" tvg-country="Vietnam" tvg-language="Vietnamese" tvg-logo="https://epg.pw/media/images/channel/2022/05/06/large/20220506174546634867_10.png" group-title="Other", long an
+#EXTINF:-1 tvg-name=" long an" tvg-id=""   tvg-logo="https://epg.pw/media/images/channel/2022/05/06/large/20220506174546634867_10.png" group-title="🇻🇳| Địa phương", long an
 https://epg.pw/stream/34ac22651d592040477f6cbb821019f1350120e55f3f21c45aa886b85acc5dcc.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/vi/6/65/Logo_THTG.png" group-title="ĐỊA PHƯƠNG", Tien Giang
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/vi/6/65/Logo_THTG.png" group-title="🇻🇳| Địa phương", Tien Giang
 http://thtg.vn:8001/thtg.m3u8
 #EXTINF:-1 tvg-id="TraVinhTV.vn", Tra Vinh TV (720p)
 https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8
