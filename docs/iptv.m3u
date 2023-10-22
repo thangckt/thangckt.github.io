@@ -184,18 +184,18 @@ http://donglao.duckdns.org/vn360sport/YTB/ytb_conhac.php
 #EXTINF:-1 tvg-id="" group-title="Giai tri" tvg-logo="https://assets.stickpng.com/thumbs/62987eef7e802c4d1eb20078.png", Phim HongKong
 http://donglao.duckdns.org/vn360sport/YTB/ytb_phimhk.php
 
-#EXTINF:-1 tvg-id="" group-title="🇻🇳-🇷🇺| PHIM TRUYỆN TRONG & NGOÀI NƯỚC" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/tvbv.jpg", TVB Vietnam
+#EXTINF:-1 tvg-id="" group-title="📦| Phim nuoc ngoai" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/tvbv.jpg", TVB Vietnam
 https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8
 
 
 ##---------------- Hai Ngoai ----------------##
-#EXTINF:-1 tvg-id="KDOCDT7.us", Little Saigon TV (720p)
+#EXTINF:-1 tvg-id="KDOCDT7.us" group-title="Hải Ngoại", Little Saigon TV (720p)
 https://media.streambrothers.com:1936/8228/8228/playlist.m3u8
 
-#EXTINF:-1 tvg-id="SETTV.us", SET TV 1 (1080p)
+#EXTINF:-1 tvg-id="SETTV.us" group-title="Hải Ngoại", SET TV 1 (1080p)
 https://5dcab9aed5331.streamlock.net/SET1/livestream/playlist.m3u8
 
-#EXTINF:-1 tvg-id="SETTV2.us", SET TV 2 (1080p)
+#EXTINF:-1 tvg-id="SETTV2.us" group-title="Hải Ngoại", SET TV 2 (1080p)
 https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8
 
 
@@ -216,7 +216,7 @@ https://code.vthanhtivi.pw/getlink/vieon/vtv4-hd/playlist.m3u8
 https://liveh12.vtvcab.vn/hls/ONVTV5_CL/04.m3u8
 #EXTINF:-1 tvg-id="vtv5hdtnb" group-title="❤| VTV" tvg-logo="https://cdn.hqth.me/logo/thumbs/6.png", VTV5 Tây Nam Bộ
 https://liveh12.vtvcab.vn/hls/ONVTV5TNB_CL/04.m3u8
-#EXTINF:-1 tvg-id="vtv5hdtn" group-title="VTV" tvg-logo="https://img.vnmedia.xyz/logo/vtv5hdtn.png", VTV5 Tây Nguyên
+#EXTINF:-1 tvg-id="vtv5hdtn" group-title="❤| VTV" tvg-logo="https://img.vnmedia.xyz/logo/vtv5hdtn.png", VTV5 Tây Nguyên
 http://donglao.duckdns.org/vn360sport/viettel.php?id=207
 
 #EXTINF:-1 tvg-id="vtv7hd" group-title="❤| VTV" tvg-logo="https://cdn.hqth.me/logo/thumbs/9.png", VTV7
@@ -518,26 +518,26 @@ http://b4tv.live/b4tv/b4tv/76.m3u8
 
 
 ##----------------- Vietsub -----------------##
-#EXTINF:-1 tvg-id="axnhd" group-title="VĂN HÓA NGHỆ THUẬT & GIẢI TRÍ" tvg-logo="https://phuhdtv.github.io/logo/MSky_TV/AXN.png", AXN Asia
+#EXTINF:-1 tvg-id="axnhd" group-title="📦| Phim nuoc ngoai" tvg-logo="https://phuhdtv.github.io/logo/MSky_TV/AXN.png", AXN Asia
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://vthanhtivi.pw:5000/axn/index.m3u8
 
-#EXTINF:-1 tvg-id="cinemaxhd" group-title="PHIM TRUYỆN TRONG & NGOÀI NƯỚC" tvg-logo="https://phuhdtv.github.io/logo/MSky_TV/cinemaxhd.jpg", Cinemax Asia
+#EXTINF:-1 tvg-id="cinemaxhd" group-title="📦| Phim nuoc ngoai" tvg-logo="https://phuhdtv.github.io/logo/MSky_TV/cinemaxhd.jpg", Cinemax Asia
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://vthanhtivi.pw:5000/cinemax/index.m3u8
 
-#EXTINF:-1 tvg-id="hbohd" group-title="PHIM TRUYỆN TRONG & NGOÀI NƯỚC" tvg-logo="https://phuhdtv.github.io/logo/MSky_TV/HBO.jpg", HBO Asia
+#EXTINF:-1 tvg-id="hbohd" group-title="📦| Phim nuoc ngoai" tvg-logo="https://phuhdtv.github.io/logo/MSky_TV/HBO.jpg", HBO Asia
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://vthanhtivi.pw:5000/hbo/index.m3u8
 
-#EXTINF:-1 tvg-id="discoveryhd" group-title="GIAO DUC KHOA HOC" tvg-logo="https://phuhdtv.github.io/logo/MSky_TV/discovery-channel.png", Discovery Channel SEA
+#EXTINF:-1 tvg-id="discoveryhd" group-title="🌿| Khám phá" tvg-logo="https://phuhdtv.github.io/logo/MSky_TV/discovery-channel.png", Discovery Channel SEA
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://vthanhtivi.pw:5000/discovery/index.m3u8
 
-#EXTINF:-1 tvg-id="boxmovie1" group-title="📦| In The Box" tvg-logo="https://cdn.hqth.me/logo/thumbs/187.png", Box Movie 1
+#EXTINF:-1 tvg-id="boxmovie1" group-title="📦| Phim nuoc ngoai" tvg-logo="https://cdn.hqth.me/logo/thumbs/187.png", Box Movie 1
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3
 https://e4.endpoint.cdn.sctvonline.vn/hls/boxmovie1/index.m3u8
-#EXTINF:-1 tvg-id="hollywoodclassics" group-title="📦| In The Box" tvg-logo="https://cdn.hqth.me/logo/thumbs/188.png", Hollywood Classics
+#EXTINF:-1 tvg-id="hollywoodclassics" group-title="📦| Phim nuoc ngoai" tvg-logo="https://cdn.hqth.me/logo/thumbs/188.png", Hollywood Classics
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3
 https://e4.endpoint.cdn.sctvonline.vn/hls/hollywood/index.m3u8
 #EXTINF:-1 tvg-id="inthebox" group-title="📦| In The Box" tvg-logo="https://cdn.hqth.me/logo/thumbs/189.png", In The Box
@@ -560,20 +560,20 @@ http://vthanhtivi.pw:5000/bbcearth/index.m3u8
 http://vthanhtivi.pw:5000/discovery/index.m3u8
 
 ##----------------- Phim no sub -----------------##
-#EXTINF:-1 tvg-id="cinemaworldhd" group-title="🎬| Phim truyện" tvg-logo="https://cdn.hqth.me/logo/thumbs/231.png", CinemaWorld
+#EXTINF:-1 tvg-id="cinemaworldhd" group-title="📦| Phim nuoc ngoai" tvg-logo="https://cdn.hqth.me/logo/thumbs/231.png", CinemaWorld
 http://210.210.155.35/dr9445/h/h04/01.m3u8
-#EXTINF:-1 tvg-id="" group-title="🎬| Phim truyện" tvg-logo="https://static.wikia.nocookie.net/logos/images/5/5f/Thrill_ident_2014.png/revision/latest/scale-to-width-down/1366?cb=20220518142105&path-prefix=vi", Thrill
+#EXTINF:-1 tvg-id="" group-title="📦| Phim nuoc ngoai" tvg-logo="https://static.wikia.nocookie.net/logos/images/5/5f/Thrill_ident_2014.png/revision/latest/scale-to-width-down/1366?cb=20220518142105&path-prefix=vi", Thrill
 https://code.vthanhtivi.pw/getlink/eazie/242921/playlist.m3u8
 
-#EXTINF:-1 tvg-id="amedia1" group-title="🇻🇳-🇷🇺| PHIM TRUYỆN TRONG & NGOÀI NƯỚC" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/A1.png", AMEDIA 1
+#EXTINF:-1 tvg-id="amedia1" group-title="📦| Phim nuoc ngoai" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/A1.png", AMEDIA 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Mobile; rv:26.0) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148
 http://ott-cdn.ucom.am/s45/04.m3u8
-#EXTINF:-1 tvg-id="amedia2" group-title="🇻🇳-🇷🇺| PHIM TRUYỆN TRONG & NGOÀI NƯỚC" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/a2.png", AMEDIA 2
+#EXTINF:-1 tvg-id="amedia2" group-title="📦| Phim nuoc ngoai" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/a2.png", AMEDIA 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Mobile; rv:26.0) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148
 http://ott-cdn.ucom.am/s33/04.m3u8
-#EXTINF:-1 tvg-id="amedia-hit" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/amedia-hit.png" group-title="🇻🇳-🇷🇺| PHIM TRUYỆN TRONG & NGOÀI NƯỚC", Amedia Hit HD
+#EXTINF:-1 tvg-id="amedia-hit" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/amedia-hit.png" group-title="📦| Phim nuoc ngoai", Amedia Hit HD
 http://193.33.240.8:8080/amedia_hit_hd/index.m3u8
-#EXTINF:-1 tvg-id="amedia-premium" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/amedia-premium.png" group-title="🇻🇳-🇷🇺| PHIM TRUYỆN TRONG & NGOÀI NƯỚC", AMEDIA Premium
+#EXTINF:-1 tvg-id="amedia-premium" tvg-logo="https://phuhdtv.github.io/logo/Flim-Series/amedia-premium.png" group-title="📦| Phim nuoc ngoai", AMEDIA Premium
 http://31.148.48.15:80/Amedia_Premium_HD/index.m3u8?token=test
 
 
@@ -589,6 +589,6 @@ https://code.vthanhtivi.pw/getlink/tvfree/cartoon/playlist.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
 https://code.vthanhtivi.pw/getlink/tvfree/boomerang/playlist.m3u8
 
-#EXTINF:-1 tvg-id="happykids" group-title="In The Box" tvg-logo="https://phuhdtv.github.io/logo/ITB/happy-kids.png", Happy Kids
+#EXTINF:-1 tvg-id="happykids" group-title="Thiếu Nhi Hoạt hình" tvg-logo="https://phuhdtv.github.io/logo/ITB/happy-kids.png", Happy Kids
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3
 https://e4.endpoint.cdn.sctvonline.vn/hls/happykid/index.m3u8
