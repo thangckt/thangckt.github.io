@@ -42,7 +42,7 @@ hide:
 
   .video-column {
       flex: 1;
-      max-width: 800px;  /* Adjust the width as needed */
+      max-width: 70%;  /* Adjust the width as needed */
       position: sticky;
   }
 
@@ -50,7 +50,7 @@ hide:
       flex: 1;
       padding-left: 20px;
       /* max-height: 700px; */
-      overflow-y: auto;
+      /* overflow-y: auto; */
       position: relative;
   }
 </style>
