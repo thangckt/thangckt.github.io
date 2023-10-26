@@ -36,7 +36,7 @@ hide:
   }
 
   .container {
-      /* display: flex; */
+      display: flex;
       max-width: 100%;
   }
 
