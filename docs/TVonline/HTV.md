@@ -1,7 +1,7 @@
 ---
 hide:
   # - toc
-  # - navigation
+  - navigation
 ---
 
 
@@ -63,6 +63,8 @@ hide:
 
 <!-- ADD LINK FOR CHANNEL -->
 #
+[Stream your link](https://thang.eu.org/TVonline/stream/)
+
 ## Tin Tuc
 <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
 
