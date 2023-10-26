@@ -22,7 +22,7 @@ hide:
     padding: 8px 10px;
     border-radius: 8px;
     font-size: 12pt;
-    background: hsl(345deg 100% 47%);
+    background: #007ACC;     /*  hsl(345deg 100% 47%);  */
     color: white;
     transform: translateY(-6px);
   }
