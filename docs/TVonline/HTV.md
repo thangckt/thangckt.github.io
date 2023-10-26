@@ -49,7 +49,7 @@ hide:
     function loadVideo(videoUrl) {
         window.scrollTo(0, 0); // Scroll to the top after loading the video
         // var videoUrl = document.getElementById("m3u8Link").value;
-        var player = videojs('vid1');     
+        var player = videojs('vid1');
             player.src({src: videoUrl, type: 'application/x-mpegURL'});
             video.play();
     }
@@ -62,6 +62,9 @@ hide:
 
 <!-- ADD LINK FOR CHANNEL -->
 #
+## Tin Tuc
+<button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
+
 ## Kenh Phim
 Phim Viet
 
