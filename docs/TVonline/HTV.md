@@ -37,13 +37,14 @@ hide:
 
   .container {
       display: flex;
+      max-width: 100%;
       margin: 0 auto;
   }
 
   .video-column {
       flex: 1;
-      max-width: 800px;  /* Adjust the width as needed */
-      position: -webkit-sticky;
+      max-width: 900px;  /* Adjust the width as needed */
+      position: fixed;
       top: 0;
   }
 
