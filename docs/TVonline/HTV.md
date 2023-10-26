@@ -44,8 +44,7 @@ hide:
   .video-column {
       flex: 1;
       max-width: 900px;  /* Adjust the width as needed */
-      position: fixed;
-      top: 0;
+      position: sticky;
   }
 
   .content-column {
@@ -77,14 +76,14 @@ hide:
 
 <div class="container">
 <!-- First Column: Video Frame -->
-<div class="video-column" id="videoColumn">
+<div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
     <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
   </div>
 </div>
 
 <!-- Second Column: Other Content -->
-<div class="content-column" id="contentColumn">
+<div class="content-column" >
   <!-- ADD LINK FOR CHANNEL -->
   <h3>Tin Tuc</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
