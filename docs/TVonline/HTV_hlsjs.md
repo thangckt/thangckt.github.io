@@ -37,8 +37,9 @@ hide:
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.5"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
 
 <div style="position:relative; padding-bottom:56.25%">
 <video id="vid1" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
@@ -71,7 +72,10 @@ hide:
 
 
 <!-- ADD LINK FOR CHANNEL -->
-#
+# Tin Tuc
+<button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
+
+
 ## Kenh Phim
 Phim Viet
 
