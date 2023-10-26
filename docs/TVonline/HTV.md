@@ -43,7 +43,7 @@ hide:
 
   .video-column {
       flex: 1;
-      max-width: 800px;  /* Adjust the width as needed */
+      max-width: 900px;  /* Adjust the width as needed */
       padding: 20px;
   }
 
