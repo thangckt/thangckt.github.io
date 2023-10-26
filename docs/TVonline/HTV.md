@@ -43,6 +43,7 @@ hide:
   .video-column {
       flex: 1;
       max-width: 1300px;  /* Adjust the width as needed */
+      position: sticky;
   }
 
   .content-column {
