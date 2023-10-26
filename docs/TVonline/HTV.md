@@ -75,17 +75,11 @@ hide:
 <div class="container">
     <!-- First Column: Video Frame -->
     <div style="position:relative; padding-bottom:56.25%">
-    <video-js id="vid1" class="vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video-js>
+        <video-js id="vid1" class="vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video-js>
     </div>
-
     <!-- Second Column: Other Content -->
     <div class="column">
         <!-- ADD LINK FOR CHANNEL -->
-        <h2>Links for Channels</h2>
-        <ul>
-            <li><a href="https://thang.eu.org/TVonline/stream/">Stream your link</a></li>
-        </ul>
-
         <h2>Tin Tuc</h2>
         <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
 
