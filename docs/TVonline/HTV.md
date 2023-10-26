@@ -43,18 +43,17 @@ hide:
   .video-column {
       flex: 1;
       max-width: 1000px;  /* Adjust the width as needed */
-      padding: 20px;
+      position: sticky;
+      top: 20px; /* Adjust as needed */
   }
 
   .content-column {
       flex: 1;
       max-height: 700px;
+      padding: 10px;
       /* overflow-y: auto; */
   }
 
-  #contentColumn {
-    overflow-y: auto;
-  }
 </style>
 
 
@@ -84,7 +83,7 @@ hide:
 </div>
 
 <!-- Second Column: Other Content -->
-<div class="content-column" id="contentColumn">
+<div class="content-column">
   <!-- ADD LINK FOR CHANNEL -->
   <h3>Tin Tuc</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
