@@ -42,13 +42,13 @@ hide:
 
   .video-column {
       flex: 1;
-      max-width: 900px;  /* Adjust the width as needed */
+      max-width: 1000px;  /* Adjust the width as needed */
       padding: 20px;
   }
 
   .content-column {
       flex: 1;
-      max-height: 1000px;
+      max-height: 700px;
       /* overflow-y: auto; */
   }
 
