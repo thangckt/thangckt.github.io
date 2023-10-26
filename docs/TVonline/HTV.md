@@ -51,8 +51,6 @@ hide:
       /* max-height: 700px; */
       /* overflow-y: auto; */
   }
-
-
 </style>
 
 
