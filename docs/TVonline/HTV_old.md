@@ -34,27 +34,16 @@ hide:
   .pushable:focus:not(:focus-visible) {
     outline: none;
   }
-
-  .container {
-      display: flex;
-      max-width: 800px;
-      margin: 0 auto;
-  }
-
-  .column {
-      flex: 1;
-      padding: 20px;
-  }
-
-  .video-column {
-      max-width: 600px; /* Adjust the width as needed */
-  }
 </style>
 
 
 <!-- videojs-http-streaming (VHS) -->
 <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
 <script src="https://unpkg.com/browse/@videojs/http-streaming@3.7.0/dist/videojs-http-streaming.min.js"></script>
+
+<div style="position:relative; padding-bottom:56.25%">
+<video-js id="vid1" class="vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video-js>
+</div>
 
 <script>
     function loadVideo(videoUrl) {
@@ -72,33 +61,24 @@ hide:
 </script>
 
 
-<div class="container">
-    <!-- First Column: Video Frame -->
-    <div style="position:relative; padding-bottom:56.25%">
-    <video-js id="vid1" class="vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video-js>
-    </div>
 
-    <!-- Second Column: Other Content -->
-    <div class="column">
-        <!-- ADD LINK FOR CHANNEL -->
-        <h2>Links for Channels</h2>
-        <ul>
-            <li><a href="https://thang.eu.org/TVonline/stream/">Stream your link</a></li>
-        </ul>
+<!-- ADD LINK FOR CHANNEL -->
+#
+[Stream your link](https://thang.eu.org/TVonline/stream/)
 
-        <h2>Tin Tuc</h2>
-        <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
+## Tin Tuc
+<button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
 
-        <h2>Kenh Phim</h2>
-        <h3>Phim Viet</h3>
-        <button class="pushable" onclick="loadVideo('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button>
+## Kenh Phim
+Phim Viet
 
-        <h3>Phim Nuoc Ngoai</h3>
-        <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/hbo/playlist.m3u8')"> <span class="front">HBO Asia</span> </button>
-        <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/cinemax/playlist.m3u8')"> <span class="front">Cinemax</span> </button>
-        <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/axn/playlist.m3u8')"> <span class="front">AXN</span> </button>
-    </div>
-</div>
+<button class="pushable" onclick="loadVideo('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button>
+
+Phim Nuoc Ngoai
+
+<button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/hbo/playlist.m3u8')"> <span class="front">HBO Asia</span> </button>
+<button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/cinemax/playlist.m3u8')"> <span class="front">Cinemax</span> </button>
+<button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/axn/playlist.m3u8')"> <span class="front">AXN</span> </button>
 
 ## SCTV
 <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button>
