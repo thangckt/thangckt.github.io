@@ -52,10 +52,6 @@ hide:
 </style>
 
 
-<!-- videojs-http-streaming (VHS) -->
-<script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
-<script src="https://unpkg.com/browse/@videojs/http-streaming@3.7.0/dist/videojs-http-streaming.min.js"></script>
-
 <script>
     function loadVideo(videoUrl) {
         window.scrollTo(0, 0); // Scroll to the top after loading the video
@@ -75,7 +71,7 @@ hide:
 <div class="container">
     <!-- First Column: Video Frame -->
     <div style="position:relative; padding-bottom:56.25%">
-        <video-js id="vid1" class="vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video-js>
+        <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
     </div>
     <!-- Second Column: Other Content -->
     <div class="column">
