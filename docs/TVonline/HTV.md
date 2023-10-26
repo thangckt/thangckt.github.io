@@ -70,20 +70,26 @@ hide:
     window.addEventListener('load', function() {
         loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8');
     });
+
+    window.addEventListener('scroll', function() {
+        var videoColumn = document.getElementById('videoColumn');
+        var contentColumn = document.getElementById('contentColumn');
+        contentColumn.style.minHeight = videoColumn.offsetHeight + 'px';
+    });
 </script>
 
 
 
 <div class="container">
 <!-- First Column: Video Frame -->
-<div class="video-column">
+<div class="video-column" id="videoColumn">
   <div style="position:relative; padding-bottom:56.25%">
     <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
   </div>
 </div>
 
 <!-- Second Column: Other Content -->
-<div class="content-column">
+<div class="content-column" id="contentColumn">
   <!-- ADD LINK FOR CHANNEL -->
   <h3>Tin Tuc</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
