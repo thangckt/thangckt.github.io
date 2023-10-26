@@ -68,14 +68,13 @@ hide:
 </script>
 
 
-
-<!-- First Column: Video Frame -->
-<div class="column video-column">
+| | |
+|-|-|
+|<div class="video-column">
 <div style="position:relative; padding-bottom:56.25%">
   <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
 </div>
-</div>
-<!-- Second Column: Other Content -->
+</div>|<!-- Second Column: Other Content -->
 <div class="column">
   <!-- ADD LINK FOR CHANNEL -->
   <h2>Tin Tuc</h2>
@@ -89,7 +88,7 @@ hide:
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/hbo/playlist.m3u8')"> <span class="front">HBO Asia</span> </button>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/cinemax/playlist.m3u8')"> <span class="front">Cinemax</span> </button>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/axn/playlist.m3u8')"> <span class="front">AXN</span> </button>
-</div>
+</div>|
 
 
 #
