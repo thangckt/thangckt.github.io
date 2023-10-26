@@ -49,7 +49,7 @@ hide:
 
   .content-column {
       flex: 1;
-      /* max-height: 400px; */
+      max-height: 800px;
       overflow-y: auto;
   }
 </style>
@@ -129,7 +129,6 @@ Nam Trung Bo
 <button class="pushable" onclick="loadVideo('http://113.161.4.48:8080/phuyen/tv/index.m3u8')"> <span class="front">Phu Yen</span> </button>
 <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livedrt1/chunklist.m3u8')"> <span class="front">Da Nang 1</span> </button>
 <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8')"> <span class="front">Da Nang 2</span> </button>
-
 
 </div>
 </div>
