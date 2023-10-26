@@ -43,6 +43,9 @@ hide:
   .video-column {
       flex: 1;
       max-width: 1300px;  /* Adjust the width as needed */
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
   }
 
   .content-column {
@@ -50,6 +53,7 @@ hide:
       padding: 20px;
       /* max-height: 700px; */
       /* overflow-y: auto; */
+      position: relative;
   }
 </style>
 
@@ -66,12 +70,6 @@ hide:
     // Automatically load and play default video when page loads
     window.addEventListener('load', function() {
         loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8');
-    });
-
-    window.addEventListener('scroll', function() {
-        var videoColumn = document.getElementById('videoColumn');
-        var contentColumn = document.getElementById('contentColumn');
-        contentColumn.style.minHeight = videoColumn.offsetHeight + 'px';
     });
 </script>
 
