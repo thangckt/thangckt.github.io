@@ -53,6 +53,7 @@ hide:
             player.src({src: videoUrl, type: 'application/x-mpegURL'});
             video.play();
     }
+
     // Automatically load and play default video when page loads
     window.addEventListener('load', function() {
         loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8');
