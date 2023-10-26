@@ -53,10 +53,6 @@ hide:
       /* overflow-y: auto; */
   }
 
-  #videoColumn {
-      position: sticky;
-      top: 20px; /* Adjust as needed */
-  }
 
 </style>
 
@@ -80,7 +76,7 @@ hide:
 
 <div class="container">
 <!-- First Column: Video Frame -->
-<div class="video-column" id="videoColumn">
+<div class="video-column">
   <div style="position:relative; padding-bottom:56.25%">
     <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
   </div>
