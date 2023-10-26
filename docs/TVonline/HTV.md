@@ -48,9 +48,9 @@ hide:
 
   .content-column {
       flex: 1;
-      padding: 20px;
+      padding-left: 20px;
       /* max-height: 700px; */
-      /* overflow-y: auto; */
+      overflow-y: auto;
       position: relative;
   }
 </style>
