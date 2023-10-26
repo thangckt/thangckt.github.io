@@ -50,7 +50,11 @@ hide:
   .content-column {
       flex: 1;
       max-height: 1000px;
-      overflow-y: auto;
+      /* overflow-y: auto; */
+  }
+
+  #contentColumn {
+    overflow-y: auto;
   }
 </style>
 
@@ -81,7 +85,7 @@ hide:
 </div>
 
 <!-- Second Column: Other Content -->
-<div class="content-column">
+<div class="content-column" id="contentColumn">
   <!-- ADD LINK FOR CHANNEL -->
   <h3>Tin Tuc</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
