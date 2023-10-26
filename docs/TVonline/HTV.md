@@ -36,9 +36,8 @@ hide:
   }
 
   .container {
-      display: flex;
+      /* display: flex; */
       max-width: 100%;
-      margin: 0 auto;
   }
 
   .video-column {
