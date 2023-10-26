@@ -44,7 +44,6 @@ hide:
       flex: 1;
       max-width: 1300px;  /* Adjust the width as needed */
       position: -webkit-sticky;
-      position: sticky;
       top: 0;
   }
 
