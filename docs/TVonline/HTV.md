@@ -47,8 +47,8 @@ hide:
 
   .content-column {
       flex: 1;
-      max-height: 700px;
-      padding: 10px;
+      padding: 20px;
+      /* max-height: 700px; */
       /* overflow-y: auto; */
   }
 
