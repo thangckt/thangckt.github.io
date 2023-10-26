@@ -1,7 +1,7 @@
 ---
 hide:
   # - toc
-  - navigation
+  # - navigation
 ---
 
 
@@ -41,13 +41,18 @@ hide:
       margin: 0 auto;
   }
 
-  .video-column {
-      max-width: 600px; /* Adjust the width as needed */
-  }
-
   .column {
       flex: 1;
+  }
+
+  .video-column {
+      max-width: 600px;  /* Adjust the width as needed */
       padding: 20px;
+  }
+
+  .content-column {
+      /* max-height: 400px; */
+      overflow-y: auto;
   }
 </style>
 
@@ -71,13 +76,13 @@ hide:
 
 <div class="container">
 <!-- First Column: Video Frame -->
-<div class="video-column">
+<div class="column video-column">
   <div style="position:relative; padding-bottom:56.25%">
     <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
   </div>
 </div>
 <!-- Second Column: Other Content -->
-<div class="column">
+<div class="column content-column">
   <!-- ADD LINK FOR CHANNEL -->
   ## TIN TUC
   <h2>Tin Tuc</h2>
