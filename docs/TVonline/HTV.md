@@ -80,7 +80,6 @@ hide:
     <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;position:absolute;left:0px;top:0px;" ></video>
   </div>
 </div>
-
 <!-- Second Column: Other Content -->
 <div class="content-column" >
   <!-- ADD LINK FOR CHANNEL -->
