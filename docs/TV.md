@@ -143,7 +143,7 @@ hide:
 
 
   <h3>Stream link</h3>
-  <label for="m3u8Link">Enter Stream Link: </label>
+  <!-- <label for="m3u8Link">Enter Stream Link: </label> -->
   <input type="text" id="m3u8Link" style="width: 400px;"> <br> <br>
   <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button>
 
