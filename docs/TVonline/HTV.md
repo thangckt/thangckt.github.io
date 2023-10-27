@@ -36,11 +36,11 @@ hide:
   }
 
   .container {
-      display: block;
+      display: flex;
   }
 
   .video-column {
-      float: left;
+      flex: 2;
       max-width: 800px;  /* Adjust the width as needed */
       position: sticky;
       /* top: 20; */
@@ -48,7 +48,7 @@ hide:
   }
 
   .content-column {
-      float: left;
+      flex: 1;
       padding-left: 20px;
       /* max-width: 35%; */
       /* max-height: 700px; */
