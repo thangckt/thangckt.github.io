@@ -97,9 +97,10 @@ hide:
 <!-- Second Column: Other Content -->
 <div class="content-column" >
   <!-- ADD LINK FOR CHANNEL -->
-  <h3>Tin Tuc</h3>
+  <h3>News</h3>
   <button class="pushable" onclick="loadVideo('https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8')"> <span class="front">DW</span> </button>
   <button class="pushable" onclick="loadVideo('https://euronews-euronews-world-1-au.samsung.wurl.com/manifest/playlist.m3u8')"> <span class="front">EURO News</span> </button>
+  <button class="pushable" onclick="loadVideo('https://d30x5vsa85tvmd.cloudfront.net/index_5.m3u8')"> <span class="front">CNN</span> </button>
 
 
 
