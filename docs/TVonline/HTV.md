@@ -37,12 +37,13 @@ hide:
 
   .container {
       display: flex;
+      overflow:hidden;
   }
 
   .video-column {
       flex: 2;
       max-width: 800px;  /* Adjust the width as needed */
-      position: fixed;
+      position: sticky;
       top: 0;
   }
 
