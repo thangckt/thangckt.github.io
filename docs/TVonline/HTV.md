@@ -36,8 +36,8 @@ hide:
   }
 
   .container {
-      display: flex;
-      display: unset
+      /* display: flex; */
+      flex: initial;
   }
 
   .video-column {
