@@ -36,18 +36,19 @@ hide:
   }
 
   .container {
-      display: block;
+      display: inline;
   }
 
   .video-column {
-      flex: 2;
+      float: left;
       max-width: 800px;  /* Adjust the width as needed */
       position: sticky;
       /* top: 20; */
+      overflow: hidden;
   }
 
   .content-column {
-      flex: 1;
+      float: left;
       padding-left: 20px;
       /* max-width: 35%; */
       /* max-height: 700px; */
