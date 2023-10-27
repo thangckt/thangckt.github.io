@@ -68,8 +68,6 @@ hide:
               nativeTextTracks: false,
               hls: {
                 overrideNative: true,
-                // Set the desired user agent string here
-                withCredentials: true,
                 xhrSetup: function (xhr) {
                   xhr.setRequestHeader('User-Agent', agent_string);
                 }
