@@ -37,13 +37,14 @@ hide:
 
   .container {
       display: flex;
-      max-width: 100%;
   }
 
   .video-column {
       float: left;
       max-width: 60%;  /* Adjust the width as needed */
+      position: -webkit-sticky; /* Safari */
       position: sticky;
+      top: 0;
   }
 
   .content-column {
@@ -74,7 +75,7 @@ hide:
 
 
 
-<!-- <div class="container"> -->
+<div class="container">
 <!-- First Column: Video Frame -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
@@ -130,7 +131,7 @@ hide:
   <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8')"> <span class="front">Da Nang 2</span> </button>
 
 </div>
-<!-- </div> -->
+</div>
 
 #
 
