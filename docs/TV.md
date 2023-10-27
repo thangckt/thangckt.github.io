@@ -148,6 +148,8 @@ hide:
 
 
 <h3>VTV - VTC</h3>
+<button class="pushable" onclick="loadVideo('https://liveh12.vtvcab.vn/hls/VTV3_HD/03.m3u8')"> <span class="front">VTV 3</span> </button>
+
   <button class="pushable" onclick="loadVideo('https://liveh12.vtvcab.vn/hls/ONVTV5_CL/04.m3u8')"> <span class="front">VTV 5</span> </button>
   <button class="pushable" onclick="loadVideo('https://liveh12.vtvcab.vn/hls/ONVTV5TNB_CL/04.m3u8')"> <span class="front">VTV 5 Tay Nam Bo</span> </button>
 
