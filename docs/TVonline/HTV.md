@@ -44,7 +44,7 @@ hide:
       flex: 2;
       max-width: 800px;  /* Adjust the width as needed */
       position: sticky;
-      top: 0;
+      top: 20;
   }
 
   .content-column {
