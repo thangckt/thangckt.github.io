@@ -36,19 +36,18 @@ hide:
   }
 
   .container {
-      /* display: flex; */
-      display: flexbox;
+      display: flex;
   }
 
   .video-column {
-      flex: 2;
+      /* flex: 2; */
       max-width: 800px;  /* Adjust the width as needed */
       position: sticky;
       /* top: 20; */
   }
 
   .content-column {
-      flex: 1;
+      /* flex: 1; */
       padding-left: 20px;
       /* max-width: 35%; */
       /* max-height: 700px; */
