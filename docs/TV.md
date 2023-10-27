@@ -138,6 +138,11 @@ hide:
   <h3>Khoa hoc - Doi song</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/discovery/playlist.m3u8')"> <span class="front">Discovery</span> </button>
 
+<h3>VTV - VTC</h3>
+  <button class="pushable" onclick="loadVideo('https://liveh12.vtvcab.vn/hls/ONVTV5_CL/04.m3u8')"> <span class="front">VTV 5</span> </button>
+  <button class="pushable" onclick="loadVideo('https://liveh12.vtvcab.vn/hls/ONVTV5TNB_CL/04.m3u8')"> <span class="front">VTV 5 Tay Nam Bo</span> </button>
+
+
   <h3>Dia Phuong</h3>
   <h4>Song Cuu Long</h4>
 
@@ -151,6 +156,12 @@ hide:
   <button class="pushable" onclick="loadVideo('http://113.161.4.48:8080/phuyen/tv/index.m3u8')"> <span class="front">Phu Yen</span> </button>
   <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livedrt1/chunklist.m3u8')"> <span class="front">Da Nang 1</span> </button>
   <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8')"> <span class="front">Da Nang 2</span> </button>
+
+
+
+
+
+
 
 
   <h3>Stream link</h3>
