@@ -37,7 +37,7 @@ hide:
 
   .container {
       /* display: flex; */
-      display: initial;
+      display: flexbox;
   }
 
   .video-column {
