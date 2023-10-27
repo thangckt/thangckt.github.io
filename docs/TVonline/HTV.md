@@ -47,7 +47,7 @@ hide:
   }
 
   .content-column {
-      /* flex: 1; */
+      flex: 1;
       padding-left: 20px;
       /* max-width: 35%; */
       /* max-height: 700px; */
