@@ -59,21 +59,9 @@ hide:
 
 
 <script>
-    function loadVideo(videoUrl,agent_string) {
+    function loadVideo(videoUrl) {
         window.scrollTo(0, 0); // Scroll to the top after loading the video
-        var player = videojs('vid1', {techOrder: ['html5'], // Ensure HTML5 tech is used
-            html5: {
-              nativeAudioTracks: false,
-              nativeVideoTracks: false,
-              nativeTextTracks: false,
-              hls: {
-                overrideNative: true,
-                xhrSetup: function (xhr) {
-                  xhr.setRequestHeader('User-Agent', agent_string);
-                }
-              }
-            }
-        });
+        var player = videojs('vid1');
         player.src({src: videoUrl, type: 'application/x-mpegURL'});
         video.play();
     }
@@ -97,48 +85,48 @@ hide:
 <div class="content-column" >
   <!-- ADD LINK FOR CHANNEL -->
   <h3>Tin Tuc</h3>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8','')"> <span class="front">DW</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/dw-hd/playlist.m3u8')"> <span class="front">DW</span> </button>
 
   <h3>Kenh Phim</h3>
-  <button class="pushable" onclick="loadVideo('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8','')"> <span class="front">Phim Hay</span> </button>
+  <button class="pushable" onclick="loadVideo('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button>
 
   <br> <br>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/hbo/playlist.m3u8','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36')"> <span class="front">HBO Asia</span> </button>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/cinemax/playlist.m3u8','')"> <span class="front">Cinemax</span> </button>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/axn/playlist.m3u8','')"> <span class="front">AXN</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/hbo/playlist.m3u8')"> <span class="front">HBO Asia</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/cinemax/playlist.m3u8')"> <span class="front">Cinemax</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/axn/playlist.m3u8')"> <span class="front">AXN</span> </button>
 
   <h3>SCTV</h3>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8','')"> <span class="front">SCTV 1</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button>
   <button class="pushable" onclick="loadVideo('')"> <span class="front">SCTV 14</span> </button>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/sctvonline/sctv15/playlist.m3u8','')"> <span class="front">SCTV 15</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/sctvonline/sctv15/playlist.m3u8')"> <span class="front">SCTV 15</span> </button>
 
   <h3>HTV - HTVC</h3>
-  <button class="pushable" onclick="loadVideo('https://epg.pw/stream/1007d830565e93f89444e5b52302ed2d24506870d46b060143ba0d47cbf66900.ctv','')"> <span class="front">HTV 1</span> </button>
-  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8','')"> <span class="front">HTV 2</span> </button>
-  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV3-SD-480p/playlist.m3u8','')"> <span class="front">HTV 3</span> </button>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/htv7-hd/playlist.m3u8','')"> <span class="front">HTV 7</span> </button>
+  <button class="pushable" onclick="loadVideo('https://epg.pw/stream/1007d830565e93f89444e5b52302ed2d24506870d46b060143ba0d47cbf66900.ctv')"> <span class="front">HTV 1</span> </button>
+  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8')"> <span class="front">HTV 2</span> </button>
+  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV3-SD-480p/playlist.m3u8')"> <span class="front">HTV 3</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/htv7-hd/playlist.m3u8')"> <span class="front">HTV 7</span> </button>
 
   <br> <br>
-  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PHIM-HD-1080p/chunks.m3u8','')"> <span class="front">HTVC Phim</span> </button>
-  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PLUS-HD-1080p/playlist.m3u8','')"> <span class="front">HTV Plus</span> </button>
-  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-THUANVIET-HD-1080p/playlist.m3u8','')"> <span class="front">HTVC Thuan Viet</span> </button>
+  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PHIM-HD-1080p/chunks.m3u8')"> <span class="front">HTVC Phim</span> </button>
+  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PLUS-HD-1080p/playlist.m3u8')"> <span class="front">HTV Plus</span> </button>
+  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-THUANVIET-HD-1080p/playlist.m3u8')"> <span class="front">HTVC Thuan Viet</span> </button>
 
   <h3>Khoa hoc - Doi song</h3>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/discovery/playlist.m3u8','')"> <span class="front">Discovery</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/discovery/playlist.m3u8')"> <span class="front">Discovery</span> </button>
 
   <h3>Dia Phuong</h3>
   <h4>Song Cuu Long</h4>
 
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl1-hd/playlist.m3u8','')"> <span class="front">Vinh Long 1</span> </button>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl2-hd/playlist.m3u8','')"> <span class="front">Vinh Long 2</span> </button>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl3-hd/playlist.m3u8','')"> <span class="front">Vinh Long 3</span> </button>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl4-hd/playlist.m3u8','')"> <span class="front">Vinh Long 4</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl1-hd/playlist.m3u8')"> <span class="front">Vinh Long 1</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl2-hd/playlist.m3u8')"> <span class="front">Vinh Long 2</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl3-hd/playlist.m3u8')"> <span class="front">Vinh Long 3</span> </button>
+  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl4-hd/playlist.m3u8')"> <span class="front">Vinh Long 4</span> </button>
 
   <h4>Nam Trung Bo</h4>
 
-  <button class="pushable" onclick="loadVideo('http://113.161.4.48:8080/phuyen/tv/index.m3u8','')"> <span class="front">Phu Yen</span> </button>
-  <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livedrt1/chunklist.m3u8','')"> <span class="front">Da Nang 1</span> </button>
-  <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8','')"> <span class="front">Da Nang 2</span> </button>
+  <button class="pushable" onclick="loadVideo('http://113.161.4.48:8080/phuyen/tv/index.m3u8')"> <span class="front">Phu Yen</span> </button>
+  <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livedrt1/chunklist.m3u8')"> <span class="front">Da Nang 1</span> </button>
+  <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8')"> <span class="front">Da Nang 2</span> </button>
 
 </div>
 </div>
