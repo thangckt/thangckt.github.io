@@ -70,6 +70,18 @@ hide:
     window.addEventListener('load', function() {
         loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8');
     });
+
+
+    function loadStream() {
+    var videoUrl = document.getElementById("m3u8Link").value;
+    if (!videoUrl) {
+        alert("Please enter a stream link.");
+        return;
+    };
+    var player = videojs('vid1');
+        player.src({src: videoUrl, type: 'application/x-mpegURL'});
+        video.play();
+    };
 </script>
 
 
@@ -127,6 +139,12 @@ hide:
   <button class="pushable" onclick="loadVideo('http://113.161.4.48:8080/phuyen/tv/index.m3u8')"> <span class="front">Phu Yen</span> </button>
   <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livedrt1/chunklist.m3u8')"> <span class="front">Da Nang 1</span> </button>
   <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8')"> <span class="front">Da Nang 2</span> </button>
+
+
+  <h3>Stream link</h3>
+  <label for="m3u8Link">Enter Stream Link: </label>
+  <input type="text" id="m3u8Link" style="width: 400px;"> <br> <br>
+  <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button>
 
 </div>
 </div>

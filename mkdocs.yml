@@ -287,7 +287,7 @@ nav:
   # - News:
   #   - blog/posts/DeePMD_kit.md
 
-  - TV:
-    - TV Online: TVonline/HTV.md
-    - Stream: TVonline/stream.md
+  - TV: TVonline/HTV.md
+    # - TV Online: TVonline/HTV.md
+    # - Stream: TVonline/stream.md
 
