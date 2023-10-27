@@ -35,19 +35,19 @@ hide:
     outline: none;
   }
 
-  /* .container {
+  .container {
       display: flex;
-  } */
+  }
 
   .video-column {
-      float: left;
+      flex: 2;
       max-width: 800px;  /* Adjust the width as needed */
       position: sticky;
       top: 0;
   }
 
   .content-column {
-      float: left;
+      flex: 1;
       padding-left: 20px;
       /* max-width: 35%; */
       /* max-height: 700px; */
@@ -77,7 +77,7 @@ hide:
 <!-- First Column: Video Frame -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
-    <video id="vid1" class="video-js vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px; position:absolute;" ></video>
+    <video id="vid1" class="video-js vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px" ></video>
   </div>
 </div>
 <!-- Second Column: Other Content -->
