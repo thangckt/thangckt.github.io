@@ -64,7 +64,7 @@ hide:
         var player = videojs('vid1');
         player.src({src: videoUrl, type: 'application/x-mpegURL'});
         player.play();
-    }
+    };
 
     // Automatically load and play default video when page loads
     window.addEventListener('load', function() {
