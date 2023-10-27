@@ -40,8 +40,8 @@ hide:
   }
 
   .video-column {
-      flex: 1;
-      max-width: 60%;  /* Adjust the width as needed */
+      flex: 2;
+      max-width: 800px;  /* Adjust the width as needed */
       position: -webkit-sticky; /* Safari */
       position: sticky;
       top: 0;
