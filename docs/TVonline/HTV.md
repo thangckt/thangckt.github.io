@@ -44,7 +44,6 @@ hide:
       max-width: 800px;  /* Adjust the width as needed */
       position: sticky;
       top: 0;
-      position: absolute;
   }
 
   .content-column {
