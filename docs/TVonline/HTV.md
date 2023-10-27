@@ -42,7 +42,6 @@ hide:
   .video-column {
       flex: 2;
       max-width: 800px;  /* Adjust the width as needed */
-      position: -webkit-sticky; /* Safari */
       position: sticky;
       top: 0;
   }
@@ -52,7 +51,7 @@ hide:
       padding-left: 20px;
       /* max-width: 35%; */
       /* max-height: 700px; */
-      /* overflow-y: auto; */
+      overflow-y: auto;
       position: relative;
   }
 </style>
