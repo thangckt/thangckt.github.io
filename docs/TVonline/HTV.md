@@ -78,7 +78,7 @@ hide:
 <!-- First Column: Video Frame -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
-    <video id="vid1" class="video-js vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px;position:absolute;" ></video>
+    <video-js id="vid1" class="vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px;position:absolute;" ></video-js>
   </div>
 </div>
 <!-- Second Column: Other Content -->
