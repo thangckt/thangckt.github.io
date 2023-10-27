@@ -63,7 +63,7 @@ hide:
         window.scrollTo(0, 0); // Scroll to the top after loading the video
         var player = videojs('vid1');
         player.src({src: videoUrl, type: 'application/x-mpegURL'});
-        video.play();
+        player.play();
     }
 
     // Automatically load and play default video when page loads
