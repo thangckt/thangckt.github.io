@@ -60,7 +60,6 @@ hide:
 <script>
     function loadVideo(videoUrl) {
         // window.scrollTo(0, 0); // Scroll to the top after loading the video
-        // var videoUrl = document.getElementById("m3u8Link").value;
         var player = videojs('vid1');
             player.src({src: videoUrl, type: 'application/x-mpegURL'});
             video.play();
