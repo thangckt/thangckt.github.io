@@ -78,9 +78,10 @@ hide:
         alert("Please enter a stream link.");
         return;
     };
+    window.scrollTo(0, 0);
     var player = videojs('vid1');
-        player.src({src: videoUrl, type: 'application/x-mpegURL'});
-        player.play();
+    player.src({src: videoUrl, type: 'application/x-mpegURL'});
+    player.play();
     };
 </script>
 
