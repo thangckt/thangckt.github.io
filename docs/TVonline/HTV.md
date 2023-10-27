@@ -36,7 +36,7 @@ hide:
   }
 
   .container {
-      display: inline;
+      display: block;
   }
 
   .video-column {
@@ -52,7 +52,7 @@ hide:
       padding-left: 20px;
       /* max-width: 35%; */
       /* max-height: 700px; */
-      overflow-y: auto;
+      /* overflow-y: auto; */
       position: relative;
   }
 </style>
