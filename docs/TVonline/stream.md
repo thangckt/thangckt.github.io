@@ -51,7 +51,7 @@
 
         var player = videojs('vid1');
             player.src({src: videoUrl, type: 'application/x-mpegURL'});
-            video.play();
+            player.play();
     }
 </script>
 

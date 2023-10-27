@@ -51,7 +51,7 @@ hide:
         // var videoUrl = document.getElementById("m3u8Link").value;
         var player = videojs('vid1');
             player.src({src: videoUrl, type: 'application/x-mpegURL'});
-            video.play();
+            player.play();
     }
 
     // Automatically load and play default video when page loads
