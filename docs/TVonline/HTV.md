@@ -41,15 +41,15 @@ hide:
   }
 
   .video-column {
-      flex: 1;
+      float: left;
       max-width: 60%;  /* Adjust the width as needed */
       position: sticky;
   }
 
   .content-column {
-      flex: 1;
+      /* flex: 1; */
       padding-left: 20px;
-      max-width: 35%;
+      /* max-width: 35%; */
       /* max-height: 700px; */
       /* overflow-y: auto; */
       position: relative;
