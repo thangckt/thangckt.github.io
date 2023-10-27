@@ -99,6 +99,9 @@ hide:
   <!-- ADD LINK FOR CHANNEL -->
   <h3>Tin Tuc</h3>
   <button class="pushable" onclick="loadVideo('https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8')"> <span class="front">DW</span> </button>
+  <button class="pushable" onclick="loadVideo('https://euronews-euronews-world-1-au.samsung.wurl.com/manifest/playlist.m3u8')"> <span class="front">EURO News</span> </button>
+
+
 
   <h3>Kenh Phim</h3>
   <button class="pushable" onclick="loadVideo('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button>
