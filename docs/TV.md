@@ -68,7 +68,7 @@ hide:
 
     // Automatically load and play default video when page loads
     window.addEventListener('load', function() {
-        loadVideo('https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8');
+        loadVideo('https://ctrl.laotv.la/live/HBO/index.m3u8');
     });
 
 
