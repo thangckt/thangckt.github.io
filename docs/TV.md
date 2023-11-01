@@ -93,7 +93,13 @@ hide:
   <div style="position:relative; padding-bottom:56.25%">
     <video-js id="vid1" class="vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px;position:absolute;" ></video-js>
   </div>
+
+  <h3>Stream link</h3>
+  <!-- <label for="m3u8Link">Enter Stream Link: </label> -->
+  <input type="text" id="m3u8Link" style="width: 400px;"> <br> <br>
+  <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button>
 </div>
+
 <!-- Second Column: Other Content -->
 <div class="content-column" >
   <!-- ADD LINK FOR CHANNEL -->
@@ -180,10 +186,7 @@ hide:
 
 
 
-  <h3>Stream link</h3>
-  <!-- <label for="m3u8Link">Enter Stream Link: </label> -->
-  <input type="text" id="m3u8Link" style="width: 400px;"> <br> <br>
-  <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button>
+
 
 </div>
 </div>
