@@ -116,7 +116,7 @@ hide:
 
 
 
-  <h3>Discovery - Travel</h3>
+  <h3>Discovery - Documentary</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/discovery/playlist.m3u8')"> <span class="front">Discovery</span> </button>
 
   <br> <br>
