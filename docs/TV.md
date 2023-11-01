@@ -19,8 +19,8 @@ hide:
   }
   .front {
     display: block;
-    padding: 6px 8px;
     border-radius: 6px;
+    padding: 6px 8px;
     font-size: 12pt;
     background: #007ACC;     /*  hsl(345deg 100% 47%);  */
     color: white;
