@@ -15,12 +15,12 @@ hide:
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   .front {
     display: block;
     border-radius: 6px;
-    padding: 6px 8px;
+    padding: 6px 6px;
     font-size: 12pt;
     background: #007ACC;     /*  hsl(345deg 100% 47%);  */
     color: white;
