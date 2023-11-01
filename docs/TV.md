@@ -24,7 +24,7 @@ hide:
     font-size: 12pt;
     background: #007ACC;     /*  hsl(345deg 100% 47%);  */
     color: white;
-    transform: translateY(-6px);
+    transform: translateY(-4px);
   }
 
   .pushable:active .front {
@@ -95,7 +95,7 @@ hide:
   </div>
 
   <!-- <h3>Stream link</h3> -->
-  <br> <br>
+  <br>
   <label for="m3u8Link">Stream Link: </label>
   <input type="text" id="m3u8Link" style="width: 450px;"> <br>
   <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button>
