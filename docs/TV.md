@@ -44,7 +44,7 @@ hide:
       max-width: 800px;  /* Adjust the width as needed */
       position: sticky;
       /* top: 20; */
-      overflow: hidden;
+      /* overflow: hidden; */
   }
 
   .content-column {
@@ -53,7 +53,7 @@ hide:
       /* max-width: 35%; */
       /* max-height: 700px; */
       /* overflow-y: auto; */
-      position: relative;
+      /* position: relative; */
   }
 </style>
 
@@ -98,12 +98,11 @@ hide:
   <br>
   <!-- <label for="m3u8Link">Stream Link: </label> -->
   <button class="pushable" onclick="loadStream()"> <span class="front">Stream Link</span> </button> &nbsp
-  <input type="text" id="m3u8Link" style="width: 450px;"> <br>
+  <input type="text" id="m3u8Link" style="width: 650px;">
 </div>
 
-<!-- Second Column: Other Content -->
+<!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
 <div class="content-column" >
-  <!-- ADD LINK FOR CHANNEL -->
   <h3>News</h3>
   <button class="pushable" onclick="loadVideo('https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8')"> <span class="front">DW</span> </button>
   <button class="pushable" onclick="loadVideo('https://d30x5vsa85tvmd.cloudfront.net/index_5.m3u8')"> <span class="front">CNN</span> </button>
