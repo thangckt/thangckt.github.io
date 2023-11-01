@@ -96,9 +96,9 @@ hide:
 
   <!-- <h3>Stream link</h3> -->
   <br>
-  <label for="m3u8Link">Stream Link: </label>
+  <!-- <label for="m3u8Link">Stream Link: </label> -->
+  <button class="pushable" onclick="loadStream()"> <span class="front">Stream Link</span> </button>
   <input type="text" id="m3u8Link" style="width: 450px;"> <br>
-  <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button>
 </div>
 
 <!-- Second Column: Other Content -->
