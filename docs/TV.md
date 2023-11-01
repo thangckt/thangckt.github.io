@@ -19,8 +19,8 @@ hide:
   }
   .front {
     display: block;
-    padding: 8px 10px;
-    border-radius: 8px;
+    padding: 6px 8px;
+    border-radius: 6px;
     font-size: 12pt;
     background: #007ACC;     /*  hsl(345deg 100% 47%);  */
     color: white;
@@ -101,6 +101,10 @@ hide:
   <button class="pushable" onclick="loadVideo('https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8')"> <span class="front">DW</span> </button>
   <button class="pushable" onclick="loadVideo('https://euronews-euronews-world-1-au.samsung.wurl.com/manifest/playlist.m3u8')"> <span class="front">EURO News</span> </button>
   <button class="pushable" onclick="loadVideo('https://d30x5vsa85tvmd.cloudfront.net/index_5.m3u8')"> <span class="front">CNN</span> </button>
+  <button class="pushable" onclick="loadVideo('https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8')"> <span class="front">CNA</span> </button>
+  <button class="pushable" onclick="loadVideo('https://tv-trtworld.live.trt.com.tr/master_720.m3u8')"> <span class="front">TRT World</span> </button>
+
+
 
   <h3>Discovery- Travel</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/discovery/playlist.m3u8')"> <span class="front">Discovery</span> </button>
