@@ -97,7 +97,7 @@ hide:
   <!-- <h3>Stream link</h3> -->
   <br>
   <!-- <label for="m3u8Link">Stream Link: </label> -->
-  <button class="pushable" onclick="loadStream()"> <span class="front">Stream Link</span> </button> &nbsp &nbsp
+  <button class="pushable" onclick="loadStream()"> <span class="front">Stream Link</span> </button> &nbsp
   <input type="text" id="m3u8Link" style="width: 450px;"> <br>
 </div>
 
@@ -110,6 +110,7 @@ hide:
   <button class="pushable" onclick="loadVideo('https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8')"> <span class="front">CNA</span> </button>
   <button class="pushable" onclick="loadVideo('https://tv-trtworld.live.trt.com.tr/master_720.m3u8')"> <span class="front">TRT World</span> </button>
   <button class="pushable" onclick="loadVideo('https://euronews-euronews-world-1-au.samsung.wurl.com/manifest/playlist.m3u8')"> <span class="front">EURO News</span> </button>
+  <button class="pushable" onclick="loadVideo('https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8')"> <span class="front">ABC News</span> </button>
 
 
 
