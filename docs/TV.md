@@ -121,6 +121,12 @@ hide:
 
   <br> <br>
   <button class="pushable" onclick="loadVideo('https://smithsonianaus-samsungau.amagi.tv/playlist1080p.m3u8?cc')"> <span class="front">Smithsonian</span> </button>
+  <button class="pushable" onclick="loadVideo('https://rt-rtd.rttv.com/dvr/rtdoc/playlist_4500Kb.m3u8')"> <span class="front">RT Doc</span> </button>
+  <button class="pushable" onclick="loadVideo('https://livedoc.cgtn.com/1000d/prog_index.m3u8')"> <span class="front">CGTN Doc</span> </button>
+
+
+
+
 
 
   <h3>Movies</h3>
