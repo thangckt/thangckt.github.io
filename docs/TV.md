@@ -10,7 +10,7 @@ hide:
   .pushable {
     background: skyblue; /* Changed button color to sky blue */
     /* background: hsl(340deg 100% 32%); */
-    border-radius: 6px;
+    border-radius: 7px;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -19,8 +19,8 @@ hide:
   }
   .front {
     display: block;
-    border-radius: 6px;
-    padding: 6px 6px;
+    border-radius: 7px;
+    padding: 4px 8px;
     font-size: 12pt;
     background: #007ACC;     /*  hsl(345deg 100% 47%);  */
     color: white;
@@ -95,8 +95,9 @@ hide:
   </div>
 
   <!-- <h3>Stream link</h3> -->
+  <br> <br>
   <label for="m3u8Link">Enter Stream Link: </label>
-  <input type="text" id="m3u8Link" style="width: 400px;"> <br> <br>
+  <input type="text" id="m3u8Link" style="width: 400px;"> <br>
   <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button>
 </div>
 
