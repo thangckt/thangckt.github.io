@@ -116,17 +116,11 @@ hide:
 
 
 
-
-
-
-
-
-
   <h3>Discovery - Travel</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/discovery/playlist.m3u8')"> <span class="front">Discovery</span> </button>
 
   <br> <br>
-  <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-DULICH-HD-1080p/playlist.m3u8')"> <span class="front">HTVC Du Lich & Cuoc Song</span> </button>
+  <button class="pushable" onclick="loadVideo('https://smithsonianaus-samsungau.amagi.tv/playlist1080p.m3u8?cc')"> <span class="front">Smithsonian</span> </button>
 
 
   <h3>Movies</h3>
