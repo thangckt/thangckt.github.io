@@ -10,7 +10,7 @@ hide:
   .pushable {
     background: skyblue; /* Changed button color to sky blue */
     /* background: hsl(340deg 100% 32%); */
-    border-radius: 8px;
+    border-radius: 6px;
     border: none;
     padding: 0;
     cursor: pointer;
