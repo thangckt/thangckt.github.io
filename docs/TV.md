@@ -15,7 +15,7 @@ hide:
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .front {
     display: block;
@@ -96,7 +96,7 @@ hide:
 
   <!-- <h3>Stream link</h3> -->
   <br> <br>
-  <label for="m3u8Link">Enter Stream Link: </label>
+  <label for="m3u8Link">Stream Link: </label>
   <input type="text" id="m3u8Link" style="width: 400px;"> <br>
   <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button>
 </div>
