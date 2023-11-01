@@ -105,12 +105,14 @@ hide:
 <div class="content-column" >
   <h3>News</h3>
   <button class="pushable" onclick="loadVideo('https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8')"> <span class="front">DW</span> </button>
+  <button class="pushable" onclick="loadVideo('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadVideo('https://d30x5vsa85tvmd.cloudfront.net/index_5.m3u8')"> <span class="front">CNN</span> </button>
   <button class="pushable" onclick="loadVideo('https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8')"> <span class="front">CNA</span> </button>
   <button class="pushable" onclick="loadVideo('https://euronews-euronews-world-1-au.samsung.wurl.com/manifest/playlist.m3u8')"> <span class="front">EURO</span> </button>
   <button class="pushable" onclick="loadVideo('https://tv-trtworld.live.trt.com.tr/master_720.m3u8')"> <span class="front">TRT World</span> </button>
   <button class="pushable" onclick="loadVideo('https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8')"> <span class="front">ABC Au</span> </button>
   <button class="pushable" onclick="loadVideo('https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8')"> <span class="front">CBS</span> </button>
+
 
 
 
