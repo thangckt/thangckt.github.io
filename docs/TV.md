@@ -87,8 +87,8 @@ hide:
 
     function loadYoutube(videoUrl) {
         window.scrollTo(0, 0);
-        var player = videojs('vid1', {techOrder: ['youtube'], // Use YouTube as the primary playback technology
-                                      sources: [{ type: "video/youtube", src: videoUrl }]    });
+        var player = videojs('vid1', {"techOrder": ['youtube'], // Use YouTube as the primary playback technology
+                                      "sources": [{ "type": "video/youtube", "src": videoUrl }]    });
         player.play();
     }
 </script>
