@@ -91,22 +91,6 @@ hide:
                                       sources: [{ type: "video/youtube", src: videoUrl }]    });
         player.play();
     }
-
-    // function loadYoutube(videoUrl) {
-    //     window.scrollTo(0, 0);
-    //      // Create an <iframe> element and set its attributes
-    //     var iframe = document.createElement('iframe');
-    //     iframe.width = 100%;
-    //     iframe.height= 100%;
-    //     iframe.src = videoUrl;
-    //     iframe.frameborder = '0';
-    //     iframe.allowfullscreen = true;
-
-    //     // Get the element with id 'vid1' and replace its content with the iframe
-    //     var playerContainer = document.getElementById('vid1');
-    //     playerContainer.innerHTML = ''; // Clear any existing content
-    //     playerContainer.appendChild(iframe);
-    // }
 </script>
 
 
