@@ -62,7 +62,7 @@ hide:
     function loadVideo(videoUrl) {
         window.scrollTo(0, 0); // Scroll to the top after loading the video
         var player = videojs('vid1');
-        player.src({src: videoUrl, type: 'application/x-mpegURL'});   //
+        player.src({src: videoUrl, type: 'application/x-mpegURL'});
         player.play();
     };
 
@@ -87,7 +87,7 @@ hide:
     function loadYoutube(videoUrl) {
         window.scrollTo(0, 0);
         var player = videojs('vid1', {techOrder: ['youtube']});
-        player.src({src: videoUrl, type: 'video/youtube'});   //
+        player.src({src: videoUrl, type: 'video/youtube'});
         player.play();
     }
 
