@@ -87,8 +87,17 @@ hide:
 
     function loadYoutube(videoUrl) {
         window.scrollTo(0, 0);
-        var player = videojs('vid1', {"techOrder": ['youtube'], "sources": [{"src": videoUrl, "type": 'video/youtube'}]});
-        player.play();
+         // Create an <iframe> element and set its attributes
+        var iframe = document.createElement('iframe');
+        iframe.style="width:100%;height:100%;left:0px;top:0px;position:absolute;";
+        iframe.src = videoUrl;
+        iframe.frameborder = '0';
+        iframe.allowfullscreen = true;
+
+        // Get the element with id 'vid1' and replace its content with the iframe
+        var playerContainer = document.getElementById('vid1');
+        playerContainer.innerHTML = ''; // Clear any existing content
+        playerContainer.appendChild(iframe);
     }
 
 </script>
