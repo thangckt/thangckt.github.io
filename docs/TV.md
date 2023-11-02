@@ -147,6 +147,7 @@ hide:
 
  <h3>Music</h3>
   <button class="pushable" onclick="loadVideo('https://www.youtube.com/live/2gO1v2GPMFk?si=XGS3b_ygBc9LGMsA')"> <span class="front">Classic live 1</span> </button>
+    <button class="pushable" onclick="loadVideo('https://www.youtube.com/live/tSlOlKRuudU?si=Xa46YFg2UqwvFE5P')"> <span class="front">Classic live 2</span> </button>
 
 
 
