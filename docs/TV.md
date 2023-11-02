@@ -117,13 +117,13 @@ hide:
 
 
   <h3>Discovery - Documentary</h3>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/tvfree/discovery/playlist.m3u8')"> <span class="front">Discovery</span> </button>
+  <button class="pushable" onclick="loadVideo('https://hncfree-samsungau.amagi.tv/playlist.m3u8')"> <span class="front">Horse&Country</span> </button>
 
   <br> <br>
   <button class="pushable" onclick="loadVideo('https://smithsonianaus-samsungau.amagi.tv/playlist1080p.m3u8?cc')"> <span class="front">Smithsonian</span> </button>
   <button class="pushable" onclick="loadVideo('https://rt-rtd.rttv.com/dvr/rtdoc/playlist_4500Kb.m3u8')"> <span class="front">RT Doc</span> </button>
   <button class="pushable" onclick="loadVideo('https://livedoc.cgtn.com/1000d/prog_index.m3u8')"> <span class="front">CGTN Doc</span> </button>
-
+  <button class="pushable" onclick="loadVideo('https://lds-realstories-samsungau.amagi.tv/playlist.m3u8')"> <span class="front">Real Story</span> </button>
 
 
 
