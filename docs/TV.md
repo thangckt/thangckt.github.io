@@ -86,7 +86,7 @@ hide:
 
     function loadYoutube(videoUrl) {
         window.scrollTo(0, 0);
-        var player = videojs('vid1');
+        var player = videojs('vid1', {techOrder: ['youtube']});
         player.src({src: videoUrl, type: 'video/youtube'});   //
         player.play();
     }
