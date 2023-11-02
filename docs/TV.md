@@ -57,6 +57,7 @@ hide:
   }
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojsyoutube/2.6.1/Youtube.min.js"></script>
 
 <script>
     function loadVideo(videoUrl) {
@@ -139,8 +140,6 @@ hide:
 
 
   <h3>Movies</h3>
-
-  <br> <br>
   <button class="pushable" onclick="loadVideo('https://ctrl.laotv.la/live/HBO/index.m3u8')"> <span class="front">HBO</span> </button>
   <button class="pushable" onclick="loadVideo('https://ctrl.laotv.la/live/Cinemax/index.m3u8')"> <span class="front">Cinemax</span> </button>
 
