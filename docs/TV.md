@@ -57,7 +57,7 @@ hide:
   }
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojsyoutube/2.6.1/Youtube.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.8.0/Youtube.min.js"></script>
 
 <script>
     function loadVideo(videoUrl) {
@@ -87,19 +87,25 @@ hide:
 
     function loadYoutube(videoUrl) {
         window.scrollTo(0, 0);
-         // Create an <iframe> element and set its attributes
-        var iframe = document.createElement('iframe');
-        iframe.style="width:100%;height:100%;left:0px;top:0px;position:absolute;";
-        iframe.src = videoUrl;
-        iframe.frameborder = '0';
-        iframe.allowfullscreen = true;
-
-        // Get the element with id 'vid1' and replace its content with the iframe
-        var playerContainer = document.getElementById('vid1');
-        playerContainer.innerHTML = ''; // Clear any existing content
-        playerContainer.appendChild(iframe);
+        var player = videojs('vid1', {techOrder: ['youtube'], // Use YouTube as the primary playback technology
+                                      sources: [{ type: "video/youtube", src: videoUrl }]    });
+        player.play();
     }
 
+    // function loadYoutube(videoUrl) {
+    //     window.scrollTo(0, 0);
+    //      // Create an <iframe> element and set its attributes
+    //     var iframe = document.createElement('iframe');
+    //     iframe.style="width:100%;height:100%;left:0px;top:0px;position:absolute;";
+    //     iframe.src = videoUrl;
+    //     iframe.frameborder = '0';
+    //     iframe.allowfullscreen = true;
+
+    //     // Get the element with id 'vid1' and replace its content with the iframe
+    //     var playerContainer = document.getElementById('vid1');
+    //     playerContainer.innerHTML = ''; // Clear any existing content
+    //     playerContainer.appendChild(iframe);
+    // }
 </script>
 
 
