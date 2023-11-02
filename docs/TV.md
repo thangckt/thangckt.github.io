@@ -145,6 +145,13 @@ hide:
   <button class="pushable" onclick="loadVideo('https://wms4-kortv.akamaized.net/a_live/63719963/smil:20ch011.smil/chunklist_b2500000.m3u8')"> <span class="front">KBS World</span> </button>
 
 
+ <h3>Music</h3>
+  <button class="pushable" onclick="loadVideo('https://www.youtube.com/live/2gO1v2GPMFk?si=XGS3b_ygBc9LGMsA')"> <span class="front">Classic live 1</span> </button>
+
+
+
+<h3>Vietnamese Channels</h3>
+
   <h3>SCTV</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button>
   <button class="pushable" onclick="loadVideo('')"> <span class="front">SCTV 14</span> </button>
@@ -165,9 +172,6 @@ hide:
   <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-CANHAC-HD-1080p/chunks.m3u8')"> <span class="front">HTVC Ca Nhac</span> </button>
   <button class="pushable" onclick="loadVideo('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-DULICH-HD-1080p/playlist.m3u8')"> <span class="front">HTVC Du Lich & Cuoc Song</span> </button>
 
-
-
-<h3>Vietnamese Channels</h3>
 <h3>VTV - VTC</h3>
 <button class="pushable" onclick="loadVideo('https://edge1.laotv.la/live/VTV1HD/index.m3u8')"> <span class="front">VTV 1</span> </button>
 <button class="pushable" onclick="loadVideo('https://edge1.laotv.la/live/VTV3/index.m3u8')"> <span class="front">VTV 3</span> </button>
