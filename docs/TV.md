@@ -57,7 +57,7 @@ hide:
   }
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.8.0/Youtube.min.js"></script>
+
 
 <script>
     function loadVideo(videoUrl) {
