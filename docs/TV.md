@@ -96,7 +96,8 @@ hide:
     //     window.scrollTo(0, 0);
     //      // Create an <iframe> element and set its attributes
     //     var iframe = document.createElement('iframe');
-    //     iframe.style="width:100%;height:100%;left:0px;top:0px;position:absolute;";
+    //     iframe.width = 100%;
+    //     iframe.height= 100%;
     //     iframe.src = videoUrl;
     //     iframe.frameborder = '0';
     //     iframe.allowfullscreen = true;
