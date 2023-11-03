@@ -85,12 +85,20 @@ hide:
         player.play();
     };
 
+    // function loadYoutube(videoUrl) {
+    //     window.scrollTo(0, 0);
+    //     var player = videojs('vid1', {"techOrder": ['youtube'], // Use YouTube as the primary playback technology
+    //                                   "sources": [{ "type": "video/youtube", "src": videoUrl }]    });
+    //     player.play();
+    // }
+
     function loadYoutube(videoUrl) {
-        window.scrollTo(0, 0);
-        var player = videojs('vid1', {"techOrder": ['youtube'], // Use YouTube as the primary playback technology
-                                      "sources": [{ "type": "video/youtube", "src": videoUrl }]    });
+        window.scrollTo(0, 0); // Scroll to the top after loading the video
+        var player = videojs('vid1');
+        player.src({src: videoUrl, type: 'application/vnd.youtube.yt'});
         player.play();
-    }
+    };
+
 </script>
 
 
