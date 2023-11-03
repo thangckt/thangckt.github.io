@@ -58,6 +58,7 @@ hide:
 </style>
 
 
+<script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
 
 <script>
     function loadVideo(videoUrl) {
