@@ -111,7 +111,7 @@ hide:
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
                 video.play();
             });
-        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+        } else if (video.canPlayType("video/mp4")) {
             video.src = videoUrl;
             video.addEventListener('canplay', function() {
                 video.play();
