@@ -177,9 +177,9 @@ hide:
 
 <button class="pushable" onclick="loadVideo('https://tbs01-edge11.itdc.ge/amedia/tracks-v1a1/playlist.m3u8')"> <span class="front">AMEDIA 1</span> </button>
 <button class="pushable" onclick="loadVideo('https://ucdn.beetv.kz/btv/live/hls/000000351.m3u8')"> <span class="front">AMEDIA 2</span> </button>
+<button class="pushable" onclick="loadVideo('https://ucdn.beetv.kz/btv/live/hls/000000239.m3u8')"> <span class="front">CINEMA</span> </button>
 
   <button class="pushable" onclick="loadVideo('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/smc_720p/playlist.m3u8')"> <span class="front">Sony</span> </button>
-
   <button class="pushable" onclick="loadVideo('https://wms4-kortv.akamaized.net/a_live/63719963/smil:20ch011.smil/chunklist_b2500000.m3u8')"> <span class="front">KBS World</span> </button>
 
 
