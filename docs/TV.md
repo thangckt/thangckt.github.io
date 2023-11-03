@@ -198,9 +198,19 @@ hide:
 <button class="pushable" onclick="loadVideo('https://liveh12.vtvcab.vn/hls/ONVTV5_CL/04.m3u8')"> <span class="front">VTV 5</span> </button>
 <button class="pushable" onclick="loadVideo('https://liveh12.vtvcab.vn/hls/ONVTV5TNB_CL/04.m3u8')"> <span class="front">VTV 5 Tay Nam Bo</span> </button>
 
-<br> <br>
-<button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC6/playlist.m3u8')"> <span class="front">VTC 6</span> </button>
-
+  <br> <br>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC2/playlist.m3u8')"> <span class="front">VTC 2</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC3/playlist.m3u8')"> <span class="front">VTC 3</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC6/playlist.m3u8')"> <span class="front">VTC 6</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC7/playlist.m3u8')"> <span class="front">VTC 7</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC8/playlist.m3u8')"> <span class="front">VTC 8</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC9/playlist.m3u8')"> <span class="front">VTC 9</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC10/playlist.m3u8')"> <span class="front">VTC 10</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC11/playlist.m3u8')"> <span class="front">VTC 11</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC12/playlist.m3u8')"> <span class="front">VTC 12</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC13/playlist.m3u8')"> <span class="front">VTC 13</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC14/playlist.m3u8')"> <span class="front">VTC 14</span> </button>
+  <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC16/playlist.m3u8')"> <span class="front">VTC 16</span> </button>
 
 
   <h3>Dia Phuong</h3>
