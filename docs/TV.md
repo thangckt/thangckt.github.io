@@ -231,6 +231,9 @@ hide:
   <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC14/playlist.m3u8')"> <span class="front">VTC 14</span> </button>
   <button class="pushable" onclick="loadVideo('https://1117141481.vnns.net/VTC16/playlist.m3u8')"> <span class="front">VTC 16</span> </button>
 
+  <br> <br>
+  <button class="pushable" onclick="loadVideo('https://e7.endpoint.cdn.sctvonline.vn/live/smil:VTVCAB16.smil/chunklist_w2005840737_b1692000.m3u8')"> <span class="front">VTVCab 16</span> </button>
+
 
   <h3>Dia Phuong</h3>
   <h4>Song Cuu Long</h4>
