@@ -147,8 +147,8 @@ hide:
   <button class="pushable" onclick="loadVideo('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8')"> <span class="front">France 24</span> </button>
   <button class="pushable" onclick="loadVideo('https://reuters-reutersnow-1-us.plex.wurl.tv/playlist.m3u8')"> <span class="front">Reuters</span> </button>
   <button class="pushable" onclick="loadVideo('https://yahoo-plex.amagi.tv/playlist.m3u8')"> <span class="front">Yahoo Finance</span> </button>
-
-
+  <button class="pushable" onclick="loadVideo('https://ctrl.laotv.la/live/Arirang/index.m3u8')"> <span class="front">Arirang</span> </button>
+  <button class="pushable" onclick="loadVideo('https://ctrl.laotv.la/live/CNBC/index.m3u8')"> <span class="front">CNBC Asia</span> </button>
 
 
   <h3>Discovery - Documentary</h3>
