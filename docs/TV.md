@@ -74,7 +74,6 @@ hide:
         loadVideo('https://ctrl.laotv.la/live/HBO/index.m3u8');
     });
 
-
     function loadStream() {
         var videoUrl = document.getElementById("m3u8Link").value;
         if (!videoUrl) {
@@ -90,28 +89,27 @@ hide:
     function loadYoutube(videoUrl) {
         window.scrollTo(0, 0);
         var player = videojs('vid1', {"techOrder": ["youtube"], // Use YouTube as the primary playback technology
-                                      "sources": [{ "type": "video/youtube", "src": videoUrl }]    });
+                                      "sources": [{ "type": "video/youtube", "src": videoUrl }]}  );
         player.play();
     }
 
-    // function loadYoutube(videoUrl) {    // or name as: loadHls
-    //     window.scrollTo(0, 0); // Scroll to the top after loading the video
-    //     // var videoUrl = document.getElementById("m3u8Link").value;
-    //     var video = document.getElementById('vid1');
-    //     if (Hls.isSupported()) {
-    //         var hls = new Hls();
-    //         hls.loadSource(videoUrl);
-    //         hls.attachMedia(video);
-    //         hls.on(Hls.Events.MANIFEST_PARSED, function() {
-    //             video.play();
-    //         });
-    //     } else if (video.canPlayType("video/mp4")) {
-    //         video.src = videoUrl;
-    //         video.addEventListener('canplay', function() {
-    //             video.play();
-    //         });
-    //     }
-    // }
+    function loadHLS(videoUrl) {    // or name as: loadHLS
+        window.scrollTo(0, 0);
+        var video = document.getElementById('vid1');
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoUrl);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                video.play();
+            });
+        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            video.src = videoUrl;
+            video.addEventListener('canplay', function() {
+                video.play();
+            });
+        }
+    }
 
 </script>
 
@@ -188,7 +186,7 @@ hide:
  <button class="pushable" onclick="loadVideo('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button>
 
   <h3>SCTV</h3>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button>
+  <button class="pushable" onclick="loadHLS('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button>
   <button class="pushable" onclick="loadVideo('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV14.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 14</span> </button>
 <button class="pushable" onclick="loadVideo('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV17.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 17</span> </button>
 
