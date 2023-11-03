@@ -58,7 +58,7 @@ hide:
 </style>
 
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
 <script src="https://cdn.jsdelivr.net/npm/videojs-youtube@3.0.1/dist/Youtube.min.js"></script>
 
 <script>
@@ -116,7 +116,7 @@ hide:
 
 
 <div class="container">
-<!-- First Column: Video Frame -->
+<!-- First Column: Video Frame   -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
     <video id="vid1" class="video-js vjs-default-skin" controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px;position:absolute;" ></video>
