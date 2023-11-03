@@ -188,8 +188,10 @@ hide:
 
   <h3>SCTV</h3>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button>
-  <button class="pushable" onclick="loadVideo('')"> <span class="front">SCTV 14</span> </button>
-  <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/sctvonline/sctv15/playlist.m3u8')"> <span class="front">SCTV 15</span> </button>
+  <button class="pushable" onclick="loadVideo('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV14.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 14</span> </button>
+<button class="pushable" onclick="loadVideo('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV17.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 17</span> </button>
+
+
 
   <h3>HTV - HTVC</h3>
   <button class="pushable" onclick="loadVideo('https://epg.pw/stream/1007d830565e93f89444e5b52302ed2d24506870d46b060143ba0d47cbf66900.ctv')"> <span class="front">HTV 1</span> </button>
