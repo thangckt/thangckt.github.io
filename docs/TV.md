@@ -94,7 +94,6 @@ hide:
         player.play();
     }
 
-
     // function loadYoutube(videoUrl) {    // or name as: loadHls
     //     window.scrollTo(0, 0); // Scroll to the top after loading the video
     //     // var videoUrl = document.getElementById("m3u8Link").value;
