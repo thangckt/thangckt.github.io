@@ -57,9 +57,10 @@ hide:
   }
 </style>
 
-
+<!-- Load libs -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
 <script src="https://cdn.jsdelivr.net/npm/videojs-youtube@3.0.1/dist/Youtube.min.js"></script>
+<script src="https://unpkg.com/browse/@videojs/http-streaming@3.7.0/dist/videojs-http-streaming.min.js"></script>
 
 <script>
     function loadVideo(videoUrl) {
