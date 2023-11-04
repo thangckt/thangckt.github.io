@@ -63,6 +63,11 @@ hide:
 
 <script>
     function loadVideo(videoUrl) {
+        // if (Array.isArray(videoUrls)) {
+        //     var videoUrl = videoUrls[0]
+        // } else {
+        //     var videoUrl = videoUrls
+        // }
         window.scrollTo(0, 0); // Scroll to the top after loading the video
         var player = videojs('vid1');
         player.src({src: videoUrl, type: 'application/x-mpegURL'});
@@ -165,7 +170,7 @@ hide:
 
 
   <h3>Movies</h3>
-  <button class="pushable" onclick="loadVideo('https://ctrl.laotv.la/live/HBO/index.m3u8')"> <span class="front">HBO</span> </button>
+  <button class="pushable" onclick="loadVideo(['https://ctrl.laotv.la/live/HBO/index.m3u8','https://ctrl.laotv.la/live/HBO/index.m3u8'])"> <span class="front">HBO</span> </button>
   <button class="pushable" onclick="loadVideo('https://ctrl.laotv.la/live/Cinemax/index.m3u8')"> <span class="front">Cinemax</span> </button>
 <button class="pushable" onclick="loadVideo('https://ucdn.beetv.kz/btv/live/hls/000000239.m3u8')"> <span class="front">CINEMA</span> </button>
 
