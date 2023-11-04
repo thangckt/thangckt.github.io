@@ -74,7 +74,7 @@ hide:
         window.scrollTo(0, 0); // Scroll to the top after loading the video
         var player = videojs('vid1');
         // Call plugin here, before load src
-        player.hlsQualitySelector({displayCurrentQuality: true});
+        // player.hlsQualitySelector({displayCurrentQuality: true});
         player.src({src: videoUrl, type: 'application/x-mpegURL'});
         player.play();
     };
