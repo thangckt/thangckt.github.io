@@ -116,10 +116,10 @@ hide:
 
 
 <div class="container">
-<!-- First Column: Video Frame  class="video-js vjs-default-skin" -->
+<!-- First Column: Video Frame  class="video-js" -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
-    <video id="vid1"  controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px;position:absolute;" ></video>
+    <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px;position:absolute;" ></video>
   </div>
 
   <!-- <h3>Stream link</h3> -->
