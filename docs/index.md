@@ -32,7 +32,7 @@ else:
 
 <!-- <img src="./1images/monkey.png" style="float:left; margin-right:20px" width="190" /> -->
 
-<div>
+<div style="display:block">
 <img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" />
 This site serves as a repo for my personal notes. <br>
 The contents reflect neither community nor third-party rules, rather, they're random, messy, improvised, and inevitable for some rare situations but inapplicable for almost others.
