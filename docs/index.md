@@ -42,7 +42,7 @@ If you find nothing valid, just enjoin Felix's excellent pieces.
 <!-- The site is my dark valley in essence; I'd be glad if you could find anything valid. Alternatively, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64. -->
 <!-- To whom with Vietnamese comprehension, I'd be pleased to introduce a reputed descant that captures [the scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g). -->
 </div>
-<br>
+
 
 <!--
 !!! quote ""
