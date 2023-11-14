@@ -274,7 +274,7 @@ nav:
       - Computational: literature/reading/Comp_Methods.md
       - Mechanics: literature/reading/mech_solid.md
 
-  - Miscellaneous:      # Miscellaneous    Heterogeneous
+  - Odd:      # Miscellaneous    Heterogeneous
     - Music:
       - Love theme: miscell/music/1_Tinh_ca.md
       - Historical theme: miscell/music/2_Viet_su.md
