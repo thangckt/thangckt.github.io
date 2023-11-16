@@ -276,13 +276,13 @@ nav:
 
   - Odd:      # Miscellaneous    Heterogeneous
     - Music:
-      - Love theme: miscell/music/1_Tinh_ca.md
-      - Historical theme: miscell/music/2_Viet_su.md
-      - Fall of Saigon: miscell/music/3_Saigon.md
-      - Classic pieces: miscell/music/4_Classic.md
-      - Lyrical Chord: miscell/music/5_Lyrics.md
+      - Classic pieces: odd/music/Classic.md
+      - Fall of Saigon: odd/music/Saigon.md
+      - Love theme: odd/music/Tinh_ca.md
+      - Historical theme: odd/music/Viet_su.md
+      - Lyrical Chord: odd/music/Lyrics.md
     - Reading list:
-      - miscell/reading/1_read_list.md
+      - odd/reading/read_list.md
 
   # - News:
   #   - blog/posts/DeePMD_kit.md
