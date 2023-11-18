@@ -15,7 +15,7 @@ jobs:
 
       - name: Install mkdocs
         run: |
-          pip install git+https://github.com/thangckt/mkdocs-material.git@v1         # tabs_header_v8    master    tabs_header_yinkh
+          pip install git+https://github.com/thangckt/mkdocs-material.git@master        # tabs_header_v8    master    tabs_header_yinkh
           pip install mkdocstrings[python]>=0.18
 
       - name: Build
