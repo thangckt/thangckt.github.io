@@ -428,7 +428,7 @@ https://cdn.hungyentv.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8
 #EXTINF:-1 tvg-id="namdinh" group-title="🇻🇳| Địa phương" tvg-logo="https://phuhdtv.github.io/logo/diaphuong/NamDinhTV.png", NAM DINH
 https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8
 #EXTINF:-1 tvg-id="thaibinh" group-title="🇻🇳| Địa phương" tvg-logo="https://cdn.hqth.me/logo/thumbs/175.png", Thai Binh
-https://stream.thaibinhtv.vn/live/285fe61ba73072f428d8a626d764222e744/chunklist.m3u8
+https://ott3.nethubtv.vn/live/thaibinh/chunklist_1.m3u8
 #EXTINF:-1 tvg-id="VinhPhucTV.vn" group-title="🇻🇳| Địa phương", Vinh Phuc TV (1080p)
 http://vinhphuctv.vn:8090/vinhphuclive/web.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="ninhbinh" group-title="🇻🇳| Địa phương" tvg-logo="https://cdn.hqth.me/logo/thumbs/161.png", Ninh Binh

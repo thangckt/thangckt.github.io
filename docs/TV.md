@@ -248,6 +248,12 @@ hide:
   <h4>Dong Bac Bo</h4>
   <button class="pushable" onclick="loadVideo('https://ott3.nethubtv.vn/live/bacgiangtv/chunklist_1.m3u8')"> <span class="front">Bac Giang</span> </button>
 
+
+  <h4>Dong Bang Song Hong</h4>
+  <button class="pushable" onclick="loadVideo('https://ott3.nethubtv.vn/live/thaibinh/chunklist_1.m3u8')"> <span class="front">Bac Giang</span> </button>
+
+
+
   <h4>Song Cuu Long</h4>
 
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl1-hd/playlist.m3u8')"> <span class="front">Vinh Long 1</span> </button>
