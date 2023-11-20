@@ -244,6 +244,13 @@ hide:
 
 
   <h3>Dia Phuong</h3>
+  <button class="pushable" onclick="loadVideo('https://media.streambrothers.com:1936/8228/8228/playlist.m3u8')"> <span class="front">Little Saigon</span> </button>
+  <button class="pushable" onclick="loadVideo('https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8')"> <span class="front">SET TV 2</span> </button>
+
+
+
+
+
   <h4>Song Cuu Long</h4>
   <button class="pushable" onclick="loadVideo('https://live.canthotv.vn/live/tv/chunklist.m3u8')"> <span class="front">Can Tho</span> </button>
   <button class="pushable" onclick="loadVideo('https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8')"> <span class="front">Tra Vinh 1</span> </button>
