@@ -254,6 +254,9 @@ hide:
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl3-hd/playlist.m3u8')"> <span class="front">Vinh Long 3</span> </button>
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl4-hd/playlist.m3u8')"> <span class="front">Vinh Long 4</span> </button>
 
+  <h4>Dong Nam Bo</h4>
+  <button class="pushable" onclick="loadVideo('https://cdn.baobinhphuoc.com.vn/live/28550d6213460634105b0bae21016f68bce/playlist.m3u8')"> <span class="front">Binh Phuoc 2</span> </button>
+
   <h4>Tay Nguyen</h4>
   <button class="pushable" onclick="loadVideo('https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8')"> <span class="front">Dak Lak</span> </button>
 
