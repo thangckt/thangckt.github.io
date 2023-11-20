@@ -261,6 +261,10 @@ hide:
   <button class="pushable" onclick="loadVideo('http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8')"> <span class="front">Da Nang 2</span> </button>
 
 
+  <h4>Bac Trung Bo</h4>
+  <button class="pushable" onclick="loadVideo('https://wse.hatinhtv.net/live/httv1/playlist.m3u8')"> <span class="front">Ha Tinh</span> </button>
+
+
 
   <h4>Dong Bang Song Hong</h4>
   <button class="pushable" onclick="loadVideo('https://cecex9g5cpliv.vcdn.cloud/capture/smil:HN1.smil/chunklist_b3128000_slen.m3u8')"> <span class="front">Ha Noi 1</span> </button>
@@ -270,13 +274,6 @@ hide:
   <button class="pushable" onclick="loadVideo('https://ott3.nethubtv.vn/live/thaibinh/chunklist_1.m3u8')"> <span class="front">Thai Binh</span> </button>
 
   <button class="pushable" onclick="loadVideo('https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8')"> <span class="front">Ninh Binh</span> </button>
-
-
-
-
-
-
-
 
 
   <h4>Dong Bac Bo</h4>
