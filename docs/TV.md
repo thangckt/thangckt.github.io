@@ -251,30 +251,30 @@ hide:
 
 
 
-  <h4>Song Cuu Long</h4>
+  <!-- <h4>Song Cuu Long</h4> -->
   <button class="pushable" onclick="loadVideo('https://live.canthotv.vn/live/tv/chunklist.m3u8')"> <span class="front">Can Tho</span> </button>
   <button class="pushable" onclick="loadVideo('https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8')"> <span class="front">Tra Vinh 1</span> </button>
   <button class="pushable" onclick="loadVideo('https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/playlist.m3u8')"> <span class="front">Tra Vinh 2</span> </button>
 
 
 
-  <h4>Dong Nam Bo</h4>
+  <!-- <h4>Dong Nam Bo</h4> -->
   <button class="pushable" onclick="loadVideo('https://cdn.baobinhphuoc.com.vn/live/28550d6213460634105b0bae21016f68bce/playlist.m3u8')"> <span class="front">Binh Phuoc 2</span> </button>
 
-  <h4>Tay Nguyen</h4>
+  <!-- <h4>Tay Nguyen</h4> -->
   <button class="pushable" onclick="loadVideo('https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8')"> <span class="front">Dak Lak</span> </button>
 
 
-  <h4>Nam Trung Bo</h4>
+  <!-- <h4>Nam Trung Bo</h4> -->
   <button class="pushable" onclick="loadVideo('https://60acee235f4d5.streamlock.net/live/mystream/playlist.m3u8')"> <span class="front">Ninh Thuan</span> </button>
 
 
-  <h4>Bac Trung Bo</h4>
+  <!-- <h4>Bac Trung Bo</h4> -->
   <button class="pushable" onclick="loadVideo('https://wse.hatinhtv.net/live/httv1/playlist.m3u8')"> <span class="front">Ha Tinh</span> </button>
 
 
 
-  <h4>Dong Bang Song Hong</h4>
+  <!-- <h4>Dong Bang Song Hong</h4> -->
   <button class="pushable" onclick="loadVideo('https://cecex9g5cpliv.vcdn.cloud/capture/smil:HN1.smil/chunklist_b3128000_slen.m3u8')"> <span class="front">Ha Noi 1</span> </button>
   <button class="pushable" onclick="loadVideo('https://cdn.hanamtv.vn/live/285361fcafcd0ec47bba2fa3f5870f8dc72/chunklist.m3u8')"> <span class="front">Ha Nam</span> </button>
   <button class="pushable" onclick="loadVideo('https://cdn.hungyentv.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8')"> <span class="front">Hung Yen</span> </button>
@@ -284,7 +284,7 @@ hide:
   <button class="pushable" onclick="loadVideo('https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8')"> <span class="front">Ninh Binh</span> </button>
 
 
-  <h4>Dong Bac Bo</h4>
+  <!-- <h4>Dong Bac Bo</h4> -->
   <button class="pushable" onclick="loadVideo('https://live.tuyenquangtv.vn/hls/ttv.m3u8')"> <span class="front">Tuyen Quang</span> </button>
   <button class="pushable" onclick="loadVideo('https://streaming.thainguyentv.vn/hls/livestream.m3u8')"> <span class="front">Thai Nguyen</span> </button>
   <button class="pushable" onclick="loadVideo('https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8')"> <span class="front">Lang Son</span> </button>
