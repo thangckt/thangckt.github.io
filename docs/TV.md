@@ -58,10 +58,10 @@ hide:
 </style>
 
 <!-- Load libs -->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
 <script src="https://cdn.jsdelivr.net/npm/videojs-youtube@3.0.1/dist/Youtube.min.js"></script>
 <script src="https://www.unpkg.com/browse/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/4.0.0/videojs-contrib-quality-levels.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/4.0.0/videojs-contrib-quality-levels.min.js"></script> -->
 
 <script>
     function loadVideo(videoUrl) {
@@ -244,6 +244,10 @@ hide:
 
 
   <h3>Dia Phuong</h3>
+
+  <h4>Dong Bac Bo</h4>
+  <button class="pushable" onclick="loadVideo('https://ott3.nethubtv.vn/live/bacgiangtv/chunklist_1.m3u8')"> <span class="front">Bac Giang</span> </button>
+
   <h4>Song Cuu Long</h4>
 
   <button class="pushable" onclick="loadVideo('https://code.vthanhtivi.pw/getlink/vieon/thvl1-hd/playlist.m3u8')"> <span class="front">Vinh Long 1</span> </button>
