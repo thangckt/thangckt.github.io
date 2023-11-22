@@ -111,15 +111,16 @@ function loadYoutube(videoUrl) {
     // });
     // player.play();
 
-    set_class('vid1','video');
+    set_class('vid1', null);
     var video = document.getElementById('vid1');
     video.src({src: videoUrl, type: 'video/mp4'});
+    video.setAttribute( 'data-yt', videoUrl);
     video.play();
 }
 
 function loadHLS(videoUrl) {    // or name as: loadHLS
     window.scrollTo(0, 0);
-    set_class('vid1','video');
+    set_class('vid1', null);
     var video = document.getElementById('vid1');
     if (Hls.isSupported()) {
         var hls = new Hls();
