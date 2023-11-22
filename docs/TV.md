@@ -110,7 +110,7 @@ function loadYoutube(videoUrl) {
     //     "sources": [{ "type": "video/youtube", "src": videoUrl }]
     // });
 
-    set_class('vid1','video-js');
+    set_class('vid1',"video-js vjs-default-skin");
     var player = videojs('vid1');
     player.setAttribute( "data-setup", { "techOrder": ["youtube", "html5"], "sources": [{ "type": "video/youtube", "src": videoUrl}] });
     player.play();
