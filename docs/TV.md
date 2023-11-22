@@ -204,10 +204,8 @@ function makePropertyWritable(objBase, objScopeName, propName, initValue) {
 // console.log(window.navigator.userAgent);
 
 function set_userAgent(new_agent) {
-    let agent = navigator.userAgent;   // read current agent
-    agent += new_agent;
     makePropertyWritable(window, "navigator", "userAgent");
-    window.navigator.userAgent = agent;
+    window.navigator.userAgent = new_agent;
 }
 
 </script>
