@@ -112,8 +112,7 @@ function loadYoutube(videoUrl) {
     // });
 
     var player = videojs('vid1');
-    player.src({ src: videoUrl, type: 'video/youtube' });
-    player.techOrder = ["youtube",'html5'];
+    player.src({ src: videoUrl, type: 'video/mp4' });
     player.play();
 }
 
