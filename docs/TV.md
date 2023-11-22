@@ -118,7 +118,7 @@ function loadYoutube(videoUrl) {
 
 function loadHLS(videoUrl) {    // or name as: loadHLS
     window.scrollTo(0, 0);
-    set_class('vid1','video')
+    set_class('vid1','video');
     var video = document.getElementById('vid1');
     if (Hls.isSupported()) {
         var hls = new Hls();
@@ -138,7 +138,7 @@ function loadHLS(videoUrl) {    // or name as: loadHLS
 
 function set_class(vid_id, my_class){
      let element = document.getElementById(vid_id);
-     element.classList.toggle(my_class;
+     element.classList.toggle(my_class);
   }
 
 </script>
