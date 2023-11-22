@@ -63,64 +63,8 @@ hide:
 <script src="https://www.unpkg.com/browse/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/4.0.0/videojs-contrib-quality-levels.min.js"></script> -->
 
-<script>
-    function loadVideo(videoUrl) {
-        // if (Array.isArray(videoUrls)) {
-        //     var videoUrl = videoUrls[0]
-        // } else {
-        //     var videoUrl = videoUrls
-        // }
-        window.scrollTo(0, 0); // Scroll to the top after loading the video
-        var player = videojs('vid1');
-        // Call plugin here, before load src
-        // player.hlsQualitySelector({displayCurrentQuality: true});
-        player.src({src: videoUrl, type: 'application/x-mpegURL'});
-        player.play();
-    };
-
-    // Automatically load and play default video when page loads
-    window.addEventListener('load', function() {
-        loadVideo('https://ctrl.laotv.la/live/HBO/index.m3u8');
-    });
-
-    function loadStream() {
-        var videoUrl = document.getElementById("m3u8Link").value;
-        if (!videoUrl) {
-            alert("Please enter a stream link.");
-            return;
-        };
-        window.scrollTo(0, 0);
-        var player = videojs('vid1');
-        player.src({src: videoUrl, type: 'application/x-mpegURL'});
-        player.play();
-    };
-
-    function loadYoutube(videoUrl) {
-        window.scrollTo(0, 0);
-        var player = videojs('vid1', {"techOrder": ["youtube"], // Use YouTube as the primary playback technology
-                                      "sources": [{ "type": "video/youtube", "src": videoUrl }]}  );
-        player.play();
-    }
-
-    function loadHLS(videoUrl) {    // or name as: loadHLS
-        window.scrollTo(0, 0);
-        var video = document.getElementById('vid1');
-        if (Hls.isSupported()) {
-            var hls = new Hls();
-            hls.loadSource(videoUrl);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                video.play();
-            });
-        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-            video.src = videoUrl;
-            video.addEventListener('canplay', function() {
-                video.play();
-            });
-        }
-    }
-
-</script>
+<!-- Load js function from another file -->
+<script src="TVonline/script_tv.js"></script>
 
 
 
