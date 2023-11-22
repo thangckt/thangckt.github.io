@@ -104,16 +104,17 @@ function loadStream() {
 
 
 function loadYoutube(videoUrl) {
-    set_class('vid1','video');
     window.scrollTo(0, 0);
     // var player = videojs('vid1', {
     //     "techOrder": ["youtube"], // Use YouTube as the primary playback technology
     //     "sources": [{ "type": "video/youtube", "src": videoUrl }]
     // });
+    // player.play();
 
-    var player = videojs('vid1');
-    player.src({ src: videoUrl, type: 'video/mp4' });
-    player.play();
+    set_class('vid1','video');
+    var video = document.getElementById('vid1');
+    video.src = videoUrl;
+    video.play();
 }
 
 function loadHLS(videoUrl) {    // or name as: loadHLS
