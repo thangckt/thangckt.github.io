@@ -113,7 +113,7 @@ function loadYoutube(videoUrl) {
 
     set_class('vid1','video');
     var video = document.getElementById('vid1');
-    video.src = videoUrl;
+    video.src({src: videoUrl, type: 'video/mp4'});
     video.play();
 }
 
