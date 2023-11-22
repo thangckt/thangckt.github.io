@@ -113,8 +113,8 @@ function loadYoutube(videoUrl) {
 
     set_class('vid1', null);
     var video = document.getElementById('vid1');
-    video.src({src: videoUrl, type: 'video/mp4'});
-    video.setAttribute( 'data-yt', videoUrl);
+    video.src({src: videoUrl, type: 'video/webm'});
+    // video.setAttribute( 'data-yt', videoUrl);
     video.play();
 }
 
