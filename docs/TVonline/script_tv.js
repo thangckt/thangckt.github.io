@@ -96,7 +96,7 @@ function set_userAgent(new_agent) {
 
 // These are functions to pass to html file
 function loadVideo(videoUrl, new_agent = '') {
-    set_userAgent(new_agent) // set user-agent
+    // set_userAgent(new_agent) // set user-agent
     // if (Array.isArray(videoUrls)) {
     //     var videoUrl = videoUrls[0]
     // } else {
