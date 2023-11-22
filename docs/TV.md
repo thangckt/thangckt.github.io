@@ -104,7 +104,7 @@ function loadStream() {
 
 
 function loadYoutube(videoUrl) {
-    set_class('vid1','video')
+    set_class('vid1','video');
     window.scrollTo(0, 0);
     // var player = videojs('vid1', {
     //     "techOrder": ["youtube"], // Use YouTube as the primary playback technology
