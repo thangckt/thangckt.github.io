@@ -73,6 +73,7 @@ function loadVideo(videoUrl) {
     //     var videoUrl = videoUrls
     // }
     window.scrollTo(0, 0); // Scroll to the top after loading the video
+    set_class('vid1','video-js');
     var player = videojs('vid1');
     // Call plugin here, before load src
     // player.hlsQualitySelector({displayCurrentQuality: true});
@@ -93,7 +94,9 @@ function loadStream() {
         alert("Please enter a stream link.");
         return;
     };
+
     window.scrollTo(0, 0);
+    set_class('vid1','video-js');
     var player = videojs('vid1');
     player.src({ src: videoUrl, type: 'application/x-mpegURL' });
     player.play();
@@ -101,6 +104,7 @@ function loadStream() {
 
 
 function loadYoutube(videoUrl) {
+    set_class('vid1','video')
     window.scrollTo(0, 0);
     // var player = videojs('vid1', {
     //     "techOrder": ["youtube"], // Use YouTube as the primary playback technology
@@ -115,6 +119,7 @@ function loadYoutube(videoUrl) {
 
 function loadHLS(videoUrl) {    // or name as: loadHLS
     window.scrollTo(0, 0);
+    set_class('vid1','video')
     var video = document.getElementById('vid1');
     if (Hls.isSupported()) {
         var hls = new Hls();
@@ -130,6 +135,12 @@ function loadHLS(videoUrl) {    // or name as: loadHLS
         });
     }
 }
+
+
+function set_class(vid_id, my_class){
+     let element = document.getElementById(vid_id);
+     element.classList.toggle(my_class;
+  }
 
 </script>
 
