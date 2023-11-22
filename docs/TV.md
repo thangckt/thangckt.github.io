@@ -111,7 +111,7 @@ function loadYoutube(videoUrl) {
     // });
     // player.play();
 
-    set_class('vid1', null);
+    set_class('vid1', ' ');
     var video = document.getElementById('vid1');
     video.src({src: videoUrl, type: 'video/webm'});
     // video.setAttribute( 'data-yt', videoUrl);
@@ -120,7 +120,7 @@ function loadYoutube(videoUrl) {
 
 function loadHLS(videoUrl) {    // or name as: loadHLS
     window.scrollTo(0, 0);
-    set_class('vid1', null);
+    set_class('vid1', ' ');
     var video = document.getElementById('vid1');
     if (Hls.isSupported()) {
         var hls = new Hls();
