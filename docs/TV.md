@@ -65,8 +65,7 @@ hide:
 
 <!-- Load js function from another file <script src="TVonline/script_tv.js"></script> -->
 <script>
-function loadVideo(videoUrl,new_agent = '') {
-    set_userAgent(new_agent) // set user-agent
+function loadVideo(videoUrl) {
     // if (Array.isArray(videoUrls)) {
     //     var videoUrl = videoUrls[0]
     // } else {
@@ -87,8 +86,7 @@ window.addEventListener('load', function () {
 });
 
 
-function loadStream(new_agent = '') {
-    set_userAgent(new_agent) // set user-agent
+function loadStream() {
     var videoUrl = document.getElementById("m3u8Link").value;
     if (!videoUrl) {
         alert("Please enter a stream link.");
@@ -126,86 +124,6 @@ function loadHLS(videoUrl) {    // or name as: loadHLS
             video.play();
         });
     }
-}
-
-
-/**
- * Creates a read/writable property which returns a function set for write/set (assignment)
- * and read/get access on a variable
- *
- * @param {Any} value initial value of the property
- */
-function createProperty(value) {
-    var _value = value;
-
-    /**
-     * Overwrite getter.
-     *
-     * @returns {Any} The Value.
-     * @private
-     */
-    function _get() {
-        return _value;
-    }
-
-    /**
-     * Overwrite setter.
-     *
-     * @param {Any} v   Sets the value.
-     * @private
-     */
-    function _set(v) {
-        _value = v;
-    }
-
-    return {
-        "get": _get,
-        "set": _set
-    };
-};
-
-/**
- * Creates or replaces a read-write-property in a given scope object, especially for non-writable properties.
- * This also works for built-in host objects (non-DOM objects), e.g. navigator.
- * Optional an initial value can be passed, otherwise the current value of the object-property will be set.
- *
- * @param {Object} objBase  e.g. window
- * @param {String} objScopeName    e.g. "navigator"
- * @param {String} propName    e.g. "userAgent"
- * @param {Any} initValue (optional)   e.g. window.navigator.userAgent
- */
-function makePropertyWritable(objBase, objScopeName, propName, initValue) {
-    var newProp,
-        initObj;
-
-    if (objBase && objScopeName in objBase && propName in objBase[objScopeName]) {
-        if (typeof initValue === "undefined") {
-            initValue = objBase[objScopeName][propName];
-        }
-
-        newProp = createProperty(initValue);
-
-        try {
-            Object.defineProperty(objBase[objScopeName], propName, newProp);
-        } catch (e) {
-            initObj = {};
-            initObj[propName] = newProp;
-            try {
-                objBase[objScopeName] = Object.create(objBase[objScopeName], initObj);
-            } catch (e) {
-                // Workaround, but necessary to overwrite native host objects
-            }
-        }
-    }
-};
-
-// makePropertyWritable(window, "navigator", "userAgent");
-// window.navigator.userAgent = "BlackBerry8520/5.0.0.681 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/114";
-// console.log(window.navigator.userAgent);
-
-function set_userAgent(new_agent) {
-    makePropertyWritable(window, "navigator", "userAgent");
-    window.navigator.userAgent = new_agent;
 }
 
 </script>
