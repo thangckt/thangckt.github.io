@@ -1,5 +1,6 @@
 // These are functions to pass to html file
-function loadVideo(videoUrl) {
+function loadVideo(videoUrl, new_agent = '') {
+    set_userAgent(new_agent) // set user-agent
     // if (Array.isArray(videoUrls)) {
     //     var videoUrl = videoUrls[0]
     // } else {
@@ -13,12 +14,15 @@ function loadVideo(videoUrl) {
     player.play();
 };
 
+
 // Automatically load and play default video when page loads
 window.addEventListener('load', function () {
     loadVideo('https://ctrl.laotv.la/live/HBO/index.m3u8');
 });
 
-function loadStream() {
+
+function loadStream(new_agent = '') {
+    set_userAgent(new_agent) // set user-agent
     var videoUrl = document.getElementById("m3u8Link").value;
     if (!videoUrl) {
         alert("Please enter a stream link.");
@@ -29,6 +33,7 @@ function loadStream() {
     player.src({ src: videoUrl, type: 'application/x-mpegURL' });
     player.play();
 };
+
 
 function loadYoutube(videoUrl) {
     window.scrollTo(0, 0);
@@ -132,8 +137,13 @@ function makePropertyWritable(objBase, objScopeName, propName, initValue) {
     }
 };
 
-makePropertyWritable(window, "navigator", "userAgent");
+// makePropertyWritable(window, "navigator", "userAgent");
+// window.navigator.userAgent = "BlackBerry8520/5.0.0.681 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/114";
+// console.log(window.navigator.userAgent);
 
-window.navigator.userAgent = "BlackBerry8520/5.0.0.681 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/114";
-
-console.log(window.navigator.userAgent);
+function set_userAgent(new_agent) {
+    let agent = navigator.userAgent;   // read current agent
+    agent += new_agent;
+    makePropertyWritable(window, "navigator", "userAgent");
+    window.navigator.userAgent = agent;
+}
