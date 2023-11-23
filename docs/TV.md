@@ -107,7 +107,7 @@ hide:
         window.scrollTo(0, 0);
         replaceVideoElement("vid1", 'iframe')           // use iframe to play youtube
         var video = document.getElementById("vid1");     // Get the video element
-        video.src = "https://www.youtube.com/embed/" + videoUrl.split('v=')[1] + "?autoplay=1";
+        video.src = videoUrl+ "?autoplay=1";
     }
 
 
@@ -140,7 +140,6 @@ hide:
 
     function replaceVideoElement(vidId, targetType) {
       var videoElement = document.getElementById(vidId);     // Get the video element
-      var parentDiv = videoElement.parentElement;             // Get the parent div
       // Check if the current element is of the same type, then do nothing
       if ((targetType === 'video' && videoElement.tagName.toLowerCase() === 'video') ||
           (targetType === 'iframe' && videoElement.tagName.toLowerCase() === 'iframe')) {
@@ -164,7 +163,10 @@ hide:
         newElement.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
       }
       newElement.setAttribute('id', vidId);
-      parentDiv.replaceChild(newElement, videoElement);
+
+      var parentDiv = videoElement.parentElement;             // Get the parent div
+      parentDiv.removeChild(videoElement);
+      parentDiv.appendChild(newElement);
     }
 
 </script>
