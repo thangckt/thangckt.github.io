@@ -107,8 +107,8 @@ hide:
         window.scrollTo(0, 0);
         replaceVideoElement("vid1", "iframe")           // use iframe to play youtube
         var video = document.getElementById("vid1");     // Get the video element
-        video.setAttribute('src', videoUrl+= "?autoplay=1";); // Replace with your actual video URL
-        video.setAttribute('allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+        video.setAttribute('src', videoUrl+= "?autoplay=1"); // Replace with your actual video URL
+        // video.setAttribute('allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
     }
 
 
