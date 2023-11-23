@@ -166,7 +166,8 @@ hide:
         newElement.setAttribute('allowfullscreen', 'true');
         newElement.setAttribute('allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
       }
-      parentDiv.replaceChild(newElement, videoElement);
+      parentDiv.removeChild(videoElement);
+      parentDiv.appendChild(newElement);
     }
 
 </script>
