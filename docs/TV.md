@@ -61,7 +61,7 @@ hide:
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
 <script src="https://www.unpkg.com/browse/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/4.0.0/videojs-contrib-quality-levels.min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script>
 
 
 <!-- Load js function from another file <script src="TVonline/script_tv.js"></script> -->
@@ -112,7 +112,7 @@ function loadYoutube(videoUrl) {
 
     // set_class('vid1',"video-js vjs-default-skin");
     var player = videojs('vid1');
-    player.setAttribute( "data-setup", { "techOrder": ["youtube", "html5"], "sources": [{ "type": "video/youtube", "src": videoUrl}] });
+    player.setAttribute( "data-setup", '{ "techOrder": ["youtube", "html5"], "sources": [{ "type": "video/youtube", "src": videoUrl}] }');
     player.play();
 
     // set_class('vid1', ' ');
