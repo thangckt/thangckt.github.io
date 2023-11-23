@@ -73,7 +73,7 @@ hide:
         //     var videoUrl = videoUrls
         // }
         window.scrollTo(0, 0); // Scroll to the top after loading the video
-        replaceVideoElement('vid1', "video")
+        replaceVideoElement('vid1', 'video')
         var player = videojs('vid1');
         // Call plugin here, before load src
         // player.hlsQualitySelector({displayCurrentQuality: true});
@@ -96,7 +96,7 @@ hide:
         };
 
         window.scrollTo(0, 0);
-        replaceVideoElement('vid1', "video")
+        replaceVideoElement('vid1', 'video')
         var player = videojs('vid1');
         player.src({ src: videoUrl, type: 'application/x-mpegURL' });
         player.play();
@@ -105,7 +105,7 @@ hide:
 
     function loadYoutube(videoUrl) {
         window.scrollTo(0, 0);
-        replaceVideoElement("vid1", "iframe")           // use iframe to play youtube
+        replaceVideoElement("vid1", 'iframe')           // use iframe to play youtube
         var video = document.getElementById("vid1");     // Get the video element
         video.setAttribute('src', videoUrl+= "?autoplay=1"); // Replace with your actual video URL
         // video.setAttribute('allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
@@ -115,7 +115,7 @@ hide:
 
     function loadHLS(videoUrl) {    // or name as: loadHLS
         window.scrollTo(0, 0);
-        replaceVideoElement('vid1', "video")
+        replaceVideoElement('vid1', 'video')
         replaceClass('vid1', ' ');
         var video = document.getElementById('vid1');
         if (Hls.isSupported()) {
