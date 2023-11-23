@@ -86,7 +86,41 @@ function set_userAgent(new_agent) {
     window.navigator.userAgent = agent;
 }
 
+function replaceClass(myId, my_class = ' ') {
+    document.getElementById(myId).className = my_class;
+}
 
+
+function replaceVideoElement(vidId, targetType) {
+    var videoElement = document.getElementById(vidId);     // Get the video element
+    // Check if the current element is of the same type, then do nothing
+    if ((targetType === 'video' && videoElement.tagName.toLowerCase() === 'video') ||
+        (targetType === 'iframe' && videoElement.tagName.toLowerCase() === 'iframe')) {
+        return;
+    }
+
+    // Create new element with targetType and Replace the current element
+    var newElement;
+    if (targetType === 'video') {
+        newElement = document.createElement('video');
+        newElement.setAttribute('class', 'video-js');
+        newElement.setAttribute('controls', 'controls');
+        newElement.setAttribute('preload', 'none');
+        newElement.setAttribute('autoplay', 'autoplay');
+        newElement.setAttribute('style', 'width:100%;height:100%;left:0px;top:0px;position:absolute;');
+    } else if (targetType === 'iframe') {
+        newElement = document.createElement('iframe');
+        newElement.setAttribute('style', 'width:100%;height:100%;left:0px;top:0px;position:absolute;');
+        newElement.setAttribute('frameborder', '0');
+        newElement.setAttribute('allowfullscreen', 'true');
+        newElement.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+    }
+    newElement.setAttribute('id', vidId);
+
+    var parentDiv = videoElement.parentElement;             // Get the parent div
+    parentDiv.removeChild(videoElement);
+    parentDiv.appendChild(newElement);
+}
 
 
 
@@ -140,8 +174,19 @@ function loadYoutube(videoUrl) {
     player.play();
 }
 
+function loadYoutube1(videoUrl) {
+    window.scrollTo(0, 0);
+    // replaceVideoElement("vid1", 'iframe')           // use iframe to play youtube
+    var video = document.getElementById("vid1");     // Get the video element
+    video.src = "https://www.youtube.com/embed/" + videoUrl.split('v=')[1]
+}
+
+
+
 function loadHLS(videoUrl) {    // or name as: loadHLS
     window.scrollTo(0, 0);
+    // replaceVideoElement('vid1', 'video')
+    replaceClass('vid1', ' ');
     var video = document.getElementById('vid1');
     if (Hls.isSupported()) {
         var hls = new Hls();
