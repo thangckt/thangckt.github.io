@@ -61,7 +61,7 @@ hide:
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
 <script src="https://www.unpkg.com/browse/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/4.0.0/videojs-contrib-quality-levels.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script> -->
 
 
 <!-- Load js function from another file <script src="TVonline/script_tv.js"></script> -->
@@ -105,21 +105,9 @@ function loadStream() {
 
 function loadYoutube(videoUrl) {
     window.scrollTo(0, 0);
-    // var player = videojs('vid1', {
-    //     "techOrder": ["youtube"], // Use YouTube as the primary playback technology
-    //     "sources": [{ "type": "video/youtube", "src": videoUrl }]
-    // });
-
-    // set_class('vid1',"video-js vjs-default-skin");
-    var player = videojs('vid1');
-    player.setAttribute( "data-setup", '{ "techOrder": ["youtube", "html5"], "sources": [{ "type": "video/youtube", "src": videoUrl}] }');
-    player.play();
-
-    // set_class('vid1', ' ');
-    // var video = document.getElementById('vid1');
-    // video.src({src: videoUrl, type: 'video/webm'});
-    // // video.setAttribute( 'data-yt', videoUrl);
-    // video.play();
+    replaceVideoElement("vid1", "iframe")           // use iframe to play youtube
+    var video = document.getElementById("vid1");     // Get the video element
+    video.setAttribute('src', videoUrl); // Replace with your actual video URL
 }
 
 
@@ -147,6 +135,37 @@ function loadHLS(videoUrl) {    // or name as: loadHLS
 function set_class(my_id, my_class=' '){
     document.getElementById(my_id).className = my_class;
   }
+
+
+    function replaceVideoElement(vidId, targetType) {
+      var videoElement = document.getElementById(vidId);     // Get the video element
+      var parentDiv = videoElement.parentElement;             // Get the parent div
+      // Check if the current element is of the same type
+      if ((targetType === 'video' && videoElement.tagName.toLowerCase() === 'video') ||
+          (targetType === 'iframe' && videoElement.tagName.toLowerCase() === 'iframe')) {
+        // If it's the same type, do nothing
+        return;
+      }
+
+      // Create an element based on the targetType
+      var newElement;
+      if (targetType === 'video') {
+        newElement = document.createElement('video');
+        newElement.setAttribute('class', 'video-js');
+        newElement.setAttribute('controls', 'controls');
+        newElement.setAttribute('preload', 'none');
+        newElement.setAttribute('autoplay', 'autoplay');
+      } else if (targetType === 'iframe') {
+        newElement = document.createElement('iframe');
+        newElement.setAttribute('width', '100%');
+        newElement.setAttribute('height', '100%');
+        newElement.setAttribute('frameborder', '0');
+        newElement.setAttribute('allowfullscreen', 'true');
+      }
+
+      // Replace the current element with the new one
+      parentDiv.replaceChild(newElement, videoElement);
+    }
 
 </script>
 
