@@ -156,18 +156,17 @@ hide:
         newElement.setAttribute('controls', 'controls');
         newElement.setAttribute('preload', 'none');
         newElement.setAttribute('autoplay', 'autoplay');
-        newElement.setAttribute('style', "width:100%;height:100%;left:0px;top:0px;position:absolute;");
+        newElement.setAttribute('style', 'width:100%;height:100%;left:0px;top:0px;position:absolute;');
       } else if (targetType === 'iframe') {
         newElement = document.createElement('iframe');
         newElement.setAttribute('id', vidId);
-        newElement.setAttribute('style', "width:100%;height:100%;left:0px;top:0px;position:absolute;");
+        newElement.setAttribute('style', 'width:100%;height:100%;left:0px;top:0px;position:absolute;');
         newElement.setAttribute('src', '');
         newElement.setAttribute('frameborder', '0');
         newElement.setAttribute('allowfullscreen', 'true');
-        newElement.setAttribute('allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+        newElement.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
       }
-      parentDiv.removeChild(videoElement);
-      parentDiv.appendChild(newElement);
+      parentDiv.replaceChild(newElement, videoElement);
     }
 
 </script>
