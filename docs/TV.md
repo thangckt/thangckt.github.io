@@ -146,7 +146,7 @@ function loadHLS(videoUrl) {    // or name as: loadHLS
 }
 
 
-function set_class(my_id, my_class){
+function set_class(my_id, my_class=' '){
     document.getElementById(my_id).className = my_class;
   }
 
