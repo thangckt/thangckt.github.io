@@ -107,7 +107,8 @@ hide:
         window.scrollTo(0, 0);
         replaceVideoElement("vid1", "iframe")           // use iframe to play youtube
         var video = document.getElementById("vid1");     // Get the video element
-        video.setAttribute('src', videoUrl); // Replace with your actual video URL
+        video.setAttribute('src', videoUrl+= "?autoplay=1";); // Replace with your actual video URL
+        video.setAttribute('allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
     }
 
 
@@ -160,7 +161,6 @@ hide:
         newElement.setAttribute('style', "width:100%;height:100%;position:absolute;left:0px;top:0px;");
         newElement.setAttribute('frameborder', '0');
         newElement.setAttribute('allowfullscreen', 'true');
-        newElement.setAttribute('allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
       }
       parentDiv.replaceChild(newElement, videoElement);
     }
