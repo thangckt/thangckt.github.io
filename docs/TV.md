@@ -156,9 +156,10 @@ hide:
         newElement.setAttribute('controls', 'controls');
         newElement.setAttribute('preload', 'none');
         newElement.setAttribute('autoplay', 'autoplay');
+        newElement.setAttribute('style', "width:100%;height:100%;left:0px;top:0px;position:absolute;");
       } else if (targetType === 'iframe') {
         newElement = document.createElement('iframe');
-        newElement.setAttribute('style', "width:100%;height:100%;position:absolute;left:0px;top:0px;");
+        newElement.setAttribute('style', "width:100%;height:100%;left:0px;top:0px;position:absolute;");
         newElement.setAttribute('frameborder', '0');
         newElement.setAttribute('allowfullscreen', 'true');
       }
