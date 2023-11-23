@@ -103,37 +103,38 @@ function loadStream() {
 };
 
 
-function loadYoutube(videoUrl) {
-    window.scrollTo(0, 0);
-    replaceVideoElement("vid1", "iframe")           // use iframe to play youtube
-    var video = document.getElementById("vid1");     // Get the video element
-    video.setAttribute('src', videoUrl); // Replace with your actual video URL
-}
-
-
-
-function loadHLS(videoUrl) {    // or name as: loadHLS
-    window.scrollTo(0, 0);
-    set_class('vid1', ' ');
-    var video = document.getElementById('vid1');
-    if (Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(videoUrl);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, function () {
-            video.play();
-        });
-    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-        video.src = videoUrl;
-        video.addEventListener('canplay', function () {
-            video.play();
-        });
+    function loadYoutube(videoUrl) {
+        window.scrollTo(0, 0);
+        replaceVideoElement("vid1", "iframe")           // use iframe to play youtube
+        var video = document.getElementById("vid1");     // Get the video element
+        video.setAttribute('src', videoUrl); // Replace with your actual video URL
     }
-}
 
 
-    function set_class(my_id, my_class=' '){
-        document.getElementById(my_id).className = my_class;
+
+    function loadHLS(videoUrl) {    // or name as: loadHLS
+        window.scrollTo(0, 0);
+        replaceVideoElement('vid1', "video")
+        replaceClass('vid1', ' ');
+        var video = document.getElementById('vid1');
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoUrl);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                video.play();
+            });
+        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            video.src = videoUrl;
+            video.addEventListener('canplay', function () {
+                video.play();
+            });
+        }
+    }
+
+
+    function replaceClass(myId, my_class=' '){
+        document.getElementById(myId).className = my_class;
       }
 
 
@@ -156,10 +157,10 @@ function loadHLS(videoUrl) {    // or name as: loadHLS
         newElement.setAttribute('autoplay', 'autoplay');
       } else if (targetType === 'iframe') {
         newElement = document.createElement('iframe');
-        newElement.setAttribute('width', '100%');
-        newElement.setAttribute('height', '100%');
+        newElement.setAttribute('style', "width:100%;height:100%;position:absolute;left:0px;top:0px;");
         newElement.setAttribute('frameborder', '0');
         newElement.setAttribute('allowfullscreen', 'true');
+        newElement.setAttribute('allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
       }
       parentDiv.replaceChild(newElement, videoElement);
     }
