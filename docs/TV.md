@@ -66,41 +66,41 @@ hide:
 
 <!-- Load js function from another file <script src="TVonline/script_tv.js"></script> -->
 <script>
-function loadVideo(videoUrl) {
-    // if (Array.isArray(videoUrls)) {
-    //     var videoUrl = videoUrls[0]
-    // } else {
-    //     var videoUrl = videoUrls
-    // }
-    window.scrollTo(0, 0); // Scroll to the top after loading the video
-    // set_class('vid1','video-js');
-    var player = videojs('vid1');
-    // Call plugin here, before load src
-    // player.hlsQualitySelector({displayCurrentQuality: true});
-    player.src({ src: videoUrl, type: 'application/x-mpegURL' });
-    player.play();
-};
-
-
-// Automatically load and play default video when page loads
-window.addEventListener('load', function () {
-    loadVideo('https://ctrl.laotv.la/live/HBO/index.m3u8');
-});
-
-
-function loadStream() {
-    var videoUrl = document.getElementById("m3u8Link").value;
-    if (!videoUrl) {
-        alert("Please enter a stream link.");
-        return;
+    function loadVideo(videoUrl) {
+        // if (Array.isArray(videoUrls)) {
+        //     var videoUrl = videoUrls[0]
+        // } else {
+        //     var videoUrl = videoUrls
+        // }
+        window.scrollTo(0, 0); // Scroll to the top after loading the video
+        replaceVideoElement('vid1', "video")
+        var player = videojs('vid1');
+        // Call plugin here, before load src
+        // player.hlsQualitySelector({displayCurrentQuality: true});
+        player.src({ src: videoUrl, type: 'application/x-mpegURL' });
+        player.play();
     };
 
-    window.scrollTo(0, 0);
-    // set_class('vid1','video-js');
-    var player = videojs('vid1');
-    player.src({ src: videoUrl, type: 'application/x-mpegURL' });
-    player.play();
-};
+
+    // Automatically load and play default video when page loads
+    window.addEventListener('load', function () {
+        loadVideo('https://ctrl.laotv.la/live/HBO/index.m3u8');
+    });
+
+
+    function loadStream() {
+        var videoUrl = document.getElementById("m3u8Link").value;
+        if (!videoUrl) {
+            alert("Please enter a stream link.");
+            return;
+        };
+
+        window.scrollTo(0, 0);
+        replaceVideoElement('vid1', "video")
+        var player = videojs('vid1');
+        player.src({ src: videoUrl, type: 'application/x-mpegURL' });
+        player.play();
+    };
 
 
     function loadYoutube(videoUrl) {
