@@ -123,8 +123,6 @@ function loadYoutube(videoUrl) {
 }
 
 
-=''
-
 
 function loadHLS(videoUrl) {    // or name as: loadHLS
     window.scrollTo(0, 0);
