@@ -132,22 +132,21 @@ function loadHLS(videoUrl) {    // or name as: loadHLS
 }
 
 
-function set_class(my_id, my_class=' '){
-    document.getElementById(my_id).className = my_class;
-  }
+    function set_class(my_id, my_class=' '){
+        document.getElementById(my_id).className = my_class;
+      }
 
 
     function replaceVideoElement(vidId, targetType) {
       var videoElement = document.getElementById(vidId);     // Get the video element
       var parentDiv = videoElement.parentElement;             // Get the parent div
-      // Check if the current element is of the same type
+      // Check if the current element is of the same type, then do nothing
       if ((targetType === 'video' && videoElement.tagName.toLowerCase() === 'video') ||
           (targetType === 'iframe' && videoElement.tagName.toLowerCase() === 'iframe')) {
-        // If it's the same type, do nothing
         return;
       }
 
-      // Create an element based on the targetType
+      // Create new element with targetType and Replace the current element
       var newElement;
       if (targetType === 'video') {
         newElement = document.createElement('video');
@@ -162,8 +161,6 @@ function set_class(my_id, my_class=' '){
         newElement.setAttribute('frameborder', '0');
         newElement.setAttribute('allowfullscreen', 'true');
       }
-
-      // Replace the current element with the new one
       parentDiv.replaceChild(newElement, videoElement);
     }
 
