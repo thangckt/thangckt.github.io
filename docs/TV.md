@@ -267,13 +267,15 @@ hide:
   <button class="pushable" onclick="loadVideo('https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8')"> <span class="front">Ninh Binh</span> </button>
 <br> <br>
 
-  <!-- <h4>Dong Bac Bo</h4> -->
+  <!-- <h4>Dong Bac</h4> -->
   <button class="pushable" onclick="loadVideo('https://live.tuyenquangtv.vn/hls/ttv.m3u8')"> <span class="front">Tuyen Quang</span> </button>
   <button class="pushable" onclick="loadVideo('https://streaming.thainguyentv.vn/hls/livestream.m3u8')"> <span class="front">Thai Nguyen</span> </button>
   <button class="pushable" onclick="loadVideo('https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8')"> <span class="front">Lang Son</span> </button>
   <button class="pushable" onclick="loadVideo('https://ott3.nethubtv.vn/live/bacgiangtv/chunklist_1.m3u8')"> <span class="front">Bac Giang</span> </button>
-<br> <br>
+  <br> <br>
 
+  <!-- <h4>Tay Bac</h4> -->
+  <button class="pushable" onclick="loadVideo('https://hbtvlive.3ssoft.vn/hoabinhtv/playlist.m3u8')"> <span class="front">Hoa Binh</span> </button>
 
 
 
