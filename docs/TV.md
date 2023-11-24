@@ -239,6 +239,7 @@ hide:
   <button class="pushable" onclick="loadVideo('https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/playlist.m3u8')"> <span class="front">Tra Vinh 2</span> </button>
 
 <button class="pushable" onclick="loadVideo('https://60acee235f4d5.streamlock.net/HGTV/d1/playlist.m3u8')"> <span class="front">Hau Giang</span> </button>
+<button class="pushable" onclick="loadVideo('https://618b88f69e53b.streamlock.net/THDT/thdttv/playlist.m3u8')"> <span class="front">Dong Thap</span> </button>
 
 <br> <br>
 
