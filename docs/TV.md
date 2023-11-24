@@ -254,7 +254,12 @@ hide:
 <br> <br>
 
   <!-- <h4>Bac Trung Bo</h4> -->
+  <!-- <button class="pushable" onclick="loadVideo('')"> <span class="front">Thanh Hoa</span> </button> -->
+  <!-- <button class="pushable" onclick="loadVideo('')"> <span class="front">Nghe An</span> </button> -->
   <button class="pushable" onclick="loadVideo('https://wse.hatinhtv.net/live/httv1/playlist.m3u8')"> <span class="front">Ha Tinh</span> </button>
+  <!-- <button class="pushable" onclick="loadVideo('')"> <span class="front">Quang Binh</span> </button> -->
+  <!-- <button class="pushable" onclick="loadVideo('')"> <span class="front">Quang Tri</span> </button> -->
+  <button class="pushable" onclick="loadVideo('https://live.trt.com.vn/TRT-Online/playlist.m3u8')"> <span class="front">Hue</span> </button>
 <br> <br>
 
 
@@ -276,6 +281,8 @@ hide:
 
   <!-- <h4>Tay Bac</h4> -->
   <button class="pushable" onclick="loadVideo('https://hbtvlive.3ssoft.vn/hoabinhtv/playlist.m3u8')"> <span class="front">Hoa Binh</span> </button>
+  <!-- <button class="pushable" onclick="loadVideo('')"> <span class="front">Son La</span> </button>
+  <button class="pushable" onclick="loadVideo('')"> <span class="front">Lai Chau</span> </button> -->
 
 
 
