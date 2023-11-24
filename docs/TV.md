@@ -272,6 +272,8 @@ hide:
   <button class="pushable" onclick="loadVideo('https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8')"> <span class="front">Nam Dinh</span> </button>
   <button class="pushable" onclick="loadVideo('https://ott3.nethubtv.vn/live/thaibinh/chunklist_1.m3u8')"> <span class="front">Thai Binh</span> </button>
   <button class="pushable" onclick="loadVideo('https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8')"> <span class="front">Ninh Binh</span> </button>
+  <button class="pushable" onclick="loadVideo('https://stream.thingnet.vn/live/smil:BTV.smil/playlist.m3u8')"> <span class="front">Bac Ninh</span> </button>
+
 <br> <br>
 
   <!-- <h4>Dong Bac</h4> -->
@@ -285,6 +287,7 @@ hide:
   <button class="pushable" onclick="loadVideo('https://hbtvlive.3ssoft.vn/hoabinhtv/playlist.m3u8')"> <span class="front">Hoa Binh</span> </button>
   <!-- <button class="pushable" onclick="loadVideo('')"> <span class="front">Son La</span> </button>
   <button class="pushable" onclick="loadVideo('')"> <span class="front">Lai Chau</span> </button> -->
+  <button class="pushable" onclick="loadVideo('https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&deviceId=&deviceType=&gcId=1532&location=NA&pkg=pkg11.hni&q=high&requestTime=1586309420781&time=1586395820&token=LX-ibJYRUq9pflRtYAxfYQ&type=tv&userId=')"> <span class="front">Dien Bien</span> </button>
 
 
 
