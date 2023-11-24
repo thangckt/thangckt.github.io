@@ -236,6 +236,9 @@ hide:
   <button class="pushable" onclick="loadVideo('https://live.canthotv.vn/live/tv/chunklist.m3u8')"> <span class="front">Can Tho</span> </button>
   <button class="pushable" onclick="loadVideo('https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8')"> <span class="front">Tra Vinh 1</span> </button>
   <button class="pushable" onclick="loadVideo('https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/playlist.m3u8')"> <span class="front">Tra Vinh 2</span> </button>
+
+<button class="pushable" onclick="loadVideo('https://60acee235f4d5.streamlock.net/HGTV/d1/playlist.m3u8')"> <span class="front">Hau Giang</span> </button>
+
 <br> <br>
 
   <!-- <h4>Dong Nam Bo</h4> -->
