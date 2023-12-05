@@ -139,7 +139,8 @@ markdown_extensions:
 plugins:
   # - meta    # only insider
   - blog:      # only insider
-      blog_dir: blog
+      blog_toc: true
+      # post_dir: "{blog}/posts"
 
   - search
   - autorefs
