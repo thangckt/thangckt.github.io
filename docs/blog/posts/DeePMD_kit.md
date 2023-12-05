@@ -1,6 +1,13 @@
 ---
-date: 2022-09-12
-```
+title: Adding
+date: 2022-11-30
+authors: # [thangckt]
+slug: adding-a-badge-to-your-project
+description: >
+  you can now add a badge to your README, showing that your
+categories:
+  - Science
+---
 
 # Accelerated Molecular Simulation Using Deep Potential Workflow with NGC
 
