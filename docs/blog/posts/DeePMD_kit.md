@@ -1,3 +1,7 @@
+---
+date: 2022-09-12
+```
+
 # Accelerated Molecular Simulation Using Deep Potential Workflow with NGC
 
 By Jingchao Zhang, Yifan Li and Akhil Docca <br>
