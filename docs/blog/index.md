@@ -1,4 +1,2 @@
 
-# Welcome
-
-{{ blog_content }}
+# Blog

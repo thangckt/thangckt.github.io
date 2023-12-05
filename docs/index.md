@@ -2,7 +2,7 @@
 hide:
   # - toc
   # - navigation
-ᴴₒᴴₒᴴₒ: false
+ᴴₒᴴₒᴴₒ: true
 ---
 
 
