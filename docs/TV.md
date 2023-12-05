@@ -248,7 +248,7 @@ hide:
 <br> <br>
 
   <!-- <h4>Tay Nguyen</h4> -->
-  <button class="pushable" onclick="loadVideo('https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8')"> <span class="front">Dak Lak</span> </button>
+  <button class="pushable" onclick="loadVideo('https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8')"> <span class="front">Dak Nong</span> </button>
 <br> <br>
 
   <!-- <h4>Nam Trung Bo</h4> -->
