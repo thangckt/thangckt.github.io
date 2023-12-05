@@ -290,6 +290,9 @@ nav:
   # - News:
   #   - blog/posts/DeePMD_kit.md
 
+  - Blog:
+    - blog/index.md
+
   - TV: TV.md
     # - TV Online: TVonline/HTV.md
     # - Stream: TVonline/stream.md
