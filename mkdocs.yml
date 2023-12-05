@@ -287,13 +287,12 @@ nav:
     - Reading list:
       - odd/reading/read_list.md
 
-  # - News:
-  #   - blog/posts/DeePMD_kit.md
+  - TV: TV.md
+    # - TV Online: TVonline/HTV.md
+    # - Stream: TVonline/stream.md
 
   - Blog:
     - blog/index.md
 
-  - TV: TV.md
-    # - TV Online: TVonline/HTV.md
-    # - Stream: TVonline/stream.md
+
 
