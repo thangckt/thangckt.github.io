@@ -138,7 +138,9 @@ markdown_extensions:
 ## Plugins
 plugins:
   # - meta    # only insider
-  # - blog      # only insider
+  - blog:      # only insider
+      blog_dir: blog
+
   - search
   - autorefs
   # - mkdocs-jupyter:          # not work with tab_header_v8 branch
