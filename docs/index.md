@@ -68,11 +68,6 @@ else:
 
 <!-- <img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" /> -->
 
-<div style="display:flex">
-  <div style="float: left">
-
-  </div>
-
 <div class="container">
   <div class="image-container">
     <img src="./1images/thang_pic.jpg" alt="Thang" />
