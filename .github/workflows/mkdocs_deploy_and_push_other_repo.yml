@@ -22,9 +22,9 @@ jobs:
 
       - name: Install dependencies  # mkdocs-jupyter can cause broken in tabs-header
         run: |
-          # pip install --upgrade pip
           pip install git+https://github.com/thangckt/mkdocs-material.git@master         # tabs_header_v8    master    tabs_header_yinkh
           pip install mkdocstrings[python]>=0.18
+
           # pip install mkdocs-blogging-plugin==2.2
           # pip install mkdocs-jupyter # conflict
           # pip install mkdocs-enumerate-headings-plugin #  mkdocs
