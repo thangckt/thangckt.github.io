@@ -5,6 +5,40 @@ hide:
 ᴴₒᴴₒᴴₒ: true
 ---
 
+<style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .image-container {
+      float: left;
+      margin-right: 20px;
+    }
+
+    .image-container img {
+      border-radius: 50%;
+      border: 0.1px solid black;
+      width: 180px;
+    }
+
+    .text-container {
+      margin-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .image-container {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+      }
+
+      .text-container {
+        margin-left: 0;
+      }
+    }
+  </style>
+
 
 <!-- add pictures in table-->
 <!-- ![](./assets/images/my_picture3x3.jpg)
@@ -32,21 +66,29 @@ else:
 
 <!-- <img src="./1images/monkey.png" style="float:left; margin-right:20px" width="190" /> -->
 
+<!-- <img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" /> -->
+
 <div style="display:flex">
   <div style="float: left">
-    <img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" />
+
   </div>
 
-  <div style="display:relative; margin-left:20px">
-  This site serves as the repo for my personal notes. <br>
-  The contents reflect neither community nor third-party rules, rather, they're random, messy, improvised, and inevitable for some rare situations but inapplicable for almost others.
-  <br> <br>
-  They aren't noted for you, so if you find nothing valuable here just enjoy Felix's excellent pieces.
+<div class="container">
+  <div class="image-container">
+    <img src="./1images/thang_pic.jpg" alt="Thang" />
+  </div>
+
+  <div class="text-container">
+  <p>
+    This site serves as the repo for my personal notes. <br>
+    The contents reflect neither community nor third-party rules, rather, they're random, messy, improvised, and inevitable for some rare situations but inapplicable for almost others.
+    <br> <br>
+    They aren't noted for you, so if you find nothing valuable here just enjoy Felix's excellent pieces.
+  </p>
   </div>
   <!-- The site is my dark valley in essence; I'd be glad if you could find anything valid. Alternatively, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64. -->
   <!-- To whom with Vietnamese comprehension, I'd be pleased to introduce a reputed descant that captures [the scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g). -->
 </div>
-<br>
 
 
 <!--
