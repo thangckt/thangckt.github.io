@@ -26,7 +26,7 @@ hide:
       margin-left: 20px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 200px) {
       .image-container {
         width: 100%;
         float: none;
