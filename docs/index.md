@@ -23,21 +23,9 @@ hide:
     }
 
     .text-container {
-      margin-left: 20px;
+      float: left;
     }
-
-    @media (max-width: 200px) {
-      .image-container {
-        width: 100%;
-        float: none;
-        margin-right: 0;
-      }
-
-      .text-container {
-        margin-left: 0;
-      }
-    }
-  </style>
+</style>
 
 
 <!-- add pictures in table-->
@@ -70,7 +58,7 @@ else:
 
 <div class="container">
   <div class="image-container">
-    <img src="./1images/thang_pic.jpg" alt="Thang" />
+    <img src="./1images/thang_pic.jpg" />
   </div>
 
   <div class="text-container">
