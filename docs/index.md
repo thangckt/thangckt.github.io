@@ -24,6 +24,7 @@ hide:
 
     .text-container {
       float: left;
+      position: relative;
     }
 </style>
 
