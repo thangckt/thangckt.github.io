@@ -7,9 +7,8 @@ hide:
 
 <style>
     .container {
-      /* display: flex; */
+      display: flex;
       /* flex-wrap: wrap; */
-      float: left;
     }
 
     .image-container {
