@@ -7,8 +7,9 @@ hide:
 
 <style>
     .container {
-      display: flex;
+      /* display: flex; */
       /* flex-wrap: wrap; */
+      float: left;
     }
 
     .image-container {
@@ -56,8 +57,7 @@ else:
 
 <!-- <img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" /> -->
 
-<!-- <div class="container"> -->
-<div>
+<div class="container">
   <div class="image-container">
     <img src="./1images/thang_pic.jpg" />
   </div>
