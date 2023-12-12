@@ -20,6 +20,7 @@ hide:
       border-radius: 50%;
       border: 0.1px solid black;
       width: 180px;
+      float: left;
     }
 
     .text-container {
