@@ -8,7 +8,7 @@ hide:
 <style>
     .container {
       display: flex;
-      flex-wrap: wrap;
+      /* flex-wrap: wrap; */
     }
 
     .image-container {
@@ -63,7 +63,7 @@ else:
 
   <div class="text-container">
   <p>
-    This site serves as the repo for my personal notes. <br>
+    This site serves as the repo for my personal notes.
     The contents reflect neither community nor third-party rules, rather, they're random, messy, improvised, and inevitable for some rare situations but inapplicable for almost others.  <br>
     They aren't noted for you, so if you find nothing valuable here just enjoy Felix's excellent pieces.
   </p>
