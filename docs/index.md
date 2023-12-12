@@ -57,6 +57,7 @@ else:
 <!-- <img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" /> -->
 
 <!-- <div class="container"> -->
+<div>
   <div class="image-container">
     <img src="./1images/thang_pic.jpg" />
   </div>
@@ -70,7 +71,7 @@ else:
   </div>
   <!-- The site is my dark valley in essence; I'd be glad if you could find anything valid. Alternatively, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64. -->
   <!-- To whom with Vietnamese comprehension, I'd be pleased to introduce a reputed descant that captures [the scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g). -->
-<!-- </div> -->
+</div>
 
 
 <!--
@@ -78,7 +79,7 @@ else:
     You cannot teach a man anything, you can only help him find it within himself - Galileo Galilei (1564–1642)
 -->
 
-<div class="container">
+
 <div style="position:relative; padding-bottom:56.25%">
 <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
         style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0" allowfullscreen
@@ -86,7 +87,7 @@ else:
         sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" >
 </iframe>
 </div>
-</div>
+
 
 # Welcome
 
