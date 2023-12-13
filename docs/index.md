@@ -13,7 +13,7 @@ hide:
 
     .image-container {
       display: flex;
-      float: left;
+      /* float: left; */
       margin-right: 20px;
     }
 
