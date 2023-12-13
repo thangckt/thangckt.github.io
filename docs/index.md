@@ -14,6 +14,7 @@ hide:
     .image-container {
       float: left;
       margin-right: 20px;
+      postion: relative;
     }
 
     .image-container img {
