@@ -275,6 +275,7 @@ hide:
 <br> <br>
 
   <!-- <h4>Tay Nguyen</h4> -->
+  <button class="pushable" onclick="loadVideo('https://live.mediatech.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8')"> <span class="front">Dak Lak</span> </button>
   <button class="pushable" onclick="loadVideo('https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8')"> <span class="front">Dak Nong</span> </button>
 <br> <br>
 
