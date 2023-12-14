@@ -110,11 +110,11 @@ hide:
 
         if (method === 'videojs'){
             loadVideojs(videoUrl, vidElementID);
-        }
+        };
 
         if (method === 'hls'){
             loadHls(videoUrl, vidElementID);
-        }
+        };
     };
 
     function loadPlayer(videoUrls) {
