@@ -68,7 +68,10 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        loadVideo('https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8');
+        var player = videojs('vid1');
+        videoUrl='https://ctrl.laotv.la/live/DW/index.m3u8'
+        player.src({ src: videoUrl, type: 'application/x-mpegURL' });
+        player.play();
     });
 
     function loadVideo(videoUrl) {
@@ -111,6 +114,9 @@ hide:
   <div style="position:relative; padding-bottom:56.25%">
     <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px;position:absolute;" ></video>
   </div>
+
+  <!-- New element for displaying dynamic buttons -->
+  <div id="linkButtons"></div>
 
   <!-- <h3>Stream link</h3> -->
   <br>
