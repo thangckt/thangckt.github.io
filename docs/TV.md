@@ -74,16 +74,17 @@ hide:
     function loadVideojs(videoUrl, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
       var player = videojs(vidElementID);
-        // Call plugin here, before load src
-        // player.hlsQualitySelector({displayCurrentQuality: true});
-        player.src({ src: videoUrl, type: 'application/x-mpegURL' });
-        player.play();
+          player.className = "video-js";
+          // Call plugin here, before load src
+          // player.hlsQualitySelector({displayCurrentQuality: true});
+          player.src({ src: videoUrl, type: 'application/x-mpegURL' });
+          player.play();
     };
 
     function loadHls(videoUrl, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
       var player = document.getElementById(vidElementID);
-      player.className = '';   // change class of video tag
+      player.className = " ";   // change class of video tag
 
       if (Hls.isSupported()) {
           var hls = new Hls();
