@@ -68,7 +68,7 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        loadSingleLink('https://ctrl.laotv.la/live/DW/index.m3u8', 'vid1');
+        loadSingleLink('https://ctrl.laotv.la/live/DW/index.m3u8');
     });
 
     function loadStream() {
@@ -91,7 +91,7 @@ hide:
             var buttonsContainer = document.getElementById('linkButtons');
             buttonsContainer.innerHTML = '';
 
-            loadSingleLink(videoUrls, "vid1");
+            loadSingleLink(videoUrls);
         }
     };
 
@@ -116,10 +116,10 @@ hide:
         buttonsContainer.scrollIntoView();
 
         // Load the first video from the array
-        loadSingleLink(videoUrls[0], 'vid1');
+        loadSingleLink(videoUrls[0]);
     };
 
-    function loadSingleLink(videoUrl, vidElementID){
+    function loadSingleLink(videoUrl, vidElementID='vid1'){
       var player = videojs(vidElementID);
         // Call plugin here, before load src
         // player.hlsQualitySelector({displayCurrentQuality: true});
