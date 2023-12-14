@@ -43,7 +43,7 @@ hide:
       flex: 2;
       max-width: 800px;  /* Adjust the width as needed */
       padding-right: 20px;
-      position: fixed;
+      position: sticky;
       /* top: 20; */
       /* overflow: hidden; */
   }
@@ -53,7 +53,7 @@ hide:
       /* max-width: 35%; */
       max-height: 100vh;
       overflow-y: auto;
-      position: sticky;
+      position: relative;
   }
 </style>
 
