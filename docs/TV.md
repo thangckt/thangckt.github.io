@@ -82,7 +82,7 @@ hide:
     };
 
     function loadVideo(videoUrls) {
-        window.scrollTo(0, 0); // Scroll to the top after loading the video
+
 
         if (Array.isArray(videoUrls)) {
             loadMultiLinks(videoUrls);
@@ -112,14 +112,12 @@ hide:
             buttonsContainer.appendChild(button);
         });
 
-        // Scroll to the buttons container
-        buttonsContainer.scrollIntoView();
-
         // Load the first video from the array
         loadSingleLink(videoUrls[0]);
     };
 
     function loadSingleLink(videoUrl, vidElementID='vid1'){
+      window.scrollTo(0, 0); // Scroll to the top after loading the video
       var player = videojs(vidElementID);
         // Call plugin here, before load src
         // player.hlsQualitySelector({displayCurrentQuality: true});
@@ -140,7 +138,7 @@ hide:
   </div>
 
   <!-- New element for displaying dynamic buttons -->
-  <div id="linkButtons"></div>
+  <div id="linkButtons" style="display:flex; justify-content:center; margin-top:20px;"></div>
 
   <!-- <h3>Stream link</h3> -->
   <br>
