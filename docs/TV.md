@@ -142,8 +142,8 @@ hide:
   <!-- <h3>Stream link</h3> -->
   <br>
   <!-- <label for="m3u8Link">Stream Link: </label> -->
-  <button class="pushable" onclick="loadStream()"> <span class="front">Stream Link</span> </button> &nbsp
-  <input type="text" id="m3u8Link" style="width: 650px;">
+  <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button> &nbsp
+  <input type="text" id="m3u8Link" style="width: 650px;" placeholder="Enter M3U8 stream link here...">
 </div>
 
 <!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
