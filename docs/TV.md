@@ -281,6 +281,7 @@ hide:
 
   <!-- <h4>Nam Trung Bo</h4> -->
   <button class="pushable" onclick="loadVideo('https://60acee235f4d5.streamlock.net/live/mystream/playlist.m3u8')"> <span class="front">Ninh Thuan</span> </button>
+  <button class="pushable" onclick="loadVideo('https://64d0d74b76158.streamlock.net/BTVTV/binhthuantv/chunklist.m3u8')"> <span class="front">Binh Thuan</span> </button>
 <br> <br>
 
   <!-- <h4>Bac Trung Bo</h4> -->
@@ -309,7 +310,7 @@ hide:
   <!-- <h4>Dong Bac</h4> -->
   <button class="pushable" onclick="loadVideo('https://live.tuyenquangtv.vn/hls/ttv.m3u8')"> <span class="front">Tuyen Quang</span> </button>
   <button class="pushable" onclick="loadVideo('https://streaming.thainguyentv.vn/hls/livestream.m3u8')"> <span class="front">Thai Nguyen</span> </button>
-  <button class="pushable" onclick="loadVideo('https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8')"> <span class="front">Lang Son</span> </button>
+  <button class="pushable" onclick="loadVideo(['https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8', 'https://live.mediatech.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8'])"> <span class="front">Lang Son</span> </button>
   <button class="pushable" onclick="loadVideo('https://ott3.nethubtv.vn/live/bacgiangtv/chunklist_1.m3u8')"> <span class="front">Bac Giang</span> </button>
   <br> <br>
 
