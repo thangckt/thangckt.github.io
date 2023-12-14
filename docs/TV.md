@@ -68,7 +68,7 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        loadSingleLink('https://ctrl.laotv.la/live/DW/index.m3u8');
+        loadSingleLink('https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8');
     });
 
     function loadSingleLink(videoUrl, vidElementID='vid1'){
@@ -149,7 +149,7 @@ hide:
 <!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
 <div class="content-column" >
   <h3>News</h3>
-  <button class="pushable" onclick="loadVideo(['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8'])"> <span class="front">DW</span> </button>
+  <button class="pushable" onclick="loadVideo(['https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8','https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8'])"> <span class="front">DW</span> </button>
   <button class="pushable" onclick="loadVideo('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadVideo('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
   <button class="pushable" onclick="loadVideo('https://d30x5vsa85tvmd.cloudfront.net/index_5.m3u8')"> <span class="front">CNN</span> </button>
