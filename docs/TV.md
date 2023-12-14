@@ -137,7 +137,7 @@ hide:
   </div>
 
   <!-- New element for displaying dynamic buttons -->
-  <div id="linkButtons" style="display:flex; justify-content:center; margin-top:20px;"></div>
+  <div id="linkButtons" style="display:flex; justify-content:center; margin-top:20px; gap:5px;"></div>
 
   <!-- <h3>Stream link</h3> -->
   <br>
