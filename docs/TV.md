@@ -90,7 +90,7 @@ hide:
       // Change class of video tag
       var player = document.getElementById(vidElementID);
           player.classList.remove("video-js"); // Remove the existing class
-          player.classList.add("video"); // Add the new class
+          // player.classList.add("video"); // Add the new class
 
       if (Hls.isSupported()) {
           var hls = new Hls();
