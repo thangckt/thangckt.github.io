@@ -26,7 +26,7 @@ hide:
     .text-container {
       /* flex: 2; */
       float: left;
-      position: relative;
+      /* position: relative; */
     }
 </style>
 
