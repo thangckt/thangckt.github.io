@@ -51,7 +51,7 @@ hide:
   .content-column {
       flex: 1;
       /* max-width: 35%; */
-      max-height: 80vh;
+      max-height: 85vh;
       overflow-y: auto;
       position: relative;
   }
