@@ -12,7 +12,7 @@ hide:
     }
 
     .image-container {
-      flex: 1;
+      /* flex: 1; */
       /* float: left; */
       margin-right: 20px;
     }
@@ -24,7 +24,7 @@ hide:
     }
 
     .text-container {
-      flex: 2;
+      /* flex: 2; */
       float: left;
       position: relative;
     }
