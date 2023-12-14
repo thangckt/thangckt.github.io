@@ -45,15 +45,14 @@ hide:
       padding-right: 20px;
       position: sticky;
       /* top: 20; */
-      /* overflow: hidden; */
+      overflow: hidden;
   }
 
   .content-column {
       flex: 1;
       /* max-width: 35%; */
       max-height: 100vh;
-      overflow-y: auto;
-      position: relative;
+      z-index: 1;
   }
 </style>
 
