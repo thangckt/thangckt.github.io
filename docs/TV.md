@@ -73,12 +73,12 @@ hide:
 
     function loadVideojs(videoUrl, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
-
-      var player = videojs(vidElementID);
-          // Change class of video tag
+      // Change class of video tag
+      var player = document.getElementById(vidElementID);
           player.classList.remove("video-js"); // Remove the existing class
           player.classList.add("video-js"); // Add the new class
 
+      var player = videojs(vidElementID);
           // Call plugin here, before load src
           // player.hlsQualitySelector({displayCurrentQuality: true});
           player.src({ src: videoUrl, type: 'application/x-mpegURL' });
@@ -87,9 +87,8 @@ hide:
 
     function loadHls(videoUrl, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
-
+      // Change class of video tag
       var player = document.getElementById(vidElementID);
-          // Change class of video tag
           player.classList.remove("video-js"); // Remove the existing class
           // player.classList.add("video-js"); // Add the new class
 
