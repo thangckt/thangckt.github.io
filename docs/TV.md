@@ -115,11 +115,11 @@ hide:
             return;
         };
 
-        if (method === 'videojs'){
-            loadVideojs(videoUrl, vidElementID);
-        } else if (method === 'hls'){
+        if (method === 'hls'){
             loadHls(videoUrl, vidElementID);
-        };
+        } else if (method === 'videojs'){
+            loadVideojs(videoUrl, vidElementID);
+        }
     };
 
     function loadPlayer(videoUrls) {
