@@ -58,8 +58,8 @@ hide:
 </style>
 
 <!-- Load libs -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
-<script src="https://www.unpkg.com/browse/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
+<!-- <script src="https://www.unpkg.com/browse/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/4.0.0/videojs-contrib-quality-levels.min.js"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script> -->
 
@@ -68,10 +68,10 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        loadSingleLink('https://ctrl.laotv.la/live/DW/index.m3u8');
+        loadVideojs('https://ctrl.laotv.la/live/DW/index.m3u8');
     });
 
-    function loadSingleLink(videoUrl, vidElementID='vid1'){
+    function loadVideojs(videoUrl, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
       var player = videojs(vidElementID);
         // Call plugin here, before load src
@@ -80,14 +80,39 @@ hide:
         player.play();
     };
 
-    function loadStream() {
+    function loadHls(videoUrl, vidElementID='vid1'){
+      window.scrollTo(0, 0); // Scroll to the top after loading the video
+      var player = document.getElementById(vidElementID);
+      if (Hls.isSupported()) {
+          var hls = new Hls();
+          hls.loadSource(videoUrl);
+          hls.attachMedia(player);
+          hls.on(Hls.Events.MANIFEST_PARSED, function() {
+              player.play();
+          });
+      } else if (player.canPlayType("application/vnd.apple.mpegurl")) {
+          player.src = videoUrl;
+          player.addEventListener('canplay', function() {
+              player.play();
+          });
+      }
+    };
+
+
+    function loadStream(vidElementID='vid1', method='videojs') {
         var videoUrl = document.getElementById("m3u8Link").value;
         if (!videoUrl) {
             alert("Please enter a stream link.");
             return;
         };
 
-        loadSingleLink(videoUrl, 'vid1');
+        if (method === 'videojs'){
+            loadVideojs(videoUrl, vidElementID);
+        }
+
+        if (method === 'hls'){
+            loadHls(videoUrl, vidElementID);
+        }
     };
 
     function loadVideo(videoUrls) {
@@ -98,7 +123,7 @@ hide:
             var buttonsContainer = document.getElementById('linkButtons');
             buttonsContainer.innerHTML = '';
 
-            loadSingleLink(videoUrls);
+            loadVideojs(videoUrls);
         }
     };
 
@@ -113,16 +138,15 @@ hide:
             button.className = 'pushable';
             button.innerHTML = '<span class="front">Link ' + (index + 1) + '</span>';
             button.onclick = function () {
-                loadSingleLink(url,"vid1");
+                loadVideojs(url,"vid1");
             };
 
             buttonsContainer.appendChild(button);
         });
 
         // Load the first video from the array
-        loadSingleLink(videoUrls[0]);
+        loadVideojs(videoUrls[0]);
     };
-
 </script>
 
 
@@ -142,8 +166,9 @@ hide:
   <!-- <h3>Stream link</h3> -->
   <br>
   <!-- <label for="m3u8Link">Stream Link: </label> -->
-  <button class="pushable" onclick="loadStream()"> <span class="front">Load Stream</span> </button> &nbsp
+  <button class="pushable" onclick="loadStream(method='videojs')"> <span class="front">Load Stream</span> </button> &nbsp
   <input type="text" id="m3u8Link" style="width: 650px;" placeholder="Enter your *.m3u8 link here...">
+  <button class="pushable" onclick="loadHls(method='hls')"> <span class="front">Load HLS</span> </button>
 </div>
 
 <!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
