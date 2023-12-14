@@ -301,6 +301,8 @@ hide:
   <button class="pushable" onclick="loadVideo('https://ott3.nethubtv.vn/live/thaibinh/chunklist_1.m3u8')"> <span class="front">Thai Binh</span> </button>
   <button class="pushable" onclick="loadVideo('https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8')"> <span class="front">Ninh Binh</span> </button>
   <button class="pushable" onclick="loadVideo('https://stream.thingnet.vn/live/smil:BTV.smil/playlist.m3u8')"> <span class="front">Bac Ninh</span> </button>
+  <button class="pushable" onclick="loadVideo('https://live.mediatech.vn/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8')"> <span class="front">Hai Phong</span> </button>
+  <button class="pushable" onclick="loadVideo('https://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8')"> <span class="front">Hai Phong +</span> </button>
 
 <br> <br>
 
