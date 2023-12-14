@@ -68,26 +68,8 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        var player = videojs('vid1');
-        videoUrl='https://ctrl.laotv.la/live/DW/index.m3u8'
-        player.src({ src: videoUrl, type: 'application/x-mpegURL' });
-        player.play();
+        loadSingleLink('https://ctrl.laotv.la/live/DW/index.m3u8', 'vid1');
     });
-
-    function loadVideo(videoUrl) {
-        // if (Array.isArray(videoUrls)) {
-        //     var videoUrl = videoUrls[0]
-        // } else {
-        //     var videoUrl = videoUrls
-        // }
-        window.scrollTo(0, 0); // Scroll to the top after loading the video
-        var player = videojs('vid1');
-        // Call plugin here, before load src
-        // player.hlsQualitySelector({displayCurrentQuality: true});
-        player.src({ src: videoUrl, type: 'application/x-mpegURL' });
-        player.play();
-    };
-
 
     function loadStream() {
         var videoUrl = document.getElementById("m3u8Link").value;
@@ -96,12 +78,54 @@ hide:
             return;
         };
 
-        window.scrollTo(0, 0);
-        var player = videojs('vid1');
+        loadSingleLink(videoUrl, 'vid1');
+    };
+
+    function loadVideo(videoUrls) {
+        window.scrollTo(0, 0); // Scroll to the top after loading the video
+
+        if (Array.isArray(videoUrls)) {
+            loadMultiLinks(videoUrls);
+        } else {
+            // Clear existing buttons
+            var buttonsContainer = document.getElementById('linkButtons');
+            buttonsContainer.innerHTML = '';
+
+            loadSingleLink(videoUrls, "vid1");
+        }
+    };
+
+    function loadMultiLinks(videoUrls){
+        // Clear existing buttons
+        var buttonsContainer = document.getElementById('linkButtons');
+        buttonsContainer.innerHTML = '';
+
+        // Loop through the array and create buttons for each link
+        videoUrls.forEach(function (url, index) {
+            var button = document.createElement('button');
+            button.className = 'pushable';
+            button.innerHTML = '<span class="front">Link ' + (index + 1) + '</span>';
+            button.onclick = function () {
+                loadSingleLink(url,"vid1");
+            };
+
+            buttonsContainer.appendChild(button);
+        });
+
+        // Scroll to the buttons container
+        buttonsContainer.scrollIntoView();
+
+        // Load the first video from the array
+        loadSingleLink(videoUrls[0], 'vid1');
+    };
+
+    function loadSingleLink(videoUrl, vidElementID){
+      var player = videojs(vidElementID);
+        // Call plugin here, before load src
+        // player.hlsQualitySelector({displayCurrentQuality: true});
         player.src({ src: videoUrl, type: 'application/x-mpegURL' });
         player.play();
     };
-
 </script>
 
 
