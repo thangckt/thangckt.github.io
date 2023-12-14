@@ -71,6 +71,15 @@ hide:
         loadSingleLink('https://ctrl.laotv.la/live/DW/index.m3u8');
     });
 
+    function loadSingleLink(videoUrl, vidElementID='vid1'){
+      window.scrollTo(0, 0); // Scroll to the top after loading the video
+      var player = videojs(vidElementID);
+        // Call plugin here, before load src
+        // player.hlsQualitySelector({displayCurrentQuality: true});
+        player.src({ src: videoUrl, type: 'application/x-mpegURL' });
+        player.play();
+    };
+
     function loadStream() {
         var videoUrl = document.getElementById("m3u8Link").value;
         if (!videoUrl) {
@@ -82,8 +91,6 @@ hide:
     };
 
     function loadVideo(videoUrls) {
-
-
         if (Array.isArray(videoUrls)) {
             loadMultiLinks(videoUrls);
         } else {
@@ -116,14 +123,6 @@ hide:
         loadSingleLink(videoUrls[0]);
     };
 
-    function loadSingleLink(videoUrl, vidElementID='vid1'){
-      window.scrollTo(0, 0); // Scroll to the top after loading the video
-      var player = videojs(vidElementID);
-        // Call plugin here, before load src
-        // player.hlsQualitySelector({displayCurrentQuality: true});
-        player.src({ src: videoUrl, type: 'application/x-mpegURL' });
-        player.play();
-    };
 </script>
 
 
