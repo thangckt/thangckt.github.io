@@ -25,10 +25,11 @@ hide:
 
     .text-container {
       /* flex: 2; */
-      float: left;
+      /* float: left; */
       /* position: relative; */
     }
 </style>
+
 
 
 <!-- add pictures in table-->
