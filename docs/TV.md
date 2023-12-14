@@ -83,6 +83,8 @@ hide:
     function loadHls(videoUrl, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
       var player = document.getElementById(vidElementID);
+      player.className = '';
+
       if (Hls.isSupported()) {
           var hls = new Hls();
           hls.loadSource(videoUrl);
