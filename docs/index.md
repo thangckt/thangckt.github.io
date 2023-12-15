@@ -14,8 +14,8 @@ hide:
     }
 
     .container-image {
-      margin-right: 20px;
       hight: 180px;
+      padding-right: 20px;
     }
 
     .container-image img {
