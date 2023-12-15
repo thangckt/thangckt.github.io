@@ -193,7 +193,7 @@ hide:
   <!-- <h3>Stream link</h3> -->
   <!-- <label for="m3u8Link">Stream Link: </label> -->
   <button class="pushable" onclick="loadStream('vid1','videojs')"> <span class="front">Load Stream</span> </button> &nbsp
-  <input type="text" id="m3u8Link" style="width: 600px;" placeholder="Enter your *.m3u8 link here...">
+  <input type="text" id="m3u8Link" style="width: 80%" placeholder="Enter your *.m3u8 link here...">
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 </div>
 
