@@ -196,6 +196,18 @@ hide:
   <button class="pushable" onclick="loadStream('vid1','videojs')"> <span class="front">Load Stream</span> </button> &nbsp
   <input type="text" id="m3u8Link" style="width: 65%" placeholder="Enter your link here...">
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
+
+<!-- google ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6260920536615462" crossorigin="anonymous"></script>
+<!-- Homepage Leaderboard -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:728px;height:90px"
+data-ad-client="ca-pub-6260920536615462"
+data-ad-slot="1234567890"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 </div>
 
 <!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
