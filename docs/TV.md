@@ -68,7 +68,6 @@ hide:
   .md-content__button {
     display: none;
   }
-
 </style>
 
 <!-- Load libs -->
