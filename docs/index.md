@@ -20,7 +20,7 @@ hide:
     .container-image img {
       border-radius: 50%;
       border: 0.1px solid black;
-      max-width: 100%;
+      width: 100%;
     }
 
     .container-text {
