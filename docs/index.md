@@ -25,7 +25,7 @@ hide:
 
     .container-text {
       position: relative;
-      vertical-align: middle
+      vertical-align: middle;
     }
 
     /* Mobile styles */
