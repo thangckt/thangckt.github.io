@@ -42,7 +42,7 @@ hide:
   }
 
   .video-column {
-      width: 75%;
+      width: 80%;
       padding-right: 25px;
       position: sticky;
   }
