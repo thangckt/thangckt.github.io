@@ -318,13 +318,6 @@ data-ad-slot="1234567890"></ins>
 
 
   <h3>Dia Phuong</h3>
-  <button class="pushable" onclick="loadPlayer('https://media.streambrothers.com:1936/8228/8228/playlist.m3u8')"> <span class="front">Little Saigon</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://5dcab9aed5331.streamlock.net/SET1/livestream/playlist.m3u8')"> <span class="front">SET TV 1</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8')"> <span class="front">SET TV 2</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8')"> <span class="front">TVB Vietnam</span> </button>
-<br> <br>
-
-
   <!-- <h4>Song Cuu Long</h4> -->
   <button class="pushable" onclick="loadPlayer('https://live.canthotv.vn/live/tv/chunklist.m3u8')"> <span class="front">Can Tho</span> </button>
   <button class="pushable" onclick="loadPlayer('https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8')"> <span class="front">Tra Vinh 1</span> </button>
@@ -386,6 +379,12 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('')"> <span class="front">Lai Chau</span> </button> -->
   <button class="pushable" onclick="loadPlayer('https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&deviceId=&deviceType=&gcId=1532&location=NA&pkg=pkg11.hni&q=high&requestTime=1586309420781&time=1586395820&token=LX-ibJYRUq9pflRtYAxfYQ&type=tv&userId=')"> <span class="front">Dien Bien</span> </button>
 
+<!-- hai ngoai -->
+<br> <br>
+  <button class="pushable" onclick="loadPlayer('https://media.streambrothers.com:1936/8228/8228/playlist.m3u8')"> <span class="front">Little Saigon</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://5dcab9aed5331.streamlock.net/SET1/livestream/playlist.m3u8')"> <span class="front">SET TV 1</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8')"> <span class="front">SET TV 2</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8')"> <span class="front">TVB Vietnam</span> </button>
 
 
 </div>
