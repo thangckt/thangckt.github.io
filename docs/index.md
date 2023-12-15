@@ -14,14 +14,14 @@ hide:
     }
 
     .container-image {
-      hight: 170px;
+      hight: 190px;
       padding-right: 20px;
     }
 
     .container-image img {
       border-radius: 50%;
       border: 0.1px solid black;
-      width: 170px;
+      width: 190px;
     }
 
     .container-text {
