@@ -28,7 +28,7 @@ hide:
     }
 
     /* Mobile styles */
-    @media only screen and (max-width:600px) {
+    @media screen and (max-width:600px) {
       .container {
         flex-wrap: wrap;
       }
