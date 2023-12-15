@@ -41,7 +41,7 @@ hide:
   }
 
   .video-column {
-      hight: 900px;
+      width: 800px;
       padding-right: 25px;
       position: sticky;
   }
@@ -58,13 +58,14 @@ hide:
         flex-wrap: wrap;
       }
 
-      .video-column, .content-column {
+      .video-column {
         width: 100%;
         padding-right: 0px;
       }
 
       .content-column {
-        overflow-y: none;
+        width: 100%;
+        max-height: 35vh;
       }
     }
 
