@@ -14,13 +14,13 @@ hide:
     }
 
     .container-image {
+      width: 210px;
       padding-right: 20px;
     }
 
     .container-image img {
       border-radius: 50%;
       border: 0.1px solid black;
-      width: 210px;
     }
 
     .container-text {
