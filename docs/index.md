@@ -5,29 +5,38 @@ hide:
 ᴴₒᴴₒᴴₒ: true
 ---
 
+
 <style>
     .container {
       display: flex;
       flex-wrap: wrap;
     }
 
-    .image-container {
-      /* flex: 1; */
-      /* float: left; */
+    .container-image {
+      flex: 1;
+      order: 1;    /* Set order to 1 for desktop */
       margin-right: 20px;
-    }
-
-    .image-container img {
-      border-radius: 50%;
-      border: 0.1px solid black;
       width: 180px;
     }
 
-    .text-container {
-      /* flex: 2; */
-      /* float: left; */
+    .container-image img {
+      border-radius: 50%;
+      border: 0.1px solid black;
+    }
+
+    .container-text {
+      flex: 1;
+      order: 2;    /* Set order to 1 for desktop */
       /* position: relative; */
     }
+
+    @media (max-width: 600px) {
+      .container-image, .container-text {
+        order: unset; /* Reset order for mobile */
+        width: 100%; /* Set width to 100% for stacking on mobile */
+      }
+    }
+
 </style>
 
 
@@ -61,11 +70,11 @@ else:
 <!-- <img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" /> -->
 
 <!-- <div class="container"> -->
-  <div class="image-container">
+  <div class="container-image">
     <img src="./1images/thang_pic.jpg" />
   </div>
 
-  <div class="text-container">
+  <div class="container-text">
   <p>
     This site serves as the repo for my personal notes.
     The contents reflect neither community nor third-party rules, rather, they're random, messy, improvised, and inevitable for some rare situations but inapplicable for almost others.  <br>
