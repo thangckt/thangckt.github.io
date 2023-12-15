@@ -271,6 +271,7 @@ data-ad-slot="1234567890"></ins>
 
   <br> <br>
   <button class="pushable" onclick="loadPlayer('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button>
+    <button class="pushable" onclick="loadPlayer('https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8')"> <span class="front">TVB Vietnam</span> </button>
 
 
   <!-- <h3>HTV - HTVC</h3>
@@ -384,7 +385,6 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://media.streambrothers.com:1936/8228/8228/playlist.m3u8')"> <span class="front">Little Saigon</span> </button>
   <button class="pushable" onclick="loadPlayer('https://5dcab9aed5331.streamlock.net/SET1/livestream/playlist.m3u8')"> <span class="front">SET TV 1</span> </button>
   <button class="pushable" onclick="loadPlayer('https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8')"> <span class="front">SET TV 2</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8')"> <span class="front">TVB Vietnam</span> </button>
 
 
 </div>
