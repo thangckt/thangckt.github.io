@@ -9,7 +9,8 @@ hide:
 <style>
     .container {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
+
     }
 
     .container-image {
@@ -24,13 +25,15 @@ hide:
     }
 
     .container-text {
+      position: relative;
+      vertical-align: middle
     }
 
     /* Mobile styles */
     @media only screen and (max-width:600px) {
-      .container-image, .container-text {
+      /* .container-image, .container-text {
         width:100%;
-      }
+      } */
     }
 </style>
 
