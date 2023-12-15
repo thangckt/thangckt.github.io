@@ -7,15 +7,12 @@ hide:
 
 
 <style>
-    /* Common styles for both desktop and mobile */
     .container {
       display: flex;
       flex-wrap: wrap;
     }
 
     .container-image {
-      flex: 1;
-      order: 1;    /* Set order to 1 for desktop */
       margin-right: 20px;
       width: 180px;
     }
@@ -23,18 +20,16 @@ hide:
     .container-image img {
       border-radius: 50%;
       border: 0.1px solid black;
-      width: 100%;
+      max-width: 100%;
     }
 
     .container-text {
-      flex: 1;
-      order: 2;    /* Set order to 1 for desktop */
     }
 
-    /* Desktop styles */
-    @media screen and (max-width:600px) {
-      .container-text {
-        order: 1;
+    /* Mobile styles */
+    @media only screen and (max-width:600px) {
+      .container-image, .container-text {
+        width:100%;
       }
     }
 </style>
