@@ -26,7 +26,7 @@ hide:
 
     .container-text {
       flex: 1;
-      order: 2;    /* Set order to 1 for desktop */
+      order: 1;    /* Set order to 1 for desktop */
       /* position: relative; */
     }
 
