@@ -89,7 +89,7 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        loadVideojs('https://ctrl.laotv.la/live/DW/index.m3u8');
+        loadVideojs('https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8');
     });
 
     function loadVideojs(videoUrl, vidElementID='vid1'){
