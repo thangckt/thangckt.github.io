@@ -9,7 +9,7 @@ hide:
 <style>
     .container {
       display: flex;
-      /* flex-wrap: wrap; */
+      flex-wrap: nowrap;
     }
 
     .container-image {
@@ -30,9 +30,9 @@ hide:
 
     /* Mobile styles */
     @media only screen and (max-width:600px) {
-      /* .container-image, .container-text {
-        width:100%;
-      } */
+      .container {
+        flex-wrap: wrap;
+      }
     }
 </style>
 
