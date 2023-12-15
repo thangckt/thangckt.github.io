@@ -14,7 +14,7 @@ hide:
     }
 
     .container-image {
-      hight: 180px;
+      hight: 170px;
       padding-right: 20px;
     }
 

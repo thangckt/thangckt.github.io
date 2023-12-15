@@ -62,6 +62,10 @@ hide:
         width: 100%;
         padding-right: 0px;
       }
+
+      .content-column {
+        overflow-y: none;
+      }
     }
 
   /* hide edit button */
