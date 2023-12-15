@@ -41,7 +41,7 @@ hide:
   }
 
   .video-column {
-      width: 65%;
+      width: 70%;
       padding-right: 25px;
       position: sticky;
   }
@@ -193,7 +193,7 @@ hide:
   <!-- <h3>Stream link</h3> -->
   <!-- <label for="m3u8Link">Stream Link: </label> -->
   <button class="pushable" onclick="loadStream('vid1','videojs')"> <span class="front">Load Stream</span> </button> &nbsp
-  <input type="text" id="m3u8Link" style="width: 80%" placeholder="Enter your link here...">
+  <input type="text" id="m3u8Link" style="width: 70%" placeholder="Enter your link here...">
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 </div>
 
