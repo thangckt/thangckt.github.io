@@ -7,6 +7,7 @@ hide:
 
 
 <style>
+    /* Common styles for both desktop and mobile */
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -27,12 +28,13 @@ hide:
 
     .container-text {
       flex: 1;
-      order: 1;    /* Set order to 1 for desktop */
+      order: 2;    /* Set order to 1 for desktop */
     }
 
-    @media (max-width: 600px) {
+    /* Desktop styles */
+    @media screen {
       .container-text {
-        order: 2; /* Set order to 1 for mobile */
+        order: 1;
       }
     }
 </style>
