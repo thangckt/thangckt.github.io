@@ -49,6 +49,7 @@ hide:
   .content-column {
       max-height: 85vh;
       overflow-y: auto;
+      position: relative;
   }
 
     /* Mobile styles */
