@@ -63,6 +63,12 @@ hide:
       }
     }
 
+  /* hide edit button */
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+
 </style>
 
 <!-- Load libs -->
