@@ -190,10 +190,9 @@ hide:
   <div id="linkButtons" style="display:flex; justify-content:center; margin-top:20px; gap:5px;"></div>
 
   <!-- <h3>Stream link</h3> -->
-  <br>
   <!-- <label for="m3u8Link">Stream Link: </label> -->
   <button class="pushable" onclick="loadStream('vid1','videojs')"> <span class="front">Load Stream</span> </button> &nbsp
-  <input type="text" id="m3u8Link" style="width: 650px;" placeholder="Enter your *.m3u8 link here...">
+  <input type="text" id="m3u8Link" style="width: 600px;" placeholder="Enter your *.m3u8 link here...">
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 </div>
 
