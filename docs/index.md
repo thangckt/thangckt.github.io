@@ -21,7 +21,7 @@ hide:
     .container-image img {
       border-radius: 50%;
       border: 0.1px solid black;
-      width: 100%;
+      width: 170px;
     }
 
     .container-text {
