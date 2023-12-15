@@ -37,24 +37,31 @@ hide:
 
   .container {
       display: flex;
+      flex-wrap: nowrap;
   }
 
   .video-column {
-      flex: 2;
-      max-width: 800px;  /* Adjust the width as needed */
+      hight: 600px;
       padding-right: 20px;
       position: sticky;
-      /* top: 20; */
-      /* overflow: hidden; */
   }
 
   .content-column {
-      flex: 1;
-      /* max-width: 35%; */
       max-height: 85vh;
       overflow-y: auto;
-      position: relative;
   }
+
+    /* Mobile styles */
+    @media screen and (max-width:600px) {
+      .container {
+        flex-wrap: wrap;
+      }
+
+      .video-column, .content-column {
+        width: 100%;
+      }
+    }
+
 </style>
 
 <!-- Load libs -->
@@ -164,7 +171,7 @@ hide:
 <!-- First Column: Video Frame  class="video-js" -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
-    <video id="vid1" class="video-js" controls preload="none" autoplay style="width:100%;height:100%;left:0px;top:0px;position:absolute;" ></video>
+    <video id="vid1" class="video-js" controls preload="none" autoplay style="position:absolute; width:100%; height:100%; left:0px; top:0px;" ></video>
   </div>
 
   <!-- New element for displaying dynamic buttons -->
