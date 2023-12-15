@@ -60,6 +60,7 @@ hide:
 
       .video-column, .content-column {
         width: 100%;
+        padding-right: 0px;
       }
     }
 
