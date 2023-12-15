@@ -41,7 +41,7 @@ hide:
   }
 
   .video-column {
-      width: 800px;
+      width: 900px;
       padding-right: 25px;
       position: sticky;
   }
