@@ -10,6 +10,7 @@ hide:
     .container {
       display: flex;
       flex-wrap: nowrap;
+      align-items: center;
     }
 
     .container-image {
