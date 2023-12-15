@@ -22,18 +22,17 @@ hide:
     .container-image img {
       border-radius: 50%;
       border: 0.1px solid black;
+      width: 100%;
     }
 
     .container-text {
       flex: 1;
       order: 1;    /* Set order to 1 for desktop */
-      /* position: relative; */
     }
 
     @media (max-width: 600px) {
-      .container-image, .container-text {
-        order: unset; /* Reset order for mobile */
-        width: 100%; /* Set width to 100% for stacking on mobile */
+      .container-text {
+        order: 2; /* Set order to 1 for mobile */
       }
     }
 </style>
