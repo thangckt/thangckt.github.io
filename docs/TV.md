@@ -356,6 +356,7 @@ data-ad-slot="1234567890"></ins>
 
   <!-- <h4>Dong Bang Song Hong</h4> -->
   <button class="pushable" onclick="loadPlayer('https://cecex9g5cpliv.vcdn.cloud/capture/smil:HN1.smil/chunklist_b3128000_slen.m3u8')"> <span class="front">Ha Noi 1</span> </button>
+    <button class="pushable" onclick="loadPlayer('https://cecex9g5cpliv.vcdn.cloud/live/smil:HN2.smil/chunklist_b3128000_slen.m3u8')"> <span class="front">Ha Noi 2</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.hanamtv.vn/live/285361fcafcd0ec47bba2fa3f5870f8dc72/chunklist.m3u8')"> <span class="front">Ha Nam</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://cdn.hungyentv.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8','https://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8'])"> <span class="front">Hung Yen</span> </button>
   <button class="pushable" onclick="loadPlayer('https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8')"> <span class="front">Nam Dinh</span> </button>
