@@ -213,7 +213,7 @@ data-ad-slot="1234567890"></ins>
 
 <!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
 <div class="content-column" >
-  <h3>News</h3>
+  <p style="font-size:13pt">News</p>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer('https://ntd02.akamaized.net/NTD-West/index.m3u8')"> <span class="front">NTD</span> </button>
   <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
