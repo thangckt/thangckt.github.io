@@ -95,9 +95,9 @@ hide:
     function loadVideojs(videoUrl, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
       // Change class of video tag
-      // var player = document.getElementById(vidElementID);
-      //     player.classList.remove("video-js"); // Remove the existing class
-      //     player.classList.add("video-js"); // Add the new class
+      var player = document.getElementById(vidElementID);
+          player.classList.remove("video-js"); // Remove the existing class
+          player.classList.add("video-js"); // Add the new class
 
       var player = videojs(vidElementID);
           // Call plugin here, before load src
