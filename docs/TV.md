@@ -213,11 +213,11 @@ data-ad-slot="1234567890"></ins>
 
 <!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
 <div class="content-column" >
-  <p style="font-size:13pt">News</p>
+  <p style="font-size:16pt; top-margin:0">News</p>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
-  <button class="pushable" onclick="loadPlayer('https://ntd02.akamaized.net/NTD-West/index.m3u8')"> <span class="front">NTD</span> </button>
   <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://ntd02.akamaized.net/NTD-West/index.m3u8')"> <span class="front">NTD</span> </button>
   <button class="pushable" onclick="loadPlayer('https://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8')"> <span class="front">Newsmax 2</span> </button>
 
   <!-- the center biases: https://www.allsides.com/media-bias/media-bias-chart -->
