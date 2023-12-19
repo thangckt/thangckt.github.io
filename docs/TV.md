@@ -213,7 +213,7 @@ data-ad-slot="1234567890"></ins>
 
 <!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
 <div class="content-column" >
-  <p style="font-size:16pt; top-margin:0">News</p>
+  <p style="font-size:16pt; margin-top:0">News</p>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
