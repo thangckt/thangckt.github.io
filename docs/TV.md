@@ -242,9 +242,11 @@ data-ad-slot="1234567890"></ins>
 
   <h3>Discovery - Documentary</h3>
   <button class="pushable" onclick="loadPlayer('https://hncfree-samsungau.amagi.tv/playlist.m3u8')"> <span class="front">Horse&Country</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8')"> <span class="front">Animal Planet</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/Discovery/index.m3u8')"> <span class="front">Discovery Channel SEA</span> </button>
+
   <button class="pushable" onclick="loadYoutube('https://www.youtube.com/live/XZ7BWbmvi94?si=XodlRK7c3EWvfsjI')"> <span class="front">Nat Geo WILD (YT)</span> </button>
   <button class="pushable" onclick="loadYoutube('https://www.youtube.com/watch?v=gsA3-3_Cl8s')"> <span class="front">Nat Geo (YT)</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8')"> <span class="front">Animal Planet</span> </button>
 
   <br> <br>
   <button class="pushable" onclick="loadPlayer('https://smithsonianaus-samsungau.amagi.tv/playlist1080p.m3u8?cc')"> <span class="front">Smithsonian</span> </button>
