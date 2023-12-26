@@ -226,6 +226,8 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://reuters-reutersnow-1-us.plex.wurl.tv/playlist.m3u8')"> <span class="front">Reuters</span> </button>
   <button class="pushable" onclick="loadPlayer('https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8')"> <span class="front">EURO</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8')"> <span class="front">France 24</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8')"> <span class="front">Wion</span> </button>
+
 
   <!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <br><br>
