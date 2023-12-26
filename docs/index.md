@@ -72,8 +72,6 @@ else:
 
   <div class="container-text">
   <p>
-  !!! note
-
     This site serves as the repo for my personal notes. <br>
     The contents reflect neither community nor third-party rules, rather, they're random, messy, improvised, and inevitable for some rare situations but inapplicable for almost others.  <br>
     They aren't noted for you, so if you find nothing valuable here just enjoy Felix's excellent pieces.
