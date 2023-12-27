@@ -212,25 +212,29 @@ nav:
   - Cluster:
     - Compile:
       - LAMMPS: cluster/compile/LAMMPS.md
-      - GCC: cluster/compile/compile_GCC.md
-      - OpenMPI:
-        - cluster/compile/openMPI_4.md
-        - cluster/compile/openMPI_5.md
+      - cluster/compile/GCC.md
+      - cluster/compile/LLVM.md
+      - cluster/compile/OpenMPI_4.md
+      - cluster/compile/OpenMPI_5.md
+      - cluster/compile/OpenMPI_windows.md
+      - cluster/compile/OpenMPI_conda.md
       - cluster/compile/Plumed.md
       - cluster/compile/CP2K.md
+
+      - cluster/compile/binutils_linker.md
       - cluster/compile/CMake.md
       - cluster/compile/Libtool.md
-      - cluster/compile/UCX.md
+      - cluster/compile/UCX_UCC.md
       - cluster/compile/FTTW.md
-      - cluster/compile/binutils_linker.md
-      - cluster/compile/9_MPI_window.md
-      - cluster/compile/LLVM.md
-      - cluster/compile/11_Conda_MPI.md
-      - cluster/compile/12_PMIX.md
+      - cluster/compile/PMIX.md
+
       - cluster/compile/Dependencies.md
       - cluster/compile/conda_install.md
       - cluster/compile/conda_manager_packages.md
-      - cluster/compile/conda_hybrid.md
+      - cluster/compile/BLAS.md
+      - cluster/compile/OpenBLAS.md
+      - cluster/compile/scaLAPACK_BLACS.md
+
     - Config:
       - cluster/configure/Pip.md
       - cluster/configure/Latex_TexStudio.md
