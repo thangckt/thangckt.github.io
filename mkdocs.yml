@@ -225,13 +225,12 @@ nav:
       - cluster/compile/CMake.md
       - cluster/compile/Libtool.md
       - cluster/compile/UCX_UCC.md
-      - cluster/compile/FTTW.md
       - cluster/compile/PMIX.md
 
       - cluster/compile/Dependencies.md
       - cluster/compile/conda_install.md
       - cluster/compile/conda_manager_packages.md
-      - cluster/compile/BLAS.md
+      - cluster/compile/BLACS.md
       - cluster/compile/OpenBLAS.md
       - cluster/compile/scaLAPACK_BLACS.md
 
