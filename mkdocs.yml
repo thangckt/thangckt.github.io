@@ -234,12 +234,6 @@ nav:
       - cluster/compile/OpenBLAS.md
       - cluster/compile/scaLAPACK_BLACS.md
 
-    - Config:
-      - cluster/configure/3_JupyterLab.md
-      - cluster/configure/5_git.md
-      - cluster/configure/7_packing_python.md
-      - cluster/configure/NGC_container.md
-
     - Useful:
       - cluster/refPage/cheatsheet.md
       - cluster/refPage/docs_syntax.md
