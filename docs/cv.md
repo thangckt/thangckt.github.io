@@ -15,4 +15,5 @@ Loading...
 <!-- Option 2: Use JS to trigger the redirection on page load -->
 <script>
   window.location.href = '../cv/2023_Thang_CV_acad.pdf';
+  // window.open(pdfPath, '_blank');      //  open pdf in newtab  -->
 </script>
