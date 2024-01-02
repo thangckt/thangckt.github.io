@@ -14,6 +14,5 @@ Loading...
 
 <!-- Option 2: Use JS to trigger the redirection on page load -->
 <script>
-  var pdfPath = '../cv/2023_Thang_CV_acad.pdf';
-  window.location.href = pdfPath;
+  window.location.href = '../cv/2023_Thang_CV_acad.pdf';
 </script>
