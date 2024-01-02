@@ -7,11 +7,13 @@ hide:
 
 Loading...
 
-
-<meta http-equiv="refresh" content="0; URL=../cv/2023_Thang_CV_acad.pdf" />
-
-
-
-<!-- <meta http-equiv="refresh" content="0; URL=https://thang.eu.org/cv/2023_Thang_CV_acad.pdf" /> -->
+<!-- This way does not work in mobile web -> use JS -->
+<!-- <meta http-equiv="refresh" content="0; URL=../cv/2023_Thang_CV_acad.pdf" /> -->
 
 
+
+<!-- Trigger the redirection on page load -->
+<script>
+  var pdfPath = '../cv/2023_Thang_CV_acad.pdf';
+  window.location.href = pdfPath;
+</script>
