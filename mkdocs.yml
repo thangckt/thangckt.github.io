@@ -238,16 +238,16 @@ nav:
       - cluster/refPage/cheatsheet.md
       - cluster/refPage/docs_syntax.md
 
-  - Literature:
+  - Reference:
     - Video_series:
-      - Researh Ethics: literature/videos/1_research_ethic.md
-      - literature/videos/2_calculus_essence.md
+      - Researh Ethics: reading/videos/1_research_ethic.md
+      - reading/videos/2_calculus_essence.md
     # - research/publication.md
 
     - Reading:
-      - Engineering: literature/reading/Mech_Science.md
-      - Computational: literature/reading/Comp_Methods.md
-      - Mechanics: literature/reading/mech_solid.md
+      - Engineering: reading/reading/Mech_Science.md
+      - Computational: reading/reading/Comp_Methods.md
+      - Mechanics: reading/reading/mech_solid.md
 
   - Odd:      # Miscellaneous    Heterogeneous
     - Music:
@@ -262,7 +262,7 @@ nav:
   - Blog:
     - blog/index.md
 
-  - TV: TV.md
+  - TV: tv.md
     # - TV Online: TVonline/HTV.md
     # - Stream: TVonline/stream.md
 
