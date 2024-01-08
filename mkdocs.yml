@@ -243,9 +243,9 @@ nav:
     # - research/publication.md
 
     - Reading:
-      - Engineering: reading/reading/Mech_Science.md
-      - Computational: reading/reading/Comp_Methods.md
-      - Mechanics: reading/reading/mech_solid.md
+      - Basic Science: reading/reading/basic_science.md
+      - Computational: reading/reading/computational.md
+      - Mechanics: reading/reading/mechanic_solid.md
 
   - Odd:      # Miscellaneous    Heterogeneous
     - Music:
