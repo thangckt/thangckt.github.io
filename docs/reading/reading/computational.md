@@ -7,6 +7,7 @@ hide:
 table, td, th {border: none!important;  border-collapse: collapse;  border-spacing: 0; }
 </style>
 
+
 # Computational
 
 ## Thang's Note
@@ -16,6 +17,7 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 - Modelling with MD    &nbsp;  [Notebook](https://thangckt.github.io/note_md){target="_blank"}
 - Thang Note for ML    &nbsp;  [Notebook](https://thangckt.github.io/note_ml){target="_blank"}
 - Learn code    &nbsp;  [Notebook](https://thangckt.github.io/learncode){target="_blank"}
+
 
 ## Methods
 
@@ -31,7 +33,7 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 
 ### MD
 
-- Understanding Molecular Simulation | D. Frenkel |    [pdf](https://www.eng.uc.edu/~beaucag/Classes/AdvancedMaterialsThermodynamics/Books/%5BComputational%20science%20(San%20Diego,%20Calif.)%5D%20Daan%20Frenkel_%20Berend%20Smit%20-%20Understanding%20molecular%20simulation%20_%20from%20algorithms%20to%20applications%20(2002,%20Academic%20Press%20)%20-%20libgen.lc.pdf){target="_blank"}
+- Understanding Molecular Simulation - D. Frenkel  &nbsp; &nbsp;   [pdf](t.ly/-c5Dr){target="_blank"}
 - Molecular Modelling: Priciples and Applications  |  |  [pdf](https://chz276.ust.hk/public/Cloud::siqin/References/From-MD-to-MSM/Molecular%20Modelling%20Principles%20and%20Applications.pdf){target="_blank"}
 
 - Theory and Modeling of Polymer Nanocomposites  | |  [pdf](https://link.springer.com/content/pdf/10.1007/978-3-030-60443-1.pdf){target="_blank"}
@@ -61,9 +63,12 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 
 ### ML Basic
 
-- PyTorch for Deep Learning   &nbsp; &nbsp; [Notebook](https://www.learnpytorch.io/){target="_blank"}
+- PyTorch for Deep Learning - D.Bourke  &nbsp; &nbsp; [Notebook](https://www.learnpytorch.io/){target="_blank"}
+- Tensorflow for Deep Learning - D.Bourke  &nbsp; &nbsp; [Notebook](https://dev.mrdbourke.com/tensorflow-deep-learning/){target="_blank"}
+- Zero to Mastery Machine Learning - D.Bourke  &nbsp; &nbsp; [Repo](https://github.com/mrdbourke/zero-to-mastery-ml){target="_blank"}
+- Learn Transformers - D.Bourke  &nbsp; &nbsp; [Repo](https://github.com/mrdbourke/learn-transformers){target="_blank"}
 
-- Physics-based Deep Learning | N. Thuerey| [pdf](https://arxiv.org/pdf/2109.05237.pdf){target="_blank"},  [Notebook](http://physicsbaseddeeplearning.org/intro.html){target="_blank"}
+- Physics-based Deep Learning - N. Thuerey &nbsp; &nbsp; [pdf](https://arxiv.org/pdf/2109.05237.pdf){target="_blank"},  [Notebook](http://physicsbaseddeeplearning.org/intro.html){target="_blank"}
 - An Introduction to Machine Learning | | [pdf](./pdf_ML/An_Introduction_to_Machine_Learning.pdf){target="_blank"}
 - Introduction to Machine Learning with Python| | [pdf](./pdf_ML/Introduction_to_Machine_Learning_with_Python.pdf){target="_blank"}
 - Thoughtful Machine Learning with Python| |[pdf](./pdf_ML/Thoughtful_Machine_Learning_with_Python.pdf){target="_blank"}
