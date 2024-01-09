@@ -68,6 +68,10 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 - Zero to Mastery Machine Learning - D.Bourke  &nbsp; &nbsp; [Repo](https://github.com/mrdbourke/zero-to-mastery-ml){target="_blank"}
 - Learn Transformers - D.Bourke  &nbsp; &nbsp; [Repo](https://github.com/mrdbourke/learn-transformers){target="_blank"}
 
+- Natural Language Processing - HuggingFace [html](https://huggingface.co/learn/nlp-course){target="_blank"}
+
+
+
 - Physics-based Deep Learning - N. Thuerey &nbsp; &nbsp; [pdf](https://arxiv.org/pdf/2109.05237.pdf){target="_blank"},  [Notebook](http://physicsbaseddeeplearning.org/intro.html){target="_blank"}
 - An Introduction to Machine Learning | | [pdf](./pdf_ML/An_Introduction_to_Machine_Learning.pdf){target="_blank"}
 - Introduction to Machine Learning with Python| | [pdf](./pdf_ML/Introduction_to_Machine_Learning_with_Python.pdf){target="_blank"}
