@@ -237,16 +237,15 @@ nav:
       - cluster/refPage/docs_syntax.md
 
   - Reference:
-    - Video_series:
-      - Researh Ethics: reading/videos/1_research_ethic.md
-      - reading/videos/2_calculus_essence.md
-    # - research/publication.md
-
+    - Researh Ethics: reading/videos/1_research_ethic.md
     - Reading:
       - Basic Science: reading/reading/basic_science.md
       - Computational: reading/reading/computational.md
       - Mechanics: reading/reading/mechanic_solid.md
       - reading/reading/chat.md
+    - Video_series:
+      - reading/videos/2_calculus_essence.md
+    # - research/publication.md
 
   - Odd:      # Miscellaneous    Heterogeneous
     - Music:
