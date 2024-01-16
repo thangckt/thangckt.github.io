@@ -242,10 +242,11 @@ nav:
       - Basic Science: reading/reading/basic_science.md
       - Computational: reading/reading/computational.md
       - Mechanics: reading/reading/mechanic_solid.md
-      - reading/reading/chat.md
     - Video_series:
       - reading/videos/2_calculus_essence.md
     # - research/publication.md
+    - reading/reading/chat.md
+
 
   - Odd:      # Miscellaneous    Heterogeneous
     - Music:
