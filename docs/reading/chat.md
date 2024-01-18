@@ -12,6 +12,6 @@ hide:
 
 ## Local
 
-[GPT4 copilot](https://chat-gpt-next-git-main-thangckt-gmailcom.vercel.app){target="_blank"}
+[GPT4 copilot](chat-gpt-next-ihq6gv7qw-thangckt-gmailcom.vercel.app){target="_blank"}
 
 <!-- [LibreChat](http://localhost:3080){target="_blank"} -->
