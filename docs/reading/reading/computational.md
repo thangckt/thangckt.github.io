@@ -84,6 +84,11 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 - Introduction to machine learning with Jupyter notebooks|| [Notebook](https://developers.redhat.com/articles/2021/05/21/introduction-machine-learning-jupyter-notebooks#what_is_a_jupyter_notebook_){target="_blank"}|
 
 
+### Natural Language Processing (NPL)
+
+- A Complete LangChain Guide - Nanonets &nbsp; [html](https://nanonets.com/blog/langchain/){target="_blank"}
+
+
 
 ## Programming
 
