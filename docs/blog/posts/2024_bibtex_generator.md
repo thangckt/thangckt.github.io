@@ -17,7 +17,7 @@ There are, indeed, support tools and plugins that are bundled with reference man
 
 There are times you just need to cite a paper or two, and you don't want to go through the hassle of the aforementioned process. Facing this situation quite often, I just want to quickly copy and paste a bib entry to the `.bib` file and that's it. Think of such a simple tool, I have looked around the Chrome extension store to see if there is any that can pick up the Bibtex while you are browsing the paper. I found some, but they do not really work.
 
-Therefore, I decided to create a simple tool to help me with that. It took me a few nights to write a Chrome extension that can generate a BibTeX entry for any browsing URL with just one click. I named it the [BibTeX generator](./). It works exactly what I needed. I finally found something helpful.
+Therefore, I decided to create a simple tool to help me with that. I developed a Chrome extension that can generate the BibTeX entry for any browsing URL with just one click. I named it the [BibTeX generator](./). It works exactly what I needed. I finally found something helpful.
 
 ## Usage
 Install the [BibTeX generator](./) extension on your Chrome browser. Then, whenever you're browsing a paper or any URL, just click on the extension icon, and the BibTeX entry will be generated and copied to your clipboard. You can just paste it to your `.bib` file.
