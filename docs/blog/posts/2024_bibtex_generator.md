@@ -67,7 +67,7 @@ Here are some examples of the generated BibTeX entries:
 }
 ```
 
-Googel book 1: [The Vietnam War](https://www.google.co.kr/books/edition/The_Vietnam_War/x38uAQAAIAAJ?hl=en&gbpv=0&bsq=war)
+Google book 1: [The Vietnam War](https://www.google.co.kr/books/edition/The_Vietnam_War/x38uAQAAIAAJ?hl=en&gbpv=0&bsq=war)
 
 ```bibtex
 @book{pendergast2007the,
@@ -81,7 +81,7 @@ Googel book 1: [The Vietnam War](https://www.google.co.kr/books/edition/The_Viet
 }
 ```
 
-Googel book 2: [Currency Wars](https://books.google.co.kr/books/about/Currency_Wars.html?id=2zF-uQAACAAJ&redir_esc=y)
+Google book 2: [Currency Wars](https://books.google.co.kr/books/about/Currency_Wars.html?id=2zF-uQAACAAJ&redir_esc=y)
 
 ```bibtex
 @book{lo2021china’s,
@@ -92,6 +92,20 @@ Googel book 2: [Currency Wars](https://books.google.co.kr/books/about/Currency_W
     publisher = {Emerald Group Publishing},
     isbn = {9781800437944},
     url = {https://books.google.co.kr/books/about/Currency_Wars.html?id=2zF-uQAACAAJ&redir_esc=y},
+    accessDate = {Jan 27, 2024}
+}
+```
+
+- Blog post: [https://deci.ai/blog/decicoder-6b-the-best-multi-language-code-generation-llm-in-its-class/](https://deci.ai/blog/decicoder-6b-the-best-multi-language-code-generation-llm-in-its-class/)
+
+```bibtex
+@misc{deci2024introducing,
+    title = {Introducing DeciCoder-6B: The Best Multi-Language Code LLM in Its Class},
+    author = {Deci},
+    year = {2024},
+    month = {1},
+    publisher = {Deci},
+    url = {https://deci.ai/blog/decicoder-6b-the-best-multi-language-code-generation-llm-in-its-class/},
     accessDate = {Jan 27, 2024}
 }
 ```
