@@ -2,7 +2,7 @@
 title: BibTeX generator
 date: 2024-01-25
 authors: [thangckt]
-slug: adding-a-badge-to-your-project
+slug: bibtex_generator
 description: >
   one click to generate BibTeX entry for any url
 categories:
