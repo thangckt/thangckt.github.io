@@ -4,7 +4,7 @@ date: 2024-01-25
 authors: [thangckt]
 slug: bibtex_generator
 description: >
-  one click to generate BibTeX entry for any url
+  one click to generate BibTeX entry for any URL
 categories:
   - Science
 ---
