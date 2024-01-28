@@ -1,6 +1,8 @@
 ---
 hide:
   # - toc
+
+comments: true
 ---
 
 
