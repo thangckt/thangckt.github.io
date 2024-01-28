@@ -43,7 +43,7 @@ theme:
       # primary: blue grey   #  blue grey, indigo
       # accent: indigo
       toggle:
-        icon: material/eye
+        icon: material/lightbulb
         name: Switch to dark mode
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -51,7 +51,7 @@ theme:
       # primary: blue grey   #  blue grey, indigo
       # accent: indigo
       toggle:
-        icon: material/eye-outline
+        icon: material/lightbulb-outline
         name: Switch to light mode
   font:
     text: Roboto
