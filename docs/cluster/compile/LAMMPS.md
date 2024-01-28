@@ -1,5 +1,10 @@
 
-<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+# Compiling LAMMPS
+
+This note intends to the struggling work to deploy [LAMMPS](https://www.lammps.org) on some Linux clusters
+
+![Lammps logo](https://www.lammps.org/movies/logo.gif)
+
 
 - [Compiling LAMMPS](#compiling-lammps)
   - [Preparation](#preparation)
@@ -24,14 +29,6 @@
   - [Compiling with LLVM + OMPI](#compiling-with-llvm--ompi)
     - [USC2\_Tachyon - Centos 6.9 cluster with InfiniBand](#usc2_tachyon---centos-69-cluster-with-infiniband-1)
   - [Compile with Conda](#compile-with-conda)
-
-<!-- /TOC -->
-# Compiling LAMMPS
-
-This note intends to the struggling work to deploy [LAMMPS](https://www.lammps.org) on some Linux clusters
-
-![Lammps logo](https://www.lammps.org/movies/logo.gif)
-
 
 ## Preparation
 
