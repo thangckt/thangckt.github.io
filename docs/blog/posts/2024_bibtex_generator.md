@@ -7,6 +7,7 @@ description: >
   one click to generate BibTeX entry for any URL
 categories:
   - Science
+comments: true
 ---
 
 # BibTeX Generator
