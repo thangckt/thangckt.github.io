@@ -21,7 +21,7 @@ There are times you just need to cite a paper or two, and you don't want to go t
 Therefore, I decided to create a simple tool to help me with that. I developed a Chrome extension that can generate the BibTeX entry for any browsing URL with just one click. I named it the [BibTeX generator](./). It works exactly what I needed. I finally found something helpful.
 
 ## Usage
-Install the [BibTeX generator](./) extension on your Chrome browser. Then, whenever you're browsing a paper or any URL, just click on the extension icon, and the BibTeX entry will be generated and copied to your clipboard. You can just paste it to your `.bib` file.
+Install the [BibTeX generator](./) extension on your Chrome browser. Then, whenever you're browsing a paper or any URL, just click on the extension icon, and the BibTeX entry will be generated and copied to your clipboard. The remain thing is just paste it to your `.bib` file.
 
 <p align="center">
 <img src="https://thang.eu.org/blog/image/bibtex_demo.png" alt="BibTeX generator" width="600" style="align: center;" />
