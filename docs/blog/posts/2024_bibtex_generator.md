@@ -24,7 +24,7 @@ Therefore, I decided to create a simple tool to help me with that. I developed a
 Install the [BibTeX generator](./) extension on your Chrome browser. Then, whenever you're browsing a paper or any URL, just click on the extension icon, and the BibTeX entry will be generated and copied to your clipboard. You can just paste it to your `.bib` file.
 
 <p align="center">
-<img src="./image/bibtex_demo.png" alt="BibTeX generator" width="600" style="align: center;" />
+<img src="thangckt.github.io/tree/main/docs/blog/image/bibtex_demo.png" alt="BibTeX generator" width="600" style="align: center;" />
 </p>
 
 I've tested the extension on numerous publishers and websites with varying structures and it works like a charm. The tested publishers include Elsevier, Wiley, ACS, IOP, AIP, APS, arXiv,...
