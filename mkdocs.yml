@@ -204,10 +204,8 @@ nav:
   - Home: thangckt.github.io
   # - About: index.md
   # - Codedocs: codedocs.md
-  # - freeGPT: thangckt.github.io/freeGPT
   - molbuilder: thangckt.github.io/molbuilder
   - thatool: thangckt.github.io/thatool_doc
-  - mediaLib: thangckt.github.io/mediaLib_doc
 
   - Cluster:
     - Compile:
