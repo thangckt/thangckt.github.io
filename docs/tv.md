@@ -188,7 +188,7 @@ hide:
 <!-- First Column: Video Frame  class="video-js" -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
-    <video id="vid1" class="video-js" controls preload="none" autoplay style="position:absolute; width:100%; height:100%; left:0px; top:0px;" ></video>
+    <video id="vid1"  controls preload="none" autoplay style="position:absolute; width:100%; height:100%; left:0px; top:0px;" ></video>
   </div>
 
   <!-- New element for displaying dynamic buttons -->
