@@ -204,8 +204,8 @@ nav:
   - Home: thangckt.github.io
   # - About: index.md
   # - Codedocs: codedocs.md
-  - molbuilder: thangckt.github.io/molbuilder
-  - Tool: thangckt.github.io/thatool_doc
+  # - molbuilder: thangckt.github.io/molbuilder
+  - Tools: thangckt.github.io/thatool_doc
 
   - Cluster:
     - Compile:
