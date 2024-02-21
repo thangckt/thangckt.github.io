@@ -1,3 +1,8 @@
+# Get links
+Find more .m3u8 links: 
+- Repo: [Entertainment](https://github.com/KevinNitroG/Entertainment)
+
+
 # Some support information
 
 Note: can not use videojs to play youtube
