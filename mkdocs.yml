@@ -249,11 +249,13 @@ nav:
 
   - Odd:      # Miscellaneous    Heterogeneous
     - Music:
-      - Classic pieces: odd/music/Classic.md
-      - Fall of Saigon: odd/music/Saigon.md
-      - Love theme: odd/music/Tinh_ca.md
-      - Historical theme: odd/music/Viet_su.md
-      - Guitar covers: odd/music/guitar_cover.md
+      - Classic pieces: odd/music/music_classic.md
+      - Fall of Saigon: odd/music/music_saigon_fall.md
+      - Love theme: odd/music/music_tinh_ca.md
+      - Historical theme: odd/music/music_viet_su.md
+      - Guitar covers: odd/music/music_guitar_cover.md
+      - Sleeping: odd/music/music_sleep.md
+    -Vocal
       - Lyrical Chord: odd/music/Lyrics.md
     - Reading list:
       - odd/reading/read_list.md
