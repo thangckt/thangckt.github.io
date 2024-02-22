@@ -255,7 +255,7 @@ nav:
       - Historical theme: odd/music/music_viet_su.md
       - Guitar covers: odd/music/music_guitar_cover.md
       - Sleeping: odd/music/music_sleep.md
-    -Vocal
+    - Vocal:
       - Lyrical Chord: odd/music/Lyrics.md
     - Reading list:
       - odd/reading/read_list.md
