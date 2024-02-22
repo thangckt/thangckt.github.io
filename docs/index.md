@@ -87,7 +87,7 @@ else:
     You cannot teach a man anything, you can only help him find it within himself - Galileo Galilei (1564–1642)
 -->
 
-<br>
+
 
 <div style="position:relative; padding-bottom:56.25%">
 <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
