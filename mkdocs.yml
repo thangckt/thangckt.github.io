@@ -35,7 +35,6 @@ theme:
     - content.action.edit
     - navigation.footer
 
-
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
