@@ -65,7 +65,7 @@ else:
 
 <!-- <img src="./1images/thang_pic.jpg" style="border-radius:50%; border: 0.1px solid black; float:left; margin-right:20px" width="180" /> -->
 
-<div class="container" style="margin-bottom:5;">
+<div class="container" style="margin-bottom:25;">
   <div class="container-image">
     <img src="./1images/thang_pic.jpg" />
   </div>
