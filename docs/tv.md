@@ -84,7 +84,7 @@ hide:
 <!-- <script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
 
-<script src="https://unpkg.com/browse/@videojs/http-streaming@3.11.1/dist/videojs-http-streaming.min.js"></script>
+<!-- <script src="https://unpkg.com/browse/@videojs/http-streaming@3.11.1/dist/videojs-http-streaming.min.js"></script> -->
 
 
 <!-- Load js function from another file <script src="TVonline/script_tv.js"></script> -->
