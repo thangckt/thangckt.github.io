@@ -404,6 +404,10 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://5dcab9aed5331.streamlock.net/SET1/livestream/playlist.m3u8')"> <span class="front">SET TV 1</span> </button>
   <button class="pushable" onclick="loadPlayer('https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8')"> <span class="front">SET TV 2</span> </button>
 
+<!-- Visitor -->
+<p align="center">
+<a href="https://info.flagcounter.com/sXJW"><img src="https://s01.flagcounter.com/count2/sXJW/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_20/viewers_3/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+</p>
 
 </div>
 </div>
