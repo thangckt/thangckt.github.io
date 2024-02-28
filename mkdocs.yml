@@ -62,7 +62,7 @@ extra_javascript:
 extra_css:
   - _extend_theme/extra_css/full_width.css
   - _extend_theme/extra_css/font_size.css
-  
+
 
 ## Customization
 extra:
@@ -238,9 +238,11 @@ nav:
       - Basic Science: reading/reading/basic_science.md
       - Computational: reading/reading/computational.md
       - Mechanics: reading/reading/mechanic_solid.md
-      - English: reading/reading/english_learn.md
     - Video_series:
       - reading/videos/2_calculus_essence.md
+    - English:
+      - reading/english/english_learn.md
+      - reading/english/vocabulary_img.md
     # - research/publication.md
     - reading/chat.md
 
