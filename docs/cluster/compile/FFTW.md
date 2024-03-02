@@ -31,7 +31,7 @@ mkdir build && cd build
 
 Compiling FFTW 3.3.10 (Single,Double)
 
-```shell
+``` sh
 --enable-sse2: Single, Double
 --enable-long-double : Long-Double Precision
 --enable-float : Single
