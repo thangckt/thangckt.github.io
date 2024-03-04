@@ -101,6 +101,7 @@ table, td, th {border: none!important;  border-collapse: collapse;  border-spaci
 ### CPP
 - CPP for python programmers  - [html](https://runestone.academy/ns/books/published/cpp4python/index.html){target="_blank"}
 - learn C++   - [Link](https://www.learncpp.com/){target="_blank"}
+- The problem solver's guide to coding - [pdf](./pdf/the_problem_solver_guide_to_coding.pdf){target="_blank"}
 
 
 ### others
