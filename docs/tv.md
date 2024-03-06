@@ -16,7 +16,8 @@ hide:
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
+    margin-top: 8px; /* Add space at the top */
   }
   .front {
     display: block;
@@ -30,7 +31,7 @@ hide:
 
   .pushable:active .front {
     /* background: hsl(215deg 100% 32%); /* Changed the active color */
-    transform: translateY(2px);
+    transform: translateY(-2px);
   }
   .pushable:focus:not(:focus-visible) {
     outline: none;
