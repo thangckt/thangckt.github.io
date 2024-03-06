@@ -217,7 +217,8 @@ data-ad-slot="1234567890"></ins>
   <input type="text" id="m3u8Link" style="width: 65%" placeholder="Enter your link here...">
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 
-  <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p>
+  <!-- <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p> -->
+  <h3>News</h3>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
