@@ -30,7 +30,7 @@ hide:
 
   .pushable:active .front {
     /* background: hsl(215deg 100% 32%); /* Changed the active color */
-    transform: translateY(-2px);
+    transform: translateY(2px);
   }
   .pushable:focus:not(:focus-visible) {
     outline: none;
