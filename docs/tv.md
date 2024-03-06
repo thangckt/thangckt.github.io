@@ -25,7 +25,7 @@ hide:
     font-size: 12pt;
     background: #007ACC;     /*  hsl(345deg 100% 47%);  */
     color: white;
-    transform: translateY(-4px);
+    /* transform: translateY(-4px); */
   }
 
   .pushable:active .front {
@@ -211,7 +211,6 @@ data-ad-slot="1234567890"></ins>
 <!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
 <div class="content-column" >
   <!-- <h3>Stream link</h3> -->
-  <p style="font-size:16pt; margin-top:0; margin-bottom:15">Input link</p>
   <!-- <label for="m3u8Link">Stream Link: </label> -->
   <button class="pushable" onclick="loadStream('vid1','videojs')"> <span class="front">Load Stream</span> </button> &nbsp
   <input type="text" id="m3u8Link" style="width: 65%" placeholder="Enter your link here...">
