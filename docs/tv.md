@@ -193,11 +193,6 @@ hide:
   <!-- New element for displaying dynamic buttons -->
   <div id="linkButtons" style="display:flex; justify-content:center; margin-top:20px; gap:5px;"></div>
 
-  <!-- <h3>Stream link</h3> -->
-  <!-- <label for="m3u8Link">Stream Link: </label> -->
-  <button class="pushable" onclick="loadStream('vid1','videojs')"> <span class="front">Load Stream</span> </button> &nbsp
-  <input type="text" id="m3u8Link" style="width: 65%" placeholder="Enter your link here...">
-  <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 
 <!-- google ads -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6260920536615462" crossorigin="anonymous"></script>
@@ -215,6 +210,12 @@ data-ad-slot="1234567890"></ins>
 
 <!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
 <div class="content-column" >
+  <!-- <h3>Stream link</h3> -->
+  <!-- <label for="m3u8Link">Stream Link: </label> -->
+  <button class="pushable" onclick="loadStream('vid1','videojs')"> <span class="front">Load Stream</span> </button> &nbsp
+  <input type="text" id="m3u8Link" style="width: 65%" placeholder="Enter your link here...">
+  <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
+
   <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
