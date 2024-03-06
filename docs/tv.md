@@ -25,7 +25,7 @@ hide:
     font-size: 12pt;
     background: #007ACC;     /*  hsl(345deg 100% 47%);  */
     color: white;
-    /* transform: translateY(-4px); */
+    transform: translateY(-4px);
   }
 
   .pushable:active .front {
