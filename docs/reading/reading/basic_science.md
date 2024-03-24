@@ -28,44 +28,32 @@ table, td, th {border: none!important;  margin-top:-20px; margin-bottom:0px; pad
 
 ### Advanced Mechanics
 
-|                                                |          |                                                                                                                                                                                                                                                       |
-| :--------------------------------------------- | :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Advanced Engineering Dynamics                  | Harrison | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/Advanced%20Engineering%20Dynamics.pdf){target="_blank"}                                                                                                                                        |
-| Fundamentals of Protein Structure and Function |          | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/CHEM/Fundamentals%20of%20Protein%20Structure%20and%20Function%20-%20E%20Buxbaum.pdf){target="_blank"}                                                  |
-| Equilibrium Thermodynamics                     |          | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/PHYSICS/Equilibrium%20Thermodynamics%20Second%20Edition%20by%20Mario%20J.%20de%20Oliveira.pdf){target="_blank"}                                        |
-| Quantum Mechanics: Concepts and applications   |          | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/PHYSICS/Quantum%20Mechanics%20Concepts%20and%20Applications%20Second%20Edition%20by%20Nouredine%20Zettili.pdf){target="_blank"}                        |
-| Quantum Theory and Statistical Thermodynamics  |          | [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/PHYSICS/Quantum%20Theory%20and%20Statistical%20Thermodynamics%20Principles%20and%20Worked%20Examples%20by%20Peter%20Hertel%20(1).pdf){target="_blank"} |
+- Advanced Engineering Dynamics - Harrison - [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/MED/Advanced%20Engineering%20Dynamics.pdf){target="_blank"}                                                                                                                                        
+- Fundamentals of Protein Structure and Function - [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/CHEM/Fundamentals%20of%20Protein%20Structure%20and%20Function%20-%20E%20Buxbaum.pdf){target="_blank"}                                                  
+- Equilibrium Thermodynamics - [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/PHYSICS/Equilibrium%20Thermodynamics%20Second%20Edition%20by%20Mario%20J.%20de%20Oliveira.pdf){target="_blank"}                                        
+- Quantum Mechanics: Concepts and applications - [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/PHYSICS/Quantum%20Mechanics%20Concepts%20and%20Applications%20Second%20Edition%20by%20Nouredine%20Zettili.pdf){target="_blank"}                        
+- Quantum Theory and Statistical Thermodynamics - [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/PHYSICS/Quantum%20Theory%20and%20Statistical%20Thermodynamics%20Principles%20and%20Worked%20Examples%20by%20Peter%20Hertel%20(1).pdf){target="_blank"} 
 
 ## Physics
 
-|                     |      |                                                                                               |
-| :------------------ | :--- | :-------------------------------------------------------------------------------------------- |
-| Chemistry           |      | [html](https://openstax.org/books/chemistry-2e/pages/preface){target="_blank"}                |
-| Physic 1            |      | [html](https://openstax.org/books/university-physics-volume-1/pages/preface){target="_blank"} |
-| Physic 2            |      | [html](https://openstax.org/books/university-physics-volume-2/pages/preface){target="_blank"} |
-| Physic 3            |      | [html](https://openstax.org/books/university-physics-volume-3/pages/preface){target="_blank"} |
-| Theoretical Physics |      | [html](https://www.theoretical-physics.com){target="_blank"}                                  |
-| Statistical Physics |      | [html](https://statisticalphysics.leima.is){target="_blank"}                                  |
-| Physics Notebook    |      | [html](https://physics.leima.is){target="_blank"}                                             |
+- Chemistry - [html](https://openstax.org/books/chemistry-2e/pages/preface){target="_blank"}                
+- Physic 1 - [html](https://openstax.org/books/university-physics-volume-1/pages/preface){target="_blank"} 
+- Physic 2 - [html](https://openstax.org/books/university-physics-volume-2/pages/preface){target="_blank"} 
+- Physic 3 - [html](https://openstax.org/books/university-physics-volume-3/pages/preface){target="_blank"} 
+- Theoretical Physics - [html](https://www.theoretical-physics.com){target="_blank"}                                  
+- Statistical Physics - [html](https://statisticalphysics.leima.is){target="_blank"}                                  
+- Physics Notebook - [html](https://physics.leima.is){target="_blank"}                                             
 
 
 ## Mathematics
 
 - Jupyter Guide to Linear Algebra [Notebook](https://bvanderlei.github.io/jupyter-guide-to-linear-algebra/intro.html){target="_blank"}
-
 - Tensor_Vertor_Note - [pdf](./pdf/Tensor_Vertor_Note.pdf){target="_blank"}
-
 - Advanced Engineering Mathematics - E. Kreyszig - [pdf](./pdf/math_EngineeringMath_EKreyszig.pdf){target="_blank"}    
-
 - Understanding Engineering Mathematics - [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/MATHEMATICS/Understanding%20Engineering%20Mathematics%20by%20John%20Bird.pdf){target="_blank"}  
-
 - Vector Calculus - [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/MATHEMATICS/Vector%20Calculus%206th%20Edition%20by%20Jerrold%20E.%20Marsde%20and%20Anthony%20Tromba.pdf){target="_blank"} 
-
 - A CONCISE HANDBOOK OF MATHEMATICS, PHYSICS, AND ENGINEERING SCIENCES - [pdf](http://202.91.76.90:81/fdScript/RootOfEBooks/E%20BOOKS%20COLLECTION%202020%20%20DATA%202/MATHEMATICS/A%20Concise%20Handbook%20of%20Mathematics,%20Physics,%20and%20Engineering%20Sciences%20by%20Andrei%20D.%20Polyanin%20and%20Alexei%20I.%20Chernoutsan.pdf){target="_blank"} 
-
 - MINIMUM MATHEMATICS - [pdf](./pdf/maths_MinMath_PhuNguyen.pdf){target="_blank"}   
-
 - Introduction to Tensor Calculus - [pdf](./pdf/Introduction_to_Tensor_Calculus.pdf){target="_blank"}   
-
 - Statistics - Gül - [Notebook](https://gulinan.github.io/mat244e){target="_blank"}                        
 
