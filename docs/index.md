@@ -72,7 +72,7 @@ else:
 
   <div class="container-text">
   <p>
-    This site serves as the repo for my personal notes. <br>
+    This site serves as a repo for my personal notes. <br>
     The contents reflect neither community nor third-party rules, rather, they're messy, improvised, and inevitable for some rare situations but meanless for almost others.  <br>
     It isn't abnormal if you find nothing valuable here since they aren't noted for you, hence just enjoy Felix's excellent pieces or move your sight elsewhere.
   </p>
