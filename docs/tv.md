@@ -293,14 +293,17 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://edge2.laotv.la/live/K+Sport1/index.m3u8')"> <span class="front">K+ sport 1</span> </button>
   <button class="pushable" onclick="loadPlayer('https://edge1.laotv.la/live/K+Sport2/index.m3u8')"> <span class="front">K+ sport 2</span> </button>
   
-  <h3>SCTV</h3>
-  <button class="pushable" onclick="loadPlayer('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV14.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 14</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV17.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 17</span> </button>
-
   <br> <br>
-  <button class="pushable" onclick="loadPlayer('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button>
+  <!-- <button class="pushable" onclick="loadPlayer('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button> -->
   <button class="pushable" onclick="loadPlayer('https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8')"> <span class="front">TVB Vietnam</span> </button>
+
+
+  <!-- <h3>SCTV</h3> -->
+  <!-- <button class="pushable" onclick="loadPlayer('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button> -->
+  <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV14.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 14</span> </button>
+  <!-- <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV17.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 17</span> </button> -->
+
+
 
 
   <!-- <h3>HTV - HTVC</h3>
