@@ -311,6 +311,18 @@ data-ad-slot="1234567890"></ins>
 
 <h3>VTV - VTC</h3>
 
+  <button class="pushable" onclick="loadPlayer(['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv1-720p.m3u8','https://edge1.laotv.la/live/VTV1SD/index.m3u8'])"> <span class="front">VTV 1</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv2-720p.m3u8')"> <span class="front">VTV 2</span> </button>
+  <button class="pushable" onclick="loadPlayer(['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv3-720p.m3u8','https://edge1.laotv.la/live/VTV3/index.m3u8'])"> <span class="front">VTV 3</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5-720p.m3u8')"> <span class="front">VTV 5</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tnb-720p.m3u8')"> <span class="front">VTV 5 Tay Nam Bo</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tn-720p.m3u8')"> <span class="front">VTV 5 Tay Nguyen</span> </button>
+
+<br> <br>
+  <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:VTVCAB16.smil/chunklist_w2005840737_b1692000.m3u8')"> <span class="front">VTVCab 16</span> </button>
+
+
+<br> <br>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC1/playlist.m3u8')"> <span class="front">VTC 1</span> </button>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC2/playlist.m3u8')"> <span class="front">VTC 2</span> </button>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC3/playlist.m3u8')"> <span class="front">VTC 3</span> </button>
@@ -326,16 +338,6 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC13/playlist.m3u8')"> <span class="front">VTC 13</span> </button>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC14/playlist.m3u8')"> <span class="front">VTC 14</span> </button>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC16/playlist.m3u8')"> <span class="front">VTC 16</span> </button>
-
-  <br> <br>
-  <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:VTVCAB16.smil/chunklist_w2005840737_b1692000.m3u8')"> <span class="front">VTVCab 16</span> </button>
-
-<br> <br>
-  <button class="pushable" onclick="loadPlayer(['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv1-720p.m3u8','https://edge1.laotv.la/live/VTV1SD/index.m3u8'])"> <span class="front">VTV 1</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv2-720p.m3u8')"> <span class="front">VTV 2</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv3-720p.m3u8','https://edge1.laotv.la/live/VTV3/index.m3u8'])"> <span class="front">VTV 3</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://liveh12.vtvcab.vn/hls/ONVTV5_CL/04.m3u8')"> <span class="front">VTV 5</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://liveh12.vtvcab.vn/hls/ONVTV5TNB_CL/04.m3u8')"> <span class="front">VTV 5 Tay Nam Bo</span> </button>
 
 
 
