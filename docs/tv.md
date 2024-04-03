@@ -284,6 +284,10 @@ data-ad-slot="1234567890"></ins>
 
 
 <h3>Vietnamese Channels</h3>
+
+  <button class="pushable" onclick="loadPlayer('https://edge2.laotv.la/live/K+Sport1/index.m3u8')"> <span class="front">K+ sport 1</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://edge1.laotv.la/live/K+Sport2/index.m3u8')"> <span class="front">K+ sport 2</span> </button>
+  
   <h3>SCTV</h3>
   <button class="pushable" onclick="loadPlayer('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button>
   <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV14.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 14</span> </button>
@@ -345,7 +349,7 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC13/playlist.m3u8')"> <span class="front">VTC 13</span> </button>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC14/playlist.m3u8')"> <span class="front">VTC 14</span> </button>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC16/playlist.m3u8')"> <span class="front">VTC 16</span> </button>
-
+  <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/playlist.m3u8')"> <span class="front">VOV</span> </button>
 
 
   <h3>Dia Phuong</h3>
