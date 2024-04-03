@@ -337,7 +337,7 @@ data-ad-slot="1234567890"></ins>
 
 
 
-<br> <br>
+<!-- <br> <br>
   <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:VTVCAB16.smil/chunklist_w2005840737_b1692000.m3u8')"> <span class="front">VTVCab 16</span> </button>
 
 
@@ -356,7 +356,7 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC12/playlist.m3u8')"> <span class="front">VTC 12</span> </button>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC13/playlist.m3u8')"> <span class="front">VTC 13</span> </button>
   <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC14/playlist.m3u8')"> <span class="front">VTC 14</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC16/playlist.m3u8')"> <span class="front">VTC 16</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC16/playlist.m3u8')"> <span class="front">VTC 16</span> </button> -->
   <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/playlist.m3u8')"> <span class="front">VOV</span> </button>
 
 
