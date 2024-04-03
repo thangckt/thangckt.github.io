@@ -314,6 +314,7 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer(['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv1-720p.m3u8','https://edge1.laotv.la/live/VTV1SD/index.m3u8'])"> <span class="front">VTV 1</span> </button>
   <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv2-720p.m3u8')"> <span class="front">VTV 2</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv3-720p.m3u8','https://edge1.laotv.la/live/VTV3/index.m3u8'])"> <span class="front">VTV 3</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv4-720p.m3u8')"> <span class="front">VTV 4</span> </button>
   <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5-720p.m3u8')"> <span class="front">VTV 5</span> </button>
   <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tnb-720p.m3u8')"> <span class="front">VTV 5 Tay Nam Bo</span> </button>
   <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tn-720p.m3u8')"> <span class="front">VTV 5 Tay Nguyen</span> </button>
