@@ -317,6 +317,12 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5-720p.m3u8')"> <span class="front">VTV 5</span> </button>
   <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tnb-720p.m3u8')"> <span class="front">VTV 5 Tay Nam Bo</span> </button>
   <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tn-720p.m3u8')"> <span class="front">VTV 5 Tay Nguyen</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv7-720p.m3u8')"> <span class="front">VTV 7</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv8-720p.m3u8')"> <span class="front">VTV 8</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv9-720p.m3u8')"> <span class="front">VTV 9</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv6-720p.m3u8')"> <span class="front">VTV Can Tho</span> </button>
+
+
 
 <br> <br>
   <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:VTVCAB16.smil/chunklist_w2005840737_b1692000.m3u8')"> <span class="front">VTVCab 16</span> </button>
