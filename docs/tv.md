@@ -360,7 +360,7 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/playlist.m3u8')"> <span class="front">VOV</span> </button>
 
 
-  <h3>Dia Phuong</h3>
+  <h3>Local</h3>
   <!-- <h4>Song Cuu Long</h4> -->
   <button class="pushable" onclick="loadPlayer('https://live.canthotv.vn/live/tv/chunklist.m3u8')"> <span class="front">Can Tho</span> </button>
   <button class="pushable" onclick="loadPlayer('https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8')"> <span class="front">Tra Vinh 1</span> </button>
