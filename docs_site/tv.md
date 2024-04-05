@@ -115,7 +115,7 @@ hide:
                 return 'video/webm';
             // Add more cases as needed
             default:
-            return 'application/x-mpegURL';
+                return 'application/x-mpegURL';
         }
     }
 
