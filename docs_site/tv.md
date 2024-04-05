@@ -123,10 +123,8 @@ hide:
         window.scrollTo(0, 0); // Scroll to the top after loading the video
 
         var player = videojs(vidID);
-        // Call plugin here, before load src
-        // player.hlsQualitySelector({displayCurrentQuality: true});
-
         var mimeType = getMimeType(videoURL);
+
         if(mimeType === 'video/youtube') {
             player.tech({ IWillNotUseThisInPlugins: true });
         }
@@ -211,7 +209,7 @@ hide:
 <!-- FIRST COLUMN: VIDEO FRAME,  class="video-js" -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
-    <video id="vid1"  controls preload="none" autoplay style="position:absolute; width:100%; height:100%; left:0px; top:0px;" ></video>
+    <video id="vid1" class="video-js" controls preload="none" autoplay style="position:absolute; width:100%; height:100%; left:0px; top:0px;" ></video>
   </div>
 
   <!-- container for displaying dynamic buttons -->
