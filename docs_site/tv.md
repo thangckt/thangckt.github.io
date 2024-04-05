@@ -82,105 +82,84 @@ hide:
 <!-- LOAD LIBS -->
 <!-- <script src="https://www.unpkg.com/browse/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/4.0.0/videojs-contrib-quality-levels.min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script> -->
 <!-- <script src="https://unpkg.com/browse/@videojs/http-streaming@3.11.1/dist/videojs-http-streaming.min.js"></script> -->
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script> -->
 
+<!-- for youtube -->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script>
+
 
 <!-- DEFINE SCRIPT JS -->
 <script>
-    // Automatically load and play default video when page loads
+    // Automatically load and play default video when the page loads
     window.addEventListener('load', function () {
         playVideojs('https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8');
     });
 
 
-    //##### Functions to play video, use Videojs or Hls
-    function playVideojs(videoURL, vidElementID='vid1'){
-      window.scrollTo(0, 0); // Scroll to the top after loading the video
-      // Change class of video tag
-      var playerElement = document.getElementById(vidElementID);
-      if (!playerElement.classList.contains("video-js")) { // Check if the class does not exist
-         playerElement.classList.add("video-js"); // Add the new class
-      }
+    //##### Functions to play video, use only Videojs for simplicity
+    function getMimeType(url) {
+        if (url.includes('youtube.com') || url.includes('youtu.be')) {
+            return 'video/youtube';
+        }
 
-      var player = videojs(vidElementID);
-      // Call plugin here, before load src
-      // player.hlsQualitySelector({displayCurrentQuality: true});
-      player.src({ src: videoURL, type: 'application/x-mpegURL' });
-      player.play();
+        var extension = url.split('.').pop();
+        switch (extension) {
+            case 'm3u8':
+                return 'application/x-mpegURL';
+            case 'mp4':
+                return 'video/mp4';
+            case 'webm':
+                return 'video/webm';
+            // Add more cases as needed
+            default:
+            return 'application/octet-stream';
+        }
+    }
+
+    function playVideojs(videoURL, vidID='vid1'){
+        window.scrollTo(0, 0); // Scroll to the top after loading the video
+
+        var player = videojs(vidID);
+        // Call plugin here, before load src
+        // player.hlsQualitySelector({displayCurrentQuality: true});
+
+        var mimeType = getMimeType(videoURL);
+        if(mimeType === 'video/youtube') {
+            player.tech({ IWillNotUseThisInPlugins: true });
+        }
+        player.src({ src: videoURL, type: mimeType });
+        player.play();
     };
-
-    function playHls(videoURL, vidElementID='vid1'){
-      window.scrollTo(0, 0); // Scroll to the top after loading the video
-      // Change class of video tag
-      var playerElement = document.getElementById(vidElementID);
-      if (playerElement.classList.contains("video-js")) { // Check if the class exists
-          playerElement.classList.remove("video-js"); // Remove the existing class
-      }
-
-      var player = document.getElementById(vidElementID);
-      if (Hls.isSupported()) {
-          var hls = new Hls();
-          hls.loadSource(videoURL);
-          hls.attachMedia(player);
-          hls.on(Hls.Events.MANIFEST_PARSED, function() {
-              player.play();
-          });
-      } else if (player.canPlayType("application/vnd.apple.mpegurl")) {
-          player.src = videoURL;
-          player.addEventListener('canplay', function() {
-              player.play();
-          });
-      }
-    };
-
-
-    //##### Implementation: first tries to play the link using playVideojs(), and if that fails, then use playHls(). But this may not need, since Videojs also has Hls
-    // function playVideoLink(videoURL, vidElementID='vid1') {
-    // var playerElement = document.getElementById(vidElementID);
-
-    // playerElement.addEventListener('error', function() {
-    //     console.log('playVideojs failed, trying playHls');
-    //     playHls(videoURL, vidElementID);
-    // }, { once: true });
-
-    // playVideojs(videoURL, vidElementID);
-    // }
 
 
     //##### Functions to load videos to HTML video tag
-    function loadStream(vidElementID='vid1', method='videojs') {
+    function loadStream(vidID='vid1') {
         var videoURL = document.getElementById("m3u8Link").value;
         if (!videoURL) {
             alert("Please enter a stream link.");
             return;
         };
-        // playVideoLink(videoURL, vidElementID);
-
-        if (method === 'hls'){
-            playHls(videoURL, vidElementID);
-        } else if (method === 'videojs'){
-            playVideojs(videoURL, vidElementID);
-        }
+        playVideojs(videoURL, vidID);
     };
 
-      function loadPlayer(videoURLs, buttElementID='linkButton') {
-          var videoURL;
-          if (Array.isArray(videoURLs)) {
-              if (videoURLs.length > 1) {
-                  createLinkButton(videoURLs, buttElementID);
-              }
-              videoURL = videoURLs[0];
-          } else {
-              // Clean existing buttons
-              var buttonsContainer = document.getElementById(buttElementID);
-              buttonsContainer.innerHTML = '';
-              videoURL = videoURLs;
-          }
-          playVideojs(videoURL);
-      };
+    function loadPlayer(videoURLs, buttElementID='linkButton') {
+        var videoURL;
+        if (Array.isArray(videoURLs)) {
+            if (videoURLs.length > 1) {
+                createLinkButton(videoURLs, buttElementID);
+            }
+            videoURL = videoURLs[0];
+        } else {
+            // Clean existing buttons
+            var buttonsContainer = document.getElementById(buttElementID);
+            buttonsContainer.innerHTML = '';
+            videoURL = videoURLs;
+        }
+        playVideojs(videoURL);
+    };
 
 
     //##### Functions to create link buttons below the video frame
