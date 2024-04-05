@@ -3,7 +3,7 @@ site_author: Cao Thang Nguyen
 site_url: https://thangckt.github.io
 repo_url: ""
 edit_uri: "https://github.dev/thangckt/thangckt.github.io/tree/main/docs_site"
-
+docs_dir: docs_site
 
 
 ## Copyright
