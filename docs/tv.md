@@ -343,7 +343,7 @@ data-ad-slot="1234567890"></ins>
 
 
 <h3>Music</h3>
-  <button class="pushable" onclick="loadYoutube(['https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8'])"> <span class="front">Spirit</span> </button>
+  <button class="pushable" onclick="loadYoutube(['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8'])"> <span class="front">Spirit TV</span> </button>
 
 
 <h3>Show</h3>
