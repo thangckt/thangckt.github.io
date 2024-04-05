@@ -292,6 +292,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8']},
+        {text: 'CNN Int.', URL: ['https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8']},
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
         {text: 'CNA', URL: ['https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8']},
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
@@ -356,9 +357,15 @@ data-ad-slot="1234567890"></ins>
         {text: 'Animal Planet', URL: ['https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8']},
         {text: 'Discovery SEA', URL: ['https://ctrl.laotv.la/live/Discovery/index.m3u8']},
         {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8']},
+        {text: 'Love Nature', URL: ['https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/quietude/playlist.m3u8','https://d18dyiwu97wm6q.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/LoveNature4K2-prod/playlist.m3u8']},
+        {text: 'Better Life', URL: ['https://tgn.bozztv.com/betterlife/betternature/betternature/index.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
+
+
+https://live.playstop.me/LS-63503-4/index.m3u8
+
 
 
 <h3>Movie</h3>
