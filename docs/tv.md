@@ -338,6 +338,8 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://wms4-kortv.akamaized.net/a_live/63719963/smil:20ch011.smil/chunklist_b2500000.m3u8')"> <span class="front">KBS World</span> </button>
 
   <button class="pushable" onclick="loadPlayer('https://minerva-bizzarromovies-1-it.samsung.wurl.tv/playlist.m3u8')"> <span class="front">B4U Movies</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://i.mjh.nz/SamsungTVPlus/USBD17000117B.m3u8')"> <span class="front">MovieSphere</span> </button>
+
 
 
 
