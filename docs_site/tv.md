@@ -52,6 +52,7 @@ hide:
       max-height: 85vh;
       overflow-y: auto;
       position: relative;
+      display: flex;
       gap: 5px;
   }
 
