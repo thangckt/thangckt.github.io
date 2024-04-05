@@ -244,7 +244,7 @@ data-ad-slot="1234567890"></ins>
 
 <!-- <h3>Stream link</h3> -->
   <!-- <label for="m3u8Link">Stream Link: </label> -->
-  <button class="pushable" onclick="loadStream(vidElementID='vid1')"> <span class="front">Load URL</span> </button> &nbsp
+  <button class="pushable" onclick="loadStream()"> <span class="front">Load URL</span> </button> &nbsp
   <input type="text" id="m3u8Link" style="width: 65%" placeholder="Enter your link here...">
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 
