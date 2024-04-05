@@ -119,6 +119,10 @@ hide:
     };
 
     function loadPlayer(videoURLs, buttElementID='linkButton') {
+        // Clean existing buttons: this clean any existed button at the container with ID=ElementID
+        var buttonsContainer = document.getElementById(buttElementID);
+        buttonsContainer.innerHTML = '';
+
         var videoURL;
         if (Array.isArray(videoURLs)) {
             if (videoURLs.length > 1) {
@@ -126,9 +130,6 @@ hide:
             }
             videoURL = videoURLs[0];
         } else {
-            // Clean existing buttons
-            var buttonsContainer = document.getElementById(buttElementID);
-            buttonsContainer.innerHTML = '';
             videoURL = videoURLs;
         }
         playVideojs(videoURL);
@@ -137,10 +138,6 @@ hide:
 
     //##### Functions to create link buttons below the video frame
     function createLinkButton(videoURLs, buttElementID='linkButton'){
-        // Clean existing buttons: this clean any existed button at the container with ID=ElementID
-        var buttonsContainer = document.getElementById(buttElementID);
-        buttonsContainer.innerHTML = '';
-
         // Loop through the array and create buttons for each link
         videoURLs.forEach(function (url, index) {
             var button = document.createElement('button');
