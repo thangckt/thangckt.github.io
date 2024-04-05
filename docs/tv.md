@@ -356,7 +356,7 @@ data-ad-slot="1234567890"></ins>
 
 <h3>Show</h3>
 <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8'])"> <span class="front">BBC Food</span> </button>
-
+<button class="pushable" onclick="loadPlayer(['https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8'])"> <span class="front">YouTV</span> </button>
 
 
 
