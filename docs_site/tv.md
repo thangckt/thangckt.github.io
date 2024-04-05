@@ -240,9 +240,9 @@ hide:
 
 
 <!-- google ads -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6260920536615462" crossorigin="anonymous"></script>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6260920536615462" crossorigin="anonymous"></script> -->
 <!-- Homepage Leaderboard -->
-<br>
+<!-- <br> -->
 <!-- <ins class="adsbygoogle"
 style="display:inline-block;width:728px;height:90px"
 data-ad-client="ca-pub-6260920536615462"
@@ -408,17 +408,17 @@ data-ad-slot="1234567890"></ins>
     createListChannelButton(listButtons, 'content-column');
 </script>
 
-  <br> <br>
-  <!-- <button class="pushable" onclick="loadPlayer('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button> -->
-  <button class="pushable" onclick="loadPlayer('https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8')"> <span class="front">TVB Vietnam</span> </button>
-
-
-  <!-- <h3>SCTV</h3> -->
-  <!-- <button class="pushable" onclick="loadPlayer('https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8')"> <span class="front">SCTV 1</span> </button> -->
-  <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV14.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 14</span> </button>
-  <!-- <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV17.smil/chunklist_b1692000.m3u8')"> <span class="front">SCTV 17</span> </button> -->
-
-
+<br> <br>
+<script>
+    var listButtons = [
+        {text: 'SCTV 14', URL: ['https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV14.smil/chunklist_b1692000.m3u8']},
+        // {text: 'SCTV 17', URL: ['https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV17.smil/chunklist_b1692000.m3u8']},
+        // {text: 'SCTV 1', URL: ['https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8']},
+        // {text: 'Phim Hay', URL: ['https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8']},
+        {text: 'TVB Vietnam', URL: ['https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8']}
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
   <!-- <h3>HTV - HTVC</h3>
