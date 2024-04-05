@@ -291,9 +291,14 @@ data-ad-slot="1234567890"></ins>
 
 
 
+<h3>Documentary</h3>
+  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/CABC2300019UD.m3u8'])"> <span class="front">Documentary +</span> </button>
 
 
-  <h3>Discovery - Documentary</h3>
+
+
+
+<h3>Discovery</h3>
   <button class="pushable" onclick="loadPlayer('https://hncfree-samsungau.amagi.tv/playlist.m3u8')"> <span class="front">Horse&Country</span> </button>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8')"> <span class="front">Animal Planet</span> </button>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/Discovery/index.m3u8')"> <span class="front">Discovery Channel SEA</span> </button>
@@ -310,9 +315,7 @@ data-ad-slot="1234567890"></ins>
 
 
 
-
-
-  <h3>Movies</h3>
+<h3>Movies</h3>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/HBO/index.m3u8')"> <span class="front">HBO</span> </button>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/Cinemax/index.m3u8')"> <span class="front">Cinemax</span> </button>
 <button class="pushable" onclick="loadPlayer('https://ucdn.beetv.kz/btv/live/hls/000000239.m3u8')"> <span class="front">CINEMA</span> </button>
