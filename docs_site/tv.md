@@ -183,7 +183,7 @@ hide:
       };
 
 
-    //##### Functions to create link buttons below video frame
+    //##### Functions to create link buttons below the video frame
     function createLinkButton(videoURLs, buttElementID='linkButton'){
         // Clean existing buttons: this clean any existed button at the container with ID=ElementID
         var buttonsContainer = document.getElementById(buttElementID);
@@ -201,6 +201,17 @@ hide:
             buttonsContainer.appendChild(button);
         });
     };
+
+    //##### Functions to create channel buttons
+    function createChannelButton(videoURLs, buttonText) {
+        var button = document.createElement('button');
+        button.className = 'pushable';
+        button.onclick = function () {
+            loadPlayer(videoURLs);
+        };
+        button.innerHTML = '<span class="front">' + buttonText + '</span>';
+        return button;
+    }
 </script>
 
 
@@ -237,7 +248,7 @@ data-ad-slot="1234567890"></ins>
 
 
 <!-- SECOND COLUMN: BUTTONS - ADD LINK FOR CHANNEL-->
-<div class="content-column" >
+<div class="content-column" id="content-column">
 
 <!-- <h3>Stream link</h3> -->
   <!-- <label for="m3u8Link">Stream Link: </label> -->
@@ -275,14 +286,23 @@ data-ad-slot="1234567890"></ins>
 
 <h3>News - EU</h3>
 
-  <br><br>
-  <button class="pushable" onclick="loadPlayer(['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8'])"> <span class="front">DW</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8')"> <span class="front">EURO</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8')"> <span class="front">France 24</span> </button>
+<script>
+    // List of buttons to create
+    var buttons = [
+        { url: ['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8'], text: 'DW' },
+        { url: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8', text: 'EURO' },
+        { url: 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8', text: 'France 24'},
+        { url: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8'], text: 'Sky News'}
+    ];
 
-  <br><br>
-  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8'])"> <span class="front">Sky News</span> </button>
-
+    // Get the container for the buttons
+    var container = document.getElementById('content-column');
+    // Create and append each button
+    buttons.forEach(function (buttonInfo) {
+        var button = createChannelButton(buttonInfo.url, buttonInfo.text);
+        container.appendChild(button);
+    });
+</script>
 
 <h3>News - Asia</h3>
 
