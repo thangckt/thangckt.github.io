@@ -95,7 +95,7 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        playVideoLink('https://ctrl.laotv.la/live/DW/index.m3u8');
+        playHls('https://ctrl.laotv.la/live/DW/index.m3u8');
     });
 
 
