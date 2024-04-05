@@ -248,7 +248,7 @@ data-ad-slot="1234567890"></ins>
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 
   <!-- <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p> -->
-  <h3>News US</h3>
+<h3>News US</h3>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
@@ -274,14 +274,14 @@ data-ad-slot="1234567890"></ins>
 
 
 
- <h3>News EU</h3>
+<h3>News EU</h3>
 
   <br><br>
   <button class="pushable" onclick="loadPlayer(['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8'])"> <span class="front">DW</span> </button>
   <button class="pushable" onclick="loadPlayer('https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8')"> <span class="front">EURO</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8')"> <span class="front">France 24</span> </button>
 
- <h3>News Asia</h3>
+<h3>News Asia</h3>
 
   <br><br>
   <button class="pushable" onclick="loadPlayer(['https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8','https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8','https://ctrl.laotv.la/live/ABCA/index.m3u8'])"> <span class="front">ABC Au</span> </button>
@@ -293,8 +293,6 @@ data-ad-slot="1234567890"></ins>
 
 <h3>Documentary</h3>
   <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/CABC2300019UD.m3u8'])"> <span class="front">Documentary +</span> </button>
-
-
 
 
 
@@ -315,16 +313,20 @@ data-ad-slot="1234567890"></ins>
 
 
 
-<h3>Movies</h3>
+
+<h3>Movie</h3>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/HBO/index.m3u8')"> <span class="front">HBO</span> </button>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/Cinemax/index.m3u8')"> <span class="front">Cinemax</span> </button>
-<button class="pushable" onclick="loadPlayer('https://ucdn.beetv.kz/btv/live/hls/000000239.m3u8')"> <span class="front">CINEMA</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://ucdn.beetv.kz/btv/live/hls/000000239.m3u8')"> <span class="front">CINEMA</span> </button>
 
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/smc_720p/playlist.m3u8')"> <span class="front">Sony</span> </button>
   <button class="pushable" onclick="loadPlayer('https://wms4-kortv.akamaized.net/a_live/63719963/smil:20ch011.smil/chunklist_b2500000.m3u8')"> <span class="front">KBS World</span> </button>
 
 
- <h3>Sport</h3>
+
+
+
+<h3>Sport</h3>
   <button class="pushable" onclick="loadPlayer('https://edge1.laotv.la/live/BosiGolf/index.m3u8')"> <span class="front">Golf 2</span> </button>
 
 
@@ -407,7 +409,7 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/playlist.m3u8')"> <span class="front">VOV</span> </button>
 
 
-  <h3>Local</h3>
+<h3>Local</h3>
   <!-- <h4>Song Cuu Long</h4> -->
   <button class="pushable" onclick="loadPlayer('https://live.canthotv.vn/live/tv/chunklist.m3u8')"> <span class="front">Can Tho</span> </button>
   <button class="pushable" onclick="loadPlayer('https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8')"> <span class="front">Tra Vinh 1</span> </button>
@@ -419,21 +421,21 @@ data-ad-slot="1234567890"></ins>
 
 <br> <br>
 
-  <!-- <h4>Dong Nam Bo</h4> -->
+<!-- <h4>Dong Nam Bo</h4> -->
   <button class="pushable" onclick="loadPlayer('https://cdn.baobinhphuoc.com.vn/live/28550d6213460634105b0bae21016f68bce/playlist.m3u8')"> <span class="front">Binh Phuoc 2</span> </button>
 <br> <br>
 
-  <!-- <h4>Tay Nguyen</h4> -->
+<!-- <h4>Tay Nguyen</h4> -->
   <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8')"> <span class="front">Dak Lak</span> </button>
   <button class="pushable" onclick="loadPlayer('https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8')"> <span class="front">Dak Nong</span> </button>
 <br> <br>
 
-  <!-- <h4>Nam Trung Bo</h4> -->
+<!-- <h4>Nam Trung Bo</h4> -->
   <button class="pushable" onclick="loadPlayer('https://60acee235f4d5.streamlock.net/live/mystream/playlist.m3u8')"> <span class="front">Ninh Thuan</span> </button>
   <button class="pushable" onclick="loadPlayer('https://64d0d74b76158.streamlock.net/BTVTV/binhthuantv/chunklist.m3u8')"> <span class="front">Binh Thuan</span> </button>
 <br> <br>
 
-  <!-- <h4>Bac Trung Bo</h4> -->
+<!-- <h4>Bac Trung Bo</h4> -->
   <!-- <button class="pushable" onclick="loadPlayer('')"> <span class="front">Thanh Hoa</span> </button> -->
   <!-- <button class="pushable" onclick="loadPlayer('')"> <span class="front">Nghe An</span> </button> -->
   <button class="pushable" onclick="loadPlayer('https://wse.hatinhtv.net/live/httv1/playlist.m3u8')"> <span class="front">Ha Tinh</span> </button>
@@ -443,7 +445,7 @@ data-ad-slot="1234567890"></ins>
 <br> <br>
 
 
-  <!-- <h4>Dong Bang Song Hong</h4> -->
+<!-- <h4>Dong Bang Song Hong</h4> -->
   <button class="pushable" onclick="loadPlayer('https://cecex9g5cpliv.vcdn.cloud/capture/smil:HN1.smil/chunklist_b3128000_slen.m3u8')"> <span class="front">Ha Noi 1</span> </button>
     <button class="pushable" onclick="loadPlayer('https://cecex9g5cpliv.vcdn.cloud/live/smil:HN2.smil/chunklist_b3128000_slen.m3u8')"> <span class="front">Ha Noi 2</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.hanamtv.vn/live/285361fcafcd0ec47bba2fa3f5870f8dc72/chunklist.m3u8')"> <span class="front">Ha Nam</span> </button>
@@ -457,7 +459,7 @@ data-ad-slot="1234567890"></ins>
 
 <br> <br>
 
-  <!-- <h4>Dong Bac</h4> -->
+<!-- <h4>Dong Bac</h4> -->
   <button class="pushable" onclick="loadPlayer('https://live.tuyenquangtv.vn/hls/ttv.m3u8')"> <span class="front">Tuyen Quang</span> </button>
   <button class="pushable" onclick="loadPlayer('https://streaming.thainguyentv.vn/hls/livestream.m3u8')"> <span class="front">Thai Nguyen</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8', 'https://live.mediatech.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8'])"> <span class="front">Lang Son</span> </button>
@@ -475,6 +477,8 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://media.streambrothers.com:1936/8228/8228/playlist.m3u8')"> <span class="front">Little Saigon</span> </button>
   <button class="pushable" onclick="loadPlayer('https://5dcab9aed5331.streamlock.net/SET1/livestream/playlist.m3u8')"> <span class="front">SET TV 1</span> </button>
   <button class="pushable" onclick="loadPlayer('https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8')"> <span class="front">SET TV 2</span> </button>
+
+
 
 <!-- Visitor -->
 <p align="center">
