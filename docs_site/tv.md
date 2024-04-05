@@ -101,7 +101,7 @@ hide:
 
     //##### Functions to play video, use only Videojs for simplicity
     function getMimeType(url) {
-        if (url.includes('youtube.com') || url.includes('youtu.be')) {
+        if (url.includes('youtube.com') || url.includes('youtube')) {
             return 'video/youtube';
         }
 
