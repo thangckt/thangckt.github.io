@@ -139,37 +139,15 @@ hide:
 
 
     //##### Implementation: first tries to play the link using playVideojs(), and if that fails, then use playHls()
-    function playVideojsPromise(videoURL, vidElementID='vid1') {
-        return new Promise((resolve, reject) => {
-            try {
-                playVideojs(videoURL, vidElementID);
-                resolve();
-            } catch (error) {
-                reject(error);
-            }
-        });
-    }
-
-    function playHlsPromise(videoURL, vidElementID='vid1') {
-        return new Promise((resolve, reject) => {
-            try {
-                playHls(videoURL, vidElementID);
-                resolve();
-            } catch (error) {
-                reject(error);
-            }
-        });
-    }
-
     function playVideoLink(videoURL, vidElementID='vid1') {
-        playVideojsPromise(videoURL, vidElementID)
-            .catch((error) => {
-                console.log('playVideojs failed, trying playHls');
-                playHlsPromise(videoURL, vidElementID)
-                    .catch((error) => {
-                        console.log('playHls also failed');
-                    });
-            });
+    var playerElement = document.getElementById(vidElementID);
+
+    playerElement.addEventListener('error', function() {
+        console.log('playVideojs failed, trying playHls');
+        playHls(videoURL, vidElementID);
+    }, { once: true });
+
+    playVideojs(videoURL, vidElementID);
     }
 
 
@@ -180,8 +158,8 @@ hide:
             alert("Please enter a stream link.");
             return;
         };
-        playHls(videoURL, vidElementID);
-        // playVideoLink(videoURL, vidElementID);
+        // playHls(videoURL, vidElementID);
+        playVideoLink(videoURL, vidElementID);
 
         // if (method === 'hls'){
         //     playHls(videoURL, vidElementID);
