@@ -109,10 +109,10 @@ hide:
       }
 
       var player = videojs(vidElementID);
-          // Call plugin here, before load src
-          // player.hlsQualitySelector({displayCurrentQuality: true});
-          player.src({ src: videoURL, type: 'application/x-mpegURL' });
-          player.play();
+      // Call plugin here, before load src
+      // player.hlsQualitySelector({displayCurrentQuality: true});
+      player.src({ src: videoURL, type: 'application/x-mpegURL' });
+      player.play();
     };
 
     function playHls(videoURL, vidElementID='vid1'){
@@ -169,7 +169,7 @@ hide:
         }
     };
 
-      function loadPlayer(videoURLs, buttElementID='linkButton') {
+      function loadPlayer(videoURLs, vidElementID='vid1', buttElementID='linkButton') {
           var videoURL;
           if (Array.isArray(videoURLs)) {
               if (videoURLs.length > 1) {
@@ -180,7 +180,7 @@ hide:
               cleanLinkButton(buttElementID); // Clear existing buttons
               videoURL = videoURLs;
           }
-          playVideojs(videoURL);
+          playVideojs(videoURL, vidElementID);
       };
 
 
@@ -251,7 +251,7 @@ data-ad-slot="1234567890"></ins>
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 
   <!-- <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p> -->
-  <h3>News</h3>
+  <h3>News US</h3>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
@@ -269,7 +269,7 @@ data-ad-slot="1234567890"></ins>
 
   <!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <br><br>
-  <button class="pushable" onclick="loadPlayer('https://d30x5vsa85tvmd.cloudfront.net/index_5.m3u8')"> <span class="front">CNN</span> </button>
+  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8'])"> <span class="front">CNN</span> </button>
   <button class="pushable" onclick="loadPlayer('https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8')"> <span class="front">ABC Us</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8','https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8','https://ctrl.laotv.la/live/ABCA/index.m3u8'])"> <span class="front">ABC Au</span> </button>
   <button class="pushable" onclick="loadPlayer('https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8')"> <span class="front">CNA</span> </button>
@@ -280,6 +280,12 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/Arirang/index.m3u8')"> <span class="front">Arirang</span> </button>
 
   <button class="pushable" onclick="loadPlayer('https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8')"> <span class="front">Bloomberg Asia</span> </button>
+
+ <h3>News EU</h3>
+
+
+ <h3>News Asia</h3>
+
 
 
   <h3>Discovery - Documentary</h3>
