@@ -227,9 +227,7 @@ hide:
 
 
 
-
-
-
+<!-- HTML CONTENT -->
 <div class="container">
 <!-- FIRST COLUMN: VIDEO FRAME,  class="video-js" -->
 <div class="video-column" >
@@ -257,7 +255,6 @@ data-ad-slot="1234567890"></ins>
 
 
 
-
 <!-- SECOND COLUMN: BUTTONS - ADD LINK FOR CHANNEL-->
 <div class="content-column" id="content-column">
 
@@ -281,8 +278,8 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://reuters-reutersnow-1-us.plex.wurl.tv/playlist.m3u8')"> <span class="front">Reuters</span> </button>
   <button class="pushable" onclick="loadPlayer('https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8')"> <span class="front">Wion</span> </button>
 
-  <!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <br><br>
+  <!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
 <script>
     // Use the script to void repeated creation of buttons line-by-line as in above
     // List of buttons to create
@@ -300,7 +297,6 @@ data-ad-slot="1234567890"></ins>
 
 <h3>News - EU</h3>
 <script>
-    // List of buttons to create
     var listButtons = [
         {text: 'DW', URL: ['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8']},
         {text: 'EURO', URL: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8'},
@@ -312,41 +308,50 @@ data-ad-slot="1234567890"></ins>
 
 
 <h3>News - Asia</h3>
-
-  <button class="pushable" onclick="loadPlayer(['https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8','https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8','https://ctrl.laotv.la/live/ABCA/index.m3u8'])"> <span class="front">ABC Au</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/Arirang/index.m3u8')"> <span class="front">Arirang</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/CNBC/index.m3u8')"> <span class="front">CNBC Asia</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8')"> <span class="front">Bloomberg Asia</span> </button>
-
+<script>
+    var listButtons = [
+        {text: 'ABC Au', URL: ['https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8','https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8','https://ctrl.laotv.la/live/ABCA/index.m3u8']},
+        {text: 'CNBC Asia', URL: ['https://ctrl.laotv.la/live/CNBC/index.m3u8']},
+        {text: 'Bloomberg Asia', URL: ['https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
+        {text: 'Arirang', URL: ['https://ctrl.laotv.la/live/Arirang/index.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 <h3>Documentary</h3>
-  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/CABC2300019UD.m3u8'])"> <span class="front">Documentary+</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8','https://timeline-samsung-uk.amagi.tv/playlist.m3u8'])"> <span class="front">Timeline</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8','https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8'])"> <span class="front">Travelxp</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://ab96b349d4d14d80a1f8530a0bce4488.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-de_BBCTravel/playlist.m3u8?ads.wurl_channel=985&ads.wurl_name=BBCTravel&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D'])"> <span class="front">BBC Travel</span> </button>
-
-
+<script>
+    var listButtons = [
+        {text: 'Documentary+', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300019UD.m3u8']},
+        {text: 'Timeline', URL: ['https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8','https://timeline-samsung-uk.amagi.tv/playlist.m3u8']},
+        {text: 'CGTN Doc', URL: ['https://livedoc.cgtn.com/1000d/prog_index.m3u8']},
+        {text: 'Real Stories', URL: ['https://lds-realstories-samsungau.amagi.tv/playlist.m3u8']}
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 <h3>Discovery</h3>
-  <button class="pushable" onclick="loadPlayer('https://i.mjh.nz/SamsungTVPlus/GBBB5000002PL.m3u8')"> <span class="front">Wild Planet</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBD1700001RW.m3u8'])"> <span class="front">BBC Earth</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBC600017FG.m3u8'])"> <span class="front">BBC Home</span> </button>
+<script>
+    var listButtons = [
+        {text: 'Travelxp', URL: ['https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8', 'https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8']},
+        {text: 'BBC Travel', URL: ['https://ab96b349d4d14d80a1f8530a0bce4488.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-de_BBCTravel/playlist.m3u8?ads.wurl_channel=985&ads.wurl_name=BBCTravel&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D']}
+        {text: 'BBC Home', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC600017FG.m3u8']}
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
-  <button class="pushable" onclick="loadPlayer('https://hncfree-samsungau.amagi.tv/playlist.m3u8')"> <span class="front">Horse&Country</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8')"> <span class="front">Animal Planet</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/Discovery/index.m3u8')"> <span class="front">Discovery Channel SEA</span> </button>
 
-  <button class="pushable" onclick="loadYoutube('https://www.youtube.com/live/XZ7BWbmvi94?si=XodlRK7c3EWvfsjI')"> <span class="front">Nat Geo WILD (YT)</span> </button>
-  <button class="pushable" onclick="loadYoutube('https://www.youtube.com/watch?v=gsA3-3_Cl8s')"> <span class="front">Nat Geo (YT)</span> </button>
-
-  <br> <br>
-  <button class="pushable" onclick="loadPlayer('https://smithsonianaus-samsungau.amagi.tv/playlist1080p.m3u8?cc')"> <span class="front">Smithsonian</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://rt-rtd.rttv.com/dvr/rtdoc/playlist_4500Kb.m3u8')"> <span class="front">RT Doc</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://livedoc.cgtn.com/1000d/prog_index.m3u8')"> <span class="front">CGTN Doc</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lds-realstories-samsungau.amagi.tv/playlist.m3u8')"> <span class="front">Real Story</span> </button>
-
+<script>
+    var listButtons = [
+        {text: 'Wild Planet', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB5000002PL.m3u8']},
+        {text: 'BBC Earth', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD1700001RW.m3u8']},
+        {text: 'Animal Planet', URL: ['https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8']},
+        {text: 'Discovery SEA', URL: ['https://ctrl.laotv.la/live/Discovery/index.m3u8']},
+        {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8']}
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 
@@ -362,35 +367,46 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://i.mjh.nz/SamsungTVPlus/USBD17000117B.m3u8')"> <span class="front">MovieSphere</span> </button>
 
 
-
-
-
 <h3>Sport</h3>
-  <button class="pushable" onclick="loadPlayer(['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8'])"> <span class="front">EdgeSport</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8'])"> <span class="front">FIFA+</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://edge1.laotv.la/live/BosiGolf/index.m3u8')"> <span class="front">Golf 2</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USAJ3504705A.m3u8'])"> <span class="front">Stadium</span> </button>
-
+<script>
+    var listButtons = [
+        {text: 'FIFA+', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8']},
+        {text: 'EdgeSport', URL: ['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8']},
+        {text: 'Stadium', URL: ['https://i.mjh.nz/SamsungTVPlus/USAJ3504705A.m3u8']},
+        {text: 'Golf 2', URL: ['https://edge1.laotv.la/live/BosiGolf/index.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 <h3>Music</h3>
-  <button class="pushable" onclick="loadYoutube(['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8'])"> <span class="front">Spirit TV</span> </button>
-  <button class="pushable" onclick="loadYoutube(['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8'])"> <span class="front">Fox Soul</span> </button>
-
-
-
+<script>
+    var listButtons = [
+        {text: 'Spirit TV', URL: ['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8']},
+        {text: 'Fox Soul', URL: ['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 <h3>Show</h3>
-<button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8'])"> <span class="front">BBC Food</span> </button>
-<button class="pushable" onclick="loadPlayer(['https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8'])"> <span class="front">YouTV</span> </button>
-
+<script>
+    var listButtons = [
+        {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
+        {text: 'YouTV', URL: ['https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']}
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 <h3>Vietnamese Channels</h3>
-
-  <button class="pushable" onclick="loadPlayer('https://edge2.laotv.la/live/K+Sport1/index.m3u8')"> <span class="front">K+ sport 1</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://edge1.laotv.la/live/K+Sport2/index.m3u8')"> <span class="front">K+ sport 2</span> </button>
+<script>
+    var listButtons = [
+        {text: 'K+ sport 1', URL: ['https://edge2.laotv.la/live/K+Sport1/index.m3u8']},
+        {text: 'K+ sport 2', URL: ['https://edge1.laotv.la/live/K+Sport2/index.m3u8']}
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
   <br> <br>
   <!-- <button class="pushable" onclick="loadPlayer('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button> -->
