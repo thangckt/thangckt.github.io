@@ -421,128 +421,146 @@ data-ad-slot="1234567890"></ins>
 </script>
 
 
-  <!-- <h3>HTV - HTVC</h3>
-  <button class="pushable" onclick="loadPlayer('https://vodcdn.hplus.com.vn/htvonline/_definst_/y9s1tlmt8a/Bau.trang.HTV.Challenge.cup.2023.mp4/chunklist.m3u8')"> <span class="front">HTV 1</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://vodcdn.hplus.com.vn/htvonline/_definst_/y9s1tlmt8a/Bau.trang.HTV.Challenge.cup.2023.mp4/chunklist.m3u8')"> <span class="front">HTV 2</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTV3-SD-480p/playlist.m3u8')"> <span class="front">HTV 3</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://code.vthanhtivi.pw/getlink/vieon/htv7-hd/playlist.m3u8', 'Dalvik/2.1.0')"> <span class="front">HTV 7</span> </button>
+<!-- <h3>HTV - HTVC</h3> -->
 
-  <br> <br>
-  <button class="pushable" onclick="loadPlayer('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PHIM-HD-1080p/chunks.m3u8')"> <span class="front">HTVC Phim</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PLUS-HD-1080p/playlist.m3u8')"> <span class="front">HTV Plus</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-THUANVIET-HD-1080p/playlist.m3u8')"> <span class="front">HTVC Thuan Viet</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-GIADINH-HD-1080p/playlist.m3u8')"> <span class="front">HTVC Gia Dinh</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-PHUNU-HD-1080p/playlist.m3u8')"> <span class="front">HTVC Phu Nu</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-CANHAC-HD-1080p/chunks.m3u8')"> <span class="front">HTVC Ca Nhac</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://drm-livecdn.hplus.com.vn/CDN-FPT02/HTVC-DULICH-HD-1080p/playlist.m3u8')"> <span class="front">HTVC Du Lich & Cuoc Song</span> </button> -->
 
 <h3>VTV - VTC</h3>
-  <button class="pushable" onclick="loadPlayer(['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv1-720p.m3u8','https://edge1.laotv.la/live/VTV1SD/index.m3u8'])"> <span class="front">VTV 1</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv2-720p.m3u8')"> <span class="front">VTV 2</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv3-720p.m3u8','https://edge1.laotv.la/live/VTV3/index.m3u8'])"> <span class="front">VTV 3</span> </button>
-
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv4-720p.m3u8')"> <span class="front">VTV 4</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5-720p.m3u8')"> <span class="front">VTV 5</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tnb-720p.m3u8')"> <span class="front">VTV 5 Tay Nam Bo</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tn-720p.m3u8')"> <span class="front">VTV 5 Tay Nguyen</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv7-720p.m3u8')"> <span class="front">VTV 7</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv8-720p.m3u8')"> <span class="front">VTV 8</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv9-720p.m3u8')"> <span class="front">VTV 9</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv6-720p.m3u8')"> <span class="front">VTV Can Tho</span> </button>
-
-
-
-<!-- <br> <br>
-  <button class="pushable" onclick="loadPlayer('https://e7.endpoint.cdn.sctvonline.vn/live/smil:VTVCAB16.smil/chunklist_w2005840737_b1692000.m3u8')"> <span class="front">VTVCab 16</span> </button>
-
-
-<br> <br>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC1/playlist.m3u8')"> <span class="front">VTC 1</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC2/playlist.m3u8')"> <span class="front">VTC 2</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC3/playlist.m3u8')"> <span class="front">VTC 3</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC4/playlist.m3u8')"> <span class="front">VTC 4</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC5/playlist.m3u8')"> <span class="front">VTC 5</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC6/playlist.m3u8')"> <span class="front">VTC 6</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC7/playlist.m3u8')"> <span class="front">VTC 7</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC8/playlist.m3u8')"> <span class="front">VTC 8</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC9/playlist.m3u8')"> <span class="front">VTC 9</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC10/playlist.m3u8')"> <span class="front">VTC 10</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC11/playlist.m3u8')"> <span class="front">VTC 11</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC12/playlist.m3u8')"> <span class="front">VTC 12</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC13/playlist.m3u8')"> <span class="front">VTC 13</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC14/playlist.m3u8')"> <span class="front">VTC 14</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://1117141481.vnns.net/VTC16/playlist.m3u8')"> <span class="front">VTC 16</span> </button> -->
-  <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/playlist.m3u8')"> <span class="front">VOV</span> </button>
+<script>
+    var listButtons = [
+        {text: 'VTV 1', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv1-720p.m3u8','https://edge1.laotv.la/live/VTV1SD/index.m3u8']},
+        {text: 'VTV 2', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv2-720p.m3u8']},
+        {text: 'VTV 3', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv3-720p.m3u8','https://edge1.laotv.la/live/VTV3/index.m3u8']},
+        {text: 'VTV 4', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv4-720p.m3u8']},
+        {text: 'VTV 5', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5-720p.m3u8']},
+        {text: 'VTV 5 TNB', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tnb-720p.m3u8']},
+        {text: 'VTV 5 TN', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tn-720p.m3u8']},
+        {text: 'VTV 7', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv7-720p.m3u8']},
+        {text: 'VTV 8', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv8-720p.m3u8']},
+        {text: 'VTV 9', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv9-720p.m3u8']},
+        {text: 'VTV Can Tho', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv6-720p.m3u8']},
+        {text: 'VOV', URL: ['https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/playlist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 <h3>Local</h3>
-  <!-- <h4>Song Cuu Long</h4> -->
-  <button class="pushable" onclick="loadPlayer('https://live.canthotv.vn/live/tv/chunklist.m3u8')"> <span class="front">Can Tho</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8')"> <span class="front">Tra Vinh 1</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/playlist.m3u8')"> <span class="front">Tra Vinh 2</span> </button>
+<!-- <h4>Song Cuu Long</h4> -->
+<script>
+    var listButtons = [
+        {text: 'Can Tho', URL: ['https://live.canthotv.vn/live/tv/chunklist.m3u8']},
+        {text: 'Tra Vinh 1', URL: ['https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8']},
+        {text: 'Tra Vinh 2', URL: ['https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/playlist.m3u8']},
+        {text: 'Hau Giang', URL: ['https://60acee235f4d5.streamlock.net/HGTV/d1/playlist.m3u8']},
+        {text: 'Dong Thap 1', URL: ['https://618b88f69e53b.streamlock.net/THDT/thdttv/playlist.m3u8']},
+        {text: 'Dong Thap 2', URL: ['https://64d0d74b76158.streamlock.net/THDT2/thdttv2/playlist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
-<button class="pushable" onclick="loadPlayer('https://60acee235f4d5.streamlock.net/HGTV/d1/playlist.m3u8')"> <span class="front">Hau Giang</span> </button>
-<button class="pushable" onclick="loadPlayer('https://618b88f69e53b.streamlock.net/THDT/thdttv/playlist.m3u8')"> <span class="front">Dong Thap 1</span> </button>
-<button class="pushable" onclick="loadPlayer('https://64d0d74b76158.streamlock.net/THDT2/thdttv2/playlist.m3u8')"> <span class="front">Dong Thap 2</span> </button>
-
-<br> <br>
 
 <!-- <h4>Dong Nam Bo</h4> -->
-  <button class="pushable" onclick="loadPlayer('https://cdn.baobinhphuoc.com.vn/live/28550d6213460634105b0bae21016f68bce/playlist.m3u8')"> <span class="front">Binh Phuoc 2</span> </button>
 <br> <br>
+<script>
+    var listButtons = [
+        {text: 'Binh Phuoc 2', URL: ['https://cdn.baobinhphuoc.com.vn/live/28550d6213460634105b0bae21016f68bce/playlist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
 
 <!-- <h4>Tay Nguyen</h4> -->
-  <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8')"> <span class="front">Dak Lak</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8')"> <span class="front">Dak Nong</span> </button>
 <br> <br>
+<script>
+    var listButtons = [
+        {text: 'Dak Lak', URL: ['https://live.mediatech.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8']},
+        {text: 'Dak Nong', URL: ['https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
 
 <!-- <h4>Nam Trung Bo</h4> -->
-  <button class="pushable" onclick="loadPlayer('https://60acee235f4d5.streamlock.net/live/mystream/playlist.m3u8')"> <span class="front">Ninh Thuan</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://64d0d74b76158.streamlock.net/BTVTV/binhthuantv/chunklist.m3u8')"> <span class="front">Binh Thuan</span> </button>
 <br> <br>
+<script>
+    var listButtons = [
+        {text: 'Ninh Thuan', URL: ['https://60acee235f4d5.streamlock.net/live/mystream/playlist.m3u8']},
+        {text: 'Binh Thuan', URL: ['https://64d0d74b76158.streamlock.net/BTVTV/binhthuantv/chunklist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
 
 <!-- <h4>Bac Trung Bo</h4> -->
-  <!-- <button class="pushable" onclick="loadPlayer('')"> <span class="front">Thanh Hoa</span> </button> -->
-  <!-- <button class="pushable" onclick="loadPlayer('')"> <span class="front">Nghe An</span> </button> -->
-  <button class="pushable" onclick="loadPlayer('https://wse.hatinhtv.net/live/httv1/playlist.m3u8')"> <span class="front">Ha Tinh</span> </button>
-  <!-- <button class="pushable" onclick="loadPlayer('')"> <span class="front">Quang Binh</span> </button> -->
-  <!-- <button class="pushable" onclick="loadPlayer('')"> <span class="front">Quang Tri</span> </button> -->
-  <button class="pushable" onclick="loadPlayer('https://live.trt.com.vn/TRT-Online/playlist.m3u8')"> <span class="front">Hue</span> </button>
 <br> <br>
+<script>
+    var listButtons = [
+        // {text: 'Thanh Hoa', URL: ['']},
+        // {text: 'Nghe An', URL: ['']},
+        {text: 'Ha Tinh', URL: ['https://wse.hatinhtv.net/live/httv1/playlist.m3u8']},
+        // {text: 'Quang Binh', URL: ['']},
+        // {text: 'Quang Tri', URL: ['']},
+        {text: 'Hue', URL: ['https://live.trt.com.vn/TRT-Online/playlist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 <!-- <h4>Dong Bang Song Hong</h4> -->
-  <button class="pushable" onclick="loadPlayer('https://cecex9g5cpliv.vcdn.cloud/capture/smil:HN1.smil/chunklist_b3128000_slen.m3u8')"> <span class="front">Ha Noi 1</span> </button>
-    <button class="pushable" onclick="loadPlayer('https://cecex9g5cpliv.vcdn.cloud/live/smil:HN2.smil/chunklist_b3128000_slen.m3u8')"> <span class="front">Ha Noi 2</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://cdn.hanamtv.vn/live/285361fcafcd0ec47bba2fa3f5870f8dc72/chunklist.m3u8')"> <span class="front">Ha Nam</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://cdn.hungyentv.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8','https://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8'])"> <span class="front">Hung Yen</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8')"> <span class="front">Nam Dinh</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ott3.nethubtv.vn/live/thaibinh/chunklist_1.m3u8')"> <span class="front">Thai Binh</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8')"> <span class="front">Ninh Binh</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://stream.thingnet.vn/live/smil:BTV.smil/playlist.m3u8')"> <span class="front">Bac Ninh</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8')"> <span class="front">Hai Phong</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8')"> <span class="front">Hai Phong +</span> </button>
-
 <br> <br>
+<script>
+    var listButtons = [
+        {text: 'Ha Noi 1', URL: ['https://cecex9g5cpliv.vcdn.cloud/capture/smil:HN1.smil/chunklist_b3128000_slen.m3u8']},
+        {text: 'Ha Noi 2', URL: ['https://cecex9g5cpliv.vcdn.cloud/live/smil:HN2.smil/chunklist_b3128000_slen.m3u8']},
+        {text: 'Ha Nam', URL: ['https://cdn.hanamtv.vn/live/285361fcafcd0ec47bba2fa3f5870f8dc72/chunklist.m3u8']},
+        {text: 'Hung Yen', URL: ['https://cdn.hungyentv.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8','https://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8']},
+        {text: 'Nam Dinh', URL: ['https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8']},
+        {text: 'Thai Binh', URL: ['https://ott3.nethubtv.vn/live/thaibinh/chunklist_1.m3u8']},
+        {text: 'Ninh Binh', URL: ['https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8']},
+        {text: 'Bac Ninh', URL: ['https://stream.thingnet.vn/live/smil:BTV.smil/playlist.m3u8']},
+        {text: 'Hai Phong', URL: ['https://live.mediatech.vn/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8']},
+        {text: 'Hai Phong +', URL: ['https://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
 
 <!-- <h4>Dong Bac</h4> -->
-  <button class="pushable" onclick="loadPlayer('https://live.tuyenquangtv.vn/hls/ttv.m3u8')"> <span class="front">Tuyen Quang</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://streaming.thainguyentv.vn/hls/livestream.m3u8')"> <span class="front">Thai Nguyen</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8', 'https://live.mediatech.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8'])"> <span class="front">Lang Son</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ott3.nethubtv.vn/live/bacgiangtv/chunklist_1.m3u8')"> <span class="front">Bac Giang</span> </button>
-  <br> <br>
+<br> <br>
+<script>
+    var listButtons = [
+        {text: 'Tuyen Quang', URL: ['https://live.tuyenquangtv.vn/hls/ttv.m3u8']},
+        {text: 'Thai Nguyen', URL: ['https://streaming.thainguyentv.vn/hls/livestream.m3u8']},
+        {text: 'Lang Son', URL: ['https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8','https://live.mediatech.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8']},
+        {text: 'Bac Giang', URL: ['https://ott3.nethubtv.vn/live/bacgiangtv/chunklist_1.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
-  <!-- <h4>Tay Bac</h4> -->
-  <button class="pushable" onclick="loadPlayer('https://hbtvlive.3ssoft.vn/hoabinhtv/playlist.m3u8')"> <span class="front">Hoa Binh</span> </button>
-  <!-- <button class="pushable" onclick="loadPlayer('')"> <span class="front">Son La</span> </button>
-  <button class="pushable" onclick="loadPlayer('')"> <span class="front">Lai Chau</span> </button> -->
-  <button class="pushable" onclick="loadPlayer('https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&deviceId=&deviceType=&gcId=1532&location=NA&pkg=pkg11.hni&q=high&requestTime=1586309420781&time=1586395820&token=LX-ibJYRUq9pflRtYAxfYQ&type=tv&userId=')"> <span class="front">Dien Bien</span> </button>
+
+<!-- <h4>Tay Bac</h4> -->
+<br> <br>
+<script>
+    var listButtons = [
+        {text: 'Hoa Binh', URL: ['https://hbtvlive.3ssoft.vn/hoabinhtv/playlist.m3u8']},
+        // {text: 'Son La', URL: ['']},
+        // {text: 'Lai Chau', URL: ['']},
+        {text: 'Dien Bien', URL: ['https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&deviceId=&deviceType=&gcId=1532&location=NA&pkg=pkg11.hni&q=high&requestTime=1586309420781&time=1586395820&token=LX-ibJYRUq9pflRtYAxfYQ&type=tv&userId=']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
 
 <!-- hai ngoai -->
 <br> <br>
-  <button class="pushable" onclick="loadPlayer('https://media.streambrothers.com:1936/8228/8228/playlist.m3u8')"> <span class="front">Little Saigon</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://5dcab9aed5331.streamlock.net/SET1/livestream/playlist.m3u8')"> <span class="front">SET TV 1</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8')"> <span class="front">SET TV 2</span> </button>
+<script>
+    var listButtons = [
+        {text: 'Little Saigon', URL: ['https://media.streambrothers.com:1936/8228/8228/playlist.m3u8']},
+        {text: 'SET TV 1', URL: ['https://5dcab9aed5331.streamlock.net/SET1/livestream/playlist.m3u8']},
+        {text: 'SET TV 2', URL: ['https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 
@@ -553,7 +571,5 @@ data-ad-slot="1234567890"></ins>
 
 </div>
 </div>
-
-
 
 #
