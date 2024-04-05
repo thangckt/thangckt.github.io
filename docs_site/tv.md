@@ -341,7 +341,7 @@ data-ad-slot="1234567890"></ins>
     createListChannelButton(listButtons, 'content-column');
 </script>
 
-
+<br> <br>
 <script>
     var listButtons = [
         {text: 'Wild Planet', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB5000002PL.m3u8']},
@@ -354,17 +354,18 @@ data-ad-slot="1234567890"></ins>
 </script>
 
 
-
 <h3>Movie</h3>
-  <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/HBO/index.m3u8')"> <span class="front">HBO</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/Cinemax/index.m3u8')"> <span class="front">Cinemax</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://ucdn.beetv.kz/btv/live/hls/000000239.m3u8')"> <span class="front">CINEMA</span> </button>
+<script>
+    var listButtons = [
+        {text: 'HBO', URL: ['https://ctrl.laotv.la/live/HBO/index.m3u8']},
+        {text: 'Cinemax', URL: ['https://ctrl.laotv.la/live/Cinemax/index.m3u8']},
+        {text: 'MovieSphere', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD17000117B.m3u8']},
+        {text: 'B4U Movies', URL: ['https://minerva-bizzarromovies-1-it.samsung.wurl.tv/playlist.m3u8']}
+        {text: 'Sony', URL: ['https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/smc_720p/playlist.m3u8']}
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
-  <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/smc_720p/playlist.m3u8')"> <span class="front">Sony</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://wms4-kortv.akamaized.net/a_live/63719963/smil:20ch011.smil/chunklist_b2500000.m3u8')"> <span class="front">KBS World</span> </button>
-
-  <button class="pushable" onclick="loadPlayer('https://minerva-bizzarromovies-1-it.samsung.wurl.tv/playlist.m3u8')"> <span class="front">B4U Movies</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://i.mjh.nz/SamsungTVPlus/USBD17000117B.m3u8')"> <span class="front">MovieSphere</span> </button>
 
 
 <h3>Sport</h3>
