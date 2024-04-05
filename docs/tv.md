@@ -5,9 +5,14 @@ hide:
   - footer
 ---
 
-<!-- # find more m3u8 link: http://tonkiang.us/ -->
+<!-- SOME NOTE:
+- Use botton style: https://www.joshwcomeau.com/animation/3d-button/#a-hover-state-4
+- Do not need to use Hls, since Videojs may already include it
+- May save js functions in a separated file, and load them by <script src="TVonline/script_tv.js"></script>. But not check?
+- find more m3u8 links at: http://tonkiang.us/
+-->
 
-<!-- USE BUTTON: https://www.joshwcomeau.com/animation/3d-button/#a-hover-state-4 -->
+
 <style>
   .pushable {
     background: skyblue; /* Changed button color to sky blue */
@@ -91,7 +96,6 @@ hide:
 
 
 <!-- DEFINE SCRIPT JS -->
-<!-- Load js function from another file <script src="TVonline/script_tv.js"></script> -->
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
