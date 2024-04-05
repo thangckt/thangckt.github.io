@@ -52,7 +52,7 @@ hide:
       max-height: 85vh;
       overflow-y: auto;
       position: relative;
-      gap:5px;
+      gap: 5px;
   }
 
     /* Mobile styles */
