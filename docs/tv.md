@@ -301,7 +301,8 @@ data-ad-slot="1234567890"></ins>
 
 <h3>Documentary</h3>
   <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/CABC2300019UD.m3u8'])"> <span class="front">Documentary+</span> </button>
-
+  <button class="pushable" onclick="loadPlayer(['https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8'])"> <span class="front">Timeline</span> </button>
+  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8'])"> <span class="front">Travelxp</span> </button>
 
 
 <h3>Discovery</h3>
