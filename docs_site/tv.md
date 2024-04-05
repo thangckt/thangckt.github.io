@@ -103,6 +103,15 @@ hide:
     function playVideojs(videoURL, vidID='vid1'){
         window.scrollTo(0, 0); // Scroll to the top after loading the video
         var player = videojs(vidID);
+
+player.landscapeFullscreen({
+  fullscreen: {
+      enterOnRotate: true,
+          alwaysInLandscapeMode: true,
+              iOS: true
+                }
+                });
+
         player.src({ src: videoURL, type: 'application/x-mpegURL' });
         player.play();
     };
