@@ -219,7 +219,7 @@ hide:
         // Create and append each button
         listButtons.forEach(function (buttonInfo) {
             var button = createChannelButton(buttonInfo.URL, buttonInfo.text);
-            button.style.marginRight = "5px"; // Add a margin to the right of the button
+            button.style.marginRight = "4px"; // Add a margin to the right of the button
             container.appendChild(button);
         });
     }
@@ -238,7 +238,7 @@ hide:
   </div>
 
   <!-- container for displaying dynamic buttons -->
-  <div id='linkButton' style="display:flex; justify-content:center; margin-top:20px; gap:5px;"></div>
+  <div id='linkButton' style="display:flex; justify-content:center; margin-top:20px; gap:4px;"></div>
 
 
 <!-- google ads -->
@@ -276,28 +276,30 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer(['https://ntd02.akamaized.net/NTDA/index.m3u8','https://ntd02.akamaized.net/NTD-West/index.m3u8'])"> <span class="front">NTD</span> </button>
   <button class="pushable" onclick="loadPlayer('https://newsmax-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">Newsmax</span> </button>
 
-
   <br><br>
   <!-- the center biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer('https://reuters-reutersnow-1-us.plex.wurl.tv/playlist.m3u8')"> <span class="front">Reuters</span> </button>
-
   <button class="pushable" onclick="loadPlayer('https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8')"> <span class="front">Wion</span> </button>
 
-  <br><br>
   <!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
-  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8'])"> <span class="front">CNN</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8')"> <span class="front">ABC Us</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8')"> <span class="front">CNA</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8')"> <span class="front">CBS</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://tv-trtworld.live.trt.com.tr/master_720.m3u8')"> <span class="front">TRT World</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://yahoo-plex.amagi.tv/playlist.m3u8')"> <span class="front">Yahoo Finance</span> </button>
-
+  <br><br>
+<script>
+    // Use the script to void repeated creation of buttons line-by-line as in above
+    // List of buttons to create
+    var listButtons = [
+        {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8']},
+        {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
+        {text: 'CNA', URL: ['https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8']},
+        {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
+        {text: 'TRT World', URL: ['https://tv-trtworld.live.trt.com.tr/master_720.m3u8']},
+        {text: 'Yahoo Finance', URL: ['https://yahoo-plex.amagi.tv/playlist.m3u8']}
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 
 <h3>News - EU</h3>
-<div id="news-us-buttons"></div>
 <script>
-    // Use the script to void repeated creation of buttons line-by-line as in above
     // List of buttons to create
     var listButtons = [
         {text: 'DW', URL: ['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8']},
@@ -307,6 +309,7 @@ data-ad-slot="1234567890"></ins>
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
+
 
 <h3>News - Asia</h3>
 
