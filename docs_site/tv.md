@@ -273,16 +273,23 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer(['https://ntd02.akamaized.net/NTDA/index.m3u8','https://ntd02.akamaized.net/NTD-West/index.m3u8'])"> <span class="front">NTD</span> </button>
   <button class="pushable" onclick="loadPlayer('https://newsmax-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">Newsmax</span> </button>
 
-  <br><br>
-  <!-- the center biases: https://www.allsides.com/media-bias/media-bias-chart -->
-  <button class="pushable" onclick="loadPlayer('https://reuters-reutersnow-1-us.plex.wurl.tv/playlist.m3u8')"> <span class="front">Reuters</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8')"> <span class="front">Wion</span> </button>
 
-  <br><br>
-  <!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
+<!-- the center biases: https://www.allsides.com/media-bias/media-bias-chart -->
+<br><br>
 <script>
     // Use the script to void repeated creation of buttons line-by-line as in above
     // List of buttons to create
+    var listButtons = [
+        // {text: 'Reuters', URL: ['https://reuters-reutersnow-1-us.plex.wurl.tv/playlist.m3u8']},
+        {text: 'Wion', URL: ['https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
+
+<!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
+<br><br>
+<script>
     var listButtons = [
         {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8']},
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
