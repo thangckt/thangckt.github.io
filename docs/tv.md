@@ -248,7 +248,7 @@ data-ad-slot="1234567890"></ins>
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 
   <!-- <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p> -->
-<h3>News US</h3>
+<h3>News - US</h3>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
@@ -274,14 +274,14 @@ data-ad-slot="1234567890"></ins>
 
 
 
-<h3>News EU</h3>
+<h3>News - EU</h3>
 
   <br><br>
   <button class="pushable" onclick="loadPlayer(['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8'])"> <span class="front">DW</span> </button>
   <button class="pushable" onclick="loadPlayer('https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8')"> <span class="front">EURO</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8')"> <span class="front">France 24</span> </button>
 
-<h3>News Asia</h3>
+<h3>News - Asia</h3>
 
   <br><br>
   <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8'])"> <span class="front">SkyNews</span> </button>
