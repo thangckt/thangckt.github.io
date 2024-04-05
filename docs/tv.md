@@ -255,10 +255,10 @@ data-ad-slot="1234567890"></ins>
 <!-- <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p> -->
 <h3>News - US</h3>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
-  <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
+  <button class="pushable" onclick="loadPlayer(['https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8','https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8'])"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://ntd02.akamaized.net/NTDA/index.m3u8','https://ntd02.akamaized.net/NTD-West/index.m3u8'])"> <span class="front">NTD</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8')"> <span class="front">Newsmax</span> </button>
+  <button class="pushable" onclick="loadPlayer('https://newsmax-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">Newsmax</span> </button>
 
 
   <br><br>
