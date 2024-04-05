@@ -241,13 +241,15 @@ data-ad-slot="1234567890"></ins>
 
 <!-- SECOND COLUMN: BUTTONS - ADD LINK FOR CHANNEL-->
 <div class="content-column" >
-  <!-- <h3>Stream link</h3> -->
+
+<!-- <h3>Stream link</h3> -->
   <!-- <label for="m3u8Link">Stream Link: </label> -->
   <button class="pushable" onclick="loadStream(vidElementID='vid1')"> <span class="front">Load URL</span> </button> &nbsp
   <input type="text" id="m3u8Link" style="width: 65%" placeholder="Enter your link here...">
   <!-- <button class="pushable" onclick="loadStream('vid1','hls')"> <span class="front">Load HLS</span> </button> -->
 
-  <!-- <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p> -->
+
+<!-- <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p> -->
 <h3>News - US</h3>
   <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer('https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">FOX</span> </button>
