@@ -120,7 +120,6 @@ hide:
       var player = document.getElementById(vidElementID);
           player.classList.remove("video-js"); // Remove the existing class
           // player.classList.add("video"); // Add the new class
-
       if (Hls.isSupported()) {
           var hls = new Hls();
           hls.loadSource(videoURL);
@@ -141,7 +140,7 @@ hide:
     function playVideojsPromise(videoURL, vidElementID='vid1') {
         return new Promise((resolve, reject) => {
             try {
-                loadVideojs(videoURL, vidElementID);
+                playVideojs(videoURL, vidElementID);
                 resolve();
             } catch (error) {
                 reject(error);
@@ -152,7 +151,7 @@ hide:
     function playHlsPromise(videoURL, vidElementID='vid1') {
         return new Promise((resolve, reject) => {
             try {
-                loadHls(videoURL, vidElementID);
+                playHls(videoURL, vidElementID);
                 resolve();
             } catch (error) {
                 reject(error);
@@ -160,13 +159,13 @@ hide:
         });
     }
 
-    function playVideo(videoURL, vidElementID='vid1') {
+    function playVideoLink(videoURL, vidElementID='vid1') {
         playVideojsPromise(videoURL, vidElementID)
             .catch((error) => {
-                console.log('loadVideojs failed, trying loadHls');
+                console.log('playVideojs failed, trying playHls');
                 playHlsPromise(videoURL, vidElementID)
                     .catch((error) => {
-                        console.log('loadHls also failed');
+                        console.log('playHls also failed');
                     });
             });
     }
@@ -179,12 +178,13 @@ hide:
             alert("Please enter a stream link.");
             return;
         };
+        playVideoLink(videoURL, vidElementID);
 
-        if (method === 'hls'){
-            playHls(videoURL, vidElementID);
-        } else if (method === 'videojs'){
-            playVideojs(videoURL, vidElementID);
-        }
+        // if (method === 'hls'){
+        //     playHls(videoURL, vidElementID);
+        // } else if (method === 'videojs'){
+        //     playVideojs(videoURL, vidElementID);
+        // }
     };
 
     function loadPlayer(videoURLs) {
@@ -230,7 +230,7 @@ hide:
 
 
 <div class="container">
-<!-- FIRST COLUMN: VIDEO FRAME, may not need to use:    class="video-js" -->
+<!-- FIRST COLUMN: VIDEO FRAME,  class="video-js" -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
     <video id="vid1"  controls preload="none" autoplay style="position:absolute; width:100%; height:100%; left:0px; top:0px;" ></video>
