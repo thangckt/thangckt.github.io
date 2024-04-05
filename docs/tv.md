@@ -170,14 +170,15 @@ hide:
     };
 
       function loadPlayer(videoURLs, buttElementID='linkButton') {
+          var videoURL;
           if (Array.isArray(videoURLs)) {
               if (videoURLs.length > 1) {
                   createLinkButton(videoURLs, buttElementID);
               }
-              var videoURL = videoURLs[0];
+              videoURL = videoURLs[0];
           } else {
               cleanLinkButton(buttElementID); // Clear existing buttons
-              var videoURL = videoURLs;
+              videoURL = videoURLs;
           }
           playVideojs(videoURL);
       };
@@ -190,17 +191,15 @@ hide:
         buttonsContainer.innerHTML = '';
     }
 
-    function createLinkButton(videoURLs,buttElementID='linkButton'){
-        // Clean existing buttons
-        cleanLinkButton(buttElementID)
-
+    function createLinkButton(videoURLs, buttElementID='linkButton'){
+        cleanLinkButton(buttElementID); // Clean existing buttons
         // Loop through the array and create buttons for each link
         videoURLs.forEach(function (url, index) {
             var button = document.createElement('button');
             button.className = 'pushable';
             button.innerHTML = '<span class="front">Link ' + (index + 1) + '</span>';
             button.onclick = function () {
-                playVideojs(url,"vid1");
+                playVideojs(url);
             };
 
             buttonsContainer.appendChild(button);
