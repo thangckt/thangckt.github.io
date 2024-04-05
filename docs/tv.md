@@ -169,18 +169,17 @@ hide:
         }
     };
 
-      function loadPlayer(videoURLs, vidElementID='vid1', buttElementID='linkButton') {
-          var videoURL;
+      function loadPlayer(videoURLs, buttElementID='linkButton') {
           if (Array.isArray(videoURLs)) {
               if (videoURLs.length > 1) {
                   createLinkButton(videoURLs, buttElementID);
               }
-              videoURL = videoURLs[0];
+              var videoURL = videoURLs[0];
           } else {
               cleanLinkButton(buttElementID); // Clear existing buttons
-              videoURL = videoURLs;
+              var videoURL = videoURLs;
           }
-          playVideojs(videoURL, vidElementID);
+          playVideojs(videoURL);
       };
 
 
@@ -193,7 +192,7 @@ hide:
 
     function createLinkButton(videoURLs,buttElementID='linkButton'){
         // Clean existing buttons
-        clearLinkButton(buttElementID)
+        cleanLinkButton(buttElementID)
 
         // Loop through the array and create buttons for each link
         videoURLs.forEach(function (url, index) {
