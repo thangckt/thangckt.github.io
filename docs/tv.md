@@ -337,8 +337,9 @@ data-ad-slot="1234567890"></ins>
 
 
 
-
+### Sport
 <h3>Sport</h3>
+  <button class="pushable" onclick="loadPlayer(['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8'])"> <span class="front">EdgeSport</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8'])"> <span class="front">FIFA+</span> </button>
   <button class="pushable" onclick="loadPlayer('https://edge1.laotv.la/live/BosiGolf/index.m3u8')"> <span class="front">Golf 2</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USAJ3504705A.m3u8'])"> <span class="front">Stadium</span> </button>
@@ -510,6 +511,6 @@ data-ad-slot="1234567890"></ins>
 </div>
 </div>
 
-#
+
 
 
