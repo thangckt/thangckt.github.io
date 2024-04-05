@@ -138,6 +138,8 @@ hide:
 
     //##### Functions to create link buttons below the video frame
     function createLinkButton(videoURLs, buttElementID='linkButton'){
+        var buttonsContainer = document.getElementById(buttElementID);
+
         // Loop through the array and create buttons for each link
         videoURLs.forEach(function (url, index) {
             var button = document.createElement('button');
