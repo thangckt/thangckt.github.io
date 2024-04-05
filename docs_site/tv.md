@@ -5,13 +5,7 @@ hide:
   - footer
 ---
 
-<!-- SOME NOTE:
-- Use botton style: https://www.joshwcomeau.com/animation/3d-button/#a-hover-state-4
-- Do not need to use Hls, since Videojs may already include it
-- May save js functions in a separated file, and load them by <script src="TVonline/script_tv.js"></script>. But not check?
-- find more m3u8 links at: http://tonkiang.us/
--->
-
+<!-- Find more m3u8 links at: http://tonkiang.us/ -->
 
 <style>
   .pushable {
