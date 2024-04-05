@@ -52,8 +52,6 @@ hide:
       max-height: 85vh;
       overflow-y: auto;
       position: relative;
-      display: flex;
-      gap: 5px;
   }
 
     /* Mobile styles */
@@ -220,7 +218,8 @@ hide:
         var container = document.getElementById(containerID);
         // Create and append each button
         listButtons.forEach(function (buttonInfo) {
-            var button = createChannelButton(buttonInfo.url, buttonInfo.text);
+            var button = createChannelButton(buttonInfo.URL, buttonInfo.text);
+            button.style.marginRight = "5px"; // Add a margin to the right of the button
             container.appendChild(button);
         });
     }
@@ -296,16 +295,17 @@ data-ad-slot="1234567890"></ins>
 
 
 <h3>News - EU</h3>
+<div id="news-us-buttons"></div>
 <script>
     // Use the script to void repeated creation of buttons line-by-line as in above
     // List of buttons to create
     var listButtons = [
-        { url: ['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8'], text: 'DW' },
-        { url: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8', text: 'EURO' },
-        { url: 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8', text: 'France 24'},
-        { url: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8'], text: 'Sky News'}
+        {text: 'DW', URL: ['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8']},
+        {text: 'EURO', URL: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8'},
+        {text: 'France 24', URL: 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8'},
+        {text: 'Sky News', URL: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8']}
     ];
-    createListChannelButton(listButtons);
+    createListChannelButton(listButtons, 'content-column');
 </script>
 
 <h3>News - Asia</h3>
