@@ -100,7 +100,7 @@ hide:
 
 
     //##### Functions to play video, use Videojs or Hls
-    function playVideojs(videoUrl, vidElementID='vid1'){
+    function playVideojs(videoURL, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
       // Change class of video tag
       var player = document.getElementById(vidElementID);
@@ -110,11 +110,11 @@ hide:
       var player = videojs(vidElementID);
           // Call plugin here, before load src
           // player.hlsQualitySelector({displayCurrentQuality: true});
-          player.src({ src: videoUrl, type: 'application/x-mpegURL' });
+          player.src({ src: videoURL, type: 'application/x-mpegURL' });
           player.play();
     };
 
-    function playHls(videoUrl, vidElementID='vid1'){
+    function playHls(videoURL, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
       // Change class of video tag
       var player = document.getElementById(vidElementID);
@@ -123,13 +123,13 @@ hide:
 
       if (Hls.isSupported()) {
           var hls = new Hls();
-          hls.loadSource(videoUrl);
+          hls.loadSource(videoURL);
           hls.attachMedia(player);
           hls.on(Hls.Events.MANIFEST_PARSED, function() {
               player.play();
           });
       } else if (player.canPlayType("application/vnd.apple.mpegurl")) {
-          player.src = videoUrl;
+          player.src = videoURL;
           player.addEventListener('canplay', function() {
               player.play();
           });
@@ -137,40 +137,75 @@ hide:
     };
 
 
+    //##### Implementation first tries to play the link using playVideojs(), and if that fails, to use playHls()
+    function playVideojsPromise(videoURL, vidElementID='vid1') {
+        return new Promise((resolve, reject) => {
+            try {
+                loadVideojs(videoURL, vidElementID);
+                resolve();
+            } catch (error) {
+                reject(error);
+            }
+        });
+    }
+
+    function playHlsPromise(videoURL, vidElementID='vid1') {
+        return new Promise((resolve, reject) => {
+            try {
+                loadHls(videoURL, vidElementID);
+                resolve();
+            } catch (error) {
+                reject(error);
+            }
+        });
+    }
+
+    function playVideo(videoURL, vidElementID='vid1') {
+        playVideojsPromise(videoURL, vidElementID)
+            .catch((error) => {
+                console.log('loadVideojs failed, trying loadHls');
+                playHlsPromise(videoURL, vidElementID)
+                    .catch((error) => {
+                        console.log('loadHls also failed');
+                    });
+            });
+    }
+
+
     //##### Functions to load videos to HTML video tag
     function loadStream(vidElementID='vid1', method='videojs') {
-        var videoUrl = document.getElementById("m3u8Link").value;
-        if (!videoUrl) {
+        var videoURL = document.getElementById("m3u8Link").value;
+        if (!videoURL) {
             alert("Please enter a stream link.");
             return;
         };
 
         if (method === 'hls'){
-            playHls(videoUrl, vidElementID);
+            playHls(videoURL, vidElementID);
         } else if (method === 'videojs'){
-            playVideojs(videoUrl, vidElementID);
+            playVideojs(videoURL, vidElementID);
         }
     };
 
-    function loadPlayer(videoUrls) {
-        if (Array.isArray(videoUrls)) {
-            loadMultiLinks(videoUrls);
+    function loadPlayer(videoURLs) {
+        if (Array.isArray(videoURLs)) {
+            loadMultiLinks(videoURLs);
         } else {
             // Clear existing buttons
             var buttonsContainer = document.getElementById('linkButtons');
             buttonsContainer.innerHTML = '';
 
-            playVideojs(videoUrls);
+            playVideojs(videoURLs);
         }
     };
 
-    function loadMultiLinks(videoUrls){
+    function loadMultiLinks(videoURLs){
         // Clear existing buttons
         var buttonsContainer = document.getElementById('linkButtons');
         buttonsContainer.innerHTML = '';
 
         // Loop through the array and create buttons for each link
-        videoUrls.forEach(function (url, index) {
+        videoURLs.forEach(function (url, index) {
             var button = document.createElement('button');
             button.className = 'pushable';
             button.innerHTML = '<span class="front">Link ' + (index + 1) + '</span>';
@@ -182,10 +217,10 @@ hide:
         });
 
         // Load the first video from the array
-        playVideojs(videoUrls[0]);
+        playVideojs(videoURLs[0]);
     };
 
-    //##### Implementation first tries to play the link using playVideojs(), and if that fails, to use playHls()
+
 
 </script>
 
