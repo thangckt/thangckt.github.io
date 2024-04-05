@@ -296,7 +296,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'CNA', URL: ['https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8']},
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
         {text: 'TRT World', URL: ['https://tv-trtworld.live.trt.com.tr/master_720.m3u8']},
-        {text: 'Yahoo Finance', URL: ['https://yahoo-plex.amagi.tv/playlist.m3u8']}
+        {text: 'Yahoo Finance', URL: ['https://yahoo-plex.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -308,7 +308,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'DW', URL: ['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8']},
         {text: 'EURO', URL: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8'},
         {text: 'France 24', URL: 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8'},
-        {text: 'Sky News', URL: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8']}
+        {text: 'Sky News', URL: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -332,7 +332,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'Documentary+', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300019UD.m3u8']},
         {text: 'Timeline', URL: ['https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8','https://timeline-samsung-uk.amagi.tv/playlist.m3u8']},
         {text: 'CGTN Doc', URL: ['https://livedoc.cgtn.com/1000d/prog_index.m3u8']},
-        {text: 'Real Stories', URL: ['https://lds-realstories-samsungau.amagi.tv/playlist.m3u8']}
+        {text: 'Real Stories', URL: ['https://lds-realstories-samsungau.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -343,7 +343,7 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'Travelxp', URL: ['https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8', 'https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8']},
         {text: 'BBC Travel', URL: ['https://ab96b349d4d14d80a1f8530a0bce4488.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-de_BBCTravel/playlist.m3u8?ads.wurl_channel=985&ads.wurl_name=BBCTravel&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D']},
-        {text: 'BBC Home', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC600017FG.m3u8']}
+        {text: 'BBC Home', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC600017FG.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -355,7 +355,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'BBC Earth', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD1700001RW.m3u8']},
         {text: 'Animal Planet', URL: ['https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8']},
         {text: 'Discovery SEA', URL: ['https://ctrl.laotv.la/live/Discovery/index.m3u8']},
-        {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8']}
+        {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -401,7 +401,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
-        {text: 'YouTV', URL: ['https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']}
+        {text: 'YouTV', URL: ['https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -411,7 +411,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'K+ sport 1', URL: ['https://edge2.laotv.la/live/K+Sport1/index.m3u8']},
-        {text: 'K+ sport 2', URL: ['https://edge1.laotv.la/live/K+Sport2/index.m3u8']}
+        {text: 'K+ sport 2', URL: ['https://edge1.laotv.la/live/K+Sport2/index.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -423,7 +423,7 @@ data-ad-slot="1234567890"></ins>
         // {text: 'SCTV 17', URL: ['https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV17.smil/chunklist_b1692000.m3u8']},
         // {text: 'SCTV 1', URL: ['https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8']},
         // {text: 'Phim Hay', URL: ['https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8']},
-        {text: 'TVB Vietnam', URL: ['https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8']}
+        {text: 'TVB Vietnam', URL: ['https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
