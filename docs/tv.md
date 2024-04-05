@@ -87,7 +87,7 @@ hide:
 <!-- <script src="https://unpkg.com/browse/@videojs/http-streaming@3.11.1/dist/videojs-http-streaming.min.js"></script> -->
 
 
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script> -->
 
 
 <!-- DEFINE SCRIPT JS -->
@@ -95,7 +95,7 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        playHls('https://ctrl.laotv.la/live/DW/index.m3u8');
+        playVideojs('https://ctrl.laotv.la/live/DW/index.m3u8');
     });
 
 
@@ -140,17 +140,17 @@ hide:
     };
 
 
-    //##### Implementation: first tries to play the link using playVideojs(), and if that fails, then use playHls()
-    function playVideoLink(videoURL, vidElementID='vid1') {
-    var playerElement = document.getElementById(vidElementID);
+    //##### Implementation: first tries to play the link using playVideojs(), and if that fails, then use playHls(). But this may not need, since Videojs also has Hls
+    // function playVideoLink(videoURL, vidElementID='vid1') {
+    // var playerElement = document.getElementById(vidElementID);
 
-    playerElement.addEventListener('error', function() {
-        console.log('playVideojs failed, trying playHls');
-        playHls(videoURL, vidElementID);
-    }, { once: true });
+    // playerElement.addEventListener('error', function() {
+    //     console.log('playVideojs failed, trying playHls');
+    //     playHls(videoURL, vidElementID);
+    // }, { once: true });
 
-    playVideojs(videoURL, vidElementID);
-    }
+    // playVideojs(videoURL, vidElementID);
+    // }
 
 
     //##### Functions to load videos to HTML video tag
@@ -160,32 +160,40 @@ hide:
             alert("Please enter a stream link.");
             return;
         };
-        // playHls(videoURL, vidElementID);
-        playVideoLink(videoURL, vidElementID);
+        // playVideoLink(videoURL, vidElementID);
 
-        // if (method === 'hls'){
-        //     playHls(videoURL, vidElementID);
-        // } else if (method === 'videojs'){
-        //     playVideojs(videoURL, vidElementID);
-        // }
-    };
-
-    function loadPlayer(videoURLs) {
-        if (Array.isArray(videoURLs)) {
-            loadMultiLinks(videoURLs);
-        } else {
-            // Clear existing buttons
-            var buttonsContainer = document.getElementById('linkButtons');
-            buttonsContainer.innerHTML = '';
-
-            playVideojs(videoURLs);
+        if (method === 'hls'){
+            playHls(videoURL, vidElementID);
+        } else if (method === 'videojs'){
+            playVideojs(videoURL, vidElementID);
         }
     };
 
-    function loadMultiLinks(videoURLs){
-        // Clear existing buttons
-        var buttonsContainer = document.getElementById('linkButtons');
+      function loadPlayer(videoURLs, buttElementID='linkButton') {
+          var videoURL;
+          if (Array.isArray(videoURLs)) {
+              if (videoURLs.length > 1) {
+                  createLinkButton(videoURLs, buttElementID);
+              }
+              videoURL = videoURLs[0];
+          } else {
+              cleanLinkButton(buttElementID); // Clear existing buttons
+              videoURL = videoURLs;
+          }
+          playVideojs(videoURL);
+      };
+
+
+    //##### Functions to create link buttons below video frame
+    function cleanLinkButton(buttElementID='linkButton'){
+        // Clean existing buttons: this clean any existed button at the container with ID=ElementID
+        var buttonsContainer = document.getElementById(buttElementID);
         buttonsContainer.innerHTML = '';
+    }
+
+    function createLinkButton(videoURLs,buttElementID='linkButton'){
+        // Clean existing buttons
+        clearLinkButton(buttElementID)
 
         // Loop through the array and create buttons for each link
         videoURLs.forEach(function (url, index) {
@@ -198,13 +206,7 @@ hide:
 
             buttonsContainer.appendChild(button);
         });
-
-        // Load the first video from the array
-        playVideojs(videoURLs[0]);
     };
-
-
-
 </script>
 
 
