@@ -178,7 +178,8 @@ hide:
             alert("Please enter a stream link.");
             return;
         };
-        playVideoLink(videoURL, vidElementID);
+        playHls(videoURL, vidElementID);
+        // playVideoLink(videoURL, vidElementID);
 
         // if (method === 'hls'){
         //     playHls(videoURL, vidElementID);
