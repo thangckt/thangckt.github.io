@@ -316,6 +316,8 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://livedoc.cgtn.com/1000d/prog_index.m3u8')"> <span class="front">CGTN Doc</span> </button>
   <button class="pushable" onclick="loadPlayer('https://lds-realstories-samsungau.amagi.tv/playlist.m3u8')"> <span class="front">Real Story</span> </button>
 
+<h3>Travel</h3>
+<button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8'])"> <span class="front">BBC Food</span> </button>
 
 
 
