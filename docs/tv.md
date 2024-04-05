@@ -192,7 +192,7 @@ hide:
 
 
 <div class="container">
-<!-- First Column: Video Frame  class="video-js" -->
+<!-- FIRST COLUMN: VIDEO FRAME, may not need to use:    class="video-js" -->
 <div class="video-column" >
   <div style="position:relative; padding-bottom:56.25%">
     <video id="vid1"  controls preload="none" autoplay style="position:absolute; width:100%; height:100%; left:0px; top:0px;" ></video>
@@ -216,7 +216,9 @@ data-ad-slot="1234567890"></ins>
 
 </div>
 
-<!-- Second Column: Other Content - ADD LINK FOR CHANNEL-->
+
+
+<!-- SECOND COLUMN: BUTTONS - ADD LINK FOR CHANNEL-->
 <div class="content-column" >
   <!-- <h3>Stream link</h3> -->
   <!-- <label for="m3u8Link">Stream Link: </label> -->
