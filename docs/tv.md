@@ -98,7 +98,7 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        playVideojs('https://ctrl.laotv.la/live/DW/index.m3u8');
+        playVideojs('https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8');
     });
 
 
@@ -286,10 +286,12 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8')"> <span class="front">EURO</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8')"> <span class="front">France 24</span> </button>
 
+  <br><br>
+  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8'])"> <span class="front">Sky News</span> </button>
+
+
 <h3>News - Asia</h3>
 
-  <br><br>
-  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8'])"> <span class="front">SkyNews</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8','https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8','https://ctrl.laotv.la/live/ABCA/index.m3u8'])"> <span class="front">ABC Au</span> </button>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/Arirang/index.m3u8')"> <span class="front">Arirang</span> </button>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/CNBC/index.m3u8')"> <span class="front">CNBC Asia</span> </button>
