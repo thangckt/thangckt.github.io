@@ -316,9 +316,6 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer('https://livedoc.cgtn.com/1000d/prog_index.m3u8')"> <span class="front">CGTN Doc</span> </button>
   <button class="pushable" onclick="loadPlayer('https://lds-realstories-samsungau.amagi.tv/playlist.m3u8')"> <span class="front">Real Story</span> </button>
 
-<h3>Travel</h3>
-<button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8'])"> <span class="front">BBC Food</span> </button>
-
 
 
 
@@ -343,6 +340,10 @@ data-ad-slot="1234567890"></ins>
  <!-- <h3>Music</h3>
   <button class="pushable" onclick="loadYoutube('https://www.youtube.com/live/2gO1v2GPMFk?si=XGS3b_ygBc9LGMsA')"> <span class="front">Classic 1 (YT)</span> </button>
   <button class="pushable" onclick="loadYoutube('https://www.youtube.com/live/tSlOlKRuudU?si=Xa46YFg2UqwvFE5P')"> <span class="front">Classic 2 (YT)</span> </button> -->
+
+<h3>Show</h3>
+<button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8'])"> <span class="front">BBC Food</span> </button>
+
 
 
 
