@@ -87,8 +87,8 @@ hide:
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script> -->
 
 <!-- for youtube -->
-<script src="https://www.youtube.com/iframe_api"></script>
-<script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script>
+<!-- <script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script> -->
 
 
 <!-- DEFINE SCRIPT JS -->
@@ -100,35 +100,10 @@ hide:
 
 
     //##### Functions to play video, use only Videojs for simplicity
-    function getMimeType(url) {
-        if (url.includes('youtube.com') || url.includes('youtube')) {
-            return 'video/youtube';
-        }
-
-        var extension = url.split('.').pop();
-        switch (extension) {
-            case 'm3u8':
-                return 'application/x-mpegURL';
-            case 'mp4':
-                return 'video/mp4';
-            case 'webm':
-                return 'video/webm';
-            // Add more cases as needed
-            default:
-                return 'application/x-mpegURL';
-        }
-    }
-
     function playVideojs(videoURL, vidID='vid1'){
         window.scrollTo(0, 0); // Scroll to the top after loading the video
-
         var player = videojs(vidID);
-        var mimeType = getMimeType(videoURL);
-
-        if(mimeType === 'video/youtube') {
-            player.tech({ IWillNotUseThisInPlugins: true });
-        }
-        player.src({ src: videoURL, type: mimeType });
+        player.src({ src: videoURL, type: 'application/x-mpegURL' });
         player.play();
     };
 
