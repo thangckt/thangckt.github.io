@@ -91,7 +91,6 @@ hide:
 <!-- <script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script> -->
 <!-- <script src="https://unpkg.com/browse/@videojs/http-streaming@3.11.1/dist/videojs-http-streaming.min.js"></script> -->
 
-
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script> -->
 
 
@@ -222,7 +221,7 @@ hide:
     <video id="vid1"  controls preload="none" autoplay style="position:absolute; width:100%; height:100%; left:0px; top:0px;" ></video>
   </div>
 
-  <!-- New element for displaying dynamic buttons -->
+  <!-- container for displaying dynamic buttons -->
   <div id='linkButton' style="display:flex; justify-content:center; margin-top:20px; gap:5px;"></div>
 
 
