@@ -89,6 +89,8 @@ hide:
 <!-- <script src="https://unpkg.com/browse/@videojs/http-streaming@3.11.1/dist/videojs-http-streaming.min.js"></script> -->
 
 
+
+<!-- DEFINE SCRIPT JS -->
 <!-- Load js function from another file <script src="TVonline/script_tv.js"></script> -->
 <script>
     // Automatically load and play default video when page loads
