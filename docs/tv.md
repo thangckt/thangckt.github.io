@@ -302,6 +302,7 @@ data-ad-slot="1234567890"></ins>
 <h3>Discovery</h3>
   <button class="pushable" onclick="loadPlayer('https://i.mjh.nz/SamsungTVPlus/GBBB5000002PL.m3u8')"> <span class="front">Wild Planet</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBD1700001RW.m3u8'])"> <span class="front">BBC Earth</span> </button>
+  <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/USBC600017FG.m3u8'])"> <span class="front">BBC Home</span> </button>
 
   <button class="pushable" onclick="loadPlayer('https://hncfree-samsungau.amagi.tv/playlist.m3u8')"> <span class="front">Horse&Country</span> </button>
   <button class="pushable" onclick="loadPlayer('https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8')"> <span class="front">Animal Planet</span> </button>
