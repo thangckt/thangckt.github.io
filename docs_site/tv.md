@@ -213,6 +213,16 @@ hide:
         button.innerHTML = '<span class="front">' + buttonText + '</span>';
         return button;
     }
+
+    function createListChannelButton(listButtons, containerID='content-column') {
+        // Get the container for the buttons
+        var container = document.getElementById(containerID);
+        // Create and append each button
+        listButtons.forEach(function (buttonInfo) {
+            var button = createChannelButton(buttonInfo.url, buttonInfo.text);
+            container.appendChild(button);
+        });
+    }
 </script>
 
 
@@ -273,7 +283,6 @@ data-ad-slot="1234567890"></ins>
 
   <button class="pushable" onclick="loadPlayer('https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8')"> <span class="front">Wion</span> </button>
 
-
   <br><br>
   <!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
   <button class="pushable" onclick="loadPlayer(['https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8'])"> <span class="front">CNN</span> </button>
@@ -286,23 +295,16 @@ data-ad-slot="1234567890"></ins>
 
 
 <h3>News - EU</h3>
-
 <script>
+    // Use the script to void repeated creation of buttons line-by-line as in above
     // List of buttons to create
-    var buttons = [
+    var listButtons = [
         { url: ['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8'], text: 'DW' },
         { url: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8', text: 'EURO' },
         { url: 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8', text: 'France 24'},
         { url: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8'], text: 'Sky News'}
     ];
-
-    // Get the container for the buttons
-    var container = document.getElementById('content-column');
-    // Create and append each button
-    buttons.forEach(function (buttonInfo) {
-        var button = createChannelButton(buttonInfo.url, buttonInfo.text);
-        container.appendChild(button);
-    });
+    createListChannelButton(listButtons);
 </script>
 
 <h3>News - Asia</h3>
