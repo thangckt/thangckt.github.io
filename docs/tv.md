@@ -5,6 +5,7 @@ hide:
   - footer
 ---
 
+<!-- # find more m3u8 link: http://tonkiang.us/ -->
 
 <!-- USE BUTTON: https://www.joshwcomeau.com/animation/3d-button/#a-hover-state-4 -->
 <style>
@@ -92,10 +93,12 @@ hide:
 <script>
     // Automatically load and play default video when page loads
     window.addEventListener('load', function () {
-        loadVideojs('https://ctrl.laotv.la/live/DW/index.m3u8');
+        playVideojs('https://ctrl.laotv.la/live/DW/index.m3u8');
     });
 
-    function loadVideojs(videoUrl, vidElementID='vid1'){
+
+    //##### Functions to play video, use Videojs or Hls
+    function playVideojs(videoUrl, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
       // Change class of video tag
       var player = document.getElementById(vidElementID);
@@ -109,7 +112,7 @@ hide:
           player.play();
     };
 
-    function loadHls(videoUrl, vidElementID='vid1'){
+    function playHls(videoUrl, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
       // Change class of video tag
       var player = document.getElementById(vidElementID);
@@ -132,6 +135,7 @@ hide:
     };
 
 
+    //##### Functions to load videos to HTML video tag
     function loadStream(vidElementID='vid1', method='videojs') {
         var videoUrl = document.getElementById("m3u8Link").value;
         if (!videoUrl) {
@@ -140,9 +144,9 @@ hide:
         };
 
         if (method === 'hls'){
-            loadHls(videoUrl, vidElementID);
+            playHls(videoUrl, vidElementID);
         } else if (method === 'videojs'){
-            loadVideojs(videoUrl, vidElementID);
+            playVideojs(videoUrl, vidElementID);
         }
     };
 
@@ -154,7 +158,7 @@ hide:
             var buttonsContainer = document.getElementById('linkButtons');
             buttonsContainer.innerHTML = '';
 
-            loadVideojs(videoUrls);
+            playVideojs(videoUrls);
         }
     };
 
@@ -169,15 +173,18 @@ hide:
             button.className = 'pushable';
             button.innerHTML = '<span class="front">Link ' + (index + 1) + '</span>';
             button.onclick = function () {
-                loadVideojs(url,"vid1");
+                playVideojs(url,"vid1");
             };
 
             buttonsContainer.appendChild(button);
         });
 
         // Load the first video from the array
-        loadVideojs(videoUrls[0]);
+        playVideojs(videoUrls[0]);
     };
+
+    //##### Implementation first tries to play the link using playVideojs(), and if that fails, to use playHls()
+
 </script>
 
 
@@ -292,7 +299,7 @@ data-ad-slot="1234567890"></ins>
 
   <button class="pushable" onclick="loadPlayer('https://edge2.laotv.la/live/K+Sport1/index.m3u8')"> <span class="front">K+ sport 1</span> </button>
   <button class="pushable" onclick="loadPlayer('https://edge1.laotv.la/live/K+Sport2/index.m3u8')"> <span class="front">K+ sport 2</span> </button>
-  
+
   <br> <br>
   <!-- <button class="pushable" onclick="loadPlayer('https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8')"> <span class="front">Phim Hay</span> </button> -->
   <button class="pushable" onclick="loadPlayer('https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8')"> <span class="front">TVB Vietnam</span> </button>
