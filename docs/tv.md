@@ -102,10 +102,10 @@ hide:
     //##### Functions to play video, use Videojs or Hls
     function playVideojs(videoURL, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
-      var player = document.getElementById(vidElementID);
       // Change class of video tag
-      if (!player.classList.contains("video-js")) { // Check if the class does not exist
-         player.classList.add("video-js"); // Add the new class
+      var playerElement = document.getElementById(vidElementID);
+      if (!playerElement.classList.contains("video-js")) { // Check if the class does not exist
+         playerElement.classList.add("video-js"); // Add the new class
       }
 
       var player = videojs(vidElementID);
@@ -117,11 +117,13 @@ hide:
 
     function playHls(videoURL, vidElementID='vid1'){
       window.scrollTo(0, 0); // Scroll to the top after loading the video
-      var player = document.getElementById(vidElementID);
       // Change class of video tag
-      if (player.classList.contains("video-js")) { // Check if the class exists
-          player.classList.remove("video-js"); // Remove the existing class
+      var playerElement = document.getElementById(vidElementID);
+      if (playerElement.classList.contains("video-js")) { // Check if the class exists
+          playerElement.classList.remove("video-js"); // Remove the existing class
       }
+
+      var player = document.getElementById(vidElementID);
       if (Hls.isSupported()) {
           var hls = new Hls();
           hls.loadSource(videoURL);
