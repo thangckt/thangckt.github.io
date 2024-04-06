@@ -102,17 +102,7 @@ hide:
         player.play();
     };
 
-
     //##### Functions to load videos to HTML video tag
-    function loadStream(vidID='vid1') {
-        var videoURL = document.getElementById("m3u8Link").value;
-        if (!videoURL) {
-            alert("Please enter a stream link.");
-            return;
-        };
-        loadPlayer(videoURL, vidID);
-    };
-
     function loadPlayer(videoURLs, vidID='vid1', buttElementID='linkButton') {
         // Clean existing buttons: this clean any existed button at the container with ID=ElementID
         var buttonsContainer = document.getElementById(buttElementID);
@@ -130,6 +120,14 @@ hide:
         playVideojs(videoURL, vidID);
     };
 
+    function loadStream(vidID='vid1') {
+        var videoURL = document.getElementById("m3u8Link").value;
+        if (!videoURL) {
+            alert("Please enter a stream link.");
+            return;
+        };
+        loadPlayer(videoURL, vidID);
+    };
 
     //##### Functions to create link buttons below the video frame
     function createLinkButton(videoURLs, buttElementID='linkButton'){
