@@ -223,7 +223,7 @@ data-ad-slot="1234567890"></ins>
   <button class="pushable" onclick="loadPlayer(['https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8','https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8'])"> <span class="front">FOX</span> </button>
   <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
   <button class="pushable" onclick="loadPlayer(['https://ntd02.akamaized.net/NTDA/index.m3u8','https://ntd02.akamaized.net/NTD-West/index.m3u8'])"> <span class="front">NTD</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://newsmax-samsungus.amagi.tv/playlist.m3u8')"> <span class="front">Newsmax</span> </button>
+  <button class="pushable" onclick="loadPlayer(['https://newsmax-samsungus.amagi.tv/playlist.m3u8','https://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8'])"> <span class="front">Newsmax 2</span> </button>
 
 
 <!-- the center biases: https://www.allsides.com/media-bias/media-bias-chart -->
@@ -338,6 +338,14 @@ data-ad-slot="1234567890"></ins>
         {text: 'EdgeSport', URL: ['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Stadium', URL: ['https://i.mjh.nz/SamsungTVPlus/USAJ3504705A.m3u8']},
         {text: 'Golf 2', URL: ['https://edge1.laotv.la/live/BosiGolf/index.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
+<br> <br>
+<script>
+    var listButtons = [
+        {text: 'RedBull TV', URL: ['https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
