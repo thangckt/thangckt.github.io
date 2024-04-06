@@ -116,10 +116,10 @@ hide:
             alert("Please enter a stream link.");
             return;
         };
-        playVideojs(videoURL, vidID);
+        loadPlayer(videoURL, vidID);
     };
 
-    function loadPlayer(videoURLs, buttElementID='linkButton') {
+    function loadPlayer(videoURLs, vidID='vid1', buttElementID='linkButton') {
         // Clean existing buttons: this clean any existed button at the container with ID=ElementID
         var buttonsContainer = document.getElementById(buttElementID);
         buttonsContainer.innerHTML = '';
@@ -133,7 +133,7 @@ hide:
         } else {
             videoURL = videoURLs;
         }
-        playVideojs(videoURL);
+        playVideojs(videoURL, vidID);
     };
 
 
