@@ -93,12 +93,6 @@ hide:
 
 <!-- DEFINE SCRIPT JS -->
 <script>
-    // Automatically load and play default video when the page loads
-    window.addEventListener('load', function () {
-        playVideojs('https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8');
-    });
-
-
     //##### Functions to play video, use only Videojs for simplicity
     function playVideojs(videoURL, vidID='vid1'){
         window.scrollTo(0, 0); // Scroll to the top after loading the video
@@ -209,6 +203,13 @@ data-ad-slot="1234567890"></ins>
 
 <!-- SECOND COLUMN: BUTTONS - ADD LINK FOR CHANNEL-->
 <div class="content-column" id="content-column">
+<script>
+    // Automatically load and play default video when the page loads
+    window.addEventListener('load', function () {
+        playVideojs('https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8');
+    });
+</script>
+
 
 <!-- <h3>Stream link</h3> -->
   <!-- <label for="m3u8Link">Stream Link: </label> -->
