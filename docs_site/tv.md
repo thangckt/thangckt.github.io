@@ -204,7 +204,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     // Automatically load and play default video when the page loads
     window.addEventListener('load', function () {
-        playVideojs('https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8');
+        playVideojs('https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8');
     });
 </script>
 
@@ -243,7 +243,6 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8']},
-        {text: 'CNN Int.', URL: ['https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8']},
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
         {text: 'CNA', URL: ['https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8']},
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
@@ -257,7 +256,7 @@ data-ad-slot="1234567890"></ins>
 <h3>News - EU</h3>
 <script>
     var listButtons = [
-        {text: 'DW', URL: ['https://ctrl.laotv.la/live/DW/index.m3u8','https://qnetlive.nethubtv.vn/live/dw.smil/chunklist_b1628000_sleng.m3u8','https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8']},
+        {text: 'DW', URL: ['https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8','https://ctrl.laotv.la/live/DW/index.m3u8']},
         {text: 'EURO', URL: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8'},
         {text: 'France 24', URL: 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8'},
         {text: 'Sky News', URL: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8']},
