@@ -325,6 +325,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'MovieSphere', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD17000117B.m3u8']},
         {text: 'B4U Movies', URL: ['https://minerva-bizzarromovies-1-it.samsung.wurl.tv/playlist.m3u8']},
         {text: 'Sony', URL: ['https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/smc_720p/playlist.m3u8']},
+        {text: 'Theater', URL: ['https://mst3k-localnow.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
