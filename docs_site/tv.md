@@ -248,6 +248,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
         {text: 'TRT World', URL: ['https://tv-trtworld.live.trt.com.tr/master_720.m3u8']},
         {text: 'Yahoo Finance', URL: ['https://yahoo-plex.amagi.tv/playlist.m3u8']},
+        {text: 'Bloomberg', URL: ['https://bloomberg-bloomberg-2-nz.samsung.wurl.tv/playlist.m3u8','https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -258,7 +259,7 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'DW', URL: ['https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8','https://ctrl.laotv.la/live/DW/index.m3u8']},
         {text: 'BBC', URL: 'https://i.mjh.nz/SamsungTVPlus/US4000033L.m3u8'},
-        {text: 'EURO', URL: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8'},
+        {text: 'EURO', URL: ['https://i.mjh.nz/SamsungTVPlus/GBAJ4900020VP.m3u8','https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8']},
         {text: 'France 24', URL: 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8'},
         {text: 'Sky News', URL: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8']},
         {text: 'GB News', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB1600008R3.m3u8','https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-gbnewsnz-samsungnz/playlist.m3u8']}
@@ -272,7 +273,6 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'ABC Au', URL: ['https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8','https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8','https://ctrl.laotv.la/live/ABCA/index.m3u8']},
         {text: 'CNBC Asia', URL: ['https://ctrl.laotv.la/live/CNBC/index.m3u8']},
-        {text: 'Bloomberg Asia', URL: ['https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
         {text: 'Arirang', URL: ['https://ctrl.laotv.la/live/Arirang/index.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
