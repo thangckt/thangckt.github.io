@@ -299,6 +299,8 @@ data-ad-slot="1234567890"></ins>
         {text: 'Travelxp', URL: ['https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8', 'https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8']},
         {text: 'Real Life', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8']},
         {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8']},
+        {text: 'Dust', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00219-gunpowdersky-dustintlnz-samsungnz/playlist.m3u8']},
+        {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -327,6 +329,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'MovieSphere', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD17000117B.m3u8']},
         {text: 'B4U Movies', URL: ['https://minerva-bizzarromovies-1-it.samsung.wurl.tv/playlist.m3u8']},
         {text: 'Circle', URL: ['https://circle-samsung.amagi.tv/playlist.m3u8']},
+        {text: 'FilmStream', URL: ['https://spi-filmstream-1-in.samsung.wurl.tv/playlist.m3u8']},
         {text: 'Sony', URL: ['https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/smc_720p/playlist.m3u8']},
         {text: 'Theater 3000', URL: ['https://mst3k-localnow.amagi.tv/playlistR1080p.m3u8','https://mst3k-localnow.amagi.tv/playlist.m3u8']},
     ];
@@ -355,6 +358,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'Spirit TV', URL: ['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8']},
+        {text: 'Xite', URL: ['https://xite-samsung-de.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -363,10 +367,11 @@ data-ad-slot="1234567890"></ins>
 <h3>Show</h3>
 <script>
     var listButtons = [
+        {text: 'HBO family', URL: ['https://futuretoday-afv-family-2-be.samsung.wurl.tv/playlist.m3u8']},
         {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
         {text: 'YouTV', URL: ['https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Fox Soul', URL: ['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8']},
-        {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'Fashion TV', URL: ['https://fashiontv-fashiontv-5-se.samsung.wurl.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
