@@ -338,22 +338,17 @@ data-ad-slot="1234567890"></ins>
 <h3>Sport</h3>
 <script>
     var listButtons = [
+        {text: 'RedBull TV', URL: ['https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8']},
         {text: 'FIFA+', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8']},
         {text: 'EdgeSport', URL: ['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Stadium', URL: ['https://i.mjh.nz/SamsungTVPlus/USAJ3504705A.m3u8']},
         {text: 'Golf 2', URL: ['https://edge1.laotv.la/live/BosiGolf/index.m3u8']},
         {text: 'Tennis', URL: ['https://tennischannel-intl-samsung-uk.amagi.tv/playlist540_p.m3u8']},
+        {text: 'Sigma', URL: ['https://rightsboosterltd-scl-1-nl.samsung.wurl.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
 
-<br> <br>
-<script>
-    var listButtons = [
-        {text: 'RedBull TV', URL: ['https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8']},
-    ];
-    createListChannelButton(listButtons, 'content-column');
-</script>
 
 
 <h3>Music</h3>
