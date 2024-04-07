@@ -242,7 +242,7 @@ data-ad-slot="1234567890"></ins>
 <br><br>
 <script>
     var listButtons = [
-        {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8']},
+        {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBD1900008O3.m3u8','https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8']},
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
         {text: 'CNA', URL: ['https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8']},
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
@@ -260,6 +260,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'EURO', URL: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8'},
         {text: 'France 24', URL: 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8'},
         {text: 'Sky News', URL: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8']},
+        {text: 'GB News', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB1600008R3.m3u8','https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-gbnewsnz-samsungnz/playlist.m3u8']}
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -281,7 +282,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'Documentary+', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300019UD.m3u8']},
-        {text: 'Timeline', URL: ['https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8','https://timeline-samsung-uk.amagi.tv/playlist.m3u8']},
+        {text: 'Timeline', URL: ['https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8','https://timeline-samsung-uk.amagi.tv/playlist.m3u8','https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-timelinenz-samsungnz/playlist.m3u8]},
         {text: 'CGTN Doc', URL: ['https://livedoc.cgtn.com/1000d/prog_index.m3u8']},
         {text: 'Real Stories', URL: ['https://lds-realstories-samsungau.amagi.tv/playlist.m3u8']},
     ];
@@ -344,7 +345,7 @@ data-ad-slot="1234567890"></ins>
 <br> <br>
 <script>
     var listButtons = [
-        {text: 'RedBull TV', URL: ['https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8']},
+        {text: 'RedBull TV', URL: ['https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -365,6 +366,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
         {text: 'YouTV', URL: ['https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Fox Soul', URL: ['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8']},
+        {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
