@@ -326,8 +326,9 @@ data-ad-slot="1234567890"></ins>
 <h3>Movie</h3>
 <script>
     var listButtons = [
-        {text: 'HBO', URL: ['https://ctrl.laotv.la/live/HBO/index.m3u8']},
+        {text: 'MyTime', URL: ['https://mytimeuk-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'MovieSphere', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD17000117B.m3u8']},
+        {text: 'HBO', URL: ['https://ctrl.laotv.la/live/HBO/index.m3u8']},
         {text: 'WildSide', URL: ['https://versatile-wildsidetv-1-fr.samsung.wurl.tv/playlist.m3u8']},
         {text: 'Circle', URL: ['https://circle-samsung.amagi.tv/playlist.m3u8']},
         {text: 'FilmStream', URL: ['https://spi-filmstream-1-in.samsung.wurl.tv/playlist.m3u8']},
