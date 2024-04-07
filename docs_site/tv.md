@@ -350,10 +350,10 @@ data-ad-slot="1234567890"></ins>
         {text: 'Golf 2', URL: ['https://edge1.laotv.la/live/BosiGolf/index.m3u8']},
         {text: 'Tennis', URL: ['https://tennischannel-intl-samsung-uk.amagi.tv/playlist540_p.m3u8']},
         {text: 'Sigma', URL: ['https://rightsboosterltd-scl-1-nl.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'PAC12 Insider', URL: ['https://pac12-samsungus.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
-
 
 
 <h3>Music</h3>
