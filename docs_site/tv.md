@@ -283,7 +283,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'Documentary+', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300019UD.m3u8']},
-        {text: 'Timeline', URL: ['https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8','https://timeline-samsung-uk.amagi.tv/playlist.m3u8','https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-timelinenz-samsungnz/playlist.m3u8]},
+        {text: 'Timeline', URL: ['https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8','https://timeline-samsung-uk.amagi.tv/playlist.m3u8','https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-timelinenz-samsungnz/playlist.m3u8']},
         {text: 'CGTN Doc', URL: ['https://livedoc.cgtn.com/1000d/prog_index.m3u8']},
         {text: 'Real Stories', URL: ['https://lds-realstories-samsungau.amagi.tv/playlist.m3u8']},
     ];
