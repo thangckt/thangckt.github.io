@@ -257,6 +257,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'DW', URL: ['https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8','https://ctrl.laotv.la/live/DW/index.m3u8']},
+        {text: 'BBC', URL: 'https://i.mjh.nz/SamsungTVPlus/US4000033L.m3u8'},
         {text: 'EURO', URL: 'https://shls-live-ak.akamaized.net/out/v1/115bfcde8fa342d182ef846445cdbdcf/index.m3u8'},
         {text: 'France 24', URL: 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/playlist.m3u8'},
         {text: 'Sky News', URL: ['https://i.mjh.nz/SamsungTVPlus/USBB52000022Q.m3u8']},
@@ -301,6 +302,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8']},
         {text: 'Dust', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00219-gunpowdersky-dustintlnz-samsungnz/playlist.m3u8']},
         {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'CNN Tech', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBD8000016N.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
