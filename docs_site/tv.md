@@ -231,8 +231,8 @@ data-ad-slot="1234567890"></ins>
     // Use the script to void repeated creation of buttons line-by-line as in above
     // List of buttons to create
     var listButtons = [
-        // {text: 'Reuters', URL: ['https://reuters-reutersnow-1-us.plex.wurl.tv/playlist.m3u8']},
-        {text: 'Wion', URL: ['https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8']},
+        {text: 'Yahoo Finance', URL: ['https://yahoo-samsung.amagi.tv/playlist.m3u8','https://yahoo-plex.amagi.tv/playlist.m3u8']},
+        {text: 'Bloomberg', URL: ['https://bloomberg-bloomberg-2-nz.samsung.wurl.tv/playlist.m3u8','https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -247,8 +247,6 @@ data-ad-slot="1234567890"></ins>
         {text: 'CNA', URL: ['https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8']},
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
         {text: 'TRT World', URL: ['https://tv-trtworld.live.trt.com.tr/master_720.m3u8']},
-        {text: 'Yahoo Finance', URL: ['https://yahoo-samsung.amagi.tv/playlist.m3u8','https://yahoo-plex.amagi.tv/playlist.m3u8']},
-        {text: 'Bloomberg', URL: ['https://bloomberg-bloomberg-2-nz.samsung.wurl.tv/playlist.m3u8','https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -274,6 +272,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'ABC Au', URL: ['https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8','https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8','https://ctrl.laotv.la/live/ABCA/index.m3u8']},
         {text: 'CNBC Asia', URL: ['https://ctrl.laotv.la/live/CNBC/index.m3u8']},
         {text: 'Arirang', URL: ['https://ctrl.laotv.la/live/Arirang/index.m3u8']},
+        {text: 'Wion', URL: ['https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -408,25 +407,6 @@ data-ad-slot="1234567890"></ins>
 <!-- <h3>HTV - HTVC</h3> -->
 
 
-<h3>VTV - VTC</h3>
-<script>
-    var listButtons = [
-        {text: 'VTV 1', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv1-720p.m3u8','https://edge1.laotv.la/live/VTV1SD/index.m3u8']},
-        {text: 'VTV 2', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv2-720p.m3u8']},
-        {text: 'VTV 3', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv3-720p.m3u8','https://edge1.laotv.la/live/VTV3/index.m3u8']},
-        {text: 'VTV 4', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv4-720p.m3u8']},
-        {text: 'VTV 5', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5-720p.m3u8']},
-        {text: 'VTV 5 TNB', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tnb-720p.m3u8']},
-        {text: 'VTV 5 TN', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tn-720p.m3u8']},
-        {text: 'VTV 7', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv7-720p.m3u8']},
-        {text: 'VTV 8', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv8-720p.m3u8']},
-        {text: 'VTV 9', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv9-720p.m3u8']},
-        {text: 'VTV Can Tho', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv6-720p.m3u8']},
-        {text: 'VOV', URL: ['https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/playlist.m3u8']},
-    ];
-    createListChannelButton(listButtons, 'content-column');
-</script>
-
 
 <h3>Local</h3>
 <!-- <h4>Song Cuu Long</h4> -->
@@ -542,6 +522,25 @@ data-ad-slot="1234567890"></ins>
         {text: 'Little Saigon', URL: ['https://media.streambrothers.com:1936/8228/8228/playlist.m3u8']},
         {text: 'SET TV 1', URL: ['https://5dcab9aed5331.streamlock.net/SET1/livestream/playlist.m3u8']},
         {text: 'SET TV 2', URL: ['https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
+<h3>VTV - VTC</h3>
+<script>
+    var listButtons = [
+        {text: 'VTV 1', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv1-720p.m3u8','https://edge1.laotv.la/live/VTV1SD/index.m3u8']},
+        {text: 'VTV 2', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv2-720p.m3u8']},
+        {text: 'VTV 3', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv3-720p.m3u8','https://edge1.laotv.la/live/VTV3/index.m3u8']},
+        {text: 'VTV 4', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv4-720p.m3u8']},
+        {text: 'VTV 5', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5-720p.m3u8']},
+        {text: 'VTV 5 TNB', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tnb-720p.m3u8']},
+        {text: 'VTV 5 TN', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv5tn-720p.m3u8']},
+        {text: 'VTV 7', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv7-720p.m3u8']},
+        {text: 'VTV 8', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv8-720p.m3u8']},
+        {text: 'VTV 9', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv9-720p.m3u8']},
+        {text: 'VTV Can Tho', URL: ['https://lms-vnetwork-vtv.swiftfederation.com/vtvgo/vtv6-720p.m3u8']},
+        {text: 'VOV', URL: ['https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
