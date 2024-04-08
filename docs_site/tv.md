@@ -231,7 +231,7 @@ data-ad-slot="1234567890"></ins>
     // Use the script to void repeated creation of buttons line-by-line as in above
     // List of buttons to create
     var listButtons = [
-        {text: 'Yahoo Finance', URL: ['https://yahoo-samsung.amagi.tv/playlist.m3u8','https://yahoo-plex.amagi.tv/playlist.m3u8']},
+        {text: 'Y!Finance', URL: ['https://yahoo-samsung.amagi.tv/playlist.m3u8','https://yahoo-plex.amagi.tv/playlist.m3u8']},
         {text: 'Bloomberg', URL: ['https://bloomberg-bloomberg-2-nz.samsung.wurl.tv/playlist.m3u8','https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
@@ -352,9 +352,9 @@ data-ad-slot="1234567890"></ins>
 <h3>Sport</h3>
 <script>
     var listButtons = [
-        {text: 'RedBull TV', URL: ['https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8']},
+        {text: 'RedBull', URL: ['https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8']},
         {text: 'FIFA+', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8']},
-        {text: 'EdgeSport', URL: ['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8']},
+        {text: 'Edge', URL: ['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Stadium', URL: ['https://i.mjh.nz/SamsungTVPlus/USAJ3504705A.m3u8']},
         {text: 'Golf 2', URL: ['https://edge1.laotv.la/live/BosiGolf/index.m3u8']},
         {text: 'Tennis', URL: ['https://tennischannel-intl-samsung-uk.amagi.tv/playlist540_p.m3u8']},
@@ -370,7 +370,7 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'StingRay Jazz', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000128A.m3u8']},
         {text: 'StingRay Country', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3300021KV.m3u8']},
-        {text: 'Spirit TV', URL: ['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8']},
+        {text: 'Spirit', URL: ['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8']},
         {text: 'Xite', URL: ['https://xite-samsung-de.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
