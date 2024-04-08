@@ -283,7 +283,6 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'Documentary+', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300019UD.m3u8']},
         {text: 'Timeline', URL: ['https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8','https://timeline-samsung-uk.amagi.tv/playlist.m3u8','https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-timelinenz-samsungnz/playlist.m3u8']},
-        {text: 'Wonder', URL: ['https://lds-wonder-samsungau.amagi.tv/playlist.m3u8']},
         {text: 'CGTN Doc', URL: ['https://livedoc.cgtn.com/1000d/prog_index.m3u8']},
         {text: 'Real Stories', URL: ['https://lds-realstories-samsungau.amagi.tv/playlist.m3u8']},
     ];
@@ -294,12 +293,20 @@ data-ad-slot="1234567890"></ins>
 <h3>Discovery</h3>
 <script>
     var listButtons = [
+        {text: 'Travelxp', URL: ['https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8', 'https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8','https://travelxp-travelxp-3-nl.samsung.wurl.tv/playlist.m3u8']},
         {text: 'BBC Earth', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD1700001RW.m3u8']},
         {text: 'BBC Home', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC600017FG.m3u8']},
         {text: 'BBC Travel', URL: ['https://ab96b349d4d14d80a1f8530a0bce4488.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-de_BBCTravel/playlist.m3u8?ads.wurl_channel=985&ads.wurl_name=BBCTravel&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D']},
-        {text: 'Travelxp', URL: ['https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8', 'https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8','https://travelxp-travelxp-3-nl.samsung.wurl.tv/playlist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
+
+<br> <br>
+<script>
+    var listButtons = [
+        {text: 'Wonder', URL: ['https://lds-wonder-samsungau.amagi.tv/playlist.m3u8']},
         {text: 'Real Life', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8']},
-        {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8']},
         {text: 'Dust', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00219-gunpowdersky-dustintlnz-samsungnz/playlist.m3u8']},
         {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8']},
     ];
@@ -314,6 +321,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'Animal Planet', URL: ['https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8']},
         {text: 'Discovery SEA', URL: ['https://ctrl.laotv.la/live/Discovery/index.m3u8']},
         {text: 'Real Wild', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwildnz-samsungnz/playlist.m3u8']},
+        {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8']},
         {text: 'Love Nature', URL: ['https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/quietude/playlist.m3u8','https://d18dyiwu97wm6q.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/LoveNature4K2-prod/playlist.m3u8']},
         {text: 'Better Life', URL: ['https://tgn.bozztv.com/betterlife/betternature/betternature/index.m3u8']},
     ];
