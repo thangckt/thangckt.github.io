@@ -333,8 +333,8 @@ data-ad-slot="1234567890"></ins>
 <h3>Movie</h3>
 <script>
     var listButtons = [
-        {text: 'MyTime', URL: ['https://mytimeuk-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'MovieSphere', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD17000117B.m3u8']},
+        {text: 'MyTime', URL: ['https://mytime-tcl.amagi.tv/playlist1080-p.m3u8','https://mytime-tcl.amagi.tv/playlist1080-p.m3u8?blog.ntnas.top']},
         {text: 'HBO', URL: ['https://ctrl.laotv.la/live/HBO/index.m3u8']},
         {text: 'WildSide', URL: ['https://versatile-wildsidetv-1-fr.samsung.wurl.tv/playlist.m3u8']},
         {text: 'Circle', URL: ['https://circle-samsung.amagi.tv/playlist.m3u8']},
@@ -382,7 +382,7 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'HBO family', URL: ['https://futuretoday-afv-family-2-be.samsung.wurl.tv/playlist.m3u8']},
         {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
-        {text: 'YouTV', URL: ['https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
+        {text: 'Young', URL: ['https://younghollywood-tcl.amagi.tv/playlist.m3u8','https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Fox Soul', URL: ['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8']},
         {text: 'Fashion TV', URL: ['https://fashiontv-fashiontv-5-se.samsung.wurl.tv/playlist.m3u8','https://fashiontv-fashiontv-5-nl.samsung.wurl.tv/playlist.m3u8']},
     ];
