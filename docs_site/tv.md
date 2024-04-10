@@ -343,6 +343,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'Cinemax', URL: ['https://ctrl.laotv.la/live/Cinemax/index.m3u8']},
         {text: 'Sony', URL: ['https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/smc_720p/playlist.m3u8']},
         {text: 'Theater 3000', URL: ['https://mst3k-localnow.amagi.tv/playlistR1080p.m3u8','https://mst3k-localnow.amagi.tv/playlist.m3u8']},
+        {text: 'Dove', URL: ['https://dovenow-tcl.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -385,6 +386,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'Young', URL: ['https://younghollywood-tcl.amagi.tv/playlist.m3u8','https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Fox Soul', URL: ['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8']},
         {text: 'Fashion TV', URL: ['https://fashiontv-fashiontv-5-se.samsung.wurl.tv/playlist.m3u8','https://fashiontv-fashiontv-5-nl.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'Comedy Dynamics', URL:['https://comedydynamics-tcl.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
