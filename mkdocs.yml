@@ -202,7 +202,7 @@ nav:
   - Home: thangckt.github.io
   # - About: index.md
   # - Codedocs: codedocs.md
-  - molbuilder: thangckt.github.io/molbuilder
+  # - molbuilder: thangckt.github.io/molbuilder
   - Tools: thangckt.github.io/thamd_doc
 
   - Cluster:
