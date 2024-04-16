@@ -48,7 +48,7 @@ hide:
   <div class="container-text">
   <p>
     This site serves as the repo for my personal notes. <br>
-    The contents reflect neither community nor third-party rules, rather, they're messy, improvised, and inevitable for some rare situations but meanless for almost others.  <br>
+    The contents reflect neither community nor third-party rules, rather, they're messy, improvised, and inevitable for some rare contexts but meanless for almost others.  <br>
     It isn't abnormal, therefore, if you find nothing valuable here since they aren't noted for you, and hence enjoy Felix's excellent pieces or move your sight elsewhere.
   </p>
   </div>
