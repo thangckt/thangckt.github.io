@@ -76,8 +76,12 @@ hide:
   .md-content__button {
     display: none;
   }
-  .md-grid {
+  /* .md-grid {
   max-width: 98%;            /* or 100%, if you want to stretch to full-width */
+} */
+
+@page {
+    margin: 75pt 0;
 }
 </style>
 
