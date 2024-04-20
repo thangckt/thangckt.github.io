@@ -211,7 +211,7 @@ nav:
   - thavid: http://thangckt.github.io/thavid_doc
 
   - Cluster:
-    - index.md
+    - cluster/index.md
     - Compile:
       - LAMMPS: cluster/compile/LAMMPS.md
       - cluster/compile/GCC.md
@@ -239,7 +239,7 @@ nav:
       - cluster/refPage/docs_syntax.md
 
   - Refs:
-    - index.md
+    - reading/index.md
     - Researh Ethics: reading/videos/1_research_ethic.md
     - Reading:
       - Basic Science: reading/reading/basic_science.md
@@ -254,7 +254,7 @@ nav:
     - reading/chat.md
 
   - Odd:      # Miscellaneous    Heterogeneous
-    - index.md
+    - odd/index.md
     - Music:
       - Classic pieces: odd/music/music_classic.md
       - Fall of Saigon: odd/music/music_saigon_fall.md
