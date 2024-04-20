@@ -71,16 +71,16 @@ hide:
       }
     }
 
-  /* hide edit button */
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
+    /* hide edit button */
+    .md-typeset h1,
+    .md-content__button {
+        display: none;
+    }
 
-  .md-grid {
-    top-margin:0px;
-  /* max-width: 98%;           /* or 100%, if you want to stretch to full-width */
-}
+    .md-grid {
+        top-margin:0px;
+        /* max-width: 98%;           /* or 100%, if you want to stretch to full-width */
+    }
     .md-footer{
         height:50px;
     }
