@@ -82,7 +82,7 @@ hide:
         /* max-width: 98%;           /* or 100%, if you want to stretch to full-width */
     }
     .md-footer-meta{
-        height:50px;
+        height:30px;
     }
 
 </style>
