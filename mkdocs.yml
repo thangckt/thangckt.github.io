@@ -239,19 +239,19 @@ nav:
       - cluster/refPage/docs_syntax.md
 
   - Refs:
-    - reading/index.md
-    - Researh Ethics: reading/videos/1_research_ethic.md
+    - ref/index.md
+    - Researh Ethics: ref/videos/1_research_ethic.md
     - Reading:
-      - Basic Science: reading/reading/basic_science.md
-      - Computational: reading/reading/computational.md
-      - Mechanics: reading/reading/mechanic_solid.md
+      - Basic Science: ref/reading/basic_science.md
+      - Computational: ref/reading/computational.md
+      - Mechanics: ref/reading/mechanic_solid.md
     - Video_series:
-      - reading/videos/2_calculus_essence.md
+      - ref/videos/2_calculus_essence.md
     - English:
-      - reading/english/english_learn.md
-      - reading/english/vocabulary_img.md
+      - ref/english/english_learn.md
+      - ref/english/vocabulary_img.md
     # - research/publication.md
-    - reading/chat.md
+    - ref/chat.md
 
   - Odd:      # Miscellaneous    Heterogeneous
     - odd/index.md
