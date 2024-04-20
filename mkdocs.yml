@@ -206,9 +206,9 @@ nav:
   # - About: index.md
   # - molbuilder: thangckt.github.io/molbuilder
 
-  - thamd: thangckt.github.io/thamd_doc
-  - thaml: thangckt.github.io/thaml_doc
-  - thavid: thangckt.github.io/thavid_doc
+  - Thamd: thangckt.github.io/thamd_doc
+  - Thaml: thangckt.github.io/thaml_doc
+  - Thavid: thangckt.github.io/thavid_doc
 
   - Cluster:
     - Compile:
@@ -237,7 +237,7 @@ nav:
       - cluster/refPage/cheatsheet.md
       - cluster/refPage/docs_syntax.md
 
-  - Reference:
+  - Refs:
     - Researh Ethics: reading/videos/1_research_ethic.md
     - Reading:
       - Basic Science: reading/reading/basic_science.md
@@ -268,7 +268,7 @@ nav:
     - blog/index.md
 
   - NextChat: https://chat-gpt-next-ihq6gv7qw-thangckt-gmailcom.vercel.app/
-  
+
   - TV: tv.md
 
 
