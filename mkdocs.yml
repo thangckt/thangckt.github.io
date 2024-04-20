@@ -240,13 +240,13 @@ nav:
 
   - Refs:
     - ref/index.md
-    - Researh Ethics: ref/videos/1_research_ethic.md
+    - Researh Ethics: ref/video/1_research_ethic.md
     - Reading:
       - Basic Science: ref/reading/basic_science.md
       - Computational: ref/reading/computational.md
       - Mechanics: ref/reading/mechanic_solid.md
     - Video_series:
-      - ref/videos/2_calculus_essence.md
+      - ref/video/2_calculus_essence.md
     - English:
       - ref/english/english_learn.md
       - ref/english/vocabulary_img.md
