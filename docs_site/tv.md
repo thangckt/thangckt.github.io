@@ -53,7 +53,7 @@ hide:
   }
 
   .content-column {
-      max-height: 100%;
+      max-height: 80vh;
       overflow-y: auto;
       position: relative;
   }
@@ -80,11 +80,6 @@ hide:
     .md-content__button {
         display: none;
     }
-
-    /* .md-grid {
-        top-margin:0px;
-        /* max-width: 98%;           /* or 100%, if you want to stretch to full-width */
-    } */
 
 </style>
 
