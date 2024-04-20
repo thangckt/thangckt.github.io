@@ -3,6 +3,7 @@ hide:
   - toc
   - navigation
   - footer
+  - generator
 ---
 
 <!-- Find more m3u8 links at: http://tonkiang.us/ -->
