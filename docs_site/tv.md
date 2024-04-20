@@ -43,7 +43,7 @@ hide:
       margin-top: -30px;
       margin-bottom: -30px;
       margin-right: -30px;
-      margin-right: -30px;
+      margin-left: -30px;
   }
 
   .video-column {
@@ -53,7 +53,7 @@ hide:
   }
 
   .content-column {
-      max-height: 77vh;
+      max-height: 100%;
       overflow-y: auto;
       position: relative;
   }
