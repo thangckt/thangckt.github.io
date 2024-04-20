@@ -74,7 +74,7 @@ hide:
 
       .content-column {
         width: 100%;
-        max-height: 35vh;
+        max-height: 40vh;
       }
     }
 
