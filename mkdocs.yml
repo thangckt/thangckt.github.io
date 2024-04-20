@@ -202,13 +202,13 @@ plugins:
 ###=======================================
 ## Page tree
 nav:
-  - Home: thangckt.github.io
+  - Home: http://thangckt.github.io
   # - About: index.md
   # - molbuilder: thangckt.github.io/molbuilder
 
-  - Thamd: thangckt.github.io/thamd_doc
-  - Thaml: thangckt.github.io/thaml_doc
-  - Thavid: thangckt.github.io/thavid_doc
+  - Thamd: http://thangckt.github.io/thamd_doc
+  - Thaml: http://thangckt.github.io/thaml_doc
+  - Thavid: http://thangckt.github.io/thavid_doc
 
   - Cluster:
     - Compile:
@@ -267,7 +267,7 @@ nav:
   - Blog:
     - blog/index.md
 
-  - NextChat: https://chat-gpt-next-ihq6gv7qw-thangckt-gmailcom.vercel.app/
+  - NextChat: http://chat-gpt-next-ihq6gv7qw-thangckt-gmailcom.vercel.app/
 
   - TV: tv.md
 
