@@ -40,7 +40,7 @@ hide:
   .container {
       display: flex;
       flex-wrap: nowrap;
-      margin-bottom: -18px;
+      margin-top: -18px;
   }
 
   .video-column {
