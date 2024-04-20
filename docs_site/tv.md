@@ -41,7 +41,7 @@ hide:
       display: flex;
       flex-wrap: nowrap;
       margin-top: -50px;
-      margin-bottom: -30px;
+      margin-bottom: -50px;
       margin-right: -30px;
       margin-left: -30px; 
   }
@@ -53,7 +53,7 @@ hide:
   }
 
   .content-column {
-      max-height: 82vh;
+      max-height: 85vh;
       overflow-y: auto;
       position: relative;
   }
