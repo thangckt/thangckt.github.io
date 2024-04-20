@@ -206,9 +206,9 @@ nav:
   # - About: index.md
   # - molbuilder: thangckt.github.io/molbuilder
 
-  - Thamd: http://thangckt.github.io/thamd_doc
-  - Thaml: http://thangckt.github.io/thaml_doc
-  - Thavid: http://thangckt.github.io/thavid_doc
+  - thamd: http://thangckt.github.io/thamd_doc
+  - thaml: http://thangckt.github.io/thaml_doc
+  - thavid: http://thangckt.github.io/thavid_doc
 
   - Cluster:
     - Compile:
@@ -237,7 +237,7 @@ nav:
       - cluster/refPage/cheatsheet.md
       - cluster/refPage/docs_syntax.md
 
-  - Refs:
+  - Ref:
     - Researh Ethics: reading/videos/1_research_ethic.md
     - Reading:
       - Basic Science: reading/reading/basic_science.md
