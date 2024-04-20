@@ -40,10 +40,10 @@ hide:
   .container {
       display: flex;
       flex-wrap: nowrap;
-      /* margin-top: -30px;
-      margin-bottom: -30px;
+      margin-top: -50px;
+      /* margin-bottom: -20px; */
       margin-right: -30px;
-      margin-left: -30px; */
+      margin-left: -30px; 
   }
 
   .video-column {
@@ -53,7 +53,7 @@ hide:
   }
 
   .content-column {
-      max-height: 80vh;
+      max-height: 82vh;
       overflow-y: auto;
       position: relative;
   }
@@ -62,6 +62,8 @@ hide:
     @media screen and (max-width:600px) {
       .container {
         flex-wrap: wrap;
+        margin-right: -10px;
+        margin-left: -10px; 
       }
 
       .video-column {
