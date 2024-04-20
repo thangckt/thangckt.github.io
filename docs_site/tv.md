@@ -49,7 +49,7 @@ hide:
   }
 
   .content-column {
-      max-height: 82vh;
+      max-height: 80vh;
       overflow-y: auto;
       position: relative;
   }
