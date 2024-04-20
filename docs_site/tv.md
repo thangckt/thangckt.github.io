@@ -81,6 +81,9 @@ hide:
     top-margin:0px;
   /* max-width: 98%;           /* or 100%, if you want to stretch to full-width */
 }
+    .md-footer{
+        height:50px;
+    }
 
 </style>
 
