@@ -3,7 +3,6 @@ hide:
   - toc
   - navigation
   - footer
-  - generator
 ---
 
 <!-- Find more m3u8 links at: http://tonkiang.us/ -->
@@ -50,7 +49,7 @@ hide:
   }
 
   .content-column {
-      max-height: 80vh;
+      max-height: 79vh;
       overflow-y: auto;
       position: relative;
   }
