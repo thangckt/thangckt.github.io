@@ -63,6 +63,7 @@ hide:
       .container {
         flex-wrap: wrap;
         margin-top: -30px;
+        margin-bottom: -30px;
         margin-right: -10px;
         margin-left: -10px; 
       }
@@ -74,7 +75,7 @@ hide:
 
       .content-column {
         width: 100%;
-        max-height: 40vh;
+        max-height: 37vh;
       }
     }
 
