@@ -204,9 +204,11 @@ plugins:
 nav:
   - Home: thangckt.github.io
   # - About: index.md
-  # - Codedocs: codedocs.md
   # - molbuilder: thangckt.github.io/molbuilder
-  - Tools: thangckt.github.io/thamd_doc
+
+  - thamd: thangckt.github.io/thamd_doc
+  - thaml: thangckt.github.io/thaml_doc
+  - thavid: thangckt.github.io/thavid_doc
 
   - Cluster:
     - Compile:
@@ -249,7 +251,6 @@ nav:
     # - research/publication.md
     - reading/chat.md
 
-
   - Odd:      # Miscellaneous    Heterogeneous
     - Music:
       - Classic pieces: odd/music/music_classic.md
@@ -266,8 +267,8 @@ nav:
   - Blog:
     - blog/index.md
 
+  - NextChat: https://chat-gpt-next-ihq6gv7qw-thangckt-gmailcom.vercel.app/
+  
   - TV: tv.md
-    # - TV Online: TVonline/HTV.md
-    # - Stream: TVonline/stream.md
 
 
