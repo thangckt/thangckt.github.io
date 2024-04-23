@@ -362,7 +362,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'FIFA+', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8']},
         // {text: 'Edge', URL: ['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Tennis', URL: ['https://tennischannel-intl-samsung-uk.amagi.tv/playlist540_p.m3u8']},
-        {text: 'Golf UK', URL: ['https://30a-tv.com/feeds/vidaa/golf.m3u8']},
+        {text: 'SkySport Golf', URL: ['https://30a-tv.com/feeds/vidaa/golf.m3u8']},
         {text: 'Golf 2', URL: ['https://edge1.laotv.la/live/BosiGolf/index.m3u8']},
         {text: 'Stadium', URL: ['https://i.mjh.nz/SamsungTVPlus/USAJ3504705A.m3u8']},
         {text: 'Sigma', URL: ['https://rightsboosterltd-scl-1-nl.samsung.wurl.tv/playlist.m3u8']},
