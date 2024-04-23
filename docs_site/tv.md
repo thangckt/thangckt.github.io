@@ -62,7 +62,7 @@ hide:
     @media screen and (max-width:600px) {
       .container {
         flex-wrap: wrap;
-        margin-top: -45px;
+        margin-top: -46px;
         margin-bottom: -30px;
         margin-right: -10px;
         margin-left: -10px;
