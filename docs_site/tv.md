@@ -311,6 +311,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'Wonder', URL: ['https://lds-wonder-samsungau.amagi.tv/playlist.m3u8']},
+        {text: 'Discovered UK', URL: ['https://30a-tv.com/feeds/vidaa/luxelife.m3u8']},
         {text: 'Real Life', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8']},
         {text: 'Dust', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00219-gunpowdersky-dustintlnz-samsungnz/playlist.m3u8']},
         {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8']},
@@ -355,13 +356,13 @@ data-ad-slot="1234567890"></ins>
 </script>
 
 
-
 <h3>Sport</h3>
 <script>
     var listButtons = [
         {text: 'FIFA+', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8']},
         // {text: 'Edge', URL: ['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Tennis', URL: ['https://tennischannel-intl-samsung-uk.amagi.tv/playlist540_p.m3u8']},
+        {text: 'Golf UK', URL: ['https://30a-tv.com/feeds/vidaa/golf.m3u8']},
         {text: 'Golf 2', URL: ['https://edge1.laotv.la/live/BosiGolf/index.m3u8']},
         {text: 'Stadium', URL: ['https://i.mjh.nz/SamsungTVPlus/USAJ3504705A.m3u8']},
         {text: 'Sigma', URL: ['https://rightsboosterltd-scl-1-nl.samsung.wurl.tv/playlist.m3u8']},
@@ -403,6 +404,7 @@ VN:
 <h3>Show</h3>
 <script>
     var listButtons = [
+        {text: 'Beach', URL: ['https://30a-tv.com/beachy.m3u8']},
         {text: 'HBO family', URL: ['https://futuretoday-afv-family-2-be.samsung.wurl.tv/playlist.m3u8']},
         {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
         {text: 'Young', URL: ['https://younghollywood-tcl.amagi.tv/playlist.m3u8','https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
