@@ -53,7 +53,7 @@ hide:
   }
 
   .content-column {
-      max-height: 88vh;
+      max-height: 86vh;
       overflow-y: auto;
       position: relative;
   }
@@ -62,7 +62,7 @@ hide:
     @media screen and (max-width:600px) {
       .container {
         flex-wrap: wrap;
-        margin-top: -30px;
+        margin-top: -35px;
         margin-bottom: -30px;
         margin-right: -10px;
         margin-left: -10px;
@@ -75,7 +75,7 @@ hide:
 
       .content-column {
         width: 100%;
-        max-height: 37vh;
+        max-height: 40vh;
       }
     }
 
