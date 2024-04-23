@@ -378,6 +378,16 @@ data-ad-slot="1234567890"></ins>
     createListChannelButton(listButtons, 'content-column');
 </script>
 
+<br> <br>
+VN:
+<script>
+    var listButtons = [
+        {text: 'K+ sport 1', URL: ['https://edge2.laotv.la/live/K+Sport1/index.m3u8']},
+        {text: 'K+ sport 2', URL: ['https://edge1.laotv.la/live/K+Sport2/index.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
 
 <h3>Music</h3>
 <script>
@@ -406,15 +416,6 @@ data-ad-slot="1234567890"></ins>
 
 
 <h3>Vietnamese Channels</h3>
-<script>
-    var listButtons = [
-        {text: 'K+ sport 1', URL: ['https://edge2.laotv.la/live/K+Sport1/index.m3u8']},
-        {text: 'K+ sport 2', URL: ['https://edge1.laotv.la/live/K+Sport2/index.m3u8']},
-    ];
-    createListChannelButton(listButtons, 'content-column');
-</script>
-
-<br> <br>
 <script>
     var listButtons = [
         {text: 'SCTV 14', URL: ['https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV14.smil/chunklist_b1692000.m3u8']},
