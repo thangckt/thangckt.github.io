@@ -40,7 +40,7 @@ hide:
   .container {
       display: flex;
       flex-wrap: nowrap;
-      margin-top: -51px;
+      margin-top: -52px;
       margin-bottom: -50px;
       margin-right: -30px;
       margin-left: -30px;
