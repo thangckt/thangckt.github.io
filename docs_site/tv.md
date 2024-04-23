@@ -360,7 +360,6 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'FIFA+', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8']},
-        {text: 'Sport', URL: ['https://live.sportstv.com.tr/hls/low/sportstv.m3u8']},
         // {text: 'Edge', URL: ['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Tennis', URL: ['https://tennischannel-intl-samsung-uk.amagi.tv/playlist540_p.m3u8']},
         {text: 'Golf 2', URL: ['https://edge1.laotv.la/live/BosiGolf/index.m3u8']},
