@@ -379,7 +379,7 @@ data-ad-slot="1234567890"></ins>
 </script>
 
 <br> <br>
-VN:
+vn:
 <script>
     var listButtons = [
         {text: 'K+ sport 1', URL: ['https://edge2.laotv.la/live/K+Sport1/index.m3u8']},
