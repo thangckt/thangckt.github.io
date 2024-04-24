@@ -252,7 +252,6 @@ data-ad-slot="1234567890"></ins>
         {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBD1900008O3.m3u8','https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8','https://i.mjh.nz/SamsungTVPlus/GBBD8000016N.m3u8']},
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
-        {text: 'TRT World', URL: ['https://tv-trtworld.live.trt.com.tr/master_720.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -276,6 +275,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'ABC Au', URL: ['https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8','https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index_45.m3u8','https://ctrl.laotv.la/live/ABCA/index.m3u8']},
+        {text: 'TRT World', URL: ['https://tv-trtworld.live.trt.com.tr/master_720.m3u8']},
         {text: 'CNA', URL: ['https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8']},
         {text: 'Wion', URL: ['https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8']},
     ];
@@ -299,7 +299,6 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'Travelxp', URL: ['https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8', 'https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8','https://travelxp-travelxp-3-nl.samsung.wurl.tv/playlist.m3u8']},
-        {text: 'BBC Earth', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD1700001RW.m3u8']},
         {text: 'BBC Home', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC600017FG.m3u8']},
         {text: 'BBC Travel', URL: ['https://ab96b349d4d14d80a1f8530a0bce4488.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-de_BBCTravel/playlist.m3u8?ads.wurl_channel=985&ads.wurl_name=BBCTravel&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D']},
     ];
@@ -311,7 +310,6 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'Wonder', URL: ['https://lds-wonder-samsungau.amagi.tv/playlist.m3u8']},
-        {text: 'Discovered UK', URL: ['https://30a-tv.com/feeds/vidaa/luxelife.m3u8']},
         {text: 'Real Life', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8']},
         {text: 'Dust', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00219-gunpowdersky-dustintlnz-samsungnz/playlist.m3u8']},
         {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8']},
@@ -324,6 +322,7 @@ data-ad-slot="1234567890"></ins>
 <br> <br>
 <script>
     var listButtons = [
+        {text: 'BBC Earth', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD1700001RW.m3u8']},
         {text: 'Wild Planet', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB5000002PL.m3u8']},
         {text: 'Animal Planet', URL: ['https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8']},
         {text: 'Discovery SEA', URL: ['https://ctrl.laotv.la/live/Discovery/index.m3u8']},
@@ -411,6 +410,7 @@ vn:
         {text: 'Fox Soul', URL: ['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8']},
         {text: 'Fashion TV', URL: ['https://fashiontv-fashiontv-5-se.samsung.wurl.tv/playlist.m3u8','https://fashiontv-fashiontv-5-nl.samsung.wurl.tv/playlist.m3u8']},
         {text: 'Comedy Dynamics', URL:['https://comedydynamics-tcl.amagi.tv/playlist.m3u8']},
+        {text: 'Discovered UK', URL: ['https://30a-tv.com/feeds/vidaa/luxelife.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
