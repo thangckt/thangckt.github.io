@@ -238,7 +238,7 @@ data-ad-slot="1234567890"></ins>
     // Use the script to void repeated creation of buttons line-by-line as in above
     // List of buttons to create
     var listButtons = [
-        {text: 'Y!Finance', URL: ['https://yahoo-samsung.amagi.tv/playlist.m3u8','https://yahoo-plex.amagi.tv/playlist.m3u8']},
+        {text: 'Y! finance', URL: ['https://yahoo-samsung.amagi.tv/playlist.m3u8','https://yahoo-plex.amagi.tv/playlist.m3u8']},
         {text: 'Bloomberg', URL: ['https://bloomberg-bloomberg-2-nz.samsung.wurl.tv/playlist.m3u8','https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
