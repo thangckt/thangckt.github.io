@@ -543,15 +543,16 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
-        // {text: 'Quang Ninh', URL: ['']},
+        // {text: 'Quang Ninh 1', URL: ['https://live.baoquangninh.vn/qtvlive/tv1live.m3u8']},
+        // {text: 'Quang Ninh 2', URL: ['']},
         {text: 'Bac Giang', URL: ['https://ott3.nethubtv.vn/live/bacgiangtv/chunklist_1.m3u8']},
         // {text: 'Phu Tho', URL: ['']},
         {text: 'Thai Nguyen', URL: ['https://streaming.thainguyentv.vn/hls/livestream.m3u8']},
         {text: 'Tuyen Quang', URL: ['https://live.tuyenquangtv.vn/hls/ttv.m3u8']},
         {text: 'Lang Son', URL: ['https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8','https://live.mediatech.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8']},
-        // {text: 'Bac Can', URL: ['']},
+        {text: 'Bac Kan', URL: ['https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv360&q=high&type=tv&location=NA&pkg=pkg11.hni']},
         // {text: 'Cao Bang', URL: ['']},
-        // {text: 'Ha Giang', URL: ['']},
+        {text: 'Ha Giang', URL: ['https://ott4.nethubtv.vn/live/hagiangtv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
