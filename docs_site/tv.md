@@ -562,11 +562,11 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
-        // {text: 'Son La', URL: ['']},
+        {text: 'Son La', URL: ['https://live.mediatech.vn/live/28595222e707a364251b8724717894baa46/playlist.m3u8']},
         // {text: 'Lai Chau', URL: ['']},
         {text: 'Hoa Binh', URL: ['https://hbtvlive.3ssoft.vn/hoabinhtv/playlist.m3u8']},
         {text: 'Dien Bien', URL: ['https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&deviceId=&deviceType=&gcId=1532&location=NA&pkg=pkg11.hni&q=high&requestTime=1586309420781&time=1586395820&token=LX-ibJYRUq9pflRtYAxfYQ&type=tv&userId=']},
-        // {text: 'Yen Bai', URL: ['']},
+        // {text: 'Yen Bai', URL: ['https://live.yenbaitv.org.vn/hls/livestream.m3u8']},
         // {text: 'Lao Cai', URL: ['']},
     ];
     createListChannelButton(listButtons, 'content-column');
