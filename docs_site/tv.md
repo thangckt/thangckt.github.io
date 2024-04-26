@@ -423,7 +423,7 @@ vn:
         // {text: 'SCTV 17', URL: ['https://e7.endpoint.cdn.sctvonline.vn/live/smil:SCTV17.smil/chunklist_b1692000.m3u8']},
         // {text: 'SCTV 1', URL: ['https://code.vthanhtivi.pw/getlink/sctvonline/sctv1/playlist.m3u8']},
         // {text: 'Phim Hay', URL: ['https://cdnw-liv02.todayplus.com.vn/hdb/smil:phimhay.smil/chunklist_b228915playlist.m3u8']},
-        {text: 'TVB Vietnam', URL: ['https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8']},
+        {text: 'TVB', URL: ['https://bcovlive-a.akamaihd.net/07d9c30456d94f3dbbcd39af064fdefa/us-west-2/6314468039001/0914b33308e3498da3b00fe2c050764e/playlist_ssaiM.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -541,7 +541,7 @@ vn:
 
 
 <!-- hai ngoai -->
-<br> <br>
+<!-- <br> <br>
 <script>
     var listButtons = [
         {text: 'Little Saigon', URL: ['https://media.streambrothers.com:1936/8228/8228/playlist.m3u8']},
@@ -549,7 +549,7 @@ vn:
         {text: 'SET TV 2', URL: ['https://5dcabf026b188.streamlock.net/SET22/livestream/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
-</script>
+</script> -->
 
 <h3>VTV - VTC</h3>
 <script>
