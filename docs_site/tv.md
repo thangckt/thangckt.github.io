@@ -452,6 +452,7 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
+        // {text: 'Binh Phuoc 1', URL: ['http://vncdn.mediatech.vn/bptvlive/tv1live.m3u8']},
         {text: 'Binh Phuoc 2', URL: ['https://cdn.baobinhphuoc.com.vn/live/28550d6213460634105b0bae21016f68bce/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
@@ -463,7 +464,7 @@ vn:
 <script>
     var listButtons = [
         {text: 'Dak Lak', URL: ['https://live.mediatech.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8']},
-        {text: 'Dak Nong', URL: ['https://ngvauezm51liv.vcdn.cloud/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8']},
+        {text: 'Dak Nong', URL: ['https://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -504,7 +505,7 @@ vn:
         {text: 'Ha Nam', URL: ['https://cdn.hanamtv.vn/live/285361fcafcd0ec47bba2fa3f5870f8dc72/chunklist.m3u8']},
         {text: 'Hung Yen', URL: ['https://cdn.hungyentv.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8','https://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8']},
         {text: 'Nam Dinh', URL: ['https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8']},
-        {text: 'Thai Binh', URL: ['https://ott3.nethubtv.vn/live/thaibinh/chunklist_1.m3u8']},
+        {text: 'Thai Binh', URL: ['https://live.mediatech.vn/live/285fe61ba73072f428d8a626d764222e744/playlist.m3u8']},
         {text: 'Ninh Binh', URL: ['https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8']},
         {text: 'Bac Ninh', URL: ['https://stream.thingnet.vn/live/smil:BTV.smil/playlist.m3u8']},
         {text: 'Hai Phong', URL: ['https://live.mediatech.vn/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8']},
