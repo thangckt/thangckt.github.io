@@ -507,12 +507,12 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
-        // {text: 'Thanh Hoa', URL: ['']},
-        // {text: 'Nghe An', URL: ['']},
-        {text: 'Ha Tinh', URL: ['https://wse.hatinhtv.net/live/httv1/playlist.m3u8']},
-        // {text: 'Quang Binh', URL: ['']},
-        // {text: 'Quang Tri', URL: ['']},
         {text: 'Hue', URL: ['https://live.trt.com.vn/TRT-Online/playlist.m3u8']},
+        // {text: 'Quang Tri', URL: ['']},
+        // {text: 'Quang Binh', URL: ['']},
+        {text: 'Ha Tinh', URL: ['https://wse.hatinhtv.net/live/httv1/playlist.m3u8']},
+        // {text: 'Nghe An', URL: ['']},
+        // {text: 'Thanh Hoa', URL: ['']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -522,16 +522,18 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
+        // {text: 'Vinh Phuc', URL: ['']},
+        {text: 'Thai Binh', URL: ['https://live.mediatech.vn/live/285fe61ba73072f428d8a626d764222e744/playlist.m3u8']},
+        {text: 'Ninh Binh', URL: ['https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8']},
+        {text: 'Nam Dinh', URL: ['https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8']},
+        {text: 'Hung Yen', URL: ['https://cdn.hungyentv.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8','https://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8']},
+        {text: 'Hai Phong', URL: ['https://live.mediatech.vn/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8']},
+        {text: 'Hai Phong +', URL: ['https://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8']},
+        // {text: 'Hai Duong', URL: ['']},
         {text: 'Ha Noi 1', URL: ['https://cloudstreamhntv.tek4tv.vn/capture/smil:HN1.smil/playlist.m3u8']},
         {text: 'Ha Noi 2', URL: ['https://cloudstreamhntv.tek4tv.vn/live/smil:HN2.smil/playlist.m3u8']},
         {text: 'Ha Nam', URL: ['https://cdn.hanamtv.vn/live/285361fcafcd0ec47bba2fa3f5870f8dc72/chunklist.m3u8']},
-        {text: 'Hung Yen', URL: ['https://cdn.hungyentv.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8','https://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8']},
-        {text: 'Nam Dinh', URL: ['https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8']},
-        {text: 'Thai Binh', URL: ['https://live.mediatech.vn/live/285fe61ba73072f428d8a626d764222e744/playlist.m3u8']},
-        {text: 'Ninh Binh', URL: ['https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8']},
         {text: 'Bac Ninh', URL: ['https://stream.thingnet.vn/live/smil:BTV.smil/playlist.m3u8']},
-        {text: 'Hai Phong', URL: ['https://live.mediatech.vn/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8']},
-        {text: 'Hai Phong +', URL: ['https://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -541,10 +543,15 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
-        {text: 'Tuyen Quang', URL: ['https://live.tuyenquangtv.vn/hls/ttv.m3u8']},
-        {text: 'Thai Nguyen', URL: ['https://streaming.thainguyentv.vn/hls/livestream.m3u8']},
-        {text: 'Lang Son', URL: ['https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8','https://live.mediatech.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8']},
+        // {text: 'Quang Ninh', URL: ['']},
         {text: 'Bac Giang', URL: ['https://ott3.nethubtv.vn/live/bacgiangtv/chunklist_1.m3u8']},
+        // {text: 'Phu Tho', URL: ['']},
+        {text: 'Thai Nguyen', URL: ['https://streaming.thainguyentv.vn/hls/livestream.m3u8']},
+        {text: 'Tuyen Quang', URL: ['https://live.tuyenquangtv.vn/hls/ttv.m3u8']},
+        {text: 'Lang Son', URL: ['https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8','https://live.mediatech.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8']},
+        // {text: 'Bac Can', URL: ['']},
+        // {text: 'Cao Bang', URL: ['']},
+        // {text: 'Ha Giang', URL: ['']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -554,10 +561,12 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
-        {text: 'Hoa Binh', URL: ['https://hbtvlive.3ssoft.vn/hoabinhtv/playlist.m3u8']},
         // {text: 'Son La', URL: ['']},
         // {text: 'Lai Chau', URL: ['']},
+        {text: 'Hoa Binh', URL: ['https://hbtvlive.3ssoft.vn/hoabinhtv/playlist.m3u8']},
         {text: 'Dien Bien', URL: ['https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&deviceId=&deviceType=&gcId=1532&location=NA&pkg=pkg11.hni&q=high&requestTime=1586309420781&time=1586395820&token=LX-ibJYRUq9pflRtYAxfYQ&type=tv&userId=']},
+        // {text: 'Yen Bai', URL: ['']},
+        // {text: 'Lao Cai', URL: ['']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
