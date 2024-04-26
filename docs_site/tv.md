@@ -434,15 +434,24 @@ vn:
 
 
 <h3>Local</h3>
-<!-- <h4>Song Cuu Long</h4> -->
+<!-- <h4>Song Cuu Long</h4>  t.ly/zT6EL -->
 <script>
     var listButtons = [
         {text: 'Can Tho', URL: ['https://live.canthotv.vn/live/tv/chunklist.m3u8']},
+        // {text: 'Ca Mau', URL: [' ']},
+        // {text: 'Bac Lieu', URL: [' ']},
+        // {text: 'Soc Trang', URL: [' ']},
+        // {text: 'Kien Giang', URL: [' ']},
+        {text: 'Hau Giang', URL: ['https://60acee235f4d5.streamlock.net/HGTV/d1/playlist.m3u8']},
         {text: 'Tra Vinh 1', URL: ['https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8']},
         {text: 'Tra Vinh 2', URL: ['https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/playlist.m3u8']},
-        {text: 'Hau Giang', URL: ['https://60acee235f4d5.streamlock.net/HGTV/d1/playlist.m3u8']},
+        // {text: 'Vinh Long', URL: [' ']},
+        // {text: 'Ben Tre', URL: [' ']},
+        // {text: 'An Giang', URL: [' ']},
+        // {text: 'Tien Giang', URL: [' ']},
         {text: 'Dong Thap 1', URL: ['https://618b88f69e53b.streamlock.net/THDT/thdttv/playlist.m3u8']},
         {text: 'Dong Thap 2', URL: ['https://64d0d74b76158.streamlock.net/THDT2/thdttv2/playlist.m3u8']},
+        // {text: 'Long An', URL: [' ']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -452,6 +461,10 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
+        // {text: 'Vung Tau', URL: [' ']},
+        // {text: 'Tay Ninh', URL: [' ']},
+        // {text: 'Dong Nai', URL: [' ']},
+        // {text: 'Binh Duong', URL: [' ']},
         // {text: 'Binh Phuoc 1', URL: ['http://vncdn.mediatech.vn/bptvlive/tv1live.m3u8']},
         {text: 'Binh Phuoc 2', URL: ['https://cdn.baobinhphuoc.com.vn/live/28550d6213460634105b0bae21016f68bce/playlist.m3u8']},
     ];
@@ -463,8 +476,11 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
-        {text: 'Dak Lak', URL: ['https://live.mediatech.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8']},
+        // {text: 'Lam Dong', URL: [' ']},
         {text: 'Dak Nong', URL: ['https://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8']},
+        {text: 'Dak Lak', URL: ['https://live.mediatech.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8']},
+        // {text: 'Gia Lai', URL: [' ']},
+        // {text: 'Kon Tum', URL: [' ']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -474,8 +490,14 @@ vn:
 <br> <br>
 <script>
     var listButtons = [
-        {text: 'Ninh Thuan', URL: ['https://60acee235f4d5.streamlock.net/live/mystream/playlist.m3u8']},
         {text: 'Binh Thuan', URL: ['https://64d0d74b76158.streamlock.net/BTVTV/binhthuantv/chunklist.m3u8']},
+        {text: 'Ninh Thuan', URL: ['https://60acee235f4d5.streamlock.net/live/mystream/playlist.m3u8']},
+        // {text: 'Khanh Hoa', URL: [' ']},
+        // {text: 'Phu Yen', URL: [' ']},
+        // {text: 'Binh Dinh', URL: [' ']},
+        // {text: 'Quang Ngai', URL: [' ']},
+        // {text: 'Quang Nam', URL: [' ']},
+        // {text: 'Da Nang', URL: [' ']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
