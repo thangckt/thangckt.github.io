@@ -53,6 +53,7 @@ hide:
   }
 
   .content-column {
+     width: 20%;
       max-height: 86vh;
       overflow-y: auto;
       position: relative;
