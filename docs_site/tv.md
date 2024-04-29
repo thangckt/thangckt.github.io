@@ -355,6 +355,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'Sony', URL: ['https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/smc_720p/playlist.m3u8']},
         {text: 'Theater 3000', URL: ['https://mst3k-localnow.amagi.tv/playlistR1080p.m3u8','https://mst3k-localnow.amagi.tv/playlist.m3u8']},
         {text: 'Dove', URL: ['https://dovenow-tcl.amagi.tv/playlist.m3u8']},
+        {text: 'Action Holywood', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
