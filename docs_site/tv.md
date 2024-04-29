@@ -239,7 +239,7 @@ data-ad-slot="1234567890"></ins>
     // List of buttons to create
     var listButtons = [
         {text: 'Y! finance', URL: ['https://yahoo-samsung.amagi.tv/playlist.m3u8','https://yahoo-plex.amagi.tv/playlist.m3u8']},
-        {text: 'Bloomberg', URL: ['https://bloomberg-bloomberg-2-nz.samsung.wurl.tv/playlist.m3u8','https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
+        {text: 'Bloomberg', URL: ['https://bloomberg-bloomberg-1-be.samsung.wurl.tv/playlist.m3u8','https://bloomberg-bloomberg-2-nz.samsung.wurl.tv/playlist.m3u8','https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -292,6 +292,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'Timeline', URL: ['https://timeline-samsung-uk.amagi.tv/playlist.m3u8','https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-timelinenz-samsungnz/playlist.m3u8','https://lds-timeline-samsungau.amagi.tv/playlist720-p.m3u8']},
         {text: 'CGTN Doc', URL: ['https://livedoc.cgtn.com/1000d/prog_index.m3u8']},
         {text: 'Real Stories', URL: ['https://lds-realstories-samsungau.amagi.tv/playlist.m3u8']},
+        {text: 'Bloomberg Original', URL: ['https://bloomberg-quicktake-1-be.samsung.wurl.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -395,7 +396,7 @@ vn:
     createListChannelButton(listButtons, 'content-column');
 </script>
 
-  
+
 <h3>Music</h3>
 <script>
     var listButtons = [
@@ -406,6 +407,7 @@ vn:
         {text: 'S-ray Classic Rock', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000180U.m3u8']},
         {text: 'S-ray Classica', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD350002623.m3u8']},
         {text: 'S-ray Greatest hits', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500022DN.m3u8']},
+        {text: 'S-ray Flashback 70s', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500008IJ.m3u8']},
         {text: 'S-ray Hiphop', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500010MT.m3u8']},
         {text: 'Spirit', URL: ['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8']},
         {text: 'Xite', URL: ['https://xite-samsung-de.amagi.tv/playlist.m3u8']},
