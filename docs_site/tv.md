@@ -407,8 +407,9 @@ vn:
     var listButtons = [
         {text: 'Beach', URL: ['https://30a-tv.com/beachy.m3u8']},
         {text: 'Fashion TV', URL: ['https://fashiontv-fashiontv-5-se.samsung.wurl.tv/playlist.m3u8','https://fashiontv-fashiontv-5-nl.samsung.wurl.tv/playlist.m3u8']},
-        {text: 'Peo-A-Awesome', URL: ['https://jukin-peopleareawesome-2-se.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'AWE Encore', URL: ['https://jukin-peopleareawesome-2-se.samsung.wurl.tv/playlist.m3u8']},
         {text: 'HBO family', URL: ['https://futuretoday-afv-family-2-be.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'Pet Club', URL: ['https://the-pet-collective-international-nl.samsung.wurl.tv/playlist.m3u8']},
         {text: 'Young', URL: ['https://younghollywood-tcl.amagi.tv/playlist.m3u8','https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Fox Soul', URL: ['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8']},
         {text: 'Discovered UK', URL: ['https://30a-tv.com/feeds/vidaa/luxelife.m3u8']},
