@@ -309,7 +309,7 @@ data-ad-slot="1234567890"></ins>
 <br> <br>
 <script>
     var listButtons = [
-        {text: 'Wonder', URL: ['https://lds-wonder-samsungau.amagi.tv/playlist.m3u8']},
+        {text: 'Wonder', URL: ['https://lds-wonder-samsungau.amagi.tv/playlist.m3u8', 'https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-wondernz-samsungnz/playlist.m3u8]},
         {text: 'Real Life', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8']},
         {text: 'Dust', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00219-gunpowdersky-dustintlnz-samsungnz/playlist.m3u8']},
         {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8']},
@@ -404,16 +404,28 @@ vn:
 <script>
     var listButtons = [
         {text: 'Beach', URL: ['https://30a-tv.com/beachy.m3u8']},
+        {text: 'Fashion TV', URL: ['https://fashiontv-fashiontv-5-se.samsung.wurl.tv/playlist.m3u8','https://fashiontv-fashiontv-5-nl.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'Peo-A-Awesome', URL: ['https://jukin-peopleareawesome-2-se.samsung.wurl.tv/playlist.m3u8']},
         {text: 'HBO family', URL: ['https://futuretoday-afv-family-2-be.samsung.wurl.tv/playlist.m3u8']},
-        {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
         {text: 'Young', URL: ['https://younghollywood-tcl.amagi.tv/playlist.m3u8','https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Fox Soul', URL: ['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8']},
-        {text: 'Fashion TV', URL: ['https://fashiontv-fashiontv-5-se.samsung.wurl.tv/playlist.m3u8','https://fashiontv-fashiontv-5-nl.samsung.wurl.tv/playlist.m3u8']},
-        {text: 'Comedy Dynamics', URL:['https://comedydynamics-tcl.amagi.tv/playlist.m3u8']},
         {text: 'Discovered UK', URL: ['https://30a-tv.com/feeds/vidaa/luxelife.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
+
+<br> <br>
+<script>
+    var listButtons = [
+        {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
+        {text: 'Tastemade', URL: ['https://tmint-aus-samsungswedan.amagi.tv/playlist.m3u8']},
+        {text: 'Comedy Dynamics', URL:['https://comedydynamics-tcl.amagi.tv/playlist.m3u8']},
+        {text: 'Drybar', URL: ['https://drybar-drybarcomedy-1-ca.samsung.wurl.tv/playlist.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
+
+
 
 
 <h3>Vietnamese Channels</h3>
