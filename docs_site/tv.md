@@ -403,6 +403,7 @@ vn:
         {text: 'S-ray Jazz', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000128A.m3u8']},
         {text: 'S-ray Country', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3300021KV.m3u8']},
         {text: 'S-ray Spa', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500013DG.m3u8']},
+        {text: 'S-ray Classic Rock', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000180U.m3u8']},
         {text: 'S-ray Classica', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD350002623.m3u8']},
         {text: 'S-ray Hiphop', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500010MT.m3u8']},
         {text: 'Spirit', URL: ['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8']},
