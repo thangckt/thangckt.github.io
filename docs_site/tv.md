@@ -396,6 +396,7 @@ vn:
     var listButtons = [
         {text: 'StingRay Jazz', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000128A.m3u8']},
         {text: 'StingRay Country', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3300021KV.m3u8']},
+        {text: 'StingRay Spa', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500013DG.m3u8']},
         {text: 'Spirit', URL: ['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8']},
         {text: 'Xite', URL: ['https://xite-samsung-de.amagi.tv/playlist.m3u8']},
     ];
