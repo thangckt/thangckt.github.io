@@ -253,6 +253,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
         {text: 'NBC', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB1500004LG.m3u8','https://i.mjh.nz/SamsungTVPlus/CAAJ2700011IF.m3u8']},
+        {text: 'CBC', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300009KD.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -396,11 +397,12 @@ vn:
 <h3>Music</h3>
 <script>
     var listButtons = [
-        {text: 'Stingray DJAZZ', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500025GS.m3u8']},
-        {text: 'StingRay Jazz', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000128A.m3u8']},
-        {text: 'StingRay Country', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3300021KV.m3u8']},
-        {text: 'StingRay Spa', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500013DG.m3u8']},
-        {text: 'StingRay Hiphop', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500010MT.m3u8']},
+        {text: 'S-ray DJAZZ', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500025GS.m3u8']},
+        {text: 'S-ray Jazz', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000128A.m3u8']},
+        {text: 'S-ray Country', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3300021KV.m3u8']},
+        {text: 'S-ray Spa', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500013DG.m3u8']},
+        {text: 'S-ray Classica', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD350002623.m3u8']},
+        {text: 'S-ray Hiphop', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500010MT.m3u8']},
         {text: 'Spirit', URL: ['https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8','https://cdnlive.myspirit.tv/LS-ATL-43240-2/tracks-v1a1/mono.m3u8']},
         {text: 'Xite', URL: ['https://xite-samsung-de.amagi.tv/playlist.m3u8']},
     ];
