@@ -401,6 +401,7 @@ vn:
 <h3>Music</h3>
 <script>
     var listButtons = [
+        {text: 'S-ray Qello', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500024YB.m3u8']},
         {text: 'S-ray DJAZZ', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500025GS.m3u8']},
         {text: 'S-ray Jazz', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000128A.m3u8']},
         {text: 'S-ray Country', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3300021KV.m3u8']},
