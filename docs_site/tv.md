@@ -310,7 +310,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'Wonder', URL: ['https://lds-wonder-samsungau.amagi.tv/playlist.m3u8', 'https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-wondernz-samsungnz/playlist.m3u8']},
-        {text: 'Insight', URL: ['https://insighttv-samsung-canada.amagi.tv/playlist.m3u8']},
+        {text: 'Infast', URL: ['https://insighttv-samsung-canada.amagi.tv/playlist.m3u8']},
         {text: 'Real Life', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8']},
         {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8','https://brandusa-gousa-1-se.samsung.wurl.tv/playlist.m3u8']},
         {text: 'So Real', URL: ['https://soreal-tcl.amagi.tv/playlist.m3u8']},
