@@ -359,6 +359,7 @@ data-ad-slot="1234567890"></ins>
 </script>
 
 
+
 <h3>Sport</h3>
 <script>
     var listButtons = [
@@ -379,6 +380,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     var listButtons = [
         {text: 'RedBull', URL: ['https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8','https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8']},
+        {text: 'Trace', URL: ['https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
