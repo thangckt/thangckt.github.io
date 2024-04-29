@@ -390,10 +390,11 @@ vn:
     createListChannelButton(listButtons, 'content-column');
 </script>
 
-
+  
 <h3>Music</h3>
 <script>
     var listButtons = [
+        {text: 'Stingray DJAZZ', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500025GS.m3u8']},
         {text: 'StingRay Jazz', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000128A.m3u8']},
         {text: 'StingRay Country', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3300021KV.m3u8']},
         {text: 'StingRay Spa', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500013DG.m3u8']},
