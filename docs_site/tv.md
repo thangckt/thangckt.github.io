@@ -252,6 +252,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBD1900008O3.m3u8','https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8','https://i.mjh.nz/SamsungTVPlus/GBBD8000016N.m3u8']},
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
+        {text: 'NBC', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB1500004LG.m3u8','https://i.mjh.nz/SamsungTVPlus/CAAJ2700011IF.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -309,7 +310,7 @@ data-ad-slot="1234567890"></ins>
 <br> <br>
 <script>
     var listButtons = [
-        {text: 'Wonder', URL: ['https://lds-wonder-samsungau.amagi.tv/playlist.m3u8', 'https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-wondernz-samsungnz/playlist.m3u8']},
+        {text: 'Wonder', URL: ['https://wonder-samsung-uk.amagi.tv/playlist.m3u8','https://lds-wonder-samsungau.amagi.tv/playlist.m3u8', 'https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-wondernz-samsungnz/playlist.m3u8']},
         {text: 'Infast', URL: ['https://insighttv-samsung-canada.amagi.tv/playlist.m3u8']},
         {text: 'Real Life', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8']},
         {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8','https://brandusa-gousa-1-se.samsung.wurl.tv/playlist.m3u8']},
@@ -359,7 +360,7 @@ data-ad-slot="1234567890"></ins>
 <h3>Sport</h3>
 <script>
     var listButtons = [
-        {text: 'FIFA+', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8']},
+        {text: 'FIFA+', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD12000255B.m3u8','https://d2anxt9uu5yxtz.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ja4uwkkhcliwv/v1/chili_fifa_eng_1/samsungheadend_us/latest/main/hls/playlist.m3u8']},
         // {text: 'Edge', URL: ['https://edgesport-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Tennis', URL: ['https://tennischannel-intl-samsung-uk.amagi.tv/playlist540_p.m3u8']},
         {text: 'SkySport Golf', URL: ['https://30a-tv.com/feeds/vidaa/golf.m3u8']},
@@ -409,7 +410,7 @@ vn:
         {text: 'Fashion TV', URL: ['https://fashiontv-fashiontv-5-se.samsung.wurl.tv/playlist.m3u8','https://fashiontv-fashiontv-5-nl.samsung.wurl.tv/playlist.m3u8']},
         {text: 'AWE Encore', URL: ['https://jukin-peopleareawesome-2-se.samsung.wurl.tv/playlist.m3u8']},
         {text: 'HBO family', URL: ['https://futuretoday-afv-family-2-be.samsung.wurl.tv/playlist.m3u8']},
-        {text: 'Pet Club', URL: ['https://the-pet-collective-international-nl.samsung.wurl.tv/playlist.m3u8','https://the-pet-collective-international-it.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'Pet Club', URL: ['https://the-pet-collective-international-nl.samsung.wurl.tv/playlist.m3u8','https://the-pet-collective-international-it.samsung.wurl.tv/playlist.m3u8','https://the-pet-collective-international-es.samsung.wurl.tv/playlist.m3u8']},
         {text: 'Young', URL: ['https://younghollywood-tcl.amagi.tv/playlist.m3u8','https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8']},
         {text: 'Fox Soul', URL: ['https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8']},
         {text: 'Discovered UK', URL: ['https://30a-tv.com/feeds/vidaa/luxelife.m3u8']},
