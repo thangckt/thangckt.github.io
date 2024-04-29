@@ -406,6 +406,7 @@ vn:
         {text: 'S-ray Country', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3300021KV.m3u8']},
         {text: 'S-ray Easy', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500011J3.m3u8']},
         {text: 'S-ray Spa', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500013DG.m3u8']},
+        {text: 'S-ray Romance', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500017CE.m3u8']},
         {text: 'S-ray Classic Rock', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD35000180U.m3u8']},
         {text: 'S-ray Classica', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD350002623.m3u8']},
         {text: 'S-ray Greatest hits', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD3500022DN.m3u8']},
