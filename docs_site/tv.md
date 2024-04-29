@@ -425,7 +425,7 @@ vn:
         {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
         {text: 'Tastemade', URL: ['https://tmint-aus-samsungswedan.amagi.tv/playlist.m3u8','https://i.mjh.nz/SamsungTVPlus/CABD1200002T9.m3u8]},
         {text: 'Comedy Dynamics', URL:['https://comedydynamics-tcl.amagi.tv/playlist.m3u8']},
-        {text: 'Drybar', URL: ['https://drybar-drybarcomedy-1-ca.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'Drybar', URL: ['https://drybar-drybarcomedy-1-ca.samsung.wurl.tv/playlist.m3u8','https://drybar-drybarcomedy-1-nz.samsung.wurl.tv/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
