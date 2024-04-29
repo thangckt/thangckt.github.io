@@ -311,9 +311,9 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'Wonder', URL: ['https://lds-wonder-samsungau.amagi.tv/playlist.m3u8', 'https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-wondernz-samsungnz/playlist.m3u8]},
         {text: 'Real Life', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8']},
-        {text: 'Dust', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00219-gunpowdersky-dustintlnz-samsungnz/playlist.m3u8']},
-        {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'Go USA', URL: ['https://brandusa-gousa-1-nl.samsung.wurl.tv/playlist.m3u8','https://brandusa-gousa-1-se.samsung.wurl.tv/playlist.m3u8']},
         {text: 'So Real', URL: ['https://soreal-tcl.amagi.tv/playlist.m3u8']},
+        {text: 'Dust', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00219-gunpowdersky-dustintlnz-samsungnz/playlist.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -418,7 +418,7 @@ vn:
 <script>
     var listButtons = [
         {text: 'BBC Food', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC6000108Z.m3u8']},
-        {text: 'Tastemade', URL: ['https://tmint-aus-samsungswedan.amagi.tv/playlist.m3u8']},
+        {text: 'Tastemade', URL: ['https://tmint-aus-samsungswedan.amagi.tv/playlist.m3u8','https://i.mjh.nz/SamsungTVPlus/CABD1200002T9.m3u8]},
         {text: 'Comedy Dynamics', URL:['https://comedydynamics-tcl.amagi.tv/playlist.m3u8']},
         {text: 'Drybar', URL: ['https://drybar-drybarcomedy-1-ca.samsung.wurl.tv/playlist.m3u8']},
     ];
