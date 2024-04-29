@@ -47,13 +47,13 @@ hide:
   }
 
   .video-column {
-      width: 80%;
+      width: 70%;
       padding-right: 25px;
       position: sticky;
   }
 
   .content-column {
-     width: 20%;
+     width: 30%;
       max-height: 86vh;
       overflow-y: auto;
       position: relative;
