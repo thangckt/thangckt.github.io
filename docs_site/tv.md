@@ -113,21 +113,6 @@ hide:
         player.play();
     };
 
-    //### Use DPlayer: https://codepen.io/joremysh/pen/eENpeR
-    function playDPlayer(videoURL, vidID='vid1') {
-        window.scrollTo(0, 0); // Scroll to the top after loading the video
-
-        var dp = new DPlayer({
-            container: document.getElementById(vidID),
-            autoplay: true,
-            video: {
-                url: videoURL,
-                type: 'auto'
-            }
-        });
-        dp.play();
-    };
-
     //##### Functions to load videos to HTML video tag
     function loadPlayer(videoURLs, vidID='vid1', buttElementID='linkButton') {
         // Clean existing buttons: this clean any existed button at the container with ID=ElementID
