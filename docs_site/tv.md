@@ -128,8 +128,7 @@ hide:
         } else {
             videoURL = videoURLs;
         }
-        // playVideojs(videoURL, vidID);
-        playDPlayer(videoURL, vidID);
+        playVideojs(videoURL, vidID);
     };
 
     function loadStream(vidID='vid1') {
