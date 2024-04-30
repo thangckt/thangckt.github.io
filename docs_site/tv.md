@@ -481,7 +481,7 @@ vn:
         {text: 'Tra Vinh 1', URL: ['https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8']},
         {text: 'Tra Vinh 2', URL: ['https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/playlist.m3u8']},
         // {text: 'Vinh Long', URL: [' ']},
-        // {text: 'Ben Tre', URL: [' ']},
+        {text: 'Ben Tre', URL: ['https://1012163901.vnns.net/bentre.adm.480p.tms/playlist.m3u8']},
         // {text: 'An Giang', URL: [' ']},
         // {text: 'Tien Giang', URL: [' ']},
         {text: 'Dong Thap 1', URL: ['https://618b88f69e53b.streamlock.net/THDT/thdttv/playlist.m3u8']},
@@ -530,8 +530,8 @@ vn:
         // {text: 'Khanh Hoa', URL: [' ']},
         // {text: 'Phu Yen', URL: [' ']},
         // {text: 'Binh Dinh', URL: [' ']},
-        // {text: 'Quang Ngai', URL: [' ']},
-        // {text: 'Quang Nam', URL: [' ']},
+        {text: 'Quang Ngai', URL: ['https://stream.thingnet.vn/live/smil:PTQ.smil/playlist.m3u8']},
+        {text: 'Quang Nam', URL: ['https://beta.qrt.vn/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8']},
         // {text: 'Da Nang', URL: [' ']},
     ];
     createListChannelButton(listButtons, 'content-column');
@@ -544,10 +544,10 @@ vn:
     var listButtons = [
         {text: 'Hue', URL: ['https://live.trt.com.vn/TRT-Online/playlist.m3u8']},
         // {text: 'Quang Tri', URL: ['']},
-        // {text: 'Quang Binh', URL: ['']},
+        {text: 'Quang Binh', URL: ['https://ott4.nethubtv.vn/live/quangbinhtv/playlist.m3u8']},
         {text: 'Ha Tinh', URL: ['https://wse.hatinhtv.net/live/httv1/playlist.m3u8']},
-        // {text: 'Nghe An', URL: ['']},
-        // {text: 'Thanh Hoa', URL: ['']},
+        {text: 'Nghe An', URL: ['https://live.truyenhinhnghean.vn/hls/na1/index.m3u8']},
+        // {text: 'Thanh Hoa', URL: ['https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv525&q=sd&pkg=pkg12.hni']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
@@ -560,7 +560,7 @@ vn:
         // {text: 'Vinh Phuc', URL: ['']},
         {text: 'Thai Binh', URL: ['https://live.mediatech.vn/live/285fe61ba73072f428d8a626d764222e744/playlist.m3u8']},
         {text: 'Ninh Binh', URL: ['https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8']},
-        {text: 'Nam Dinh', URL: ['https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8']},
+        // {text: 'Nam Dinh', URL: ['https://ott3.nethubtv.vn/live/namdinh/chunklist_1.m3u8']},
         {text: 'Hung Yen', URL: ['https://cdn.hungyentv.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8','https://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8']},
         {text: 'Hai Phong', URL: ['https://live.mediatech.vn/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8']},
         {text: 'Hai Phong +', URL: ['https://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8']},
@@ -601,7 +601,7 @@ vn:
         // {text: 'Lai Chau', URL: ['']},
         {text: 'Hoa Binh', URL: ['https://hbtvlive.3ssoft.vn/hoabinhtv/playlist.m3u8']},
         {text: 'Dien Bien', URL: ['https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&deviceId=&deviceType=&gcId=1532&location=NA&pkg=pkg11.hni&q=high&requestTime=1586309420781&time=1586395820&token=LX-ibJYRUq9pflRtYAxfYQ&type=tv&userId=']},
-        // {text: 'Yen Bai', URL: ['https://live.yenbaitv.org.vn/hls/livestream.m3u8']},
+        {text: 'Yen Bai', URL: ['https://live.yenbaitv.org.vn/hls/livestream.m3u8']},
         // {text: 'Lao Cai', URL: ['']},
     ];
     createListChannelButton(listButtons, 'content-column');
