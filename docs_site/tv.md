@@ -113,7 +113,7 @@ hide:
         player.play();
     };
 
-    //### Use DPlayer
+    //### Use DPlayer: https://codepen.io/joremysh/pen/eENpeR
     function playDPlayer(videoURL, vidID='vid1') {
         window.scrollTo(0, 0); // Scroll to the top after loading the video
 
