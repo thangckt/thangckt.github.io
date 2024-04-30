@@ -473,8 +473,9 @@ vn:
     var listButtons = [
         {text: 'Can Tho', URL: ['https://live.canthotv.vn/live/tv/chunklist.m3u8']},
         // {text: 'Ca Mau', URL: [' ']},
-        // {text: 'Bac Lieu', URL: [' ']},
-        // {text: 'Soc Trang', URL: [' ']},
+        {text: 'Bac Lieu', URL: ['https://ott3.nethubtv.vn/live/baclieutv/playlist.m3u8']},
+        {text: 'Soc Trang 1', URL: ['https://pa.thst.vn/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8']},
+        {text: 'Soc Trang 2', URL: ['https://pa.thst.vn/hls-live/livepkgr/_definst_/liveevent/livestreamstv2.m3u8']},
         // {text: 'Kien Giang', URL: [' ']},
         {text: 'Hau Giang', URL: ['https://60acee235f4d5.streamlock.net/HGTV/d1/playlist.m3u8']},
         {text: 'Tra Vinh 1', URL: ['https://60acee235f4d5.streamlock.net/THTV/travinhtv/playlist.m3u8']},
