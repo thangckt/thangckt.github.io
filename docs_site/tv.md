@@ -96,6 +96,8 @@ hide:
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script> -->
 
+<script src="https://vjs.zencdn.net/8.13.0/video.min.js"></script>
+
 <!-- for youtube -->
 <!-- <script src="https://www.youtube.com/iframe_api"></script>
 <script src="https://cdn.jsdelivr.net/npm/youtube-video-js@4.0.1/dist/youtube-video.min.js"></script> -->
