@@ -104,6 +104,7 @@ hide:
 <!-- DEFINE SCRIPT JS -->
 <script>
     //##### Functions to play video, use only Videojs for simplicity
+    //### Use Videojs
     function playVideojs(videoURL, vidID='vid1'){
         window.scrollTo(0, 0); // Scroll to the top after loading the video
 
@@ -112,6 +113,7 @@ hide:
         player.play();
     };
 
+    //### Use DPlayer
     function playDPlayer(videoURL, vidID='vid1') {
         window.scrollTo(0, 0); // Scroll to the top after loading the video
 
