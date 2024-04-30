@@ -106,10 +106,24 @@ hide:
     //##### Functions to play video, use only Videojs for simplicity
     function playVideojs(videoURL, vidID='vid1'){
         window.scrollTo(0, 0); // Scroll to the top after loading the video
-        var player = videojs(vidID);
 
+        var player = videojs(vidID);
         player.src({ src: videoURL, type: 'application/x-mpegURL' });
         player.play();
+    };
+
+    function playDPlayer(videoURL, vidID='vid1') {
+        window.scrollTo(0, 0); // Scroll to the top after loading the video
+
+        var dp = new DPlayer({
+            container: document.getElementById(vidID),
+            autoplay: true,
+            video: {
+                url: videoURL,
+                type: 'auto'
+            }
+        });
+        dp.play();
     };
 
     //##### Functions to load videos to HTML video tag
@@ -127,7 +141,8 @@ hide:
         } else {
             videoURL = videoURLs;
         }
-        playVideojs(videoURL, vidID);
+        // playVideojs(videoURL, vidID);
+        playDPlayer(videoURL, vidID);
     };
 
     function loadStream(vidID='vid1') {
