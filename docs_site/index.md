@@ -47,7 +47,7 @@ hide:
 
   <div class="container-text">
   <p>
-    This site serves as the repo for my personal notes. <br>
+    This site serves as a repo for my personal notes. <br>
     The contents reflect neither community standards nor third-party rules. These notes are disorganized, spontaneous, and pertinent only to some unique contexts, making them seemingly meaningless for most others.  <br>
     It would not abnormal, therefore, if you find nothing valuable here since they were not made for you. Instead, you might want to enjoy Felix's excellent pieces or bring your attention elsewhere.
   </p>
