@@ -48,8 +48,8 @@ hide:
   <div class="container-text">
   <p>
     This site serves as the repo for my personal notes. <br>
-    The contents reflect neither community nor third-party rules, rather, they're messy, improvised, and inevitable for some rare contexts but meanless for almost others.  <br>
-    It isn't abnormal, therefore, if you find nothing valuable here since they aren't noted for you, and hence enjoy Felix's excellent pieces or move your sight elsewhere.
+    The contents reflect neither community standards nor third-party rules. These notes are disorganized, spontaneous, and pertinent only to some unique contexts, making them seemingly meaningless for most others.  <br>
+    It would not abnormal, therefore, if you find nothing valuable here since they were not made for you. Instead, you might want to enjoy Felix's excellent pieces or bring your attention elsewhere.
   </p>
   </div>
   <!-- The site is my dark valley in essence; I'd be glad if you could find anything valid. Alternatively, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64. -->
