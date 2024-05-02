@@ -217,7 +217,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     // Automatically load and play default video when the page loads
     window.addEventListener('load', function () {
-        playVideojs('https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8');
+        playVideojs('https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8');
     });
 </script>
 
@@ -231,16 +231,23 @@ data-ad-slot="1234567890"></ins>
 
 <!-- <p style="font-size:16pt; margin-top:0; margin-bottom:15">News</p> -->
 <h3>News - US</h3>
-  <!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
-  <button class="pushable" onclick="loadPlayer(['https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8','https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8'])"> <span class="front">FOX</span> </button>
-  <button class="pushable" onclick="loadPlayer('https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8')"> <span class="front">OAN</span> </button>
-  <button class="pushable" onclick="loadPlayer(['https://ntd02.akamaized.net/NTDA/index.m3u8','https://ntd02.akamaized.net/NTD-West/index.m3u8'])"> <span class="front">NTD</span> </button>
+<!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
+<script>
+    // Use the script to void repeated creation of buttons line-by-line as in above
+    // List of buttons to create
+    var listButtons = [
+        {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBD1900008O3.m3u8','https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8','https://i.mjh.nz/SamsungTVPlus/GBBD8000016N.m3u8']},
+        {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
+        {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
+        {text: 'NBC', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB1500004LG.m3u8','https://i.mjh.nz/SamsungTVPlus/CAAJ2700011IF.m3u8']},
+        {text: 'CBC', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300009KD.m3u8']},
+    ];
+    createListChannelButton(listButtons, 'content-column');
+</script>
 
 <!-- the center biases: https://www.allsides.com/media-bias/media-bias-chart -->
 <br><br>
 <script>
-    // Use the script to void repeated creation of buttons line-by-line as in above
-    // List of buttons to create
     var listButtons = [
         {text: 'Y! finance', URL: ['https://yahoo-samsung.amagi.tv/playlist.m3u8','https://yahoo-plex.amagi.tv/playlist.m3u8']},
         {text: 'Bloomberg', URL: ['https://bloomberg-bloomberg-1-be.samsung.wurl.tv/playlist.m3u8','https://bloomberg-bloomberg-2-nz.samsung.wurl.tv/playlist.m3u8','https://4da261f13a2445c2a8fada9704df3e17.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung-in_Bloomberg/playlist.m3u8']},
@@ -248,16 +255,13 @@ data-ad-slot="1234567890"></ins>
     createListChannelButton(listButtons, 'content-column');
 </script>
 
-
-<!-- the left radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
+<!-- the right radical side biases: https://www.allsides.com/media-bias/media-bias-chart -->
 <br><br>
 <script>
     var listButtons = [
-        {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBD1900008O3.m3u8','https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8','https://i.mjh.nz/SamsungTVPlus/GBBD8000016N.m3u8']},
-        {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
-        {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
-        {text: 'NBC', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB1500004LG.m3u8','https://i.mjh.nz/SamsungTVPlus/CAAJ2700011IF.m3u8']},
-        {text: 'CBC', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300009KD.m3u8']},
+        {text: 'FOX', URL: ['https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8','https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8']},
+        {text: 'OAN', URL: ['https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8']},
+        {text: 'NTD', URL: ['https://ntd02.akamaized.net/NTDA/index.m3u8','https://ntd02.akamaized.net/NTD-West/index.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
