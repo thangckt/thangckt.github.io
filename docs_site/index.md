@@ -52,9 +52,6 @@ hide:
     It would not abnormal, therefore, if you find nothing valuable here since they were not made for you. Instead, you might want to enjoy Felix's excellent pieces or bring your attention elsewhere.
   </p>
   </div>
-  <!-- The site is my dark valley in essence; I'd be glad if you could find anything valid. Alternatively, just enjoin Felix's excellent pieces; you may find interest in his last Concerto Opus 64. -->
-  <!-- To whom with Vietnamese comprehension, I'd be pleased to introduce a reputed descant that captures [the scent of the night](https://www.youtube.com/watch?v=GKv8pgyPV8g). -->
-
 </div>
 
 
@@ -62,8 +59,6 @@ hide:
 !!! quote ""
     You cannot teach a man anything, you can only help him find it within himself - Galileo Galilei (1564–1642)
 -->
-
-
 
 <div style="position:relative; padding-bottom:56.25%">
 <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
@@ -75,6 +70,7 @@ hide:
 
 
 # Welcome
+
 
 <!-- Visitor -->
 <p align="center">
