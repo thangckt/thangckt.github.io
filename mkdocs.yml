@@ -210,7 +210,7 @@ nav:
   - thaml: http://thangckt.github.io/thaml_doc
   - thavid: http://thangckt.github.io/thavid_doc
 
-  - Cluster:
+  - cluster:
     - cluster/index.md
     - Compile:
       - LAMMPS: cluster/compile/LAMMPS.md
@@ -238,7 +238,7 @@ nav:
       - cluster/refPage/cheatsheet.md
       - cluster/refPage/docs_syntax.md
 
-  - Refs:
+  - refs:
     - ref/index.md
     - Researh Ethics: ref/video/1_research_ethic.md
     - Reading:
@@ -253,7 +253,7 @@ nav:
     # - research/publication.md
     - ref/chat.md
 
-  - Odd:      # Miscellaneous    Heterogeneous
+  - odd:      # Miscellaneous    Heterogeneous
     - odd/index.md
     - Music:
       - Classic pieces: odd/music/music_classic.md
@@ -267,11 +267,11 @@ nav:
     - Reading list:
       - odd/reading/read_list.md
 
-  - Blog:
+  - blog:
     - blog/index.md
 
   # - NextChat: http://chat-gpt-next-lvkto5aam-thangcktgmailcoms-projects.vercel.app
-  - Chat: http://thangckt.github.io/chat
+  - chat: http://thangckt.github.io/chat
   - TV: tv.md
 
 
