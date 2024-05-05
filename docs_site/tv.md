@@ -217,7 +217,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     // Automatically load and play default video when the page loads
     window.addEventListener('load', function () {
-        playVideojs('https://i.mjh.nz/SamsungTVPlus/GBBD1900008O3.m3u8');
+        playVideojs('https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8');
     });
 </script>
 
