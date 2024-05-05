@@ -262,7 +262,7 @@ data-ad-slot="1234567890"></ins>
         {text: 'FOX', URL: ['https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8','https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8']},
         {text: 'OAN', URL: ['https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8']},
         {text: 'NTD', URL: ['https://ntd02.akamaized.net/NTDA/index.m3u8','https://ntd02.akamaized.net/NTD-West/index.m3u8']},
-        {text: 'NewsNation Global', URL: ['https://live.corusdigitaldev.com/groupd/live/49a91e7f-1023-430f-8d66-561055f3d0f7/live.isml/.m3u8']},
+        {text: 'NewsNation', URL: ['https://live.corusdigitaldev.com/groupd/live/49a91e7f-1023-430f-8d66-561055f3d0f7/live.isml/.m3u8','https://live.corusdigitaldev.com/groupd/live/49a91e7f-1023-430f-8d66-561055f3d0f7/live.isml/.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
 </script>
