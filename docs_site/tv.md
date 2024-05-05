@@ -217,7 +217,7 @@ data-ad-slot="1234567890"></ins>
 <script>
     // Automatically load and play default video when the page loads
     window.addEventListener('load', function () {
-        playVideojs('https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8');
+        playVideojs('https://i.mjh.nz/SamsungTVPlus/GBBD1900008O3.m3u8');
     });
 </script>
 
