@@ -322,6 +322,7 @@ data-ad-slot="1234567890"></ins>
 <br> <br>
 <script>
     var listButtons = [
+        {text: 'The Weather', URL: ['https://twcprod-live.twc-tv.com/v1/manifest/b4d4d63a49309cc5140171fb2e92485c31be1e9e/DSP_6228e4760505741a116f1ba2_twcprod-live/6bf09ce5-366b-463c-b67e-c4b799f73c3f/3.m3u8']},
         {text: 'Wonder', URL: ['https://wonder-samsung-uk.amagi.tv/playlist.m3u8','https://lds-wonder-samsungau.amagi.tv/playlist.m3u8', 'https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-wondernz-samsungnz/playlist.m3u8']},
         {text: 'Infast', URL: ['https://insighttv-samsung-canada.amagi.tv/playlist.m3u8']},
         {text: 'Real Life', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8']},
