@@ -76,7 +76,8 @@ hide:
 </div>
 
 
-# Welcome
+#
+<!-- # Welcome -->
 
 
 <!-- Visitor -->
