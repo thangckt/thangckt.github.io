@@ -35,7 +35,7 @@ hide:
       }
     }
 
-    /* hide edit button */
+    /* hide edit button and page title */
     /* .md-typeset h1,    */
     .md-content__button {
         display: none;
