@@ -5,8 +5,6 @@ hide:
   - footer
 ---
 
-<!-- Find more m3u8 links at: http://tonkiang.us/ -->
-
 <style>
   .pushable {
     background: skyblue; /* Changed button color to sky blue */
@@ -89,8 +87,11 @@ hide:
 </style>
 
 
+
+<!-- Find more m3u8 links at: http://tonkiang.us/ -->
+
 <!-- LOAD LIBS -->
-<script src="https://vjs.zencdn.net/8.13.0/video.min.js"></script>
+<script src="https://vjs.zencdn.net/8.14.0/video.min.js"></script>
 
 <!-- <script src="https://www.unpkg.com/browse/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/4.0.0/videojs-contrib-quality-levels.min.js"></script> -->
