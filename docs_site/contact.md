@@ -53,7 +53,7 @@ hide:
 <!--- https://www.w3schools.com/howto/howto_css_contact_form.asp -->
 
 <div class="container">
-    <form id="contactForm">
+    <form class="gform" method="POST" data-emailed="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbyCSoCedun-pu3BG2MHgl_Yac9KhuhHOFKTBywij1EIUxxdhNqFloFrt-j18a0h2_Lg/exec">
         <label for="fname">Name: </label>
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email: </label>
@@ -67,36 +67,7 @@ hide:
 </div>
 
 
-<script>
-  $(document).ready(function(){
-    $("#contactForm").submit(function(event){
-      event.preventDefault();
-      
-      var name = $("#name").val();
-      var email = $("#email").val();
-      var subject = $("#subject").val();
-      var message = $("#message").val();
 
-      $.ajax({
-        type: "POST",
-        url: "/path/to/your/server/side/script",
-        data: {
-          name: name,
-          email: email,
-          subject: subject,
-          message: message,
-          recipient: "tha@gmail.com"
-        },
-        success: function(data){
-          alert("Email sent successfully!");
-        },
-        error: function(data){
-          alert("There was an error sending the email.");
-        }
-      });
-    });
-  });
-</script>
 
 
 #
