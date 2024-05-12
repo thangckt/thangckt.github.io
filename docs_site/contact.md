@@ -59,9 +59,9 @@ hide:
         <label for="email">Email: </label>
         <input type="text" id="email" name="email" required><br>
         <label for="subject">Subject:</label><br>
-        <input type="text" id="subject" name="subject" required placeholder="What would you want to talk about?"><br>
+        <input type="text" id="subject" name="subject" required placeholder="What do you intend to talk about?"><br>
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
+        <textarea id="message" name="message" required placeholder="Write it here..."></textarea><br>
         <input type="submit" value="Submit">
     </form>
 </div>
