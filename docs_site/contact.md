@@ -9,9 +9,9 @@ hide:
 <style>
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
+    width: 100%; 
+    padding: 12px; 
+    /* border: 1px solid #ccc;  */
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
@@ -54,15 +54,15 @@ hide:
 
 <div class="container">
     <form id="contactForm">
-    <label for="fname">Name:</label><br>
-    <input type="text" id="name" name="name" required><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br>
-    <label for="subject">Subject:</label><br>
-    <input type="text" id="subject" name="subject" required><br>
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" required></textarea><br>
-    <input type="submit" value="Submit">
+        <label for="fname">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" required><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <input type="submit" value="Submit">
     </form>
 </div>
 
