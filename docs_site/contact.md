@@ -53,7 +53,7 @@ hide:
 <!--- https://www.w3schools.com/howto/howto_css_contact_form.asp -->
 
 <div class="container">
-    <form class="gform" method="POST" data-emailed="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbyCSoCedun-pu3BG2MHgl_Yac9KhuhHOFKTBywij1EIUxxdhNqFloFrt-j18a0h2_Lg/exec">
+    <form id="myForm" class="gform" method="POST" data-emailed="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbyCSoCedun-pu3BG2MHgl_Yac9KhuhHOFKTBywij1EIUxxdhNqFloFrt-j18a0h2_Lg/exec">
         <label for="fname">Name: </label>
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email: </label>
@@ -66,6 +66,11 @@ hide:
     </form>
 </div>
 
+<script>
+    document.getElementById('myForm').addEventListener('submit', function() {
+        alert('Your message has been sent!');
+    });
+</script>
 
 
 
