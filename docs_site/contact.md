@@ -54,14 +54,14 @@ hide:
 
 <div class="container">
     <form id="contactForm">
-        <label for="fname">Name:</label><br>
+        <label for="fname">Name: </label>
         <input type="text" id="name" name="name" required><br>
-        <label for="email">Email:</label><br>
+        <label for="email">Email: </label>
         <input type="text" id="email" name="email" required><br>
         <label for="subject">Subject:</label><br>
-        <input type="text" id="subject" name="subject" required><br>
+        <input type="text" id="subject" name="subject" required placeholder="What do you want to talk about?"><br>
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required></textarea><br>
+        <textarea id="message" name="message" required placeholder="Write the content here..."></textarea><br>
         <input type="submit" value="Submit">
     </form>
 </div>
