@@ -202,7 +202,7 @@ plugins:
 ###=======================================
 ## Page tree
 nav:
-  - Home: http://thangckt.github.io
+  - home: http://thangckt.github.io
   # - About: index.md
   # - molbuilder: thangckt.github.io/molbuilder
 
@@ -272,7 +272,7 @@ nav:
 
   # - NextChat: http://chat-gpt-next-lvkto5aam-thangcktgmailcoms-projects.vercel.app
   - chat: http://thangckt.github.io/chat
-  - TV: tv.md
+  - tv: tv.md
   # - contact: contact.md
 
 
