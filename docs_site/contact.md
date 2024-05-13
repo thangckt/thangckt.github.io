@@ -18,7 +18,7 @@ hide:
       resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
       }
 
-          text email {
+    input[type=text,email] {
       width: 70%;
       /* padding: 12px; */
       /* border: 1px solid #ccc;  */
