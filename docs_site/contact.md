@@ -9,23 +9,14 @@ hide:
 <style>
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
-    width: 80%;
+    width: 100%;
     padding: 12px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    display: inline-block;
-    vertical-align: middle;
-    }
-
-    /* Style the labels */
-    label {
-    display: inline-block;
-    width: 15%;
-    vertical-align: middle;
-    margin-top: 12px;
+    /* border: 1px solid #ccc;  */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
     }
 
     /* Style the submit button with a specific background color etc */
@@ -177,14 +168,13 @@ hide:
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email: </label>
         <input type="text" id="email" name="email" required><br>
-        <label for="subject">Subject:</label>
+        <label for="subject">Subject:</label><br>
         <input type="text" id="subject" name="subject" required placeholder="What would you intend to talk about?"><br>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required placeholder="Write here..." oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
         <input type="submit" value="Submit">
     </form>
 </div>
-
 
 <script>
     document.getElementById('myForm').addEventListener('submit', function() {
