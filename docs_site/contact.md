@@ -198,7 +198,7 @@ hide:
             <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
         </div>
         <div>
-            <label for="honeypot">What is auxeticity? (don't answer and let the box empty).</label>
+            <label for="honeypot">* Ensure your email is correct to able to get feedback and let the following box empty: </label>
             <input id="honeypot" type="text" name="honeypot" value="" style="backround-color: #04780a; width:50px" />
         </div>
         <input type="submit" value="Send">
