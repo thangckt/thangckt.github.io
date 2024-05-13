@@ -213,11 +213,14 @@ hide:
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
-        <h2>Your message has sent successfully!<br> You will get feedback soon!</h2>
+        <h2>Your message has sent successfully!<br><br> You will get feedback soon!</h2>
     </div>
     </form>
 </div>
 
+
+<br>
+<br>
 
 #  
 
