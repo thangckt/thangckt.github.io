@@ -182,26 +182,26 @@ hide:
 <div class="container">
     <form id="myForm" class="gform" method="POST" data-emailed="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbyCSoCedun-pu3BG2MHgl_Yac9KhuhHOFKTBywij1EIUxxdhNqFloFrt-j18a0h2_Lg/exec">
     <div class="form-elements">
-        <fieldset class="flex-container">
+        <div class="flex-container">
             <label for="fname">Name: </label>
             <input type="text" id="name" name="name" required><br>
-        </fieldset>
-        <fieldset class="flex-container">
+        </div>
+        <div class="flex-container">
             <label for="email">Email: </label>
             <input type="email" id="email" name="email" required><br>
-        </fieldset>
-        <fieldset class="flex-container">
+        </div>
+        <div class="flex-container">
             <label for="subject">Subject:</label>
             <input type="text" id="subject" name="subject" required placeholder="What would you want to discuss?"><br>
-        </fieldset>
-        <fieldset>
+        </div>
+        <div>
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
-        </fieldset>
-        <fieldset>
+        </div>
+        <div>
             <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
             <input id="honeypot" type="text" name="honeypot" value="" />
-        </fieldset>
+        </div>
         <input type="submit" value="<i class="fa-solid fa-paper-plane"></i>send">
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
