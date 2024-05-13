@@ -198,8 +198,8 @@ hide:
             <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
         </div>
         <div>
-            <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
-            <input id="honeypot" type="text" name="honeypot" value="" />
+            <label for="honeypot">What is auxeticity? (don't answer and let the box empty).</label>
+            <input id="honeypot" type="text" name="honeypot" value="" style="backround-color: #04780a; width:50px" />
         </div>
         <input type="submit" value="Send">
     </div>
