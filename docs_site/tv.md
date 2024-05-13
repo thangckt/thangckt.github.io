@@ -21,7 +21,7 @@ hide:
     display: block;
     border-radius: 7px;
     padding: 4px 8px;
-    font-size: 12pt;
+    font-size: 11pt;
     background: #007ACC;     /*  hsl(345deg 100% 47%);  */
     color: white;
     transform: translateY(-4px);
