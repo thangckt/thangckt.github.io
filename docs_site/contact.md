@@ -18,40 +18,44 @@ hide:
       resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
       }
 
-      .pushable {
-    background: skyblue; /* Changed button color to sky blue */
-    /* background: hsl(340deg 100% 32%); */
-    border-radius: 7px;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline-offset: 4px;
-    /* margin-bottom: 8px; */
-    margin-top: 8px; /* Add space at the top */
-  }
-  .front {
-    display: block;
-    border-radius: 7px;
-    padding: 4px 8px;
-    font-size: 12pt;
-    background: #007ACC;     /*  hsl(345deg 100% 47%);  */
-    color: white;
-    transform: translateY(-4px);
-  }
+    .pushable {
+        background: skyblue; /* Changed button color to sky blue */
+        /* background: hsl(340deg 100% 32%); */
+        border-radius: 7px;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        outline-offset: 4px;
+        /* margin-bottom: 8px; */
+        margin-top: 8px; /* Add space at the top */
+    }
+    .front {
+        display: block;
+        border-radius: 7px;
+        padding: 4px 8px;
+        font-size: 12pt;
+        background: #007ACC;     /*  hsl(345deg 100% 47%);  */
+        color: white;
+        transform: translateY(-4px);
+    }
 
-  .pushable:active .front {
-    /* background: hsl(215deg 100% 32%); /* Changed the active color */
-    transform: translateY(-2px);
-  }
-  .pushable:focus:not(:focus-visible) {
-    outline: none;
-  }
+    .pushable:active .front {
+        /* background: hsl(215deg 100% 32%); /* Changed the active color */
+        transform: translateY(-2px);
+    }
+    .pushable:focus:not(:focus-visible) {
+        outline: none;
+    }
 
     /* Add a background color and some padding around the form */
     .container {
-    border-radius: 5px;
-    /* background-color: #f2f2f2; */
-    padding: 0px;
+        border-radius: 5px;
+        /* background-color: #f2f2f2; */
+        padding: 0px;
+    }
+
+    .honeypot-field {
+        display: none;
     }
 
     /* hide edit button */
