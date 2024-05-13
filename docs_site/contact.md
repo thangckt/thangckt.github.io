@@ -147,7 +147,9 @@ hide:
         <input type="text" id="subject" name="subject" required placeholder="What would you want to discuss?"><br>
         <label for="message">Message:</label><br>
         <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
-        <input type="submit" value="Submit">
+        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+        <input id="honeypot" type="text" name="honeypot" value="" />
+        <input type="submit" value="send">
     </form>
 </div>
 
