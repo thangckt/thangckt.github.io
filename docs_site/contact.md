@@ -9,14 +9,23 @@ hide:
 <style>
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
-    width: 100%;
+    width: 80%;
     padding: 12px;
-    /* border: 1px solid #ccc;  */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+    /* Style the labels */
+    label {
+    display: inline-block;
+    width: 15%;
+    vertical-align: middle;
+    margin-top: 12px;
     }
 
     /* Style the submit button with a specific background color etc */
@@ -50,8 +59,8 @@ hide:
 
 
 
-<!--- https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server -->
-
+<!--- Using Google App Mail: https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server -->
+<!-- Define js script -->
 <script>
     (function() {
     // get all data in form and return object
@@ -161,19 +170,21 @@ hide:
 </script>
 
 
+<!-- HTML from here -->
 <div class="container">
     <form id="myForm" class="gform" method="POST" data-emailed="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbyCSoCedun-pu3BG2MHgl_Yac9KhuhHOFKTBywij1EIUxxdhNqFloFrt-j18a0h2_Lg/exec">
         <label for="fname">Name: </label>
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email: </label>
         <input type="text" id="email" name="email" required><br>
-        <label for="subject">Subject:</label><br>
+        <label for="subject">Subject:</label>
         <input type="text" id="subject" name="subject" required placeholder="What would you intend to talk about?"><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required placeholder="Write here..." oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea><br>
         <input type="submit" value="Submit">
     </form>
 </div>
+
 
 <script>
     document.getElementById('myForm').addEventListener('submit', function() {
