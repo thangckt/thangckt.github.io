@@ -26,6 +26,7 @@ hide:
     .flex-container input[type="text"], .flex-container input[type=email]{
         flex-grow: 1;
         background-color: #2f2f2f;
+        height:14pt;
         border-radius: 4px;
     }
 
@@ -36,10 +37,10 @@ hide:
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 6px; /* Add a top margin */
         margin-bottom: 6px; /* Bottom margin */
-        resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
         overflow: hidden; /* Optional: for better appearance */
         min-height: 90px; /* Optional: define a minimum height */
-        font-size: 14px; /* Change font size */
+        font-size: 14pt; /* Change font size */
     }
 
     .honeypot-field {
@@ -208,7 +209,7 @@ hide:
             <input id="honeypot" type="text" name="honeypot" value=""  />
         </div>
         <p>* Ensure your email is correct to able to receive the feedback.</p>
-        <input type="submit" value="Send" style="font-size:14px">
+        <input type="submit" value="Send" style="font-size:14pt">
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
