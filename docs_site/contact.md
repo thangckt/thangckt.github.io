@@ -15,8 +15,8 @@ hide:
     }
 
     .flex-container {
-    display: flex;
-    align-items: center;
+        display: flex;
+        align-items: center;
     }
 
     .flex-container label {
@@ -47,7 +47,7 @@ hide:
         color: white;
         padding: 6px 14px;
         border: none;
-        border-radius: 5px;
+        border-radius: 6px;
         cursor: pointer;
     }
 
@@ -55,7 +55,6 @@ hide:
     input[type=submit]:hover {
         background-color: #04780a;
     }
-
 
     /* hide edit button */
     .md-typeset h1,
