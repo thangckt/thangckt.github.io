@@ -202,12 +202,12 @@ hide:
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" required placeholder="Write here..." oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea><br>
         </div>
+        <p>* Ensure your email is correct to able to get feedback</p>
         <div class="honeypot-field">
             <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
             <input id="honeypot" type="text" name="honeypot" value=""  />
         </div>
-        <p>* Ensure your email is correct to able to get feedback</p>
-        <input type="submit" value="Send">
+        <input type="submit" value="Send" style="font-size:14px">
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
