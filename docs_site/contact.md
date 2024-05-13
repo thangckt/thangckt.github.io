@@ -18,7 +18,7 @@ hide:
       resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
       }
 
-    input[type=text,email] {
+    input[type=text], input[type=email] {
       width: 70%;
       /* padding: 12px; */
       /* border: 1px solid #ccc;  */
@@ -66,6 +66,20 @@ hide:
         /* background-color: #f2f2f2; */
         padding: 0px;
     }
+
+    .flex-container {
+    display: flex;
+    align-items: center;
+    }
+
+    .flex-container label {
+        margin-right: 10px; /* Adjust as needed */
+    }
+
+    .flex-container input[type="text"], .flex-container input[type=email]{
+        flex-grow: 1;
+    }
+
 
     .honeypot-field {
         display: none;
@@ -195,12 +209,18 @@ hide:
 <div class="container">
     <form id="myForm" class="gform" method="POST" data-emailed="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbyCSoCedun-pu3BG2MHgl_Yac9KhuhHOFKTBywij1EIUxxdhNqFloFrt-j18a0h2_Lg/exec">
     <div class="form-elements">
-        <label for="fname">Name: </label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">Email: </label>
-        <input type="email" id="email" name="email" required><br>
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required placeholder="What would you want to discuss?"><br>
+        <div class="flex-container">
+            <label for="fname">Name: </label>
+            <input type="text" id="name" name="name" required><br>
+        </div>
+        <div class="flex-container">
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required><br>
+        </div>
+        <div class="flex-container">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required placeholder="What would you want to discuss?"><br>
+        </div>
         <label for="message">Message:</label><br>
         <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
         <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
