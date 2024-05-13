@@ -209,8 +209,7 @@ hide:
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
-    <h2><em>Thanks</em> for contacting us!
-        We will get back to you soon!</h2>
+        <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
     </div>
     </form>
 </div>
