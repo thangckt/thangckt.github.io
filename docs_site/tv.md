@@ -52,7 +52,7 @@ hide:
 
   .content-column {
      width: 32%;
-      max-height: 84vh;
+      max-height: 85vh;
       overflow-y: auto;
       position: relative;
   }
@@ -62,7 +62,7 @@ hide:
       .container {
         flex-wrap: wrap;
         margin-top: -47px;
-        margin-bottom: -30px;
+        margin-bottom: -60px;
         margin-right: -10px;
         margin-left: -10px;
       }
