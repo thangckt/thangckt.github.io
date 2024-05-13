@@ -18,6 +18,19 @@ hide:
       resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
       }
 
+          text email {
+      width: 70%;
+      /* padding: 12px; */
+      /* border: 1px solid #ccc;  */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+      }
+
+
+/* Style for send button */
     .pushable {
         background: skyblue; /* Changed button color to sky blue */
         /* background: hsl(340deg 100% 32%); */
