@@ -40,7 +40,7 @@ hide:
         resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
         overflow: hidden; /* Optional: for better appearance */
         min-height: 100px; /* Optional: define a minimum height */
-        font-size: 13pt; /* Change font size */
+        font-size: 12pt; /* Change font size */
     }
 
     .honeypot-field {
