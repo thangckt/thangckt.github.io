@@ -26,12 +26,13 @@ hide:
     .flex-container input[type="text"], .flex-container input[type=email]{
         flex-grow: 1;
         background-color: #2f2f2f;
+        border-radius: 4px;
     }
 
     textarea {
         background-color: #2f2f2f;
         width: 100%;
-        border-radius: 4px; /* Rounded borders */
+        border-radius: 6px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 6px; /* Add a top margin */
         margin-bottom: 16px; /* Bottom margin */
