@@ -40,8 +40,6 @@ hide:
       }
 
 
-
-
       /* Style the submit button with a specific background color etc */
       input[type=submit] {
       background-color: #04AA6D;
@@ -54,7 +52,7 @@ hide:
   
       /* When moving the mouse over the submit button, add a darker green color */
       input[type=submit]:hover {
-      background-color: #45a049;
+      background-color: #04780a;
       }
 
 
@@ -181,6 +179,7 @@ hide:
 <!-- HTML from here -->
 <div class="container">
     <form id="myForm" class="gform" method="POST" data-emailed="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbyCSoCedun-pu3BG2MHgl_Yac9KhuhHOFKTBywij1EIUxxdhNqFloFrt-j18a0h2_Lg/exec">
+    <!-- chang action link -->
     <div class="form-elements">
         <div class="flex-container">
             <label for="fname">Name: </label>
