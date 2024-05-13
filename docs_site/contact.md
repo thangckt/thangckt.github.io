@@ -26,7 +26,7 @@ hide:
     .flex-container input[type="text"], .flex-container input[type=email]{
         flex-grow: 1;
         background-color: #2f2f2f;
-        height:22px;
+        height:20px;
         border-radius: 4px;
     }
 
