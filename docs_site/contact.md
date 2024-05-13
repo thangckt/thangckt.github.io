@@ -7,6 +7,27 @@ hide:
 
 
 <style>
+    /* Add a background color and some padding around the form */
+    .container {
+        border-radius: 5px;
+        /* background-color: #f2f2f2; */
+        padding: 0px;
+    }
+
+    .flex-container {
+    display: flex;
+    align-items: center;
+    }
+
+    .flex-container label {
+        margin-right: 10px; /* Adjust as needed */
+    }
+
+    .flex-container input[type="text"], .flex-container input[type=email]{
+        flex-grow: 1;
+    }
+
+
     textarea {
       width: 100%;
       /* padding: 12px; */
@@ -18,16 +39,7 @@ hide:
       resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
       }
 
-    input[type=text], input[type=email] {
-      width: 70%;
-      /* padding: 12px; */
-      /* border: 1px solid #ccc;  */
-      border-radius: 4px; /* Rounded borders */
-      box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 6px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
-      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-      }
+
 
 
 /* Style for send button */
@@ -60,33 +72,9 @@ hide:
         outline: none;
     }
 
-    /* Add a background color and some padding around the form */
-    .container {
-        border-radius: 5px;
-        /* background-color: #f2f2f2; */
-        padding: 0px;
-    }
-
-    .flex-container {
-    display: flex;
-    align-items: center;
-    }
-
-    .flex-container label {
-        margin-right: 10px; /* Adjust as needed */
-    }
-
-    .flex-container input[type="text"], .flex-container input[type=email]{
-        flex-grow: 1;
-    }
-
-
-    .honeypot-field {
-        display: none;
-    }
 
     /* hide edit button */
-    /* .md-typeset h1, */
+    .md-typeset h1,
     .md-content__button {
         display: none;
     }
@@ -209,27 +197,31 @@ hide:
 <div class="container">
     <form id="myForm" class="gform" method="POST" data-emailed="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbyCSoCedun-pu3BG2MHgl_Yac9KhuhHOFKTBywij1EIUxxdhNqFloFrt-j18a0h2_Lg/exec">
     <div class="form-elements">
-        <div class="flex-container">
+        <fieldset class="flex-container">
             <label for="fname">Name: </label>
             <input type="text" id="name" name="name" required><br>
-        </div>
-        <div class="flex-container">
+        </fieldset>
+        <fieldset class="flex-container">
             <label for="email">Email: </label>
             <input type="email" id="email" name="email" required><br>
-        </div>
-        <div class="flex-container">
+        </fieldset>
+        <fieldset class="flex-container">
             <label for="subject">Subject:</label>
             <input type="text" id="subject" name="subject" required placeholder="What would you want to discuss?"><br>
-        </div>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
-        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
-        <input id="honeypot" type="text" name="honeypot" value="" />
+        </fieldset>
+        <fieldset>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
+        </fieldset>
+        <fieldset>
+            <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+            <input id="honeypot" type="text" name="honeypot" value="" />
+        </fieldset>
         <input class="pushable" type="submit" value="send">
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
-        <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+        <h2><em>Thanks</em> for contacting! I will get back to you soon!</h2>
     </div>
     </form>
 </div>
