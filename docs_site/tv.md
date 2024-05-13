@@ -39,7 +39,7 @@ hide:
       display: flex;
       flex-wrap: nowrap;
       margin-top: -52px;
-      margin-bottom: -50px;
+      margin-bottom: -40px;
       margin-right: -30px;
       margin-left: -30px;
   }
@@ -52,7 +52,7 @@ hide:
 
   .content-column {
      width: 32%;
-      max-height: 80vh;
+      max-height: 88vh;
       overflow-y: auto;
       position: relative;
   }
