@@ -18,6 +18,35 @@ hide:
       resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
       }
 
+      .pushable {
+    background: skyblue; /* Changed button color to sky blue */
+    /* background: hsl(340deg 100% 32%); */
+    border-radius: 7px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    /* margin-bottom: 8px; */
+    margin-top: 8px; /* Add space at the top */
+  }
+  .front {
+    display: block;
+    border-radius: 7px;
+    padding: 4px 8px;
+    font-size: 12pt;
+    background: #007ACC;     /*  hsl(345deg 100% 47%);  */
+    color: white;
+    transform: translateY(-4px);
+  }
+
+  .pushable:active .front {
+    /* background: hsl(215deg 100% 32%); /* Changed the active color */
+    transform: translateY(-2px);
+  }
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
+
     /* Add a background color and some padding around the form */
     .container {
     border-radius: 5px;
@@ -151,23 +180,22 @@ hide:
         <label for="fname">Name: </label>
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email: </label>
-        <input type="text" id="email" name="email" required><br>
+        <input type="email" id="email" name="email" required><br>
         <label for="subject">Subject:</label><br>
         <input type="text" id="subject" name="subject" required placeholder="What would you want to discuss?"><br>
         <label for="message">Message:</label><br>
         <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
         <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
         <input id="honeypot" type="text" name="honeypot" value="" />
-        <input type="submit" value="send">
+        <input class="pushable" type="submit" value="send">
+
+        <!-- Customise the Thankyou Message People See when they submit the form: -->
+        <div class="thankyou_message" style="display:none;">
+        <h2><em>Thanks</em> for contacting us!
+            We will get back to you soon!</h2>
+        </div>
     </form>
 </div>
-
-<script>
-    document.getElementById('myForm').addEventListener('submit', function() {
-        alert('Your message has been sent!');
-    });
-</script>
-
 
 
 
