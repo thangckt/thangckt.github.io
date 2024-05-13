@@ -42,35 +42,20 @@ hide:
 
 
 
-/* Style for send button */
-    .pushable {
-        background: skyblue; /* Changed button color to sky blue */
-        /* background: hsl(340deg 100% 32%); */
-        border-radius: 7px;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        outline-offset: 4px;
-        /* margin-bottom: 8px; */
-        margin-top: 8px; /* Add space at the top */
-    }
-    .front {
-        display: block;
-        border-radius: 7px;
-        padding: 4px 8px;
-        font-size: 12pt;
-        background: #007ACC;     /*  hsl(345deg 100% 47%);  */
-        color: white;
-        transform: translateY(-4px);
-    }
-
-    .pushable:active .front {
-        /* background: hsl(215deg 100% 32%); /* Changed the active color */
-        transform: translateY(-2px);
-    }
-    .pushable:focus:not(:focus-visible) {
-        outline: none;
-    }
+      /* Style the submit button with a specific background color etc */
+      input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      }
+  
+      /* When moving the mouse over the submit button, add a darker green color */
+      input[type=submit]:hover {
+      background-color: #45a049;
+      }
 
 
     /* hide edit button */
@@ -217,7 +202,7 @@ hide:
             <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
             <input id="honeypot" type="text" name="honeypot" value="" />
         </fieldset>
-        <input class="pushable" type="submit" value="send">
+        <input  type="submit" value="send">
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
