@@ -39,7 +39,7 @@ hide:
       display: flex;
       flex-wrap: nowrap;
       margin-top: -52px;
-      margin-bottom: 0px;
+      margin-bottom: 10px;
       margin-right: -30px;
       margin-left: -30px;
   }
