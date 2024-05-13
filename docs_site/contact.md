@@ -37,7 +37,7 @@ hide:
         margin-bottom: 16px; /* Bottom margin */
         resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
         overflow: auto; /* Optional: for better appearance */
-        min-height: 50px; /* Optional: define a minimum height */
+        min-height: 90px; /* Optional: define a minimum height */
         font-size: 14px; /* Change font size */
     }
 
