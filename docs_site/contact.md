@@ -31,13 +31,17 @@ hide:
     textarea {
         background-color: #444644;
         width: 100%;
-        /* padding: 12px; */
-        /* border: 1px solid #ccc;  */
         border-radius: 4px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 6px; /* Add a top margin */
         margin-bottom: 16px; /* Bottom margin */
         resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        overflow: hidden; /* Optional: for better appearance */
+        min-height: 50px; /* Optional: define a minimum height */
+    }
+
+    .honeypot-field {
+        display: none;
     }
 
 
@@ -195,17 +199,18 @@ hide:
         </div>
         <div>
             <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
+            <textarea id="message" name="message" required placeholder="Write here..." oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea><br>
         </div>
-        <div>
-            <label for="honeypot">* Ensure your email is correct to able to get feedback and let the following box empty: </label>
-            <input id="honeypot" type="text" name="honeypot" value="" style="backround-color: #04780a; width:50px" />
+        <div class="honeypot-field">
+            <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+            <input id="honeypot" type="text" name="honeypot" value=""  />
         </div>
+        <p>* Ensure your email is correct to able to get feedback</p>
         <input type="submit" value="Send">
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
-        <h2><em>Thanks</em> for contacting! I will get back to you soon!</h2>
+        <h2>Your message has sent successfully!<br> You will get feedback soon!</h2>
     </div>
     </form>
 </div>
