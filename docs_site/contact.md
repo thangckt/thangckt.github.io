@@ -25,35 +25,36 @@ hide:
 
     .flex-container input[type="text"], .flex-container input[type=email]{
         flex-grow: 1;
+        background-color: #444644;
+    }
+
+    textarea {
+        background-color: #444644;
+        width: 100%;
+        /* padding: 12px; */
+        /* border: 1px solid #ccc;  */
+        border-radius: 4px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
     }
 
 
-    textarea {
-      width: 100%;
-      /* padding: 12px; */
-      /* border: 1px solid #ccc;  */
-      border-radius: 4px; /* Rounded borders */
-      box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 6px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
-      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-      }
+    /* Style the submit button with a specific background color etc */
+    input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 6px 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-
-      /* Style the submit button with a specific background color etc */
-      input[type=submit] {
-      background-color: #04AA6D;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      }
-  
-      /* When moving the mouse over the submit button, add a darker green color */
-      input[type=submit]:hover {
-      background-color: #04780a;
-      }
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+        background-color: #04780a;
+    }
 
 
     /* hide edit button */
@@ -201,7 +202,7 @@ hide:
             <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
             <input id="honeypot" type="text" name="honeypot" value="" />
         </div>
-        <input type="submit" value="<i class="fa-solid fa-paper-plane"></i>send">
+        <input type="submit" value="Send">
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
