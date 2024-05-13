@@ -273,6 +273,6 @@ nav:
   # - NextChat: http://chat-gpt-next-lvkto5aam-thangcktgmailcoms-projects.vercel.app
   - chat: http://thangckt.github.io/chat
   - tv: tv.md
-  # - contact: contact.md
+  - contact: contact.md
 
 
