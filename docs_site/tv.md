@@ -79,7 +79,7 @@ hide:
     }
 
     /* hide edit button */
-    .md-typeset h1,
+    /* .md-typeset h1, */
     .md-content__button {
         display: none;
     }
@@ -659,3 +659,4 @@ vn:
 </div>
 
 
+#
