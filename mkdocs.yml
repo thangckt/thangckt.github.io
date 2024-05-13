@@ -74,18 +74,18 @@ extra:
     provider: google
     property: G-QM7DWGY7ZT
   social:
-    - icon: fontawesome/solid/envelope
-      link: mailto:<thangckt@gmail.com>
-      name: Email to thangckt
-    - icon: fontawesome/brands/telegram
-      link: https://t.me/thangckt
-      name: thangckt on Telegram
-    - icon: fontawesome/brands/facebook
-      link: https://www.facebook.com/thangckt5
-      name: thangckt on Facebook
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/thangckt
-      name: thangckt on Linkedin
+    # - icon: fontawesome/solid/envelope
+    #   link: mailto:<thangckt@gmail.com>
+    #   name: Email to thangckt
+    # - icon: fontawesome/brands/telegram
+    #   link: https://t.me/thangckt
+    #   name: thangckt on Telegram
+    # - icon: fontawesome/brands/facebook
+    #   link: https://www.facebook.com/thangckt5
+    #   name: thangckt on Facebook
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://www.linkedin.com/in/thangckt
+    #   name: thangckt on Linkedin
     # - icon: fontawesome/brands/orcid
     #   link: https://orcid.org/0000-0001-9826-5397
     #   name: thangckt on ORCID
