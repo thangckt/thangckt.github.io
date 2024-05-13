@@ -194,6 +194,7 @@ hide:
 <!-- HTML from here -->
 <div class="container">
     <form id="myForm" class="gform" method="POST" data-emailed="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbyCSoCedun-pu3BG2MHgl_Yac9KhuhHOFKTBywij1EIUxxdhNqFloFrt-j18a0h2_Lg/exec">
+    <div class="form-elements">
         <label for="fname">Name: </label>
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email: </label>
@@ -205,12 +206,12 @@ hide:
         <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
         <input id="honeypot" type="text" name="honeypot" value="" />
         <input class="pushable" type="submit" value="send">
-
-        <!-- Customise the Thankyou Message People See when they submit the form: -->
-        <div class="thankyou_message" style="display:none;">
-        <h2><em>Thanks</em> for contacting us!
-            We will get back to you soon!</h2>
-        </div>
+    </div>
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <div class="thankyou_message" style="display:none;">
+    <h2><em>Thanks</em> for contacting us!
+        We will get back to you soon!</h2>
+    </div>
     </form>
 </div>
 
