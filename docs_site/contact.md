@@ -7,7 +7,16 @@ hide:
 
 
 <style>
-
+    textarea {
+      width: 100%;
+      /* padding: 12px; */
+      /* border: 1px solid #ccc;  */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+      }
 
     /* Add a background color and some padding around the form */
     .container {
