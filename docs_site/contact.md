@@ -199,7 +199,7 @@ hide:
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email: </label>
         <input type="email" id="email" name="email" required><br>
-        <label for="subject">Subject:</label><br>
+        <label for="subject">Subject:</label>
         <input type="text" id="subject" name="subject" required placeholder="What would you want to discuss?"><br>
         <label for="message">Message:</label><br>
         <textarea id="message" name="message" required placeholder="Write here..."></textarea><br>
