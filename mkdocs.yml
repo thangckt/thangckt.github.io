@@ -5,15 +5,14 @@ repo_url: ""
 edit_uri: "https://github.dev/thangckt/thangckt.github.io/tree/main/docs_site"
 docs_dir: docs_site
 
-
 ## Copyright
 copyright: Copyright &copy; 2021 <a href="https://thangckt.github.io">thangckt</a>
 
 ## Configuration
 theme:
-  name: material     #  "material"    "mkdocs"    "readthedocs"     'rtd-dropdown'   windmill  bootswatch
+  name: material #  "material"    "mkdocs"    "readthedocs"     'rtd-dropdown'   windmill  bootswatch
   custom_dir: docs_site/_overrides
-  logo: 1images/one-note-128-o.png            # one-note-128-o.png        my_picture3x3.jpg    one-note-128-y.png  snake1  monkey
+  logo: 1images/one-note-128-o.png # one-note-128-o.png        my_picture3x3.jpg    one-note-128-y.png  snake1  monkey
   favicon: 1images/one-note-128-o.png
   highlightjs: true
   features:
@@ -30,7 +29,7 @@ theme:
     # - toc.integrate
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.tabs.header   # only in extended theme
+    - navigation.tabs.header # only in extended theme
     ### new in v9
     - content.action.edit
     - navigation.footer
@@ -40,20 +39,20 @@ theme:
 
     # Palette toggle for light mode
     # - media: "(prefers-color-scheme: light)"
-      # scheme: default
-      # primary: blue grey   #  blue grey, indigo
-      # accent: indigo
-      # toggle:
-      #   icon: material/lightbulb
-      #   name: Switch to dark mode
+    # scheme: default
+    # primary: blue grey   #  blue grey, indigo
+    # accent: indigo
+    # toggle:
+    #   icon: material/lightbulb
+    #   name: Switch to dark mode
     # Palette toggle for dark mode
     # - media: "(prefers-color-scheme: dark)"
-      # scheme: slate
-      # primary: blue grey   #  blue grey, indigo
-      # accent: indigo
-      # toggle:
-      #   icon: material/lightbulb-outline
-      #   name: Switch to light mode
+    # scheme: slate
+    # primary: blue grey   #  blue grey, indigo
+    # accent: indigo
+    # toggle:
+    #   icon: material/lightbulb-outline
+    #   name: Switch to light mode
 
   font:
     text: Roboto
@@ -66,7 +65,6 @@ extra_css:
   - _extend_theme/extra_css/full_width.css
   - _extend_theme/extra_css/font_size.css
 
-
 ## Customization
 extra:
   generator: false
@@ -75,7 +73,7 @@ extra:
     property: G-QM7DWGY7ZT
   social:
     # - icon: fontawesome/solid/envelope
-    #   link: mailto:<thangckt@gmail.com>
+    #   link: mailto:<name@something.com>
     #   name: Email to thangckt
     # - icon: fontawesome/brands/telegram
     #   link: https://t.me/thangckt
@@ -99,7 +97,6 @@ extra:
   version:
     provider: mike
     default: latest
-
 
 ## Extensions
 markdown_extensions:
@@ -147,7 +144,7 @@ markdown_extensions:
 ## Plugins
 plugins:
   # - meta    # only insider
-  - blog:      # only insider
+  - blog: # only insider
       blog_toc: true
       # post_dir: "{blog}/posts"
 
@@ -164,10 +161,10 @@ plugins:
             show_symbol_type_heading: true
             show_source: false
             show_signature_annotations: true
-            members_order: 'source'
+            members_order: "source"
             show_submodules: true
-            docstring_style: 'google'      # google, numpy, sphinx
-            docstring_section_style: 'list'  # 'table', 'list', 'spacy'
+            docstring_style: "google" # google, numpy, sphinx
+            docstring_section_style: "list" # 'table', 'list', 'spacy'
           # path: [.]
           # import:
           #   - https://docs.python.org/3/objects.inv
@@ -194,9 +191,6 @@ plugins:
   #         index_page: tags.md
   #         insert: top
 
-
-
-
 ###=======================================
 ### Site content
 ###=======================================
@@ -211,68 +205,66 @@ nav:
   - thavid: http://thangckt.github.io/thavid_doc
 
   - cluster:
-    - cluster/index.md
-    - Compile:
-      - LAMMPS: cluster/compile/LAMMPS.md
-      - cluster/compile/GCC.md
-      - cluster/compile/LLVM.md
-      - cluster/compile/OpenMPI_4.md
-      - cluster/compile/OpenMPI_5.md
-      - cluster/compile/OpenMPI_windows.md
-      - cluster/compile/OpenMPI_conda.md
-      - cluster/compile/Plumed.md
-      - cluster/compile/CP2K.md
+      - cluster/index.md
+      - Compile:
+          - LAMMPS: cluster/compile/LAMMPS.md
+          - cluster/compile/GCC.md
+          - cluster/compile/LLVM.md
+          - cluster/compile/OpenMPI_4.md
+          - cluster/compile/OpenMPI_5.md
+          - cluster/compile/OpenMPI_windows.md
+          - cluster/compile/OpenMPI_conda.md
+          - cluster/compile/Plumed.md
+          - cluster/compile/CP2K.md
 
-      - cluster/compile/binutils_linker.md
-      - cluster/compile/CMake.md
-      - cluster/compile/Libtool.md
-      - cluster/compile/UCX_UCC.md
-      - cluster/compile/PMIX.md
+          - cluster/compile/binutils_linker.md
+          - cluster/compile/CMake.md
+          - cluster/compile/Libtool.md
+          - cluster/compile/UCX_UCC.md
+          - cluster/compile/PMIX.md
 
-      - cluster/compile/Dependencies.md
-      - cluster/compile/BLACS.md
-      - cluster/compile/OpenBLAS.md
-      - cluster/compile/scaLAPACK_BLACS.md
+          - cluster/compile/Dependencies.md
+          - cluster/compile/BLACS.md
+          - cluster/compile/OpenBLAS.md
+          - cluster/compile/scaLAPACK_BLACS.md
 
-    - Useful:
-      - cluster/refPage/cheatsheet.md
-      - cluster/refPage/docs_syntax.md
+      - Useful:
+          - cluster/refPage/cheatsheet.md
+          - cluster/refPage/docs_syntax.md
 
   - refs:
-    - ref/index.md
-    - Researh Ethics: ref/video/1_research_ethic.md
-    - Reading:
-      - Basic Science: ref/reading/basic_science.md
-      - Computational: ref/reading/computational.md
-      - Mechanics: ref/reading/mechanic_solid.md
-    - Video_series:
-      - ref/video/2_calculus_essence.md
-    - English:
-      - ref/english/english_learn.md
-      - ref/english/vocabulary_img.md
-    # - research/publication.md
-    - ref/chat.md
+      - ref/index.md
+      - Researh Ethics: ref/video/1_research_ethic.md
+      - Reading:
+          - Basic Science: ref/reading/basic_science.md
+          - Computational: ref/reading/computational.md
+          - Mechanics: ref/reading/mechanic_solid.md
+      - Video_series:
+          - ref/video/2_calculus_essence.md
+      - English:
+          - ref/english/english_learn.md
+          - ref/english/vocabulary_img.md
+      # - research/publication.md
+      - ref/chat.md
 
-  - odd:      # Miscellaneous    Heterogeneous
-    - odd/index.md
-    - Music:
-      - Classic pieces: odd/music/music_classic.md
-      - Fall of Saigon: odd/music/music_saigon_fall.md
-      - Love theme: odd/music/music_tinh_ca.md
-      - Historical theme: odd/music/music_viet_su.md
-      - Guitar covers: odd/music/music_guitar_cover.md
-      - Sleeping: odd/music/music_sleep.md
-    - Vocal:
-      - Lyrical Chord: odd/music/Lyrics.md
-    - Reading list:
-      - odd/reading/read_list.md
+  - odd: # Miscellaneous    Heterogeneous
+      - odd/index.md
+      - Music:
+          - Classic pieces: odd/music/music_classic.md
+          - Fall of Saigon: odd/music/music_saigon_fall.md
+          - Love theme: odd/music/music_tinh_ca.md
+          - Historical theme: odd/music/music_viet_su.md
+          - Guitar covers: odd/music/music_guitar_cover.md
+          - Sleeping: odd/music/music_sleep.md
+      - Vocal:
+          - Lyrical Chord: odd/music/Lyrics.md
+      - Reading list:
+          - odd/reading/read_list.md
 
   - blog:
-    - blog/index.md
+      - blog/index.md
 
   # - NextChat: http://chat-gpt-next-lvkto5aam-thangcktgmailcoms-projects.vercel.app
   - chat: http://thangckt.github.io/chat
   - tv: tv.md
   - contact: contact.md
-
-
