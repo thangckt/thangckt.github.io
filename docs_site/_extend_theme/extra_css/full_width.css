@@ -30,13 +30,11 @@
 
   .md-tabs__item {
     height: 42px;
+    /* padding-left: .6rem;
+    padding-right: .6rem; */
+  }
+
+  .md-tabs__item a {
     font-size: 14pt;
     align-items: center;
   }
-
-  /* .md-tabs__item {
-    height: 42px;
-    font-size: 13pt;
-    padding-left: .6rem;
-    padding-right: .6rem;
-  } */
