@@ -20,20 +20,17 @@
 
 
 /* Reduce height of header bar */
-  .md-header__inner, .md-header__title, .md-tabs__list {
+  .md-header__inner, .md-header__title, .md-tabs__list, .md-tabs__item {
     height: 42px;
-  }
-
-  /* .md-tabs__list {
-    height: 42px;
-  } */
-
-  .md-tabs__item {
-    height: 42px;
-    /* padding-left: .6rem;
-    padding-right: .6rem; */
+    line-height: 42px;
   }
 
   .md-tabs__item a {
     font-size: 13pt;
   }
+  
+  /* .md-tabs__item { 
+    padding-left: .6rem;
+    padding-right: .6rem; 
+  } */
+
