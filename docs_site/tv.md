@@ -84,10 +84,9 @@ hide:
     .md-content__button {
         display: none;
     }
-    .md-content .md-content__inner {
+
+    .md-main__inner .md-content__inner {
         margin-top: 0px;
-        /* margin-right: 10px;
-        margin-left: 10px;  */
     }
 
 </style>
