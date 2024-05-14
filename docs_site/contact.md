@@ -217,7 +217,7 @@ hide:
         </div>
         <div>
             <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required placeholder="Describe your problem here...For example, you got lottery but didn't know how to spend such money and need me to help for this..." oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea><br>
+            <textarea id="message" name="message" required placeholder="Describe your problem here... For example, you got lottery but didn't know how to spend such money and need me to help for that..." oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea><br>
         </div>
         <div class="honeypot-field">
             <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
@@ -228,7 +228,7 @@ hide:
     </div>
     <!-- Add a new sending message -->
     <div class="sending_message" style="display:none;">
-        <h2>Sending...</h2>
+        <h2>Sending ...</h2>
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
