@@ -101,7 +101,7 @@ hide:
         var formData = {};
         fields.forEach(function(name){
         var element = elements[name];
-        
+
         // singular form elements just have one value
         formData[name] = element.value;
 
@@ -163,7 +163,7 @@ hide:
         }).join('&');
         xhr.send(encoded);
     }
-    
+
     function loaded() {
         // bind to the submit event of our form
         var forms = document.querySelectorAll("form.gform");
@@ -185,8 +185,8 @@ hide:
 
 <!-- HTML from here -->
 <div class="container">
-    <form id="myForm" class="gform" method="POST" data-email="caothangckt@gmail.com" action="https://script.google.com/macros/s/AKfycbzMbTonOQwZDHuJ-FndojiETUlnb9gJjSGR3WruHYlOTQfZ4U5mEI8__r_li9fXLDU/exec">
-    <!-- chang action link -->
+    <form id="myForm" class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzMbTonOQwZDHuJ-FndojiETUlnb9gJjSGR3WruHYlOTQfZ4U5mEI8__r_li9fXLDU/exec">
+    <!-- chang action link, and can use option data-email="name@something.com" -->
     <div class="form-elements">
         <div class="flex-container">
             <label for="fname">Name: </label>
