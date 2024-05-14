@@ -3,7 +3,7 @@
   max-width: 95%;            /* or 100%, if you want to stretch to full-width */
 }
 
-.md-header .md-tabs {
+.md-header__inner .md-tabs {
   height: 42px;
 }
 
