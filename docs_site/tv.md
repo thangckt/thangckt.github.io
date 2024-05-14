@@ -83,10 +83,10 @@ hide:
     .md-content__button {
         display: none;
     }
-    .md-grid{
+    .md-main__inner md-grid{
         margin-top: 0px;
-        margin-right: 10px;
-        margin-left: 10px; 
+        /* margin-right: 10px;
+        margin-left: 10px;  */
     }
 
 </style>
