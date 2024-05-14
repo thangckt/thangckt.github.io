@@ -94,9 +94,10 @@ extra:
     #   link: https://github.com/thangckt
     # - icon: fontawesome/brands/twitter
     #   link: https://twitter.com/squidfunk
-  version:
-    provider: mike
-    default: latest
+    
+  # version:
+  #   provider: mike
+  #   default: latest
 
 ## Extensions
 markdown_extensions:
