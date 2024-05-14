@@ -83,6 +83,9 @@ hide:
     .md-content__button {
         display: none;
     }
+    .md-content{
+        margin-top: 0px;
+    }
 
 </style>
 
