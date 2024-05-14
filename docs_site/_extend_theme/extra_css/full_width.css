@@ -3,6 +3,10 @@
   max-width: 95%;            /* or 100%, if you want to stretch to full-width */
 }
 
+.md-header__inner md-grid {
+  height: 40;
+}
+
 /* @media only screen and (min-width: 76.25em) {
     .md-main__inner {
       max-width: none;

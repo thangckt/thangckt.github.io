@@ -38,6 +38,7 @@ hide:
   .container {
       display: flex;
       flex-wrap: nowrap;
+      margin-top: 0px;
       /* margin-top: -52px;   set by .md-grid
       margin-bottom: -80px;
       margin-right: -30px;
@@ -84,7 +85,7 @@ hide:
         display: none;
     }
     .md-main__inner md-grid{
-        margin-top: 0px;
+        margin-top: -30px;
         /* margin-right: 10px;
         margin-left: 10px;  */
     }
