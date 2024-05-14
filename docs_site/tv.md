@@ -83,7 +83,7 @@ hide:
     .md-content__button {
         display: none;
     }
-    .md-content{
+    .md-grid{
         margin-top: 0px;
     }
 
