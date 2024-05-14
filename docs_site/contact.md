@@ -138,6 +138,18 @@ hide:
         return false;
         }
 
+        // Hide the form elements
+        var formElements = form.querySelector(".form-elements")
+        if (formElements) {
+            formElements.style.display = "none";
+        }
+
+        // Show the sending message
+        var sendingMessage = form.querySelector(".sending_message");
+        if (sendingMessage) {
+            sendingMessage.style.display = "block";
+        }
+
         disableAllButtons(form);
         var url = form.action;
         var xhr = new XMLHttpRequest();
@@ -147,14 +159,17 @@ hide:
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
             form.reset();
-            var formElements = form.querySelector(".form-elements")
-            if (formElements) {
-                formElements.style.display = "none"; // hide form
-            }
-            var thankYouMessage = form.querySelector(".thankyou_message");
-            if (thankYouMessage) {
-                thankYouMessage.style.display = "block";
-            }
+
+                // Hide the sending message
+                if (sendingMessage) {
+                    sendingMessage.style.display = "none";
+                }
+
+                // Show thankyou message
+                var thankYouMessage = form.querySelector(".thankyou_message");
+                if (thankYouMessage) {
+                    thankYouMessage.style.display = "block";
+                }
             }
         };
         // url encode form data for sending as post data
@@ -211,9 +226,13 @@ hide:
         <p>* Ensure your email is correct to able to receive the feedback.</p>
         <input type="submit" value="Send" style="font-size:13pt">
     </div>
+    <!-- Add a new sending message -->
+    <div class="sending_message" style="display:none;">
+        <h2>Sending...</h2>
+    </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
-        <h2>Your message has sent successfully!<br><br> You will get feedback soon!</h2>
+        <h2>Your message has sent successfully! You will get feedback soon!</h2>
     </div>
     </form>
 </div>
