@@ -31,6 +31,11 @@
   .md-tabs__item {
     height: 42px;
     font-size: 13pt;
-    /* padding-left: .6rem;
-    padding-right: .6rem; */
   }
+
+  /* .md-tabs__item {
+    height: 42px;
+    font-size: 13pt;
+    padding-left: .6rem;
+    padding-right: .6rem;
+  } */

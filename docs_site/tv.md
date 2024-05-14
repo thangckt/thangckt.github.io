@@ -64,8 +64,7 @@ hide:
         flex-wrap: wrap;
         /* margin-top: -47px;  set by .md-grid
         margin-bottom: -60px;
-        margin-right: -10px;
-        margin-left: -10px; */
+
       }
 
       .video-column {
@@ -92,6 +91,8 @@ hide:
     .md-content__inner {
         margin-top: 0px;
         padding-top: 0px;
+        margin-right: -20px;
+        margin-left: -20px; 
     }
     .md-content__inner::before {
         display:none;
