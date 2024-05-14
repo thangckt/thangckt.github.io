@@ -38,11 +38,9 @@ hide:
   .container {
       display: flex;
       flex-wrap: nowrap;
-      margin-top: 0px;
-      /* margin-top: -52px;   set by .md-grid
       margin-bottom: -80px;
       margin-right: -30px;
-      margin-left: -30px; */
+      margin-left: -30px; 
   }
 
   .video-column {
@@ -62,9 +60,9 @@ hide:
     @media screen and (max-width:600px) {
       .container {
         flex-wrap: wrap;
-        /* margin-top: -47px;  set by .md-grid
         margin-bottom: -60px;
-
+        margin-right: -15px;
+        margin-left: -15px; 
       }
 
       .video-column {
@@ -91,8 +89,6 @@ hide:
     .md-content__inner {
         margin-top: 0px;
         padding-top: 0px;
-        margin-right: -20px;
-        margin-left: -20px; 
     }
     .md-content__inner::before {
         display:none;
