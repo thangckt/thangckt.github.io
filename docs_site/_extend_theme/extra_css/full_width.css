@@ -20,7 +20,10 @@
 
 
 /* Reduce height of header bar */
-  .md-header__inner .md-tabs__item {
+  .md-header__inner {
     height: 42px;
   }
   
+  .md-tabs__item {
+    height: 42px;
+  }
