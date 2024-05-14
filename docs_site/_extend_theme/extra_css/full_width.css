@@ -35,6 +35,6 @@
   }
 
   .md-tabs__item a {
-    font-size: 14pt;
-    align-items: center;
+    font-size: 13pt;
+    line-height: 42px;
   }

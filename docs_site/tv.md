@@ -51,7 +51,7 @@ hide:
 
   .content-column {
      width: 32%;
-      max-height: 88vh;
+      max-height: 90vh;
       overflow-y: auto;
       position: relative;
   }
@@ -61,8 +61,8 @@ hide:
       .container {
         flex-wrap: wrap;
         margin-bottom: -60px;
-        margin-right: -15px;
-        margin-left: -15px; 
+        margin-right: -10px;
+        margin-left: -10px; 
       }
 
       .video-column {
@@ -72,7 +72,7 @@ hide:
 
       .content-column {
         width: 100%;
-        max-height: 46vh;
+        max-height: 47vh;
       }
     }
 
