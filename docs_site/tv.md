@@ -38,10 +38,10 @@ hide:
   .container {
       display: flex;
       flex-wrap: nowrap;
-      margin-top: -52px;
+      /* margin-top: -52px;   set by .md-grid
       margin-bottom: -80px;
       margin-right: -30px;
-      margin-left: -30px;
+      margin-left: -30px; */
   }
 
   .video-column {
@@ -61,10 +61,10 @@ hide:
     @media screen and (max-width:600px) {
       .container {
         flex-wrap: wrap;
-        margin-top: -47px;
+        /* margin-top: -47px;  set by .md-grid
         margin-bottom: -60px;
         margin-right: -10px;
-        margin-left: -10px;
+        margin-left: -10px; */
       }
 
       .video-column {
@@ -85,6 +85,9 @@ hide:
     }
     .md-grid{
         margin-top: 0px;
+        margin-bottom: -20px;
+        margin-right: 10px;
+        margin-left: 10px; 
     }
 
 </style>
