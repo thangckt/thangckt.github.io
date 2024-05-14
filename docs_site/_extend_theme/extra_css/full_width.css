@@ -24,6 +24,6 @@
     height: 42px;
   }
   
-  .md-tabs__list {
+  .md-tabs md-tabs__list md-tabs__item {
     height: 42px;
   }
