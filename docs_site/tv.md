@@ -86,14 +86,14 @@ hide:
     }
 
     /* remove top-space */
-    .md-main__inner  {
+    .md-main__inner {
         margin-top: 0px;
     }
     .md-content__inner {
         margin-top: 0px;
         padding-top: 0px;
     }
-    .md-content__inner.md-typeset::before {
+    .md-content__inner md-typeset {
         padding-top: 0px;
     }
 
