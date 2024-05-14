@@ -85,11 +85,14 @@ hide:
         display: none;
     }
 
-    .md-main__inner {
+    .md-main__inner  {
         margin-top: 0px;
     }
     .md-content__inner {
         margin-top: 0px;
+        padding-top: 0px;
+    }
+    .md-content__inner::before {
         padding-top: 0px;
     }
 
