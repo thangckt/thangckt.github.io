@@ -23,12 +23,14 @@
   .md-header__inner {
     height: 42px;
   }
-  
+
   .md-tabs__list {
     height: 42px;
-    line-height: 42px;
-    font-size: 13pt;
   }
-  /* .md-tabs__item {
-    height: 42px;
-  } */
+
+  .md-tabs__item {
+    align-items: center;
+    font-size: 13pt;
+    /* padding-left: .6rem;
+    padding-right: .6rem; */
+  }
