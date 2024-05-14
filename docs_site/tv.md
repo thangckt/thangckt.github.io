@@ -85,6 +85,7 @@ hide:
         display: none;
     }
 
+    /* remove top-space */
     .md-main__inner  {
         margin-top: 0px;
     }
@@ -92,7 +93,7 @@ hide:
         margin-top: 0px;
         padding-top: 0px;
     }
-    .md-content__inner::before {
+    .md-content__inner.md-typeset::before {
         padding-top: 0px;
     }
 
