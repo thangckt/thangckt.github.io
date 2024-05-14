@@ -85,7 +85,6 @@ hide:
     }
     .md-grid{
         margin-top: 0px;
-        margin-bottom: -20px;
         margin-right: 10px;
         margin-left: 10px; 
     }
