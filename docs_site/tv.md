@@ -93,8 +93,8 @@ hide:
         margin-top: 0px;
         padding-top: 0px;
     }
-    .md-content__inner md-typeset {
-        padding-top: 0px;
+    .md-content__inner::before {
+        display:none;
     }
 
 </style>

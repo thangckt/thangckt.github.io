@@ -29,7 +29,7 @@
   }
 
   .md-tabs__item {
-    align-items: center;
+    height: 42px;
     font-size: 13pt;
     /* padding-left: .6rem;
     padding-right: .6rem; */
