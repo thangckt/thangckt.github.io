@@ -3,14 +3,6 @@
   max-width: 95%;            /* or 100%, if you want to stretch to full-width */
 }
 
-.md-header__inner {
-  height: 42px;
-}
-
-/* .md-tabs {
-  height: 42px;
-} */
-
 /* @media only screen and (min-width: 76.25em) {
     .md-main__inner {
       max-width: none;
@@ -25,3 +17,13 @@
       transform: none;
     }
   } */
+
+
+/* Reduce height of header bar */
+  .md-header__inner {
+    height: 42px;
+  }
+  
+  .md-tabs {
+    height: 42px;
+  }

@@ -90,6 +90,7 @@ hide:
     }
     .md-content__inner {
         margin-top: 0px;
+        padding-top: 0px;
     }
 
 </style>
