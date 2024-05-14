@@ -84,7 +84,7 @@ hide:
     .md-content__button {
         display: none;
     }
-    .md-main__inner md-grid{
+    .md-main__inner {
         margin-top: 0rem;
         /* margin-right: 10px;
         margin-left: 10px;  */
