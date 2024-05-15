@@ -27,10 +27,17 @@ hide:
       position: relative;
     }
 
+    .contain-youtube {
+      width: 80%;
+    }
+
     /* Mobile styles */
     @media screen and (max-width:600px) {
       .container {
         flex-wrap: wrap;
+      }
+      .contain-youtube {
+        width: 100%;
       }
     }
 
@@ -71,7 +78,7 @@ hide:
     You cannot teach a man anything, you can only help him find it within himself - Galileo Galilei (1564–1642)
 -->
 
-<div style="position:relative; padding-bottom:56.25%">
+<div class="contain-youtube" style="position:relative; padding-bottom:56.25%">
 <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
         style="position:absolute; left:0px; top:0px; width:100%; height:100%;" frameborder="0" allowfullscreen
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -82,8 +89,8 @@ hide:
 
 
 <!-- Visitor -->
-<input type="text" id="secret_number" style="width: 50px" required placeholder="secret number">
 <input type="submit" value="check" onclick="showElement()" style="font-size:13pt; border-radius:4px;cursor: pointer;" >
+<input type="text" id="secret_number" style="width: 50px" required placeholder="secret number">
 
 <div id="visitor" style="display:none;">
 <p align="center">
