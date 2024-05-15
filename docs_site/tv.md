@@ -267,7 +267,8 @@ data-ad-slot="1234567890"></ins>
 <br><br>
 <script>
     var listButtons = [
-        {text: 'FOX', URL: ['https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8','https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8']},
+        {text: 'FOX-NOW', URL: ['https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8','https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8']},
+        {text: 'FOX29-Philadelphia', URL: ['https://lnc-wtxf.tubi.video/index.m3u8']},
         {text: 'OAN', URL: ['https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/oan_720p/playlist.m3u8']},
         {text: 'NTD', URL: ['https://ntd02.akamaized.net/NTDA/index.m3u8','https://ntd02.akamaized.net/NTD-West/index.m3u8']},
         {text: 'NewsNation', URL: ['https://live.corusdigitaldev.com/groupd/live/49a91e7f-1023-430f-8d66-561055f3d0f7/live.isml/.m3u8','https://live.corusdigitaldev.com/groupd/live/49a91e7f-1023-430f-8d66-561055f3d0f7/live.isml/.m3u8']},
@@ -315,11 +316,13 @@ data-ad-slot="1234567890"></ins>
 </script>
 
 
+
 <h3>Discovery</h3>
 <script>
     var listButtons = [
         {text: 'Outdoor', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8']},
         {text: 'Travelxp', URL: ['https://travelxp-travelxp-1-se.samsung.wurl.tv/playlist.m3u8','https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8', 'https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8','https://travelxp-travelxp-3-nl.samsung.wurl.tv/playlist.m3u8']},
+        {text: 'Very Local', URL: ['https://lnc-wjcl.tubi.video/playlist.m3u8']},
         {text: 'BBC Home', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC600017FG.m3u8']},
         {text: 'BBC Travel', URL: ['https://ab96b349d4d14d80a1f8530a0bce4488.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-de_BBCTravel/playlist.m3u8?ads.wurl_channel=985&ads.wurl_name=BBCTravel&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D']},
     ];
