@@ -40,7 +40,7 @@ hide:
       flex-wrap: nowrap;
       margin-bottom: -80px;
       margin-right: -30px;
-      margin-left: -30px; 
+      margin-left: -30px;
   }
 
   .video-column {
@@ -51,7 +51,7 @@ hide:
 
   .content-column {
      width: 32%;
-      max-height: 90vh;
+      max-height: 88vh;
       overflow-y: auto;
       position: relative;
   }
@@ -62,7 +62,7 @@ hide:
         flex-wrap: wrap;
         margin-bottom: -60px;
         margin-right: -10px;
-        margin-left: -10px; 
+        margin-left: -10px;
       }
 
       .video-column {
@@ -83,16 +83,13 @@ hide:
     }
 
     /* remove top-space */
-    .md-main__inner {
-        margin-top: 0px;
-    }
-    .md-content__inner {
+    .md-main__inner, .md-content__inner {
         margin-top: 0px;
         padding-top: 0px;
     }
-    .md-content__inner::before {
+    /* .md-content__inner::before {
         display:none;
-    }
+    } */
 
 </style>
 
