@@ -78,7 +78,7 @@ hide:
     You cannot teach a man anything, you can only help him find it within himself - Galileo Galilei (1564–1642)
 -->
 
-<div class="container-youtube" style="display: flex; justify-content: center; align-items: center;">
+<div class="container-youtube" style="justify-content: center; align-items: center;">
   <div style="position:relative; padding-bottom:56.25%">
   <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
           style="position:absolute; left:0px; top:0px; width:100%; height:100%;" frameborder="0" allowfullscreen
