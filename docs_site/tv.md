@@ -51,7 +51,7 @@ hide:
 
   .content-column {
      width: 32%;
-      max-height: 89vh;
+      max-height: 88vh;
       overflow-y: auto;
       position: relative;
   }
