@@ -34,10 +34,22 @@ hide:
       }
     }
 
+    input[type=submit] {
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+
     /* hide edit button and page title */
     /* .md-typeset h1,    */
     .md-content__button {
         display: none;
+    }
+
+    /* remove top-space */
+    .md-main__inner {
+        margin-top: 0px;
     }
 </style>
 
@@ -75,13 +87,10 @@ hide:
 </div>
 
 
-#
-<!-- # Welcome -->
-
 
 <!-- Visitor -->
-<input type="submit" value="check" style="font-size:13pt" onclick="showElement()">
-<input type="text" id="secret_number" style="width: 20px" required>
+<input type="text" id="secret_number" style="width: 50px" required placeholder="secret number">
+<input type="submit" value="check" style="font-size:13pt; border-radius:4px" onclick="showElement()">
 
 <div id="visitor" style="display:none;">
 <p align="center">
@@ -98,3 +107,7 @@ hide:
     }
   }
 </script>
+
+
+#
+<!-- # Welcome -->
