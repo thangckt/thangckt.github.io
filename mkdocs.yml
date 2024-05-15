@@ -94,7 +94,7 @@ extra:
     #   link: https://github.com/thangckt
     # - icon: fontawesome/brands/twitter
     #   link: https://twitter.com/squidfunk
-    
+
   # version:
   #   provider: mike
   #   default: latest
@@ -266,6 +266,6 @@ nav:
       - blog/index.md
 
   # - NextChat: http://chat-gpt-next-lvkto5aam-thangcktgmailcoms-projects.vercel.app
-  - chat: http://thangckt.github.io/chat
+  - gpt: http://thangckt.github.io/gpt
   - tv: tv.md
   - contact: contact.md
