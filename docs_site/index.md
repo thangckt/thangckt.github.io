@@ -34,13 +34,6 @@ hide:
       }
     }
 
-    input[type=submit] {
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-
-
     /* hide edit button and page title */
     /* .md-typeset h1,    */
     .md-content__button {
@@ -90,7 +83,7 @@ hide:
 
 <!-- Visitor -->
 <input type="text" id="secret_number" style="width: 50px" required placeholder="secret number">
-<input type="submit" value="check" style="font-size:13pt; border-radius:4px" onclick="showElement()">
+<input type="submit" value="check" onclick="showElement()" style="font-size:13pt; border-radius:4px;cursor: pointer;" >
 
 <div id="visitor" style="display:none;">
 <p align="center">
