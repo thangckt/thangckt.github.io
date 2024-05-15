@@ -79,22 +79,19 @@ hide:
 -->
 
 <div class="container-youtube" style="display: flex; justify-content: center; align-items: center;">
-  <!-- <div style="position:relative; padding-bottom:56.25%">
+  <div style="position:relative; padding-bottom:56.25%">
   <iframe src="https://www.youtube-nocookie.com/embed/iwWYjbTPhcE"
           style="position:absolute; left:0px; top:0px; width:100%; height:100%;" frameborder="0" allowfullscreen
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation allow-presentation" >
   </iframe>
-  </div> -->
-  <script>
-    youtube_iframe("https://www.youtube-nocookie.com/embed/iwWYjbTPhcE")
-  </script>
+  </div>
 </div>
 
 
 <!-- Visitor -->
 <input type="submit" value="check" onclick="showElement()" style="font-size:13pt; border-radius:4px;cursor: pointer;" >
-<input type="text" id="secret_number" style="width: 50px" required placeholder="secret number">
+<input type="text" id="secret_number" style="width: 60px" required placeholder="fill number">
 
 <div id="visitor" style="display:none;">
 <p align="center">
@@ -110,19 +107,6 @@ hide:
       document.getElementById("visitor").style.display = "block";
     }
   }
-
-function youtube_iframe(url = '') {
-    var html_str = `
-    <div style="position:relative; padding-bottom:56.25%">
-        <iframe src="${url}"
-                style="position:absolute; left:0px; top:0px; width:100%; height:100%;" frameborder="0" allowfullscreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation allow-presentation" >
-        </iframe>
-    </div>
-    `;
-    return html_str
-}
 </script>
 
 
