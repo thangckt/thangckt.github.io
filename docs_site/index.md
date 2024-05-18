@@ -16,6 +16,7 @@ hide:
     .container-image {
       width: 280px;
       padding-right: 20px;
+      display: flex;
       justify-content: center; 
       align-items: center;
     }
@@ -27,6 +28,11 @@ hide:
 
     .container-text {
       position: relative;
+    }
+
+    .container-youtube{
+      width:80%; 
+      margin-left:10%;
     }
 
     /* Mobile styles */
@@ -79,7 +85,7 @@ hide:
 -->
 
 
-<div class="container-youtube" style="width:80%; margin-left:10%;">
+<div class="container-youtube">
   <script>
     addYoutubeFrame("https://www.youtube-nocookie.com/embed/iwWYjbTPhcE")
   </script>
