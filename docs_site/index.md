@@ -16,12 +16,11 @@ hide:
     .container-image {
       width: 280px;
       padding-right: 20px;
-      display: flex;
-      justify-content: center; 
-      align-items: center;
     }
 
     .container-image img {
+      display: block;
+      margin: auto;
       border-radius: 50%;
       border: 0.1px solid black;
     }
@@ -42,6 +41,7 @@ hide:
       }
       .container-youtube {
         width: 100%;
+        margin-left:0%;
       }
     }
 
