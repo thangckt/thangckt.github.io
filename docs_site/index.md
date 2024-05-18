@@ -16,6 +16,8 @@ hide:
     .container-image {
       width: 280px;
       padding-right: 20px;
+      justify-content: center; 
+      align-items: center;
     }
 
     .container-image img {
