@@ -320,7 +320,7 @@ data-ad-slot="1234567890"></ins>
 <h3>Discovery</h3>
 <script>
     var listButtons = [
-        {text: 'Outdoor', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8']},
+        {text: 'Outdoor', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8','https://amg00718-outdoorchannela-outdoortvnz-samsungnz-lylq4.amagi.tv/playlist/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8']},
         {text: 'Travelxp', URL: ['https://travelxp-travelxp-1-se.samsung.wurl.tv/playlist.m3u8','https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8', 'https://i.mjh.nz/SamsungTVPlus/ATBA1000005P4.m3u8','https://travelxp-travelxp-3-nl.samsung.wurl.tv/playlist.m3u8']},
         {text: 'Very Local', URL: ['https://lnc-wjcl.tubi.video/playlist.m3u8']},
         {text: 'BBC Home', URL: ['https://i.mjh.nz/SamsungTVPlus/USBC600017FG.m3u8']},
@@ -353,6 +353,8 @@ data-ad-slot="1234567890"></ins>
         {text: 'Animal Planet', URL: ['https://denver1769.pages.dev/Discovery/animal_planet_hd_english.m3u8']},
         {text: 'Discovery', URL: ['https://denver1769.pages.dev/Discovery/discovery_hd_english.m3u8']},
         {text: 'Discovery Asia', URL: ['https://cdn1.skygo.mn/live/disk1/Discovery_Asia/HLS-FTA/Discovery_Asia.m3u8']},
+        {text: 'Discovery SCI', URL: ['https://denver1769.pages.dev/Discovery/discovery_science_english.m3u8']},
+        {text: 'Discovery Turbo', URL: ['https://denver1769.pages.dev/Discovery/discovery_turbo.m3u8']},
         {text: 'Real Wild', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwildnz-samsungnz/playlist.m3u8']},
         {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8','https://hncfree-samsung-uk.amagi.tv/playlist.m3u8']},
         {text: 'Love Nature', URL: ['https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/quietude/playlist.m3u8','https://d18dyiwu97wm6q.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/LoveNature4K2-prod/playlist.m3u8']},
