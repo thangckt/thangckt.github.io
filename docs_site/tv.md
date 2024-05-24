@@ -350,7 +350,7 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'BBC Earth', URL: ['https://i.mjh.nz/SamsungTVPlus/USBD1700001RW.m3u8']},
         {text: 'Wild Planet', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB5000002PL.m3u8']},
-        {text: 'Animal Planet', URL: ['https://ctrl.laotv.la/live/AnimalPlanet/index.m3u8']},
+        {text: 'Animal Planet', URL: ['https://denver1769.pages.dev/Discovery/animal_planet_hd_english.m3u8']},
         {text: 'Discovery SEA', URL: ['https://ctrl.laotv.la/live/Discovery/index.m3u8']},
         {text: 'Real Wild', URL: ['https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwildnz-samsungnz/playlist.m3u8']},
         {text: 'Horse&Country', URL: ['https://hncfree-samsungau.amagi.tv/playlist.m3u8','https://hncfree-samsung-uk.amagi.tv/playlist.m3u8']},
