@@ -30,8 +30,8 @@ hide:
     }
 
     .container-youtube{
-      width:75%; 
-      margin-left:12.5%;
+      width:70%;
+      margin-left:15%;
     }
 
     /* Mobile styles */
