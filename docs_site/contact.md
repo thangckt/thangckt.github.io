@@ -12,6 +12,7 @@ hide:
         border-radius: 5px;
         /* background-color: #f2f2f2; */
         padding: 0px;
+        max-width:80%;
     }
 
     .flex-container {
