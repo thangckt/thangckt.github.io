@@ -12,10 +12,6 @@ hide:
         border-radius: 5px;
         /* background-color: #f2f2f2; */
         padding: 0px;
-        max-width:80%;
-        display: flex;
-        justify-content: center; /* aligns items horizontally in the center */
-        align-items: center; /* aligns items vertically in the center */
     }
 
     .flex-container {
