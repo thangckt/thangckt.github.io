@@ -2,7 +2,7 @@
 title: Adding
 date: 2022-11-30
 authors: [thangckt]
-slug: adding-a-badge-to-your-project
+slug: Deep-Potential
 description: >
   you can now add a badge to your README, showing that your
 categories:
