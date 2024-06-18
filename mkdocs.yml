@@ -236,10 +236,10 @@ nav:
   - refs:
       - ref/index.md
       - Researh Ethics: ref/video/1_research_ethic.md
-      - Reading:
-          - Basic Science: ref/reading/basic_science.md
-          - Computational: ref/reading/computational.md
-          - Mechanics: ref/reading/mechanic_solid.md
+      # - Reading:
+      #     - Basic Science: ref/reading/basic_science.md
+      #     - Computational: ref/reading/computational.md
+      #     - Mechanics: ref/reading/mechanic_solid.md
       - Video_series:
           - ref/video/2_calculus_essence.md
       - English:
