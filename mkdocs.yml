@@ -204,7 +204,8 @@ nav:
   - thamd: http://thangckt.github.io/thamd_doc
   - thaml: http://thangckt.github.io/thaml_doc
   - thavid: http://thangckt.github.io/thavid_doc
-
+  - thautils: http://thangckt.github.io/thautils
+  
   - cluster:
       - cluster/index.md
       - Compile:
