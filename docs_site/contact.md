@@ -213,11 +213,11 @@ hide:
         </div>
         <div class="flex-container">
             <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required placeholder="What would you want to discuss?"><br>
+            <input type="text" id="subject" name="subject" required placeholder="What is your message about?"><br>
         </div>
         <div>
             <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required placeholder="Describe your problem here..." oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea><br>
+            <textarea id="message" name="message" required placeholder="Leave messages here..." oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea><br>
         </div>
         <div class="honeypot-field">
             <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
