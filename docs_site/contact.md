@@ -135,7 +135,7 @@ hide:
 
         // If a honeypot field is filled, assume it was done so by a spam bot.
         if (formData.honeypot) {
-        return false;
+            return false;
         }
 
         // Hide the form elements
