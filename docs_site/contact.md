@@ -91,7 +91,7 @@ hide:
         if(elements[k].name !== undefined) {
             return elements[k].name;
         // special case for Edge's html collection
-        }else if(elements[k].length > 0){
+        } else if(elements[k].length > 0){
             return elements[k].item(0).name;
         }
         }).filter(function(item, pos, self) {
@@ -121,8 +121,7 @@ hide:
         // add form-specific values into the data
         formData.formDataNameOrder = JSON.stringify(fields);
         formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-        formData.formGoogleSendEmail
-        = form.dataset.email || ""; // no email by default
+        formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
         return {data: formData, honeypot: honeypot};
     }
@@ -132,11 +131,6 @@ hide:
         var form = event.target;
         var formData = getFormData(form);
         var data = formData.data;
-
-        // If a honeypot field is filled, assume it was done so by a spam bot.
-        if (formData.honeypot) {
-            return false;
-        }
 
         // Hide the form elements
         var formElements = form.querySelector(".form-elements")
@@ -148,6 +142,11 @@ hide:
         var sendingMessage = form.querySelector(".sending_message");
         if (sendingMessage) {
             sendingMessage.style.display = "block";
+        }
+
+        // If a honeypot field is filled, assume it was done so by a spam bot.
+        if (formData.honeypot) {
+            return;  // Do not submit the form
         }
 
         disableAllButtons(form);
@@ -165,7 +164,7 @@ hide:
                     sendingMessage.style.display = "none";
                 }
 
-                // Show thankyou message
+                // Show thank you message
                 var thankYouMessage = form.querySelector(".thankyou_message");
                 if (thankYouMessage) {
                     thankYouMessage.style.display = "block";
