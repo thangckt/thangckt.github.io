@@ -231,7 +231,9 @@ hide:
     </div>
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
-        <h2>Your message has been sent. <br><a href="https://thang.eu.org/contact">Send another message</a> </h2>
+        <h2>Your message has been sent. <br><br>
+        <a href="https://thang.eu.org/contact">Send another message</a> 
+        </h2>
     </div>
     </form>
 </div>
