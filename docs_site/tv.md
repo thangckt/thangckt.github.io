@@ -415,7 +415,7 @@ data-ad-slot="1234567890"></ins>
     createListChannelButton(listButtons, 'content-column');
 </script>
 
-<br> <br>
+<!-- <br> <br>
 vn:
 <script>
     var listButtons = [
@@ -423,7 +423,7 @@ vn:
         {text: 'K+ sport 2', URL: ['https://edge1.laotv.la/live/K+Sport2/index.m3u8']},
     ];
     createListChannelButton(listButtons, 'content-column');
-</script>
+</script> -->
 
 
 <h3>Music</h3>
