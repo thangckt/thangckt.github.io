@@ -246,7 +246,9 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'CNN', URL: ['https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8','https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_4_1064000.m3u8','https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8']},
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
-        {text: 'CBS', URL: ['https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8']},
+        {text: 'CBS-NY', URL: ['https://cbsn-ny.cbsnstream.cbsnews.com/out/v1/ec3897d58a9b45129a77d67aa247d136/master.m3u8']},
+        {text: 'CBS-LA', URL: ['https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8','https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8']},
+        {text: 'CBS-CHI', URL: ['https://cbsn-chi.cbsnstream.cbsnews.com/out/v1/b2fc0d5715d54908adf07f97d2616646/master.m3u8']},
         {text: 'NBC', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB1500004LG.m3u8','https://i.mjh.nz/SamsungTVPlus/CAAJ2700011IF.m3u8']},
         {text: 'CBC', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300009KD.m3u8']},
     ];
