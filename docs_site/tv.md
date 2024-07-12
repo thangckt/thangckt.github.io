@@ -246,7 +246,7 @@ data-ad-slot="1234567890"></ins>
     var listButtons = [
         {text: 'CNN', URL: ['https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8','https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_4_1064000.m3u8','https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8']},
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
-        {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
+        {text: 'CBS', URL: ['https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8']},
         {text: 'NBC', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB1500004LG.m3u8','https://i.mjh.nz/SamsungTVPlus/CAAJ2700011IF.m3u8']},
         {text: 'CBC', URL: ['https://i.mjh.nz/SamsungTVPlus/CABC2300009KD.m3u8']},
     ];
