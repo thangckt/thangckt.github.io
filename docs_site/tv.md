@@ -244,7 +244,7 @@ data-ad-slot="1234567890"></ins>
     // Use the script to void repeated creation of buttons line-by-line as in above
     // List of buttons to create
     var listButtons = [
-        {text: 'CNN', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBD1900008O3.m3u8','https://i.mjh.nz/SamsungTVPlus/INBD1300022TS.m3u8','https://i.mjh.nz/SamsungTVPlus/GBBD8000016N.m3u8']},
+        {text: 'CNN', URL: ['https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8']},
         {text: 'ABC Us', URL: ['https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8']},
         {text: 'CBS', URL: ['https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8']},
         {text: 'NBC', URL: ['https://i.mjh.nz/SamsungTVPlus/GBBB1500004LG.m3u8','https://i.mjh.nz/SamsungTVPlus/CAAJ2700011IF.m3u8']},
