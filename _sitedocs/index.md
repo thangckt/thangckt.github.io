@@ -72,7 +72,7 @@ hide:
 
   <div class="container-text">
   <p>
-    This site serves as a repo for my personal notes. The contents reflect neither community standards nor third-party rules. These notes are disorganized, spontaneous, partially auto-generated without monitoring, and pertinent only to rare contexts, making them seemingly meaningless for most others.  
+    This site serves as a repo for my personal notes. The contents reflect neither community standards nor third-party rules. These notes are disorganized, spontaneous, auto-generated, and pertinent only to rare contexts, making them seemingly meaningless for most others.  
     <br>
     It wouldn't be abnormal if you find nothing valuable here, as these notes were not purposed for general readers. You might prefer to enjoy Felix's excellent work below or focus your attention elsewhere. If you need to discuss something else, leave a message <a href="https://thang.eu.org/contact">here</a>.
   </p>
