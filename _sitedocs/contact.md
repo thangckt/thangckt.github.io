@@ -72,8 +72,7 @@ hide:
 
 
 <!-- Include the JavaScript file -->
-<script src="./1JavaScript/form-submission-handler.js"></script>
-
+<script src="./1JavaScript/form_submission_handler.js"></script>
 
 
 <!-- HTML from here -->
@@ -111,7 +110,7 @@ hide:
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
         <h2>Your message has been sent. <br><br>
-        <a href="https://thang.eu.org/contact">Send another message</a> 
+        <a href="https://thang.eu.org/contact">Send another message</a>
         </h2>
     </div>
     </form>
@@ -121,5 +120,3 @@ hide:
 
 #
 <!-- # Contact -->
-
-
