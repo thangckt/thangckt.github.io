@@ -1,0 +1,5747 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="C.Thang Nguyen">
+      
+      
+        <link rel="canonical" href="https://thangckt.github.io/blog/2025/04/21/materials-and-chemistry-datasets/">
+      
+      
+        <link rel="prev" href="../../../01/20/best-of-machine-learning-with-python/">
+      
+      
+        <link rel="next" href="../materials--chemistry-datasets/">
+      
+      
+        
+      
+      
+      
+        
+        
+        
+          <link rel="icon" href="../../../../../_assets/image/one-note-128-o.png">
+        
+      
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.3">
+    
+    
+      
+        <title>Materials and Chemistry Datasets - C.Thang Nguyen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.9008998b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.204eaadb.min.css">
+      
+    
+    
+
+    
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../../../_assets/extra_theme/css/full_width.css">
+    
+      <link rel="stylesheet" href="../../../../../_assets/extra_theme/css/font_size.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-QM7DWGY7ZT"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-QM7DWGY7ZT",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-QM7DWGY7ZT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+
+    <!-- Add what you want to append to the <head> here -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6260920536615462" crossorigin="anonymous"></script>
+
+    <!-- HTML5 live streaming: (Note: HLS is "built-in" to video.js, as of version 4.x, so we should NOT include HLS support separately)-->
+    <!-- <link href="https://vjs.zencdn.net/8.20.0/video-js.css" rel="stylesheet" /> -->
+
+    <!-- Using DPlayer for video streaming: -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@1.27.1/dist/DPlayer.min.css">
+
+    <!-- Use posthog.com for analytic -->
+    <!-- <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_ntKnH0z7UzXKAPNn9V0igkr0yKqvI24IRitmTTTDBtJ',{api_host:'https://app.posthog.com'})
+    </script> -->
+
+
+  </head>
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#awesome-materials-chemistry-datasets" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="C.Thang Nguyen" class="md-header__button md-logo" aria-label="C.Thang Nguyen" data-md-component="logo">
+      
+  <img src="../../../../../_assets/image/one-note-128-o.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            C.Thang Nguyen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Materials and Chemistry Datasets
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="http://thangckt.github.io/alff_doc" class="md-tabs__link">
+          
+  
+  
+    
+  
+  packages
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../hpc/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  hpc
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../lib/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  ref
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../tv/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  odd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../email/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  email
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="C.Thang Nguyen" class="md-nav__button md-logo" aria-label="C.Thang Nguyen" data-md-component="logo">
+      
+  <img src="../../../../../_assets/image/one-note-128-o.png" alt="logo">
+
+    </a>
+    C.Thang Nguyen
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    packages
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    packages
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/alff_doc" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    alff
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/thkit_doc" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    thkit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/asext" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    asext
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/thmd_doc" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    thmd
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/thml_doc" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    thml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/molbuilder" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    molbuilder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../hpc/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    hpc
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    hpc
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux Essentials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux Essentials
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.rockylinux.org/books/admin_guide/00-toc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to the Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux Desktop
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux Desktop
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/Linux/kde_tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KDE Plasma Tips and Tricks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/Linux/linux_repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux Repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Compile
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/LAMMPS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LAMMPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/GCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GCC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/LLVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/OpenMPI_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenMPI 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/OpenMPI_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenMPI-5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/OpenMPI_windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPICH2 on Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/OpenMPI_conda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Openmpi in Conda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/Plumed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compile PLUMED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/CP2K/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CP2K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/binutils_linker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Binutils linker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/CMake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CMake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/Libtool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Libtool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/UCX_UCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UCX UCC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/PMIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PMIX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/Dependencies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Some Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/BLACS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BLACS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/OpenBLAS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenBLAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../hpc/compile/scaLAPACK_BLACS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scaLAPACK and BLACS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../lib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ref
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ref
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/video/1_research_ethic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Researh Ethics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Library
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/study/1_basic_science/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Science
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/study/2_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/study/3_mechanic_solid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/study/4_computational/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Computational
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/study/5_coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/study/6_ml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video_series
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Video_series
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/video/2_calculus_essence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The essence of calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/english/english_tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Some English Spelling Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/english/english_learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/english/vocabulary_img/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vocabulary by images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    cheatsheet
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/cheatsheet/cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lib/cheatsheet/docs_syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    blog
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    blog
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/cluster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/fedora/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fedora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/latex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Latex
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/science/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Science
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../odd/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    odd
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    odd
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tv
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Music
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Music
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../odd/music/music_classic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classic pieces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../odd/music/music_saigon_fall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Saigon memorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../odd/music/music_tinh_ca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Love theme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../odd/music/music_foreigned/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foreigned
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../odd/music/music_viet_su/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historical theme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../odd/music/music_guitar_cover/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guitar covers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../odd/music/music_sleep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sleeping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vocal
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vocal
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../odd/music/Lyrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrical Chord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading list
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reading list
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../odd/reading/read_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../email/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    email
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datasets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computational-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computational Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-training-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM Training Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#literature-mined-text-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Literature-mined &amp; Text Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computational-fluid-dynamics-pde-engineering-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 Computational Fluid Dynamics, PDE &amp; Engineering Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proprietary-datasets-for-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proprietary Datasets (for reference)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TODO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TODO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#other-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acknowledgements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changelog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#october-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        October 2025
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="October 2025">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computational-datasets-7-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧮 Computational Datasets (7 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-datasets-5-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Experimental Datasets (5 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-training-datasets-5-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 LLM Training Datasets (5 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#literature-mined-text-datasets-1-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Literature-mined &amp; Text Datasets (1 dataset)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#august-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        August 2025
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="August 2025">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computational-datasets-3-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧮 Computational Datasets (3 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-training-datasets-4-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 LLM Training Datasets (4 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#july-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        July 2025
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="July 2025">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computational-fluid-dynamics-pde-engineering-datasets-15-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 Computational Fluid Dynamics, PDE &amp; Engineering Datasets (15 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computational-datasets-7-datasets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧮 Computational Datasets (7 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-training-datasets-5-datasets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 LLM Training Datasets (5 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-datasets-4-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Experimental Datasets (4 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#june-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        June 2025
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="June 2025">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computational-datasets-15-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧮 Computational Datasets (15 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-datasets-5-datasets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Experimental Datasets (5 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-training-datasets-5-datasets_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 LLM Training Datasets (5 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#literature-mined-text-datasets-3-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Literature-mined &amp; Text Datasets (3 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-literature-benchmark-resources-2-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Enhanced Literature &amp; Benchmark Resources (2 datasets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#earlier-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Earlier Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://thangckt.github.io/_assets/image/thang_pic.jpg" alt="C.Thang Nguyen">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://thangckt.github.io/">C.Thang Nguyen</a>
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-04-21 00:00:00+00:00" class="md-ellipsis">April 21, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/science/">Science</a>, 
+                              <a href="../../../../category/ml/">ML</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              22 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+    <a href="https://github.dev/thangckt/main_site/tree/main/_docs/blog/posts/2025-04-21_Materials_and_Chemistry_Datasets.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="awesome-materials-chemistry-datasets">Awesome Materials &amp; Chemistry Datasets<a class="headerlink" href="#awesome-materials-chemistry-datasets" title="Permanent link">¤</a></h1>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">¤</a></h2>
+<p>A curated list of the most useful datasets in <strong>materials science</strong> and <strong>chemistry</strong> for training <strong>machine learning</strong> and <strong>AI foundation models</strong>. This includes experimental, computational, and literature-mined datasets—prioritizing <strong>open-access</strong> resources and community contributions.</p>
+<p>This project aims to:
+- Catalog the best datasets by domain, type, quality, and size
+- Support reproducible research in AI for chemistry and materials
+- Provide a community-driven resource with contributions from researchers and developers</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¤</a></h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#how-to-use">How to Use</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#datasets">Datasets</a></li>
+<li><a href="#computational-datasets">Computational (DFT, MD)</a></li>
+<li><a href="#experimental-datasets">Experimental</a></li>
+<li><a href="#llm-training-datasets">LLM Training</a></li>
+<li><a href="#literature-mined--text-datasets">Literature-mined &amp; Text</a></li>
+<li><a href="#physics--engineering-pde-cfd-datasets">Physics &amp; Engineering (PDE, CFD)</a></li>
+<li><a href="#proprietary-datasets">Proprietary</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+</ul>
+<hr />
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">¤</a></h2>
+<p>Want to add a new dataset or improve metadata?</p>
+<ol>
+<li>Fork the repository</li>
+<li>Edit the appropriate dataset list or add a new entry</li>
+<li>Submit a pull request with a brief description and download link
+OR</li>
+<li>Submit as an issue</li>
+</ol>
+<hr />
+<h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">¤</a></h2>
+<h3 id="computational-datasets">Computational Datasets<a class="headerlink" href="#computational-datasets" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Domain</th>
+<th>Size</th>
+<th>Type</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/FLASK-LLNL/BOOM">BOOM: Benchmarks for Out-Of-distribution Molecules</a></td>
+<td>Small molecules</td>
+<td>10 Out-Of-Distribution Tasks (1M+ entries)</td>
+<td>Computational</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.15387279">MSR-ACC/TAE25</a></td>
+<td>Small molecules</td>
+<td>77k CCSD(T)/CBS atomization energies</td>
+<td>Computational</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/fairchem/OMAT24">OMat24 (Meta)</a></td>
+<td>Inorganic crystals</td>
+<td>110M DFT entries</td>
+<td>Computational</td>
+<td>JSON/HDF5</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/facebook/OMol25">OMol25 (Meta)</a></td>
+<td>Molecular chemistry</td>
+<td>100M+ DFT calculations</td>
+<td>Computational</td>
+<td>LMDB</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/facebook/OMC25">OMC25</a></td>
+<td>Molecular crystals</td>
+<td>&gt;27M structures</td>
+<td>Computational</td>
+<td>Zarr</td>
+</tr>
+<tr>
+<td><a href="https://materialsproject.org">Materials Project (LBL)</a></td>
+<td>Inorganic crystals</td>
+<td>500k+ compounds</td>
+<td>Computational</td>
+<td>JSON/API</td>
+</tr>
+<tr>
+<td><a href="https://opencatalystproject.org">Open Catalyst 2020 (OC20)</a></td>
+<td>Catalysis (surfaces)</td>
+<td>1.2M relaxations</td>
+<td>Computational</td>
+<td>JSON/HDF5</td>
+</tr>
+<tr>
+<td><a href="https://aflow.org">AFLOW</a></td>
+<td>Inorganic materials</td>
+<td>3.5M materials</td>
+<td>Computational</td>
+<td>REST API</td>
+</tr>
+<tr>
+<td><a href="https://oqmd.org">OQMD</a></td>
+<td>Inorganic solids</td>
+<td>1M+ compounds</td>
+<td>Computational</td>
+<td>SQL/CSV</td>
+</tr>
+<tr>
+<td><a href="https://jarvis.nist.gov">JARVIS-DFT (NIST)</a></td>
+<td>3D/2D materials</td>
+<td>40k+ entries</td>
+<td>Computational</td>
+<td>JSON/API</td>
+</tr>
+<tr>
+<td><a href="http://www.carolinamatdb.org">Carolina Materials DB</a></td>
+<td>Hypothetical crystals</td>
+<td>214k structures</td>
+<td>Computational</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://nomad-lab.eu/prod/v1/gui/search/entries/search/entries">NOMAD</a></td>
+<td>Various DFT/MD</td>
+<td>&gt;19M calculations</td>
+<td>Computational</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://matpes.ai">MatPES</a></td>
+<td>DFT Potential Energy Surfaces</td>
+<td>~400,000 structures from 300K MD simulations</td>
+<td>Computational</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.11164951">Vector-QM24</a></td>
+<td>Small organic and inorganic molecules</td>
+<td>836k conformational isomers</td>
+<td>Computational</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1184/R1/27629937.v1">AIMNet2 Dataset</a></td>
+<td>Non-metallic compounds</td>
+<td>20M hybrid DFT calculations</td>
+<td>Computational</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/13328872">RDB7</a></td>
+<td>Barrier height and enthalpy for small organic reactions</td>
+<td>12k CCSD(T)-F12 calculations</td>
+<td>Computational</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/11493786">RDB19-Rad</a></td>
+<td>ΔG of activation and of reaction for organic reactions in 40 common solvents</td>
+<td>5.6k DFT + COSMO-RS calculations</td>
+<td>Computational</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/14859804">QCML</a></td>
+<td>Small molecules consisting of up to 8 heavy atoms</td>
+<td>14.7B Semi-empirical + 33.5M DFT calculations</td>
+<td>Computational</td>
+<td>TFDS</td>
+</tr>
+<tr>
+<td><a href="http://quantum-machine.org/datasets/">QM9</a></td>
+<td>Small organic molecules</td>
+<td>134k molecules with quantum properties</td>
+<td>Experimental</td>
+<td>SDF/CSV</td>
+</tr>
+<tr>
+<td><a href="http://quantum-machine.org/datasets/">QM7/QM7b</a></td>
+<td>Small molecules</td>
+<td>7k molecules with atomization energies</td>
+<td>Experimental</td>
+<td>SDF/CSV</td>
+</tr>
+<tr>
+<td><a href="https://www.openqdc.io/datasets/qmugs">QMugs</a></td>
+<td>Drug-like molecules</td>
+<td>665 k mol / 2 M conf</td>
+<td>Computational</td>
+<td>HDF5</td>
+</tr>
+<tr>
+<td><a href="https://c2db.fysik.dtu.dk">C2DB</a></td>
+<td>2-D materials</td>
+<td>~4 000 entries</td>
+<td>Computational</td>
+<td>JSON/API</td>
+</tr>
+<tr>
+<td><a href="https://qcawebapps.molssi.org/ml_datasets/">ANI-1x / 1ccx</a></td>
+<td>Small organic mol</td>
+<td>5 M (DFT) + 0.5 M (CCSD)</td>
+<td>Computational</td>
+<td>HDF5</td>
+</tr>
+<tr>
+<td><a href="https://pubs.acs.org/doi/10.1021/acs.jced.9b00835">CoRE MOF 2019</a></td>
+<td>Metal-organic frameworks</td>
+<td>14 763 structures</td>
+<td>Computational</td>
+<td>CIF/JSON</td>
+</tr>
+<tr>
+<td><a href="https://figshare.com/articles/dataset/QMOF_Database/13147324">QMOF Database</a></td>
+<td>Metal-organic frameworks</td>
+<td>20k+ structures (DFT)</td>
+<td>Computational</td>
+<td>CIF/JSON</td>
+</tr>
+<tr>
+<td><a href="https://www.catalysis-hub.org">Catalysis-Hub</a></td>
+<td>Surface reactions</td>
+<td>&gt;100 k energies</td>
+<td>Computational</td>
+<td>JSON/API</td>
+</tr>
+<tr>
+<td><a href="https://fair-chem.github.io/dac/datasets/odac.html">ODAC23</a></td>
+<td>MOF + CO₂/H₂O adsorption</td>
+<td>38 M DFT calcs</td>
+<td>Computational</td>
+<td>HDF5</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1021/acs.jced.2c00583">MOFX-DB</a></td>
+<td>Gas adsorption in MOFs</td>
+<td>3 M isotherm pts</td>
+<td>Computational</td>
+<td>CSV/HDF5</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/LeMaterial/LeMat-Bulk">LeMat-Bulk</a></td>
+<td>Inorganic materials (bulk)</td>
+<td>6.7M structures (5.9M materials)</td>
+<td>Computational</td>
+<td>HuggingFace Dataset</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/LeMaterial/LeMat-Traj">LeMat-Traj</a></td>
+<td>Inorganic materials (trajectories)</td>
+<td>113M structures</td>
+<td>Computational</td>
+<td>HuggingFace Dataset</td>
+</tr>
+<tr>
+<td><a href="https://www.kaggle.com/competitions/neurips-open-polymer-prediction-2025/data">NeurIPS Open Polymer Prediction 2025</a></td>
+<td>Polymers</td>
+<td>~1,500 test polymers with MD-derived properties</td>
+<td>Computational</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jla-gardner/carbon-data">Carbon Data</a></td>
+<td>Carbon materials</td>
+<td>22.9M atoms, 546 trajectories</td>
+<td>Computational</td>
+<td>EXTXYZ</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/15387280">MSR-ACC/TAE25</a></td>
+<td>Small molecules (up to Ar)</td>
+<td>76,879 total atomization energies</td>
+<td>Computational</td>
+<td>HDF5/CSV</td>
+</tr>
+<tr>
+<td><a href="https://www.doi.org/10.18126/jos5-wj65">DFT Solvation Energy Dataset</a></td>
+<td>Small molecules</td>
+<td>651,290 solvation energies in 5 solvents</td>
+<td>Computational</td>
+<td>CSV/JSON</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.18126/8p6m-e135">MD Simulated Monomer Properties</a></td>
+<td>Small molecules</td>
+<td>410 molecules with thermodynamic properties</td>
+<td>Computational</td>
+<td>CSV/JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/rxn4chemistry/multimodal-spectroscopic-dataset">Multimodal Spectroscopic Dataset</a></td>
+<td>Molecular spectroscopy</td>
+<td>790k molecules with simulated spectra</td>
+<td>Computational</td>
+<td>HDF5/JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/divelab/PubChemQCR">PubChemQCR</a></td>
+<td>Small molecules (relaxation)</td>
+<td>3.5M trajectories / 300M conformations</td>
+<td>Computational</td>
+<td>HuggingFace Dataset</td>
+</tr>
+<tr>
+<td><a href="https://figshare.com/articles/dataset/MP-ALOE_An_r2SCAN_dataset_for_universal_machine_learning_interatomic_potentials/29452190">MP-ALOE</a></td>
+<td>Universal MLIPs (89 elements)</td>
+<td>~1M r2SCAN DFT calculations</td>
+<td>Computational</td>
+<td>JSONL/MACE</td>
+</tr>
+<tr>
+<td><a href="https://alexandria.icams.rub.de">Alexandria DB</a></td>
+<td>Inorganic (1D–3D)</td>
+<td>&gt;5 M DFT calcs (PBE)</td>
+<td>Computational</td>
+<td>JSON/OPTIMADE/LMDB</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/8091844">Quantum‑Chemical Bonding DB (LOBSTER)</a></td>
+<td>Solid‑state bonding analysis</td>
+<td>1,520 compounds</td>
+<td>Computational</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://www.openqdc.io/datasets">MultixcQM9 (OpenQDC)</a></td>
+<td>Small molecules (QM9, multi‑XC)</td>
+<td>133k molecules</td>
+<td>Computational</td>
+<td>Torch/NumPy</td>
+</tr>
+<tr>
+<td><a href="https://www.openqdc.io/datasets">SPICE (OpenQDC)</a></td>
+<td>Drug‑like molecules</td>
+<td>1 M conformers (energies &amp; forces)</td>
+<td>Computational</td>
+<td>Torch/ASE</td>
+</tr>
+<tr>
+<td><a href="https://matbench.materialsproject.org/">Matbench v0.1</a></td>
+<td>Benchmarks (13 tasks)</td>
+<td>10 datasets</td>
+<td>Benchmark/Comp</td>
+<td>CSV/HDF5</td>
+</tr>
+<tr>
+<td><a href="https://matbench-discovery.materialsproject.org/data">Matbench Discovery</a></td>
+<td>Stability, κ, structures</td>
+<td>Multiple files</td>
+<td>Benchmark/Comp</td>
+<td>CSV/ZIP</td>
+</tr>
+<tr>
+<td><a href="https://archive.materialscloud.org">Materials Cloud Archives</a></td>
+<td>Various DFT/MD workflows</td>
+<td>1,000+ datasets</td>
+<td>Computational</td>
+<td>HDF5/JSON/CIF</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/10901820">MS25</a></td>
+<td>MLIP benchmark (6 material systems)</td>
+<td>Multi-system benchmark suite</td>
+<td>Computational/Benchmark</td>
+<td>HDF5</td>
+</tr>
+<tr>
+<td><a href="https://github.com/RadonPy/RadonPy/blob/648c9a492808339c9bb7ad2c1137e5a7b07614ca/data/PI1070.csv">RadonPy Polymer Properties Data</a></td>
+<td>Polymer</td>
+<td>~1070 MD-calculated Properties</td>
+<td>Computational</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.15482819">SHNITSEL Data</a></td>
+<td>Organic Molecules</td>
+<td>418,870 Post-HF-calculated Ground- and Excited-states Properties</td>
+<td>Computational</td>
+<td>XARRAY</td>
+</tr>
+<tr>
+<td><a href="https://jingyun-ye.github.io/FLPDB/">Frustrated Lewis Pairs Database</a></td>
+<td>Small Molecules</td>
+<td>146 Metal-free FLPs</td>
+<td>Computational</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/SandboxAQ/aqcat25-dataset">AQCat25</a></td>
+<td>Catalysis</td>
+<td>13.5M frames / 5K materials</td>
+<td>Computational</td>
+<td>Parquet/ASE DB</td>
+</tr>
+<tr>
+<td><a href="https://github.com/facebookresearch/fairchem/blob/main/docs/molecules/datasets/omol25_elec.md">OMol25 Electronic Structures</a></td>
+<td>Molecular chemistry</td>
+<td>4M+ calculations</td>
+<td>Computational</td>
+<td>Raw DFT outputs</td>
+</tr>
+<tr>
+<td><a href="https://figshare.com/articles/dataset/Unrestricted_CCSD_T_Dataset_For_Organic_Molecule_Reactions/30267877?file=58465231">Unrestricted CCSD(T) Dataset For Organic Molecule Reactions</a></td>
+<td>Organic reactions</td>
+<td>3119 configurations</td>
+<td>Computational</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Ferg-Lab/PDFT_OPESf">MC-PDFT-OPESf</a></td>
+<td>Reaction kinetics</td>
+<td>Diels-Alder reaction</td>
+<td>Computational</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://muellergroup.jhu.edu/qcd/">Quantum Cluster Database</a></td>
+<td>Nanoclusters</td>
+<td>63,015 clusters</td>
+<td>Computational</td>
+<td>CSV/JSON</td>
+</tr>
+<tr>
+<td><a href="https://www-wales.ch.cam.ac.uk/CCD.html">The Cambridge Cluster Database</a></td>
+<td>Mixed Clusters</td>
+<td>Multiple Files</td>
+<td>Computational</td>
+<td>Multiple Types</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.15252439">Battery Electrolyte Solvation/Ionization</a></td>
+<td>Organic molecules</td>
+<td>Thousands of molecules</td>
+<td>Computational</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="experimental-datasets">Experimental Datasets<a class="headerlink" href="#experimental-datasets" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Domain</th>
+<th>Size</th>
+<th>Type</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.crystallography.net/cod">Crystallography Open Database (COD)</a></td>
+<td>Crystal structures</td>
+<td>~525k entries</td>
+<td>Experimental</td>
+<td>CIF/SMILES</td>
+</tr>
+<tr>
+<td><a href="https://icsd.products.fiz-karlsruhe.de">NIST ICSD (subset)</a></td>
+<td>Inorganic structures</td>
+<td>~290k structures</td>
+<td>Experimental</td>
+<td>CIF</td>
+</tr>
+<tr>
+<td><a href="https://www.ccdc.cam.ac.uk">CSD (Cambridge)</a></td>
+<td>Organic crystals</td>
+<td>~1.3M structures</td>
+<td>Experimental</td>
+<td>CIF</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.14254270">opXRD</a></td>
+<td>Crystal structures</td>
+<td>92552 (2179 labeled)</td>
+<td>Experimental</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://mdr.nims.go.jp/collections/4c428a0c-d209-4990-ad1f-656d05d1cfe2">MDR SuperCon</a></td>
+<td>Superconductivity</td>
+<td>legacy superconductor database w/ material composition, structure, properties, and processes</td>
+<td>Mixed</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.ebi.ac.uk/chembl/">ChEMBL</a></td>
+<td>Bioactive molecules</td>
+<td>2.3M+ compounds with bioactivity data</td>
+<td>Experimental</td>
+<td>JSON/SDF</td>
+</tr>
+<tr>
+<td><a href="http://moleculenet.org/">MoleculeNet</a></td>
+<td>Molecular properties</td>
+<td>700k+ compounds across 17 datasets</td>
+<td>Mixed</td>
+<td>CSV/SDF</td>
+</tr>
+<tr>
+<td><a href="http://moleculenet.org/">ESOL</a></td>
+<td>Aqueous solubility</td>
+<td>1,128 compounds with solubility data</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://github.com/MobleyLab/FreeSolv">FreeSolv</a></td>
+<td>Hydration free energy</td>
+<td>643 molecules with experimental data</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://www.ebi.ac.uk/chembl/">Lipophilicity</a></td>
+<td>Octanol/water distribution</td>
+<td>4,200 compounds with logD values</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://pubchem.ncbi.nlm.nih.gov/bioassay">PCBA</a></td>
+<td>Bioassay screening</td>
+<td>400k+ compounds, 128 bioassays</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://wiki.nci.nih.gov/display/NCIDTPdata/AIDS+Antiviral+Screen+Data">HIV</a></td>
+<td>Antiviral screening</td>
+<td>41k compounds with HIV inhibition data</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="http://moleculenet.org/">BACE</a></td>
+<td>Beta-secretase inhibitors</td>
+<td>1,522 compounds with IC50 data</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="http://moleculenet.org/">BBBP</a></td>
+<td>Blood-brain barrier permeability</td>
+<td>2,053 compounds with permeability data</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://tripod.nih.gov/tox21/challenge/">Tox21</a></td>
+<td>Toxicity screening</td>
+<td>8k compounds, 12 toxicity targets</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://www.epa.gov/chemical-research/toxicity-forecaster-toxcasttm-data">ToxCast</a></td>
+<td>High-throughput toxicity</td>
+<td>8k compounds, 600+ assays</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="http://sideeffects.embl.de/">SIDER</a></td>
+<td>Drug side effects</td>
+<td>1,427 drugs with adverse reactions</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="http://moleculenet.org/">ClinTox</a></td>
+<td>Clinical trial toxicity</td>
+<td>1,491 compounds with FDA approval status</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="http://www.pdbbind.org.cn/">PDBbind</a></td>
+<td>Protein-ligand binding</td>
+<td>19k complexes with binding affinities</td>
+<td>Experimental</td>
+<td>PDB/SDF</td>
+</tr>
+<tr>
+<td><a href="https://www.bindingdb.org/">BindingDB</a></td>
+<td>Protein-ligand binding</td>
+<td>2.8M+ binding data points</td>
+<td>Experimental</td>
+<td>CSV/SDF</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hevalatas/ProtBENCH">ProtBENCH</a></td>
+<td>Drug-target interactions</td>
+<td>Protein family-specific datasets</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wells-wood-research/PDBench">PDBench</a></td>
+<td>Protein sequence design</td>
+<td>595 protein structures, 40 architectures</td>
+<td>Experimental</td>
+<td>PDB</td>
+</tr>
+<tr>
+<td><a href="https://github.com/WANG-CR/PDB-Struct">PDB-Struct</a></td>
+<td>Structure-based protein design</td>
+<td>Comprehensive protein design benchmark</td>
+<td>Experimental</td>
+<td>PDB</td>
+</tr>
+<tr>
+<td><a href="https://htem.nrel.gov">HTEM-DB</a></td>
+<td>Thin-film composition libraries</td>
+<td>140 k+ samples</td>
+<td>Experimental</td>
+<td>JSON/API</td>
+</tr>
+<tr>
+<td><a href="https://github.com/facebookresearch/fairchem/tree/main/src/fairchem/applications/ocx/data">OCx24</a></td>
+<td>Electrocatalyst inks</td>
+<td>572 samples (+DFT)</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://khazana.gatech.edu/dataset/">Polymer Genome</a></td>
+<td>Polymers</td>
+<td>20 k polymers</td>
+<td>Experimental + Comp</td>
+<td>CSV/JSON</td>
+</tr>
+<tr>
+<td><a href="https://www.ccdc.cam.ac.uk/support-and-resources/downloads/">CoRE MOF 2024</a></td>
+<td>Metal-organic frameworks</td>
+<td>40k+ experimental MOFs</td>
+<td>Experimental</td>
+<td>CIF</td>
+</tr>
+<tr>
+<td><a href="https://pub.sandboxaq.com/data/ic50-dataset">SAIR</a></td>
+<td>Protein-ligand binding</td>
+<td>1M+ complexes, 5.2M structures, 2.5TB</td>
+<td>Experimental</td>
+<td>3D/CSV</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.13987781">Anion Solvation DB</a></td>
+<td>Anion solvation</td>
+<td>~26k properties</td>
+<td>Mixed</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.6809668">BigSolDB</a></td>
+<td>Organic molecule solubility</td>
+<td>~54k exp. values</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://github.com/starrydata/starrydata_datasets">StarryData2</a></td>
+<td>Experimental properties</td>
+<td>Figshare dump (2023/2024)</td>
+<td>Experimental</td>
+<td>CSV/JSON</td>
+</tr>
+<tr>
+<td><a href="https://www.criptapp.org">CRIPT Polymer Data</a></td>
+<td>Polymers (synthesis, properties)</td>
+<td>Growing community DB</td>
+<td>Mixed</td>
+<td>JSON/API</td>
+</tr>
+<tr>
+<td><a href="https://www.kaggle.com/datasets/aichemy/catechol-benchmark">Catechol Benchmark</a></td>
+<td>Solvent selection / Reaction yield</td>
+<td>1200+ process conditions</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.3686213">Leeds Solubility Data</a></td>
+<td>Solubility</td>
+<td>2.3k measurements</td>
+<td>Experimental</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.5281/zenodo.15094979">BigSolDB 2.0</a></td>
+<td>Solubility</td>
+<td>103k+ values</td>
+<td>Experimental</td>
+<td>CSV/XLSX</td>
+</tr>
+<tr>
+<td><a href="https://osf.io/e68v4/files/3dv4k">OpenExp</a></td>
+<td>Chemical reactions</td>
+<td>274k pairs</td>
+<td>Experimental</td>
+<td>Varies</td>
+</tr>
+<tr>
+<td><a href="https://www.batteryimaginglibrary.com">Battery Imaging Library (BIL)</a></td>
+<td>Battery imaging</td>
+<td>80+ scans, &gt;500B voxels</td>
+<td>Experimental</td>
+<td>Various</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="llm-training-datasets">LLM Training Datasets<a class="headerlink" href="#llm-training-datasets" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Domain</th>
+<th>Size</th>
+<th>Type</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://huggingface.co/collections/jablonkagroup/chempile-6824e88c60d3286ba9b0dae1">ChemPile</a></td>
+<td>Chemistry</td>
+<td>75B+ tokens</td>
+<td>LLM Training</td>
+<td>Mixed</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/osunlp/SMolInstruct">SmolInstruct</a></td>
+<td>Small molecules</td>
+<td>3.3M samples</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/camel-ai/chemistry">CAMEL</a></td>
+<td>Chemistry</td>
+<td>20K problem-solution pairs</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OpenBioML/chemnlp">ChemNLP</a></td>
+<td>Chemistry</td>
+<td>Extensive, many combined datasets</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ChemFoundationModels/ChemLLMBench">ChemQA</a></td>
+<td>Chemistry</td>
+<td>Multimodal QA dataset</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ChemFoundationModels/ChemLLMBench">ChemLLMBench</a></td>
+<td>Chemistry</td>
+<td>8 chemistry tasks benchmark</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/microsoft/chemistry-qa">ChemistryQA</a></td>
+<td>Chemistry</td>
+<td>4,500 questions across 200 topics</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/abhijeetgangan/MaSTeA">MaScQA</a></td>
+<td>Materials Science</td>
+<td>640 QA pairs</td>
+<td>LLM Training</td>
+<td>XLSX</td>
+</tr>
+<tr>
+<td><a href="https://scicode-bench.github.io">SciCode</a></td>
+<td>Research Coding in Physics, Math, Material Science, Biology, and Chemistry</td>
+<td>338 subproblems</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/AI4Chem/ChemData700K">ChemData 700K</a></td>
+<td>Chemistry (9 core tasks)</td>
+<td>730K Q-A instruction pairs</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/record/10119842">MatSci-Instruct (HoneyBee)</a></td>
+<td>Materials science</td>
+<td>≈55K verified instructions</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/hcaoaf/MoleculeQA">MoleculeQA</a></td>
+<td>Molecular properties &amp; safety</td>
+<td>62K multiple-choice QA pairs</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/bio-nlp-umass/bioinstruct">BioInstruct 25K</a></td>
+<td>Biomedical / biochemistry</td>
+<td>25K GPT-4 generated instructions</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/futurehouse/lab-bench">Lab-Bench</a></td>
+<td>Biology</td>
+<td>2,400+ questions for biology agents</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/AI4Chem/ChemBench4K">ChemBench 4K</a></td>
+<td>Chemistry competency benchmark</td>
+<td>4,100 single-choice questions</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/idavidrein/gpqa">GPQA Diamond</a></td>
+<td>Biology, Physics, Chemistry</td>
+<td>448 multiple-choice questions</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://macbench.lamalab.org">MaCBench</a></td>
+<td>Chemistry and materials science</td>
+<td>Vision-language tasks</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://chembench.lamalab.org">ChemBench</a></td>
+<td>Chemistry</td>
+<td>2,700+ question-answer pairs</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/n0w0f/MatText">MatText</a></td>
+<td>Materials property prediction</td>
+<td>2M structures</td>
+<td>LLM Training</td>
+<td>HuggingFace Dataset</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sci-assess/SciAssess">SciAssess</a></td>
+<td>Scientific literature analysis</td>
+<td>Benchmark for LLMs in science</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://files.docking.org/zinc20-ML/">ZINC20-ML</a></td>
+<td>Drug-like molecules (SMILES)</td>
+<td>≈1B molecules</td>
+<td>LLM Training</td>
+<td>SMILES</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/pmc/open_access">PMC Open Access Subset</a></td>
+<td>Biomedical full-text</td>
+<td>3.4M+ articles</td>
+<td>LLM Training</td>
+<td>XML</td>
+</tr>
+<tr>
+<td><a href="https://github.com/BangLab-UdeM-Mila/NLP4MatSci-ACL23">MatScholar Task-Schema QA (MatSci-NLP)</a></td>
+<td>Materials science (7 NLP tasks)</td>
+<td>Tens of thousands of examples</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/collections/zjunlp/mol-instructions-662e0b9435ab6df9593e8ea0">Mol-Instructions</a></td>
+<td>Chemistry</td>
+<td>molecular, protein, and biochemical instructions</td>
+<td>LLM Training</td>
+<td>HuggingFace Dataset</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org/records/14396156">USPTO-LLM</a></td>
+<td>Chemical reactions</td>
+<td>247K reactions</td>
+<td>LLM Training</td>
+<td>JSON/Graph</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2505.05232">ChemRxivQuest</a></td>
+<td>Chem literature QA</td>
+<td>970 QA pairs</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://figshare.com/articles/dataset/5104873">USPTO-Lowe</a></td>
+<td>Patent reactions</td>
+<td>1.8 M reactions</td>
+<td>Literature-mined</td>
+<td>RXN/SMILES</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/liuganghuggingface/moltextnet">MolTextNet</a></td>
+<td>Small molecules with text</td>
+<td>2.5M molecule-text pairs</td>
+<td>LLM Training</td>
+<td>HuggingFace Dataset</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/blazerye/MolOpt-Instructions">MolOpt-Instructions</a></td>
+<td>Molecule optimization</td>
+<td>1.18M instruction-based optimization tasks</td>
+<td>LLM Training</td>
+<td>HuggingFace Dataset</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/drive/folders/1YCDBzwjwNRIc1FRkB662G3Y5AOWaokUG?ths=true">TextEdge</a></td>
+<td>Crystal properties</td>
+<td>Crystal text descriptions with properties</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://aissquare.com/datasets/detail?pageType=datasets&amp;name=LAMBench-TrainingSet-v1&amp;id=308">LAMBench-TrainingSet-v1</a></td>
+<td>Materials structures</td>
+<td>19.8M structures for Large Atom Models</td>
+<td>LLM Training</td>
+<td>Various</td>
+</tr>
+<tr>
+<td><a href="https://drive.google.com/drive/folders/1HpGhuNHG4EQCQMZaKPwEQNH9stJKw-ht?dmr%20=%201%26ec%20=%20wgc-drive-hero-goto">LLM4Mat</a></td>
+<td>Materials property prediction</td>
+<td>1.9M crystal structures, 45 properties, 3 modalities</td>
+<td>LLM Training</td>
+<td>Various</td>
+</tr>
+<tr>
+<td><a href="https://github.com/deepprinciple/llmeo">LLM-EO</a></td>
+<td>Transition metal complexes / Optimization</td>
+<td>1.37M TMC space explored</td>
+<td>LLM Training</td>
+<td>GitHub</td>
+</tr>
+<tr>
+<td><a href="https://github.com/fart-lab/fart/tree/main/dataset">Flavor Analysis and Recognition Transformer</a></td>
+<td>Molecular taste prediction</td>
+<td>Multi-class taste classification dataset</td>
+<td>LLM Training</td>
+<td>SMILES/JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/collections/CambridgeMolecularEngineering/solar-cell-qa-datasets-67b398f1b9c0f0dd7600a159">SCQA (Solar Cell QA)</a></td>
+<td>Solar cells</td>
+<td>47K QA pairs</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://scienceqa.github.io/">ScienceQA</a></td>
+<td>K–12 science, multimodal MCQs w/ lectures &amp; explanations</td>
+<td>21,208 Qs</td>
+<td>LLM Training/Eval</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://scibench-ucla.github.io">SciBench</a></td>
+<td>College-level scientific problem solving (math/chem/phys)</td>
+<td>Open &amp; closed sets</td>
+<td>LLM Eval</td>
+<td>PDF/JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/MegaScience">MegaScience</a></td>
+<td>Scientific reasoning (7 disciplines)</td>
+<td>1.25M instances (650k reasoning questions from 12k textbooks)</td>
+<td>LLM Training</td>
+<td>HuggingFace Dataset</td>
+</tr>
+<tr>
+<td><a href="https://github.com/AI4MOL/Mat-Instruction">Mat-Instructions</a></td>
+<td>Inorganic materials</td>
+<td>~30k instructions</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/iknow-lab/open-materials-guide-2024">Open Materials Guide (OMG)</a></td>
+<td>Materials synthesis</td>
+<td>17K synthesis recipes</td>
+<td>LLM Training</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OpenDFM/ChemDFM">ChemDFM</a></td>
+<td>Chemistry</td>
+<td>34B tokens / 2.7M instructions</td>
+<td>LLM Training</td>
+<td>HuggingFace</td>
+</tr>
+<tr>
+<td><a href="https://github.com/lqzxt/ChemTable">ChemTable</a></td>
+<td>Chemistry Tables</td>
+<td>Large-scale benchmark</td>
+<td>LLM Training/Benchmark</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/datasets/OpenMol/ChemCoTDataset">ChemCoTBench</a></td>
+<td>Molecular reasoning</td>
+<td>Annotated datasets</td>
+<td>LLM Training/Benchmark</td>
+<td>HuggingFace Dataset</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="literature-mined-text-datasets">Literature-mined &amp; Text Datasets<a class="headerlink" href="#literature-mined-text-datasets" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Domain</th>
+<th>Size</th>
+<th>Type</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pubchem.ncbi.nlm.nih.gov">PubChem</a></td>
+<td>Molecules &amp; data</td>
+<td>119M compounds</td>
+<td>Literature</td>
+<td>SMILES/SDF</td>
+</tr>
+<tr>
+<td><a href="https://open-reaction-database.org">Open Reaction Database (ORD)</a></td>
+<td>Synthetic reactions</td>
+<td>~1M reactions</td>
+<td>Experimental/Lit</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><a href="https://github.com/DS4SD/PatCID">PatCID (IBM)</a></td>
+<td>Chemical image data</td>
+<td>81M images / 13M mols</td>
+<td>Literature</td>
+<td>PNG/SMILES</td>
+</tr>
+<tr>
+<td><a href="https://matscholar.com">MatScholar</a></td>
+<td>NLP corpus (materials)</td>
+<td>5M+ abstracts</td>
+<td>Literature</td>
+<td>JSON/Graph</td>
+</tr>
+<tr>
+<td><a href="https://matbench.materialsproject.org/">Matbench (metadata/text tasks)</a></td>
+<td>Text/meta ML tasks</td>
+<td>13 tasks</td>
+<td>Literature/Benchmark</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td><a href="https://github.com/valence-labs/openQDC">OpenQDC Hub</a></td>
+<td>QM molecules &amp; reactions</td>
+<td>1.5 B geometries</td>
+<td>Literature/Computational</td>
+<td>Python API/NPZ</td>
+</tr>
+<tr>
+<td><a href="https://figshare.com/articles/dataset/L2M3_Database/27187917">L2M3 - Large Language Model MOF Miner</a></td>
+<td>Metal-organic frameworks</td>
+<td>from &gt;40k articles</td>
+<td>Literature-mined</td>
+<td>CSV</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="computational-fluid-dynamics-pde-engineering-datasets">🌊 Computational Fluid Dynamics, PDE &amp; Engineering Datasets<a class="headerlink" href="#computational-fluid-dynamics-pde-engineering-datasets" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Domain</th>
+<th>Size</th>
+<th>Type</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/pdebench/PDEBench">PDEBench</a></td>
+<td>PDE solving / Scientific ML</td>
+<td>Multiple datasets</td>
+<td>Benchmark / Simulation</td>
+<td>HDF5/PyTorch</td>
+</tr>
+<tr>
+<td><a href="https://blastnet.github.io">BLASTNet</a></td>
+<td>Fluid mechanics / Reacting flows</td>
+<td>17 TB</td>
+<td>Simulation / CFD</td>
+<td>HDF5/NPY</td>
+</tr>
+<tr>
+<td><a href="https://turbulence.pha.jhu.edu">Johns Hopkins Turbulence DB (JHTDB)</a></td>
+<td>DNS/LES turbulence (9 canonical flows)</td>
+<td>≈ 350 TB</td>
+<td>Simulation</td>
+<td>Web API / HDF5 cutouts</td>
+</tr>
+<tr>
+<td><a href="https://data.openei.org/submissions/5970">Airfoil CFD 2k</a></td>
+<td>1,830 airfoils × 25 AoA × 3 Re</td>
+<td>~6 GB (250 k cases)</td>
+<td>Simulation</td>
+<td>HDF5</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/pdearena">PDEArena (collection)</a></td>
+<td>2-D Navier–Stokes, Shallow-Water, 3-D Maxwell</td>
+<td>≈ 100 GB (4 datasets)</td>
+<td>Simulation</td>
+<td>Torch / HDF5</td>
+</tr>
+<tr>
+<td><a href="https://github.com/pangeo-data/WeatherBench">WeatherBench 2</a></td>
+<td>Global weather reanalysis (ERA5, 1979-2023)</td>
+<td>≈ 5 TB</td>
+<td>Reanalysis</td>
+<td>NetCDF/Zarr</td>
+</tr>
+<tr>
+<td><a href="https://turbulence.oden.utexas.edu">UT Austin Channel-DNS Suite</a></td>
+<td>Incompressible channel flow Re<sub>τ</sub> 180 – 5200</td>
+<td>≈ 10 TB</td>
+<td>Simulation</td>
+<td>Binary / ASCII</td>
+</tr>
+<tr>
+<td><a href="https://data.mendeley.com/datasets/wt8t5kxzbs">Compressible TPC DNS DB</a></td>
+<td>Compressible channel flow (25 M, Re<sub>τ*</sub>)</td>
+<td>~2 GB</td>
+<td>Simulation</td>
+<td>TXT tables</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.34740/kaggle/dsv/2637500">Curated RANS ↔ DNS Dataset</a></td>
+<td>29 geometries, 4 RANS models w/ DNS/LES labels</td>
+<td>1.1 GB</td>
+<td>Simulation</td>
+<td>HDF5/CSV</td>
+</tr>
+<tr>
+<td><a href="https://commonresearchmodel.larc.nasa.gov">NASA Common Research Model (CRM)</a></td>
+<td>Aircraft CRM geom. + wind-tunnel &amp; CFD results</td>
+<td>Multi-GB</td>
+<td>Mixed (Exp + Sim)</td>
+<td>CAD / CSV / Tecplot</td>
+</tr>
+<tr>
+<td><a href="https://github.com/neuraloperator/neuraloperator">Darcy-Flow (FNO)</a></td>
+<td>2-D porous-media pressure fields (∇·k∇u = f)</td>
+<td>≈ 1 GB (10 k samples)</td>
+<td>Simulation</td>
+<td>HDF5</td>
+</tr>
+<tr>
+<td><a href="https://cordis.europa.eu/project/id/814837">HiFi-TURB LES/DNS</a></td>
+<td>High-fidelity LES/DNS for complex 3D flows</td>
+<td>Multi-case suite</td>
+<td>Simulation (DNS/LES)</td>
+<td>HDF5/NetCDF</td>
+</tr>
+<tr>
+<td><a href="https://hiliftpw.larc.nasa.gov/">NASA High Lift Prediction Workshop (HLPW)</a></td>
+<td>High-lift aircraft configurations</td>
+<td>Multi-GB</td>
+<td>Mixed (exp + CFD)</td>
+<td>CAD/CSV/Tecplot</td>
+</tr>
+<tr>
+<td><a href="https://arc.aiaa.org/doi/10.2514/1.J063456">High-Speed TBL DNS DB</a></td>
+<td>Compressible turbulent boundary layers</td>
+<td>DNS database</td>
+<td>Simulation</td>
+<td>HDF5</td>
+</tr>
+<tr>
+<td><a href="https://www.kaggle.com/datasets/ryleymcconkey/ml-turbulence-dataset">ML Turbulence (Kaggle)</a></td>
+<td>RANS Reynolds stress tensor data</td>
+<td>~GB scale</td>
+<td>Benchmark/Simulation</td>
+<td>CSV/HDF5</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="proprietary-datasets-for-reference">Proprietary Datasets (for reference)<a class="headerlink" href="#proprietary-datasets-for-reference" title="Permanent link">¤</a></h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Domain</th>
+<th>Size</th>
+<th>Use Case Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CAS Registry</td>
+<td>Chemical substances</td>
+<td>250M+ substances</td>
+<td>Industry standard for molecule indexing</td>
+</tr>
+<tr>
+<td>Reaxys (Elsevier)</td>
+<td>Reactions &amp; properties</td>
+<td>Millions of reactions</td>
+<td>Rich curated literature reaction data</td>
+</tr>
+<tr>
+<td>Citrine Informatics DB</td>
+<td>Experimental materials</td>
+<td>Private</td>
+<td>Materials ML platform w/ industry data</td>
+</tr>
+<tr>
+<td>CSD (Cambridge)</td>
+<td>Organic crystals</td>
+<td>1.3M+</td>
+<td>Gold-standard X-ray structures</td>
+</tr>
+<tr>
+<td><a href="https://polymer.nims.go.jp/en/">PoLyInfo</a></td>
+<td>Polymers &amp; properties</td>
+<td>500k+ data points / Experimental</td>
+<td>Polymer properties from literature sources</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dataset-resources">Dataset Resources<a class="headerlink" href="#dataset-resources" title="Permanent link">¤</a></h3>
+<ul>
+<li><a href="https://www.materialsdatafacility.org">The Materials Data Facility</a> - Over 100 TB of open materials data. #TODO list some of these in the tables above</li>
+<li><a href="https://materialsdatafacility.org/portal">Foundry-ML</a> <em>search Foundry</em> - 61 structured datasets ready for download through a Python client #TODO list some of these in the tables above</li>
+</ul>
+<h2 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">¤</a></h2>
+<ul>
+<li>Add all OpenQDC datasets <a href="https://www.openqdc.io/datasets">https://www.openqdc.io/datasets</a></li>
+<li>A dataset on solubilities of gases in polymers (15 000 experimental measurements of 79 gases' uptakes (0.01–50 wt%) in 102 different polymers, pressures from 1 × 10−3 to 7 × 102 bar and temperatures from 233 to 508 K, includes nearly 500 solvent–polymer systems). Optimized structures of various repeating units are included. Should it be of interest for you, it is available here: <a href="https://github.com/Shorku/rhnet/tree/main/data">Data</a></li>
+<li>Add <a href="https://www.materialscloud.org/discover/menu">Materials Cloud Datasets</a></li>
+<li>Classify <a href="https://atomly.net/#/">Atomly</a>. A bit challenging with non-English</li>
+<li>Look into adding NOMAD for experimental data as well</li>
+<li>Add A Quantum-Chemical Bonding Database for Solid-State Materials Part 1: <a href="https://zenodo.org/records/8091844">https://zenodo.org/records/8091844</a> Part 2: <a href="https://zenodo.org/records/8092187">https://zenodo.org/records/8092187</a></li>
+<li>Add QM datasets. <a href="http://quantum-machine.org/datasets/">http://quantum-machine.org/datasets/</a></li>
+<li>Find link for | ChemRxivQuest | Chemistry literature QA | 970 curated QA pairs | LLM Training | JSON | CC BY 4.0 | Open | <a href="https://arxiv.org/abs/2505.05232">ChemRxivQuest</a> |</li>
+<li>Find new link for USPTO-Reactions | <a href="">USPTO Reactions</a>                | Organic reactions       | 1.8M reactions           | Literature    | RXN/SMILES  | Open        | Open       |</li>
+<li>Find dataset link for | <a href="https://arxiv.org/abs/2505.15094">SciCUEval</a> | Multidomain scientific comprehension (bio/chem/phys/matsci) | 10 sub-datasets | LLM Eval | JSON/PDF | Open | Open |</li>
+<li>Find dataset for | <a href="TBD">MatSciKB</a>                            | Materials science KB    | 38.5k entries (20k papers, 3.6k Wikipedia, 1.9k textbooks, 10.5k datasets) | Literature    | Structured text  | Open        | Open       |</li>
+</ul>
+<hr />
+<h3 id="other-links">Other Links<a class="headerlink" href="#other-links" title="Permanent link">¤</a></h3>
+<ul>
+<li><a href="https://github.com/tilde-lab/awesome-materials-informatics">Awesome Materials Informatics</a></li>
+</ul>
+<hr />
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">¤</a></h2>
+<p>This project is licensed under the <strong>MIT License</strong>. Each dataset listed has its <strong>own license</strong>, noted in the table. Always check the source's license before using the data in your project.</p>
+<hr />
+<h2 id="acknowledgements">Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permanent link">¤</a></h2>
+<p>The primary effort of Ben Blaiszik on this project was performed under financial assistance award 70NANB24H049 / MML24-1001 from the National Institute of Standards and Technology (NIST).</p>
+<p>Thanks to the open data and research communities including:
+- Meta AI FAIR
+- The Materials Data Facility / Foundry-ML
+- NIST JARVIS and Materials Project
+- LBL, MIT, CCDC, FIZ Karlsruhe
+- Contributors to Open Catalyst, PubChem, ORD, and AFLOW
+- Developers of open chemistry toolkits (RDKit, Open Babel)</p>
+<hr />
+<h2 id="citation">Citation<a class="headerlink" href="#citation" title="Permanent link">¤</a></h2>
+<p>If this repository was helpful in your work, feel free to cite or star the repo. You can also reference the underlying dataset publications linked above.</p>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¤</a></h2>
+<p>This Changelog is autogenerated, there may be errors.</p>
+<h3 id="october-2025">October 2025<a class="headerlink" href="#october-2025" title="Permanent link">¤</a></h3>
+<p>Added 18 new datasets focusing on catalysis, reaction kinetics, cluster chemistry, experimental solubility, literature mining, and foundation models to enhance resources for computational chemistry and machine learning applications.</p>
+<h4 id="computational-datasets-7-datasets">🧮 Computational Datasets (7 datasets)<a class="headerlink" href="#computational-datasets-7-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>AQCat25</strong>: The AQCat25 dataset provides a large and diverse collection of 13.5 million DFT calculation trajectories, encompassing approximately 5K materials and 47K intermediate-catalyst systems. It is designed to complement existing large-scale datasets by providing calculations at higher fidelity and including critical spin-polarized systems, which are essential for accurately modeling many industrially relevant catalysts.</li>
+<li><strong>OMol25 Electronic Structures Dataset</strong>: The OMol25 Electronic Structures dataset includes the raw DFT outputs, electronic densities, wavefunctions, and molecular orbital information for over 4M million high-accuracy quantum chemical calculations. We see this as a transformative opportunity to develop higher quality partial charges, partial spins, and advanced electronic features to unlock the next generation of physics-informed ML models.</li>
+<li><strong>Unrestricted CCSD(T) Dataset For Organic Molecule Reactions</strong>: Dataset of 3119 organic molecule configurations at gold-standard quantum accuracy with automated workflows for unrestricted CCSD(T) calculations. Includes a transferable MLIP trained on UCCSD(T) data, showing significant improvements in force and activation energy accuracy.</li>
+<li><strong>MC-PDFT-OPESf</strong>: This work combines multi-configuration pair-density functional theory (MC-PDFT) as an accurate and eﬃcient multireference electronic structure method with on-the-fly probability enhanced sampling flooding (OPESf) as an enhanced sampling method capable of accelerating reactive transitions. MC-PDFT–OPESf provides reaction rates in agreement with experiments at a fraction of the computational cost required by conventional unbiased ab-initio calculations.</li>
+<li><strong>Quantum Cluster Database</strong>: A database of 63015 low-energy atomically precise nanoclusters for 55 elements across the periodic table, including main group and transition metal elements.</li>
+<li><strong>Cambridge Cluster Database</strong>: A collection of results from global optimizations for a variety of cluster systems, including Lennard-Jones, metal, molecular, and ionic clusters. The database is continuously updated with new results from published papers.</li>
+<li><strong>Battery Electrolyte Solvation/Ionization</strong>: This dataset presents molecular properties critical for battery electrolyte design, specifically solvation energies, ionization potentials, and electron affinities for thousands of organic molecules from QM9, EGP, GDB17, and ZINC.</li>
+</ul>
+<h4 id="experimental-datasets-5-datasets">🧪 Experimental Datasets (5 datasets)<a class="headerlink" href="#experimental-datasets-5-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>Catechol Benchmark</strong>: Time-series Solvent Selection Data for Few-shot Machine Learning, providing the first-ever transient flow dataset for machine learning benchmarking, covering over 1200 process conditions. This dataset focuses on solvent selection, a task that is particularly difficult to model theoretically.</li>
+<li><strong>BNNLab/Solubility_data: Leeds Solubility Data</strong>: Curated solubility data in organic solvents and water and descriptors for solubility prediction.</li>
+<li><strong>BigSolDB 2.0</strong>: A comprehensive dataset of 103,944 experimentally measured solubility values of 1,448 organic compounds in 213 solvents reported in 1,595 literature peer-reviewed articles.</li>
+<li><strong>OpenExp</strong>: Features 274,439 pairs of chemical reactions and their corresponding step-by-step instructions of experimental procedures. This dataset, compiled from the USPTO-Applications and ORD databases.</li>
+<li><strong>Battery Imaging Library (BIL)</strong>: An open, curated collection of multi-modal and multi-length scale battery imaging datasets, featuring over 80 scans and 500 billion voxels of data from single particles to full cells.</li>
+</ul>
+<h4 id="llm-training-datasets-5-datasets">📚 LLM Training Datasets (5 datasets)<a class="headerlink" href="#llm-training-datasets-5-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>Mat-Instructions</strong>: A large-scale inorganic material instruction dataset with ~30k instruction-response pairs, designed to unlock the potential of LLMs in materials science.</li>
+<li><strong>Open Materials Guide (OMG)</strong>: A dataset of 17K high-quality, expert-verified synthesis recipes from open-access literature, which forms the basis for the AlchemyBench benchmark for LLM-guided synthesis prediction.</li>
+<li><strong>ChemDFM</strong>: A pioneering LLM for chemistry trained on 34B tokens from chemical literature and textbooks, and fine-tuned using 2.7M instructions. As a result, it can understand and reason with chemical knowledge in free-form dialogue.</li>
+<li><strong>ChemTable</strong>: A large-scale benchmark of real-world chemical tables curated from the experimental sections of literature. ChemTable supports table recognition and table understanding tasks to advance scientific reasoning in chemistry.</li>
+<li><strong>ChemCoTBench</strong>: A reasoning framework that bridges molecular structure understanding with arithmetic-inspired operations to formalize chemical problem-solving into transparent, step-by-step workflows for tasks like molecular optimization and reaction prediction.</li>
+</ul>
+<h4 id="literature-mined-text-datasets-1-dataset">📖 Literature-mined &amp; Text Datasets (1 dataset)<a class="headerlink" href="#literature-mined-text-datasets-1-dataset" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>L2M3 (Large Language Model MOF Miner)</strong>: A database of MOF synthesis conditions and properties extracted from over 40,000 research articles using LLMs, enabling analysis of synthesis-structure-property relationships.</li>
+</ul>
+<h3 id="august-2025">August 2025<a class="headerlink" href="#august-2025" title="Permanent link">¤</a></h3>
+<p>Enhanced scientific reasoning capabilities and machine learning interatomic potential benchmarking with 6 new high-quality datasets for AI scientists and materials researchers.</p>
+<h4 id="computational-datasets-3-datasets">🧮 Computational Datasets (3 datasets)<a class="headerlink" href="#computational-datasets-3-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>OMC25</strong>: A collection of over 27 million molecular crystal structures containing 12 elements and up to 300 atoms in the unit cell. The dataset was generated from dispersion-inclusive density functional theory (DFT) relaxation trajectories of over 230,000 randomly generated molecular crystal structures of around 50,000 organic molecules.</li>
+<li><strong>MS25</strong>: Comprehensive benchmark dataset for evaluating machine learning interatomic potentials (MLIPs) across 6 diverse materials systems including MgO surfaces, liquid water, zeolites, catalytic Pt surface reactions, high-entropy alloys, and disordered Zr-oxides. Evaluates 5 MLIP architectures (MACE, NequIP, Allegro, MTP, Torch-ANI) with focus on derived physical observables beyond traditional energy/force metrics. Demonstrates that equivariant MLIPs offer 1.5-2× improvements over nonequivariant models in complex systems, while highlighting the importance of explicit validation of physical properties rather than relying solely on error metrics.</li>
+<li>Added the * Frustrated Lewis Pairs Database ** of 146 Metal-free FLPs</li>
+</ul>
+<h4 id="llm-training-datasets-4-datasets">📚 LLM Training Datasets (4 datasets)<a class="headerlink" href="#llm-training-datasets-4-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>MaCBench</strong>: A comprehensive benchmark for evaluating how vision-language models handle real-world chemistry and materials science tasks across three core aspects: data extraction, experimental understanding, and results interpretation. Reveals fundamental limitations in spatial reasoning and cross-modal information synthesis in leading models.</li>
+<li><strong>ChemBench</strong>: A cutting-edge framework to evaluate the chemical knowledge and reasoning capabilities of large language models (LLMs). It includes over 2,700 curated question-answer pairs across diverse chemistry topics and uniquely encodes chemical semantics, enabling models to process and reason about molecules and equations.</li>
+<li><strong>MatText</strong>: A comprehensive benchmarking framework spanning multiple representations and model scales, which finds that LLMs consistently fail to capture coordinate information while excelling at category patterns. This geometric blindness persists regardless of model size, dataset scale, or text representation strategy.</li>
+<li><strong>MegaScience</strong>: Large-scale scientific reasoning dataset featuring 1.25 million high-quality instances across 7 scientific disciplines. Includes TextbookReasoning component with 650k reasoning questions extracted from 12,000 university-level textbooks, providing truthful reference answers for training AI scientists. Developed through systematic ablation studies and comprehensive evaluation across 15 benchmarks, demonstrating superior performance and training efficiency compared to existing open-source scientific datasets.</li>
+</ul>
+<h3 id="july-2025">July 2025<a class="headerlink" href="#july-2025" title="Permanent link">¤</a></h3>
+<p>Expanded the collection into new scientific domains with 31 new datasets, introducing benchmarks for physics-based machine learning, adding comprehensive quantum mechanics datasets, expanding materials science resources, and enhancing scientific evaluation benchmarks.</p>
+<h4 id="computational-fluid-dynamics-pde-engineering-datasets-15-datasets">🌊 Computational Fluid Dynamics, PDE &amp; Engineering Datasets (15 datasets)<a class="headerlink" href="#computational-fluid-dynamics-pde-engineering-datasets-15-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>PDEBench</strong>: A comprehensive benchmark suite for scientific machine learning featuring a wide range of Partial Differential Equations. It provides large, ready-to-use datasets for challenging physics problems, supporting both forward and inverse modeling.</li>
+<li><strong>BLASTNet</strong>: A 17 TB collection of high-fidelity fluid mechanics simulation datasets for ML applications in automotive, propulsion, and energy sectors. It includes code and pre-trained models for tasks like turbulence modeling and spatio-temporal prediction.</li>
+<li><strong>JHTDB</strong>: multi-terabyte DNS/LES portal with isotropic, channel, MHD, boundary-layer and atmospheric datasets.</li>
+<li><strong>Airfoil CFD 2k</strong>: DOE/NREL benchmark: 1,830 shapes × 250 k RANS simulations; HDF5 + AWS mirror.</li>
+<li><strong>PDEArena</strong>: Hugging-Face org offering Navier–Stokes, Shallow-Water &amp; Maxwell tensors; MIT license.</li>
+<li><strong>WeatherBench 2</strong>: ERA5-derived Zarr cubes for data-driven medium-range forecasting; MIT.</li>
+<li><strong>UT Austin DNS Suite</strong>: public HTTP server with Reτ 180–5200 channel data &amp; statistics.</li>
+<li><strong>Compressible TPC DNS DB</strong>: 25 Reynolds–Mach cases, plain-text statistics (Mendeley Data).</li>
+<li><strong>Curated RANS ↔ DNS</strong>: Scientific Data descriptor + Kaggle mirror for ML turbulence closures.</li>
+<li><strong>NASA CRM</strong>: open CAD, grids, wind-tunnel Cp &amp; force/moment datasets for the community benchmark.</li>
+<li><strong>Darcy Flow (FNO)</strong>: canonical permeability→pressure dataset used in FNO/PINO papers.</li>
+<li><strong>HiFi-TURB LES/DNS</strong>: EU-funded project providing high-fidelity Large Eddy Simulation and Direct Numerical Simulation datasets for complex 3D turbulent flows, supporting advanced turbulence modeling and AI/ML applications in computational fluid dynamics.</li>
+<li><strong>NASA High Lift Prediction Workshop (HLPW)</strong>: Multi-phase workshop datasets featuring high-lift aircraft configurations with comprehensive experimental validation data, CAD geometries, and CFD solutions for aerodynamic modeling and validation.</li>
+<li><strong>High-Speed TBL DNS DB</strong>: Specialized database of Direct Numerical Simulation data for compressible turbulent boundary layers, providing detailed flow field information for high-speed aerodynamic applications and turbulence model development.</li>
+<li><strong>ML Turbulence (Kaggle)</strong>: Community-contributed dataset featuring RANS Reynolds stress tensor data with ground truth labels, providing a standardized benchmark for machine learning approaches to turbulence modeling.</li>
+</ul>
+<h4 id="computational-datasets-7-datasets_1">🧮 Computational Datasets (7 datasets)<a class="headerlink" href="#computational-datasets-7-datasets_1" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>PubChemQCR</strong>: A massive dataset of molecular relaxation trajectories for ~3.5 million small molecules, containing over 300 million conformations with energy and force labels. It is the largest public dataset of its kind, designed to accelerate the development of machine learning interatomic potentials (MLIPs).</li>
+<li><strong>MP-ALOE</strong>: Nearly 1 million DFT calculations using the accurate r2SCAN meta-generalized gradient approximation, covering 89 elements. Created using active learning and primarily consisting of off-equilibrium structures, MP-ALOE is designed for training universal machine learning interatomic potentials (UMLIPs) with strong performance on thermochemical properties, force prediction, and physical soundness under extreme conditions.</li>
+<li><strong>Alexandria DB</strong>: Massive computational materials database containing over 5 million DFT calculations using PBE functional for 1D-3D inorganic materials. Provides OPTIMADE-compliant API access and LMDB format for high-performance materials screening and property prediction workflows.</li>
+<li><strong>Quantum-Chemical Bonding DB (LOBSTER)</strong>: Specialized dataset providing detailed bonding analysis for 1,520 solid-state compounds using LOBSTER methodology. Enables understanding of chemical bonding in crystalline materials through projected crystal orbital Hamilton populations and related descriptors.</li>
+<li><strong>MultixcQM9 &amp; SPICE (OpenQDC)</strong>: Enhanced quantum chemistry datasets within the OpenQDC framework. MultixcQM9 provides multi-exchange correlation functional data for 133k small molecules, while SPICE offers 1 million conformers with energies and forces for drug-like molecules, both optimized for machine learning applications.</li>
+<li><strong>Matbench v0.1 &amp; Discovery</strong>: Comprehensive benchmarking suites for materials property prediction featuring 13 standardized tasks across 10 datasets. Matbench Discovery specifically targets stability prediction, thermal conductivity, and structure generation with rigorous evaluation protocols.</li>
+<li><strong>Materials Cloud Archives</strong>: Centralized repository of over 1,000 computational datasets from various DFT and molecular dynamics workflows. Provides standardized access to diverse materials science calculations with comprehensive metadata and version control.</li>
+</ul>
+<h4 id="llm-training-datasets-5-datasets_1">📚 LLM Training Datasets (5 datasets)<a class="headerlink" href="#llm-training-datasets-5-datasets_1" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>LLM-EO (Evolutionary Optimization)</strong>: A framework that integrates LLMs into evolutionary algorithms for optimizing transition metal complexes. This approach leverages the chemical knowledge of LLMs to surpass traditional genetic algorithms, enabling flexible, multi-objective optimization without complex mathematical formulations.</li>
+<li><strong>Flavor Analysis and Recognition Transformer</strong>: A state-of-the-art machine learning model dataset for predicting molecular taste from chemical structures. Built on ChemBERTa transformer architecture, it classifies molecules across four taste categories (sweet, bitter, sour, umami) with &gt;91% accuracy, enabling interpretability through gradient-based visualizations and applications in flavor compound discovery and rational food design.</li>
+<li><strong>SCQA (Solar Cell QA)</strong>: Domain-specific question-answering dataset containing 47,268 QA pairs about solar cell properties, auto-generated using ChemDataExtractor. Fine-tuning language models on this dataset achieves F1-scores exceeding general-English QA datasets by 10-20%, demonstrating the value of domain-specific training data for specialized scientific applications.</li>
+<li><strong>ScienceQA</strong>: Comprehensive K-12 science education dataset with 21,208 multimodal multiple-choice questions including lectures and explanations. Supports development of educational AI systems and scientific reasoning capabilities in language models.</li>
+<li><strong>SciBench</strong>: College-level scientific problem-solving benchmark covering mathematics, chemistry, and physics with both open and closed evaluation sets. Enables systematic assessment of LLM performance on advanced scientific reasoning tasks.</li>
+</ul>
+<h4 id="experimental-datasets-4-datasets">🧪 Experimental Datasets (4 datasets)<a class="headerlink" href="#experimental-datasets-4-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>Anion Solvation DB</strong>: Comprehensive compilation of 26,000+ solvation properties including 8,241 experimental pKa values across 8 solvents, 5,536 computed gas-phase acidities, and over 12,000 solvation energies for anions and neutral compounds computed using COSMO-RS. Bridges experimental and computational approaches for understanding anion behavior in different solvation environments.</li>
+<li><strong>BigSolDB</strong>: Extensive experimental solubility database containing 54,273 measured solubility values across temperature range 243.15-403.15 K in various organic solvents and water. Features diverse chemical space coverage with interactive t-SNE exploration tool and comprehensive statistical analysis for QSPR model development.</li>
+<li><strong>StarryData2</strong>: Large-scale experimental properties dataset from Figshare spanning 2023-2024, providing comprehensive experimental measurements across diverse materials and chemical systems for machine learning model validation and training.</li>
+<li><strong>CRIPT Polymer Data</strong>: Community-driven polymer database featuring synthesis procedures, characterization data, and properties. Enables standardized data sharing and collaborative research in polymer science through structured JSON API access.</li>
+</ul>
+<h3 id="june-2025">June 2025<a class="headerlink" href="#june-2025" title="Permanent link">¤</a></h3>
+<p>Added 28 new high-quality datasets spanning polymer science, drug discovery, carbon materials, spectroscopy, MOF databases, foundation model training, and materials knowledge bases:</p>
+<h4 id="computational-datasets-15-datasets">🧮 Computational Datasets (15 datasets)<a class="headerlink" href="#computational-datasets-15-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>NeurIPS Open Polymer Prediction 2025</strong>: Kaggle competition dataset for predicting 5 key polymer properties (Tg, FFV, Tc, density, Rg) from SMILES structures using MD simulation ground truth. Includes ~1,500 test polymers.</li>
+<li><strong>Carbon Data</strong>: 22.9 million atom dataset with synthetic energy labels from C-GAP-17 potential, featuring 546 carbon trajectories across diverse densities and temperatures. Captures nanotubes, graphitic films, diamond, and amorphous carbon environments.</li>
+<li><strong>MSR-ACC/TAE25</strong>: Microsoft Research's comprehensive dataset of 76,879 total atomization energies computed at CCSD(T)/CBS level using W1-F12 protocol. Exhaustively covers chemical space for elements up to argon with sub-chemical accuracy (±1 kcal/mol).</li>
+<li><strong>DFT Solvation Energy Dataset</strong>: 651,290 computed solvation energies for 130,258 molecules from QM9 dataset across 5 solvents (acetone, ethanol, acetonitrile, DMSO, water). Achieves 0.5 kcal/mol MAE for small molecules with accompanying ML models and web interface.</li>
+<li><strong>MD Simulated Monomer Properties</strong>: GPU-accelerated molecular dynamics dataset of thermodynamic properties for 410 molecules, generated through active learning pipeline. Includes validation against experimental data and automated simulation workflow.</li>
+<li><strong>Multimodal Spectroscopic Dataset</strong>: Comprehensive spectroscopic dataset with simulated 1H-NMR, 13C-NMR, HSQC-NMR, Infrared, and Mass spectra for 790k molecules from patent reactions. Enables multimodal foundation model development for structure elucidation and functional group prediction.</li>
+<li><strong>QMugs</strong>: 665k drug-like molecules with ~2M conformers, featuring quantum mechanical properties at both semi-empirical (GFN2-xTB) and DFT (ωB97X-D/def2-SVP) levels.</li>
+<li><strong>C2DB (Computational 2D Materials Database)</strong>: ~4,000 two-dimensional materials with computed structural, electronic, magnetic, and optical properties.</li>
+<li><strong>ANI-1x / ANI-1ccx</strong>: 5 million DFT and 500k CCSD(T) calculations for organic molecules, supporting machine learning potential development.</li>
+<li><strong>CoRE MOF 2019</strong>: 14,763 computation-ready metal-organic frameworks with solvent and charge balancing, suitable for high-throughput screening.</li>
+<li><strong>QMOF Database</strong>: Comprehensive database of quantum-chemical properties for 20,000+ metal-organic frameworks derived from high-throughput periodic density functional theory calculations.</li>
+<li><strong>Catalysis-Hub Surface Reactions</strong>: Over 100,000 adsorption and reaction energies on catalytic surfaces, accessible via a Python/GraphQL API.</li>
+<li><strong>ODAC23 (Open DAC 2023)</strong>: 38 million DFT calculations of CO₂/H₂O adsorption on 8,400 MOFs, aimed at direct-air-capture sorbent discovery.</li>
+<li><strong>MOFX-DB</strong>: Over 3 million simulated adsorption data points across 160,000 MOFs and 286 zeolites for various gases.</li>
+<li>Enhanced <strong>QCML</strong> dataset entry with more comprehensive description of coverage and properties</li>
+</ul>
+<h4 id="experimental-datasets-5-datasets_1">🧪 Experimental Datasets (5 datasets)<a class="headerlink" href="#experimental-datasets-5-datasets_1" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>SAIR (Structurally Augmented IC50 Repository)</strong>: Largest public protein–ligand binding dataset with over 1 million complexes and 5.2 million cofolded 3D structures (2.5TB total). Combines experimental binding affinities from ChEMBL/BindingDB with Boltz-1x predicted structures.</li>
+<li><strong>CoRE MOF 2024</strong>: Updated database of over 40,000 experimentally reported metal-organic frameworks from literature through early 2024. Includes pre-computed material properties for high-throughput material-process screening and carbon-capture applications.</li>
+<li><strong>HTEM-DB (High-Throughput Experimental Materials Database)</strong>: More than 140,000 composition–process–property data points from combinatorial sputtering experiments, with optical, electrical, and structural measurements.</li>
+<li><strong>OCx24 (Open Catalyst Experiments 2024)</strong>: 572 synthesized catalyst inks evaluated with matched XRF/XRD and DFT adsorption energies, bridging the gap between simulation and laboratory data.</li>
+<li><strong>Khazana / Polymer Genome</strong>: Approximately 20,000 polymers with DFT-calculated properties and experimental dielectric data, supporting machine learning on soft materials.</li>
+</ul>
+<h4 id="llm-training-datasets-5-datasets_2">📚 LLM Training Datasets (5 datasets)<a class="headerlink" href="#llm-training-datasets-5-datasets_2" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>MolTextNet</strong>: 2.5 million high-quality molecule-text pairs from ChEMBL35, featuring GPT-4o-mini generated descriptions 10x longer than existing datasets. Integrates structural features, computed properties, bioactivity data, and synthetic complexity for multimodal molecular modeling.</li>
+<li><strong>MolOpt-Instructions</strong>: 1.18 million instruction-based molecule optimization tasks for fine-tuning LLMs on drug discovery. Supports interactive human-machine dialogue for molecule optimization through the DrugAssist framework, enabling expert feedback integration and iterative refinement.</li>
+<li><strong>TextEdge</strong>: Benchmark dataset for predicting crystal properties from natural language text descriptions. Demonstrates superior performance of LLM-based approaches over traditional GNN methods, with improvements of 8% on band gap prediction and 65% on unit cell volume prediction.</li>
+<li><strong>LAMBench-TrainingSet-v1</strong>: Massive training dataset for Large Atom Models (LAMs) containing 19.8 million valid structures from the OpenLAM Initiative. Includes 1 million structures on the convex hull for advancing generative modeling and materials science applications.</li>
+<li><strong>LLM4Mat</strong>: Comprehensive benchmark dataset for evaluating LLMs in materials property prediction, containing 1.9M crystal structures from 10 data sources with 45 distinct properties. Features three input modalities (crystal composition, CIF, text description) with 4.7M, 615.5M, and 3.1B tokens respectively.</li>
+</ul>
+<h4 id="literature-mined-text-datasets-3-datasets">📖 Literature-mined &amp; Text Datasets (3 datasets)<a class="headerlink" href="#literature-mined-text-datasets-3-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>MatSciKB</strong>: Comprehensive materials science knowledge base with 38,469 curated entries across 16 categories. Integrates ArXiv papers (20,384), Wikipedia articles (3,620), textbooks (1,930), datasets (10,473), formulas (57), and GPT-generated examples (2,005) with efficient CRUD operations for research applications.</li>
+<li><strong>ChemRxivQuest</strong>: 970 curated question–answer pairs spanning 17 chemistry subfields, designed for retrieval-augmented generation and factuality assessments.</li>
+<li><strong>USPTO-Lowe Reactions (1976–2016)</strong>: 1.8 million atom-mapped reactions extracted from US patents, serving as a benchmark for reaction prediction and retrosynthesis models.</li>
+</ul>
+<h4 id="enhanced-literature-benchmark-resources-2-datasets">📚 Enhanced Literature &amp; Benchmark Resources (2 datasets)<a class="headerlink" href="#enhanced-literature-benchmark-resources-2-datasets" title="Permanent link">¤</a></h4>
+<ul>
+<li><strong>Matbench (metadata/text tasks)</strong>: Extended benchmarking suite providing 13 standardized tasks for text-based and metadata-driven materials property prediction. Enables systematic evaluation of natural language processing approaches in materials science applications.</li>
+<li><strong>OpenQDC Hub</strong>: Comprehensive quantum chemistry database aggregating 1.5 billion molecular geometries and quantum mechanical properties. Provides unified Python API access to diverse quantum chemistry datasets with standardized formats for large-scale machine learning applications.</li>
+</ul>
+<p>⸻</p>
+<h3 id="earlier-updates">Earlier Updates<a class="headerlink" href="#earlier-updates" title="Permanent link">¤</a></h3>
+<p>For changes made earlier than the changelog entries, please see the <a href="https://github.com/your-repo/commits">repository commit history</a>.</p>
+<p>Credit by: @<a href="https://github.com/blaiszik/awesome-matchem-datasets">github.com/blaiszik/awesome-matchem-datasets</a></p>
+
+
+  
+
+
+
+  
+
+
+  
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="thangckt/thangckt.github.io"
+    data-repo-id="R_kgDOIUzd-g"
+    data-category="[ENTER CATEGORY NAME HERE]"
+    data-category-id="[ENTER CATEGORY ID HERE]"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="dark"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden>
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+        
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H9V6h11Z"/></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-5 14H4V6h11Z"/></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../../01/20/best-of-machine-learning-with-python/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Best-of Machine Learning with Python">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Best-of Machine Learning with Python
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../materials--chemistry-datasets/" class="md-footer__link md-footer__link--next" aria-label="Next: Materials &amp; Chemistry Datasets">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Materials & Chemistry Datasets
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 <a href="https://thangckt.github.io">thangckt</a>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "search.suggest", "content.action.edit", "navigation.footer", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.header"], "search": "../../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.d67e244a.min.js"></script>
+      
+        <script src="../../../../../1thang_js/page_logVisitor.js"></script>
+      
+    
+  </body>
+</html>
