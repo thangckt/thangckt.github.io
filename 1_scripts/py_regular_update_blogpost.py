@@ -144,21 +144,21 @@ def main():
         source="https://github.com/WanyuGroup/AI-for-Crystal-Materials",
     )
 
-    update_post(
-        url="https://raw.githubusercontent.com/heilcheng/awesome-agent-skills/refs/heads/main/README.md",
-        title="Awesome Agent Skills",
-        date_post="2026-03-05",
-        label=["Agent", "AI", "LLM"],
-        source="https://github.com/heilcheng/awesome-agent-skills",
-    )
+    # update_post(
+    #     url="https://raw.githubusercontent.com/heilcheng/awesome-agent-skills/refs/heads/main/README.md",
+    #     title="Awesome Agent Skills",
+    #     date_post="2026-03-05",
+    #     label=["Agent", "AI", "LLM"],
+    #     source="https://github.com/heilcheng/awesome-agent-skills",
+    # )
 
-    update_post(
-        url="https://raw.githubusercontent.com/ComposioHQ/awesome-claude-skills/refs/heads/master/README.md",
-        title="Awesome Claude Skills",
-        date_post="2026-03-07",
-        label=["Agent", "AI", "LLM"],
-        source="https://github.com/ComposioHQ/awesome-claude-skills",
-    )
+    # update_post(
+    #     url="https://raw.githubusercontent.com/ComposioHQ/awesome-claude-skills/refs/heads/master/README.md",
+    #     title="Awesome Claude Skills",
+    #     date_post="2026-03-07",
+    #     label=["Agent", "AI", "LLM"],
+    #     source="https://github.com/ComposioHQ/awesome-claude-skills",
+    # )
 
     return
 
