@@ -3524,7 +3524,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              25 min read
+                              26 min read
                             
                           </span>
                         </div>
@@ -3553,8 +3553,11 @@
 
 
 <p># Awesome Python</p>
-<p>An opinionated list of Python frameworks, libraries, tools, and resources.</p>
+<p>An opinionated guide to the best Python frameworks, libraries, tools, and resources.</p>
 <h1 id="sponsors"><strong>Sponsors</strong><a class="headerlink" href="#sponsors" title="Permanent link">¤</a></h1>
+<ul>
+<li><strong><a href="https://pyrun.dev">pyr</a></strong>: Zero-config Python project manager. Bootstraps its own runtime, app-convention, and working imports - out the box.</li>
+</ul>
 <blockquote>
 <p>The <strong><a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/10" title="GitHub Issue: squidfunk/mkdocs-material #10">#10</a> most-starred repo on GitHub</strong>. Put your product in front of Python developers. <a href="SPONSORSHIP.md">Become a sponsor</a>.</p>
 </blockquote>
@@ -3620,6 +3623,7 @@
 <li><a href="#devops-tools">DevOps Tools</a></li>
 <li><a href="#distributed-computing">Distributed Computing</a></li>
 <li><a href="#task-queues">Task Queues</a></li>
+<li><a href="#messaging">Messaging</a></li>
 <li><a href="#job-schedulers">Job Schedulers</a></li>
 <li><a href="#logging">Logging</a></li>
 <li><a href="#network-virtualization">Network Virtualization</a></li>
@@ -3663,6 +3667,7 @@
 <ul>
 <li><a href="#cryptography">Cryptography</a></li>
 <li><a href="#penetration-testing">Penetration Testing</a></li>
+<li><a href="#web-security">Web Security</a></li>
 </ul>
 <p><strong>Miscellaneous</strong></p>
 <ul>
@@ -3678,13 +3683,17 @@
 <li>Agent Skills</li>
 <li><a href="https://github.com/vintasoftware/django-ai-plugins">django-ai-plugins</a> - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.</li>
 <li><a href="https://github.com/getsentry/skills">sentry-skills</a> - Python-focused engineering skills for code review, debugging, and backend workflows.</li>
-<li><a href="https://github.com/trailofbits/skills">trailofbits-skills</a> - Python-friendly security skills for auditing, testing, and safer backend development.</li>
+<li><a href="https://github.com/trailofbits/skills">trailofbits-skills</a> - Python-friendly security skills for auditing, testing, and safer backend development. Also <a href="https://github.com/trailofbits/skills-curated">skills-curated</a>.</li>
 <li>Orchestration</li>
+<li><a href="https://github.com/ag2ai/ag2">ag2</a> - An open-source AgentOS for multi-agent orchestration and building agentic AI systems.</li>
 <li><a href="https://github.com/microsoft/autogen">autogen</a> - A programming framework for building agentic AI applications.</li>
+<li><a href="https://github.com/bubbuild/bub">bub</a> - A lightweight, hook-first Python framework for channel-native agents that live alongside people.</li>
 <li><a href="https://github.com/crewAIInc/crewAI">crewai</a> - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.</li>
 <li><a href="https://github.com/stanfordnlp/dspy">dspy</a> - A framework for programming, not prompting, language models.</li>
 <li><a href="https://github.com/nousresearch/hermes-agent">hermes-agent</a> - An adaptive AI agent framework that grows with you.</li>
 <li><a href="https://github.com/langchain-ai/langchain">langchain</a> - Building applications with LLMs through composability.</li>
+<li><a href="https://github.com/openai/openai-agents-python">openai-agents</a> - OpenAI's framework for building and managing AI agents.</li>
+<li><a href="https://github.com/Einsia/OpenChronicle">OpenChronicle</a> - Open-source, local-first memory for any tool-capable LLM agent.</li>
 <li><a href="https://github.com/pydantic/pydantic-ai">pydantic-ai</a> - A Python agent framework for building generative AI applications with structured schemas.</li>
 <li><a href="https://github.com/TauricResearch/TradingAgents">TradingAgents</a> - A multi-agents LLM financial trading framework.</li>
 <li>Data Layer</li>
@@ -3693,10 +3702,15 @@
 <li><a href="https://github.com/mem0ai/mem0">mem0</a> - An intelligent memory layer for AI agents enabling personalized interactions.</li>
 <li>Pre-trained Models and Inference</li>
 <li><a href="https://github.com/huggingface/diffusers">diffusers</a> - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.</li>
+<li><a href="https://github.com/ml-explore/mlx-lm">mlx-lm</a> - Run and fine-tune large language models on Apple Silicon with MLX.</li>
 <li><a href="https://github.com/sgl-project/sglang">sglang</a> - A high-performance serving framework for large language models and multimodal models.</li>
 <li><a href="https://github.com/huggingface/transformers">transformers</a> - A framework that lets you easily use pre-trained transformer models for NLP, vision, and audio tasks.</li>
 <li><a href="https://github.com/unslothai/unsloth">unsloth</a> - A library for faster LLM fine-tuning and training with reduced memory usage.</li>
 <li><a href="https://github.com/vllm-project/vllm">vllm</a> - A high-throughput and memory-efficient inference and serving engine for LLMs.</li>
+<li>Speech</li>
+<li><a href="https://github.com/openai/whisper">openai-whisper</a> - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.</li>
+<li><a href="https://github.com/microsoft/VibeVoice">vibevoice</a> - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.</li>
+<li><a href="https://github.com/OpenBMB/VoxCPM">voxcpm</a> - A tokenizer-free text-to-speech foundation model for multilingual speech generation and voice cloning.</li>
 </ul>
 <h2 id="deep-learning">Deep Learning<a class="headerlink" href="#deep-learning" title="Permanent link">¤</a></h2>
 <p><em>Frameworks for Neural Networks and Deep Learning. Also see <a href="https://github.com/ChristosChristofidis/awesome-deep-learning">awesome-deep-learning</a>.</em></p>
@@ -3720,6 +3734,7 @@
 <li><a href="https://github.com/scikit-learn/scikit-learn">scikit-learn</a> - The most popular Python library for Machine Learning with extensive documentation and community support.</li>
 <li><a href="https://github.com/apache/spark">spark.ml</a> - <a href="https://spark.apache.org/">Apache Spark</a>'s scalable <a href="https://spark.apache.org/docs/latest/ml-guide.html">Machine Learning library</a> for distributed computing.</li>
 <li><a href="https://github.com/Diyago/Tabular-data-generation">TabGAN</a> - Synthetic tabular data generation using GANs, Diffusion Models, and LLMs.</li>
+<li><a href="https://github.com/google-research/timesfm">timesfm</a> - A pretrained foundation model from Google Research for time-series forecasting.</li>
 <li><a href="https://github.com/dmlc/xgboost">xgboost</a> - A scalable, portable, and distributed gradient boosting library.</li>
 </ul>
 <h2 id="natural-language-processing">Natural Language Processing<a class="headerlink" href="#natural-language-processing" title="Permanent link">¤</a></h2>
@@ -3732,6 +3747,7 @@
 <li><a href="https://github.com/stanfordnlp/stanza">stanza</a> - The Stanford NLP Group's official Python library, supporting 60+ languages.</li>
 <li>Chinese</li>
 <li><a href="https://github.com/fighting41love/funNLP">funnlp</a> - A collection of tools and datasets for Chinese NLP.</li>
+<li><a href="https://github.com/fxsjy/jieba">jieba</a> - The most popular Chinese text segmentation library.</li>
 </ul>
 <h2 id="computer-vision">Computer Vision<a class="headerlink" href="#computer-vision" title="Permanent link">¤</a></h2>
 <p><em>Libraries for Computer Vision.</em></p>
@@ -3755,7 +3771,7 @@
 <li>Synchronous</li>
 <li><a href="https://github.com/bottlepy/bottle">bottle</a> - A fast and simple micro-framework distributed as a single file with no dependencies.</li>
 <li><a href="https://github.com/django/django">django</a> - The most popular web framework in Python.<ul>
-<li><a href="https://github.com/shahraizali/awesome-django">awesome-django</a></li>
+<li><a href="https://github.com/wsvincent/awesome-django">awesome-django</a></li>
 </ul>
 </li>
 <li><a href="https://github.com/pallets/flask">flask</a> - A microframework for Python.<ul>
@@ -3783,6 +3799,7 @@
 <p><em>Libraries for building RESTful and GraphQL APIs.</em></p>
 <ul>
 <li>Django</li>
+<li><a href="https://github.com/wemake-services/django-modern-rest">django-modern-rest</a> - Modern REST with speed, types, async, <code>msgspec</code>, <code>pydantic</code> and other goodies!</li>
 <li><a href="https://github.com/vitalik/django-ninja">django-ninja</a> - Fast, Django REST framework based on type hints and Pydantic.</li>
 <li><a href="https://github.com/encode/django-rest-framework">django-rest-framework</a> - A powerful and flexible toolkit to build web APIs.</li>
 <li><a href="https://github.com/strawberry-graphql/strawberry-django">strawberry-django</a> - Strawberry GraphQL integration with Django.</li>
@@ -3982,6 +3999,7 @@
 <li>General</li>
 <li><a href="https://github.com/aws/aws-sdk-pandas">aws-sdk-pandas</a> - Pandas on AWS.</li>
 <li><a href="https://github.com/simonw/datasette">datasette</a> - An open source multi-tool for exploring and publishing data.</li>
+<li><a href="https://github.com/Data-Centric-AI-Community/data-profiling">data-profiling</a> - Generate detailed data profiling reports for pandas DataFrames.</li>
 <li><a href="https://github.com/desbordante/desbordante-core/">desbordante</a> - An open source data profiler for complex pattern discovery.</li>
 <li><a href="https://github.com/ibis-project/ibis">ibis</a> - A portable Python dataframe library with a single API for 20+ backends.</li>
 <li><a href="https://github.com/modin-project/modin">modin</a> - A drop-in pandas replacement that scales workflows by changing a single line of code.</li>
@@ -4116,7 +4134,7 @@
 <li><a href="https://github.com/python-rope/rope">rope</a> - Rope is a python refactoring library.</li>
 <li>Type Checkers - <a href="https://github.com/typeddjango/awesome-python-typing">awesome-python-typing</a></li>
 <li><a href="https://github.com/python/mypy">mypy</a> - Check variable types during compile time.</li>
-<li><a href="https://github.com/facebook/pyre-check">pyre-check</a> - Performant type checking.</li>
+<li><a href="https://github.com/facebook/pyrefly">pyrefly</a> - A fast type checker and language server for Python.</li>
 <li><a href="https://github.com/astral-sh/ty">ty</a> - An extremely fast Python type checker and language server.</li>
 <li><a href="https://github.com/python/typeshed">typeshed</a> - Collection of library stubs for Python, with static types.</li>
 <li>Type Annotations Generators</li>
@@ -4124,11 +4142,14 @@
 <li><a href="https://github.com/google/pytype">pytype</a> - Pytype checks and infers types for Python code - without requiring type annotations.</li>
 </ul>
 <h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">¤</a></h2>
-<p><em>Libraries for testing codebases and generating test data.</em></p>
+<p><em>Libraries for testing codebases and generating test data. Also see <a href="https://github.com/cleder/awesome-python-testing">awesome-python-testing</a>.</em></p>
 <ul>
 <li>Frameworks</li>
 <li><a href="https://github.com/HypothesisWorks/hypothesis">hypothesis</a> - Hypothesis is an advanced Quickcheck style property based testing library.</li>
-<li><a href="https://github.com/pytest-dev/pytest">pytest</a> - A mature full-featured Python testing tool.</li>
+<li><a href="https://github.com/pytest-dev/pytest">pytest</a> - A mature full-featured Python testing tool.<ul>
+<li><a href="https://github.com/augustogoulart/awesome-pytest">awesome-pytest</a></li>
+</ul>
+</li>
 <li><a href="https://github.com/robotframework/robotframework">robotframework</a> - A generic test automation framework.</li>
 <li><a href="https://github.com/scanapi/scanapi">scanapi</a> - Automated Testing and Documentation for your REST API.</li>
 <li><a href="https://docs.python.org/3/library/unittest.html">unittest</a> - (Python standard library) Unit testing framework.</li>
@@ -4238,6 +4259,11 @@
 <li><a href="https://github.com/Bogdanp/dramatiq">dramatiq</a> - A fast and reliable background task processing library for Python 3.</li>
 <li><a href="https://github.com/coleifer/huey">huey</a> - Little multi-threaded task queue.</li>
 <li><a href="https://github.com/rq/rq">rq</a> - Simple job queues for Python.</li>
+</ul>
+<h2 id="messaging">Messaging<a class="headerlink" href="#messaging" title="Permanent link">¤</a></h2>
+<p><em>Libraries for working with message brokers and event streaming.</em></p>
+<ul>
+<li><a href="https://github.com/ag2ai/faststream">faststream</a> - A framework for building asynchronous services over Apache Kafka, RabbitMQ, NATS, MQTT and Redis.</li>
 </ul>
 <h2 id="job-schedulers">Job Schedulers<a class="headerlink" href="#job-schedulers" title="Permanent link">¤</a></h2>
 <p><em>Libraries for scheduling jobs.</em></p>
@@ -4497,6 +4523,7 @@
 <h2 id="environment-management">Environment Management<a class="headerlink" href="#environment-management" title="Permanent link">¤</a></h2>
 <p><em>Libraries for Python version and virtual environment management.</em></p>
 <ul>
+<li><a href="https://github.com/Tlaloc-Es/killpy">KillPy</a> - Analyze, detect, and clean unused Python environments and pipx packages.</li>
 <li><a href="https://github.com/pyenv/pyenv">pyenv</a> - Simple Python version management.</li>
 <li><a href="https://github.com/pyenv-win/pyenv-win">pyenv-win</a> - Pyenv for Windows.</li>
 <li><a href="https://github.com/astral-sh/uv">uv</a> - An extremely fast Python version, package and project manager, written in Rust.</li>
@@ -4551,6 +4578,11 @@
 <li><a href="https://github.com/sherlock-project/sherlock">sherlock</a> - Hunt down social media accounts by username across social networks.</li>
 <li><a href="https://github.com/sqlmapproject/sqlmap">sqlmap</a> - Automatic SQL injection and database takeover tool.</li>
 </ul>
+<h2 id="web-security">Web Security<a class="headerlink" href="#web-security" title="Permanent link">¤</a></h2>
+<p><em>Libraries for application-layer web security.</em></p>
+<ul>
+<li><a href="https://github.com/TypeError/secure">secure</a> - HTTP security headers for Python web applications with ASGI and WSGI middleware.</li>
+</ul>
 <p><strong>Miscellaneous</strong></p>
 <h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">¤</a></h2>
 <p><em>Libraries for programming with hardware.</em></p>
@@ -4589,6 +4621,10 @@
 <li><a href="https://pythonbytes.fm">Python Bytes</a></li>
 <li><a href="https://talkpython.fm/">Talk Python To Me</a></li>
 <li><a href="https://realpython.com/podcasts/rpp/">The Real Python Podcast</a></li>
+</ul>
+<h2 id="websites">Websites<a class="headerlink" href="#websites" title="Permanent link">¤</a></h2>
+<ul>
+<li><a href="https://pydevtools.com/">Python Developer Tooling Handbook</a> - Comprehensive guide to modern Python developer tools covering package management, linting, type checking, testing, and more.</li>
 </ul>
 <h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">¤</a></h1>
 <p>Your contributions are always welcome! Please take a look at the <a href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md">contribution guidelines</a> first.</p>
