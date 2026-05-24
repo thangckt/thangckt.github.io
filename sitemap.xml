@@ -41,6 +41,11 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://thangckt.github.io/tv/</loc>
+        <lastmod>2026-05-24</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://thangckt.github.io/blog/</loc>
         <lastmod>2026-05-24</lastmod>
         <changefreq>daily</changefreq>
@@ -322,11 +327,6 @@
     </url>
     <url>
         <loc>https://thangckt.github.io/odd/</loc>
-        <lastmod>2026-05-24</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://thangckt.github.io/odd/tv/</loc>
         <lastmod>2026-05-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
