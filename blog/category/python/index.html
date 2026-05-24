@@ -16,7 +16,7 @@
         <link rel="prev" href="../ml/">
       
       
-        <link rel="next" href="../science/">
+        <link rel="next" href="../red-hat/">
       
       
         
@@ -3114,6 +3114,8 @@
       
         
       
+        
+      
     
     
     
@@ -3483,6 +3485,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../red-hat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Red Hat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="../science/" class="md-nav__link">
         
   
@@ -3696,6 +3728,7 @@
             
               <a href="../cluster/" class="md-meta__link">Cluster</a>, 
               <a href="../fedora/" class="md-meta__link">Fedora</a>, 
+              <a href="../red-hat/" class="md-meta__link">Red Hat</a>, 
               <a href="../linux/" class="md-meta__link">Linux</a>, 
               <a href="./" class="md-meta__link">Python</a></li>
         
@@ -3715,15 +3748,15 @@
   <div class="md-post__content md-typeset">
     <h2 id="my-foss"><a class="toclink" href="../../2025/06/05/hello-foss/">My FOSS</a></h2>
 <p>Thank you, FOSS!</p>
-<p>As a way to give back to the FOSS community, I have created and maintained a Fedora <code>Copr</code> repository, <a href="https://copr.fedorainfracloud.org/coprs/thangckt/foss">coprs/thangckt</a>, to keep up-to-date builds of various cutting-edge packages for the latest <code>RedHat</code> based distros.</p>
+<p>As a way to give back to the FOSS community, I have created and maintained a <code>Copr</code> repository for scientific packages, <a href="https://copr.fedorainfracloud.org/coprs/thangckt/foss">coprs/thangckt/foss</a>, to keep up-to-date builds of various cutting-edge packages for the latest <code>RedHat</code> based distros.</p>
 <p>The repository includes even essential daily-use packages, such as mail client, office stuff, to critical scientific applications like Ovito, Zotero, VScodium, SSH client, and many others.</p>
 <p>To install the packages, simply enable the <code>Copr</code> repository:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>copr<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>thangckt/foss
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>ovito<span class="w"> </span>zotero<span class="w">  </span><span class="c1"># or other packages</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>copr<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>thangckt/foss
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>ovito<span class="w"> </span>zotero<span class="w">  </span><span class="c1"># or other packages</span>
 </span></code></pre></div>
 <p>Or add repo file:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>config-manager<span class="w"> </span>addrepo<span class="w"> </span>--overwrite<span class="w"> </span>--from-repofile<span class="o">=</span>https://copr.fedorainfracloud.org/coprs/thangckt/foss/repo/fedora-42/thangckt-thang_foss-fedora-42.repo
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>ovito
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>config-manager<span class="w"> </span>addrepo<span class="w"> </span>--overwrite<span class="w"> </span>--from-repofile<span class="o">=</span>https://copr.fedorainfracloud.org/coprs/thangckt/foss/repo/fedora-42/thangckt-thang_foss-fedora-42.repo
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>ovito
 </span></code></pre></div>
 <p>Some available packages:</p>
 <table>
@@ -3820,14 +3853,14 @@ minimizes memory usage and dependencies.</p>
 <h4 id="extension-settings_1"><a class="toclink" href="../../2025/06/05/hello-foss/#extension-settings_1">Extension Settings</a></h4>
 <ul>
 <li><code>align.regex.templates</code>: Templates for regular expressions used for alignment. The default built-in templates are:
-<div class="language-json highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">{</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="nt">&quot;align.regex.templates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">        </span><span class="nt">&quot;Multiple signs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;=|,|:&quot;</span><span class="p">,</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">        </span><span class="nt">&quot;Trailing comments #&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(?&lt;=\\S.*)\\s+#&quot;</span><span class="p">,</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">        </span><span class="nt">&quot;Trailing comments //&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(?&lt;=\\S.*)\\s+//&quot;</span><span class="p">,</span>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">        </span><span class="nt">&quot;Trailing comments %&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(?&lt;=\\S.*)\\s+%&quot;</span><span class="p">,</span>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="p">}</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="nt">&quot;align.regex.templates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">        </span><span class="nt">&quot;Multiple signs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;=|,|:&quot;</span><span class="p">,</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">        </span><span class="nt">&quot;Trailing comments #&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(?&lt;=\\S.*)\\s+#&quot;</span><span class="p">,</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="nt">&quot;Trailing comments //&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(?&lt;=\\S.*)\\s+//&quot;</span><span class="p">,</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="nt">&quot;Trailing comments %&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(?&lt;=\\S.*)\\s+%&quot;</span><span class="p">,</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="p">}</span>
 </span></code></pre></div></li>
 </ul>
 <h4 id="usage_1"><a class="toclink" href="../../2025/06/05/hello-foss/#usage_1">Usage</a></h4>
@@ -26662,13 +26695,13 @@ FieldSchNet provides a deep neural network for modeling the interaction of molec
         
         
           
-          <a href="../science/" class="md-footer__link md-footer__link--next" aria-label="Next: Science">
+          <a href="../red-hat/" class="md-footer__link md-footer__link--next" aria-label="Next: Red Hat">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Science
+                Red Hat
               </div>
             </div>
             <div class="md-footer__button md-icon">

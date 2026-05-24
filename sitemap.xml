@@ -416,6 +416,11 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://thangckt.github.io/blog/category/red-hat/</loc>
+        <lastmod>2026-05-24</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://thangckt.github.io/blog/category/python/</loc>
         <lastmod>2026-05-24</lastmod>
         <changefreq>daily</changefreq>
