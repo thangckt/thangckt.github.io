@@ -3549,7 +3549,7 @@
           
           <li class="md-meta__item">
             
-              1 min read
+              3 min read
             
           </li>
         
@@ -3560,19 +3560,68 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="my-foss"><a class="toclink" href="../../2025/06/05/hello-foss/">My FOSS</a></h2>
-<p>I finally escaped from the telemetry secret agents :)</p>
 <p>Thank you, FOSS!</p>
 <p>As a way to give back to the FOSS community, I have created and maintained a Fedora <code>Copr</code> repository, <a href="https://copr.fedorainfracloud.org/coprs/thangckt/foss">coprs/thangckt</a>, to keep up-to-date builds of various cutting-edge packages for the latest <code>RedHat</code> based distros.</p>
 <p>The repository includes even essential daily-use packages, such as mail client, office stuff, to critical scientific applications like Ovito, Zotero, VScodium, SSH client, and many others.</p>
 <p>To install the packages, simply enable the <code>Copr</code> repository:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>copr<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>thangckt/foss
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>ovito<span class="w"> </span>zotero<span class="w">  </span><span class="c1"># or other packages</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>copr<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>thangckt/foss
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>ovito<span class="w"> </span>zotero<span class="w">  </span><span class="c1"># or other packages</span>
 </span></code></pre></div>
 <p>Or add repo file:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>config-manager<span class="w"> </span>addrepo<span class="w"> </span>--overwrite<span class="w"> </span>--from-repofile<span class="o">=</span>https://copr.fedorainfracloud.org/coprs/thangckt/foss/repo/fedora-42/thangckt-thang_foss-fedora-42.repo
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>ovito
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>config-manager<span class="w"> </span>addrepo<span class="w"> </span>--overwrite<span class="w"> </span>--from-repofile<span class="o">=</span>https://copr.fedorainfracloud.org/coprs/thangckt/foss/repo/fedora-42/thangckt-thang_foss-fedora-42.repo
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>ovito
 </span></code></pre></div>
 <p><img src="https://thangckt.github.io/blog/image/alff_202511.png" style="align: center; width: 100%; max-width: 1000px;"></p>
+<h3 id="vscode-extension-for-lammps-script"><a class="toclink" href="../../2025/06/05/hello-foss/#vscode-extension-for-lammps-script"><code>VSCode</code> extension for LAMMPS script</a></h3>
+<p>A minimal VSCode extension concisely for highlighting LAMMPS input files.</p>
+<p>This extension is originally derived from <a href="https://github.com/ThFriedrich/lammps_vscode">lammps_vscode</a>, which strips off uncommon features to
+minimizes memory usage and dependencies.</p>
+<p>I made it to fit my personal usage and resources. If you need more features, I recommend to use the original one.</p>
+<h4 id="features"><a class="toclink" href="../../2025/06/05/hello-foss/#features">Features</a></h4>
+<ul>
+<li>Highlight the keywords in LAMMPS input files.</li>
+<li>Recognizes <code>*.lmp</code>, <code>*.lmps</code>, <code>*.lammps</code>, and <code>in.*</code> files as LAMMPS input files.</li>
+<li>Folding possible between Markers #[ and #]</li>
+</ul>
+<h4 id="extension-settings"><a class="toclink" href="../../2025/06/05/hello-foss/#extension-settings">Extension Settings</a></h4>
+<ul>
+<li><code>lammps.AutoComplete.Setting</code>: Controls the behaviour of the autocompletion feature. This setting may influence the performance of the extension.</li>
+<li><code>lammps.Hover.Detail</code>: Control the length of the displayed description in the hover popup.</li>
+<li><code>lammps.Hover.Enabled</code>: Display command information in a popup when hovering over a command or keyword.</li>
+<li><code>lammps.Hover.Examples</code>: Display example usage in the hover popup.</li>
+</ul>
+<h4 id="usage"><a class="toclink" href="../../2025/06/05/hello-foss/#usage">Usage</a></h4>
+<p><img alt="Syntax Highlighting" src="https://github.com/thangckt/vsc_lammps_syntax/raw/HEAD/image/example.gif" /></p>
+<h3 id="vscode-extension-for-regular-expression-alignment"><a class="toclink" href="../../2025/06/05/hello-foss/#vscode-extension-for-regular-expression-alignment"><code>VSCode</code> extension for regular expression alignment</a></h3>
+<p>This extension is originally based on <a href="https://github.com/janjoerke/vscode-align-by-regex">vscode-align-by-regex</a></p>
+<p>This extension aligns multiple lines of text by regular expressions. It can align anything, e.g., trailing comments, key-value pairs, or any text patterns defined by regular expressions.</p>
+<h4 id="features_1"><a class="toclink" href="../../2025/06/05/hello-foss/#features_1">Features</a></h4>
+<ul>
+<li>Align multiple lines of text by regular expressions.</li>
+<li>Store regular expressions as templates for repeated use.</li>
+<li>Run alignment from the editor context menu.</li>
+<li>Support aligning multiple line selections and cursors simultaneously.</li>
+</ul>
+<h4 id="extension-settings_1"><a class="toclink" href="../../2025/06/05/hello-foss/#extension-settings_1">Extension Settings</a></h4>
+<ul>
+<li><code>align.regex.templates</code>: Templates for regular expressions used for alignment. The default built-in templates are:
+<div class="language-json highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="nt">&quot;align.regex.templates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">        </span><span class="nt">&quot;Multiple signs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;=|,|:&quot;</span><span class="p">,</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="nt">&quot;Trailing comments #&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(?&lt;=\\S.*)\\s+#&quot;</span><span class="p">,</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">        </span><span class="nt">&quot;Trailing comments //&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(?&lt;=\\S.*)\\s+//&quot;</span><span class="p">,</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">        </span><span class="nt">&quot;Trailing comments %&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(?&lt;=\\S.*)\\s+%&quot;</span><span class="p">,</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="p">}</span>
+</span></code></pre></div></li>
+</ul>
+<h4 id="usage_1"><a class="toclink" href="../../2025/06/05/hello-foss/#usage_1">Usage</a></h4>
+<ul>
+<li>Select multiple lines or multiple cursors</li>
+<li>Right-click on the editor, and choose <code>Align Regex</code></li>
+<li>Select templates or input Regular Expression.</li>
+</ul>
+<p><img alt="Example 1" src="https://github.com/thangckt/vsc_align_regex/raw/HEAD/images/example_1.gif" /></p>
     
     
   </div>
