@@ -30,7 +30,7 @@
           <link rel="icon" href="../../../../../_assets/image/one-note-128-o.png">
         
       
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.2">
     
     
       
@@ -38,7 +38,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.5d6320cd.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.74d6c0ad.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.a45159b5.min.css">
@@ -122,7 +122,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quantum-chemistry-method" class="md-skip">
+        <a href="#recently-added-or-updated-models" class="md-skip">
           Skip to content
         </a>
       
@@ -3470,6 +3470,17 @@
     <ul class="md-nav__list" data-md-component="toc">
       
         <li class="md-nav__item">
+  <a href="#recently-added-or-updated-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recently added or updated models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#quantum-chemistry-method" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3753,7 +3764,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              11 min read
+                              13 min read
                             
                           </span>
                         </div>
@@ -3763,6 +3774,7 @@
                 </nav>
               </li>
             </ul>
+            
             
           </nav>
           
@@ -3785,22 +3797,36 @@
 
   <h1>Neural Network Models for Chemistry</h1>
 
-<p># Neural-Network-Models-for-Chemistry
+<p># Atomistic Machine Learning for Computational Chemistry
 <a href="https://github.com/DiracMD/Neural-Network-Models-for-chemistry/actions/workflows/main.yml"><img alt="Check Markdown links" src="https://github.com/DiracMD/Neural-Network-Models-for-chemistry/actions/workflows/main.yml/badge.svg" /></a></p>
-<p>A collection of Neural Network Models for chemistry
-- <a href="https://github.com/Eipgen/Neural-Network-Models-for-Chemistry/blob/main/README.md#quantum-chemistry-method">Quantum Chemistry Method</a>
-- <a href="https://github.com/Eipgen/Neural-Network-Models-for-Chemistry#force-field-method">Force Field Method</a>
-   - Kernel Methods
-   - Not based on Graph Models
-   - Graph Domain Models
-   - Transformer Domain Models
-   - Universal models
-   - Empirical force field</p>
+<p>A curated collection of atomistic machine-learning models and methods for computational chemistry.
+Last reviewed: 2026-10-23</p>
+<p>This list covers neural-network and machine-learning models used in quantum chemistry, atomistic force fields, semi-empirical quantum mechanics, coarse-grained simulation, enhanced sampling, and QM/MM. Each entry is organized as <strong>model - primary project or paper link - description</strong>. The description states the model's main representation, target, and intended use where that information is available from the linked source.</p>
 <ul>
-<li><a href="https://github.com/Eipgen/Neural-Network-Models-for-Chemistry/blob/main/README.md#Semi-Empirical-Quantum-Mechanical-Method">Semi-Empirical Method</a></li>
-<li><a href="https://github.com/Eipgen/Neural-Network-Models-for-Chemistry/blob/main/README.md#Coarse-Grained-Method">Coarse-Grained Method</a></li>
-<li><a href="https://github.com/Eipgen/Neural-Network-Models-for-Chemistry/blob/main/README.md#Enhanced-Sampling-Method">Enhanced Sampling Method</a></li>
-<li><a href="https://github.com/Eipgen/Neural-Network-Models-for-Chemistry/blob/main/README.md#QMMM-Model">QM/MM Method</a></li>
+<li><a href="#quantum-chemistry-method">Quantum Chemistry Method</a></li>
+<li><a href="#force-field-method">Force Field Method</a></li>
+<li>Kernel Methods</li>
+<li>Not based on Graph Models</li>
+<li>Graph Domain Models</li>
+<li>Transformer Domain Models</li>
+<li>Universal models</li>
+<li>
+<p>Empirical force field</p>
+</li>
+<li>
+<p><a href="#semi-empirical-quantum-mechanical-method">Semi-Empirical Method</a></p>
+</li>
+<li><a href="#coarse-grained-method">Coarse-Grained Method</a></li>
+<li><a href="#enhanced-sampling-method">Enhanced Sampling Method</a></li>
+<li><a href="#qmmm-model">QM/MM Method</a></li>
+</ul>
+<h3 id="recently-added-or-updated-models">Recently added or updated models<a class="headerlink" href="#recently-added-or-updated-models" title="Permanent link">¤</a></h3>
+<ul>
+<li><a href="https://huggingface.co/facebook/UMA">UMA</a> is a universal atomistic foundation model for energies, forces, and related properties across molecules, materials, and heterogeneous systems. It is distributed through the Fairchem ecosystem and is intended for zero- or low-shot atomistic prediction and simulation.</li>
+<li><a href="https://github.com/orbital-materials/orb-models">Orb-V3</a> is a transferable equivariant neural network potential trained on the OMol25 dataset. It predicts energies and forces for broad organic and inorganic molecular chemistry, including metal complexes, biomolecules, and electrolytes.</li>
+<li><a href="https://github.com/microsoft/mattersim">MatterSim</a> is a pretrained foundation model for materials simulation. It learns atomistic energies and forces from large-scale materials data and can be used for structure relaxation, molecular dynamics, and materials property prediction.</li>
+<li><a href="https://github.com/MDIL-SNU/SevenNet">SevenNet</a> is an E(3)-equivariant graph neural network potential designed for accurate and efficient molecular-dynamics simulations of materials. It provides pretrained universal potentials and supports distributed training and inference.</li>
+<li><a href="https://github.com/ACEsuit/mace">MACE</a> is an equivariant message-passing architecture for atomistic potentials. Its higher-order body correlations support accurate energy, force, stress, and property prediction while remaining efficient enough for molecular dynamics.</li>
 </ul>
 <h2 id="quantum-chemistry-method">Quantum Chemistry Method<a class="headerlink" href="#quantum-chemistry-method" title="Permanent link">¤</a></h2>
 <ul>
@@ -4258,6 +4284,7 @@ Our findings suggest that Transformers can learn many of the graph-based inducti
 </li>
 </ul>
 <h3 id="universal-model">Universal model<a class="headerlink" href="#universal-model" title="Permanent link">¤</a></h3>
+<p>Universal models are pretrained or broadly trained atomistic potentials intended to transfer across many molecules, elements, or materials rather than fitting one narrow chemical system. Their descriptions below distinguish the model family from a particular checkpoint or dataset.</p>
 <ul>
 <li>
 <p><a href="https://github.com/rowansci/egret-public">egret</a><br />
@@ -4269,7 +4296,7 @@ Our findings suggest that Transformers can learn many of the graph-based inducti
 </li>
 <li>
 <p><a href="https://huggingface.co/facebook/UMA">UNA</a><br />
-  UMA: A Family of Universal Models for Atoms, a modified model of eSEN.</p>
+  UMA (Universal Models for Atoms) is a family of pretrained atomistic foundation models derived from the Fairchem ecosystem. It predicts energies and forces for molecular and materials systems and is designed to provide a strong starting point for prediction, relaxation, and molecular dynamics across chemical domains.</p>
 </li>
 <li>
 <p><a href="https://github.com/aiqm/aimnet">AIMNET</a><br />
@@ -4277,15 +4304,23 @@ This repository contains reference AIMNet implementation along with some example
 </li>
 <li>
 <p><a href="https://github.com/isayevlab/AIMNet2">AIMNet2</a><br />
-A general-purpose neural netrork potential for organic and element-organic molecules.</p>
+A general-purpose neural network potential for organic and element-organic molecules. AIMNet2 uses learned atomic representations with charge-aware interactions to predict molecular energies, forces, and related quantum-chemical properties.</p>
 </li>
 <li>
 <p><a href="https://github.com/ACEsuit/mace-off">MACE-OFF23</a><br />
- This repository contains the MACE-OFF23 pre-traained transferable organic force fields.</p>
+ This repository contains pretrained MACE-OFF23 transferable organic force fields. The models use equivariant message passing to predict energies and forces for organic molecules and are intended for geometry optimization and molecular-dynamics workflows.</p>
 </li>
 <li>
 <p><a href="https://github.com/orbital-materials/orb-models">Orb-V3</a><br />
-Trained on the Open Molecules 2025 (OMol25) dataset—over 100M high-accuracy DFT calculations (ωB97M-V/def2-TZVPD) on diverse molecular systems including metal complexes, biomolecules, and electrolytes.</p>
+Trained on the Open Molecules 2025 (OMol25) dataset, containing more than 100 million high-accuracy DFT calculations at the ωB97M-V/def2-TZVPD level. Orb-V3 is an equivariant transferable potential for energies and forces across diverse molecular systems, including metal complexes, biomolecules, and electrolytes.</p>
+</li>
+<li>
+<p><a href="https://github.com/microsoft/mattersim">MatterSim</a>
+MatterSim is a pretrained atomistic foundation model for materials simulation. It learns energies and forces from broad materials data and supports structure relaxation, molecular dynamics, and property prediction across inorganic materials and molecules.</p>
+</li>
+<li>
+<p><a href="https://github.com/MDIL-SNU/SevenNet">SevenNet</a>
+SevenNet is an E(3)-equivariant graph neural network potential for efficient materials simulation. It offers pretrained universal potentials as well as tools for training and distributed inference, with energies, forces, and stresses as primary atomistic targets.</p>
 </li>
 </ul>
 <h3 id="empirical-force-field">Empirical force field<a class="headerlink" href="#empirical-force-field" title="Permanent link">¤</a></h3>
@@ -4778,7 +4813,7 @@ FieldSchNet provides a deep neural network for modeling the interaction of molec
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "code": null, "features": ["content.code.annotate", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "search.suggest", "content.action.edit", "navigation.footer", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.header"], "search": {"options": {"baseUrl": "../../../../..", "bundleUrl": "../../../../../search/", "highlight": false, "searchOptions": {}}, "provider": "pagefind"}, "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "code.collapse": "Collapse", "code.download": "Download", "code.expand": "Expand remaining # lines", "code.select": "Toggle line selection", "search.offline": "Switch to Lunr for offline search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.d026e48d.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.574b5c94.min.js"></script>
       
         <script src="../../../../../1thang_js/page_logVisitor.js"></script>
       
